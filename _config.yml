@@ -1,0 +1,53 @@
+# Theme settings
+doks:
+    baseurl:
+    color_theme:  grey # Available themes: blue (default), green, purple, red and yellow
+    header:
+        logo:
+            text: Griffin D. Chure | PhD Thesis
+            image:
+    footer:
+        content:
+            logo:
+                text: Griffin D. Chure | PhD Thesis
+                image:
+            copyright: Copyright &copy; 2020. - Griffin D. Chure <br>All rights reserved.
+        social_list:
+            - network_name: twitter
+              profile_url: '#'
+            - network_name: instagram
+              profile_url: '#'
+    google_analytics:
+        tracking_code: # Add your Google Analytics tracking code to activate Google Analytics
+    comments:
+        disqus_forum_shortname: # Add your disqus forum shortname
+
+# SASS settings
+sass:
+    sass_dir: ./doks-theme/_sass
+    style: :compressed
+
+# Jekyll settings
+layouts_dir: ./doks-theme/_layouts
+includes_dir: ./doks-theme/_includes
+exclude: [ 'README.md', 'CHANGELOG.md', 'data/']
+permalink: /:title/
+gems:
+  - jekyll-numbered-headings
+  - jekyll-pandoc-multiple-formats
+
+markdown: Pandoc
+pandoc:
+    skip:
+      full: false
+      posts: false
+      categories: false 
+    flags: >
+     --bibliography src/references.bib
+     --default-image-extension=.svg
+     --filter pandoc-xnos 
+     --filter pandoc-citeproc
+     --top-level-division chapter 
+     --resource-path='.:src/chapter_01/figs:src/chapter_02/figs'
+     --extract-media ../true
+     --metadata link-citations

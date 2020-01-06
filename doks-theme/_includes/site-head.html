@@ -1,0 +1,39 @@
+<meta charset="UTF-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, minimum-scale=1.0">
+<title>{{ page.title }}</title>
+{% if page.description %}
+	<meta name="description" content="{{ page.description }}">
+{% endif %}
+{% if page.keywords %}
+	<meta name="keywords" content="{{ page.keywords }}">
+{% endif %}
+<script type="text/x-mathjax-config">
+	MathJax.Hub.Config({
+	  TeX: {
+		equationNumbers: {
+		  autoNumber: "AMS"
+		}
+	  },
+	  tex2jax: {
+		inlineMath: [ ['$','$']], 
+		displayMath: [ ['$$','$$'] ],
+		processEscapes: true,
+	  }
+	});
+  </script>
+  <style>
+	.eqnos { display: inline-block; position: relative; width: 100%; }
+	.eqnos br { display: none; }
+	.eqnos-number { position: absolute; right: 0em; top: 50%; line-height: 0; }
+  </style>
+  <script type="text/javascript"
+		  src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+<link rel="icon" href="{% if jekyll.environment == 'production' %}{{ site.doks.baseurl }}{% endif %}/favicon.ico" type="image/x-icon">
+
+
+<link href="https://fonts.googleapis.com/css?family=Nanum+Myeongjo&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Alegreya|Lora&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="{% if jekyll.environment == 'production' %}{{ site.doks.baseurl }}{% endif %}/doks-theme/assets/css/style.css">

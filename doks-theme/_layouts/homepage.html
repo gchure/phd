@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		{% include site-head.html %}
+	</head>
+	<body class="{{ site.doks.color_theme }}">
+		<div class="hero-subheader{% if page.grid_navigation %} hero-subheader--before-out{% endif %}"  style="background-image: url({{site.doks.baseurl}}/doks-theme/assets/images/bg.png)">
+			<div class="container">
+				<div class="row" style="background-color: rgba(0,0,0, 0.75); padding: 20px; border:0.5px solid white;">
+					<div class="col-md-5">
+						<div class="align-container" data-mh >
+							<div class="align-inner" >
+								{% if page.title %}
+									<h1 class="hero-subheader__title" style="color: white; font-weight: 300 !important; font-family: $font-family-tertiary !important; " >{{ page.title }}</h1>
+								{% endif %}
+								{% if page.description %}
+									<p style="color: white;" class="hero-subheader__desc">{{ page.description }}</p>
+								{% endif %}
+								{% for button in page.buttons %}
+									{% if button.external_url == true %}
+									<a href="{{ button.url }}" class="btn btn--dark btn--rounded btn--w-icon">
+										{% if button.icon %}<i class="icon icon--{{ button.icon }}"></i>{% endif %}
+										{{ button.content }}
+									</a>
+									{% else %}
+									<a href="{% if jekyll.environment == 'production' %}{{ site.doks.baseurl }}{% endif %}{{ button.url }}" class="btn btn--dark btn--rounded btn--w-icon">
+										{% if button.icon %}<i class="icon icon--{{ button.icon }}"></i>{% endif %}
+										{{ button.content }}
+									</a>
+									{% endif %}
+								{% endfor %}
+							</div><!-- /.align-inner -->
+						</div><!-- /.align-container -->
+					</div><!-- /.col -->
+					{% if page.author.title and page.author.description and page.author.title_url %}
+						<div class="col-md-6 col-md-offset-0 hidden-xs hidden-sm">
+							<div class="align-container" data-mh>
+								<div class="align-inner">
+									<div class="hero-subheader__author" style="border-left: 0.5px solid white;">
+										<p class="hero-subheader__author-title" style="color: white;">
+												{{ page.author.title }}
+												<i class="icon icon--chevron-down"></i>
+											</a>
+										</p><!-- /.hero-subheader__author-title -->
+										<p style="color: rgba(255,255,255, 0.85);">{{ page.author.description }}</p>
+									</div><!-- /.hero-subheader__author -->
+								</div><!-- /.align-inner -->
+							</div><!-- /.align-container -->
+						</div><!-- /.col -->
+					{% endif %}
+				</div><!-- /.row -->
+			</div><!-- /.container -->
+		</div><!-- /.hero-subheader -->
+		{% if page.grid_navigation %}
+			<div class="section section--darker-theme-color-bg">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-12">
+							<div class="nav-grid nav-grid--out">
+								<div class="row">
+									{% for item in page.grid_navigation %}
+										<div class="col-sm-6 col-lg-4">
+											<a href="{% if jekyll.environment == 'production' %}{{ site.doks.baseurl }}{% endif %}{{ item.url }}" class="nav-grid__item">
+												<div class="nav-grid__content" data-mh>
+													<h2 class="nav-grid__title">{{ item.title }}</h2>
+													<p>{{ item.excerpt }}</p>
+												</div><!-- /.nav-grid__content -->
+												<p class="nav-grid__btn">
+													{{ item.cta }}
+													<i class="icon icon--arrow-right"></i>
+												</p>
+											</a><!-- /.nav-grid__item -->
+										</div><!-- /.col -->
+									{% endfor %}
+								</div><!-- /.row -->
+							</div><!-- /.nav-grid -->
+						</div><!-- /.col -->
+					</div><!-- /.row -->
+				</div><!-- /.container -->
+			</div><!-- /.section -->
+		{% endif %}
+		{% include site-footer.html %}
+	</body>
+</html>
