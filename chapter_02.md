@@ -2,7 +2,7 @@
 # Page settings
 layout: default
 keywords:
-comments: false
+comments: true
 
 # Hero section
 title: Chapter 2
@@ -40,5 +40,4 @@ page_nav:
 {% include_relative src/chapter_02/section_01_header.md %}
 {% include_relative src/chapter_02/section_02_introduction.md %}
 {% include_relative src/chapter_02/section_03_model.md %}
-
 {% include_relative src/chapter_02/section_99_references.md %}

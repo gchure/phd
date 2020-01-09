@@ -20,7 +20,7 @@ doks:
     google_analytics:
         tracking_code: # Add your Google Analytics tracking code to activate Google Analytics
     comments:
-        disqus_forum_shortname: # Add your disqus forum shortname
+        disqus_forum_shortname: gchure_phd # Add your disqus forum shortname
 
 # SASS settings
 sass:
@@ -44,10 +44,12 @@ pandoc:
       categories: false 
     flags: >
      --bibliography src/references.bib
-     --default-image-extension=.svg
+     --default-image-extension=png
+     --dpi 300
      --filter pandoc-xnos 
      --filter pandoc-citeproc
+     --filter pandoc-shortcaption
      --top-level-division chapter 
-     --resource-path='.:src/chapter_01/figs:src/chapter_02/figs'
+     --resource-path='.:src/chapter_01/figs:src/chapter_02/figs:src/chapter_06/figs:'
      --extract-media ../true
      --metadata link-citations

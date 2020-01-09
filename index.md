@@ -69,7 +69,7 @@ grid_navigation:
       excerpt: >
         Adaptation where it counts: surviving environmental insults
       cta: read
-      url: 'chapter_05'
+      url: 'chapter_06'
 
 ---
 

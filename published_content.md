@@ -19,4 +19,4 @@ page_nav:
         url: 'chapter_01'
 ---
 
-blah
+{% include_relative src/frontmatter/published.md %}

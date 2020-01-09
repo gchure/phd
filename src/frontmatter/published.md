@@ -15,7 +15,6 @@ Phillips, R., Belliveau, N.M., Chure, G., Garcia, H.G., Razo-Mejia, M., and
 Scholes, C. (2019). Figure 1 Theory Meets Figure 2 Experiments in the Study of
 Gene Expression. Annu. Rev. Biophys. 48, 121–163.
 
-
 Chure, G.* , Lee, H.J.* , Rasmussen, A., and Phillips, R. (2018). Connecting the
 Dots between Mechanosensitive Channel Abundance, Osmotic Shock, and Survival
 at Single-Cell Resolution. Journal of Bacteriology 200. * contributed equally
