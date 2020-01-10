@@ -7,7 +7,7 @@ branches:
   only:
   - master
 script:
-  -JEKYLL_ENV=production bundle exec jekyll build --destination site
+  - JEKYLL_ENV=production bundle exec jekyll build --destination site
 deploy:
   provider: pages
   local-dir: ./site
