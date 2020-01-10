@@ -4,7 +4,7 @@ branches:
   only:
   - master
 script:
-  - JEKYLL_ENV= sh copyfigs.sh && production bundle exec jekyll build --destination site
+  - sh copyfigs.sh && JEKYLL_ENV=production bundle exec jekyll build --destination site
 deploy:
   provider: pages
   local-dir: ./site
