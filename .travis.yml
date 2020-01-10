@@ -1,10 +1,12 @@
 language: ruby
 cache: bundler
+before_install:
+    - gem install bundler
 branches:
   only:
   - master
 script:
-  - sh copyfigs.sh && gem i bundler -v 1.17.3 and bundle i && JEKYLL_ENV=production bundle exec jekyll build --destination site
+  - sh copyfigs.sh && JEKYLL_ENV=production bundle exec jekyll build --destination site
 deploy:
   provider: pages
   local-dir: ./site
