@@ -20,6 +20,7 @@ pdf:
 	--resource-path='.:chapter_01/figs:chapter_02/figs:chapter_06/figs:' \
 
 html:
+	bundle config set deployment 'true' ;\
 	bundle exec jekyll build --destination site;\
 	sh copyfigs.sh ;\
 	echo "done"
