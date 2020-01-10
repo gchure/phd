@@ -14,9 +14,7 @@ doks:
             copyright: Copyright &copy; 2020. - Griffin D. Chure <br>All rights reserved.
         social_list:
             - network_name: twitter
-              profile_url: '#'
-            - network_name: instagram
-              profile_url: '#'
+              profile_url: 'https://twitter.com/gdchure'
     google_analytics:
         tracking_code: # Add your Google Analytics tracking code to activate Google Analytics
     comments:
