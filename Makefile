@@ -1,8 +1,8 @@
 PY=python
 PANDOC=pandoc
 
-INPUTDIR=$(CURDIR)
-OUTPUTDIR=../dst
+INPUTDIR=$(CURDIR)/src
+OUTPUTDIR=$(CURDIR)dst
 STYLEDIR=$(INPUTDIR)/styles
 BIBFILE=$(INPUTDIR)/references.bib
 
@@ -18,6 +18,12 @@ pdf:
 	--lua-filter=$(INPUTDIR)/frontmatter/short-captions.lua \
 	--top-level-division chapter \
 	--resource-path='.:chapter_01/figs:chapter_02/figs:chapter_06/figs:' \
+
+html:
+	jekyll build ;\
+	sh copyfigs.sh ;\
+	echo "done"
+
 
 	
 

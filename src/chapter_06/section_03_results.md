@@ -1,6 +1,6 @@
 ## Results
 
-### Quantifying the single-cell MscL copy number ###
+### Quantifying the single-cell MscL copy number
 
 &nbsp;&nbsp;&nbsp;&nbsp;The principal goal of this work is to examine the
 contribution of a single mechanosensitive channel species to cell survival
@@ -13,49 +13,51 @@ channel genes were deleted from the chromosome [@edwards2012]. Chromosomal
 integration imposes strict control on the gene copy number compared to
 plasmid borne expression systems, which is important to minimize variation in
 channel expression across the population and provide conditions more
-representative of native cell physiology. Abrogation of activity, mislocalization, or cytotoxicity are all inherent risks associated with
+representative of native cell physiology. Abrogation of activity,
+mislocalization, or cytotoxicity are all inherent risks associated with
 creating chimeric reporter constructs. In Supplement A, we carefully dissect
 the functionality of this protein through electrophysiology (Fig. S1),
-measure the rate of fluorophore maturation (Fig. S2), and quantify
-potential aggregates (Figs. S3 and S4). To the best of our knowledge, the
-MscL-sfGFP fusion protein functions identically to the wild-type, allowing us
-to confidently draw conclusions about the physiological role this channel
-plays in wild-type cells.
+measure the rate of fluorophore maturation (Fig. S2), and quantify potential
+aggregates (Figs. S3 and S4). To the best of our knowledge, the MscL-sfGFP
+fusion protein functions identically to the wild-type, allowing us to
+confidently draw conclusions about the physiological role this channel plays
+in wild-type cells.
 
-&nbsp;&nbsp;&nbsp;&nbsp;To modulate the number of MscL channels per cell, we
-developed a series of mutants which were designed to decrease the expression
-relative to wild-type. These changes involved direct alterations of the
-Shine-Dalgarno sequence as well as the inclusion of AT hairpins of varying
-length directly upstream of the start codon which influences the translation rate and hence the number of MscL proteins produced ([@Fig:boxplot]A). The six
-Shine-Dalgarno sequences used in this work were chosen using the RBS binding
-site strength calculator from the Salis Laboratory at the Pennsylvania State
-University [@espahborujeni2014; @salis2009]. While the designed
-Shine-Dalgarno sequence mutations decreased the expression relative to
-wild-type as intended, the distribution of expression is remarkably wide
-spanning an order of magnitude.
+To modulate the number of MscL channels per cell, we developed a series of
+mutants which were designed to decrease the expression relative to wild-type.
+These changes involved direct alterations of the Shine-Dalgarno sequence as
+well as the inclusion of AT hairpins of varying length directly upstream of
+the start codon which influences the translation rate and hence the number of
+MscL proteins produced ([@Fig:boxplot]A). The six Shine-Dalgarno sequences
+used in this work were chosen using the RBS binding site strength calculator
+from the Salis Laboratory at the Pennsylvania State University
+[@espahborujeni2014; @salis2009]. While the designed Shine-Dalgarno sequence
+mutations decreased the expression relative to wild-type as intended, the
+distribution of expression is remarkably wide spanning an order of magnitude.
 
-&nbsp;&nbsp;&nbsp;&nbsp;To measure the number of MscL channels per cell, we
-determined a fluorescence calibration factor to translate arbitrary
-fluorescence units per cell to protein copy number. While there have been
-numerous techniques developed over the past decade to directly measure this
-calibration factor, such as quantifying single-molecule photobleaching
-constants or measuring the binomial partitioning of fluorescent proteins upon
-cell division [@bialecka-fornal2012; @elowitz2002], we used *a priori*
-knowledge of the mean MscL-sfGFP expression level of a particular *E. coli*
-strain to estimate the average fluorescence of a single channel. In
-Bialecka-Fornal et al. 2012 [@bialecka-fornal2012], the authors used
-single-molecule photobleaching and quantitative Western blotting to probe the
-expression of MscL-sfGFP under a wide range of growth conditions. To compute
-a calibration factor, we used the strain MLG910 (*E. coli* K12 MG1655
-$\phi$(mscL-sfGFP)) as a "standard candle", highlighted in yellow in
-[@Fig:boxplot]B. This standard candle strain was grown and imaged in
-identical conditions in which the MscL count was determined through fluorescence microscopy. The calibration
-factor was computed by dividing the mean total cell fluorescence by the known
-MscL copy number, resulting in a measure of arbitrary fluorescence units per
-MscL channel. Details regarding this calculation and appropriate propagation
-of error as well as its sensitivity to varying growth media can be found in the Materials & Methods as well as Supplement B (Fig. S5 - S8).
+To measure the number of MscL channels per cell, we determined a fluorescence
+calibration factor to translate arbitrary fluorescence units per cell to
+protein copy number. While there have been numerous techniques developed over
+the past decade to directly measure this calibration factor, such as
+quantifying single-molecule photobleaching constants or measuring the
+binomial partitioning of fluorescent proteins upon cell division
+[@bialecka-fornal2012; @elowitz2002], we used *a priori* knowledge of the
+mean MscL-sfGFP expression level of a particular *E. coli* strain to estimate
+the average fluorescence of a single channel. In Bialecka-Fornal et al. 2012
+[@bialecka-fornal2012], the authors used single-molecule photobleaching and
+quantitative Western blotting to probe the expression of MscL-sfGFP under a
+wide range of growth conditions. To compute a calibration factor, we used the
+strain MLG910 (*E. coli* K12 MG1655 $\phi$(mscL-sfGFP)) as a "standard
+candle", highlighted in yellow in [@Fig:boxplot]B. This standard candle
+strain was grown and imaged in identical conditions in which the MscL count
+was determined through fluorescence microscopy. The calibration factor was
+computed by dividing the mean total cell fluorescence by the known MscL copy
+number, resulting in a measure of arbitrary fluorescence units per MscL
+channel. Details regarding this calculation and appropriate propagation of
+error as well as its sensitivity to varying growth media can be found in the
+Materials & Methods as well as Supplement B (Fig. S5 - S8).
 
-&nbsp;&nbsp;&nbsp;&nbsp;While it is seemingly straightforward to use this calibration
+While it is seemingly straightforward to use this calibration
 factor to determine the total number of channels per cell for wild-type or
 highly expressing strains, the calculation for the lowest expressing strains
 is complicated by distorted cell morphology. We observed that as the channel
@@ -103,24 +105,35 @@ interquartile region of the distribution, the center line displays the
 median, and the whiskers represent 1.5 times the maximum and minimum of the
 interquartile region. Individual measurements are denoted as black points.
 The strain used for calibration of channel copy number (MLG910) is
-highlighted in yellow. ](../figs/fig2.pdf){#fig:boxplot}
+highlighted in yellow. ](ch6_fig2){#fig:boxplot short-caption="Control of MscL
+expression and calculation of channel copy number."}
 
 
-### Performing a single-cell hypo-osmotic challenge assay ###
+### Performing a single-cell hypo-osmotic challenge assay 
 
- &nbsp;&nbsp;&nbsp;&nbsp;To measure the channel copy number of a single cell
- and query its survival after a hypo-osmotic shock, we used a custom-made
- flow cell in which osmotic shock and growth can be monitored in real time
- using video microscopy ([@Fig:flow_cell]A). The design and characterization
- of this device has been described in depth previously and is briefly
- described in the Materials & Methods [@bialecka-fornal2015]. Using this
- device, cells were exposed to a large hypo-osmotic shock by switching
- between LB Lennox medium supplemented with 500 mM NaCl and LB Lennox media alone. All six Shine-Dalgarno modifications shown in [@Fig:boxplot]B
- (excluding MLG910) were subjected to a hypo-osmotic shock at controlled
- rates while under observation. After the application of the osmotic shock,
- the cells were imaged every sixty seconds for four to six hours. Each cell
- was monitored over the outgrowth period and was manually scored as either a
- survivor, fatality, or inconclusive observation. The criteria used for scoring death were the same as those previously described in Bialecka-Fornal et al. 2015 [@bialecka-fornal2015]. Survivors were defined as cells that underwent multiple divisions  post-shock. To qualify as survivors, cells must undergo at least two divisions, although more typically,  four to eight divisions are observed without any signs of slowing down. Imaging is stopped when the survivors cells begin to go out of focus or overlap each other.  Survivors do not show any sign of ceasing division. More information regarding this  classification can be found in the Materials and Methods as well as Supplement C (Fig. S9 - S10 and Table S1 - S2). The brief experimental protocol can be seen in  [@Fig:flow_cell]B.
+To measure the channel copy number of a single cell and query its survival
+after a hypo-osmotic shock, we used a custom-made flow cell in which osmotic
+shock and growth can be monitored in real time using video microscopy
+([@Fig:flow_cell]A). The design and characterization of this device has been
+described in depth previously and is briefly described in the Materials &
+Methods [@bialecka-fornal2015]. Using this device, cells were exposed to a
+large hypo-osmotic shock by switching between LB Lennox medium supplemented
+with 500 mM NaCl and LB Lennox media alone. All six Shine-Dalgarno
+modifications shown in [@Fig:boxplot]B (excluding MLG910) were subjected to a
+hypo-osmotic shock at controlled rates while under observation. After the
+application of the osmotic shock, the cells were imaged every sixty seconds
+for four to six hours. Each cell was monitored over the outgrowth period and
+was manually scored as either a survivor, fatality, or inconclusive
+observation. The criteria used for scoring death were the same as those
+previously described in Bialecka-Fornal et al. 2015 [@bialecka-fornal2015].
+Survivors were defined as cells that underwent multiple divisions post-shock.
+To qualify as survivors, cells must undergo at least two divisions, although
+more typically, four to eight divisions are observed without any signs of
+slowing down. Imaging is stopped when the survivors cells begin to go out of
+focus or overlap each other. Survivors do not show any sign of ceasing
+division. More information regarding this classification can be found in the
+Materials and Methods as well as Supplement C (Fig. S9 - S10 and Table S1 -
+S2). The brief experimental protocol can be seen in [@Fig:flow_cell]B.
 
 ![Experimental approach to measuring survival probability. (A) Layout of
 a home-made flow cell for subjecting cells to osmotic shock. Cells are
@@ -130,7 +143,8 @@ the inlets. (B) The typical experimental procedure. Cells are loaded into a
 flow chamber as shown in (A) and mounted to the glass coverslip surface.
 Cells are subjected to a hypo-osmotic shock by flowing hypotonic medium into
 the flow cell. After shock, the cells are monitored for several hours and
-surviving cells are identified.](../figs/fig3.pdf){#fig:flow_cell}
+surviving cells are identified.](ch6_fig3){#fig:flow_cell
+short-caption="Experimental approach to measuring survival probability"}
 
 &nbsp;&nbsp;&nbsp;&nbsp;Due to the extensive overlap in expression between
 the different Shine-Dalgarno mutants (see [@Fig:boxplot]B), computing the

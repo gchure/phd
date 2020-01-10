@@ -1,6 +1,6 @@
 # Theme settings
 doks:
-    baseurl:
+    baseurl: 
     color_theme:  grey # Available themes: blue (default), green, purple, red and yellow
     header:
         logo:
@@ -44,12 +44,10 @@ pandoc:
       categories: false 
     flags: >
      --bibliography src/references.bib
-     --default-image-extension=png
+     --default-image-extension=.png
      --dpi 300
      --filter pandoc-xnos 
      --filter pandoc-citeproc
      --filter pandoc-shortcaption
      --top-level-division chapter 
-     --resource-path='.:src/chapter_01/figs:src/chapter_02/figs:src/chapter_06/figs:'
-     --extract-media ../true
      --metadata link-citations
