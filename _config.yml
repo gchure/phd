@@ -28,8 +28,14 @@ sass:
     style: :compressed
 
 # Jekyll settings
+plugins_dir: ./_plugins
 layouts_dir: ./doks-theme/_layouts
 includes_dir: ./doks-theme/_includes
+jekyll_get:
+  - data: github
+    json: 'https://api.github.com/orgs/gchure/repos'
+    cache: false
+
 exclude: [ 'README.md', 'CHANGELOG.md', 'data/']
 permalink: /:title/
 gems:
