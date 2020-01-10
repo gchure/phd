@@ -3,6 +3,9 @@ cache: bundler
 before_install:
   - yes | gem update --system --force
   - gem install bundler
+addons:
+  apt_packages:
+      - pandoc
 branches:
   only:
   - master
