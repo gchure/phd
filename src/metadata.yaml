@@ -2,9 +2,9 @@
 title: The Molecular Biophysics of Evolutionary and Physiological Adaptation
 author: Griffin Daniel Chure
 copyyear: 2020
-defense: May 1, 2020
+defense: June 1, 2020
 orcid: 0000-0002-2216-2057
-degree: Doctor of Philosophy
+degree: Doctor of Philosophy in Biochemistry and Molecular Biophysics
 rights_statement: >
     Some rights reserved. This thesis is distributed under a
     Creative Commons Attribution License CC-BY 4.0.
@@ -17,15 +17,4 @@ abstract: abstract.md
 degree_title: Biochemistry and Molecular Biophysics
 lof: true
 chapters: true
-figPrefix:
-  - "Fig."
-  - "Figs."
-eqnPrefix:
-  - "Eq."
-  - "Eqs."
-secPrefix:
-  - "Sec."
-  - "Secs."
-chapDelim:
-  - "."
 ---
