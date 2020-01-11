@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, minimum-scale=1.0">
+<title>Chapter 2</title>
+
+
+<script type="text/x-mathjax-config">
+	MathJax.Hub.Config({
+	  TeX: {
+		equationNumbers: {
+		  autoNumber: "AMS"
+		}
+	  },
+	  tex2jax: {
+		inlineMath: [ ['$','$']], 
+		displayMath: [ ['$$','$$'] ],
+		processEscapes: true,
+	  }
+	});
+  </script>
+  <style>
+	.eqnos { display: inline-block; position: relative; width: 100%; }
+	.eqnos br { display: none; }
+	.eqnos-number { position: absolute; right: 0em; top: 50%; line-height: 0; }
+  </style>
+  <script type="text/javascript"
+		  src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+<link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+
+<link href="https://fonts.googleapis.com/css?family=Nanum+Myeongjo&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Alegreya|Lora&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="/doks-theme/assets/css/style.css">
+
+	</head>
+	<body class="grey" data-spy="scroll" data-target=".js-scrollspy">
+		
+
+
+	<header class="site-header">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12">
+					
+						<a href="/" class="site-header__logo"><i class="icon icon--chevron-left"></i> Home</a>
+					
+					
+				</div><!-- /.col -->
+			</div><!-- /.row -->
+		</div><!-- /.container -->
+	</header><!-- /.site-header -->
+
+
+		<div class="hero-subheader" style="background-image: url(/doks-theme/assets/images/bg.png);">
+
+			<div class="container" style="background-color: rgba(0,0,0, 0.75); border:0.75px solid white;">
+				<div class="row">
+					<div class="col-md-7">
+						<div class="align-container" data-mh>
+							<div class="align-inner">
+								
+									<h2 class="hero-subheader__title">Chapter 2</h2>
+								
+								
+									<h1 class="hero-subheader__title">Through The Intramolecular Grapevine: Cellular Decision Making Via Allosteric Transcription factors
+</h1>
+								
+								
+								<!-- 
+									
+										<a href="{{site.doks.baseurl}}/published_content" class="btn btn--dark btn--rounded btn--w-icon btn--w-icon-left">
+											<i class="icon icon--arrow-left"></i>	
+										</a>
+									
+									
+										<a href="{{site.doks.baseurl}}/chapter_2" class="btn btn--dark btn--rounded btn--w-icon">
+											<i class="icon icon--arrow-right"></i>
+										</a>
+									
+								 -->
+							</div><!-- /.align-inner -->
+						</div><!-- /.align-container -->
+					</div><!-- /.col -->
+					
+						<div class="col-md-5 col-md-offset-0 hidden-xs hidden-sm">
+							<div class="align-container" data-mh>
+								<div class="align-inner">
+									<div class="hero-subheader__author">
+										<p class="hero-subheader__author-title">
+												Summary
+												<i class="icon icon--chevron-down"></i>
+										</p><!-- /.hero-subheader__author-title -->
+										<p>Allosteric regulation is found across all domains of life, yet we still lack simple, predictive theories that directly link the experimentally tunable parameters of a system to its input-output response. This chapter presents a general theory of allosteric transcriptional regulation using the Monod-Wyman-Changeux model. We rigorously test this model using the ubiquitous simple repression motif in bacteria by first predicting the behavior of strains that span a large range of repressor copy numbers and DNA binding strengths and then constructing and measuring their response.
+</p>
+									</div><!-- /.hero-subheader__author -->
+								</div><!-- /.align-inner -->
+							</div><!-- /.align-container -->
+						</div><!-- /.col -->
+					
+				</div><!-- /.row -->
+			</div><!-- /.container -->
+		</div><!-- /.hero-subheader -->
+		
+				<nav class="page-nav">
+					<div class="container" >
+						<div class="row" >
+							<div class="col-xs-12">
+								
+									<a href="{{site.doks.baseurl}}/published_content" class="page-nav__item page-nav__item--prev">
+										<i class="icon icon--arrow-left"></i>
+										Published Content
+									</a><!-- /.page-nav__item -->
+								
+								
+									<a href="{{site.doks.baseurl}}/chapter_2" class="page-nav__item page-nav__item--next">
+										Chapter 2
+										<i class="icon icon--arrow-right"></i>
+									</a><!-- /.page-nav__item -->
+								
+							</div><!-- /.col -->
+						</div><!-- /.row -->
+					</div><!-- /.container -->
+				</nav><!-- /.page-nav -->
+			
+
+		<div class="section">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-7">
+						<div class="content">
+							<strong>Published as …</strong>
+<hr/>
+<p>A version of this chapter originally appeared as Razo-Mejia, M.* , Barnes, S.L.* , Belliveau, N.M.* , Chure, G.* , Einav, T.* , Lewis, M., and Phillips, R. (2018). Tuning Transcriptional Regulation through Signaling: A Predictive Theory of Allosteric Induction. Cell Systems 6, 456-469.e10. M.R.M, S.L.B, N.M.B, G.C., and T.E. contributed equally to this work from the theoretical underpinnings to the experimental design and execution.</p>
+<h2 id="introduction">Introduction</h2>
+<p>Understanding how organisms sense and respond to changes in their environment has long been a central theme of biological inquiry. At the cellular level, this interaction is mediated by a diverse collection of molecular signaling pathways. A pervasive mechanism of signaling in these pathways is allosteric regulation, in which the binding of a ligand induces a conformational change in some target molecule, triggering a signaling cascade <span class="citation" data-cites="lindsley2006">(<span class="citeproc-not-found" data-reference-id="lindsley2006"><strong>???</strong></span>)</span>. One of the most important examples of such signaling is offered by transcriptional regulation, where a transcription factor’s propensity to bind to DNA will be altered upon binding to an allosteric effector.</p>
+<p>Despite allostery’s ubiquity, we lack a formal, rigorous, and generalizable framework for studying its effects across the broad variety of contexts in which it appears. A key example of this is transcriptional regulation, in which allosteric transcription factors can be induced or corepressed by binding to a ligand. An allosteric transcription factor can adopt multiple conformational states, each of which has its own affinity for the ligand and for its DNA target site. <em>In vitro</em> studies have rigorously quantified the equilibria of different conformational states for allosteric transcription factors and measured the affinities of these states to the ligand <span class="citation" data-cites="harman2001 lanfranco2017">(Harman <a href="#ref-harman2001">2001</a>; Lanfranco et al. <a href="#ref-lanfranco2017">2017</a>)</span>. In spite of these experimental observations, the lack of a coherent quantitative model for allosteric transcriptional regulation has made it impossible to predict the behavior of even a simple genetic circuit across a range of regulatory parameters.</p>
+<p>The ability to predict circuit behavior robustly— that is, across both broad ranges of parameters and regulatory architectures —is important for multiple reasons. First, in the context of a specific gene, accurate prediction demonstrates that all components relevant to the gene’s behavior have been identified and characterized to sufficient quantitative precision. Second, in the context of genetic circuits in general, robust prediction validates the model that generated the prediction. Possessing a validated model also has implications for future work. For example, when we have sufficient confidence in the model, a single data set can be used to accurately extrapolate a system’s behavior in other conditions. Moreover, there is an essential distinction between a predictive model, which is used to predict a system’s behavior given a set of input variables, and a retroactive model, which is used to describe the behavior of data that has already been obtained. We note that even some of the most careful and rigorous analysis of transcriptional regulation often entails only a retroactive reflection on a single experiment. This raises the fear that each regulatory architecture may require a unique analysis that cannot carry over to other systems, a worry that is exacerbated by the prevalent use of phenomenological functions (e.g. Hill functions or ratios of polynomials) that can analyze a single data set but cannot be used to extrapolate a system’s behavior in other conditions <span class="citation" data-cites="setty2003 poelwijk2011 rogers2015 rohlhill2017">(Setty et al. <a href="#ref-setty2003">2003</a>; <span class="citeproc-not-found" data-reference-id="poelwijk2011"><strong>???</strong></span>; Rogers et al. <a href="#ref-rogers2015">2015</a>; Rohlhill, Sandoval, and Papoutsakis <a href="#ref-rohlhill2017">2017</a>)</span>.</p>
+<p>This work explores what happens when theory takes center stage, namely, we first write down the equations governing a system and describe its expected behavior across a wide array of experimental conditions, and only then do we set out to experimentally confirm these results. Building upon previous work <span class="citation" data-cites="garcia2011 brewster2014 weinert204">(H. G. Garcia and Phillips <a href="#ref-garcia2011">2011</a>; Brewster et al. <a href="#ref-brewster2014">2014</a>; <span class="citeproc-not-found" data-reference-id="weinert204"><strong>???</strong></span>)</span> and the work of Monod, Wyman, and Changeux <span class="citation" data-cites="monod1965">(Monod, Wyman, and Changeux <a href="#ref-monod1965">1965</a>)</span>, we present a statistical mechanical rendering of allostery in the context of induction and corepression (shown schematically in Fig. [<a href="#fig:ind_corep_prop">1</a>] (A) and henceforth referred to as the MWC model) and use it as the basis of parameter-free predictions which we then test experimentally. More specifically, we study the simple repression motif – a widespread bacterial genetic regulatory architecture in which binding of a transcription factor occludes binding of an RNA polymerase, thereby inhibiting transcription initiation. The MWC model stipulates that an allosteric protein fluctuates between two distinct conformations – an active and inactive state – in thermodynamic equilibrium <span class="citation" data-cites="monod1965">(Monod, Wyman, and Changeux <a href="#ref-monod1965">1965</a>)</span>. During induction, for example, effector binding increases the probability that a repressor will be in the inactive state, weakening its ability to bind to the promoter and resulting in increased expression. To test the predictions of our model across a wide range of operator binding strengths and repressor copy numbers, we design an <em>E. coli</em> genetic construct in which the binding probability of a repressor regulates gene expression of a fluorescent reporter.</p>
+<p>In total, the work presented here demonstrates that one extremely compact set of parameters can be applied self-consistently and predictively to different regulatory situations including simple repression on the chromosome, cases in which decoy binding sites for repressor are put on plasmids, cases in which multiple genes compete for the same regulatory machinery, cases involving multiple binding sites for repressor leading to DNA looping, and induction by signaling <span class="citation" data-cites="garcia2011 garcia2011b brewster2012 boedicker2013 boedicker2013b">(H. G. Garcia and Phillips <a href="#ref-garcia2011">2011</a>; Garcia et al. <a href="#ref-garcia2011b">2011</a>; <span class="citeproc-not-found" data-reference-id="brewster2012"><strong>???</strong></span>; <span class="citeproc-not-found" data-reference-id="boedicker2013b"><strong>???</strong></span>; Boedicker, Garcia, and Phillips <a href="#ref-boedicker2013">2013</a>)</span>. Thus, rather than viewing the behavior of each circuit as giving rise to its own unique input-output response, the MWC model provides a means to characterize these seemingly diverse behaviors using a single unified framework governed by a small set of parameters.</p>
+<div id="fig:ind_corep_prop" class="fignos">
+<figure>
+<img src="ch2_fig1.png" alt="Figure 1: (A) We consider a promoter regulated solely by an allosteric repressor. When bound, the repressor prevents RNAP from binding and initiating transcription. Induction is characterized by the addition of an effector which binds to the repressor and stabilizes the inactive state (defined as the state which has a low affinity for DNA), thereby increasing gene expression. In corepression, the effector stabilizes the repressor’s active state and thus further reduces gene expression. We list several characterized examples of induction and corepression that support different physiological roles in E. coli . (B) A schematic regulatory response of the two architectures shown in Panel (A) plotting the fold-change in gene expression as a function of effector concentration, where fold-change is defined as the ratio of gene expression in the presence versus the absence of repressor. We consider the following key phenotypic properties that describe each response curve: the minimum response (leakiness), the maximum response (saturation), the difference between the maximum and minimum response (dynamic range), the concentration of ligand which generates a fold-change halfway between the minimal and maximal response (EC_{50}), and the log-log slope at the midpoint of the response (effective Hill coefficient). (C) Over time we have refined our understanding of simple repression architectures. A first round of experiments used colorimetric assays and quantitative Western blots to investigate how single-site repression is modified by the repressor copy number and repressor-DNA binding energy . A second round of experiments used video microscopy to probe how the copy number of the promoter and presence of competing repressor binding sites affect gene expression, and we use this data set to determine the free energy difference between the repressor’s inactive and active conformations . Here we used flow cytometry to determine the inducer-repressor dissociation constants and demonstrate that with these parameters we can predict a priori the behavior of the system for any repressor copy number, DNA binding energy, gene copy number, and inducer concentration." data-short-caption="This is the short cap" /><figcaption><span>Figure 1:</span> (A) We consider a promoter regulated solely by an allosteric repressor. When bound, the repressor prevents RNAP from binding and initiating transcription. Induction is characterized by the addition of an effector which binds to the repressor and stabilizes the inactive state (defined as the state which has a low affinity for DNA), thereby increasing gene expression. In corepression, the effector stabilizes the repressor’s active state and thus further reduces gene expression. We list several characterized examples of induction and corepression that support different physiological roles in <em>E. coli</em> . (B) A schematic regulatory response of the two architectures shown in Panel (A) plotting the fold-change in gene expression as a function of effector concentration, where fold-change is defined as the ratio of gene expression in the presence versus the absence of repressor. We consider the following key phenotypic properties that describe each response curve: the minimum response (leakiness), the maximum response (saturation), the difference between the maximum and minimum response (dynamic range), the concentration of ligand which generates a fold-change halfway between the minimal and maximal response (<span class="math inline"><em>E</em><em>C</em><sub>50</sub></span>), and the log-log slope at the midpoint of the response (effective Hill coefficient). (C) Over time we have refined our understanding of simple repression architectures. A first round of experiments used colorimetric assays and quantitative Western blots to investigate how single-site repression is modified by the repressor copy number and repressor-DNA binding energy . A second round of experiments used video microscopy to probe how the copy number of the promoter and presence of competing repressor binding sites affect gene expression, and we use this data set to determine the free energy difference between the repressor’s inactive and active conformations . Here we used flow cytometry to determine the inducer-repressor dissociation constants and demonstrate that with these parameters we can predict <em>a priori</em> the behavior of the system for any repressor copy number, DNA binding energy, gene copy number, and inducer concentration.</figcaption>
+</figure>
+</div>
+<h2 id="results">Results</h2>
+<h3 id="characterizing-transcription-factor-induction-using-the-monod-wyman-changeux-mwc-model">Characterizing Transcription Factor Induction using the Monod-Wyman-Changeux (MWC) Model</h3>
+<p>We begin by considering a simple repression genetic architecture in which the binding of an allosteric repressor occludes the binding of RNA polymerase (RNAP) to the DNA . When an effector (hereafter referred to as an “inducer” for the case of induction) binds to the repressor, it shifts the repressor’s allosteric equilibrium towards the inactive state as specified by the MWC model . This causes the repressor to bind more weakly to the operator, which increases gene expression. Simple repression motifs in the absence of inducer have been previously characterized by an equilibrium model where the probability of each state of repressor and RNAP promoter occupancy is dictated by the Boltzmann distribution (we note that non-equilibrium models of simple repression have been shown to have the same functional form that we derive below ). We extend these models to consider allostery by accounting for the equilibrium state of the repressor through the MWC model.</p>
+<p>Thermodynamic models of gene expression begin by enumerating all possible states of the promoter and their corresponding statistical weights. As shown in [<a href="#fig:ind_states_weights">2</a>], the promoter can either be empty, occupied by RNAP, or occupied by either an active or inactive repressor. The probability of binding to the promoter will be affected by the protein copy number, which we denote as <span class="math inline"><em>P</em></span> for RNAP, <span class="math inline"><em>R</em><sub><em>A</em></sub></span> for active repressor, and <span class="math inline"><em>R</em><sub><em>I</em></sub></span> for inactive repressor. We note that repressors fluctuate between the active and inactive conformation in thermodynamic equilibrium, such that <span class="math inline"><em>R</em><sub><em>A</em></sub></span> and <span class="math inline"><em>R</em><sub><em>I</em></sub></span> will remain constant for a given inducer concentration . We assign the repressor a different DNA binding affinity in the active and inactive state. In addition to the specific binding sites at the promoter, we assume that there are <span class="math inline"><em>N</em><sub><em>N</em><em>S</em></sub></span> non-specific binding sites elsewhere (i.e. on parts of the genome outside the simple repression architecture) where the RNAP or the repressor can bind. All specific binding energies are measured relative to the average non-specific binding energy. Thus, <span class="math inline"><em>Δ</em><em>ε</em><sub><em>P</em></sub></span> represents the energy difference between the specific and non-specific binding for RNAP to the DNA. Likewise, <span class="math inline"><em>Δ</em><em>ε</em><sub><em>R</em><em>A</em></sub></span> and <span class="math inline"><em>Δ</em><em>ε</em><sub><em>R</em><em>I</em></sub></span> represent the difference in specific and non-specific binding energies for repressor in the active or inactive state, respectively.</p>
+<div id="fig:ind_states_weights" class="fignos">
+<figure>
+<img src="ch2_fig2.png" alt="Figure 2: States and weights for the simple repression motif.** RNAP (light blue) and a repressor compete for binding to a promoter of interest. There are R_A repressors in the active state (red) and R_I repressors in the inactive state (purple). The difference in energy between a repressor bound to the promoter of interest versus another non-specific site elsewhere on the DNA equals \Delta\varepsilon_{RA} in the active state and \Delta\varepsilon_{RI} in the inactive state; the P RNAP have a corresponding energy difference \Delta\varepsilon_{P} relative to non-specific binding on the DNA. N_{NS} represents the number of non-specific binding sites for both RNAP and repressor. A repressor has an active conformation (red, left column) and an inactive conformation (purple, right column), with the energy difference between these two states given by \Delta \varepsilon_{AI}. The inducer (blue circle) at concentration c is capable of binding to the repressor with dissociation constants K_A in the active state and K_I in the inactive state. The eight states for a dimer with n=2 inducer binding sites are shown along with the sums of the active and inactive states." data-short-caption="States and weights for the simple repression motif." /><figcaption><span>Figure 2:</span> States and weights for the simple repression motif.** RNAP (light blue) and a repressor compete for binding to a promoter of interest. There are <span class="math inline"><em>R</em><sub><em>A</em></sub></span> repressors in the active state (red) and <span class="math inline"><em>R</em><sub><em>I</em></sub></span> repressors in the inactive state (purple). The difference in energy between a repressor bound to the promoter of interest versus another non-specific site elsewhere on the DNA equals <span class="math inline"><em>Δ</em><em>ε</em><sub><em>R</em><em>A</em></sub></span> in the active state and <span class="math inline"><em>Δ</em><em>ε</em><sub><em>R</em><em>I</em></sub></span> in the inactive state; the <span class="math inline"><em>P</em></span> RNAP have a corresponding energy difference <span class="math inline"><em>Δ</em><em>ε</em><sub><em>P</em></sub></span> relative to non-specific binding on the DNA. <span class="math inline"><em>N</em><sub><em>N</em><em>S</em></sub></span> represents the number of non-specific binding sites for both RNAP and repressor. A repressor has an active conformation (red, left column) and an inactive conformation (purple, right column), with the energy difference between these two states given by <span class="math inline"><em>Δ</em><em>ε</em><sub><em>A</em><em>I</em></sub></span>. The inducer (blue circle) at concentration <span class="math inline"><em>c</em></span> is capable of binding to the repressor with dissociation constants <span class="math inline"><em>K</em><sub><em>A</em></sub></span> in the active state and <span class="math inline"><em>K</em><sub><em>I</em></sub></span> in the inactive state. The eight states for a dimer with <span class="math inline"><em>n</em> = 2</span> inducer binding sites are shown along with the sums of the active and inactive states.</figcaption>
+</figure>
+</div>
+<p>Thermodynamic models of transcription posit that gene expression is proportional to the probability that the RNAP is bound to the promoter <span class="math inline"><em>p</em><sub>bound</sub></span>, which is given by</p>
+<p><span id="eq:pbound_def" class="eqnos"><br /><span class="math display">$$
+p_\text{bound}=\frac{\frac{P}{N_{NS}}e^{-\beta
+\Delta\varepsilon_{P}}}{1+\frac{R_A}{N_{NS}}e^{-\beta
+\Delta\varepsilon_{RA}}+\frac{R_I}{N_{NS}}e^{-\beta
+\Delta\varepsilon_{RI}}+\frac{P}{N_{NS}}e^{-\beta\Delta\varepsilon_{P}}},
+$$</span><br /><span class="eqnos-number">(1)</span></span> </p>
+<p>with <span class="math inline">$\beta = \frac{1}{k_BT}$</span> where <span class="math inline"><em>k</em><sub><em>B</em></sub></span> is the Boltzmann constant and <span class="math inline"><em>T</em></span> is the temperature of the system. As <span class="math inline"><em>k</em><sub><em>B</em></sub><em>T</em></span> is the natural unit of energy at the molecular length scale, we treat the products <span class="math inline"><em>β</em><em>Δ</em><em>ε</em><sub><em>j</em></sub></span> as single parameters within our model. Measuring <span class="math inline"><em>p</em><sub>bound</sub></span> directly is fraught with experimental difficulties, as determining the exact proportionality between expression and <span class="math inline"><em>p</em><sub>bound</sub></span> is not straightforward. Instead, we measure the fold-change in gene expression due to the presence of the repressor. We define fold-change as the ratio of gene expression in the presence of repressor relative to expression in the absence of repressor (i.e. constitutive expression), namely,</p>
+<p><span id="eq:ind_fc_def" class="eqnos"><br /><span class="math display">$$
+\text{fold-change} \equiv \frac{p_\text{bound}(R &gt; 0)}{p_\text{bound}(R = 0)}.
+$$</span><br /><span class="eqnos-number">(2)</span></span></p>
+<p>We can simplify this expression using two well-justified approximations: (1) <span class="math inline">$\frac{P}{N_{NS}}e^{-\beta\Delta\varepsilon_{P}}\ll 1$</span> implying that the RNAP binds weakly to the promoter (<span class="math inline"><em>N</em><sub><em>N</em><em>S</em></sub> = 4.6 × 10<sup>6</sup></span>, <span class="math inline"><em>P</em> ≈ 10<sup>3</sup></span> , <span class="math inline"><em>Δ</em><em>ε</em><sub><em>P</em></sub> ≈  − 2  to  − 5 <em>k</em><sub><em>B</em></sub><em>T</em></span> , so that <span class="math inline">$\frac{P}{N_{NS}}e^{-\beta\Delta\varepsilon_{P}} \approx 0.01$</span>) and (2) <span class="math inline">$\frac{R_I}{N_{NS}}e^{-\beta \Delta\varepsilon_{RI}} \ll 1 + \frac{R_A}{N_{NS}} e^{-\beta\Delta\varepsilon_{RA}}$</span> which reflects our assumption that the inactive repressor binds weakly to the promoter of interest. Using these approximations, the fold-change reduces to the form</p>
+<p><span id="eq:ind_fc_appx" class="eqnos"><br /><span class="math display">$$
+\text{fold-change} \approx \left(1+\frac{R_A}{N_{NS}}e^{-\beta
+\Delta\varepsilon_{RA}}\right)^{-1} \equiv \left( 1+p_A(c)
+\frac{R}{N_{NS}}e^{-\beta
+\Delta\varepsilon_{RA}} \right)^{-1},
+$$</span><br /><span class="eqnos-number">(3)</span></span> </p>
+<p>where in the last step we have introduced the fraction <span class="math inline"><em>p</em><sub>act</sub>(<em>c</em>)</span> of repressors in the active state given a concentration <span class="math inline"><em>c</em></span> of inducer, such that <span class="math inline"><em>R</em><sub><em>A</em></sub>(<em>c</em>) = <em>p</em><sub>act</sub>(<em>c</em>)<em>R</em></span>. Since inducer binding shifts the repressors from the active to the inactive state, <span class="math inline"><em>p</em><sub>act</sub>(<em>c</em>)</span> grows smaller as <span class="math inline"><em>c</em></span> increases.</p>
+<h2 id="references" class="unnumbered">References</h2>
+<div id="refs" class="references">
+<div id="ref-boedicker2013">
+<p>Boedicker, James Q., Hernan G. Garcia, and Rob Phillips. 2013. “Theoretical and Experimental Dissection of DNA Loop-Mediated Repression.” <em>Physical Review Letters</em> 110 (1): 018101. <a href="https://doi.org/10.1103/PhysRevLett.110.018101" class="uri">https://doi.org/10.1103/PhysRevLett.110.018101</a>.</p>
+</div>
+<div id="ref-brewster2014">
+<p>Brewster, Robert C., Franz M. Weinert, Hernan G. Garcia, Dan Song, Mattias Rydenfelt, and Rob Phillips. 2014. “The Transcription Factor Titration Effect Dictates Level of Gene Expression.” <em>Cell</em> 156 (6): 1312–23. <a href="https://doi.org/10.1016/j.cell.2014.02.022" class="uri">https://doi.org/10.1016/j.cell.2014.02.022</a>.</p>
+</div>
+<div id="ref-garcia2011b">
+<p>Garcia, Hernan G., Heun Jin Lee, James Q. Boedicker, and Rob Phillips. 2011. “Comparison and Calibration of Different Reporters for Quantitative Analysis of Gene Expression.” <em>Biophysical Journal</em> 101 (3): 535–44. <a href="https://doi.org/10.1016/j.bpj.2011.06.026" class="uri">https://doi.org/10.1016/j.bpj.2011.06.026</a>.</p>
+</div>
+<div id="ref-garcia2011">
+<p>Garcia, H. G., and R. Phillips. 2011. “Quantitative Dissection of the Simple Repression Input-Output Function.” <em>Proceedings of the National Academy of Sciences</em> 108 (29): 12173–8. <a href="https://doi.org/10.1073/pnas.1015616108" class="uri">https://doi.org/10.1073/pnas.1015616108</a>.</p>
+</div>
+<div id="ref-harman2001">
+<p>Harman, James G. 2001. “Allosteric Regulation of the cAMP Receptor Protein.” <em>Biochimica et Biophysica Acta (BBA) - Protein Structure and Molecular Enzymology</em> 1547 (1): 1–17. <a href="https://doi.org/10.1016/S0167-4838(01)00187-X" class="uri">https://doi.org/10.1016/S0167-4838(01)00187-X</a>.</p>
+</div>
+<div id="ref-lanfranco2017">
+<p>Lanfranco, Maria Fe, Fernanda Gárate, Ashton J. Engdahl, and Rodrigo A. Maillard. 2017. “Asymmetric Configurations in a Reengineered Homodimer Reveal Multiple Subunit Communication Pathways in Protein Allostery.” <em>Journal of Biological Chemistry</em> 292 (15): 6086–93. <a href="https://doi.org/10.1074/jbc.M117.776047" class="uri">https://doi.org/10.1074/jbc.M117.776047</a>.</p>
+</div>
+<div id="ref-monod1965">
+<p>Monod, Jacque, Jeffries Wyman, and Jean-Pierre Changeux. 1965. “On the Nature of Allosteric Transitions: A Plausible Model.” <em>Journal of Molecular Biology</em> 12 (1): 88–118. <a href="https://doi.org/10.1016/S0022-2836(65)80285-6" class="uri">https://doi.org/10.1016/S0022-2836(65)80285-6</a>.</p>
+</div>
+<div id="ref-rogers2015">
+<p>Rogers, Jameson K., Christopher D. Guzman, Noah D. Taylor, Srivatsan Raman, Kelley Anderson, and George M. Church. 2015. “Synthetic Biosensors for Precise Gene Control and Real-Time Monitoring of Metabolites.” <em>Nucleic Acids Research</em> 43 (15): 7648–60. <a href="https://doi.org/10.1093/nar/gkv616" class="uri">https://doi.org/10.1093/nar/gkv616</a>.</p>
+</div>
+<div id="ref-rohlhill2017">
+<p>Rohlhill, Julia, Nicholas R. Sandoval, and Eleftherios T. Papoutsakis. 2017. “Sort-Seq Approach to Engineering a Formaldehyde-Inducible Promoter for Dynamically Regulated Escherichia Coli Growth on Methanol.” <em>ACS Synthetic Biology</em> 6 (8): 1584–95. <a href="https://doi.org/10.1021/acssynbio.7b00114" class="uri">https://doi.org/10.1021/acssynbio.7b00114</a>.</p>
+</div>
+<div id="ref-setty2003">
+<p>Setty, Y., A. E. Mayo, M. G. Surette, and U. Alon. 2003. “Detailed Map of a Cis-Regulatory Input Function.” <em>Proceedings of the National Academy of Sciences</em> 100 (13): 7702–7. <a href="https://doi.org/10.1073/pnas.1230759100" class="uri">https://doi.org/10.1073/pnas.1230759100</a>.</p>
+</div>
+</div>
+						</div><!-- /.content -->
+					</div><!-- /.col -->
+					<div class="col-md-4 col-md-offset-1">
+						<div class="sections-list-wrapper">
+							<div class="sections-list js-sections js-affix js-scrollspy hidden-xs hidden-sm"><span style="font-size: 14pt">Table of Contents</span><hr></div><!-- /.sections-list -->
+						</div>
+					</div><!-- /.col -->
+				</div><!-- /.row -->
+			</div><!-- /.container -->
+		</div><!-- /.section -->
+		
+		<div class="js-footer-area">
+			
+				<nav class="page-nav">	
+					<div class="container">
+						<div class="row">
+							<div class="col-xs-12">
+								
+									<a href="{{site.doks.baseurl}}/published_content" class="page-nav__item page-nav__item--prev">
+										<i class="icon icon--arrow-left"></i>
+										Published Content
+									</a><!-- /.page-nav__item -->
+								
+								
+									<a href="{{site.doks.baseurl}}/chapter_2" class="page-nav__item page-nav__item--next">
+										Chapter 2
+										<i class="icon icon--arrow-right"></i>
+									</a><!-- /.page-nav__item -->
+								
+							</div><!-- /.col -->
+						</div><!-- /.row -->
+					</div><!-- /.container -->
+				</nav><!-- /.page-nav -->
+			
+			
+			
+	<footer class="site-footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-6">
+					
+						<a href="/" class="site-footer__logo">Griffin D. Chure | PhD Thesis</a>
+					
+					
+						<hr>
+						<p class="site-footer__copyright">Copyright &copy; 2020. - Griffin D. Chure <br>All rights reserved.</p>
+					
+				</div><!-- /.col -->
+				
+					<div class="col-sm-6 align-right">
+						<ul class="social-list">
+							
+								<li>
+									<a href="https://twitter.com/gdchure" target="_blank" class="social-list__item social-list__item--twitter">
+										<i class="icon icon--twitter"></i>
+									</a>
+								</li>
+							
+						</ul><!-- /.social-list -->
+					</div><!-- /.col -->
+				
+			</div><!-- /.row -->
+		</div><!-- /.container -->
+	</footer><!-- /.site-footer -->
+
+
+<script src="/doks-theme/assets/js/vendor/jquery.min.js"></script>
+<script type="text/javascript" src="/doks-theme/assets/js/vendor/bootstrap/affix.min.js"></script>
+<script type="text/javascript" src="/doks-theme/assets/js/vendor/bootstrap/scrollspy.min.js"></script>
+<script type="text/javascript" src="/doks-theme/assets/js/vendor/matchHeight.min.js"></script>
+<script type="text/javascript" src="/doks-theme/assets/js/scripts.min.js"></script>
+
+
+
+
+		</div><!-- /.js-footer-area -->
+	</body>
+</html>

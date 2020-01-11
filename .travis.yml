@@ -8,17 +8,17 @@ addons:
       - pandoc
 branches:
   only:
-  - master
+  - dev
 script:
   - make html
 deploy:
   provider: pages
-  local-dir: ./site
-  target-branch: release
+  local-dir: ./_site
+  target-branch: master
   email: deploy@travis-ci.org
   name: Deployment Bot
   skip-cleanup: true
   github-token: $GITHUB_TOKEN
   keep-history: true
   on:
-    branch: master
+    branch: dev

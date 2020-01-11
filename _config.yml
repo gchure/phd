@@ -1,6 +1,6 @@
 # Theme settings
 doks:
-    baseurl: https://gchure.github.io/phd/ 
+    baseurl:
     color_theme:  grey # Available themes: blue (default), green, purple, red and yellow
     header:
         logo:
@@ -34,7 +34,7 @@ jekyll_get:
     json: 'https://api.github.com/orgs/gchure/repos'
     cache: false
 
-exclude: [ 'README.md', 'CHANGELOG.md', 'data/', 'vendor']
+exclude: [ 'README.md', 'CHANGELOG.md', 'src/data/', 'vendor']
 permalink: /:title/
 gems:
   - jekyll-numbered-headings
@@ -55,3 +55,4 @@ pandoc:
      --filter pandoc-shortcaption
      --top-level-division chapter 
      --metadata link-citations
+---

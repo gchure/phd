@@ -87,6 +87,12 @@ small,
 	font-size: $font-size-small;
 }
 
+/* ----- Citations --------- */
+.citation {
+	font-style: italic;	
+	color: rgba($color-white, 0.75);
+}
+
 /* ----- Paragraphs ----- */
 p {
 		font-size: 11.5pt;

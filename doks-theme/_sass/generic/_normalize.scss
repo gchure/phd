@@ -58,9 +58,15 @@ h1 {
  */
 
 
+.fignos {
+  width: 100%;
+  padding: 0px;
+  margin: 0px;
+}
 figcaption,
 figure,
 main { /* 1 */
+  font-family: arial;
   text-align: justify;
   text-justify: inter-ideograph; 
   font-size: 0.9em;
