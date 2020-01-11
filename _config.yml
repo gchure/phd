@@ -1,6 +1,6 @@
 # Theme settings
 doks:
-    baseurl:
+    baseurl: "https://gchure.github.io/phd/"
     color_theme:  grey # Available themes: blue (default), green, purple, red and yellow
     header:
         logo:
@@ -53,6 +53,5 @@ pandoc:
      --filter pandoc-xnos 
      --filter pandoc-citeproc
      --filter pandoc-shortcaption
-     --top-level-division chapter 
      --metadata link-citations
 ---
