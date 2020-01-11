@@ -21,7 +21,7 @@ pdf:
 
 html:
 	bundle config set deployment 'true' ;\
-	bundle exec jekyll build --destination site;\
+	bundle exec jekyll build --destination _site;\
 	sh copyfigs.sh ;\
 	echo "done"
 
