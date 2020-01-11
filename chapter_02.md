@@ -38,6 +38,4 @@ page_nav:
 **Published as ...**
 <hr/>
 {% include_relative src/chapter_02/section_01_header.md %}
-{% include_relative src/chapter_02/section_02_introduction.md %}
-{% include_relative src/chapter_02/section_03_model.md %}
-{% include_relative src/chapter_02/section_99_references.md %}
+
