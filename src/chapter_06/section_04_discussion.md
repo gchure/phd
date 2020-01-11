@@ -55,6 +55,7 @@ survival. This number is significantly smaller than our observation of
 approximately 100 channels as the *minimum* number needed to convey an  y
 observable degree of survival.
 
+
 The disagreement between the numbers reported in this work and in van den
 Berg et al. may partially arise from subtle differences in the experimental
 approach. The primary practical difference is the magnitude of the osmotic
