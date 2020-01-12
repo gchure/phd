@@ -10,6 +10,7 @@ branches:
   only:
   - dev
 script:
+  - git checkout master && rm -rf * && git checkout dev
   - make html
 deploy:
   provider: pages
