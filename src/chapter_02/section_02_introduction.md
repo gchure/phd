@@ -40,7 +40,7 @@ specific and non-specific binding for RNAP to the DNA. Likewise,
 difference in specific and non-specific binding energies for repressor
 in the active or inactive state, respectively.
 
-![**States and weights for the simple repression motif.** RNAP (light
+![States and weights for the simple repression motif. RNAP (light
 blue) and a repressor compete for binding to a promoter of interest.
 There are \(R_A\) repressors in the active state (red) and \(R_I\)
 repressors in the inactive state (purple). The difference in energy
@@ -58,9 +58,8 @@ is capable of binding to the repressor with dissociation constants
 \(K_A\) in the active state and \(K_I\) in the inactive state. The eight
 states for a dimer with \(n=2\) inducer binding sites are shown along
 with the sums of the active and inactive
-states.](main_figs/fig2.pdf)
-
-<span id="fig_polymerase_repressor_states" label="fig_polymerase_repressor_states">\[fig\_polymerase\_repressor\_states\]</span>
+states.](ch2_fig2){#fig:ind_states_weights short-caption="States and weights
+for the simple repression motif."}
 
 Thermodynamic models of transcription  posit that gene expression is
 proportional to the probability that the RNAP is bound to the promoter
