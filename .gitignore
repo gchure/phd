@@ -19,4 +19,3 @@ src/data/*
 # Compiled assets
 # ---------------
 .sass-cache
-_site

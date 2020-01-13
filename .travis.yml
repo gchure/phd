@@ -10,9 +10,6 @@ addons:
 branches:
   only:
   - dev
-script:
-  - JEKYLL_ENV=production bundle exec jekyll build --destination _site
-  - sh copyfigs.sh
 deploy:
   provider: pages
   local-dir: ./_site
