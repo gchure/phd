@@ -20,7 +20,7 @@ pdf:
 	--resource-path='.:chapter_01/figs:chapter_02/figs:chapter_06/figs:' \
 
 html:	
-	bundle exec jekyll build JEKYLL_ENV=production --destination docs;\
+	JEKYLL_ENV=production bundle exec jekyll build --destination docs;\
 	sh copyfigs.sh ;\
 
 
