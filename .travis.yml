@@ -11,7 +11,8 @@ branches:
   only:
   - dev
 script:
-  - make html
+  - JEKYLL_ENV=production bundle exec jekyll build --destination _site
+  - sh copyfigs.sh
 deploy:
   provider: pages
   local-dir: ./_site
