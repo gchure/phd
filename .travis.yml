@@ -1,5 +1,6 @@
 language: ruby
 cache: bundler
+python: 3.7
 before_install:
   - yes | gem update --system --force
   - gem install bundle
