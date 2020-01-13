@@ -1,6 +1,7 @@
 jobs:
   exclude:
-    - gemfile: Gemfile
+    - rvm: 2.5.3
+      gemfile: Gemfile
 
 branches:
   only:
