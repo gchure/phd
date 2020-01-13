@@ -33,11 +33,22 @@ page_nav:
     next:
         content: Chapter 2
         url: '{{site.doks.baseurl}}/chapter_2'
+prefix: chapter_02
+contents:
+    - section_01_header
+    - section_02_introduction
+    - section_03_model   
 ---
 
 **Published as ...**
 <hr/>
-{% include_relative src/chapter_02/section_01_header.md %}
-{% include_relative src/chapter_02/section_02_introduction.md %}
-{% include_relative src/chapter_02/section_03_model.md %}
+{% if page.contents %}
+{% for val in page.contents %}
+{% if jekyll.environment == production %}
+{% include_relative {{site.doks.baseurl}}src/{{page.prefix}}/{{val}}.md %}
+{% else %}
+{% include_relative src/{{page.prefix}}/{{val}}.md %}
+{% endif %}
+{% endfor %}
+{% endif %}
 

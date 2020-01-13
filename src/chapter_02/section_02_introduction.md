@@ -1,4 +1,4 @@
-# Introduction
+## Introduction
 
 Understanding how organisms sense and respond to changes in their
 environment has long been a central theme of biological inquiry. At the

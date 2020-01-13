@@ -1,7 +1,3 @@
----
-pagetitle: none
----
-
 ## Results
 
 ### Characterizing Transcription Factor Induction using the Monod-Wyman-Changeux (MWC) Model
