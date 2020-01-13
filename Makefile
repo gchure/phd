@@ -19,9 +19,8 @@ pdf:
 	--top-level-division chapter \
 	--resource-path='.:chapter_01/figs:chapter_02/figs:chapter_06/figs:' \
 
-html:
-	JEKYLL_ENV=production ;\
-	bundle exec jekyll build ;\
+html:	
+	bundle exec jekyll build JEKYLL_ENV=production --destination docs;\
 	sh copyfigs.sh ;\
 
 
