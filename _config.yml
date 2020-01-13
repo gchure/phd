@@ -47,11 +47,11 @@ pandoc:
       posts: false
       categories: false 
     flags: >
-     --bibliography src/references.bib
      --default-image-extension=.png
      --dpi 300
      --filter pandoc-xnos 
      --filter pandoc-citeproc
      --filter pandoc-shortcaption
+     --bibliography src/references.bib
      --metadata link-citations
 ---
