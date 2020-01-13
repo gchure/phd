@@ -11,6 +11,7 @@ branches:
   only:
   - dev
 script:
+  - JEKYLL_ENV= production
   - make html
 deploy:
   provider: pages
