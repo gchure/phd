@@ -1,8 +1,11 @@
+language: ruby
+cache: bundler
+before_install:
+  - yes | gem update --system --force
+  - gem install bundle
 branches:
   only:
   - dev
-script:
-  - echo "This is just something for travis to do"
 deploy:
   provider: pages
   local-dir: ./_site
