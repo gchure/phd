@@ -1,6 +1,8 @@
 branches:
   only:
   - dev
+script:
+  - echo "This is just something for travis to do"
 deploy:
   provider: pages
   local-dir: ./_site
