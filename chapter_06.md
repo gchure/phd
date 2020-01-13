@@ -39,6 +39,7 @@ page_nav:
         url: '{{site.doks.baseurl}}/chapter_2'
 ---
 
+This is a test of a changed file. 
 **Published as ...**
 <hr/>
 {% include_relative src/chapter_06/section_01_header.md %}
