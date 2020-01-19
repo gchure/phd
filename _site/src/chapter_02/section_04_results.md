@@ -2,32 +2,32 @@
 
 ## Characterizing Transcription Factor Induction using the Monod-Wyman-Changeux (MWC) Model
 
-We begin by considering a simple repression genetic architecture in
-which the binding of an allosteric repressor occludes the binding of RNA
-polymerase (RNAP) to the DNA . When an effector (hereafter referred to
-as an “inducer" for the case of induction) binds to the repressor, it
-shifts the repressor’s allosteric equilibrium towards the inactive state
-as specified by the MWC model . This causes the repressor to bind more
-weakly to the operator, which increases gene expression. Simple
-repression motifs in the absence of inducer have been previously
-characterized by an equilibrium model where the probability of each
-state of repressor and RNAP promoter occupancy is dictated by the
-Boltzmann distribution  (we note that non-equilibrium models of simple
-repression have been shown to have the same functional form that we
-derive below ). We extend these models to consider allostery by
-accounting for the equilibrium state of the repressor through the MWC
-model.
+We begin by considering a simple repression genetic architecture in which the
+binding of an allosteric repressor occludes the binding of RNA polymerase
+(RNAP) to the DNA [@ackers1982; @buchler2003]. When an effector (hereafter
+referred to as an “inducer" for the case of induction) binds to the
+repressor, it shifts the repressor’s allosteric equilibrium towards the
+inactive state as specified by the MWC model [@monod1965]. This causes the
+repressor to bind more weakly to the operator, which increases gene
+expression. Simple repression motifs in the absence of inducer have been
+previously characterized by an equilibrium model where the probability of
+each state of repressor and RNAP promoter occupancy is dictated by the
+Boltzmann distribution [@ackers1982; @buchler2003; @vilar2003; @bintu2005a;
+@garcia2011; @brewster2014] [we note that non-equilibrium models of simple
+repression have been shown to have the same functional form that we derive
+below [@phillips2015]]. We extend these models to consider allostery by
+accounting for the equilibrium state of the repressor through the MWC model.
 
 Thermodynamic models of gene expression begin by enumerating all
 possible states of the promoter and their corresponding statistical
-weights. As shown in , the promoter can either be empty, occupied by
+weights. As shown in Fig. @fig:states_weights (A), the promoter can either be empty, occupied by
 RNAP, or occupied by either an active or inactive repressor. The
 probability of binding to the promoter will be affected by the protein
 copy number, which we denote as $P$ for RNAP, $R_{A}$ for active
 repressor, and $R_{I}$ for inactive repressor. We note that repressors
 fluctuate between the active and inactive conformation in thermodynamic
 equilibrium, such that $R_{A}$ and $R_{I}$ will remain constant for
-a given inducer concentration . We assign the repressor a different DNA
+a given inducer concentration [@monod1965]. We assign the repressor a different DNA
 binding affinity in the active and inactive state. In addition to the
 specific binding sites at the promoter, we assume that there are
 $N_{NS}$ non-specific binding sites elsewhere (i.e. on parts of the
@@ -59,9 +59,11 @@ with $n=2$ inducer binding sites are shown along with the sums of the active
 and inactive states.](ch2_fig2){#fig:states_weights short-caption="States and
 statistical weights for the simple repression motif"}
 
-Thermodynamic models of transcription  posit that gene expression is
-proportional to the probability that the RNAP is bound to the promoter
-$p_{\text{bound}}$, which is given by 
+Thermodynamic models of transcription [@ackers1982; @buchler2003; @vilar2003;
+@bintu2005; @bintu2005a; @kuhlman2007; @daber2011a; @garcia2011;
+@brewster2014; @weinert2014] posit that gene expression is proportional to
+the probability that the RNAP is bound to the promoter $p_{\text{bound}}$,
+which is given by
 
 $$
 p_\text{bound} = \frac{\frac{P}{N_{NS}}e^{-\beta

@@ -48,7 +48,7 @@ pandoc:
     skip:
       full: false
       posts: false
-      categories: false 
+      categories: false     
     flags: >
      --default-image-extension=.png
      --dpi 300
@@ -56,7 +56,7 @@ pandoc:
      --filter pandoc-fignos 
      --filter pandoc-eqnos 
      --filter pandoc-citeproc
-     --filter pandoc-shortcaption
+     --filter pandoc-crossref
      --bibliography src/references.bib
      --metadata link-citations
 ---
