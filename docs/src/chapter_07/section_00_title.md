@@ -1,1 +1,1 @@
-# Supplemental Information For Chapter 2: Signal Processing Via Allosteric Transcription Factors{#sec:ch2_si}
+# Supplemental Information For Chapter 2: Signal Processing Via Allosteric Transcription Factors {#sec:ch2_si}

@@ -187,4 +187,4 @@ input/output response of the system under a broad range of experimental
 conditions. For example, this framework can predict the response of the
 system at different repressor copy numbers $R$, repressor-operator affinities
 $\Delta\varepsilon_{RA}$, inducer concentrations $c$, and gene copy numbers
-(see Chapter @sec:ch2_si, Sec. @sec:induction_fugacity).
+(see Chapter 7.2).

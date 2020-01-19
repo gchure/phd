@@ -52,11 +52,9 @@ pandoc:
     flags: >
      --default-image-extension=.png
      --dpi 300
-     --filter pandoc-secnos 
-     --filter pandoc-fignos 
-     --filter pandoc-eqnos 
-     --filter pandoc-citeproc
+     --filter pandoc-xnos
      --filter pandoc-crossref
+     --filter pandoc-citeproc
      --bibliography src/references.bib
      --metadata link-citations
 ---

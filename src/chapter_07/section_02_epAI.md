@@ -1,4 +1,4 @@
-## Inferring Allosteric Parameters from Previous Data{#sec:ch2_si_epAI}
+## Inferring Allosteric Parameters from Previous Data {#sec:ch2_si_epAI}
 
 The fold-change profile described by features three unknown parameters
 $K_A$, $K_I$, and $\Delta\varepsilon_{AI}$. In this section, we

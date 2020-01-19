@@ -28,16 +28,17 @@ author:
 # Page navigation
 page_nav:
     prev:
-        content: Published Content
-        url: '{{site.doks.baseurl}}/published_content'
+        content: Chapter I
+        url: chapter_01'
     next:
-        content: Chapter 2
-        url: '{{site.doks.baseurl}}/chapter_2'
+        content: Chapter III
+        url: chapter_03
 prefix: chapter_02
 contents:
     - section_01_header
     - section_02_introduction
     - section_03_model   
+    - section_04_results
 ---
 
 **Published as ...**
