@@ -1,6 +1,7 @@
 import numpy as np
 import fcsparser
 import pandas as pd
+import fcsparser
 from ._fit_bivariate_normal_AstroML import fit_bivariate_normal
 import scipy.stats
 
@@ -157,12 +158,6 @@ def gaussian_gate(df, alpha, x_val="FSC-A", y_val="SSC-A", log=True, verbose=Fal
             )
         )
     return df[idx]
-
-
-# #######################
-# File Parsing Utilities
-# #######################
-
 
 def fcs_to_csv(path, file_name, save_metadata=True):
     r"""
