@@ -8,8 +8,8 @@ import sys
 import glob
 import phd.viz
 import phd.stats
-
-colors, palettes = phd.viz.phd_style()
+import altair as alt
+colors, palettes = phd.viz.altair_theme()
 MAX_EXP = 100
 MEAN_AREA = 4.86
 MEAN_CAL = 3272
@@ -19,11 +19,49 @@ cal_data = pd.read_csv("../../data/ch6_mscl/mlg910_calibration_data.csv")
 data['experiment'] = 'shock'
 data = pd.concat([data, cal_data], ignore_index=True, sort=False)
 
-#%%
+
 # Keep only the shock data and mlg910
 intensity_order = (
     data.groupby(["rbs"])["scaled_intensity"].mean().sort_values()[::-1].index
 )
+
+
+
+#%%
+# Define the chart object. 
+base = alt.Chart(data, width=300, height=250)
+
+
+_points = base.mark_point(size=10).encode(
+             x=alt.X(field='jitter:Q', 
+                     type='ordinal',
+                     sort=list(intensity_order),
+                     axis=alt.Axis(title='Shine-Dalgarno sequence',
+                                   labelAngle=0,
+                                   grid=False)),
+             y=alt.Y(field='effective_channels', 
+                     type="quantitative",
+                     axis=alt.Axis(title='effective channel number')),
+             column=alt.Column('rbs:N'),
+             strokeWidth=alt.value(0),
+             fill=alt.value('black'),
+             opacity=alt.value(0.5)
+    ).transform_calculate(
+             jitter='sqrt(-2*log(random()))*cos(2*PI*random())')
+
+_box = base.mark_boxplot(outliers=False).encode(
+    x=alt.X(field='rbs', 
+            type='ordinal',
+            sort=list(intensity_order),
+            axis=alt.Axis(title='Shine-Dalgarno sequence',
+                          labelAngle=0,
+                          grid=False)),
+    y=alt.Y(field='effective_channels', 
+            type="quantitative",
+            axis=alt.Axis(title='effective channel number')))
+
+_points + _box
+#%%
 
 # Set up the figureself.
 fig, ax = plt.subplots(1, 2, figsize=(6.5, 3))

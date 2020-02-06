@@ -12,14 +12,16 @@ import matplotlib.pyplot as plt
 import matplotlib.cm as cm
 import matplotlib.gridspec as gridspec
 import matplotlib.colors as plc
+import altair as alt
 import seaborn as sns
 import scipy.stats
-colors, palette = phd.viz.phd_style()
+import altair_save
+colors, palette = phd.viz.altair_theme()
 
 df = pd.read_csv('../../data/ch2_induction/RazoMejia_2018.csv', comment='#')
 
 # Now we remove the autofluorescence and delta values
-df = df[(df['rbs'] != 'auto') & (df['rbs'] != 'delta')]
+df = df[(df['rbs'] != 'auto') & (df['rbs'] != 'delta') & (df['operator']!='Oid')]
 
 #===============================================================================
 # O2 RBS1027
@@ -34,8 +36,8 @@ with open('../../data/ch2_induction/mcmc/SI_I_O2_R260.pkl', 'rb') as file:
 max_idx = np.argmax(gauss_flatlnprobability, axis=0)
 ea, ei, sigma = gauss_flatchain[max_idx]
 
-ka_fc = np.exp(-gauss_flatchain[:, 0])
-ki_fc = np.exp(-gauss_flatchain[:, 1])
+ka_fc = np.exp(-gauss_flatchain[:, 0])[::100]
+ki_fc = np.exp(-gauss_flatchain[:, 1])[::100]
 
 #%%
 #===============================================================================
@@ -44,21 +46,58 @@ ki_fc = np.exp(-gauss_flatchain[:, 1])
 
 # Define the IPTG concentrations to evaluate
 c_range = np.logspace(-2, 4, 200)
-c_range[0] = 0
+c_range[0] = 0 
+rep_range = np.logspace(0, 4, 200)
 
 
 # Set the colors for the strains
-rep_colors = {22: 'red', 
-              60: 'brown',  
-              124: 'green', 
-              260: 'orange', 
-              1220: 'purple', 
-              1740:'blue'} 
+rep_colors = {22: colors['red'], 
+              60: colors['brown'],  
+              124: colors['green'], 
+              260: colors['orange'], 
+              1220: colors['purple'], 
+              1740: colors['blue']} 
 
 # Define the operators and their respective energies
 operators = ['O1', 'O2', 'O3']
-energies = {'O1': -15.3, 'O2': -13.9, 'O3': -9.7, 'Oid': -17}
+energies = {'O1': -15.3, 'O2': -13.9, 'O3': -9.7}
 
+#%% Set up the dataframe for the fold-change. 
+fc_df = pd.DataFrame()
+for op, op_en in energies.items():
+    for r, _ in rep_colors.items():
+        for i, c in enumerate(c_range):
+            arch = phd.thermo.SimpleRepression(r, op_en, ka=ka_fc, ki=ki_fc, 
+                                               ep_ai=4.5, effector_conc=c)
+            
+            fc_min, fc_max = phd.stats.compute_hpd(arch.fold_change(), 0.95)
+            fc_df = fc_df.append({'fc_min': fc_min,
+                                  'fc_max': fc_max,
+                                  'repressors': r,
+                                  'IPTGuM': c,
+                                  'operator': op,
+                                  'binding_energy': op_en}, ignore_index=True)
+
+#  Dataframe for properties. 
+prop_df = pd.DataFrame([])
+for op, op_en in energies.items():
+    for i, r in enumerate(rep_range):
+        arch = phd.thermo.SimpleRepression(r, op_en, ka=ka_fc, ki=ki_fc, ep_ai=4.5,
+                                           effector_conc=0).compute_properties()
+        for prop, val in arch.items():
+            if prop == 'leakiness':
+                val_min = val 
+                val_max = val 
+            else:
+                val_min, val_max = phd.stats.compute_hpd(val, 0.95)
+            prop_df = prop_df.append({'val_min':val_min,
+                              'val_max':val_max,
+                              'property': prop,
+                              'repressors': r,
+                              'operator': op,
+                              'binding_energy':op_en}, ignore_index=True)
+    
+#%%
 # Initialize the figure.
 fig, ax = plt.subplots(3, 3, figsize=(6, 6))
 ax = ax.ravel()

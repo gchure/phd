@@ -16,6 +16,7 @@ import matplotlib
 import altair as alt
 import bokeh.themes
 import bokeh.io
+import altair as alt
 
 
 def color_palette():
@@ -154,6 +155,64 @@ def bokeh_theme(return_color_list=True):
         return [colors, palette]
     else:
         return colors
+
+def altair_theme():
+    """
+    Sets a theme for the plotting library Altair to match the style of my PhD.
+    """
+
+    colors, palette = color_palette()
+    def _theme():
+        return {
+            'config': {
+                'background': 'white',
+                    'group': { 
+                    'fill': 'white', 
+                    },
+                'view': {
+                    'strokeWidth': 0,
+                    'height': 300,
+                    'width': 400,
+                    'fill': '#EEEEEE'
+                    },
+                'mark': {
+                    'strokeWidth': 0.5,
+                    'stroke': 'black'
+                },
+                'axis': {
+                    'domainColor': colors['black'],
+                    'labelColor': colors['black'],
+                    'labelFont': 'Myriad Pro',
+                    'titleFont': 'Myriad Pro',
+                    'titleFontWeight': 400,
+                    'grid': True,
+                    'gridColor': 'white',
+                    'gridWidth': 0.75,
+                    'ticks': True,
+                    'tickColor': 'white',
+                    'tickOffset': 8,
+                    'tickWidth': 1.5
+                },
+                'range': {
+                    'category': palette
+                },
+                'legend': {
+                    'labelFont': 'Myriad Pro',
+                    'titleFont': 'Myriad Pro',
+                    'titleFontWeight': 400
+                },
+                'title' : { 
+                    'font': 'Myriad Pro',
+                    'fontWeight': 400,
+                    'anchor': 'middle'
+
+                }
+                  }
+                }
+
+    alt.themes.register('phd', _theme)# enable the newly registered theme
+    alt.themes.enable('phd')
+    return colors, palette
 
 
 def color_selector(style):
