@@ -15,13 +15,12 @@ import matplotlib.colors as plc
 import altair as alt
 import seaborn as sns
 import scipy.stats
-import altair_save
 colors, palette = phd.viz.altair_theme()
 
-df = pd.read_csv('../../data/ch2_induction/RazoMejia_2018.csv', comment='#')
+data = pd.read_csv('../../data/ch2_induction/RazoMejia_2018.csv', comment='#')
 
 # Now we remove the autofluorescence and delta values
-df = df[(df['rbs'] != 'auto') & (df['rbs'] != 'delta') & (df['operator']!='Oid')]
+data = data[(data['rbs'] != 'auto') & (data['rbs'] != 'delta') & (data['operator']!='Oid')]
 
 #===============================================================================
 # O2 RBS1027
@@ -35,28 +34,22 @@ with open('../../data/ch2_induction/mcmc/SI_I_O2_R260.pkl', 'rb') as file:
 # map value of the parameters
 max_idx = np.argmax(gauss_flatlnprobability, axis=0)
 ea, ei, sigma = gauss_flatchain[max_idx]
-
 ka_fc = np.exp(-gauss_flatchain[:, 0])[::100]
 ki_fc = np.exp(-gauss_flatchain[:, 1])[::100]
 
 #%%
-#===============================================================================
-# Plot the theory vs data for all 4 operators with the credible region
-#===============================================================================
-
 # Define the IPTG concentrations to evaluate
 c_range = np.logspace(-2, 4, 200)
 c_range[0] = 0 
 rep_range = np.logspace(0, 4, 200)
 
-
 # Set the colors for the strains
-rep_colors = {22: colors['red'], 
-              60: colors['brown'],  
-              124: colors['green'], 
-              260: colors['orange'], 
-              1220: colors['purple'], 
-              1740: colors['blue']} 
+rep_colors = {22: colors['light_red'], 
+              60: colors['light_brown'],  
+              124: colors['light_green'], 
+              260: colors['light_orange'], 
+              1220: colors['light_purple'], 
+              1740: colors['light_blue']} 
 
 # Define the operators and their respective energies
 operators = ['O1', 'O2', 'O3']
@@ -64,6 +57,9 @@ energies = {'O1': -15.3, 'O2': -13.9, 'O3': -9.7}
 
 #%% Set up the dataframe for the fold-change. 
 fc_df = pd.DataFrame()
+
+# Iterate through each operator, repressor, and IPTG concentration to calculate
+# the fold-change
 for op, op_en in energies.items():
     for r, _ in rep_colors.items():
         for i, c in enumerate(c_range):
@@ -78,7 +74,7 @@ for op, op_en in energies.items():
                                   'operator': op,
                                   'binding_energy': op_en}, ignore_index=True)
 
-#  Dataframe for properties. 
+#  Iterate through each operator and compute the properties
 prop_df = pd.DataFrame([])
 for op, op_en in energies.items():
     for i, r in enumerate(rep_range):
@@ -96,7 +92,211 @@ for op, op_en in energies.items():
                               'repressors': r,
                               'operator': op,
                               'binding_energy':op_en}, ignore_index=True)
+        
+
+#%%
+
+# Generate the plot of the fit strain.
+fit_strain_base = alt.Chart(data[(data['operator']=='O2') & 
+                                 (data['repressors']==130) & 
+                                 (data['IPTG_uM']>0)]
+                            ).transform_aggregate(
+                                mean_fc='mean(fold_change_A)',
+                                sem_fc='sem(fold_change_A)',
+                                groupby=['IPTG_uM']
+                            ).transform_calculate(
+                                ymin='datum.mean_fc - datum.sem_fc',
+                                ymax='datum.mean_fc + datum.sem_fc',
+                                groupby=['IPTG_uM']
+                            )
+fit_strain_plot = fit_strain_base.mark_point(
+                            size=30
+                            ).encode(
+                            x = alt.X(
+                                    'IPTG_uM:Q', 
+                                     scale=alt.Scale(type='log')
+                                     ),
+                            y = alt.Y(
+                                    'fold_change_A:Q',
+                                    aggregate='mean',
+                                    axis=alt.Axis(title='fold-change')
+                                    ),
+                            stroke = alt.value(colors['dark_orange']),
+                            strokeWidth = alt.value(1.5),
+                            fill=alt.value('white'))
+fit_strain_errors = fit_strain_base.mark_errorbar(
+                            ).encode(
+                                 x='IPTG_uM:Q',
+                                 y='ymin:Q',
+                                y2='ymax:Q',
+                                color=alt.value(rep_colors[260])
+                            ) 
+                    
+
+
+
+# Generate the plot for each operator
+fc_fill = alt.hconcat()
+for g, d in fc_df.groupby('operator'):
+    _fc_fill = alt.Chart(data=d[d['IPTGuM']>0], width=200, height=200).mark_area(  
+                    ).encode(
+                        x = alt.X(
+                                'IPTGuM:Q', 
+                                axis  =  alt.Axis(title='IPTG [µM]',  tickCount=4),
+                                scale =  alt.Scale(type='log')
+                                ),   
+                        y = alt.Y(
+                                'fc_min:Q', 
+                                axis  =  alt.Axis(title='fold-change'),
+                                scale =  alt.Scale(domain=[-0.05, 1.1])
+                                ),
+                        y2=   'fc_max:Q', 
+                        fill=alt.Color(
+                                'repressors:O',
+                                scale=alt.Scale(range=list(rep_colors.values())),
+                                legend=alt.Legend(title='repressors per cell')
+                                ),
+                        opacity= alt.value(0.75),
+                        strokeWidth = alt.value(0.5),
+                        stroke=alt.Color(
+                                'repressors:O',
+                                scale=alt.Scale(range=list(rep_colors.values()))
+                                )
+
+                    ).properties(
+                        title=f'operator {g}, ∆ε\u1D63 = {energies[g]} kT'
+                    )
+            
+    if g == 'O2':
+        _fc_fill += fit_strain_plot + fit_strain_errors
+     
+    fc_fill |= _fc_fill
+             
+
+fc_fill
+
+
+
+#%%
+
+
+pred_leak = alt.Chart(prop_df[prop_df['property']=='leakiness'], 
+                     width=200, height=200).mark_line(size=3).encode(
+                     x = alt.X('repressors:Q', 
+                                axis=alt.Axis(title='repressors per cell',
+                                              tickCount=4),
+                                             scale=alt.Scale(type='log')),
+                    y=alt.Y('val_min:Q', axis=alt.Axis(title='leakiness',
+                                                       tickCount=4),
+                                        scale=alt.Scale(type='log')),
+                    opacity=alt.value(0.5),
+                    color=alt.Color(field='operator',
+                                    type='ordinal',
+                                    scale=alt.Scale(scheme='viridis'))
+                    )
     
+pred_sat = alt.Chart(prop_df[prop_df['property']=='saturation'],
+                     width=200, height=200).mark_area().encode(
+                     x = alt.X('repressors:Q', 
+                              axis=alt.Axis(title='repressors per cell',
+                                            tickCount=4),
+                                            scale=alt.Scale(type='log')),
+                     y=alt.Y('val_min:Q', axis=alt.Axis(title='saturation',
+                                                       tickCount=4)), 
+                    y2='val_max:Q',
+                    opacity=alt.value(0.5),
+                    color=alt.Color(field='operator',
+                                    type='ordinal',
+                                    scale=alt.Scale(scheme='viridis'))
+
+
+                     )
+
+pred_dyn_rng = alt.Chart(prop_df[prop_df['property']=='dynamic_range'],
+                     width=200, height=200).mark_area().encode(
+                     x = alt.X('repressors:Q', 
+                              axis=alt.Axis(title='repressors per cell',
+                                            tickCount=4),
+                                            scale=alt.Scale(type='log')),
+                     y=alt.Y('val_min:Q', axis=alt.Axis(title='dynamic range',
+                                                       tickCount=4)), 
+                    y2='val_max:Q',
+                    opacity=alt.value(0.5),
+                    color=alt.Color(field='operator',
+                                    type='ordinal',
+                                    scale=alt.Scale(scheme='viridis'))
+
+
+                     )
+
+pred_ec50 = alt.Chart(prop_df[prop_df['property']=='EC50'],
+                     width=200, height=200).mark_area().encode(
+                     x = alt.X('repressors:Q', 
+                              axis=alt.Axis(title='repressors per cell',
+                                            tickCount=4),
+                                            scale=alt.Scale(type='log')),
+                     y=alt.Y('val_min:Q', axis=alt.Axis(title='EC\u2085\u2080 [µM]',
+                                                       tickCount=4),
+                                          scale=alt.Scale(type='log')), 
+                    y2='val_max:Q',
+                    opacity=alt.value(0.5),
+                    color=alt.Color(field='operator',
+                                    type='ordinal',
+                                    scale=alt.Scale(scheme='viridis'))
+
+
+                     )
+
+pred_e_hill = alt.Chart(prop_df[prop_df['property']=='effective_hill'],
+                     width=200, height=200).mark_area().encode(
+                     x = alt.X('repressors:Q', 
+                              axis=alt.Axis(title='repressors per cell',
+                                            tickCount=4),
+                                            scale=alt.Scale(type='log')),
+                     y=alt.Y('val_min:Q', axis=alt.Axis(title='effective Hill coefficient',
+                                                       tickCount=4),
+                                          scale=alt.Scale(domain=[1.1, 1.9])), 
+                    y2='val_max:Q',
+                    opacity=alt.value(0.5),
+                    color=alt.Color(field='operator',
+                                    type='ordinal',
+                                    scale=alt.Scale(scheme='viridis'))
+
+
+                     )
+
+
+
+prop_row1 = alt.hconcat(pred_leak | pred_sat | pred_dyn_rng)
+prop_row2 = alt.hconcat(pred_ec50 | pred_e_hill)
+fig_col = alt.vconcat(fc_fill, prop_row1, prop_row2)
+fig_col
+#%%
+row = alt.hconcat()
+for g, d in fc_df.groupby('operator'):
+    base = alt.Chart(d, width=100, height=150)
+    fill = o2_base.mark_area().encode(
+                    x=alt.X(field='IPTGuM', 
+                            axis=alt.Axis(title='IPTG [µM]',
+                                          tickCount=6),
+                            scale=alt.Scale(type='log'),),
+                    y=alt.Y(field='fc_min', 
+                            axis=alt.Axis(title='fold-change'),
+                            scale=alt.Scale(type='log')),
+                    y2='fc_max',
+                    color=alt.Color(field='repressors', 
+                                    type='ordinal',
+                                    scale=alt.Scale(range=list(rep_colors.values()))),
+                    opacity=alt.value(0.5)
+
+            ).properties(
+                title=f'operator {op}'
+            )
+    bases.append(base)
+    row |= fill
+
+row
+
 #%%
 # Initialize the figure.
 fig, ax = plt.subplots(3, 3, figsize=(6, 6))
