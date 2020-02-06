@@ -181,10 +181,13 @@ def altair_theme():
                 },
                 'axis': {
                     'domainColor': colors['black'],
+                    'domainWidth': 0.5,
                     'labelColor': colors['black'],
+                    'labelFontSize': 8,
                     'labelFont': 'Myriad Pro',
                     'titleFont': 'Myriad Pro',
                     'titleFontWeight': 400,
+                    'titleFontSize': 8,
                     'grid': True,
                     'gridColor': 'white',
                     'gridWidth': 0.75,
@@ -197,15 +200,17 @@ def altair_theme():
                     'category': palette
                 },
                 'legend': {
+                    'labelFontSize': 8,
                     'labelFont': 'Myriad Pro',
                     'titleFont': 'Myriad Pro',
+                    'titleFontSize': 8,
                     'titleFontWeight': 400
                 },
                 'title' : { 
                     'font': 'Myriad Pro',
                     'fontWeight': 400,
+                    'fontSize': 8,
                     'anchor': 'middle'
-
                 }
                   }
                 }

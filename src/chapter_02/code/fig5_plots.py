@@ -16,24 +16,24 @@ import altair as alt
 import seaborn as sns
 import scipy.stats
 colors, palette = phd.viz.altair_theme()
-
+DPI = 227
 data = pd.read_csv('../../data/ch2_induction/RazoMejia_2018.csv', comment='#')
 
 # Now we remove the autofluorescence and delta values
-data = data[(data['rbs'] != 'auto') & (data['rbs'] != 'delta') & (data['operator']!='Oid')]
+data = data[(data['rbs'] != 'auto') & 
+            (data['rbs'] != 'delta') & 
+            (data['operator']!='Oid')]
 
-#===============================================================================
-# O2 RBS1027
-#===============================================================================
 # Load the flat-chain
 with open('../../data/ch2_induction/mcmc/SI_I_O2_R260.pkl', 'rb') as file:
     unpickler = pickle.Unpickler(file)
     gauss_flatchain = unpickler.load()
     gauss_flatlnprobability = unpickler.load()
 
-# map value of the parameters
+# Map value of the parameters
 max_idx = np.argmax(gauss_flatlnprobability, axis=0)
 ea, ei, sigma = gauss_flatchain[max_idx]
+lnprob =  gauss_flatchain[:, 2][::100]
 ka_fc = np.exp(-gauss_flatchain[:, 0])[::100]
 ki_fc = np.exp(-gauss_flatchain[:, 1])[::100]
 
@@ -55,7 +55,31 @@ rep_colors = {22: colors['light_red'],
 operators = ['O1', 'O2', 'O3']
 energies = {'O1': -15.3, 'O2': -13.9, 'O3': -9.7}
 
-#%% Set up the dataframe for the fold-change. 
+
+#%%
+# ##############################################################################
+# SAMPLING JOINTPLOT
+# ##############################################################################
+sampling_df = pd.DataFrame(np.array([ka_fc, ki_fc, lnprob]).T, 
+                          columns=['ka', 'ki', 'logprob'])
+sampling_df.sort_values('logprob', inplace=True)
+sample_base = alt.Chart(sampling_df, width=3 * DPI, height=2 * DPI)
+sampling_points = sample_base.mark_point(size=0.5).encode(
+                x=alt.X('ki:Q', axis=alt.Axis(title='KI [µM]'),
+                        scale=alt.Scale(domain=[0.4, 0.65])),
+                y=alt.Y('ka:Q', axis=alt.Axis(title='KA [µM]'),
+                        scale=alt.Scale(domain=[90, 230])),
+                fill=alt.value(colors['black']),
+                strokeWidth=alt.value(0),
+                opacity=alt.value(0.5))
+
+sampling_points.save('../figs/fig5_sampling_points.svg')
+sampling_points
+#%%
+# ##############################################################################
+# PREDICTED INDUCTION PROFILES
+# ##############################################################################
+# Set up the dataframe for the fold-change. 
 fc_df = pd.DataFrame()
 
 # Iterate through each operator, repressor, and IPTG concentration to calculate
@@ -97,85 +121,57 @@ for op, op_en in energies.items():
 #%%
 
 # Generate the plot of the fit strain.
-fit_strain_base = alt.Chart(data[(data['operator']=='O2') & 
-                                 (data['repressors']==130) & 
-                                 (data['IPTG_uM']>0)]
-                            ).transform_aggregate(
-                                mean_fc='mean(fold_change_A)',
-                                sem_fc='sem(fold_change_A)',
-                                groupby=['IPTG_uM']
+fit_strain = data[(data['operator']=='O2') & (data['repressors']==130) & 
+                  (data['IPTG_uM']>0)]
+
+fit_strain_base = alt.Chart(fit_strain).transform_aggregate(
+                            mean_fc='mean(fold_change_A)',
+                            sem_fc='stderr(fold_change_A)',
+                            groupby=['IPTG_uM']
                             ).transform_calculate(
-                                ymin='datum.mean_fc - datum.sem_fc',
-                                ymax='datum.mean_fc + datum.sem_fc',
-                                groupby=['IPTG_uM']
+                            ymin='datum.mean_fc - datum.sem_fc',
+                            ymax='datum.mean_fc + datum.sem_fc' 
                             )
-fit_strain_plot = fit_strain_base.mark_point(
-                            size=30
-                            ).encode(
-                            x = alt.X(
-                                    'IPTG_uM:Q', 
-                                     scale=alt.Scale(type='log')
-                                     ),
-                            y = alt.Y(
-                                    'fold_change_A:Q',
-                                    aggregate='mean',
-                                    axis=alt.Axis(title='fold-change')
-                                    ),
-                            stroke = alt.value(colors['dark_orange']),
-                            strokeWidth = alt.value(1.5),
+fit_strain_plot = fit_strain_base.mark_point(size=30).encode(
+                            x=alt.X('IPTG_uM:Q', scale=alt.Scale(type='log')),
+                            y=alt.Y('mean_fc:Q', axis=alt.Axis(title='fold-change')),
+                            stroke=alt.value(colors['dark_orange']),
+                            strokeWidth=alt.value(.75),
                             fill=alt.value('white'))
-fit_strain_errors = fit_strain_base.mark_errorbar(
-                            ).encode(
-                                 x='IPTG_uM:Q',
-                                 y='ymin:Q',
-                                y2='ymax:Q',
-                                color=alt.value(rep_colors[260])
-                            ) 
+fit_strain_errors = fit_strain_base.mark_rule().encode(
+                            x='IPTG_uM:Q',
+                            y='ymin:Q',
+                            y2='ymax:Q',
+                            strokeWidth=alt.value(2),
+                            color=alt.value(rep_colors[260])) 
                     
-
-
 
 # Generate the plot for each operator
 fc_fill = alt.hconcat()
 for g, d in fc_df.groupby('operator'):
-    _fc_fill = alt.Chart(data=d[d['IPTGuM']>0], width=200, height=200).mark_area(  
-                    ).encode(
-                        x = alt.X(
-                                'IPTGuM:Q', 
-                                axis  =  alt.Axis(title='IPTG [µM]',  tickCount=4),
-                                scale =  alt.Scale(type='log')
-                                ),   
-                        y = alt.Y(
-                                'fc_min:Q', 
-                                axis  =  alt.Axis(title='fold-change'),
-                                scale =  alt.Scale(domain=[-0.05, 1.1])
-                                ),
-                        y2=   'fc_max:Q', 
-                        fill=alt.Color(
-                                'repressors:O',
-                                scale=alt.Scale(range=list(rep_colors.values())),
-                                legend=alt.Legend(title='repressors per cell')
-                                ),
+    _fc_fill = alt.Chart(data=d[d['IPTGuM']>0], width=200, 
+                        height=200).mark_area().encode(
+                        x = alt.X('IPTGuM:Q', axis=alt.Axis(title='IPTG [µM]',
+                                tickCount=4), scale= alt.Scale(type='log')),   
+                        y = alt.Y('fc_min:Q', axis=alt.Axis(title='fold-change'),
+                                scale= alt.Scale(domain=[-0.05, 1.1])),
+                        y2='fc_max:Q', 
+                        fill=alt.Color('repressors:O', scale=alt.Scale(
+                                range=list(rep_colors.values())), 
+                                legend=alt.Legend(title='repressors per cell')),
                         opacity= alt.value(0.75),
                         strokeWidth = alt.value(0.5),
-                        stroke=alt.Color(
-                                'repressors:O',
-                                scale=alt.Scale(range=list(rep_colors.values()))
-                                )
+                        stroke=alt.Color('repressors:O',scale=alt.Scale(
+                                range=list(rep_colors.values())))
 
                     ).properties(
-                        title=f'operator {g}, ∆ε\u1D63 = {energies[g]} kT'
+                        title=f'operator {g}'
                     )
             
     if g == 'O2':
         _fc_fill += fit_strain_plot + fit_strain_errors
-     
     fc_fill |= _fc_fill
-             
-
-fc_fill
-
-
+fc_fill.save('../figs/fig5_induction_plots.svg')
 
 #%%
 
