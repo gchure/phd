@@ -3,6 +3,7 @@
 layout: default
 keywords:
 comments: true
+image: waves.jpg
 
 # Hero section
 title: Chapter 7

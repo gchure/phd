@@ -80,7 +80,7 @@ def phd_style():
         "axes.spines.left": True,
         "axes.spines.bottom": True,
         "axes.axisbelow": True,
-        "axes.linewidth": 0.45,
+        "axes.linewidth": 0.25,
         "axes.titlesize": 8,
         "text.color": "#444147",
         "axes.grid": True,
