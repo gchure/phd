@@ -136,14 +136,16 @@ def bokeh_theme(return_color_list=True):
             "Text": {
                 "text_font_style": "regular",
                 "text_font": "Myriad Pro",
-                "text_font_size": 10,
+                "text_font_size": "12pt",
             },
             "Title": {
-                "background_fill_color": "#EEEEEE",
+                "background_fill_color": "#FFFFFF",
                 "text_color": "#3c3c3c",
-                "align": "center",
+                "align": "left",
                 "text_font": "Myriad Pro",
-                "offset": 3,
+                'text_font_style': 'normal',
+                'text_font_size': "10pt",
+                "offset": 5 
             },
         }
     }

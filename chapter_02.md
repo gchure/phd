@@ -3,6 +3,7 @@
 layout: default
 keywords:
 comments: true
+image: switchboard.png
 
 # Hero section
 title: Chapter 2
@@ -39,6 +40,7 @@ contents:
     - section_02_introduction
     - section_03_model   
     - section_04_results
+    - section_99_references
 ---
 
 **Published as ...**

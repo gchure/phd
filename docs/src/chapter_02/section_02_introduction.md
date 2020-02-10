@@ -104,7 +104,7 @@ phenotypic properties that describe each response curve: the minimum
 response (leakiness), the maximum response (saturation), the difference
 between the maximum and minimum response (dynamic range), the
 concentration of ligand which generates a fold-change halfway between
-the minimal and maximal response (\([EC_{50}]\)), and the log-log slope
+the minimal and maximal response ($[EC_{50}]$), and the log-log slope
 at the midpoint of the response (effective Hill coefficient). (C) Over
 time we have refined our understanding of simple repression
 architectures. A first round of experiments used colorimetric assays and

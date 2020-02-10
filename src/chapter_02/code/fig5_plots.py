@@ -1,24 +1,15 @@
 #%%
-import os
-import glob
-import pickle
-import re
 import numpy as np
+import matplotlib.pyplot as plt
+import  matplotlib.gridspec as gridspec 
 import pandas as pd
-import sys
 import phd.viz
 import phd.stats
-import matplotlib.pyplot as plt
-import matplotlib.cm as cm
-import matplotlib.gridspec as gridspec
-import matplotlib.colors as plc
-import altair as alt
-import seaborn as sns
-import scipy.stats
+import pickle 
 colors, palette = phd.viz.phd_style()
-DPI = 227
-data = pd.read_csv('../../data/ch2_induction/RazoMejia_2018.csv', comment='#')
 
+data = pd.read_csv('../../data/ch2_induction/RazoMejia_2018.csv', comment='#')
+params = pd.read_csv('../../data/ch2_induction/RazoMejia_KaKi_estimates.csv')
 # Now we remove the autofluorescence and delta values
 data = data[(data['rbs'] != 'auto') & 
             (data['rbs'] != 'delta') & 
@@ -50,6 +41,12 @@ rep_colors = {22: colors['light_red'],
               260: colors['light_orange'], 
               1220: colors['light_purple'], 
               1740: colors['light_blue']} 
+edge_colors = {22: colors['dark_red'], 
+              60: colors['dark_brown'],  
+              124: colors['dark_green'], 
+              260: colors['dark_orange'], 
+              1220: colors['dark_purple'], 
+              1740: colors['dark_blue']} 
 
 # Define the operators and their respective energies
 operators = ['O1', 'O2', 'O3']
@@ -57,38 +54,9 @@ energies = {'O1': -15.3, 'O2': -13.9, 'O3': -9.7}
 
 
 #%%
-# ##############################################################################
-# SAMPLING JOINTPLOT
-# ##############################################################################
 sampling_df = pd.DataFrame(np.array([ka_fc, ki_fc, lnprob]).T, 
                           columns=['ka', 'ki', 'logprob'])
 sampling_df.sort_values('logprob', inplace=True)
-
-# Set up the relatively complex plot object. 
-fig = plt.figure(figsize=(3, 2))
-gs = gridspec.GridSpec(4, 4)
-ax0 = fig.add_subplot(gs[1:, :3])
-ax1 = fig.add_subplot(gs[0, :3])
-ax2 = fig.add_subplot(gs[1:, 3])
-
-for a in [ax1, ax2]:
-    a.axis('off')
-
-# Add appropriate axis labels. 
-ax0.set_xlabel('$K_I$ [µM]')
-ax0.set_ylabel('$K_A$ [µM]')
-
-
-_ = ax0.plot(sampling_df['ki'], sampling_df['ka'], linestyle='none', marker='.', 
-             color=colors['purple'], ms=1, alpha=0.75, markeredgewidth=0)
-_ = ax1.hist(sampling_df['ki'].values, bins=25, density=True, 
-            color=colors['light_purple'], edgecolor=colors['black'],
-            lw=0.25)
-_ = ax2.hist(sampling_df['ka'].values, bins=25, density=True, 
-            color=colors['light_purple'], edgecolor=colors['black'],
-            lw=0.25, orientation='horizontal')
-plt.subplots_adjust(hspace=0.02, wspace=0.02)
-plt.savefig('../figs/fig5_sampling_jointplot.svg', bbox_incehs='tight')
 
 # ##############################################################################
 # PREDICTED INDUCTION PROFILES
@@ -112,32 +80,58 @@ for op, op_en in energies.items():
                                   'operator': op,
                                   'binding_energy': op_en}, ignore_index=True)
 
-#  Iterate through each operator and compute the properties
-prop_df = pd.DataFrame([])
-for op, op_en in energies.items():
-    for i, r in enumerate(rep_range):
-        arch = phd.thermo.SimpleRepression(r, op_en, ka=ka_fc, ki=ki_fc, ep_ai=4.5,
-                                           effector_conc=0).compute_properties()
-        for prop, val in arch.items():
-            if prop == 'leakiness':
-                val_min = val 
-                val_max = val 
-            else:
-                val_min, val_max = phd.stats.compute_hpd(val, 0.95)
-            prop_df = prop_df.append({'val_min':val_min,
-                              'val_max':val_max,
-                              'property': prop,
-                              'repressors': r,
-                              'operator': op,
-                              'binding_energy':op_en}, ignore_index=True)
-        
-
 #%%
 
 # Set up the canvas for the operator plots. 
-fig, ax = plt.subplots(1, 3, figsize=(6, 2))
+fig = plt.figure(figsize=(5, 4))
+gs = gridspec.GridSpec(8, 8)
+ax0 = fig.add_subplot(gs[:4, :4])
+ax1 = fig.add_subplot(gs[:4, 4:])
+ax2 = fig.add_subplot(gs[4:, :4])
+ax3 = fig.add_subplot(gs[4:6, 4:])
+ax4 = fig.add_subplot(gs[6:, 4:])
+
+ax3.set_xticklabels([])
+ax3.set_ylim([0.5E-3, 10])
+ax4.set_ylim([0.5E-2, 1E4])
+ax4.set_xticklabels(['', '22', '60', '124', '260', '1220', '1740'])
+ax4.set_xlabel('repressors per cell')
+ax3.set_ylabel('$K_I$ [µM]')
+ax4.set_ylabel('$K_A$ [µM]')
+for a in [ax3, ax4]:
+    a.set_yscale('log')
+    a.set_xlim([0, 7])
+
+ax = [ax0, ax1, ax2, ax3, ax4]
+op_ax = {'O1':ax0, 'O2':ax1, 'O3':ax2}
+
+for o, a in op_ax.items():
+    a.set_xscale('symlog', linthreshx=1E-2)
+    a.set_xlabel('IPTG [µM]')
+    a.set_ylabel('fold-change')
+    a.set_ylim([-0.05, 1.2])
+    phd.viz.titlebox(a, f'operator {o}', color=colors['black'], 
+                    bgcolor='white', boxsize="12%")
+
+# Plot the data. 
+for g, d in data.groupby(['operator', 'repressors', 'IPTG_uM']):
+    if (g[0] == 'O2') & (g[1] == 130):
+        face = 'white'
+        edge = colors['dark_orange']
+        ew = 0.5
+    else:
+        face = rep_colors[2 * g[1]]
+        edge = edge_colors[2 * g[1]]
+        ew = 0.25
+    mean_fc = d['fold_change_A'].mean()
+    sem_fc = d['fold_change_A'].std() / np.sqrt(len(d))
+    _ = op_ax[g[0]].errorbar(g[-1], mean_fc, sem_fc, fmt='.', lw=0.5, 
+        markerfacecolor=face, color=edge, markeredgecolor=edge, 
+        markeredgewidth=ew, ms=6, label='__nolegend__')
+plt.subplots_adjust(hspace=0.8, wspace=0.65)
+
 axes={'O1':ax[0], 'O2':ax[1], 'O3':ax[2]}
-for a in ax:
+for _, a in axes.items():
     a.set_xscale('symlog', linthreshx=1E-2)
     a.set_ylim([-0.01, 1.15])
     a.set_ylabel('fold-change')
@@ -147,7 +141,7 @@ for g, d in fc_df.groupby('operator'):
     for r, _d in d.groupby('repressors'):
         _ = axes[g].fill_between(_d['IPTGuM'], _d['fc_min'], _d['fc_max'],
                                  alpha=0.75, facecolor=rep_colors[r], label=int(r),
-                                 edgecolor=colors['black'], lw=0.1)
+                                 edgecolor=edge_colors[r], lw=0.25)
     phd.viz.titlebox(axes[g], f'operator {g}', color=colors['black'], 
                     boxsize='12%')
 
@@ -156,59 +150,37 @@ fit_strain = data[(data['operator']=='O2') &
                   (data['repressors']==130)].groupby(['IPTG_uM']
                   ).agg(('mean', 'sem')).reset_index()
 
-# Plot the aggregated points of the fit strain
-ax[1].errorbar(fit_strain['IPTG_uM'], fit_strain['fold_change_A']['mean'], 
-               yerr=fit_strain['fold_change_A']['sem'], fmt='.', 
-               markerfacecolor=colors['light_orange'], markeredgecolor=colors['black'],
-               markeredgewidth=0.5,
-               label='__nolegend__', lw=0.1, color=colors['orange'])
 
+# Plot the estimated parameters
+op_glyphs = {'O1':'s', 'O2':'o', 'O3':'^'}
+fudge = {'O1': -0.25, 'O2': 0, 'O3': 0.25}
+rep_pos = {22:1, 60:2, 124:3, 260:4, 1220:5, 1740:6}
+params.sort_values(by='repressors', inplace=True)
+for g, d in params.groupby(['operator', 'repressors']):
+    ka = d[d['parameter']=='ka']
+    ki = d[d['parameter']=='ki']
+    ax3.vlines(rep_pos[g[1]] + fudge[g[0]], ki['hpd_min'], ki['hpd_max'],
+        color=edge_colors[g[1]], 
+        label='__nolegend__')
+    ax3.plot(rep_pos[g[1]] + fudge[g[0]], ki['mode'], op_glyphs[g[0]],
+            markerfacecolor='w', color=edge_colors[g[1]], ms=4,
+            label='__nolegend__')
+    ax4.vlines(rep_pos[g[1]] + fudge[g[0]], ka['hpd_min'], ka['hpd_max'],
+        color=edge_colors[g[1]], label='__nolegend__')
+    ax4.plot(rep_pos[g[1]] + fudge[g[0]], ka['mode'], op_glyphs[g[0]],
+            markerfacecolor='w', color=edge_colors[g[1]], ms=4,
+             label='__nolegend__')
+
+for op, m in op_glyphs.items():
+    ax3.plot([], m, markerfacecolor='w', markeredgecolor='k', label=op,
+    ms=3)
+ax3.hlines(0.53, 0, 7, zorder=1, linestyle='--', color='k')
+ax4.hlines(139, 0, 7, zorder=1, linestyle='--', color='k')
+ax3.legend(loc='lower right', ncol=3, fontsize=6)
 # Add the legend. 
 leg = ax[0].legend(loc='upper left', title='rep. per cell', fontsize=6, handlelength=1.5)
 leg.get_title().set_fontsize(6)
-plt.tight_layout()
+# plt.tight_layout()
 plt.savefig('../figs/fig5_induction_profiles.svg', bbox_inches='tight')
 
-# ##############################################################################
-#%% PROPERTIES
-# ##############################################################################
-fig, ax =  plt.subplots(2, 3, figsize=(6, 3.5))
-ax[1, -1].axis('off')
-
-# Assign the properties to axes. 
-axes = {'leakiness':ax[0,0], 'saturation':ax[0, 1], 'dynamic_range':ax[0, 2],
-        'EC50':ax[1,0], 'effective_hill':ax[1, 1]}
-
-op_palette = sns.color_palette('viridis', n_colors=4)
-op_colors = {'O1':op_palette[0], 'O2':op_palette[1], 'O3':op_palette[2]}
-
-for g, d in prop_df.groupby(['property', 'operator']):
-    _ax = axes[g[0]]
-    if g[0] == 'leakiness':
-        _ax.plot(d['repressors'], d['val_min'], 
-                    color=op_colors[g[1]],
-                    label=g[1], alpha=0.5)
-    else:
-        _ax.fill_between(d['repressors'], d['val_min'], d['val_max'], lw=0.1,
-                    facecolor=op_colors[g[1]], edgecolor=colors['black'], 
-                    label=g[1], alpha=0.5)
-
-# Set the appropriate scaling. 
-for a in ax.ravel():
-    a.set_xscale('log')
-    a.set_xlabel('repressors per cell')
-for a in [ax[0, 0], ax[1, 0]]:
-    a.set_yscale('log')
-
-# Manually define the ylabels 
-_ax = ax.ravel()
-_ax[0].set_ylabel('leakiness')
-_ax[1].set_ylabel('saturation')
-_ax[2].set_ylabel('dynamic range')
-_ax[3].set_ylabel('EC$_{50}$ [µM]')
-_ax[4].set_ylabel('effective Hill coefficient')
-leg = ax[0,0].legend(handlelength=1.5, title='operator', loc='lower left', fontsize=6)
-leg.get_title().set_fontsize(6)
-plt.tight_layout()
-plt.savefig('../figs/fig5_properties.svg', bbox_inches='tight')
-#%%
+# %%
