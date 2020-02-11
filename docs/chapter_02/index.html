@@ -30,11 +30,11 @@
   <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
   
 
-<link rel="icon" href="https://gchure.github.io/phd/favicon.ico" type="image/x-icon">
+<link rel="icon" href="/favicon.ico" type="image/x-icon">
 <link href="https://fonts.googleapis.com/css?family=Nanum+Myeongjo&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Alegreya|Lora&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="https://gchure.github.io/phd/doks-theme/assets/css/style.css">
+<link rel="stylesheet" href="/doks-theme/assets/css/style.css">
 
 	</head>
 	<body class="grey" data-spy="scroll" data-target=".js-scrollspy">
@@ -46,7 +46,7 @@
 			<div class="row">
 				<div class="col-xs-12">
 					
-						<a href="https://gchure.github.io/phd/" class="site-header__logo"><i class="icon icon--chevron-left"></i> Home</a>
+						<a href="/" class="site-header__logo"><i class="icon icon--chevron-left"></i> Home</a>
 					
 					
 				</div><!-- /.col -->
@@ -55,7 +55,7 @@
 	</header><!-- /.site-header -->
 
 
-		<div class="hero-subheader" style="background-image: url(https://gchure.github.io/phd/doks-theme/assets/images/switchboard.png); background-position: center;">
+		<div class="hero-subheader" style="background-image: url(http://127.0.0.1:4000/doks-theme/assets/images/switchboard.png); background-position: center;">
 
 			<div class="container" style="background-color: rgba(0,0,0, 0.75); border:0.75px solid white;">
 				<div class="row">
@@ -72,12 +72,12 @@
 								
 								<!-- 
 									
-										<a href="https://gchure.github.io/phdchapter_01'" class="btn btn--dark btn--rounded btn--w-icon btn--w-icon-left">
+										<a href="chapter_01'" class="btn btn--dark btn--rounded btn--w-icon btn--w-icon-left">
 											<i class="icon icon--arrow-left"></i>	
 										</a>
 									
 									
-										<a href="https://gchure.github.io/phdchapter_03" class="btn btn--dark btn--rounded btn--w-icon">
+										<a href="chapter_03" class="btn btn--dark btn--rounded btn--w-icon">
 											<i class="icon icon--arrow-right"></i>
 										</a>
 									
@@ -110,13 +110,13 @@
 						<div class="row" >
 							<div class="col-xs-12">
 								
-									<a href="https://gchure.github.io/phdchapter_01'" class="page-nav__item page-nav__item--prev">
+									<a href="chapter_01'" class="page-nav__item page-nav__item--prev">
 										<i class="icon icon--arrow-left"></i>
 										Chapter I
 									</a><!-- /.page-nav__item -->
 								
 								
-									<a href="https://gchure.github.io/phdchapter_03" class="page-nav__item page-nav__item--next">
+									<a href="chapter_03" class="page-nav__item page-nav__item--next">
 										Chapter III
 										<i class="icon icon--arrow-right"></i>
 									</a><!-- /.page-nav__item -->
@@ -199,21 +199,21 @@ $$</span><br /><span class="eqnos-number">(5)</span></span></p>
 <img src="ch2_fig3.png" data-short-caption="An experimental pipeline for high-throughput fold-change measurements." alt="" /><figcaption><span>Figure 3:</span> An experimental pipeline for high-throughput fold-change measurements. Cells are grown to exponential steady state and their fluorescence is measured using flow cytometry. Automatic gating methods using forward- and side-scattering are used to ensure that all measurements come from single cells (see Methods). Mean expression is then quantified at different IPTG concentrations (top, blue histograms) and for a strain without repressor (bottom, green histograms), which shows no response to IPTG as expected. Fold-change is computed by dividing the mean fluorescence in the presence of repressor by the mean fluorescence in the absence of repressor.</figcaption>
 </figure>
 </div>
-<h2 id="determination-of-the-in-vivo-mwc-parameters">Determination of the <em>in vivo</em> MWC Parameters</h2>
-<p>The three parameters that we tune experimentally are shown in , leaving the three allosteric parameters (<span class="math inline"><em>Δ</em><em>ε</em><sub><em>A</em><em>I</em></sub></span>, <span class="math inline"><em>K</em><sub><em>A</em></sub></span>, and <span class="math inline"><em>K</em><sub><em>I</em></sub></span>) to be determined by fitting. We used previous LacI fold-change data <span class="citation" data-cites="brewster2014">(Brewster et al. <a href="#ref-brewster2014" role="doc-biblioref">2014</a>)</span> to infer that <span class="math inline"><em>Δ</em><em>ε</em><sub><em>A</em><em>I</em></sub> = 4.5 <em>k</em><sub><em>B</em></sub><em>T</em></span> (see Materials &amp; Methods). Rather than fitting <span class="math inline"><em>K</em><sub><em>A</em></sub></span> and <span class="math inline"><em>K</em><sub><em>I</em></sub></span> to our entire data set of eighteen unique constructs, we performed Bayesian parameter estimation on data from a single strain with <span class="math inline"><em>R</em> = 260</span> and an O2 operator [<span class="math inline"><em>Δ</em><em>ε</em><sub><em>R</em><em>A</em></sub> =  − 13.9 <em>k</em><sub><em>B</em></sub><em>T</em></span> <span class="citation" data-cites="garcia2011">(Garcia et al. <a href="#ref-garcia2011" role="doc-biblioref">2011</a><a href="#ref-garcia2011" role="doc-biblioref">a</a>)</span>] shown in Fig. [??](D, orange points). Using Markov Chain Monte Carlo, we determine the most likely parameter values to be <span class="math inline"><em>K</em><sub><em>A</em></sub> = 139<sub> − 22</sub><sup> + 29</sup> × 10<sup> − 6</sup> M</span> and <span class="math inline"><em>K</em><sub><em>I</em></sub> = 0.53<sub> − 0.04</sub><sup> + 0.04</sup> × 10<sup> − 6</sup> M</span>, which are the modes of their respective distributions, where the superscripts and subscripts represent the upper and lower bounds of the <span class="math inline">95<sup>th</sup></span> percentile of the parameter value distributions [see Fig. [??] (B)]. Unfortunately, we are not able to make a meaningful value-for-value comparison of our parameters to those of earlier studies <span class="citation" data-cites="daber2009a daber2011a">(Daber, Sharp, and Lewis <a href="#ref-daber2009a" role="doc-biblioref">2009</a>; Daber, Sochor, and Lewis <a href="#ref-daber2011a" role="doc-biblioref">2011</a>)</span> because of uncertainties in both gene copy number and transcription factor copy numbers in these studies, as illustrated in Supplemental Chapter 7. We then predicted the fold-change for the remaining seventeen strains with no further fitting [see Fig. [??] (C - E)] together with the specific phenotypic properties described in and discussed in detail below [see Fig. [??] (F - J)]. The shaded regions in Fig. [??] (C - E) denote the 95% credible regions. Factors determining the width of the credible regions are explored in Supplemental Chapter 7.</p>
+<h3 id="determination-of-the-in-vivo-mwc-parameters">Determination of the <em>in vivo</em> MWC Parameters</h3>
+<p>The three parameters that we tune experimentally are shown in , leaving the three allosteric parameters (<span class="math inline"><em>Δ</em><em>ε</em><sub><em>A</em><em>I</em></sub></span>, <span class="math inline"><em>K</em><sub><em>A</em></sub></span>, and <span class="math inline"><em>K</em><sub><em>I</em></sub></span>) to be determined by fitting. We used previous LacI fold-change data <span class="citation" data-cites="brewster2014">(Brewster et al. <a href="#ref-brewster2014" role="doc-biblioref">2014</a>)</span> to infer that <span class="math inline"><em>Δ</em><em>ε</em><sub><em>A</em><em>I</em></sub> = 4.5 <em>k</em><sub><em>B</em></sub><em>T</em></span> (see Materials &amp; Methods). Rather than fitting <span class="math inline"><em>K</em><sub><em>A</em></sub></span> and <span class="math inline"><em>K</em><sub><em>I</em></sub></span> to our entire data set of eighteen unique constructs, we performed Bayesian parameter estimation on data from a single strain with <span class="math inline"><em>R</em> = 260</span> and an O2 operator [<span class="math inline"><em>Δ</em><em>ε</em><sub><em>R</em><em>A</em></sub> =  − 13.9 <em>k</em><sub><em>B</em></sub><em>T</em></span> <span class="citation" data-cites="garcia2011">(Garcia et al. <a href="#ref-garcia2011" role="doc-biblioref">2011</a><a href="#ref-garcia2011" role="doc-biblioref">a</a>)</span>] shown in Fig. [??](D, orange points). Using Markov Chain Monte Carlo, we determine the most likely parameter values to be <span class="math inline"><em>K</em><sub><em>A</em></sub> = 139<sub> − 22</sub><sup> + 29</sup> × 10<sup> − 6</sup> M</span> and <span class="math inline"><em>K</em><sub><em>I</em></sub> = 0.53<sub> − 0.04</sub><sup> + 0.04</sup> × 10<sup> − 6</sup> M</span>, which are the modes of their respective distributions, where the superscripts and subscripts represent the upper and lower bounds of the <span class="math inline">95<sup>th</sup></span> percentile of the parameter value distributions [see Fig. [??] (B)]. Unfortunately, we are not able to make a meaningful value-for-value comparison of our parameters to those of earlier studies <span class="citation" data-cites="daber2009a daber2011a">(Daber, Sharp, and Lewis <a href="#ref-daber2009a" role="doc-biblioref">2009</a>; Daber, Sochor, and Lewis <a href="#ref-daber2011a" role="doc-biblioref">2011</a>)</span> because of uncertainties in both gene copy number and transcription factor copy numbers in these studies, as illustrated in Supplemental Chapter 7. We then predicted the fold-change for the remaining seventeen strains with no further fitting [see Fig. [??] (C - E)] together with the specific phenotypic properties described in and discussed in detail below [see Fig. [??] (F - J)]. The shaded regions in Fig. [??] (C - E) denote the 95% credible regions. Factors determining the width of the credible regions are explored in Supplemental Chapter 7.</p>
 <p>We stress that the entire suite of predictions in is based upon the induction profile of a single strain. Our ability to make such a broad range of predictions stems from the fact that our parameters of interest such as the repressor copy number and DNA binding energy - appear as distinct physical parameters within our model. While the single data set in Fig. ?? could also be fit using a Hill function, such an analysis would be unable to predict any of the other curves in the figure (see Materials &amp; Methods). Phenomenological expressions such as the Hill function can describe data, but lack predictive power and are thus unable to build our intuition, help us design <em>de novo</em> input-output functions, or guide future experiments <span class="citation" data-cites="kuhlman2007 murphy2007">(Kuhlman et al. <a href="#ref-kuhlman2007" role="doc-biblioref">2007</a>; Murphy, Balázsi, and Collins <a href="#ref-murphy2007" role="doc-biblioref">2007</a>)</span>.</p>
 <figure>
 <img src="ch2_fig4.png" data-short-caption="Predicting induction profiles for different biological control parameters." alt="" /><figcaption><strong>Predicting induction profiles for different biological control parameters.</strong> We can quantitatively tune <span class="math inline"><em>R</em></span> via ribosomal binding site (RBS) modifications, <span class="math inline"><em>Δ</em><em>ε</em><sub><em>R</em><em>A</em></sub></span> by mutating the operator sequence, and <span class="math inline"><em>c</em></span> by adding different amounts of IPTG to the growth medium. Previous experiments have characterized the <span class="math inline"><em>R</em></span>, <span class="math inline"><em>N</em><sub><em>N</em><em>S</em></sub></span>, <span class="math inline"><em>Δ</em><em>ε</em><sub><em>R</em><em>A</em></sub></span>, and <span class="math inline"><em>Δ</em><em>ε</em><sub><em>A</em><em>I</em></sub></span> parameters (see ), leaving only the unknown dissociation constants <span class="math inline"><em>K</em><sub><em>A</em></sub></span> and <span class="math inline"><em>K</em><sub><em>I</em></sub></span> between the inducer and the repressor in the active and inactive states, respectively. These two parameters can be inferred using Bayesian parameter estimation from a single induction curve. Predicted IPTG titration curves for different repressor copy numbers and operator strengths. Titration data for the O2 strain [white circles in Panel] with <span class="math inline"><em>R</em> = 260</span>, <span class="math inline"><em>Δ</em><em>ε</em><sub><em>R</em><em>A</em></sub> =  − 13.9 <em>k</em><sub><em>B</em></sub><em>T</em></span>, <span class="math inline"><em>n</em> = 2</span>, and <span class="math inline"><em>Δ</em><em>ε</em><sub><em>A</em><em>I</em></sub> = 4.5 <em>k</em><sub><em>B</em></sub><em>T</em></span> can be used to determine the thermodynamic parameters <span class="math inline"><em>K</em><sub><em>A</em></sub> = 139<sub> − 22</sub><sup> + 29</sup> × 10<sup> − 6</sup>, M</span> and <span class="math inline"><em>K</em><sub><em>I</em></sub> = 0.53<sub> − 0.04</sub><sup> + 0.04</sup> × 10<sup> − 6</sup>, M</span> (orange line). The remaining solid lines predict the fold-change for all other combinations of repressor copy numbers (shown in the legend) and repressor-DNA binding energies corresponding to the O1 operator (<span class="math inline"> − 15.3 <em>k</em><sub><em>B</em></sub><em>T</em></span>), O2 operator (<span class="math inline"> − 13.9 <em>k</em><sub><em>B</em></sub><em>T</em></span>), and O3 operator (<span class="math inline"> − 9.7 <em>k</em><sub><em>B</em></sub><em>T</em></span>). Error bars of experimental data show the standard error of the mean (eight or more replicates) when this error is not smaller than the diameter of the data point. The shaded regions denote the 95% credible region, although the credible region is obscured when it is thinner than the curve itself. To display the measured fold-change in the absence of inducer, we alter the scaling of the <span class="math inline"><em>x</em></span>-axis between <span class="math inline">0</span> and <span class="math inline">10<sup> − 7</sup></span> M to linear rather than logarithmic, as indicated by a dashed line. Additionally, our model allows us to investigate key phenotypic properties of the induction profiles (see ). Specifically, we show predictions for the leakiness, saturation, dynamic range, <span class="math inline">[<em>E</em><em>C</em><sub>50</sub>]</span>, and effective Hill coefficient of the induction profiles.</figcaption>
 </figure>
-<h2 id="comparison-of-experimental-measurements-with-theoretical-predictions">Comparison of Experimental Measurements with Theoretical Predictions</h2>
-<p>We tested the predictions shown in Fig. ?? by measuring fold-change induction profiles in strains with a broad range of repressor copy numbers and repressor binding energies as characterized in <span class="citation" data-cites="garcia2011">Garcia et al. (<a href="#ref-garcia2011" role="doc-biblioref">2011</a><a href="#ref-garcia2011" role="doc-biblioref">a</a>)</span>. With a few notable exceptions, the results shown in demonstrate agreement between theory and experiment. We note that there was an apparently systematic shift in the O3 <span class="math inline"><em>Δ</em><em>ε</em><sub><em>R</em><em>A</em></sub> =  − 9.7 <em>k</em><sub><em>B</em></sub><em>T</em></span> strains () and all of the <span class="math inline"><em>R</em> = 1220</span> and <span class="math inline"><em>R</em> = 1740</span> strains. This may be partially due to imprecise previous determinations of their <span class="math inline"><em>Δ</em><em>ε</em><sub><em>R</em><em>A</em></sub></span> and <span class="math inline"><em>R</em></span> values. By performing a global fit where we infer all parameters including the repressor copy number <span class="math inline"><em>R</em></span> and the binding energy <span class="math inline"><em>Δ</em><em>ε</em><sub><em>R</em><em>A</em></sub></span>, we found better agreement for these strains, although a discrepancy in the steepness of the response for all O3 strains remains (see , Section “”). We considered a number of hypotheses to explain these discrepancies such as including other states (e.g. non-negligible binding of the inactive repressor), relaxing the weak promoter approximation, and accounting for variations in gene and repressor copy number throughout the cell cycle, but none explained the observed discrepancies. As an additional test of our model, we considered strains using the synthetic Oid operator which exhibits an especially strong binding energy of <span class="math inline"><em>Δ</em><em>ε</em><sub><em>R</em><em>A</em></sub> =  − 17 <em>k</em><sub><em>B</em></sub><em>T</em></span>. The global fit agrees well with the Oid microscopy data, though it asserts a stronger Oid binding energy of <span class="math inline"><em>Δ</em><em>ε</em><sub><em>R</em><em>A</em></sub> =  − 17.7 <em>k</em><sub><em>B</em></sub><em>T</em></span> (see Supplemental Chapter 7).</p>
-<p>To ensure that the agreement between our predictions and data is not an accident of the strain we used to perform our fitting, we also inferred <span class="math inline"><em>K</em><sub><em>A</em></sub></span> and <span class="math inline"><em>K</em><sub><em>I</em></sub></span> from each of the other strains. As shown in , Section “” and , the inferred values of <span class="math inline"><em>K</em><sub><em>A</em></sub></span> and <span class="math inline"><em>K</em><sub><em>I</em></sub></span> depend minimally upon which strain is chosen, indicating that these parameter values are highly robust. We also performed a global fit using the data from all eighteen strains in which we fitted for the inducer dissociation constants <span class="math inline"><em>K</em><sub><em>A</em></sub></span> and <span class="math inline"><em>K</em><sub><em>I</em></sub></span>, the repressor copy number <span class="math inline"><em>R</em></span>, and the repressor DNA binding energy <span class="math inline"><em>Δ</em><em>ε</em><sub><em>R</em><em>A</em></sub></span> (see Materials &amp; Methods). The resulting parameter values were nearly identical to those fitted from any single strain. For the remainder of the text we continue using parameters fitted from the strain with <span class="math inline"><em>R</em> = 260</span> repressors and an O2 operator.</p>
+<h3 id="comparison-of-experimental-measurements-with-theoretical-predictions">Comparison of Experimental Measurements with Theoretical Predictions</h3>
+<p>We tested the predictions shown in Fig. ?? by measuring fold-change induction profiles in strains with a broad range of repressor copy numbers and repressor binding energies as characterized in <span class="citation" data-cites="garcia2011">Garcia et al. (<a href="#ref-garcia2011" role="doc-biblioref">2011</a><a href="#ref-garcia2011" role="doc-biblioref">a</a>)</span>. With a few notable exceptions, the results shown in Fig. ?? demonstrate agreement between theory and experiment. We note that there was an apparently systematic shift in the O3 <span class="math inline"><em>Δ</em><em>ε</em><sub><em>R</em><em>A</em></sub> =  − 9.7 <em>k</em><sub><em>B</em></sub><em>T</em></span> strains [Fig. ?? (C)] and all of the <span class="math inline"><em>R</em> = 1220</span> and <span class="math inline"><em>R</em> = 1740</span> strains. This may be partially due to imprecise previous determinations of their <span class="math inline"><em>Δ</em><em>ε</em><sub><em>R</em><em>A</em></sub></span> and <span class="math inline"><em>R</em></span> values. By performing a global fit where we infer all parameters including the repressor copy number <span class="math inline"><em>R</em></span> and the binding energy <span class="math inline"><em>Δ</em><em>ε</em><sub><em>R</em><em>A</em></sub></span>, we found better agreement for these strains, although a discrepancy in the steepness of the response for all O3 strains remains (see Materials &amp; Methods). We considered a number of hypotheses to explain these discrepancies such as including other states (e.g. non-negligible binding of the inactive repressor), relaxing the weak promoter approximation, and accounting for variations in gene and repressor copy number throughout the cell cycle, but none explained the observed discrepancies. As an additional test of our model, we considered strains using the synthetic Oid operator which exhibits an especially strong binding energy of <span class="math inline"><em>Δ</em><em>ε</em><sub><em>R</em><em>A</em></sub> =  − 17 <em>k</em><sub><em>B</em></sub><em>T</em></span> <span class="citation" data-cites="garcia2011">(Garcia et al. <a href="#ref-garcia2011" role="doc-biblioref">2011</a><a href="#ref-garcia2011" role="doc-biblioref">a</a>)</span>. The global fit agrees well with the Oid microscopy data, though it asserts a stronger Oid binding energy of <span class="math inline"><em>Δ</em><em>ε</em><sub><em>R</em><em>A</em></sub> =  − 17.7 <em>k</em><sub><em>B</em></sub><em>T</em></span> (see Supplemental Chapter 7).</p>
+<p>To ensure that the agreement between our predictions and data is not an accident of the strain we used to perform our fitting, we also inferred <span class="math inline"><em>K</em><sub><em>A</em></sub></span> and <span class="math inline"><em>K</em><sub><em>I</em></sub></span> from each of the other strains. As discussed in the Materials &amp; Methods and Fig. ??, the inferred values of <span class="math inline"><em>K</em><sub><em>A</em></sub></span> and <span class="math inline"><em>K</em><sub><em>I</em></sub></span> depend minimally upon which strain is chosen, indicating that these parameter values are highly robust. We also performed a global fit using the data from all eighteen strains in which we fitted for the inducer dissociation constants <span class="math inline"><em>K</em><sub><em>A</em></sub></span> and <span class="math inline"><em>K</em><sub><em>I</em></sub></span>, the repressor copy number <span class="math inline"><em>R</em></span>, and the repressor DNA binding energy <span class="math inline"><em>Δ</em><em>ε</em><sub><em>R</em><em>A</em></sub></span> (see Materials &amp; Methods). The resulting parameter values were nearly identical to those fitted from any single strain. For the remainder of the text we continue using parameters fitted from the strain with <span class="math inline"><em>R</em> = 260</span> repressors and an O2 operator.</p>
 <figure>
-<img src="ch2_fig5.png" data-short-caption="Comparison of predictions against measured and inferred data." alt="" /><figcaption><strong>Comparison of predictions against measured and inferred data.</strong> Flow cytometry measurements of fold-change over a range of IPTG concentrations for O1, O2, and O3 strains at varying repressor copy numbers, overlaid on the predicted responses. Error bars for the experimental data show the standard error of the mean (eight or more replicates). As discussed in , all of the predicted induction curves were generated prior to measurement by inferring the MWC parameters using a single data set (O2 <span class="math inline"><em>R</em> = 260</span>, shown by white circles in Panel ). The predictions may therefore depend upon which strain is used to infer the parameters. The inferred parameter values of the dissociation constants <span class="math inline"><em>K</em><sub><em>A</em></sub></span> and <span class="math inline"><em>K</em><sub><em>I</em></sub></span> using any of the eighteen strains instead of the O2 <span class="math inline"><em>R</em> = 260</span> strain. Nearly identical parameter values are inferred from each strain, demonstrating that the same set of induction profiles would have been predicted regardless of which strain was chosen. The points show the mode, and the error bars denote the <span class="math inline">95</span> credible region of the parameter value distribution. Error bars not visible are smaller than the size of the marker.</figcaption>
+<img src="ch2_fig5.png" data-short-caption="Comparison of predictions against measured and inferred data." alt="" /><figcaption><strong>Comparison of predictions against measured and inferred data.</strong> Flow cytometry measurements of fold-change over a range of IPTG concentrations for O1, O2, and O3 strains at varying repressor copy numbers, overlaid on the predicted responses. Error bars for the experimental data show the standard error of the mean (eight or more replicates). As discussed in Fig. ??, all of the predicted induction curves were generated prior to measurement by inferring the MWC parameters using a single data set (O2 <span class="math inline"><em>R</em> = 260</span>, shown by white circles in Panel B). The predictions may therefore depend upon which strain is used to infer the parameters. The inferred parameter values of the dissociation constants <span class="math inline"><em>K</em><sub><em>A</em></sub></span> and <span class="math inline"><em>K</em><sub><em>I</em></sub></span> using any of the eighteen strains instead of the O2 <span class="math inline"><em>R</em> = 260</span> strain. Nearly identical parameter values are inferred from each strain, demonstrating that the same set of induction profiles would have been predicted regardless of which strain was chosen. The points show the mode, and the error bars denote the <span class="math inline">95</span> credible region of the parameter value distribution. Error bars not visible are smaller than the size of the marker.</figcaption>
 </figure>
-<h2 id="predicting-the-phenotypic-traits-of-the-induction-response">Predicting the Phenotypic Traits of the Induction Response</h2>
-<p>A subset of the properties shown in (i.e. the leakiness, saturation, dynamic range, <span class="math inline">[<em>E</em><em>C</em><sub>50</sub>]</span>, and effective Hill coefficient) are of significant interest to synthetic biology. For example, synthetic biology is often focused on generating large responses (i.e. a large dynamic range) or finding a strong binding partner (i.e. a small <span class="math inline">[<em>E</em><em>C</em><sub>50</sub>]</span>) . While these properties are all individually informative, when taken together they capture the essential features of the induction response. We reiterate that a Hill function approach cannot predict these features <em>a priori</em> and furthermore requires fitting each curve individually. The MWC model, on the other hand, enables us to quantify how each trait depends upon a single set of physical parameters as shown by -.</p>
-<p>We define these five phenotypic traits using expressions derived from the model, . These results build upon extensive work by , who computed many such properties for ligand-receptor binding within the MWC model. We begin by analyzing the leakiness, which is the minimum fold-change observed in the absence of ligand, given by</p>
+<h3 id="predicting-the-phenotypic-traits-of-the-induction-response">Predicting the Phenotypic Traits of the Induction Response</h3>
+<p>A subset of the properties shown in Fig. <a href="#fig:inducible_types">1</a> (i.e. the leakiness, saturation, dynamic range, <span class="math inline">[<em>E</em><em>C</em><sub>50</sub>]</span>, and effective Hill coefficient) are of significant interest to synthetic biology. For example, synthetic biology is often focused on generating large responses (i.e. a large dynamic range) or finding a strong binding partner (i.e. a small <span class="math inline">[<em>E</em><em>C</em><sub>50</sub>]</span>) <span class="citation" data-cites="brophy2014 shis2014">(Brophy and Voigt <a href="#ref-brophy2014" role="doc-biblioref">2014</a>; Shis et al. <a href="#ref-shis2014" role="doc-biblioref">2014</a>)</span>. While these properties are all individually informative, when taken together they capture the essential features of the induction response. We reiterate that a Hill function approach cannot predict these features <em>a priori</em> and furthermore requires fitting each curve individually. The MWC model, on the other hand, enables us to quantify how each trait depends upon a single set of physical parameters as shown by Fig. ?? (F-J).</p>
+<p>We define these five phenotypic traits using expressions derived from the model presented in Eq. ??. These results build upon extensive work by <span class="citation" data-cites="martins2011">Martins and Swain (<a href="#ref-martins2011" role="doc-biblioref">2011</a>)</span>, who computed many such properties for ligand-receptor binding within the MWC model. We begin by analyzing the leakiness, which is the minimum fold-change observed in the absence of ligand, given by</p>
 <p><span id="eq:leakiness" class="eqnos"><br /><span class="math display">$$
 \begin{aligned}
 \text{leakiness} &amp;= \text{fold-change}(c=0) \nonumber\\
@@ -231,17 +231,25 @@ $$</span><br /><span class="eqnos-number">(6)</span></span></p>
 }\frac{R}{N_{NS}}e^{-\beta \Delta\varepsilon_{RA}} \right)^{-1}.
 \end{aligned}
 $$</span><br /><span class="eqnos-number">(7)</span></span></p>
-<p>Systems that minimize leakiness repress strongly in the absence of effector while systems that maximize saturation have high expression in the presence of effector. Together, these two properties determine the dynamic range of a system’s response, which is given by the difference [  =  - .] These three properties are shown in -. We discuss these properties in greater detail in , Section “”. - shows that the measurements of these three properties, derived from the fold-change data in the absence of IPTG and the presence of saturating IPTG, closely match the predictions for all three operators.</p>
+<p>Systems that minimize leakiness repress strongly in the absence of effector while systems that maximize saturation have high expression in the presence of effector. Together, these two properties determine the dynamic range of a system’s response, which is given by the difference</p>
+<p><span id="eq:dynamic_range" class="eqnos"><br /><span class="math display">dynamic range = saturation − leakiness</span><br /><span class="eqnos-number">(8)</span></span></p>
+<p>These three properties are shown in Fig. ?? (F-H). We discuss these properties in greater detail in the Materials &amp; Methods section. Fig. ?? shows that the measurements of these three properties, derived from the fold-change data in the absence of IPTG and the presence of saturating IPTG, closely match the predictions for all three operators.</p>
 <figure>
-<embed src="main_figs/fig6.pdf" /><figcaption><strong>Predictions and experimental measurements of key properties of induction profiles.</strong> Data for the leakiness, saturation, and dynamic range are obtained from fold-change measurements in in the absence of IPTG and at saturating concentrations of IPTG. The three repressor-operator binding energies in the legend correspond to the O1 operator (<span class="math inline"> − 15.3 <em>k</em><sub><em>B</em></sub><em>T</em></span>), O2 operator (<span class="math inline"> − 13.9 <em>k</em><sub><em>B</em></sub><em>T</em></span>), and O3 operator (<span class="math inline"> − 9.7 <em>k</em><sub><em>B</em></sub><em>T</em></span>). Both the <span class="math inline">[<em>E</em><em>C</em><sub>50</sub>]</span> and effective Hill coefficient are inferred by individually fitting each operator-repressor pairing in - separately to in order to smoothly interpolate between the data points. Error bars for - represent the standard error of the mean for eight or more replicates; error bars for - represent the 95% credible region for the parameter found by propagating the credible region of our estimates of <span class="math inline"><em>K</em><sub><em>A</em></sub></span> and <span class="math inline"><em>K</em><sub><em>I</em></sub></span> into .</figcaption>
+<img src="ch2_fig6.png" id="eq:properties_experiment" data-short-caption="Predictions and experimental measurements of key properties of induction profiles." alt="" /><figcaption><strong>Predictions and experimental measurements of key properties of induction profiles.</strong> Data for the leakiness, saturation, and dynamic range are obtained from fold-change measurements in in the absence of IPTG and at saturating concentrations of IPTG. The three repressor-operator binding energies in the legend correspond to the O1 operator (<span class="math inline"> − 15.3 <em>k</em><sub><em>B</em></sub><em>T</em></span>), O2 operator (<span class="math inline"> − 13.9 <em>k</em><sub><em>B</em></sub><em>T</em></span>), and O3 operator (<span class="math inline"> − 9.7 <em>k</em><sub><em>B</em></sub><em>T</em></span>). Both the <span class="math inline">[<em>E</em><em>C</em><sub>50</sub>]</span> and effective Hill coefficient are inferred by individually fitting each operator-repressor pairing in - separately to in order to smoothly interpolate between the data points. Error bars for - represent the standard error of the mean for eight or more replicates; error bars for - represent the 95% credible region for the parameter found by propagating the credible region of our estimates of <span class="math inline"><em>K</em><sub><em>A</em></sub></span> and <span class="math inline"><em>K</em><sub><em>I</em></sub></span> into Eq. ??.</figcaption>
 </figure>
-<p><span id="fig_properties_data" label="fig_properties_data">[fig_properties_data]</span></p>
-<p>Two additional properties of induction profiles are the <span class="math inline">[<em>E</em><em>C</em><sub>50</sub>]</span> and effective Hill coefficient, which determine the range of inducer concentration in which the system’s output goes from its minimum to maximum value. The <span class="math inline">[<em>E</em><em>C</em><sub>50</sub>]</span> denotes the inducer concentration required to generate a system response halfway between its minimum and maximum value, [ (c = [EC_{50}]) = .] The effective Hill coefficient <span class="math inline"><em>h</em></span>, which quantifies the steepness of the curve at the <span class="math inline">[<em>E</em><em>C</em><sub>50</sub>]</span> , is given by [ h = ( 2  )_{c = [EC_{50}]}.]</p>
-<ul>
-<li>shows how the <span class="math inline">[<em>E</em><em>C</em><sub>50</sub>]</span> and effective Hill coefficient depend on the repressor copy number. In , Section “”, we discuss the analytic forms of these two properties as well as their dependence on the repressor-DNA binding energy.</li>
-</ul>
+<p>Two additional properties of induction profiles are the <span class="math inline">[<em>E</em><em>C</em><sub>50</sub>]</span> and effective Hill coefficient, which determine the range of inducer concentration in which the system’s output goes from its minimum to maximum value. The <span class="math inline">[<em>E</em><em>C</em><sub>50</sub>]</span> denotes the inducer concentration required to generate a system response halfway between its minimum and maximum value, <span id="eq:ec50" class="eqnos"><br /><span class="math display">$$
+\text{fold-change}(c = [EC_{50}]) = \frac{\text{leakiness} +
+\text{saturation}}{2}.
+$$</span><br /><span class="eqnos-number">(9)</span></span></p>
+<p>The effective Hill coefficient <span class="math inline"><em>h</em></span>, which quantifies the steepness of the curve at the <span class="math inline">[<em>E</em><em>C</em><sub>50</sub>]</span> , is given by</p>
+<p><span id="eq:effective_hill" class="eqnos"><br /><span class="math display">$$
+h = \left( 2 \frac{d}{d \log c} \left[ \log \left( \frac{ \text{fold-change}(c)
+- \text{leakiness}}{\text{dynamic range}} \right) \right] \right)_{c =
+[EC_{50}]}.
+$$</span><br /><span class="eqnos-number">(10)</span></span></p>
+<p>shows how the <span class="math inline">[<em>E</em><em>C</em><sub>50</sub>]</span> and effective Hill coefficient depend on the repressor copy number. In , Section “”, we discuss the analytic forms of these two properties as well as their dependence on the repressor-DNA binding energy.</p>
 <p>- shows the estimated values of the <span class="math inline">[<em>E</em><em>C</em><sub>50</sub>]</span> and the effective Hill coefficient overlaid on the theoretical predictions. Both properties were obtained by fitting to each individual titration curve and computing the <span class="math inline">[<em>E</em><em>C</em><sub>50</sub>]</span> and effective Hill coefficient using and , respectively. We find that the predictions made with the single strain fit closely match those made for each of the strains with O1 and O2 operators, but the predictions for the O3 operator are markedly off. In the , Section “”, we show that the large, asymmetric error bars for the O3 <span class="math inline"><em>R</em> = 22</span> strain arise from its nearly flat response, where the lack of dynamic range makes it impossible to determine the value of the inducer dissociation constants <span class="math inline"><em>K</em><sub><em>A</em></sub></span> and <span class="math inline"><em>K</em><sub><em>I</em></sub></span>, as can be seen in the uncertainty of both the <span class="math inline">[<em>E</em><em>C</em><sub>50</sub>]</span> and effective Hill coefficient. Discrepancies between theory and data for O3 are improved, but not fully resolved, by performing a global fit or fitting the MWC model individually to each curve (see , Sections “” and “”). It remains an open question how to account for discrepancies in O3, in particular regarding the significant mismatch between the predicted and fitted effective Hill coefficients.</p>
-<h2 id="data-collapse-of-induction-profiles">Data Collapse of Induction Profiles</h2>
+<h3 id="data-collapse-of-induction-profiles">Data Collapse of Induction Profiles</h3>
 <p>Our primary interest heretofore was to determine the system response at a specific inducer concentration, repressor copy number, and repressor-DNA binding energy. However, the cell does not necessarily “care about” the precise number of repressors in the system or the binding energy of an individual operator. The relevant quantity for cellular function is the fold-change enacted by the regulatory system. This raises the question: given a specific value of the fold-change, what combination of parameters will give rise to this desired response? In other words, what trade-offs between the parameters of the system will give rise to the same mean cellular output? These are key questions both for understanding how the system is governed and for engineering specific responses in a synthetic biology context. To address these questions, we follow the data collapse strategy used in a number of previous studies , and rewrite as a Fermi function, [ = ,] where <span class="math inline"><em>F</em>(<em>c</em>)</span> is the free energy of the repressor binding to the operator of interest relative to the unbound operator state in <span class="math inline"><em>k</em><sub><em>B</em></sub><em>T</em></span> units , which is given by [ F(c) =  -  - .] The first term in <span class="math inline"><em>F</em>(<em>c</em>)</span> denotes the repressor-operator binding energy, the second the contribution from the inducer concentration, and the last the effect of the repressor copy number. We note that elsewhere, this free energy has been dubbed the Bohr parameter since such families of curves are analogous to the shifts in hemoglobin binding curves at different pHs known as the Bohr effect .</p>
 <p>Instead of analyzing each induction curve individually, the free energy provides a natural means to simultaneously characterize the diversity in our eighteen induction profiles. demonstrates how the various induction curves from - all collapse onto a single master curve, where points from every induction profile that yield the same fold-change are mapped onto the same free energy. shows this data collapse for the 216 data points in -, demonstrating the close match between the theoretical predictions and experimental measurements across all eighteen strains.</p>
 <p>There are many different combinations of parameter values that can result in the same free energy as defined in . For example, suppose a system originally has a fold-change of 0.2 at a specific inducer concentration, and then operator mutations increase the <span class="math inline"><em>Δ</em><em>ε</em><sub><em>R</em><em>A</em></sub></span> binding energy . While this serves to initially increase both the free energy and the fold-change, a subsequent increase in the repressor copy number could bring the cell back to the original fold-change level. Such trade-offs hint that there need not be a single set of parameters that evoke a specific cellular response, but rather that the cell explores a large but degenerate space of parameters with multiple, equally valid paths.</p>
@@ -281,6 +289,9 @@ $$</span><br /><span class="eqnos-number">(7)</span></span></p>
 <div id="ref-brewster2014">
 <p>Brewster, Robert C., Franz M. Weinert, Hernan G. Garcia, Dan Song, Mattias Rydenfelt, and Rob Phillips. 2014. “The Transcription Factor Titration Effect Dictates Level of Gene Expression.” <em>Cell</em> 156 (6): 1312–23. <a href="https://doi.org/10.1016/j.cell.2014.02.022">https://doi.org/10.1016/j.cell.2014.02.022</a>.</p>
 </div>
+<div id="ref-brophy2014">
+<p>Brophy, Jennifer A. N., and Christopher A. Voigt. 2014. “Principles of Genetic Circuit Design.” <em>Nature Methods</em> 11 (5): 508–20. <a href="https://doi.org/10.1038/nmeth.2926">https://doi.org/10.1038/nmeth.2926</a>.</p>
+</div>
 <div id="ref-buchler2003">
 <p>Buchler, N. E., U. Gerland, and T. Hwa. 2003. “On Schemes of Combinatorial Transcription Logic.” <em>Proceedings of the National Academy of Sciences</em> 100 (9): 5136–41. <a href="https://doi.org/10.1073/pnas.0930314100">https://doi.org/10.1073/pnas.0930314100</a>.</p>
 </div>
@@ -310,6 +321,9 @@ $$</span><br /><span class="eqnos-number">(7)</span></span></p>
 </div>
 <div id="ref-lindsley2006a">
 <p>Lindsley, Janet E., and Jared Rutter. 2006. “Whence Cometh the Allosterome?” <em>Proceedings of the National Academy of Sciences</em> 103 (28): 10533–5. <a href="https://doi.org/10.1073/pnas.0604452103">https://doi.org/10.1073/pnas.0604452103</a>.</p>
+</div>
+<div id="ref-martins2011">
+<p>Martins, Bruno M. C., and Peter S. Swain. 2011. “Trade-Offs and Constraints in Allosteric Sensing.” <em>PLOS Computational Biology</em> 7 (11): e1002261. <a href="https://doi.org/10.1371/journal.pcbi.1002261">https://doi.org/10.1371/journal.pcbi.1002261</a>.</p>
 </div>
 <div id="ref-marzen2013">
 <p>Marzen, Sarah, Hernan G. Garcia, and Rob Phillips. 2013. “Statistical Mechanics of MonodWymanChangeux (MWC) Models.” <em>Journal of Molecular Biology</em>, Allosteric Interactions and Biological Regulation (Part I), 425 (9): 1433–60. <a href="https://doi.org/10.1016/j.jmb.2013.03.013">https://doi.org/10.1016/j.jmb.2013.03.013</a>.</p>
@@ -344,6 +358,9 @@ $$</span><br /><span class="eqnos-number">(7)</span></span></p>
 <div id="ref-setty2003">
 <p>Setty, Y., A. E. Mayo, M. G. Surette, and U. Alon. 2003. “Detailed Map of a Cis-Regulatory Input Function.” <em>Proceedings of the National Academy of Sciences</em> 100 (13): 7702–7. <a href="https://doi.org/10.1073/pnas.1230759100">https://doi.org/10.1073/pnas.1230759100</a>.</p>
 </div>
+<div id="ref-shis2014">
+<p>Shis, David L., Faiza Hussain, Sarah Meinhardt, Liskin Swint-Kruse, and Matthew R. Bennett. 2014. “Modular, Multi-Input Transcriptional Logic Gating with Orthogonal LacI/GalR Family Chimeras.” <em>ACS Synthetic Biology</em> 3 (9): 645–51. <a href="https://doi.org/10.1021/sb500262f">https://doi.org/10.1021/sb500262f</a>.</p>
+</div>
 <div id="ref-sivia2006">
 <p>Sivia, Devinderjit, and John Skilling. 2006. <em>Data Analysis: A Bayesian Tutorial</em>. OUP Oxford.</p>
 </div>
@@ -371,38 +388,6 @@ $$</span><br /><span class="eqnos-number">(7)</span></span></p>
 			</div><!-- /.container -->
 		</div><!-- /.section -->
 		
-			<div class="section section--grey">
-				<div class="container">
-					<div class="row">
-						<div class="col-md-7">
-							<div id="disqus_thread"></div>
-<script>
-	/**
-	 *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-	 *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
-	 */
-	 /*
-	var disqus_config = function () {
-	this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
-		this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-	};
-	*/
-	(function() {
-		var d = document, s = d.createElement('script');
-
-		s.src = 'https://gchure_phd.disqus.com/embed.js';
-
-		s.setAttribute('data-timestamp', +new Date());
-		(d.head || d.body).appendChild(s);
-	})();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
-
-						</div><!-- /.col -->
-					</div><!-- /.row -->
-				</div><!-- /.container -->
-			</div><!-- /.section -->
-		
 		<div class="js-footer-area">
 			
 				<nav class="page-nav">	
@@ -410,13 +395,13 @@ $$</span><br /><span class="eqnos-number">(7)</span></span></p>
 						<div class="row">
 							<div class="col-xs-12">
 								
-									<a href="https://gchure.github.io/phdchapter_01'" class="page-nav__item page-nav__item--prev">
+									<a href="chapter_01'" class="page-nav__item page-nav__item--prev">
 										<i class="icon icon--arrow-left"></i>
 										Chapter I
 									</a><!-- /.page-nav__item -->
 								
 								
-									<a href="https://gchure.github.io/phdchapter_03" class="page-nav__item page-nav__item--next">
+									<a href="chapter_03" class="page-nav__item page-nav__item--next">
 										Chapter III
 										<i class="icon icon--arrow-right"></i>
 									</a><!-- /.page-nav__item -->
@@ -433,7 +418,7 @@ $$</span><br /><span class="eqnos-number">(7)</span></span></p>
 			<div class="row">
 				<div class="col-sm-6">
 					
-						<a href="https://gchure.github.io/phd/" class="site-footer__logo">Griffin D. Chure | PhD Thesis</a>
+						<a href="/" class="site-footer__logo">Griffin D. Chure | PhD Thesis</a>
 					
 					
 						<hr>
@@ -458,11 +443,11 @@ $$</span><br /><span class="eqnos-number">(7)</span></span></p>
 	</footer><!-- /.site-footer -->
 
 
-<script src="https://gchure.github.io/phd/doks-theme/assets/js/vendor/jquery.min.js"></script>
-<script type="text/javascript" src="https://gchure.github.io/phd/doks-theme/assets/js/vendor/bootstrap/affix.min.js"></script>
-<script type="text/javascript" src="https://gchure.github.io/phd/doks-theme/assets/js/vendor/bootstrap/scrollspy.min.js"></script>
-<script type="text/javascript" src="https://gchure.github.io/phd/doks-theme/assets/js/vendor/matchHeight.min.js"></script>
-<script type="text/javascript" src="https://gchure.github.io/phd/doks-theme/assets/js/scripts.min.js"></script>
+<script src="/doks-theme/assets/js/vendor/jquery.min.js"></script>
+<script type="text/javascript" src="/doks-theme/assets/js/vendor/bootstrap/affix.min.js"></script>
+<script type="text/javascript" src="/doks-theme/assets/js/vendor/bootstrap/scrollspy.min.js"></script>
+<script type="text/javascript" src="/doks-theme/assets/js/vendor/matchHeight.min.js"></script>
+<script type="text/javascript" src="/doks-theme/assets/js/scripts.min.js"></script>
 
 
 

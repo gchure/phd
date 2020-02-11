@@ -95,16 +95,16 @@ short-caption="An experimental pipeline for high-throughput fold-change
 measurements."}
 
 
-## Determination of the *in vivo* MWC Parameters
+### Determination of the *in vivo* MWC Parameters
 
 The three parameters that we tune experimentally are shown in , leaving the
 three allosteric parameters ($\Delta \varepsilon_{AI}$, $K_A$, and $K_I$) to
 be determined by fitting. We used previous LacI fold-change data
-[@brewster2014] to infer that $\Delta\varepsilon_{AI} = 4.5~k_BT$ (see
+[@brewster2014] to infer that $\Delta\varepsilon_{AI} = 4.5\, k_BT$ (see
 Materials \& Methods). Rather than fitting $K_A$ and $K_I$ to our entire data
 set of eighteen unique constructs, we performed Bayesian parameter estimation
 on data from a single strain with $R=260$ and an O2 operator
-[$\Delta\varepsilon_{RA}=-13.9~k_BT$ [@garcia2011]] shown in Fig.
+[$\Delta\varepsilon_{RA}=-13.9\,k_BT$ [@garcia2011]] shown in Fig.
 [@fig:induction_predictions](D, orange points). Using Markov Chain Monte
 Carlo, we determine the most likely parameter values to be
 $K_A=139^{+29}_{-22} \times 10^{-6} \, \text{M}$ and
@@ -171,35 +171,36 @@ short-caption="Predicting induction profiles for different biological control
 parameters."}
 
 
-## Comparison of Experimental Measurements with Theoretical Predictions
+### Comparison of Experimental Measurements with Theoretical Predictions
 
 We tested the predictions shown in Fig. @fig:induction_predictions by
 measuring fold-change induction profiles in strains with a broad range of
 repressor copy numbers and repressor binding energies as characterized in
-@garcia2011. With a few notable exceptions, the results shown in demonstrate
+@garcia2011. With a few notable exceptions, the results shown in Fig.
+@fig:induction_experiments demonstrate
 agreement between theory and experiment. We note that there was an apparently
-systematic shift in the O3 $\Delta\varepsilon_{RA} = -9.7\ k_BT$ strains ()
-and all of the $R=1220$ and $R =1740$ strains. This may be partially due to
+systematic shift in the O3 $\Delta\varepsilon_{RA} = -9.7\ k_BT$ strains [Fig.
+@fig:induction_experiments (C)]  and all of the $R=1220$ and $R =1740$ strains. This may be partially due to
 imprecise previous determinations of their $\Delta\varepsilon_{RA}$ and $R$
 values. By performing a global fit where we infer all parameters including
 the repressor copy number $R$ and the binding energy
 $\Delta\varepsilon_{RA}$, we found better agreement for these strains,
 although a discrepancy in the steepness of the response for all O3 strains
-remains (see , Section “”). We considered a number of hypotheses to explain
+remains (see Materials \& Methods). We considered a number of hypotheses to explain
 these discrepancies such as including other states (e.g. non-negligible
 binding of the inactive repressor), relaxing the weak promoter approximation,
 and accounting for variations in gene and repressor copy number throughout
 the cell cycle, but none explained the observed discrepancies. As an
 additional test of our model, we considered strains using the synthetic Oid
 operator which exhibits an especially strong binding energy of
-$\Delta\varepsilon_{RA}=-17~k_B T$. The global fit agrees well with the Oid
+$\Delta\varepsilon_{RA}=-17\,k_B T$ [@garcia2011]. The global fit agrees well with the Oid
 microscopy data, though it asserts a stronger Oid binding energy of
-$\Delta\varepsilon_{RA}=-17.7~k_B T$ (see Supplemental Chapter 7).
+$\Delta\varepsilon_{RA}=-17.7\,k_B T$ (see Supplemental Chapter 7).
 
 To ensure that the agreement between our predictions and data is not an
 accident of the strain we used to perform our fitting, we also inferred
-$K_A$ and $K_I$ from each of the other strains. As shown in ,
-Section “” and , the inferred values of $K_A$ and $K_I$ depend
+$K_A$ and $K_I$ from each of the other strains. As discussed in 
+the Materials \& Methods and Fig. @fig:induction_predictions, the inferred values of $K_A$ and $K_I$ depend
 minimally upon which strain is chosen, indicating that these parameter
 values are highly robust. We also performed a global fit using the data
 from all eighteen strains in which we fitted for the inducer
@@ -215,10 +216,10 @@ cytometry measurements of fold-change over a range of IPTG
 concentrations for O1, O2, and O3 strains at varying repressor copy
 numbers, overlaid on the predicted responses. Error bars for the
 experimental data show the standard error of the mean (eight or more
-replicates). As discussed in , all of the predicted induction curves
+replicates). As discussed in Fig. @fig:induction_predictions, all of the predicted induction curves
 were generated prior to measurement by inferring the MWC parameters
 using a single data set (O2 $R=260$, shown by white circles in Panel
-). The predictions may therefore depend upon which strain is used to
+B). The predictions may therefore depend upon which strain is used to
 infer the parameters. The inferred parameter values of the dissociation
 constants $K_A$ and $K_I$ using any of the eighteen strains instead
 of the O2 $R=260$ strain. Nearly identical parameter values are
@@ -227,28 +228,29 @@ profiles would have been predicted regardless of which strain was
 chosen. The points show the mode, and the error bars denote the $95%$
 credible region of the parameter value distribution. Error bars not
 visible are smaller than the size of the
-marker.](ch2_fig5){@fig:ch2_ind_theory_experiment short-caption="Comparison of predictions against measured and inferred data."}
+marker.](ch2_fig5){@fig:induction_experiments short-caption="Comparison of predictions against measured and inferred data."}
 
-## Predicting the Phenotypic Traits of the Induction Response
+### Predicting the Phenotypic Traits of the Induction Response
 
-A subset of the properties shown in (i.e. the leakiness, saturation,
+A subset of the properties shown in Fig. @fig:inducible_types (i.e. the leakiness, saturation,
 dynamic range, $[EC_{50}]$, and effective Hill coefficient) are of
 significant interest to synthetic biology. For example, synthetic
 biology is often focused on generating large responses (i.e. a large
 dynamic range) or finding a strong binding partner (i.e. a small
-$[EC_{50}]$) . While these properties are all individually
+$[EC_{50}]$) [@brophy2014; @shis2014]. While these properties are all individually
 informative, when taken together they capture the essential features of
 the induction response. We reiterate that a Hill function approach
-cannot predict these features _a priori_ and furthermore requires
+cannot predict these features *a priori* and furthermore requires
 fitting each curve individually. The MWC model, on the other hand,
 enables us to quantify how each trait depends upon a single set of
-physical parameters as shown by -.
+physical parameters as shown by Fig. @fig:induction_predictions (F-J).
 
-We define these five phenotypic traits using expressions derived from
-the model, . These results build upon extensive work by , who computed
-many such properties for ligand-receptor binding within the MWC model.
-We begin by analyzing the leakiness, which is the minimum fold-change
-observed in the absence of ligand, given by
+We define these five phenotypic traits using expressions derived from the
+model presented in Eq. @eq:foldchange_full. These results build upon
+extensive work by @martins2011, who computed many such properties for
+ligand-receptor binding within the MWC model. We begin by analyzing the
+leakiness, which is the minimum fold-change observed in the absence of
+ligand, given by
 
 $$
 \begin{aligned}
@@ -275,10 +277,14 @@ Systems that minimize leakiness repress strongly in the absence of
 effector while systems that maximize saturation have high expression in
 the presence of effector. Together, these two properties determine the
 dynamic range of a system’s response, which is given by the difference
-\[\label{eqDynamicRangeDef}
-\text{dynamic range} = \text{saturation} - \text{leakiness}.\] These
-three properties are shown in -. We discuss these properties in greater
-detail in , Section “”. - shows that the measurements of these three
+
+$$
+\text{dynamic range} = \text{saturation} - \text{leakiness}
+$${#eq:dynamic_range}
+
+These
+three properties are shown in Fig. @fig:induction_predictions (F-H). We discuss these properties in greater
+detail in the Materials \& Methods section. Fig. @fig:properties_experiment shows that the measurements of these three
 properties, derived from the fold-change data in the absence of IPTG and
 the presence of saturating IPTG, closely match the predictions for all
 three operators.
@@ -295,26 +301,36 @@ pairing in - separately to in order to smoothly interpolate between the
 data points. Error bars for - represent the standard error of the mean
 for eight or more replicates; error bars for - represent the 95%
 credible region for the parameter found by propagating the credible
-region of our estimates of $K_A$ and $K_I$ into
-.](main_figs/fig6.pdf)
+region of our estimates of $K_A$ and $K_I$ into Eq. @eq:foldchange_full.](ch2_fig6){#eq:properties_experiment short-caption="Predictions and experimental measurements of key properties of
+induction profiles."}
 
-<span id="fig_properties_data" label="fig_properties_data">\[fig_properties_data\]</span>
+
 
 Two additional properties of induction profiles are the $[EC_{50}]$
 and effective Hill coefficient, which determine the range of inducer
 concentration in which the system’s output goes from its minimum to
 maximum value. The $[EC_{50}]$ denotes the inducer concentration
 required to generate a system response halfway between its minimum and
-maximum value, \[\label{ec50}
-\foldchange(c = [EC_{50}]) = \frac{\text{leakiness} + \text{saturation}}{2}.\]
-The effective Hill coefficient $h$, which quantifies the steepness of
-the curve at the $[EC_{50}]$ , is given by \[\label{effectiveHill}
-h = \left( 2 \frac{d}{d \log c} \left[ \log \left( \frac{ \foldchange(c) - \text{leakiness}}{\text{dynamic range}} \right) \right] \right)_{c = [EC_{50}]}.\]
+maximum value, 
+$$
+\text{fold-change}(c = [EC_{50}]) = \frac{\text{leakiness} +
+\text{saturation}}{2}.
+$${#eq:ec50}
 
-- shows how the $[EC_{50}]$ and effective Hill coefficient depend on
-  the repressor copy number. In , Section “”, we discuss the analytic
-  forms of these two properties as well as their dependence on the
-  repressor-DNA binding energy.
+The effective Hill coefficient $h$, which quantifies the steepness of
+the curve at the $[EC_{50}]$ , is given by 
+
+$$
+h = \left( 2 \frac{d}{d \log c} \left[ \log \left( \frac{ \text{fold-change}(c)
+- \text{leakiness}}{\text{dynamic range}} \right) \right] \right)_{c =
+[EC_{50}]}.
+$${#eq:effective_hill}
+
+shows how the $[EC_{50}]$ and effective Hill coefficient depend on
+the repressor copy number. In , Section “”, we discuss the analytic
+forms of these two properties as well as their dependence on the
+repressor-DNA binding energy.
+
 
 \- shows the estimated values of the $[EC_{50}]$ and the effective
 Hill coefficient overlaid on the theoretical predictions. Both
@@ -335,7 +351,7 @@ an open question how to account for discrepancies in O3, in particular
 regarding the significant mismatch between the predicted and fitted
 effective Hill coefficients.
 
-## Data Collapse of Induction Profiles
+### Data Collapse of Induction Profiles
 
 Our primary interest heretofore was to determine the system response at
 a specific inducer concentration, repressor copy number, and
