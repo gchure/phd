@@ -135,14 +135,12 @@ def bokeh_theme(return_color_list=True):
             "Grid": {"grid_line_color": "#FFFFFF", "grid_line_width": 0.75,},
             "Text": {
                 "text_font_style": "regular",
-                "text_font": "Myriad Pro",
                 "text_font_size": "12pt",
             },
             "Title": {
                 "background_fill_color": "#FFFFFF",
                 "text_color": "#3c3c3c",
                 "align": "left",
-                "text_font": "Myriad Pro",
                 'text_font_style': 'normal',
                 'text_font_size': "10pt",
                 "offset": 5 
@@ -186,8 +184,8 @@ def altair_theme():
                     'domainWidth': 0.5,
                     'labelColor': colors['black'],
                     'labelFontSize': 8,
-                    'labelFont': 'Myriad Pro',
-                    'titleFont': 'Myriad Pro',
+                    'labelFont': 'Arial',
+                    'titleFont': 'Arial',
                     'titleFontWeight': 400,
                     'titleFontSize': 8,
                     'grid': True,
@@ -203,13 +201,13 @@ def altair_theme():
                 },
                 'legend': {
                     'labelFontSize': 8,
-                    'labelFont': 'Myriad Pro',
-                    'titleFont': 'Myriad Pro',
+                    'labelFont': 'Arial',
+                    'titleFont': 'Arial',
                     'titleFontSize': 8,
                     'titleFontWeight': 400
                 },
                 'title' : { 
-                    'font': 'Myriad Pro',
+                    'font': 'Arial',
                     'fontWeight': 400,
                     'fontSize': 8,
                     'anchor': 'middle'
