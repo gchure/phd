@@ -40,6 +40,7 @@ contents:
     - section_02_introduction
     - section_03_model   
     - section_04_results
+    - section_05_discussion
     - section_99_references
 ---
 
