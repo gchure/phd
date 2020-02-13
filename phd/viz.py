@@ -184,8 +184,8 @@ def altair_theme():
                     'domainWidth': 0.5,
                     'labelColor': colors['black'],
                     'labelFontSize': 8,
-                    'labelFont': 'Arial',
-                    'titleFont': 'Arial',
+                    'labelFont': 'Myriad Pro',
+                    'titleFont': 'Myriad Pro',
                     'titleFontWeight': 400,
                     'titleFontSize': 8,
                     'grid': True,
@@ -201,13 +201,13 @@ def altair_theme():
                 },
                 'legend': {
                     'labelFontSize': 8,
-                    'labelFont': 'Arial',
-                    'titleFont': 'Arial',
+                    'labelFont': 'Myriad Pro',
+                    'titleFont': 'Myriad Pro',
                     'titleFontSize': 8,
                     'titleFontWeight': 400
                 },
                 'title' : { 
-                    'font': 'Arial',
+                    'font': 'Myriad Pro',
                     'fontWeight': 400,
                     'fontSize': 8,
                     'anchor': 'middle'
