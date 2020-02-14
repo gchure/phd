@@ -41,6 +41,7 @@ contents:
     - section_03_model   
     - section_04_results
     - section_05_discussion
+    - section_06_methods
     - section_99_references
 ---
 

@@ -30,11 +30,11 @@
   <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
   
 
-<link rel="icon" href="https://gchure.github.io/phd/favicon.ico" type="image/x-icon">
+<link rel="icon" href="/favicon.ico" type="image/x-icon">
 <link href="https://fonts.googleapis.com/css?family=Nanum+Myeongjo&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Alegreya|Lora&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="https://gchure.github.io/phd/doks-theme/assets/css/style.css">
+<link rel="stylesheet" href="/doks-theme/assets/css/style.css">
 
 	</head>
 	<body class="grey" data-spy="scroll" data-target=".js-scrollspy">
@@ -46,7 +46,7 @@
 			<div class="row">
 				<div class="col-xs-12">
 					
-						<a href="https://gchure.github.io/phd/" class="site-header__logo"><i class="icon icon--chevron-left"></i> Home</a>
+						<a href="/" class="site-header__logo"><i class="icon icon--chevron-left"></i> Home</a>
 					
 					
 				</div><!-- /.col -->
@@ -55,7 +55,7 @@
 	</header><!-- /.site-header -->
 
 
-		<div class="hero-subheader" style="background-image: url(https://gchure.github.io/phd/doks-theme/assets/images/switchboard.png); background-position: center;">
+		<div class="hero-subheader" style="background-image: url(http://127.0.0.1:4000/doks-theme/assets/images/switchboard.png); background-position: center;">
 
 			<div class="container" style="background-color: rgba(0,0,0, 0.75); border:0.75px solid white;">
 				<div class="row">
@@ -72,12 +72,12 @@
 								
 								<!-- 
 									
-										<a href="https://gchure.github.io/phdchapter_01'" class="btn btn--dark btn--rounded btn--w-icon btn--w-icon-left">
+										<a href="chapter_01'" class="btn btn--dark btn--rounded btn--w-icon btn--w-icon-left">
 											<i class="icon icon--arrow-left"></i>	
 										</a>
 									
 									
-										<a href="https://gchure.github.io/phdchapter_03" class="btn btn--dark btn--rounded btn--w-icon">
+										<a href="chapter_03" class="btn btn--dark btn--rounded btn--w-icon">
 											<i class="icon icon--arrow-right"></i>
 										</a>
 									
@@ -110,13 +110,13 @@
 						<div class="row" >
 							<div class="col-xs-12">
 								
-									<a href="https://gchure.github.io/phdchapter_01'" class="page-nav__item page-nav__item--prev">
+									<a href="chapter_01'" class="page-nav__item page-nav__item--prev">
 										<i class="icon icon--arrow-left"></i>
 										Chapter I
 									</a><!-- /.page-nav__item -->
 								
 								
-									<a href="https://gchure.github.io/phdchapter_03" class="page-nav__item page-nav__item--next">
+									<a href="chapter_03" class="page-nav__item page-nav__item--next">
 										Chapter III
 										<i class="icon icon--arrow-right"></i>
 									</a><!-- /.page-nav__item -->
@@ -249,14 +249,6 @@ h = \left( 2 \frac{d}{d \log c} \left[ \log \left( \frac{ \text{fold-change}(c)
 $$</span><br /><span class="eqnos-number">(10)</span></span></p>
 <p>shows how the <span class="math inline">[<em>E</em><em>C</em><sub>50</sub>]</span> and effective Hill coefficient depend on the repressor copy number. In , Section “”, we discuss the analytic forms of these two properties as well as their dependence on the repressor-DNA binding energy.</p>
 <p>- shows the estimated values of the <span class="math inline">[<em>E</em><em>C</em><sub>50</sub>]</span> and the effective Hill coefficient overlaid on the theoretical predictions. Both properties were obtained by fitting to each individual titration curve and computing the <span class="math inline">[<em>E</em><em>C</em><sub>50</sub>]</span> and effective Hill coefficient using and , respectively. We find that the predictions made with the single strain fit closely match those made for each of the strains with O1 and O2 operators, but the predictions for the O3 operator are markedly off. In the , Section “”, we show that the large, asymmetric error bars for the O3 <span class="math inline"><em>R</em> = 22</span> strain arise from its nearly flat response, where the lack of dynamic range makes it impossible to determine the value of the inducer dissociation constants <span class="math inline"><em>K</em><sub><em>A</em></sub></span> and <span class="math inline"><em>K</em><sub><em>I</em></sub></span>, as can be seen in the uncertainty of both the <span class="math inline">[<em>E</em><em>C</em><sub>50</sub>]</span> and effective Hill coefficient. Discrepancies between theory and data for O3 are improved, but not fully resolved, by performing a global fit or fitting the MWC model individually to each curve (see , Sections “” and “”). It remains an open question how to account for discrepancies in O3, in particular regarding the significant mismatch between the predicted and fitted effective Hill coefficients.</p>
-<h3 id="data-collapse-of-induction-profiles">Data Collapse of Induction Profiles</h3>
-<p>Our primary interest heretofore was to determine the system response at a specific inducer concentration, repressor copy number, and repressor-DNA binding energy. However, the cell does not necessarily “care about” the precise number of repressors in the system or the binding energy of an individual operator. The relevant quantity for cellular function is the fold-change enacted by the regulatory system. This raises the question: given a specific value of the fold-change, what combination of parameters will give rise to this desired response? In other words, what trade-offs between the parameters of the system will give rise to the same mean cellular output? These are key questions both for understanding how the system is governed and for engineering specific responses in a synthetic biology context. To address these questions, we follow the data collapse strategy used in a number of previous studies , and rewrite as a Fermi function, [ = ,] where <span class="math inline"><em>F</em>(<em>c</em>)</span> is the free energy of the repressor binding to the operator of interest relative to the unbound operator state in <span class="math inline"><em>k</em><sub><em>B</em></sub><em>T</em></span> units , which is given by [ F(c) =  -  - .] The first term in <span class="math inline"><em>F</em>(<em>c</em>)</span> denotes the repressor-operator binding energy, the second the contribution from the inducer concentration, and the last the effect of the repressor copy number. We note that elsewhere, this free energy has been dubbed the Bohr parameter since such families of curves are analogous to the shifts in hemoglobin binding curves at different pHs known as the Bohr effect .</p>
-<p>Instead of analyzing each induction curve individually, the free energy provides a natural means to simultaneously characterize the diversity in our eighteen induction profiles. demonstrates how the various induction curves from - all collapse onto a single master curve, where points from every induction profile that yield the same fold-change are mapped onto the same free energy. shows this data collapse for the 216 data points in -, demonstrating the close match between the theoretical predictions and experimental measurements across all eighteen strains.</p>
-<p>There are many different combinations of parameter values that can result in the same free energy as defined in . For example, suppose a system originally has a fold-change of 0.2 at a specific inducer concentration, and then operator mutations increase the <span class="math inline"><em>Δ</em><em>ε</em><sub><em>R</em><em>A</em></sub></span> binding energy . While this serves to initially increase both the free energy and the fold-change, a subsequent increase in the repressor copy number could bring the cell back to the original fold-change level. Such trade-offs hint that there need not be a single set of parameters that evoke a specific cellular response, but rather that the cell explores a large but degenerate space of parameters with multiple, equally valid paths.</p>
-<figure>
-<embed src="main_figs/fig7.pdf" /><figcaption><strong>Fold-change data from a broad collection of different strains collapse onto a single master curve.</strong> Any combination of parameters can be mapped to a single physiological response (i.e. fold-change) via the free energy, which encompasses the parametric details of the model. Experimental data from collapse onto a single master curve as a function of the free energy . The free energy for each strain was calculated from using <span class="math inline"><em>n</em> = 2</span>, <span class="math inline"><em>Δ</em><em>ε</em><sub><em>A</em><em>I</em></sub> = 4.5 <em>k</em><sub><em>B</em></sub><em>T</em></span>, <span class="math inline"><em>K</em><sub><em>A</em></sub> = 139 × 10<sup> − 6</sup>, M</span>, <span class="math inline"><em>K</em><sub><em>I</em></sub> = 0.53 × 10<sup> − 6</sup>, M</span>, and the strain-specific <span class="math inline"><em>R</em></span> and <span class="math inline"><em>Δ</em><em>ε</em><sub><em>R</em><em>A</em></sub></span>. All data points represent the mean, and error bars are the standard error of the mean for eight or more replicates.</figcaption>
-</figure>
-<p><span id="fig_datacollapse" label="fig_datacollapse">[fig_datacollapse]</span></p>
 <h1 id="discussion">Discussion</h1>
 <p>Since the early work by Monod, Wyman, and Changeux , an array of biological phenomena has been tied to the existence of macromolecules that switch between inactive and active states. Examples can be found in a wide variety of cellular processes, including ligand-gated ion channels , enzymatic reactions , chemotaxis , quorum sensing , G-protein coupled receptors , physiologically important proteins , and beyond. One of the most ubiquitous examples of allostery is in the context of gene expression, where an array of molecular players bind to transcription factors to influence their ability to regulate gene activity . A number of studies have focused on developing a quantitative understanding of allosteric regulatory systems. analytically derived fundamental properties of the MWC model, including the leakiness and dynamic range described in this work, noting the inherent trade-offs in these properties when tuning the model’s parameters. Work in the Church and Voigt labs, among others, has expanded on the availability of allosteric circuits for synthetic biology . Recently, Daber <em>et al.</em> theoretically explored the induction of simple repression within the MWC model and experimentally measured how mutations alter the induction profiles of transcription factors . Vilar and Saiz analyzed a variety of interactions in inducible <em>lac</em>-based systems including the effects of oligomerization and DNA folding on transcription factor induction . Other work has attempted to use the <em>lac</em> system to reconcile <em>in vitro</em> and <em>in vivo</em> measurements .</p>
 <p>Although this body of work has done much to improve our understanding of allosteric transcription factors, there have been few attempts to explicitly connect quantitative models to experiments. Here, we generate a predictive model of allosteric transcriptional regulation and then test the model against a thorough set of experiments using well-characterized regulatory components. Specifically, we used the MWC model to build upon a well-established thermodynamic model of transcriptional regulation , allowing us to compose the model from a minimal set of biologically meaningful parameters. This model combines both theoretical and experimental insights; for example, rather than considering gene expression directly we analyze the fold-change in expression, where the weak promoter approximation (see ) circumvents uncertainty in the RNAP copy number. The resulting model depended upon experimentally accessible parameters, namely, the repressor copy number, the repressor-DNA binding energy, and the concentration of inducer. We tested these predictions on a range of strains whose repressor copy number spanned two orders of magnitude and whose DNA binding affinity spanned 6 (k_BT). We argue that one would not be able to generate such a wide array of predictions by using a Hill function, which abstracts away the biophysical meaning of the parameters into phenomenological parameters .</p>
@@ -266,6 +258,26 @@ $$</span><br /><span class="eqnos-number">(10)</span></span></p>
 <p>Despite the diversity observed in the induction profiles of each of our strains, our data are unified by their reliance on fundamental biophysical parameters. In particular, we have shown that our model for fold-change can be rewritten in terms of the free energy , which encompasses all of the physical parameters of the system. This has proven to be an illuminating technique in a number of studies of allosteric proteins . Although it is experimentally straightforward to observe system responses to changes in effector concentration (c), framing the input-output function in terms of (c) can give the misleading impression that changes in system parameters lead to fundamentally altered system responses. Alternatively, if one can find the “natural variable” that enables the output to collapse onto a single curve, it becomes clear that the system’s output is not governed by individual system parameters, but rather the contributions of multiple parameters that define the natural variable. When our fold-change data are plotted against the respective free energies for each construct, they collapse cleanly onto a single curve (see ). This enables us to analyze how parameters can compensate each other. For example, rather than viewing strong repression as a consequence of low IPTG concentration (c) or high repressor copy number (R), we can now observe that strong repression is achieved when the free energy (F(c)  k_BT), a condition which can be reached in a number of ways.</p>
 <p>While our experiments validated the theoretical predictions in the case of simple repression, we expect the framework presented here to apply much more generally to different biological instances of allosteric regulation. For example, we can use this model to study more complex systems such as when transcription factors interact with multiple operators . We can further explore different regulatory configurations such as corepression, activation, and coactivation, each of which are found in <em>E. coli</em> (see Appendix <a href="#AppendixApplications">[AppendixApplications]</a>). This work can also serve as a springboard to characterize not just the mean but the full gene expression distribution and thus quantify the impact of noise on the system . Another extension of this approach would be to theoretically predict and experimentally verify whether the repressor-inducer dissociation constants (K_A) and (K_I) or the energy difference (_{AI}) between the allosteric states can be tuned by making single amino acid substitutions in the transcription factor . Finally, we expect that the kind of rigorous quantitative description of the allosteric phenomenon provided here will make it possible to construct biophysical models of fitness for allosteric proteins similar to those already invoked to explore the fitness effects of transcription factor binding site strengths and protein stability .</p>
 <p>To conclude, we find that our application of the MWC model provides an accurate, predictive framework for understanding simple repression by allosteric transcription factors. To reach this conclusion, we analyzed the model in the context of a well-characterized system, in which each parameter had a clear biophysical meaning. As many of these parameters had been measured or inferred in previous studies, this gave us a minimal model with only two free parameters which we inferred from a single data set. We then accurately predicted the behavior of seventeen other data sets in which repressor copy number and repressor-DNA binding energy were systematically varied. In addition, our model allowed us to understand how key properties such as the leakiness, saturation, dynamic range, ([EC_{50}]), and effective Hill coefficient depended upon the small set of parameters governing this system. Finally, we show that by framing inducible simple repression in terms of free energy, the data from all of our experimental strains collapse cleanly onto a single curve, illustrating the many ways in which a particular output can be targeted. In total, these results show that a thermodynamic formulation of the MWC model supersedes phenomenological fitting functions for understanding transcriptional regulation by allosteric proteins.</p>
+<h1 id="methods">Methods</h1>
+<h2 id="bacterial-strains-and-dna-constructs">Bacterial Strains and DNA Constructs</h2>
+<p>All strains used in these experiments were derived from <em>E. coli</em> K12 MG1655 with the <em>lac</em> operon removed, adapted from those created and described in <span class="citation" data-cites="garcia2011">Garcia et al. (<a href="#ref-garcia2011" role="doc-biblioref">2011</a><a href="#ref-garcia2011" role="doc-biblioref">a</a>)</span>. Briefly, the operator variants and YFP reporter gene were cloned into a pZS25 background which contains a <em>lacUV5</em> promoter that drives expression as is shown schematically in Fig. <a href="#fig:states_weights">2</a>. These constructs carried a kanamycin resistance gene and were integrated into the <em>galK</em> locus of the chromosome using <span class="math inline"><em>λ</em></span> Red recombineering <span class="citation" data-cites="sharan2009">Sharan et al. (<a href="#ref-sharan2009" role="doc-biblioref">2009</a>)</span>. The <em>lacI</em> gene was constitutively expressed via a P<span class="math inline"><em></em><sub>LtetO-1</sub></span> promoter , with ribosomal binding site mutations made to vary the LacI copy number as described in using site-directed mutagenesis (Quickchange II; Stratagene), with further details in . These <span><em>lacI</em></span> constructs carried a chloramphenicol resistance gene and were integrated into the <em>ybcN</em> locus of the chromosome. Final strain construction was achieved by performing repeated P1 transduction of the different operator and <em>lacI</em> constructs to generate each combination used in this work. Integration was confirmed by PCR amplification of the replaced chromosomal region and by sequencing. Primers and final strain genotypes are listed in the supplemental Chapter 7.</p>
+<p>It is important to note that the rest of the <em>lac</em> operon (<em>lacZYA</em>) was never expressed. The LacY protein is a transmembrane protein which actively transports lactose as well as IPTG into the cell. As LacY was never produced in our strains, we assume that the extracellular and intracellular IPTG concentration was approximately equal due to diffusion across the membrane into the cell as is suggested by previous work.</p>
+<p>To make this theory applicable to transcription factors with any number of DNA binding domains, we used a different definition for repressor copy number than has been used previously. We define the LacI copy number as the average number of repressor dimers per cell whereas in , the copy number is defined as the average number of repressor tetramers in each cell. To motivate this decision, we consider the fact that the LacI repressor molecule exists as a tetramer in <em>E. coli</em> in which a single DNA binding domain is formed from dimerization of LacI proteins, so that wild-type LacI might be described as dimer of dimers. Since each dimer is allosterically independent (i.e. either dimer can be allosterically active or inactive, independent of the configuration of the other dimer) , a single LacI tetramer can be treated as two functional repressors. Therefore, we have simply multiplied the number of repressors reported in by a factor of two. This factor is included as a keyword argument in the numerous Python functions used to perform this analysis, as discussed in the code documentation.</p>
+<p>A subset of strains in these experiments were measured using fluorescence microscopy for validation of the flow cytometry data and results. To aid in the high-fidelity segmentation of individual cells, the strains were modified to constitutively express an mCherry fluorophore. This reporter was cloned into a pZS4*1 backbone in which mCherry is driven by the <em>lacUV5</em> promoter. All microscopy and flow cytometry experiments were performed using these strains.</p>
+<h2 id="growth-conditions-for-flow-cytometry-measurements">Growth Conditions for Flow Cytometry Measurements</h2>
+<p>All measurements were performed with <em>E. coli</em> cells grown to mid-exponential phase in standard M9 minimal media (M9 5X Salts, Sigma-Aldrich M6030; <span class="math inline">2 mM</span> magnesium sulfate, Mallinckrodt Chemicals 6066-04; <span class="math inline">100 <em>μ</em>M</span> calcium chloride, Fisher Chemicals C79-500) supplemented with 0.5% (w/v) glucose. Briefly, <span class="math inline">500 <em>μ</em>L</span> cultures of <em>E. coli</em> were inoculated into Lysogeny Broth (LB Miller Powder, BD Medical) from a 50% glycerol frozen stock (-80<span class="math inline"><em></em><sup>∘</sup></span>C) and were grown overnight in a <span class="math inline">2 mL</span> 96-deep-well plate sealed with a breathable nylon cover (Lab Pak - Nitex Nylon, Sefar America Inc. Cat. No. 241205) with rapid agitation for proper aeration. After approximately <span class="math inline">12</span> to <span class="math inline">15</span> hours, the cultures had reached saturation and were diluted 1000-fold into a second <span class="math inline">2 mL</span> 96-deep-well plate where each well contained <span class="math inline">500 <em>μ</em>L</span> of M9 minimal media supplemented with 0.5% w/v glucose (anhydrous D-Glucose, Macron Chemicals) and the appropriate concentration of IPTG (Isopropyl <span class="math inline"><em>β</em></span>-D-1 thiogalactopyranoside Dioxane Free, Research Products International). These were sealed with a breathable cover and were allowed to grow for approximately eight hours. Cells were then diluted ten-fold into a round-bottom 96-well plate (Corning Cat. No. 3365) containing <span class="math inline">90 <em>μ</em>L</span> of M9 minimal media supplemented with 0.5% w/v glucose along with the corresponding IPTG concentrations. For each IPTG concentration, a stock of 100-fold concentrated IPTG in double distilled water was prepared and partitioned into <span class="math inline">100 <em>μ</em>L</span> aliquots. The same parent stock was used for all experiments described in this work.</p>
+<h2 id="flow-cytometry">Flow Cytometry</h2>
+<p>Unless explicitly mentioned, all fold-change measurements were collected on a Miltenyi Biotec MACSquant Analyzer 10 Flow Cytometer graciously provided by the Pamela Björkman lab at Caltech. Detailed information regarding the voltage settings of the photo-multiplier detectors can be found in Appendix Table <a href="#table_instrument_param">[table_instrument_param]</a>. Prior to each day’s experiments, the analyzer was calibrated using MACSQuant Calibration Beads (Cat. No. 130-093-607) such that day-to-day experiments would be comparable. All YFP fluorescence measurements were collected via <span class="math inline">488 nm</span> laser excitation coupled with a 525/<span class="math inline">50 nm</span> emission filter. Unless otherwise specified, all measurements were taken over the course of two to three hours using automated sampling from a 96-well plate kept at approximately <span class="math inline">$4^\circ \, \hbox{-} \, 10^\circ$</span>C on a MACS Chill 96 Rack (Cat. No. 130-094-459). Cells were diluted to a final concentration of approximately <span class="math inline">4 × 10<sup>4</sup></span> cells per <span class="math inline"><em>μ</em>L</span> which corresponded to a flow rate of 2,000-6,000 measurements per second, and acquisition for each well was halted after 100,000 events were detected. Once completed, the data were extracted and immediately processed using the following methods.</p>
+<h2 id="unsupervised-gating-of-flow-cytometry-data">Unsupervised Gating of Flow Cytometry Data</h2>
+<p>Flow cytometry data will frequently include a number of spurious events or other undesirable data points such as cell doublets and debris. The process of restricting the collected data set to those data determined to be “real” is commonly referred to as gating. These gates are typically drawn manually and restrict the data set to those points which display a high degree of linear correlation between their forward-scatter (FSC) and side-scatter (SSC). The development of unbiased and unsupervised methods of drawing these gates is an active area of research . For our purposes, we assume that the fluorescence level of the population should be log-normally distributed about some mean value. With this assumption in place, we developed a method that allows us to restrict the data used to compute the mean fluorescence intensity of the population to the smallest two-dimensional region of the <span class="math inline">log (<em>F</em><em>S</em><em>C</em>)</span> vs. <span class="math inline">log (<em>S</em><em>S</em><em>C</em>)</span> space in which 40% of the data is found. This was performed by fitting a bivariate Gaussian distribution and restricting the data used for calculation to those that reside within the 40th percentile. This procedure is described in more detail in the supplementary information as well as in a Jupyter notebook located in this paper’s <a href="https://rpgroup-pboc.github.io/mwc_induction/code/notebooks/unsupervised_gating.html">Github repository</a>.</p>
+<h2 id="experimental-determination-of-fold-change">Experimental Determination of Fold-Change</h2>
+<p>For each strain and IPTG concentration, the fold-change in gene expression was calculated by taking the ratio of the population mean YFP expression in the presence of LacI repressor to that of the population mean in the absence of LacI repressor. However, the measured fluorescence intensity of each cell also includes the autofluorescence contributed by the weak excitation of the myriad protein and small molecules within the cell. To correct for this background, we computed the fold change as [ = ,] where <span class="math inline">⟨<em>I</em><sub><em>R</em> &gt; 0</sub>⟩</span> is the average cell YFP intensity in the presence of repressor, <span class="math inline">⟨<em>I</em><sub><em>R</em> = 0</sub>⟩</span> is the average cell YFP intensity in the absence of repressor, and <span class="math inline">⟨<em>I</em><sub>auto</sub>⟩</span> is the average cell autofluorescence intensity, as measured from cells that lack the <em>lac</em>-YFP construct.</p>
+<h2 id="bayesian-parameter-estimation">Bayesian Parameter Estimation</h2>
+<p>In this work, we determine the the most likely parameter values for the inducer dissociation constants <span class="math inline"><em>K</em><sub><em>A</em></sub></span> and <span class="math inline"><em>K</em><sub><em>I</em></sub></span> of the active and inactive state, respectively, using Bayesian methods. We compute the probability distribution of the value of each parameter given the data <span class="math inline"><em>D</em></span>, which by Bayes’ theorem is given by [ P(K_A, K_I D) = ,] where <span class="math inline"><em>D</em></span> is all the data composed of independent variables (repressor copy number <span class="math inline"><em>R</em></span>, repressor-DNA binding energy <span class="math inline"><em>Δ</em><em>ε</em><sub><em>R</em><em>A</em></sub></span>, and inducer concentration <span class="math inline"><em>c</em></span>) and one dependent variable (experimental fold-change). <span class="math inline"><em>P</em>(<em>D</em> ∣ <em>K</em><sub><em>A</em></sub>, <em>K</em><sub><em>I</em></sub>)</span> is the likelihood of having observed the data given the parameter values for the dissociation constants, <span class="math inline"><em>P</em>(<em>K</em><sub><em>A</em></sub>, <em>K</em><sub><em>I</em></sub>)</span> contains all the prior information on these parameters, and <span class="math inline"><em>P</em>(<em>D</em>)</span> serves as a normalization constant, which we can ignore in our parameter estimation. assumes a deterministic relationship between the parameters and the data, so in order to construct a probabilistic relationship as required by , we assume that the experimental fold-change for the <span class="math inline"><em>i</em><sup>th</sup></span> datum given the parameters is of the form [<em>{}^{(i)} = ( 1 +   e^{- </em>{RA}<sup>{(i)}})</sup>{-1} + ^{(i)}, ] where <span class="math inline"><em>ϵ</em><sup>(<em>i</em>)</sup></span> represents the departure from the deterministic theoretical prediction for the <span class="math inline"><em>i</em><sup>th</sup></span> data point. If we assume that these <span class="math inline"><em>ϵ</em><sup>(<em>i</em>)</sup></span> errors are normally distributed with mean zero and standard deviation <span class="math inline"><em>σ</em></span>, the likelihood of the data given the parameters is of the form [ P(D K_A, K_I, ) = _{i=1}^n  ,] where <span class="math inline">$\foldchange^{(i)}_{\text{exp}}$</span> is the experimental fold-change and <span class="math inline">$\foldchange(\,\cdots)$</span> is the theoretical prediction. The product <span class="math inline">$\prod_{i=1}^n$</span> captures the assumption that the <span class="math inline"><em>n</em></span> data points are independent. Note that the likelihood and prior terms now include the extra unknown parameter <span class="math inline"><em>σ</em></span>. In applying , a choice of <span class="math inline"><em>K</em><sub><em>A</em></sub></span> and <span class="math inline"><em>K</em><sub><em>I</em></sub></span> that provides better agreement between theoretical fold-change predictions and experimental measurements will result in a more probable likelihood.</p>
+<p>Both mathematically and numerically, it is convenient to define <span class="math inline">$\tilde{k}_A = -\log \frac{K_A}{1\,\text{M}}$</span> and <span class="math inline">$\tilde{k}_I = -\log \frac{K_I}{1\,\text{M}}$</span> and fit for these parameters on a log scale. Dissociation constants are scale invariant, so that a change from <span class="math inline">10 <em>μ</em>M</span> to <span class="math inline">1 <em>μ</em>M</span> leads to an equivalent increase in affinity as a change from <span class="math inline">1 <em>μ</em>M</span> to <span class="math inline">0.1 <em>μ</em>M</span>. With these definitions we assume for the prior <span class="math inline"><em>P</em>(<em>k̃</em><sub><em>A</em></sub>, <em>k̃</em><sub><em>I</em></sub>, <em>σ</em>)</span> that all three parameters are independent. In addition, we assume a uniform distribution for <span class="math inline"><em>k̃</em><sub><em>A</em></sub></span> and <span class="math inline"><em>k̃</em><sub><em>I</em></sub></span> and a Jeffreys prior for the scale parameter <span class="math inline"><em>σ</em></span>. This yields the complete prior [P(_A, _I, )  .] These priors are maximally uninformative meaning that they imply no prior knowledge of the parameter values. We defined the <span class="math inline"><em>k̃</em><sub><em>A</em></sub></span> and <span class="math inline"><em>k̃</em><sub><em>A</em></sub></span> ranges uniform on the range of <span class="math inline"> − 7</span> to <span class="math inline">7</span>, although we note that this particular choice does not affect the outcome provided the chosen range is sufficiently wide.</p>
+<p>Putting all these terms together we can now sample from <span class="math inline"><em>P</em>(<em>k̃</em><sub><em>A</em></sub>, <em>k̃</em><sub><em>I</em></sub>, <em>σ</em> ∣ <em>D</em>)</span> using Markov chain Monte Carlo (see <a href="https://rpgroup-pboc.github.io/mwc_induction/code/notebooks/bayesian_parameter_estimation">GitHub repository</a>) to compute the most likely parameter as well as the error bars (given by the 95% credible region) for <span class="math inline"><em>K</em><sub><em>A</em></sub></span> and <span class="math inline"><em>K</em><sub><em>I</em></sub></span>.</p>
+<h2 id="data-curation">Data Curation</h2>
+<p>All of the data used in this work as well as all relevant code can be found at this <a href="http://rpgroup-pboc.github.io/mwc_induction">dedicated website</a>. Data were collected, stored, and preserved using the Git version control software in combination with off-site storage and hosting website GitHub. Code used to generate all figures and complete all processing step as and analyses are available on the GitHub repository. Many analysis files are stored as instructive Jupyter Notebooks. The scientific community is invited to fork our repositories and open constructive issues on the <a href="https://www.github.com/rpgroup-pboc/mwc_induction">GitHub repository</a>.</p>
 <h2 class="unnumbered" id="references" class="unnumbered">References</h2>
 <div id="refs" class="references hanging-indent" role="doc-bibliography">
 <div id="ref-ackers1982">
@@ -358,6 +370,9 @@ $$</span><br /><span class="eqnos-number">(10)</span></span></p>
 <div id="ref-setty2003">
 <p>Setty, Y., A. E. Mayo, M. G. Surette, and U. Alon. 2003. “Detailed Map of a Cis-Regulatory Input Function.” <em>Proceedings of the National Academy of Sciences</em> 100 (13): 7702–7. <a href="https://doi.org/10.1073/pnas.1230759100">https://doi.org/10.1073/pnas.1230759100</a>.</p>
 </div>
+<div id="ref-sharan2009">
+<p>Sharan, S. K., L. C. Thomason, S. G. Kuznetsov, and D. L. Court. 2009. “Recombineering: A Homologous Recombination-Based Method of Genetic Engineering.” <em>Nat Protoc</em> 4: 206–23. <a href="https://doi.org/nprot.2008.227\\\%0020%5Bpii%5D\\\%002010.1038/nprot.2008.227">https://doi.org/nprot.2008.227\\\%0020[pii]\\\%002010.1038/nprot.2008.227</a>.</p>
+</div>
 <div id="ref-shis2014">
 <p>Shis, David L., Faiza Hussain, Sarah Meinhardt, Liskin Swint-Kruse, and Matthew R. Bennett. 2014. “Modular, Multi-Input Transcriptional Logic Gating with Orthogonal LacI/GalR Family Chimeras.” <em>ACS Synthetic Biology</em> 3 (9): 645–51. <a href="https://doi.org/10.1021/sb500262f">https://doi.org/10.1021/sb500262f</a>.</p>
 </div>
@@ -388,38 +403,6 @@ $$</span><br /><span class="eqnos-number">(10)</span></span></p>
 			</div><!-- /.container -->
 		</div><!-- /.section -->
 		
-			<div class="section section--grey">
-				<div class="container">
-					<div class="row">
-						<div class="col-md-7">
-							<div id="disqus_thread"></div>
-<script>
-	/**
-	 *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-	 *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
-	 */
-	 /*
-	var disqus_config = function () {
-	this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
-		this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-	};
-	*/
-	(function() {
-		var d = document, s = d.createElement('script');
-
-		s.src = 'https://gchure_phd.disqus.com/embed.js';
-
-		s.setAttribute('data-timestamp', +new Date());
-		(d.head || d.body).appendChild(s);
-	})();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
-
-						</div><!-- /.col -->
-					</div><!-- /.row -->
-				</div><!-- /.container -->
-			</div><!-- /.section -->
-		
 		<div class="js-footer-area">
 			
 				<nav class="page-nav">	
@@ -427,13 +410,13 @@ $$</span><br /><span class="eqnos-number">(10)</span></span></p>
 						<div class="row">
 							<div class="col-xs-12">
 								
-									<a href="https://gchure.github.io/phdchapter_01'" class="page-nav__item page-nav__item--prev">
+									<a href="chapter_01'" class="page-nav__item page-nav__item--prev">
 										<i class="icon icon--arrow-left"></i>
 										Chapter I
 									</a><!-- /.page-nav__item -->
 								
 								
-									<a href="https://gchure.github.io/phdchapter_03" class="page-nav__item page-nav__item--next">
+									<a href="chapter_03" class="page-nav__item page-nav__item--next">
 										Chapter III
 										<i class="icon icon--arrow-right"></i>
 									</a><!-- /.page-nav__item -->
@@ -450,7 +433,7 @@ $$</span><br /><span class="eqnos-number">(10)</span></span></p>
 			<div class="row">
 				<div class="col-sm-6">
 					
-						<a href="https://gchure.github.io/phd/" class="site-footer__logo">Griffin D. Chure | PhD Thesis</a>
+						<a href="/" class="site-footer__logo">Griffin D. Chure | PhD Thesis</a>
 					
 					
 						<hr>
@@ -475,11 +458,11 @@ $$</span><br /><span class="eqnos-number">(10)</span></span></p>
 	</footer><!-- /.site-footer -->
 
 
-<script src="https://gchure.github.io/phd/doks-theme/assets/js/vendor/jquery.min.js"></script>
-<script type="text/javascript" src="https://gchure.github.io/phd/doks-theme/assets/js/vendor/bootstrap/affix.min.js"></script>
-<script type="text/javascript" src="https://gchure.github.io/phd/doks-theme/assets/js/vendor/bootstrap/scrollspy.min.js"></script>
-<script type="text/javascript" src="https://gchure.github.io/phd/doks-theme/assets/js/vendor/matchHeight.min.js"></script>
-<script type="text/javascript" src="https://gchure.github.io/phd/doks-theme/assets/js/scripts.min.js"></script>
+<script src="/doks-theme/assets/js/vendor/jquery.min.js"></script>
+<script type="text/javascript" src="/doks-theme/assets/js/vendor/bootstrap/affix.min.js"></script>
+<script type="text/javascript" src="/doks-theme/assets/js/vendor/bootstrap/scrollspy.min.js"></script>
+<script type="text/javascript" src="/doks-theme/assets/js/vendor/matchHeight.min.js"></script>
+<script type="text/javascript" src="/doks-theme/assets/js/scripts.min.js"></script>
 
 
 
