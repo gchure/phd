@@ -1,2 +1,2 @@
-
-This is a test acknowledgements file
+This is a placeholder file to not release the real acknowledgements into the
+world too early
