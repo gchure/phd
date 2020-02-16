@@ -41,19 +41,19 @@ single DNA binding domain is formed from dimerization of LacI proteins,
 so that wild-type LacI might be described as dimer of dimers. Since each
 dimer is allosterically independent (i.e. either dimer can be
 allosterically active or inactive, independent of the configuration of
-the other dimer) , a single LacI tetramer can be treated as two
+the other dimer) [@daber2009a], a single LacI tetramer can be treated as two
 functional repressors. Therefore, we have simply multiplied the number
-of repressors reported in  by a factor of two. This factor is included
+of repressors reported in @garcia2011 by a factor of two. This factor is included
 as a keyword argument in the numerous Python functions used to perform
 this analysis, as discussed in the code documentation.
 
-A subset of strains in these experiments were measured using
-fluorescence microscopy for validation of the flow cytometry data and
-results. To aid in the high-fidelity segmentation of individual cells,
-the strains were modified to constitutively express an mCherry
-fluorophore. This reporter was cloned into a pZS4\*1 backbone  in which
-mCherry is driven by the *lacUV5* promoter. All microscopy and flow
-cytometry experiments were performed using these strains.
+A subset of strains in these experiments were measured using fluorescence
+microscopy for validation of the flow cytometry data and results. To aid in
+the high-fidelity segmentation of individual cells, the strains were modified
+to constitutively express an mCherry fluorophore. This reporter was cloned
+into a pZS4\*1 backbone [@lutz1997] in which mCherry is driven by the
+*lacUV5* promoter. All microscopy and flow cytometry experiments were
+performed using these strains.
 
 ## Growth Conditions for Flow Cytometry Measurements
 
@@ -89,8 +89,9 @@ Unless explicitly mentioned, all fold-change measurements were collected
 on a Miltenyi Biotec MACSquant Analyzer 10 Flow Cytometer graciously
 provided by the Pamela Björkman lab at Caltech. Detailed information
 regarding the voltage settings of the photo-multiplier detectors can be
-found in Appendix Table
-[\[table\_instrument\_param\]](#table_instrument_param). Prior to each
+found in the supplemental Chapter 7. 
+
+Prior to each
 day’s experiments, the analyzer was calibrated using MACSQuant
 Calibration Beads (Cat. No. 130-093-607) such that day-to-day
 experiments would be comparable. All YFP fluorescence measurements were
@@ -125,12 +126,9 @@ the $\log(\mathrm{FSC})$ vs. $\log(\mathrm{SSC})$ space in which 40%
 of the data is found. This was performed by fitting a bivariate Gaussian
 distribution and restricting the data used for calculation to those that
 reside within the 40th percentile. This procedure is described in more
-detail in the supplementary information as well as in a Jupyter notebook
-located in this paper’s [Github
-repository](https://rpgroup-pboc.github.io/mwc_induction/code/notebooks/unsupervised_gating.html).
+detail in the supplemental Chapter 7.
 
 ## Experimental Determination of Fold-Change
-
 For each strain and IPTG concentration, the fold-change in gene
 expression was calculated by taking the ratio of the population mean YFP
 expression in the presence of LacI repressor to that of the population
@@ -139,7 +137,12 @@ fluorescence intensity of each cell also includes the autofluorescence
 contributed by the weak excitation of the myriad protein and small
 molecules within the cell. To correct for this background, we computed
 the fold change as
-\[\text{fold-change} = \frac{\langle I_{R > 0} \rangle - \langle I_\text{auto}\rangle}{\langle I_{R = 0} \rangle - \langle I_\text{auto}\rangle},\]
+
+$$
+\text{fold-change} = \frac{\langle I_{R > 0} \rangle - \langle
+I_\text{auto}\rangle}{\langle I_{R = 0} \rangle - \langle I_\text{auto}\rangle},
+$${#eq:induction_image_def}
+
 where $\langle I_{R > 0}\rangle$ is the average cell YFP intensity in
 the presence of repressor, $\langle I_{R = 0}\rangle$ is the average
 cell YFP intensity in the absence of repressor, and
@@ -152,8 +155,12 @@ In this work, we determine the the most likely parameter values for the
 inducer dissociation constants $K_A$ and $K_I$ of the active and
 inactive state, respectively, using Bayesian methods. We compute the
 probability distribution of the value of each parameter given the data
-$D$, which by Bayes’ theorem is given by \[\label{bayes_theorem}
-    P(K_A, K_I \mid D) = \frac{P(D \mid K_A, K_I)P(K_A, K_I)}{P(D)},\]
+$D$, which by Bayes’ theorem is given by 
+
+$$
+ P(K_A, K_I \mid D) = \frac{P(D \mid K_A, K_I)P(K_A, K_I)}{P(D)},
+$${#eq:induction_bayes}
+
 where $D$ is all the data composed of independent variables (repressor
 copy number $R$, repressor-DNA binding energy
 $\Delta\varepsilon_{RA}$, and inducer concentration $c$) and one
@@ -162,36 +169,39 @@ dependent variable (experimental fold-change). $P(D
 parameter values for the dissociation constants, $P(K_A, K_I)$
 contains all the prior information on these parameters, and $P(D)$
 serves as a normalization constant, which we can ignore in our parameter
-estimation. assumes a deterministic relationship between the parameters
+estimation. Eq. @eq:fold_change_Full assumes a deterministic relationship between the parameters
 and the data, so in order to construct a probabilistic relationship as
-required by , we assume that the experimental fold-change for the
+required by Eq. @eq:induction_bayes, we assume that the experimental fold-change for the
 $i^\text{th}$ datum given the parameters is of the form
-\[\foldchange _{\exp}^{(i)} = \left( 1 + \frac{\left(1 +
+$$
+\text{fold-change}_\text{exp}^{(i)} = \left( 1 + \frac{\left(1 +
 \frac{c^{(i)}}{K_A}\right)^2}{\left( 1 + \frac{c^{(i)}}{K_A}\right)^2 +
 e^{-\beta \Delta \varepsilon_{AI}} \left(1 + \frac{c^{(i)}}{K_I} \right)^2} \frac{R^{(i)}}{N_{NS}} e^{-\beta
 \Delta \varepsilon_{RA}^{(i)}}\right)^{-1} + \epsilon^{(i)},
-\label{eq_fold_change_exp}\] where $\epsilon^{(i)}$ represents the
+$${#eq:induction_fold_change_experimental}
+where $\epsilon^{(i)}$ represents the
 departure from the deterministic theoretical prediction for the
 $i^\text{th}$ data point. If we assume that these $\epsilon^{(i)}$
 errors are normally distributed with mean zero and standard deviation
 $\sigma$, the likelihood of the data given the parameters is of the
-form \[\label{eq_likelihood}
+form 
+$$
 P(D \vert K_A, K_I, \sigma) =
-\frac{1}{(2\pi\sigma^2)^{\frac{n}{2}}}\prod\limits_{i=1}^n \exp
-\left[-\frac{(\foldchange^{(i)}_{\exp} - \foldchange(K_A, K_I, R^{(i)},
-    \Delta\varepsilon_{RA}^{(i)}, c^{(i)}))^2}{2\sigma^2}\right],\]
-where $\foldchange^{(i)}_{\text{exp}}$ is the experimental fold-change
-and $\foldchange(\,\cdots)$ is the theoretical prediction. The product
+\frac{1}{(2\pi\sigma^2)^{\frac{n}{2}}}\prod\limits_{i=1}^n \exp 
+\left[-\frac{(\text{fold-change}^{(i)}_\text{exp} - \text{fold-change}(K_A, K_I, R^{(i)},
+    \Delta\varepsilon_{RA}^{(i)}, c^{(i)}))^2}{2\sigma^2}\right],
+$${#eq:likelihood}
+where $\text{fold-change}^{(i)}_{\text{exp}}$ is the experimental fold-change
+and $\text{fold-change}(\,\cdots)$ is the theoretical prediction. The product
 $\prod_{i=1}^n$ captures the assumption that the $n$ data points are
-independent. Note that the likelihood and prior terms now include the
-extra unknown parameter $\sigma$. In applying , a choice of $K_A$
-and $K_I$ that provides better agreement between theoretical
-fold-change predictions and experimental measurements will result in a
-more probable likelihood.
+independent. Note that the likelihood and prior terms now include the extra
+unknown parameter $\sigma$. In applying Eq. @eq:likelihood, a choice of $K_A$
+and $K_I$ that provides better agreement between theoretical fold-change
+predictions and experimental measurements will result in a more probable
+likelihood.
 
 Both mathematically and numerically, it is convenient to define
-$\tilde{k}_A =
--\log \frac{K_A}{1\,\text{M}}$ and
+$\tilde{k}_A = -\log \frac{K_A}{1\,\text{M}}$ and
 $\tilde{k}_I = -\log \frac{K_I}{1\,\text{M}}$ and fit for these
 parameters on a log scale. Dissociation constants are scale invariant,
 so that a change from $10\,\mu\text{M}$ to $1\,\mu\text{M}$ leads to
@@ -201,21 +211,22 @@ $P(\tilde{k}_A, \tilde{k}_I, \sigma)$ that all three parameters are
 independent. In addition, we assume a uniform distribution for
 $\tilde{k}_A$ and $\tilde{k}_I$ and a Jeffreys prior  for the scale
 parameter $\sigma$. This yields the complete prior
-\[P(\tilde{k}_A, \tilde{k}_I, \sigma) \equiv \frac{1}{(\tilde{k}_A^{\max} -
+
+$$P(\tilde{k}_A, \tilde{k}_I, \sigma) \equiv \frac{1}{(\tilde{k}_A^{\max} -
 \tilde{k}_A^{\min})} \frac{1}{(\tilde{k}_I^{\max} -
-\tilde{k}_I^{\min})}\frac{1}{\sigma}.\] These priors are maximally
-uninformative meaning that they imply no prior knowledge of the
+\tilde{k}_I^{\min})}\frac{1}{\sigma}.
+$${#eq:induction_prior} 
+
+These priors are maximally uninformative meaning that they imply no prior knowledge of the
 parameter values. We defined the $\tilde{k}_A$ and $\tilde{k}_A$
 ranges uniform on the range of $-7$ to $7$, although we note that
 this particular choice does not affect the outcome provided the chosen
 range is sufficiently wide.
 
 Putting all these terms together we can now sample from $P(\tilde{k}_A,
-\tilde{k}_I, \sigma \mid D)$ using Markov chain Monte Carlo (see
-[GitHub
-repository](https://rpgroup-pboc.github.io/mwc_induction/code/notebooks/bayesian_parameter_estimation))
-to compute the most likely parameter as well as the error bars (given by
-the 95% credible region) for $K_A$ and $K_I$.
+\tilde{k}_I, \sigma \mid D)$ using Markov chain Monte Carlo  to compute the most
+likely parameter as well as the error bars (given by the 95\% credible region)
+for $K_A$ and $K_I$.
 
 ## Data Curation
 
