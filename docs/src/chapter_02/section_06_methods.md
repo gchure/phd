@@ -10,17 +10,17 @@ drives expression as is shown schematically in Fig. @fig:states_weights. These c
 carried a kanamycin resistance gene and were integrated into the *galK*
 locus of the chromosome using $\lambda$ Red recombineering @sharan2009. The
 *lacI* gene was constitutively expressed via a
-P$_\text{LtetO-1}$ promoter , with ribosomal binding site
-mutations made to vary the LacI copy number as described in  using
+P$_\text{LtetO-1}$ promoter [@lutz1997], with ribosomal binding site
+mutations made to vary the LacI copy number as described in @salis2009a using
 site-directed mutagenesis (Quickchange II; Stratagene), with further
-details in . These <span>*lacI*</span> constructs carried a
+details in @garcia2011. These *lacI constructs carried a
 chloramphenicol resistance gene and were integrated into the *ybcN*
 locus of the chromosome. Final strain construction was achieved by
-performing repeated P1 transduction  of the different operator and
+performing repeated P1 transduction [@thomason2007]  of the different operator and
 *lacI* constructs to generate each combination used in this work.
 Integration was confirmed by PCR amplification of the replaced
 chromosomal region and by sequencing. Primers and final strain genotypes
-are listed in the supplemental Chapter 7.
+are listed in supplemental Chapter 7.
 
 It is important to note that the rest of the *lac* operon (*lacZYA*) was
 never expressed. The LacY protein is a transmembrane protein which
@@ -28,15 +28,15 @@ actively transports lactose as well as IPTG into the cell. As LacY was
 never produced in our strains, we assume that the extracellular and
 intracellular IPTG concentration was approximately equal due to
 diffusion across the membrane into the cell as is suggested by previous
-work.
+work [@fernandez-castane2012].
 
 To make this theory applicable to transcription factors with any number
 of DNA binding domains, we used a different definition for repressor
 copy number than has been used previously. We define the LacI copy
-number as the average number of repressor dimers per cell whereas in ,
+number as the average number of repressor dimers per cell whereas in @garcia2011,
 the copy number is defined as the average number of repressor tetramers
 in each cell. To motivate this decision, we consider the fact that the
-LacI repressor molecule exists as a tetramer in *E. coli*  in which a
+LacI repressor molecule exists as a tetramer in *E. coli*  [@lewis1996] in which a
 single DNA binding domain is formed from dimerization of LacI proteins,
 so that wild-type LacI might be described as dimer of dimers. Since each
 dimer is allosterically independent (i.e. either dimer can be
