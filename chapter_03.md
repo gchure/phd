@@ -43,6 +43,9 @@ contents:
     - section_02_introduction
     - section_03_model
     - section_04_DNA_mutants
+    - section_05_IND_mutants
+    - section_06_DBL_mutants
+    - section_99_references
 ---
 
 **Published as ...**
