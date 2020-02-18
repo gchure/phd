@@ -1,1 +1,1 @@
-# 'Water, Water Everywhere, Nor Any Drop to Drink': How Bacteria Adapt To Changes in Osmolarity
+# Supplemental Information For Chapter 2: Signal Processing Via Allosteric Transcription Factors {#sec:ch2_si}

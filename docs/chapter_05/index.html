@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, minimum-scale=1.0">
+<title>Chapter V</title>
+
+
+<script type="text/x-mathjax-config">
+	MathJax.Hub.Config({
+    "HTML-CSS" : {
+        availableFonts : ["STIX"],
+        preferredFont : "Gyre Pagella",
+        webFont : "STIX-Web",
+        imageFont : null
+    },
+	  TeX: {
+		equationNumbers: {
+		  autoNumber: "AMS"
+		}
+	  },
+	  tex2jax: {
+		inlineMath: [['$','$']], 
+		displayMath: [['$$','$$']],
+		processEscapes: true,
+	  }
+	});
+  </script>
+  <style>
+	.eqnos { display: inline-block; position: relative; width: 100%; }
+	.eqnos br { display: none; }
+	.eqnos-number { position: absolute; right: 0em; top: 50%; line-height: 0; }
+  </style>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+  
+
+<link rel="icon" href="https://gchure.github.io/phd/favicon.ico" type="image/x-icon">
+<link href="https://fonts.googleapis.com/css?family=Nanum+Myeongjo&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Alegreya|Lora&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://gchure.github.io/phd/doks-theme/assets/css/style.css">
+
+	</head>
+	<body class="grey" data-spy="scroll" data-target=".js-scrollspy">
+		
+
+
+	<header class="site-header">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12">
+					
+						<a href="https://gchure.github.io/phd/" class="site-header__logo"><i class="icon icon--chevron-left"></i> Home</a>
+					
+					
+				</div><!-- /.col -->
+			</div><!-- /.row -->
+		</div><!-- /.container -->
+	</header><!-- /.site-header -->
+
+
+		<div class="hero-subheader" style="background-image: url(https://gchure.github.io/phd/doks-theme/assets/images/waves.jpg); background-position: center;">
+
+			<div class="container" style="background-color: rgba(0,0,0, 0.75); border:0.75px solid white;">
+				<div class="row">
+					<div class="col-md-7">
+						<div class="align-container" data-mh>
+							<div class="align-inner">
+								
+									<h2 class="hero-subheader__title">Chapter V</h2>
+								
+								
+									<h1 class="hero-subheader__title">'Water, Water Everywhere, Nor Any Drop to Drink': How Bacteria Adapt To Changes in Osmolarity
+</h1>
+								
+								
+								<!-- 
+									
+										<a href="https://gchure.github.io/phd{{site.doks.baseurl}}/published_content" class="btn btn--dark btn--rounded btn--w-icon btn--w-icon-left">
+											<i class="icon icon--arrow-left"></i>	
+										</a>
+									
+									
+										<a href="https://gchure.github.io/phd{{site.doks.baseurl}}/chapter_2" class="btn btn--dark btn--rounded btn--w-icon">
+											<i class="icon icon--arrow-right"></i>
+										</a>
+									
+								 -->
+							</div><!-- /.align-inner -->
+						</div><!-- /.align-container -->
+					</div><!-- /.col -->
+					
+						<div class="col-md-5 col-md-offset-0 hidden-xs hidden-sm">
+							<div class="align-container" data-mh>
+								<div class="align-inner">
+									<div class="hero-subheader__author">
+										<p class="hero-subheader__author-title">
+												Summary
+												<i class="icon icon--chevron-down"></i>
+										</p><!-- /.hero-subheader__author-title -->
+										<p>Mechanosensitive (MS) channels are transmembrane protein complexes which open and close in response to changes in membrane tension as a result of osmotic shock. Despite extensive biophysical characterization, the contribution of these channels to cell survival remains largely unknown. In this work, we use quantitative video microscopy to measure the abundance of a single species of MS channel in single cells followed by their survival after a large osmotic shock. We observe total death of the population with less than ~100 channels per cell and determine that approximately 500 - 700 channels are needed for 80% survival. The number of channels we find to confer nearly full survival is consistent with the counts of the number of channels in wild type cells in several earlier studies. These results prompt further studies to dissect the contribution of other channel species to survival.
+</p>
+									</div><!-- /.hero-subheader__author -->
+								</div><!-- /.align-inner -->
+							</div><!-- /.align-container -->
+						</div><!-- /.col -->
+					
+				</div><!-- /.row -->
+			</div><!-- /.container -->
+		</div><!-- /.hero-subheader -->
+		
+				<nav class="page-nav">
+					<div class="container" >
+						<div class="row" >
+							<div class="col-xs-12">
+								
+									<a href="https://gchure.github.io/phd{{site.doks.baseurl}}/published_content" class="page-nav__item page-nav__item--prev">
+										<i class="icon icon--arrow-left"></i>
+										Published Content
+									</a><!-- /.page-nav__item -->
+								
+								
+									<a href="https://gchure.github.io/phd{{site.doks.baseurl}}/chapter_2" class="page-nav__item page-nav__item--next">
+										Chapter 2
+										<i class="icon icon--arrow-right"></i>
+									</a><!-- /.page-nav__item -->
+								
+							</div><!-- /.col -->
+						</div><!-- /.row -->
+					</div><!-- /.container -->
+				</nav><!-- /.page-nav -->
+			
+
+		<div class="section">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-7">
+						<div class="content">
+							<strong>Published as …</strong>
+<hr/>
+<p>A version of this chapter was published as Chure, G.* , Lee, H.J.* , Rasmussen, A., and Phillips, R. (2018). <em>Connecting the Dots between Mechanosensitive Channel Abundance, Osmotic Shock, and Survival at Single-Cell Resolution.</em> Journal of Bacteriology 200. (* contributed equally). G.C., H.J.L, and R.P. designed and planned experiments. G.C. and H.J.L performed experiments. H.J.L constructed bacterial strains. A.R. performed electrophysiology experiments. G.C. performed data analysis and figure generation. G.C. and R.P. wrote the manuscript</p>
+<h2 id="introduction">Introduction</h2>
+<p>Changes in the extracellular osmolarity can be a fatal event for the bacterial cell. Upon a hypo-osmotic shock, water rushes into the cell across the membrane, leaving the cell with no choice but to equalize the pressure. This equalization occurs either through damage to the cell membrane (resulting in death) or through the regulated flux of water molecules through transmembrane protein channels (Fig 1A). Such proteinaceous pressure release valves have been found across all domains of life, with the first bacterial channel being described in 1987 <span class="citation" data-cites="martinac1987">(Martinac et al. <a href="#ref-martinac1987" role="doc-biblioref">1987</a>)</span>. Over the past thirty years, several more channels have been discovered, described, and (in many cases) biophysically characterized. <em>E. coli</em>, for example, has seven of these channels (one MscL and six MscS homologs) which have varied conductance, gating mechanisms, and expression levels. While they have been the subject of much experimental and theoretical dissection, much remains a mystery with regard to the roles their abundance and interaction with other cellular processes play in the greater context of physiology <span class="citation" data-cites="bavi2016 bialecka-fornal2012 bialecka-fornal2015 edwards2012 naismith2012 ursell2008 vandenberg2016">(Bavi et al. <a href="#ref-bavi2016" role="doc-biblioref">2016</a>; Bialecka-Fornal et al. <a href="#ref-bialecka-fornal2012" role="doc-biblioref">2012</a>; Bialecka-Fornal, Lee, and Phillips <a href="#ref-bialecka-fornal2015" role="doc-biblioref">2015</a>; Edwards et al. <a href="#ref-edwards2012" role="doc-biblioref">2012</a>; Naismith and Booth <a href="#ref-naismith2012" role="doc-biblioref">2012</a>; Ursell et al. <a href="#ref-ursell2008" role="doc-biblioref">2008</a>; van den Berg et al. <a href="#ref-vandenberg2016" role="doc-biblioref">2016</a>)</span>.</p>
+<p>      Of the seven channels in <em>E. coli</em>, the mechanosensitive channel of large conductance (MscL) is one of the most abundant and the best characterized. This channel has a large conductance (3 nS) and mediates the flux of water molecules across the membrane via a ~3 nm wide pore in the open state <span class="citation" data-cites="cruickshank1997 haswell2011">(Cruickshank et al. <a href="#ref-cruickshank1997" role="doc-biblioref">1997</a>; Haswell, Phillips, and Rees <a href="#ref-haswell2011" role="doc-biblioref">2011</a>)</span>. Molecular dynamics simulations indicate that a single open MscL channel permits the flux of <span class="math inline">4 × 10<sup>9</sup></span> water molecules per second, which is an order of magnitude larger than a single aquaporin channel (BNID 100479) <span class="citation" data-cites="louhivuori2010 milo2010">(Louhivuori et al. <a href="#ref-louhivuori2010" role="doc-biblioref">2010</a>; Milo et al. <a href="#ref-milo2010" role="doc-biblioref">2010</a>)</span>. This suggests that having only a few channels per cell could be sufficient to relieve even large changes in membrane tension. Electrophysiological experiments have suggested a small number of channels per cell <span class="citation" data-cites="booth2005 hase1997">(Booth et al. <a href="#ref-booth2005" role="doc-biblioref">2005</a>; Hase et al. <a href="#ref-hase1997" role="doc-biblioref">1997</a>)</span>, however, more recent approaches using quantitative Western blotting, fluorescence microscopy, and proteomics have measured several hundred MscL per cell <span class="citation" data-cites="bialecka-fornal2012 schmidt2016 soufi2015">(Bialecka-Fornal et al. <a href="#ref-bialecka-fornal2012" role="doc-biblioref">2012</a>; Schmidt et al. <a href="#ref-schmidt2016" role="doc-biblioref">2016</a>; Soufi et al. <a href="#ref-soufi2015" role="doc-biblioref">2015</a>)</span>. To further complicate matters, the expression profile of MscL appears to depend on growth phase, available carbon source, and other environmental challenges <span class="citation" data-cites="bialecka-fornal2012 soufi2015 stokes2003a">(Bialecka-Fornal et al. <a href="#ref-bialecka-fornal2012" role="doc-biblioref">2012</a>, [@schmidt2016]; Soufi et al. <a href="#ref-soufi2015" role="doc-biblioref">2015</a>; Stokes et al. <a href="#ref-stokes2003a" role="doc-biblioref">2003</a>)</span>. While there are likely more than just a few channels per cell, why cells seem to need so many and the biological rationale behind their condition-dependent expression both remain a mystery.</p>
+<p>      While their biochemical and biophysical characteristics have received much attention, their connection to cell survival is understudied. Drawing such a direct connection between channel copy number and survival requires quantitative <em>in vivo</em> experiments. To our knowledge, the work presented in van den Berg et al. 2016 <span class="citation" data-cites="vandenberg2016">(van den Berg et al. <a href="#ref-vandenberg2016" role="doc-biblioref">2016</a>)</span> is the first attempt to simultaneously measure channel abundance and survivability for a single species of mechanosensitive channel. While the measurement of channel copy number was performed at the level of single cells using super-resolution microscopy, survivability after a hypo-osmotic shock was assessed in bulk plating assays which rely on serial dilutions of a shocked culture followed by counting the number of resulting colonies after incubation. Such bulk assays have long been the standard for querying cell viability after an osmotic challenge. While they have been highly informative, they reflect only the mean survival rate of the population, obfuscating the variability in survival of the population. The stochastic nature of gene expression results in a noisy distribution of MscL channels rather than a single value, meaning those found in the long tails of the distribution have quite different survival rates than the mean but are lost in the final calculation of survival probability.</p>
+<p>       In this work, we present an experimental system to quantitatively probe the interplay between MscL copy number and survival at single-cell resolution, as is seen in Fig. <strong>¿fig:overview?</strong>B. We generated an <em>E. coli</em> strain in which all seven mechanosensitive channels had been deleted from the chromosome followed by a chromosomal integration of a single gene encoding an MscL-super-folder GFP (sfGFP) fusion protein. To explore copy number regimes beyond those of the wild-type expression level, we modified the Shine-Dalgarno sequence of this integrated construct, allowing us to cover nearly three decades of MscL copy number. To probe survivability, we exposed cells to a large hypo-osmotic shock at controlled rates in a flow cell under a microscope, allowing the observation of the single-cell channel copy number and the resulting survivability of single cells. With this large set of single cell measurements, we approach the calculation of survival probability in a manner that is free of binning bias which allows the reasonable extrapolation of survival probability to copy numbers outside of the observed range. In addition, we show that several hundred channels are needed to convey high rates of survival and observe a minimum number of channels needed to permit any degree of survival.</p>
+<div id="fig:overview" class="fignos">
+<figure>
+<img src="ch6_fig1.png" data-short-caption="Role of mechanosensitive channels during hypo-osmotic shock." alt="" /><figcaption><span>Figure 1:</span> Role of mechanosensitive channels during hypo-osmotic shock. (A) A hypo-osmotic shock results in a large difference in the osmotic strength between the intracellular and extracellular spaces. As a result, water rushes into the cell to equalize this gradient increasing the turgor pressure and tension in the cell membrane. If no mechanosensitive channels are present and membrane tension is high (left panel), the membrane ruptures releasing intracellular content into the environment resulting in cell death . If mechanosensitive channels are present (right panel) and membrane tension is beyond the gating tension, the mechanosensitive channel MscL opens, releasing water and small intracellular molecules into the environment thus relieving pressure and membrane tension. (B) The experimental approach undertaken in this work. The number of mechanosensitive channels tagged with a fluorescent reporter is tuned through modification of the Shine-Dalgarno sequence of the <em>mscL</em> gene. The cells are then subjected to a hypo-osmotic shock and the number of surviving cells are counted, allowing the calculation of a survival probability.</figcaption>
+</figure>
+</div>
+<h2 id="results">Results</h2>
+<h3 id="quantifying-the-single-cell-mscl-copy-number">Quantifying the single-cell MscL copy number</h3>
+<p>    The principal goal of this work is to examine the contribution of a single mechanosensitive channel species to cell survival under a hypo-osmotic shock. While this procedure could be performed for any species of channel, we chose MscL as it is the most well characterized and one of the most abundant species in <em>E. coli</em>. To probe the contribution of MscL alone, we integrated an <em>mscL</em> gene encoding an MscL super-folder GFP (sfGFP) fusion into a strain in which all seven known mechanosensitive channel genes were deleted from the chromosome <span class="citation" data-cites="edwards2012">(Edwards et al. <a href="#ref-edwards2012" role="doc-biblioref">2012</a>)</span>. Chromosomal integration imposes strict control on the gene copy number compared to plasmid borne expression systems, which is important to minimize variation in channel expression across the population and provide conditions more representative of native cell physiology. Abrogation of activity, mislocalization, or cytotoxicity are all inherent risks associated with creating chimeric reporter constructs. In Supplement A, we carefully dissect the functionality of this protein through electrophysiology (Fig. S1), measure the rate of fluorophore maturation (Fig. S2), and quantify potential aggregates (Figs. S3 and S4). To the best of our knowledge, the MscL-sfGFP fusion protein functions identically to the wild-type, allowing us to confidently draw conclusions about the physiological role this channel plays in wild-type cells.</p>
+<p>To modulate the number of MscL channels per cell, we developed a series of mutants which were designed to decrease the expression relative to wild-type. These changes involved direct alterations of the Shine-Dalgarno sequence as well as the inclusion of AT hairpins of varying length directly upstream of the start codon which influences the translation rate and hence the number of MscL proteins produced [Fig. <a href="#fig:mscl_boxplot">2</a>(A)]. The six Shine-Dalgarno sequences used in this work were chosen using the RBS binding site strength calculator from the Salis Laboratory at the Pennsylvania State University <span class="citation" data-cites="espahborujeni2014 salis2009a">(Espah Borujeni, Channarasappa, and Salis <a href="#ref-espahborujeni2014" role="doc-biblioref">2014</a>; Salis, Mirsky, and Voigt <a href="#ref-salis2009a" role="doc-biblioref">2009</a>)</span>. While the designed Shine-Dalgarno sequence mutations decreased the expression relative to wild-type as intended, the distribution of expression is remarkably wide spanning an order of magnitude.</p>
+<p>To measure the number of MscL channels per cell, we determined a fluorescence calibration factor to translate arbitrary fluorescence units per cell to protein copy number. While there have been numerous techniques developed over the past decade to directly measure this calibration factor, such as quantifying single-molecule photobleaching constants or measuring the binomial partitioning of fluorescent proteins upon cell division <span class="citation" data-cites="bialecka-fornal2012 elowitz2002">(Bialecka-Fornal et al. <a href="#ref-bialecka-fornal2012" role="doc-biblioref">2012</a>; Elowitz et al. <a href="#ref-elowitz2002" role="doc-biblioref">2002</a>)</span>, we used <em>a priori</em> knowledge of the mean MscL-sfGFP expression level of a particular <em>E. coli</em> strain to estimate the average fluorescence of a single channel. In Bialecka-Fornal et al. 2012 <span class="citation" data-cites="bialecka-fornal2012">(Bialecka-Fornal et al. <a href="#ref-bialecka-fornal2012" role="doc-biblioref">2012</a>)</span>, the authors used single-molecule photobleaching and quantitative Western blotting to probe the expression of MscL-sfGFP under a wide range of growth conditions. To compute a calibration factor, we used the strain MLG910 (<em>E. coli</em> K12 MG1655 <span class="math inline"><em>ϕ</em></span>(mscL-sfGFP)) as a “standard candle”, highlighted in white in Fig. <a href="#fig:mscl_boxplot">2</a> (B). This standard candle strain was grown and imaged in identical conditions in which the MscL count was determined through fluorescence microscopy. The calibration factor was computed by dividing the mean total cell fluorescence by the known MscL copy number, resulting in a measure of arbitrary fluorescence units per MscL channel. Details regarding this calculation and appropriate propagation of error as well as its sensitivity to varying growth media can be found in the Materials &amp; Methods as well as Supplement B (Fig. S5 - S8).</p>
+<p>While it is seemingly straightforward to use this calibration factor to determine the total number of channels per cell for wild-type or highly expressing strains, the calculation for the lowest expressing strains is complicated by distorted cell morphology. We observed that as the channel copy number decreases, cellular morphology becomes increasingly aberrant with filamentous, bulging, and branched cells becoming more abundant (Fig. S7A). This morphological defect has been observed when altering the abundance of several species of mechanosensitive channels, suggesting that they play an important role in general architectural stability <span class="citation" data-cites="bialecka-fornal2012 bialecka-fornal2015">(Bialecka-Fornal et al. <a href="#ref-bialecka-fornal2012" role="doc-biblioref">2012</a>; Bialecka-Fornal, Lee, and Phillips <a href="#ref-bialecka-fornal2015" role="doc-biblioref">2015</a>)</span>. As these aberrant morphologies can vary widely in size and shape, calculating the number of channels per cell becomes a more nuanced endeavor. For example, taking the total MscL copy number for these cells could skew the final calculation of survival probability as a large but severely distorted cell would be interpreted as having more channels than a smaller, wild-type shaped cell (Fig. S7B). To correct for this pathology, we computed the average expression level per unit area for each cell and multiplied this by the average cellular area of our standard candle strain which is morphologically indistinguishable from wild-type <em>E. coli</em>, allowing for the calculation of an effective channel copy number. The effect of this correction can be seen in Fig. S7C and D, which illustrate that there is no other correlation between cell area and channel expression.</p>
+<p>    Our calculation of the effective channel copy number for our suite of Shine-Dalgarno mutants is shown in Fig. <a href="#fig:mscl_boxplot">2</a>(B). The expression of these strains cover nearly three orders of magnitude with the extremes ranging from approximately four channels per cell to nearly one thousand. While the means of each strain are somewhat distinct, the distributions show a large degree of overlap, making one strain nearly indistinguishable from another. This variance is a quantity that is lost in the context of bulk scale experiments but can be accounted for via single-cell methods.</p>
+<div id="fig:mscl_boxplot" class="fignos">
+<figure>
+<img src="ch6_fig2.png" data-short-caption="Control of MscL expression and calculation of channel copy number." alt="" /><figcaption><span>Figure 2:</span> Control of MscL expression and calculation of channel copy number. (A) Schematic view of the expression modifications performed in this work. The beginning portion of the native <em>mscL</em> sequence is shown with the Shine-Dalgarno sequence, spacer region, and start codon shaded in red, green, and blue, respectively. The Shine-Dalgarno sequence was modified through the Salis lab Ribosomal Binding Strength calculator <span class="citation" data-cites="espahborujeni2014 salis2009a">(Espah Borujeni, Channarasappa, and Salis <a href="#ref-espahborujeni2014" role="doc-biblioref">2014</a>; Salis, Mirsky, and Voigt <a href="#ref-salis2009a" role="doc-biblioref">2009</a>)</span>. The wild-type sequence (MLG910) is shown in black with mutations for the other four Shine-Dalgarno mutants highlighted in red. Expression was further modified by the insertion of repetitive <code>AT</code> bases into the spacer region, generating hairpins of varying length which acted as a thermodynamic barrier for translation initiation. (B) Variability in effective channel copy number is computed using the standard candle. The boxes represent the interquartile region of the distribution, the center line displays the median, and the whiskers represent 1.5 times the maximum and minimum of the interquartile region. Individual measurements are denoted as black points. The strain used for calibration of channel copy number (MLG910) is highlighted in yellow.</figcaption>
+</figure>
+</div>
+<h3 id="performing-a-single-cell-hypo-osmotic-challenge-assay">Performing a single-cell hypo-osmotic challenge assay</h3>
+<p>To measure the channel copy number of a single cell and query its survival after a hypo-osmotic shock, we used a custom-made flow cell in which osmotic shock and growth can be monitored in real time using video microscopy [Fig. <a href="#fig:flow_cell">3</a>(A)]. The design and characterization of this device has been described in depth previously and is briefly described in the Materials &amp; Methods <span class="citation" data-cites="bialecka-fornal2015">(Bialecka-Fornal, Lee, and Phillips <a href="#ref-bialecka-fornal2015" role="doc-biblioref">2015</a>)</span>. Using this device, cells were exposed to a large hypo-osmotic shock by switching between LB Lennox medium supplemented with 500 mM NaCl and LB Lennox media alone. All six Shine-Dalgarno modifications shown in Fig. <a href="#fig:mscl_boxplot">2</a>(B) (excluding MLG910) were subjected to a hypo-osmotic shock at controlled rates while under observation. After the application of the osmotic shock, the cells were imaged every sixty seconds for four to six hours. Each cell was monitored over the outgrowth period and was manually scored as either a survivor, fatality, or inconclusive observation. The criteria used for scoring death were the same as those previously described in Bialecka-Fornal et al. 2015 <span class="citation" data-cites="bialecka-fornal2015">(Bialecka-Fornal, Lee, and Phillips <a href="#ref-bialecka-fornal2015" role="doc-biblioref">2015</a>)</span>. Survivors were defined as cells that underwent multiple divisions post-shock. To qualify as survivors, cells must undergo at least two divisions, although more typically, four to eight divisions are observed without any signs of slowing down. Imaging is stopped when the survivors cells begin to go out of focus or overlap each other. Survivors do not show any sign of ceasing division. More information regarding this classification can be found in the Materials and Methods as well as the Supplementary Information (Fig. S9 - S10 and Table S1 - S2). The brief experimental protocol can be seen in Fig. <a href="#fig:flow_cell">3</a>(B).</p>
+<div id="fig:flow_cell" class="fignos">
+<figure>
+<img src="ch6_fig3.png" data-short-caption="Experimental approach to measuring survival probability" alt="" /><figcaption><span>Figure 3:</span> Experimental approach to measuring survival probability. (A) Layout of a home-made flow cell for subjecting cells to osmotic shock. Cells are attached to a polyethylenimine functionalized surface of a glass coverslip within the flow chamber by loading a dilute cell suspension through one of the inlets. (B) The typical experimental procedure. Cells are loaded into a flow chamber as shown in (A) and mounted to the glass coverslip surface. Cells are subjected to a hypo-osmotic shock by flowing hypotonic medium into the flow cell. After shock, the cells are monitored for several hours and surviving cells are identified.</figcaption>
+</figure>
+</div>
+<p>Due to the extensive overlap in expression between the different Shine-Dalgarno mutants [see Fig. <a href="#fig:mscl_boxplot">2</a>(B)], computing the survival probability by treating each mutant as an individual bin obfuscates the relationship between channel abundance and survival. To more thoroughly examine this relationship, all measurements were pooled together with each cell being treated as an individual experiment. The hypo-osmotic shock applied in these experiments was varied across a range of 0.02 Hz (complete exchange in 50 s) to 2.2 Hz (complete exchange in 0.45 s). Rather than pooling this wide range of shock rates into a single data set, we chose to separate the data into “slow shock” ( <span class="math inline">&lt;</span>; 1.0 Hz) and “fast shock” (<span class="math inline"> ≥ 1.0</span> Hz) classes. Other groupings of shock rate were explored and are discussed in Supplement D (Fig. S11 and S12). The cumulative distributions of channel copy number separated by survival are shown in Fig. <a href="#fig:survival_dists">4</a>. In these experiments, survival was never observed for a cell containing less than approximately 100 channels per cell, indicated by the red stripe in Fig. <a href="#fig:survival_dists">4</a>. This suggests that there is a minimum number of channels needed for survival on the order of 100 per cell. We also observe a slight shift in the surviving fraction of the cells towards higher effective copy number, which matches our intuition that including more mechanosensitive channels increases the survival probability.</p>
+<div id="fig:survival_dists" class="fignos">
+<figure>
+<img src="ch6_fig4.png" data-short-caption="Distributions of survival and death as a function of effective MscL channel number." alt="" /><figcaption><span>Figure 4:</span> Distributions of survival and death as a function of effective channel number. (A) Empirical cumulative distributions of channel copy number separated by survival (green) or death (purple) after a slow (<span class="math inline"> &lt; 1.0</span> Hz) osmotic shock. (B) The empirical cumulative distribution for a fast (<span class="math inline"> ≥ 1.0</span> Hz) osmotic shock. Shaded green and purple regions represent the 95% credible region of the effective channel number calculation for each cell. Shaded red stripe signifies the range of channels in which no survival was observed.</figcaption>
+</figure>
+</div>
+<h3 id="prediction-of-survival-probability-as-a-function-of-channel-copy-number">Prediction of survival probability as a function of channel copy number</h3>
+<p>    There are several ways by which the survival probability can be calculated. The most obvious approach would be to group each individual Shine-Dalgarno mutant as a single bin and compute the average MscL copy number and the survival probability. Binning by strain is the most frequently used approach for such measurements and has provided valuable insight into the qualitative relationship of survival on other physiological factors <span class="citation" data-cites="bialecka-fornal2015 vandenberg2016">(Bialecka-Fornal, Lee, and Phillips <a href="#ref-bialecka-fornal2015" role="doc-biblioref">2015</a>; van den Berg et al. <a href="#ref-vandenberg2016" role="doc-biblioref">2016</a>)</span>. However the copy number distribution for each Shine-Dalgarno mutant [Fig. <a href="#fig:mscl_boxplot">2</a>(B)] is remarkably wide and overlaps with the other strains. We argue that this coarse-grained binning negates the benefits of performing single-cell measurements as two strains with different means but overlapping quartiles would be treated as distinctly different distributions.</p>
+<p>    Another approach would be to pool all data together, irrespective of the Shine-Dalgarno mutation, and bin by a defined range of channels. Depending on the width of the bin, this could allow for finer resolution of the quantitative trend, but the choice of the bin width is arbitrary with the <em>a priori</em> knowledge that is available. Drawing a narrow bin width can easily restrict the number of observed events to small numbers where the statistical precision of the survival probability is lost. On the other hand, drawing wide bins increases the precision of the estimate, but becomes further removed from a true single-cell measurement and represents a population mean, even though it may be a smaller population than binning by the Shine-Dalgarno sequence alone. In both of these approaches, it is difficult to extrapolate the quantitative trend outside of the experimentally observed region of channel copy number. Here, we present a method to estimate the probability of survival for any channel copy number, even those that lie outside of the experimentally queried range.</p>
+<p>    To quantify the survival probability while maintaining single-cell resolution, we chose to use a logistic regression model which does not require grouping data into arbitrary bins and treats each cell measurement as an independent experiment. Logistic regression is an inferential method to model the probability of a Boolean or categorical event (such as survival or death) given one or several predictor variables and is commonly used in medical statistics to compute survival rates and dose response curves <span class="citation" data-cites="anderson2003 mishra2016">(Anderson, Jin, and Grunkemeier <a href="#ref-anderson2003" role="doc-biblioref">2003</a>; Mishra et al. <a href="#ref-mishra2016" role="doc-biblioref">2016</a>)</span>. The primary assumption of logistic regression is that the log-odds probability of survival <span class="math inline"><em>p</em><sub><em>s</em></sub></span> is linearly dependent on the predictor variable, in our case the log channels per cell <span class="math inline"><em>N</em><sub><em>c</em></sub></span> with a dimensionless intercept <span class="math inline"><em>β</em><sub>0</sub></span> and slope <span class="math inline"><em>β</em><sub>1</sub></span>, <span id="eq:linear_channel_logit" class="eqnos"><br /><span class="math display">$$
+\log{p_s \over 1 - p_s} = \beta_0 + \beta_1 \log N_c.
+$$</span><br /><span class="eqnos-number">(1)</span></span> Under this assumption of linearity, <span class="math inline"><em>β</em><sub>0</sub></span> is the log-odds probability of survival with no MscL channels. The slope <span class="math inline"><em>β</em><sub>1</sub></span> represents the change in the log-odds probability of survival conveyed by a single channel. As the calculated number of channels in this work spans nearly three orders of magnitude, it is better to perform this regression on <span class="math inline">log <em>N</em><sub><em>c</em></sub></span> as regressing on <span class="math inline"><em>N</em><sub><em>c</em></sub></span> directly would give undue weight for lower channel copy numbers due to the sparse sampling of high-copy number cells. The functional form shown in Eq. [<a href="#eq:linear_channel_logit">1</a>] can be derived directly from Bayes’ theorem and is shown in Supplement E. If one knows the values of <span class="math inline"><em>β</em><sub>0</sub></span> and <span class="math inline"><em>β</em><sub>1</sub></span>, the survival probability can be expressed as <span id="eq:prob" class="eqnos"><br /><span class="math display">$$
+p_s = \frac{1}{1 + N_c^{-\beta_1}e^{-\beta_0}}.
+$$</span><br /><span class="eqnos-number">(2)</span></span> In this analysis, we used Bayesian inferential methods to determine the most likely values of the coefficients and is described in detail in the Supplement E (Fig. S13 and S14).</p>
+<p>     The results of the logistic regression are shown in Fig. <a href="#fig:survival">5</a>. We see a slight rightward shift the survival probability curve under fast shock relative to the slow shock case, reaffirming the conclusion that survival is also dependent on the rate of osmotic shock <span class="citation" data-cites="bialecka-fornal2015">(Bialecka-Fornal, Lee, and Phillips <a href="#ref-bialecka-fornal2015" role="doc-biblioref">2015</a>)</span>. This rate dependence has been observed for cells expressing MscL alongside other species of mechanosensitive channels, but not for MscL alone. This suggests that MscL responds differently to different rates of shock, highlighting the need for further study of rate dependence and the coordination between different species of mechanosensitive channels. Fig. <a href="#fig:survival">5</a> also shows that several hundred channels are required to provide appreciable protection from osmotic shock. For a survival probability of 80%, a cell must have approximately 500 to 700 channels per cell for a fast and slow shock, respectively. The results from the logistic regression are showed as continuous colored curves. The individual cell measurements separated by survival and death are shown at the top and bottom of each plot, respectively, and are included to provide a sense of sampling density.</p>
+<p>Over the explored range of MscL copy number, we observed a maximum of 80% survival for any binning method. The remaining 20% survival may be attained when the other species of mechanosensitive channels are expressed alongside MscL. However, it is possible that the flow cell method performed in this work lowers the maximal survival fraction as the cells are exposed to several, albeit minor, mechanical stresses such as loading into the flow cell and chemical adherence to the glass surface. To ensure that the results from logistic regression accurately describe the data, we can compare the survival probabilities to those using the binning methods described earlier (red and black points, Fig. <a href="#fig:survival">5</a>). Nearly all binned data fall within error of the prediction (see Materials and Methods for definition of error bar on probability), suggesting that this approach accurately reflects the survival probability and gives license to extrapolate the estimation of survival probability to regions of outside of our experimentally explored copy number regime.</p>
+<p>Thus far, we’ve dictated that for a given rate of osmotic shock (i.e. “fast” or “slow”), the survival probability is dependent only on the number of channels. In Fig. S13, we show the result of including other predictor variables, such as area and shock rate alone. In such cases, including other predictors resulted in pathological curves showing that channel copy number is the most informative out of the available predictor variables.</p>
+<div id="fig:survival" class="fignos">
+<figure>
+<img src="ch6_fig5.png" data-short-caption="Probability of survival as a function of MscL copy number." alt="" /><figcaption><span>Figure 5:</span> Probability of survival as a function of MscL copy number. (A) Estimated survival probability for survival under slow shock as a function of channel copy number. (B) The estimated survival probability of survival under a fast shock as a function of channel copy number. Solid curves correspond to the most probable survival probability from a one-dimensional logistic regression. Shaded regions represent the 95% credible regions. Points at the top and bottom of plots represent individual cell measurements which survived and perished, respectively. The red and black points correspond to the survival probability estimated via binning by Shine-Dalgarno sequence and binning by groups of 50 channels per cell, respectively. Horizontal error bars represent the standard error of the mean from at least 25 measurements. Vertical error bars represent the certainty of the probability estimate given <span class="math inline"><em>n</em></span> survival events from <span class="math inline"><em>N</em></span> total observations.</figcaption>
+</figure>
+</div>
+<h2 id="discussion">Discussion</h2>
+<p>    One of the most challenging endeavors in the biological sciences is linking the microscopic details of cellular components to the macro-scale physiology of the organism. This formidable task has been met repeatedly in the recent history of biology, especially in the era of DNA sequencing and single molecule biochemistry. For example, the scientific community has been able to connect sickle-cell anemia to a single amino acid substitution in Hemoglobin which promotes precipitation under a change in O<span class="math inline"><em></em><sub>2</sub></span> partial pressure <span class="citation" data-cites="feeling-taylor2004 finch1973 perutz1950">(Feeling-Taylor et al. <a href="#ref-feeling-taylor2004" role="doc-biblioref">2004</a>; Finch et al. <a href="#ref-finch1973" role="doc-biblioref">1973</a>; Perutz and Mitchison <a href="#ref-perutz1950" role="doc-biblioref">1950</a>)</span>. Others have assembled a physical model that quantitatively describes chemosensation in bacteria <span class="citation" data-cites="berg1977">(Berg and Purcell <a href="#ref-berg1977" role="doc-biblioref">1977</a>)</span> in which the arbiter of sensory adaptation is the repeated methylation of chemoreceptors <span class="citation" data-cites="colin2017 krembel2015a krembel2015 sourjik2002b">(Colin and Sourjik <a href="#ref-colin2017" role="doc-biblioref">2017</a>; A. Krembel, Colin, and Sourjik <a href="#ref-krembel2015a" role="doc-biblioref">2015</a>; A. K. Krembel, Neumann, and Sourjik <a href="#ref-krembel2015" role="doc-biblioref">2015</a>; Sourjik and Berg <a href="#ref-sourjik2002b" role="doc-biblioref">2002</a>)</span>. In the past ~50 years alone, numerous biological and physical models of the many facets of the central dogma have been assembled that give us a sense of the interplay between the genome and physiology. For example, the combination of biochemical experimentation and biophysical models have given us a picture of how gene dosage affects furrow positioning in <em>Drosophila</em> <span class="citation" data-cites="liu2013">(Liu, Morrison, and Gregor <a href="#ref-liu2013" role="doc-biblioref">2013</a>)</span>, how recombination of V(D)J gene segments generates an extraordinarily diverse antibody repertoire <span class="citation" data-cites="lovely2015 schatz2004 schatz2011">(Lovely et al. <a href="#ref-lovely2015" role="doc-biblioref">2015</a>; Schatz and Baltimore <a href="#ref-schatz2004" role="doc-biblioref">2004</a>; Schatz and Ji <a href="#ref-schatz2011" role="doc-biblioref">2011</a>)</span>, and how telomere shortening through DNA replication is intrinsically tied to cell senescence <span class="citation" data-cites="herbig2004 victorelli2017">(Herbig et al. <a href="#ref-herbig2004" role="doc-biblioref">2004</a>; Victorelli and Passos <a href="#ref-victorelli2017" role="doc-biblioref">2017</a>)</span>, to name just a few of many such examples.</p>
+<p>     By no means are we ``finished” with any of these topics. Rather, it’s quite the opposite in the sense that having a handle on the biophysical knobs that tune the behavior opens the door to a litany of new scientific questions. In the case of mechanosenstaion and osmoregulation, we have only recently been able to determine some of the basic facts that allow us to approach this fascinating biological phenomenon biophysically. The dependence of survival on mechanosensitive channel abundance is a key quantity that is missing from our collection of critical facts. To our knowledge, this work represents the first attempt to quantitatively control the abundance of a single species of mechanosensitive channel and examine the physiological consequences in terms of survival probability at single-cell resolution. Our results reveal two notable quantities. First, out of the several hundred single-cell measurements, we never observed a cell which had less than approximately 100 channels per cell and survived an osmotic shock, irrespective of the shock rate. The second is that between 500 and 700 channels per cell are needed to provide <span class="math inline"> ≥ 80%</span> survival, depending on the shock rate.</p>
+<p>    Only recently has the relationship between the MscL copy number and the probability of survival been approached experimentally. In <span class="citation" data-cites="vandenberg2016">van den Berg et al. (<a href="#ref-vandenberg2016" role="doc-biblioref">2016</a>)</span>, the authors examined the contribution of MscL to survival in a genetic background where all other known mechanosensitive channels had been deleted from the chromosome and plasmid-borne expression of an MscL-mEos3.2 fusion was tuned through an IPTG inducible promoter <span class="citation" data-cites="vandenberg2016">(van den Berg et al. <a href="#ref-vandenberg2016" role="doc-biblioref">2016</a>)</span>. In this work, they measured the single-cell channel abundance through super-resolution microscopy and queried survival through bulk assays. They report a nearly linear relationship between survival and copy number, with approximately 100 channels per cell conveying 100% survival. This number is significantly smaller than our observation of approximately 100 channels as the <em>minimum</em> number needed to convey an y observable degree of survival.</p>
+<p>The disagreement between the numbers reported in this work and in van den Berg et al. may partially arise from subtle differences in the experimental approach. The primary practical difference is the magnitude of the osmotic shock. van den Berg et al. applied an approximately 600 mOsm downshock in bulk whereas we applied a 1 Osm downshock, which would lead to lower survival <span class="citation" data-cites="levina1999">(Levina et al. <a href="#ref-levina1999" role="doc-biblioref">1999</a>)</span>. In their work, the uncertainty in both the MscL channel count and survival probability is roughly 30% (Fig. S14). Given this uncertainty, it is reasonable to interpret that the number of channels needed for complete protection from osmotic downshock is between 100 and 250 per cell. The uncertainty in determining the number of channels per cell is consistent with the observed width of the channel number distribution of the Shine-Dalgarno sequence mutants used in this work [Fig. <a href="#fig:mscl_boxplot">2</a>(B)]. A unique property of the single-cell measurements performed in this work allow is the direct observation of survival or death of individual cells. We find that morphological classification and classification through a propidium iodide staining agree within 1% (Supplement C). The bulk plating assays, as are used in van den Berg et al., rely on colony formation and outgrowth to determine survival probability. As is reported in their supplemental information, the precision in this measurement is around 30% (Fig. S14). Accounting for this uncertainty brings both measurements within a few fold where we still consistently observe lower survival for a given channel number. This remaining disagreement may be accounted for by systematic uncertainty in both experimental methods.</p>
+<p>For example, variation in the length of outgrowth, variable shock rate, and counting statistics could bias towards higher observed survival rates in ensemble plating assays. During the outgrowth phase, the control sample not exposed to an osmotic shock is allowed to grow for approximately 30 minutes in a high-salt medium before plating. The shocked cells, however, are allowed to grow in a low-salt medium. We have found that the difference between the growth rates in these two conditions can be appreciable (approximately 35 minutes versus 20 minutes, respectively) as can be seen in Fig S2. Cells that survived an osmotic shock may have a growth advantage relative to the control sample if the shock-induced lag phase is less than the outgrowth, leading to higher observed survival rates <span class="citation" data-cites="levina1999">(Levina et al. <a href="#ref-levina1999" role="doc-biblioref">1999</a>)</span>. This is one possible explanation for the survival rates which are reported in excess of 100%. Cells that survived an osmotic shock may have a growth advantage relative to the normalization sample if the shock-induced lag phase is less than the outgrowth, leading to higher observed survival rates, even surpassing 100%. We have performed these assays ourselves and have observed survival rates above of 100% (ranging from 110% to 125%) with an approximate 30% error (see Fig. S3 in Bialecka-Fornal et al. 2012 <span class="citation" data-cites="bialecka-fornal2012">(Bialecka-Fornal et al. <a href="#ref-bialecka-fornal2012" role="doc-biblioref">2012</a>)</span>) which we concluded to arise from differences in growth rate. We also note that survival rates greater than 100% are observed in van den Berg et al. (Fig. S14). For strains that have survival rates between 80% and 100% the uncertainty is typically large, making it difficult to make precise statements regarding when full survival is achieved.</p>
+<p>It has been shown that there is a strong inverse relationship between the rate of osmotic shock and survival probability <span class="citation" data-cites="bialecka-fornal2015">(Bialecka-Fornal, Lee, and Phillips <a href="#ref-bialecka-fornal2015" role="doc-biblioref">2015</a>)</span>. Any experiment in which the shock was applied more slowly or quickly than another would bias toward higher or lower survivability, respectively. The shocks applied in bulk assays are often performed manually which can be highly variable. We note that in our experiments, we frequently observe cells which do not separate and form chains of two or more cells (Fig. S9 and S10). In plating assays, it is assumed that colonies arise from a single founding cell however a colony formed by a cluster of living and dead cells would be interpreted as a single surviving cell, effectively masking the death of the others in the colony forming unit. This too could bias the measurement toward higher survival rates. Single-cell shock experiments can also have systematic errors which can bias the results towards lower survival rates. Such errors are associated with handling of the cells such as shear damage from loading into the flow cell, adhering the cells to the coverslip, and any chemical perturbations introduced by the dye used to measure the shock rate.</p>
+<p>Despite these experimental differences, the results of this work and van den Berg et al., are in agreement that MscL must be present at the level of 100 or more channels per cell in wild-type cells to convey appreciable survival. As both of these works were performed in a strain in which the only mechanosensitive channel was MscL, it remains unknown how the presence of the other channel species would alter the number of MscL needed for complete survival. In our experiments, we observed a maximum survival probability of approximately 80% even with close to 1000 MscL channels per cell. It is possible that the combined effort of the six other mechanosensitive channels would make up for some if not all of the remaining 20%. To explore the contribution of another channel to survival, van den Berg et al. also queried the contribution of MscS, another mechanosensitive channel, to survival in the absence of any other species of mechansensitive channel. It was found that over the explored range of MscS channel copy numbers, the maximum survival rate was approximately 50%, suggesting that different mechanosensitive channels have an upper limit to how much protection they can confer. Both van den Berg et al. and our work show that there is still much to be learned with respect to the interplay between the various species of mechanosensitive channel as well as their regulation.</p>
+<p>Recent work has shown that both magnitude and the rate of osmotic down shock are important factors in determining cell survival <span class="citation" data-cites="bialecka-fornal2015">(Bialecka-Fornal, Lee, and Phillips <a href="#ref-bialecka-fornal2015" role="doc-biblioref">2015</a>)</span>. In this work, we show that this finding holds true for a single species of mechanosensitive channel, even at high levels of expression. One might naïvely expect that this rate-dependent effect would disappear once a certain threshold of channels had been met. Our experiments, however, show that even at nearly 1000 channels per cell the predicted survival curves for a slow (<span class="math inline"> &lt; 1.0</span> Hz) and fast (<span class="math inline"> ≥ 1.0</span> Hz) are shifted relative to each other with the fast shock predicting lower rates of survival. This suggests either we have not reached this threshold in our experiments or there is more to understand about the relationship between abundance, channel species, and the shock rate.</p>
+<p>Some experimental and theoretical treatments suggest that only a few copies of MscL or MscS should be necessary for 100% protection given our knowledge of the conductance and the maximal water flux through the channel in its open state <span class="citation" data-cites="louhivuori2010 booth2014">(Louhivuori et al. <a href="#ref-louhivuori2010" role="doc-biblioref">2010</a>; Booth <a href="#ref-booth2014" role="doc-biblioref">2014</a>)</span>. However, recent proteomic studies have revealed average MscL copy numbers to be in the range of several hundred per cell, depending on the condition, as can be seen in Table 1 <span class="citation" data-cites="li2014a schmidt2016 soufi2015">(Li et al. <a href="#ref-li2014a" role="doc-biblioref">2014</a>; Schmidt et al. <a href="#ref-schmidt2016" role="doc-biblioref">2016</a>; Soufi et al. <a href="#ref-soufi2015" role="doc-biblioref">2015</a>)</span>. Studies focusing solely on MscL have shown similar counts through quantitative Western blotting and fluorescence microscopy <span class="citation" data-cites="bialecka-fornal2012">(Bialecka-Fornal et al. <a href="#ref-bialecka-fornal2012" role="doc-biblioref">2012</a>)</span>. Electrophysiology studies have told another story with copy number estimates ranging between 4 and 100 channels per cell <span class="citation" data-cites="blount1999 stokes2003a booth2005">(Blount et al. <a href="#ref-blount1999" role="doc-biblioref">1999</a>; Stokes et al. <a href="#ref-stokes2003a" role="doc-biblioref">2003</a>; Booth et al. <a href="#ref-booth2005" role="doc-biblioref">2005</a>)</span>. These measurements, however, measure the active number of channels. The factors regulating channel activity in these experiments could be due to perturbations during the sample preparation or reflect some unknown mechanism of regulation, such as the presence or absence of interacting cofactors <span class="citation" data-cites="schumann2010">(Schumann et al. <a href="#ref-schumann2010" role="doc-biblioref">2010</a>)</span>. The work described here, on the other hand, measures the <em>maximum</em> number of channels that could be active and may be able to explain why the channel abundance is higher than estimated by theoretical means. There remains much more to be learned about the regulation of activity in these systems. As the <em>in vivo</em> measurement of protein copy number becomes accessible through novel single-cell and single-molecule methods, we will continue to collect more facts about this fascinating system and hopefully connect the molecular details of mechanosensation with perhaps the most important physiological response – life or death.</p>
+<table>
+<caption>Measured cellular copy numbers of MscL. Asterisk (*) Indicates inferred MscL channel copy number from the total number of detected MscL peptides.</caption>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Reported channels per cell</th>
+<th style="text-align: left;">Method</th>
+<th style="text-align: center;">Reference</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">480 ± 103</td>
+<td style="text-align: left;">Western blotting</td>
+<td style="text-align: center;"><span class="citation" data-cites="bialecka-fornal2012">Bialecka-Fornal et al. (<a href="#ref-bialecka-fornal2012" role="doc-biblioref">2012</a>)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">560*</td>
+<td style="text-align: left;">Ribosomal profiling</td>
+<td style="text-align: center;"><span class="citation" data-cites="li2014a">Li et al. (<a href="#ref-li2014a" role="doc-biblioref">2014</a>)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">331*</td>
+<td style="text-align: left;">Mass spectrometry</td>
+<td style="text-align: center;"><span class="citation" data-cites="schmidt2016">Schmidt et al. (<a href="#ref-schmidt2016" role="doc-biblioref">2016</a>)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">583*</td>
+<td style="text-align: left;">Mass spectrometry</td>
+<td style="text-align: center;"><span class="citation" data-cites="soufi2015">Soufi et al. (<a href="#ref-soufi2015" role="doc-biblioref">2015</a>)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">4 - 5</td>
+<td style="text-align: left;">Electrophysiology</td>
+<td style="text-align: center;"><span class="citation" data-cites="stokes2003a">Stokes et al. (<a href="#ref-stokes2003a" role="doc-biblioref">2003</a>)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">10 - 100</td>
+<td style="text-align: left;">Electrophysiology</td>
+<td style="text-align: center;"><span class="citation" data-cites="booth2005">Booth et al. (<a href="#ref-booth2005" role="doc-biblioref">2005</a>)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">10 - 15</td>
+<td style="text-align: left;">Electrophysiology</td>
+<td style="text-align: center;"><span class="citation" data-cites="blount1999">Blount et al. (<a href="#ref-blount1999" role="doc-biblioref">1999</a>)</span></td>
+</tr>
+</tbody>
+</table>
+<h2 id="materials-methods">Materials &amp; Methods</h2>
+<h3 id="bacterial-strains-and-growth-conditions">Bacterial strains and growth conditions</h3>
+<p>The bacterial strains are described in Table S1. The parent strain for the mutants used in this study was MJF641 <span class="citation" data-cites="edwards2012">(Edwards et al. <a href="#ref-edwards2012" role="doc-biblioref">2012</a>)</span>, a strain which had all seven mechanosensitive channels deleted. The MscL-sfGFP coding region from MLG910 <span class="citation" data-cites="bialecka-fornal2012">(Bialecka-Fornal et al. <a href="#ref-bialecka-fornal2012" role="doc-biblioref">2012</a>)</span> was integrated into MJF641 by P1 transduction, creating the strain D6LG-Tn10. Selection pressure for MscL integration was created by incorporating an osmotic shock into the transduction protocol, which favored the survival of MscL-expressing stains relative to MJF641 by ~100-fold. Screening for integration candidates was based on fluorescence expression of plated colonies. Successful integration was verified by sequencing. Attempts to transduce RBS-modified MscL-sfGFP coding regions became increasingly inefficient as the targeted expression level of MscL was reduced. This was due to the decreasing fluorescence levels and survival rates of the integration candidates. Consequently, Shine-Dalgarno sequence modifications were made by inserting DNA oligos with lambda Red-mediated homologous recombination, i.e., recombineering <span class="citation" data-cites="sharan2009">(Sharan et al. <a href="#ref-sharan2009" role="doc-biblioref">2009</a>)</span>. The oligos had a designed mutation (Fig. <a href="#fig:mscl_boxplot">2</a>) flanked by ~25 base pairs that matched the targeted MscL region (Table S2). A two-step recombineering process of selection followed by counter selection using a <em>tetA-sacB</em> gene fusion cassette <span class="citation" data-cites="li2013">(Li et al. <a href="#ref-li2013" role="doc-biblioref">2013</a>)</span> was chosen because of its capabilities to integrate with efficiencies comparable to P1 transduction and not leave antibiotic resistance markers or scar sequences in the final strain. To prepare the strain D6LG-Tn10 for this scheme, the Tn10 transposon containing the <em>tetA</em> gene needed to be removed to avoid interference with the <em>tetA-sacB</em> cassette. Tn10 was removed from the middle of the <em>ycjM</em> gene with the primer Tn10delR (Table S2) by recombineering, creating the strain D6LG (SD0). Counter selection against the <em>tetA</em> gene was promoted by using agar media with fusaric acid <span class="citation" data-cites="bochner1980 li2013">(Bochner et al. <a href="#ref-bochner1980" role="doc-biblioref">1980</a>; Li et al. <a href="#ref-li2013" role="doc-biblioref">2013</a>)</span>. The <em>tetA-sacB</em> cassette was PCR amplified out of the strain XTL298 using primers MscLSPSac and MscLSPSacR (Table S2). The cassette was integrated in place of the spacer region in front of the MscL start codon of D6LG (SD0) by recombineering, creating the intermediate strain D6LTetSac. Positive selection for cassette integration was provided by agar media with tetracycline. Finally, the RBS modifying oligos were integrated into place by replacing the <em>tetA-sacB</em> cassette by recombineering. Counter selection against both <em>tetA</em> and <em>sacB</em> was ensured by using agar media with fusaric acid and sucrose <span class="citation" data-cites="li2013">(Li et al. <a href="#ref-li2013" role="doc-biblioref">2013</a>)</span>, creating the Shine-Dalgarno mutant strains used in this work.</p>
+<p>Strain cultures were grown in 5 mL of LB-Lennox media with antibiotic (apramycin) overnight at 37<span class="math inline"><em></em><sup>∘</sup></span>C. The next day, 50 <span class="math inline"><em>μ</em></span>L of overnight culture was inoculated into 5 mL of LB-Lenox with antibiotic and the culture was grown to OD<sub>600nm</sub> ~0.25. Subsequently, 500 <span class="math inline"><em>μ</em></span>L of that culture was inoculated into 5 mL of LB-Lennox supplemented with 500mM of NaCl and the culture was regrown to OD<sub>600nm</sub> ~0.25. A 1 mL aliquot was taken and used to load the flow cell.</p>
+<h3 id="flow-cell">Flow cell</h3>
+<p>All experiments were conducted in a home-made flow cell as is shown in Fig. <a href="#fig:flow_cell">3</a>(A). This flow cell has two inlets which allow media of different osmolarity to be exchanged over the course of the experiment. The imaging region is approximately 10 mm wide and 100 <span class="math inline"><em>μ</em></span>m in depth. All imaging took place within 1 – 2 cm of the outlet to avoid imaging cells within a non-uniform gradient of osmolarity. The interior of the flow cell was functionalized with a 1:400 dilution of polyethylenimine prior to addition of cells with the excess washed away with water. A dilute cell suspension in LB Lennox with 500 mM NaCl was loaded into one inlet while the other was connected to a vial of LB medium with no NaCl. This hypotonic medium was clamped during the loading of the cells.</p>
+<p>Once the cells had adhered to the polyethylenimine coated surface, the excess cells were washed away with the 500 mM NaCl growth medium followed by a small (~20 <span class="math inline"><em>μ</em></span>L) air bubble. This air bubble forced the cells to lay flat against the imaging surface, improving the time-lapse imaging. Over the observation period, cells not exposed to an osmotic shock were able to grow for 4 – 6 divisions, showing that the flow cell does not directly impede cell growth.</p>
+<h3 id="imaging-conditions">Imaging conditions</h3>
+<p>All imaging was performed in a flow cell held at 30<span class="math inline"><em></em><sup>∘</sup></span>C on a Nikon Ti-Eclipse microscope outfitted with a Perfect Focus system enclosed in a Haison environmental chamber (approximately 1<span class="math inline"><em></em><sup>∘</sup></span>C regulation efficiency). The microscope was equipped with a 488 nm laser excitation source (CrystaLaser) and a 520/35 laser optimized filter set (Semrock). The images were collected on an Andor iXon EM+ 897 EMCCD camera and all microscope and acquisition operations were controlled via the open source <span class="math inline"><em>μ</em></span>Manager microscope control software <span class="citation" data-cites="edelstein2014">(Edelstein et al. <a href="#ref-edelstein2014" role="doc-biblioref">2014</a>)</span>. Once cells were securely mounted onto the surface of the glass coverslip, between 15 and 20 positions containing 5 to 10 cells were marked and the coordinates recorded. At each position, a phase contrast and GFP fluorescence image was acquired for segmentation and subsequent measurement of channel copy number. To perform the osmotic shock, LB media containing no NaCl was pulled into the flow cell through a syringe pump. To monitor the media exchange, both the high salt and no salt LB media were supplemented with a low-affinity version of the calcium-sensitive dye Rhod-2 (250 nM; TEF Labs) which fluoresces when bound to Ca<sup>2+</sup>. The no salt medium was also supplemented with 1<span class="math inline"><em>μ</em></span>M CaCl<span class="math inline"><em></em><sub>2</sub></span> to make the media mildly fluorescent and the exchange rate was calculated by measuring the fluorescence increase across an illuminated section of one of the positions. These images were collected in real time for the duration of the shock. The difference in measured fluorescence between the pre-shock images and those at the end of the shock set the scale of a 500 mM NaCl down shock. The rate was calculated by fitting a line to the middle region of this trace. Further details regarding this procedure can be found in <span class="citation" data-cites="bialecka-fornal2015">Bialecka-Fornal, Lee, and Phillips (<a href="#ref-bialecka-fornal2015" role="doc-biblioref">2015</a>)</span>.</p>
+<h3 id="image-processing">Image Processing</h3>
+<p>Images were processed using a combination of automated and manual methods. First, expression of MscL was measured via segmenting individual cells or small clusters of cells in phase contrast and computing the mean pixel value of the fluorescence image for each segmented object. The fluorescence images were passed through several filtering operations which reduced high-frequency noise as well as corrected for uneven illumination of the excitation wavelength.</p>
+<p>Survival or death classification was performed manually using the CellProfiler plugin for ImageJ software (NIH). A survivor was defined as a cell which was able to undergo at least two division events after the osmotic down shock. Cell death was recognized by stark changes in cell morphology including loss of phase contrast through ejection of cytoplasmic material, structural decomposition of the cell wall and membrane, and the inability to divide. To confirm that these morphological cues corresponded with cell death, we probed cell viability on a subset of our strains after osmotic shock through staining with propidium iodide, a DNA intercalating dye commonly used to identifying dead cells (LIVE/DEAD BacLight Bacterial Cell Viability Assay, Thermo Fisher). We found that our classification based on morphology agreed with that based off of staining within 1%. More information regarding these experiments can be found in the Supplement C. Cells which detached from the surface during the post-shock growth phase or those which became indistinguishable from other cells due to clustering were not counted as survival or death and were removed from the dataset completely. A region of the cell was manually marked with 1.0 (survival) or 0.0 (death) by clicking on the image. The <code>xy</code> coordinates of the click as well as the assigned value were saved as an <code>.xml</code> file for that position.</p>
+<p>The connection between the segmented cells and their corresponding manual markers was automated. As the manual markings were made on the first phase contrast image after the osmotic shock, small shifts in the positions of the cell made one-to-one mapping with the segmentation mask non-trivial. The linkages between segmented cell and manual marker were made by computing all pairwise distances between the manual marker and the segmented cell centroid, taking the shortest distance as the true pairing. The linkages were then inspected manually and incorrect mappings were corrected as necessary.</p>
+<p>All relevant statistics about the segmented objects as well as the sample identity, date of acquisition, osmotic shock rate, and camera exposure time were saved as <code>.csv</code> files for each individual experiment. A more in-depth description of the segmentation procedure as well as the relevant code can be accessed as a Jupyter Notebook at (<code>http://rpgroup.caltech.edu/mscl_survival</code>).</p>
+<h3 id="calculation-of-effective-channel-copy-number">Calculation of effective channel copy number</h3>
+<p>To compute the MscL channel copy number, we relied on measuring the fluorescence level of a bacterial strain in which the mean MscL channel copy number was known via fluorescence microscopy <span class="citation" data-cites="bialecka-fornal2012">(Bialecka-Fornal et al. <a href="#ref-bialecka-fornal2012" role="doc-biblioref">2012</a>)</span>. <em>E. coli</em> strain MLG910, which expresses the MscL-sfGFP fusion protein from the wild-type SD sequence, was grown under identical conditions to those described in Bialecka-Fornal et al. 2015 in LB Miller medium (BD Medical Sciences) to an OD<sub>600nm</sub> of ~0.3. The cells were then diluted ten fold and immobilized on a rigid 2% agarose substrate and placed onto a glass bottom petri dish and imaged in the same conditions as described previously.</p>
+<p>Images were taken of six biological replicates of MLG910 and were processed identically to those in the osmotic shock experiments. A calibration factor between the average cell fluorescence level and mean MscL copy number was then computed. We assumed that all measured fluorescence (after filtering and background subtraction) was derived from the MscL-sfGFP fusion, <span id="eq:ian" class="eqnos"><br /><span class="math display">⟨<em>I</em><sub>tot</sub>⟩ = <em>α</em>⟨<em>N</em>⟩,</span><br /><span class="eqnos-number">(3)</span></span> in which <span class="math inline"><em>α</em></span> is the calibration factor and <span class="math inline">⟨<em>N</em>⟩</span> is the mean cellular MscL-sfGFP copy number as reported in Bialecka-Fornal et al. 2012 <span class="citation" data-cites="bialecka-fornal2012">(Bialecka-Fornal et al. <a href="#ref-bialecka-fornal2012" role="doc-biblioref">2012</a>)</span>. To correct for errors in segmentation, the intensity was computed as an areal density <span class="math inline">⟨<em>I</em><sub><em>A</em></sub>⟩</span> and was multiplied by the average cell area <span class="math inline">⟨<em>A</em>⟩</span> of the population. The calibration factor was therefore computed as <span id="eq:calibration_factor" class="eqnos"><br /><span class="math display">$$
+\alpha = {\langle I_A \rangle \langle A \rangle \over \langle N \rangle}.
+$$</span><br /><span class="eqnos-number">(4)</span></span></p>
+<p>We used Bayesian inferential methods to compute this calibration factor taking measurement error and replicate-to-replicate variation into account. The resulting average cell area and calibration factor was used to convert the measured cell intensities from the osmotic shock experiments to cell copy number. The details of this inference are described in depth in the supplemental information (<em>Standard Candle Calibration</em>).</p>
+<h3 id="logistic-regression">Logistic regression</h3>
+<p>We used Bayesian inferential methods to find the most probable values of the coefficients <span class="math inline"><em>β</em><sub>0</sub></span> and <span class="math inline"><em>β</em><sub>1</sub></span> and the appropriate credible regions and is described in detail in the supplemental information (<em>Logistic Regression</em>). Briefly, we used Markov chain Monte Carlo (MCMC) to sample from the log posterior distribution and took the most probable value as the mean of the samples for each parameter. The MCMC was performed using the Stan probabilistic programming language <span class="citation" data-cites="carpenter2017">(Carpenter et al. <a href="#ref-carpenter2017" role="doc-biblioref">2017</a>)</span> and all models can be found on the GitHub repository (<code>http://github.com/rpgroup-pboc/mscl_survival</code>).</p>
+<h3 id="calculation-of-survival-probability-error">Calculation of survival probability error</h3>
+<p>The vertical error bars for the points shown in Fig. <a href="#fig:survival">5</a> represent our uncertainty in the survival probability given our measurement of <span class="math inline"><em>n</em></span> survivors out of a total <span class="math inline"><em>N</em></span> single-cell measurements. The probability distribution of the survival probability <span class="math inline"><em>p</em><sub><em>s</em></sub></span> given these measurements can be written using Bayes’ theorem as</p>
+<p><span id="eq:probability_bayes" class="eqnos"><br /><span class="math display">$$
+g(p_s\,\vert\, n, N) = {f(n\,\vert\,p_s, N)g(p_s) \over f(n\,\vert\, N)},
+$$</span><br /><span class="eqnos-number">(5)</span></span></p>
+<p>where <span class="math inline"><em>g</em></span> and <span class="math inline"><em>f</em></span> represent probability density functions over parameters and data, respectively. The likelihood <span class="math inline"><em>f</em>(<em>n</em> |<em>p</em><sub><em>s</em></sub>, <em>N</em>)</span> represents the probability of measuring <span class="math inline"><em>n</em></span> survival events, given a total of <span class="math inline"><em>N</em></span> measurements each with a probability of survival <span class="math inline"><em>p</em><sub><em>s</em></sub></span>. This matches the story for the Binomial distribution and can be written as</p>
+<p><span id="eq:binomial" class="eqnos"><br /><span class="math display">$$
+f(n\,\vert\,p_s, N) = {N! \over n!(N - n)!}p_s^n(1 - p_s)^{N - n}.
+$$</span><br /><span class="eqnos-number">(6)</span></span></p>
+<p>To maintain maximal ignorance we can assume that any value for <span class="math inline"><em>p</em><sub><em>s</em></sub></span> is valid, such that is in the range [0, 1]. This prior knowledge, represented by <span class="math inline"><em>g</em>(<em>p</em><sub><em>s</em></sub>)</span>, can be written as</p>
+<p><span id="eq:uniform_prob" class="eqnos"><br /><span class="math display">$$
+g(p_s) = \begin{cases}1 &amp; 0\leq p_s\leq 1 \\
+0 &amp; \text{otherwise} \end{cases}.
+$$</span><br /><span class="eqnos-number">(7)</span></span></p>
+<p>We can also assume maximal ignorance for the total number of survival events we could measure given <span class="math inline"><em>N</em></span> observations, <span class="math inline"><em>f</em>(<em>n</em> | <em>N</em>)</span>. Assuming all observations are equally likely, this can be written as</p>
+<p><span id="eq:evidence" class="eqnos"><br /><span class="math display">$$
+f(n\,\vert\, N) = {1 \over N + 1}
+$$</span><br /><span class="eqnos-number">(8)</span></span></p>
+<p>where the addition of one comes from the possibility of observing zero survival events. Combining Eq. <a href="#eq:binomial">6</a>; <a href="#eq:uniform_prob">7</a>; and <a href="#eq:evidence">8</a>, the posterior distribution <span class="math inline"><em>g</em>(<em>p</em><sub><em>s</em></sub> | <em>n</em>, <em>N</em>)</span> is</p>
+<p><span id="eq:probability_posterior" class="eqnos"><br /><span class="math display">$$
+g(p_s\,\vert\, n, N) = {(N+1)! \over n!(N - n)!}p_s^{n}(1 - p_s)^{N - n}.
+$$</span><br /><span class="eqnos-number">(9)</span></span></p>
+<p>The most probable value of <span class="math inline"><em>p</em><sub><em>s</em></sub></span>, where the posterior probability distribution given by Eq. <a href="#eq:probability_posterior">9</a> is maximized, can be found by computing the point at which derivative of the log posterior with respect to <span class="math inline"><em>p</em><sub><em>s</em></sub></span> goes to zero,</p>
+<p><span id="eq:deriv_ps" class="eqnos"><br /><span class="math display">$$
+{d\log g(p_s\,\vert\,n, N) \over d p_s} = {n \over p_s} - {N - n  \over 1 - p_s} = 0.
+$$</span><br /><span class="eqnos-number">(10)</span></span></p>
+<p>Solving Eq. <a href="#eq:deriv_ps">10</a> for <span class="math inline"><em>p</em><sub><em>s</em></sub></span> gives the most likely value for the probability,</p>
+<p><span id="eq:most_prob_prob" class="eqnos"><br /><span class="math display">$$
+p_s^* = {n \over N}.
+$$</span><br /><span class="eqnos-number">(11)</span></span></p>
+<p>So long as <span class="math inline"><em>N</em> &gt;  &gt; <em>n</em><em>p</em><sub><em>s</em></sub><sup>*</sup></span>, Eq. <a href="#eq:probability_posterior">9</a> can be approximated as a Gaussian distribution with a mean <span class="math inline"><em>p</em><sub><em>s</em></sub><sup>*</sup></span> and a variance <span class="math inline"><em>σ</em><sub><em>p</em><sub><em>s</em></sub></sub><sup>2</sup></span>. By definition, the variance of a Gaussian distribution is computed as the negative reciprocal of the second derivative of the log posterior evaluated at <span class="math inline"><em>p</em><sub><em>s</em></sub> = <em>p</em><sub><em>s</em></sub><sup>*</sup></span>,</p>
+<p><span id="eq:variance_def" class="eqnos"><br /><span class="math display">$$
+\sigma_{p_s}^2 = - \left({d^2 \log g(p_s\,\vert\, n, N) \over
+dp_s^2}\Bigg\vert_{p_s=p_s^*}\right)^{-1}.
+$$</span><br /><span class="eqnos-number">(12)</span></span></p>
+<p>Evaluating Eq. <a href="#eq:variance_def">12</a> yields</p>
+<p><span id="eq:prob_variance" class="eqnos"><br /><span class="math display">$$
+\sigma_{p_s}^2 = {n(N-n)\over N^3}.
+$$</span><br /><span class="eqnos-number">(13)</span></span></p>
+<p>Given Eq. <a href="#eq:most_prob_prob">11</a> and Eq. <a href="#eq:prob_variance">13</a>, the most-likely survival probability and estimate of the uncertainty can be expressed as</p>
+<p><span class="eqnos"><br /><span class="math display"><em>p</em><sub><em>s</em></sub> = <em>p</em><sub><em>s</em></sub><sup>*</sup> ± <em>σ</em><sub><em>p</em><sub><em>s</em></sub></sub>.</span><br /><span class="eqnos-number">(14)</span></span></p>
+<h3 id="data-and-software-availability">Data and software availability</h3>
+<p>All raw image data is freely available and is stored on the CaltechDATA Research Data Repository <span class="citation" data-cites="chure2018a">(Chure, Lee, and Phillips <a href="#ref-chure2018a" role="doc-biblioref">2018</a><a href="#ref-chure2018a" role="doc-biblioref">b</a>)</span>. The raw Markov chain Monte Carlo samples are stored as <code>.csv</code> files on CaltechDATA <span class="citation" data-cites="chure2018">(Chure, Lee, and Phillips <a href="#ref-chure2018" role="doc-biblioref">2018</a><a href="#ref-chure2018" role="doc-biblioref">c</a>)</span>. All processed experimental data, Python, and Stan code used in this work are freely available through our GitHub repository (<code>http://github.com/rpgroup-pboc/mscl_survival</code>)<span class="citation" data-cites="chure2018b">(Chure, Lee, and Phillips <a href="#ref-chure2018b" role="doc-biblioref">2018</a><a href="#ref-chure2018b" role="doc-biblioref">a</a>)</span> accessible through DOI: 10.5281/zenodo.1252524. The scientific community is invited to fork our repository and open constructive issues.</p>
+<h2 id="acknowledgements">Acknowledgements</h2>
+<p>       We thank Nathan Belliveau, Maja Bialecka-Fornal, Justin Bois, Soichi Hirokawa, Jaspar Landman, Manuel Razo-Mejia, Muir Morrison, and Shyam Saladi for useful advice and discussion. We thank Don Court for strain XTL298 and Samantha Miller for strain MJF641. This work was supported by the National Institutes of Health DP1 OD000217 (Director’s Pioneer Award), R01 GM085286, GM084211-A1 , GM118043-01, and La Fondation Pierre Gilles de Gennes.</p>
+<h2 class="unnumbered" id="references" class="unnumbered">References</h2>
+<div id="refs" class="references hanging-indent" role="doc-bibliography">
+<div id="ref-anderson2003">
+<p>Anderson, Richard P, Ruyun Jin, and Gary L Grunkemeier. 2003. “Understanding Logistic Regression Analysis in Clinical Reports: An Introduction.” <em>The Annals of Thoracic Surgery</em> 75 (3): 753–57. <a href="https://doi.org/10.1016/S0003-4975(02)04683-0">https://doi.org/10.1016/S0003-4975(02)04683-0</a>.</p>
+</div>
+<div id="ref-bavi2016">
+<p>Bavi, Navid, D. Marien Cortes, Charles D. Cox, Paul R. Rohde, Weihong Liu, Joachim W. Deitmer, Omid Bavi, et al. 2016. “The Role of MscL Amphipathic N Terminus Indicates a Blueprint for Bilayer-Mediated Gating of Mechanosensitive Channels.” <em>Nature Communications</em> 7 (June): 11984. <a href="https://doi.org/10.1038/ncomms11984">https://doi.org/10.1038/ncomms11984</a>.</p>
+</div>
+<div id="ref-berg1977">
+<p>Berg, H. C., and E. M. Purcell. 1977. “Physics of Chemoreception.” <em>Biophysical Journal</em> 20 (2): 193–219. <a href="https://doi.org/10.1016/S0006-3495(77)85544-6">https://doi.org/10.1016/S0006-3495(77)85544-6</a>.</p>
+</div>
+<div id="ref-bialecka-fornal2012">
+<p>Bialecka-Fornal, Maja, Heun Jin Lee, Hannah A. DeBerg, Chris S. Gandhi, and Rob Phillips. 2012. “Single-Cell Census of Mechanosensitive Channels in Living Bacteria.” Edited by Arnold Driessen. <em>PLoS ONE</em> 7 (3): e33077. <a href="https://doi.org/10.1371/journal.pone.0033077">https://doi.org/10.1371/journal.pone.0033077</a>.</p>
+</div>
+<div id="ref-bialecka-fornal2015">
+<p>Bialecka-Fornal, Maja, Heun Jin Lee, and Rob Phillips. 2015. “The Rate of Osmotic Downshock Determines the Survival Probability of Bacterial Mechanosensitive Channel Mutants.” Edited by P. de Boer. <em>Journal of Bacteriology</em> 197 (1): 231–37. <a href="https://doi.org/10.1128/JB.02175-14">https://doi.org/10.1128/JB.02175-14</a>.</p>
+</div>
+<div id="ref-blount1999">
+<p>Blount, P., S. I. Sukharev, P. C. Moe, B. Martinac, and C. Kung. 1999. “Mechanosensitive Channels of Bacteria.” <em>Methods in Enzymology</em> 294: 458–82.</p>
+</div>
+<div id="ref-bochner1980">
+<p>Bochner, Barry R., Hui-Chuan Huang, GARY L. Schieven, and BRUCE N. Ames. 1980. “Positive Selection for Loss of Tetracycline Resistance.” <em>Journal of Bacteriology</em> 143 (2): 926–33.</p>
+</div>
+<div id="ref-booth2014">
+<p>Booth, Ian R. 2014. “Bacterial Mechanosensitive Channels: Progress Towards an Understanding of Their Roles in Cell Physiology.” <em>Current Opinion in Microbiology</em> 18 (April): 16–22. <a href="https://doi.org/10.1016/j.mib.2014.01.005">https://doi.org/10.1016/j.mib.2014.01.005</a>.</p>
+</div>
+<div id="ref-booth2005">
+<p>Booth, I. R., M. D. Edwards, E. Murray, and S. Miller. 2005. “The Role of Bacterial Ion Channels in Cell Physiology.” In <em>Bacterial Ion Channels and Their Eukaryotic Homologs</em>, edited by A. Kubalsi and B. Martinac, 291–312. Washington DC: American Society for Microbiology.</p>
+</div>
+<div id="ref-carpenter2017">
+<p>Carpenter, Bob, Andrew Gelman, Matthew D. Hoffman, Daniel Lee, Ben Goodrich, Michael Betancourt, Marcus Brubaker, Jiqiang Guo, Peter Li, and Allen Riddell. 2017. “Stan: A Probabilistic Programming Language.” <em>Journal of Statistical Software</em> 76 (1): 1–32. <a href="https://doi.org/10.18637/jss.v076.i01">https://doi.org/10.18637/jss.v076.i01</a>.</p>
+</div>
+<div id="ref-chure2018b">
+<p>Chure, Griffin, Heun Jin Lee, and Rob Phillips. 2018a. “Github Repository for "Connecting the Dots Between Mechanosensitive Channel Abundance, Osmotic Shock, and Survival at Single-Cell Resolution" Accessible Through DOI: 10.5281/Zenodo.1252524,” May.</p>
+</div>
+<div id="ref-chure2018a">
+<p>———. 2018b. “Image Data for "Connecting the Dots Between Mechanosensitive Channel Abundance, Osmotic Shock, and Survival at Single-Cell Resolution" Accessible Through DOI: 10.22002/D1.941,” May.</p>
+</div>
+<div id="ref-chure2018">
+<p>———. 2018c. “MCMC Chains Generated in "Connecting the Dots Between Mechanosensitive Channel Abundance, Osmotic Shock, and Survival at Single-Cell Resolution" Accessible Through DOI 10.22002/D1.942,” May.</p>
+</div>
+<div id="ref-colin2017">
+<p>Colin, Remy, and Victor Sourjik. 2017. “Emergent Properties of Bacterial Chemotaxis Pathway.” <em>Current Opinion in Microbiology</em>, Antimicrobials * bacterial systems biology, 39 (October): 24–33. <a href="https://doi.org/10.1016/j.mib.2017.07.004">https://doi.org/10.1016/j.mib.2017.07.004</a>.</p>
+</div>
+<div id="ref-cruickshank1997">
+<p>Cruickshank, C C, R F Minchin, A C Le Dain, and B Martinac. 1997. “Estimation of the Pore Size of the Large-Conductance Mechanosensitive Ion Channel of <em>Escherichia Coli</em>.” <em>Biophysical Journal</em> 73 (4): 1925–31.</p>
+</div>
+<div id="ref-edelstein2014">
+<p>Edelstein, Arthur D, Mark A Tsuchida, Nenad Amodaj, Henry Pinkard, Ronald D Vale, and Nico Stuurman. 2014. “Advanced Methods of Microscope Control Using <span class="math inline"><em>μ</em></span>Manager Software.” <em>Journal of Biological Methods</em> 1 (2): 10. <a href="https://doi.org/10.14440/jbm.2014.36">https://doi.org/10.14440/jbm.2014.36</a>.</p>
+</div>
+<div id="ref-edwards2012">
+<p>Edwards, M. D., S. Black, T. Rasmussen, A. Rasmussen, N. R. Stokes, T. L. Stephen, S. Miller, and I. R. Booth. 2012. “Characterization of Three Novel Mechanosensitive Channel Activities in <em>Escherichia Coli</em>.” <em>Channels (Austin)</em> 6: 272–81. <a href="https://doi.org/10.4161/chan.20998\\\%002020998\\\%0020%5Bpii%5D">https://doi.org/10.4161/chan.20998\\\%002020998\\\%0020[pii]</a>.</p>
+</div>
+<div id="ref-elowitz2002">
+<p>Elowitz, M. B., A. J. Levine, E. D. Siggia, and P. S. Swain. 2002. “Stochastic Gene Expression in a Single Cell.” <em>Science</em> 297 (August): 1183–6. <a href="https://doi.org/10.1126/science.1070919\\\%0020297/5584/1183\\\%0020%5Bpii%5D">https://doi.org/10.1126/science.1070919\\\%0020297/5584/1183\\\%0020[pii]</a>.</p>
+</div>
+<div id="ref-espahborujeni2014">
+<p>Espah Borujeni, Amin, Anirudh S. Channarasappa, and Howard M. Salis. 2014. “Translation Rate Is Controlled by Coupled Trade-Offs Between Site Accessibility, Selective RNA Unfolding and Sliding at Upstream Standby Sites.” <em>Nucleic Acids Research</em> 42 (4): 2646–59. <a href="https://doi.org/10.1093/nar/gkt1139">https://doi.org/10.1093/nar/gkt1139</a>.</p>
+</div>
+<div id="ref-feeling-taylor2004">
+<p>Feeling-Taylor, Angela R., S.-T. Yau, Dimiter N. Petsev, Ronald L. Nagel, Rhoda Elison Hirsch, and Peter G. Vekilov. 2004. “Crystallization Mechanisms of Hemoglobin C in the R State.” <em>Biophysical Journal</em> 87 (4): 2621–9. <a href="https://doi.org/10.1529/biophysj.104.039743">https://doi.org/10.1529/biophysj.104.039743</a>.</p>
+</div>
+<div id="ref-finch1973">
+<p>Finch, J. T., M. F. Perutz, J. F. Bertles, and J. Dobler. 1973. “Structure of Sickled Erythrocytes and of Sickle-Cell Hemoglobin Fibers.” <em>Proceedings of the National Academy of Sciences</em> 70 (3): 718–22. <a href="https://doi.org/10.1073/pnas.70.3.718">https://doi.org/10.1073/pnas.70.3.718</a>.</p>
+</div>
+<div id="ref-hase1997">
+<p>Hase, C. C., R. F. Minchin, A. Kloda, and B. Martinac. 1997. “Cross-Linking Studies and Membrane Localization and Assembly of Radiolabelled Large Mechanosensitive Ion Channel (MscL) of <em>Escherichia Coli</em>.” <em>Biochem Biophys Res Commun</em> 232 (March): 777–82. <a href="https://doi.org/S0006-291X(97)96370-1\\\%0020%5Bpii%5D\\\%002010.1006/bbrc.1997.6370">https://doi.org/S0006-291X(97)96370-1\\\%0020[pii]\\\%002010.1006/bbrc.1997.6370</a>.</p>
+</div>
+<div id="ref-haswell2011">
+<p>Haswell, Elizabeth S., Rob Phillips, and Douglas C. Rees. 2011. “Mechanosensitive Channels: What Can They Do and How Do They Do It?” <em>Structure</em> 19 (10): 1356–69. <a href="https://doi.org/10.1016/j.str.2011.09.005">https://doi.org/10.1016/j.str.2011.09.005</a>.</p>
+</div>
+<div id="ref-herbig2004">
+<p>Herbig, Utz, Wendy A Jobling, Benjamin P. C Chen, David J Chen, and John M Sedivy. 2004. “Telomere Shortening Triggers Senescence of Human Cells Through a Pathway Involving ATM, P53, and p21CIP1, but Not p16INK4a.” <em>Molecular Cell</em> 14 (4): 501–13. <a href="https://doi.org/10.1016/S1097-2765(04)00256-4">https://doi.org/10.1016/S1097-2765(04)00256-4</a>.</p>
+</div>
+<div id="ref-krembel2015a">
+<p>Krembel, Anna, Remy Colin, and Victor Sourjik. 2015. “Importance of Multiple Methylation Sites in <em>Escherichia Coli</em> Chemotaxis.” <em>PLoS ONE</em> 10 (12). <a href="https://doi.org/10.1371/journal.pone.0145582">https://doi.org/10.1371/journal.pone.0145582</a>.</p>
+</div>
+<div id="ref-krembel2015">
+<p>Krembel, Anna K., Silke Neumann, and Victor Sourjik. 2015. “Universal Response-Adaptation Relation in Bacterial Chemotaxis.” <em>Journal of Bacteriology</em> 197 (2): 307–13. <a href="https://doi.org/10.1128/JB.02171-14">https://doi.org/10.1128/JB.02171-14</a>.</p>
+</div>
+<div id="ref-levina1999">
+<p>Levina, N., S. Totemeyer, N. R. Stokes, P. Louis, M. A. Jones, and I. R. Booth. 1999. “Protection of <em>Escherichia Coli</em> Cells Against Extreme Turgor by Activation of MscS and MscL Mechanosensitive Channels: Identification of Genes Required for MscS Activity.” <em>EMBO J</em> 18 (April): 1730–7. <a href="https://doi.org/10.1093/emboj/18.7.1730">https://doi.org/10.1093/emboj/18.7.1730</a>.</p>
+</div>
+<div id="ref-li2014a">
+<p>Li, Gene-Wei, David Burkhardt, Carol Gross, and Jonathan S. Weissman. 2014. “Quantifying Absolute Protein Synthesis Rates Reveals Principles Underlying Allocation of Cellular Resources.” <em>Cell</em> 157 (3): 624–35. <a href="https://doi.org/10.1016/j.cell.2014.02.033">https://doi.org/10.1016/j.cell.2014.02.033</a>.</p>
+</div>
+<div id="ref-li2013">
+<p>Li, Xin-tian, Lynn C. Thomason, James A. Sawitzke, Nina Costantino, and Donald L. Court. 2013. “Positive and Negative Selection Using the tetA-sacB Cassette: Recombineering and P1 Transduction in <em>Escherichia Coli</em>.” <em>Nucleic Acids Research</em> 41 (22): e204–e204.</p>
+</div>
+<div id="ref-liu2013">
+<p>Liu, Feng, Alexander H. Morrison, and Thomas Gregor. 2013. “Dynamic Interpretation of Maternal Inputs by the Drosophila Segmentation Gene Network.” <em>Proceedings of the National Academy of Sciences of the United States of America</em> 110 (17): 6724–9. <a href="https://doi.org/10.1073/pnas.1220912110">https://doi.org/10.1073/pnas.1220912110</a>.</p>
+</div>
+<div id="ref-louhivuori2010">
+<p>Louhivuori, M., H. J. Risselada, E. van der Giessen, and S. J. Marrink. 2010. “Release of Content Through Mechano-Sensitive Gates in Pressurized Liposomes.” <em>Proc Natl Acad Sci U S A</em> 107 (November): 19856–60. <a href="https://doi.org/1001316107\\\%0020%5Bpii%5D\\\%002010.1073/pnas.1001316107">https://doi.org/1001316107\\\%0020[pii]\\\%002010.1073/pnas.1001316107</a>.</p>
+</div>
+<div id="ref-lovely2015">
+<p>Lovely, Geoffrey A., Robert C. Brewster, David G. Schatz, David Baltimore, and Rob Phillips. 2015. “Single-Molecule Analysis of RAG-Mediated V(D)J DNA Cleavage.” <em>Proceedings of the National Academy of Sciences</em> 112 (14): E1715–E1723. <a href="https://doi.org/10.1073/pnas.1503477112">https://doi.org/10.1073/pnas.1503477112</a>.</p>
+</div>
+<div id="ref-martinac1987">
+<p>Martinac, B., M. Buechner, A. H. Delcour, J. Adler, and C. Kung. 1987. “Pressure-Sensitive Ion Channel in <em>Escherichia Coli</em>.” <em>Proc Natl Acad Sci U S A</em> 84 (April): 2297–2301.</p>
+</div>
+<div id="ref-milo2010">
+<p>Milo, Ron, Paul Jorgensen, Uri Moran, Griffin Weber, and Michael Springer. 2010. “BioNumbersthe Database of Key Numbers in Molecular and Cell Biology.” <em>Nucleic Acids Research</em> 38 (suppl_1): D750–D753. <a href="https://doi.org/10.1093/nar/gkp889">https://doi.org/10.1093/nar/gkp889</a>.</p>
+</div>
+<div id="ref-mishra2016">
+<p>Mishra, Vikas, Maciej Skotak, Heather Schuetz, Abi Heller, James Haorah, and Namas Chandra. 2016. “Primary Blast Causes Mild, Moderate, Severe and Lethal TBI with Increasing Blast Overpressures: Experimental Rat Injury Model.” <em>Scientific Reports</em> 6 (June): 26992. <a href="https://doi.org/10.1038/srep26992">https://doi.org/10.1038/srep26992</a>.</p>
+</div>
+<div id="ref-naismith2012">
+<p>Naismith, J. H., and I. R. Booth. 2012. “Bacterial Mechanosensitive ChannelsMscS: Evolution’s Solution to Creating Sensitivity in Function.” <em>Annu Rev Biophys</em> 41: 157–77. <a href="https://doi.org/10.1146/annurev-biophys-101211-113227">https://doi.org/10.1146/annurev-biophys-101211-113227</a>.</p>
+</div>
+<div id="ref-perutz1950">
+<p>Perutz, M. F., and J. M. Mitchison. 1950. “State of Hæmoglobin in Sickle-Cell Anæmia.” <em>Nature</em> 166 (4225): 677–79. <a href="https://doi.org/10.1038/166677a0">https://doi.org/10.1038/166677a0</a>.</p>
+</div>
+<div id="ref-salis2009a">
+<p>Salis, Howard M., Ethan A. Mirsky, and Christopher A. Voigt. 2009. “Automated Design of Synthetic Ribosome Binding Sites to Control Protein Expression.” <em>Nature Biotechnology</em> 27 (10): 946–50. <a href="https://doi.org/10.1038/nbt.1568">https://doi.org/10.1038/nbt.1568</a>.</p>
+</div>
+<div id="ref-schatz2004">
+<p>Schatz, David G., and David Baltimore. 2004. “Uncovering the V(D)J Recombinase.” <em>Cell</em> 116 (January): S103–S108. <a href="https://doi.org/10.1016/S0092-8674(04)00042-X">https://doi.org/10.1016/S0092-8674(04)00042-X</a>.</p>
+</div>
+<div id="ref-schatz2011">
+<p>Schatz, David G., and Yanhong Ji. 2011. “Recombination Centres and the Orchestration of V(D)J Recombination.” <em>Nature Reviews Immunology</em> 11 (4): 251–63. <a href="https://doi.org/10.1038/nri2941">https://doi.org/10.1038/nri2941</a>.</p>
+</div>
+<div id="ref-schmidt2016">
+<p>Schmidt, Alexander, Karl Kochanowski, Silke Vedelaar, Erik Ahrné, Benjamin Volkmer, Luciano Callipo, Kèvin Knoops, Manuel Bauer, Ruedi Aebersold, and Matthias Heinemann. 2016. “The Quantitative and Condition-Dependent Escherichia Coli Proteome.” <em>Nature Biotechnology</em> 34 (1): 104–10. <a href="https://doi.org/10.1038/nbt.3418">https://doi.org/10.1038/nbt.3418</a>.</p>
+</div>
+<div id="ref-schumann2010">
+<p>Schumann, U., M. D. Edwards, T. Rasmussen, W. Bartlett, P. van West, and I. R. Booth. 2010. “YbdG in <em>Escherichia Coli</em> Is a Threshold-Setting Mechanosensitive Channel with MscM Activity.” <em>Proc Natl Acad Sci U S A</em> 107 (July): 12664–9. <a href="https://doi.org/10.1073/pnas.1001405107\\\%00201001405107\\\%0020%5Bpii%5D">https://doi.org/10.1073/pnas.1001405107\\\%00201001405107\\\%0020[pii]</a>.</p>
+</div>
+<div id="ref-sharan2009">
+<p>Sharan, S. K., L. C. Thomason, S. G. Kuznetsov, and D. L. Court. 2009. “Recombineering: A Homologous Recombination-Based Method of Genetic Engineering.” <em>Nat Protoc</em> 4: 206–23. <a href="https://doi.org/nprot.2008.227\\\%0020%5Bpii%5D\\\%002010.1038/nprot.2008.227">https://doi.org/nprot.2008.227\\\%0020[pii]\\\%002010.1038/nprot.2008.227</a>.</p>
+</div>
+<div id="ref-soufi2015">
+<p>Soufi, Boumediene, Karsten Krug, Andreas Harst, and Boris Macek. 2015. “Characterization of the <em>E. Coli</em> Proteome and Its Modifications During Growth and Ethanol Stress.” <em>Frontiers in Microbiology</em> 6 (February). <a href="https://doi.org/10.3389/fmicb.2015.00103">https://doi.org/10.3389/fmicb.2015.00103</a>.</p>
+</div>
+<div id="ref-sourjik2002b">
+<p>Sourjik, V., and H. C. Berg. 2002. “Receptor Sensitivity in Bacterial Chemotaxis.” <em>Proceedings of the National Academy of Sciences</em> 99 (1): 123–27. <a href="https://doi.org/10.1073/pnas.011589998">https://doi.org/10.1073/pnas.011589998</a>.</p>
+</div>
+<div id="ref-stokes2003a">
+<p>Stokes, N. R., H. D. Murray, C. Subramaniam, R. L. Gourse, P. Louis, W. Bartlett, S. Miller, and I. R. Booth. 2003. “A Role for Mechanosensitive Channels in Survival of Stationary Phase: Regulation of Channel Expression by RpoS.” <em>Proceedings of the National Academy of Sciences</em> 100 (26): 15959–64. <a href="https://doi.org/10.1073/pnas.2536607100">https://doi.org/10.1073/pnas.2536607100</a>.</p>
+</div>
+<div id="ref-ursell2008">
+<p>Ursell, T., R. Phillips, J. Kondev, D. Reeves, and P. A. Wiggins. 2008. “The Role of Lipid Bilayer Mechanics in Mechanosensation.” In <em>Mechanosensitivity in Cells and Tissues 1: Mechanosensitive Ion Channels</em>, edited by A. Kamkin and I. Kiseleva, 37–70. Springer-Verlag.</p>
+</div>
+<div id="ref-vandenberg2016">
+<p>van den Berg, Jonas, Heloisa Galbiati, Akiko Rasmussen, Samantha Miller, and Bert Poolman. 2016. “On the Mobility, Membrane Location and Functionality of Mechanosensitive Channels in <em>Escherichia Coli</em>.” <em>Scientific Reports</em> 6 (1). <a href="https://doi.org/10.1038/srep32709">https://doi.org/10.1038/srep32709</a>.</p>
+</div>
+<div id="ref-victorelli2017">
+<p>Victorelli, Stella, and João F. Passos. 2017. “Telomeres and Cell Senescence - Size Matters Not.” <em>EBioMedicine</em> 21 (March): 14–20. <a href="https://doi.org/10.1016/j.ebiom.2017.03.027">https://doi.org/10.1016/j.ebiom.2017.03.027</a>.</p>
+</div>
+</div>
+						</div><!-- /.content -->
+					</div><!-- /.col -->
+					<div class="col-md-4 col-md-offset-1">
+						<div class="sections-list-wrapper">
+							<div class="sections-list js-sections js-affix js-scrollspy hidden-xs hidden-sm"><span style="font-size: 14pt">Table of Contents</span><hr></div><!-- /.sections-list -->
+						</div>
+					</div><!-- /.col -->
+				</div><!-- /.row -->
+			</div><!-- /.container -->
+		</div><!-- /.section -->
+		
+			<div class="section section--grey">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-7">
+							<div id="disqus_thread"></div>
+<script>
+	/**
+	 *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+	 *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+	 */
+	 /*
+	var disqus_config = function () {
+	this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+		this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+	};
+	*/
+	(function() {
+		var d = document, s = d.createElement('script');
+
+		s.src = 'https://gchure_phd.disqus.com/embed.js';
+
+		s.setAttribute('data-timestamp', +new Date());
+		(d.head || d.body).appendChild(s);
+	})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+						</div><!-- /.col -->
+					</div><!-- /.row -->
+				</div><!-- /.container -->
+			</div><!-- /.section -->
+		
+		<div class="js-footer-area">
+			
+				<nav class="page-nav">	
+					<div class="container">
+						<div class="row">
+							<div class="col-xs-12">
+								
+									<a href="https://gchure.github.io/phd{{site.doks.baseurl}}/published_content" class="page-nav__item page-nav__item--prev">
+										<i class="icon icon--arrow-left"></i>
+										Published Content
+									</a><!-- /.page-nav__item -->
+								
+								
+									<a href="https://gchure.github.io/phd{{site.doks.baseurl}}/chapter_2" class="page-nav__item page-nav__item--next">
+										Chapter 2
+										<i class="icon icon--arrow-right"></i>
+									</a><!-- /.page-nav__item -->
+								
+							</div><!-- /.col -->
+						</div><!-- /.row -->
+					</div><!-- /.container -->
+				</nav><!-- /.page-nav -->
+			
+			
+			
+	<footer class="site-footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-6">
+					
+						<a href="https://gchure.github.io/phd/" class="site-footer__logo">Griffin D. Chure | PhD Thesis</a>
+					
+					
+						<hr>
+						<p class="site-footer__copyright">Copyright &copy; 2020. - Griffin D. Chure <br>All rights reserved.</p>
+					
+				</div><!-- /.col -->
+				
+					<div class="col-sm-6 align-right">
+						<ul class="social-list">
+							
+								<li>
+									<a href="https://twitter.com/gdchure" target="_blank" class="social-list__item social-list__item--twitter">
+										<i class="icon icon--twitter"></i>
+									</a>
+								</li>
+							
+						</ul><!-- /.social-list -->
+					</div><!-- /.col -->
+				
+			</div><!-- /.row -->
+		</div><!-- /.container -->
+	</footer><!-- /.site-footer -->
+
+
+<script src="https://gchure.github.io/phd/doks-theme/assets/js/vendor/jquery.min.js"></script>
+<script type="text/javascript" src="https://gchure.github.io/phd/doks-theme/assets/js/vendor/bootstrap/affix.min.js"></script>
+<script type="text/javascript" src="https://gchure.github.io/phd/doks-theme/assets/js/vendor/bootstrap/scrollspy.min.js"></script>
+<script type="text/javascript" src="https://gchure.github.io/phd/doks-theme/assets/js/vendor/matchHeight.min.js"></script>
+<script type="text/javascript" src="https://gchure.github.io/phd/doks-theme/assets/js/scripts.min.js"></script>
+
+
+
+
+		</div><!-- /.js-footer-area -->
+	</body>
+</html>

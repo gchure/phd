@@ -42,11 +42,10 @@ maximum information about the parameter values that can be extracted
 from the data. Additional experiments which independently measure any of
 these unknown parameters could resolve this degeneracy. For example, NMR
 measurements could be used to directly measure the fraction
-$(1 + e^{-\beta
-\Delta\varepsilon_{AI}})^{-1}$ of active repressors in the absence of
-IPTG (Gardino et al. 2003; Boulton and Melacini 2016).
+$(1 + e^{-\beta  \Delta\varepsilon_{AI}})^{-1}$ of active repressors in the
+absence of IPTG [@gardino2003; @boulton2016]. 
 
-### Computing $\boldsymbol{\Delta\varepsilon_{AI}}$
+### Computing $\Delta\varepsilon_{AI}$
 
 As shown in the previous section, the fold-change response of a single
 strain is not sufficient to determine the three MWC parameters ($K_A$,
@@ -55,8 +54,7 @@ parameters yield nearly identical fold-change responses. To circumvent
 this degeneracy, we now turn to some previous data from the *lac* system
 in order to determine the value of $\Delta\varepsilon_{AI}$ in for the
 induction of the Lac repressor. Specifically, we consider two previous
-sets of work from: (1) Garcia and Phillips (n.d.) and (2) Brewster et
-al. (2014), both of which measured fold-change with the same simple
+sets of work from: (1) @garcia2011  and (2) @brewster2014, both of which measured fold-change with the same simple
 repression system in the absence of inducer ($c=0$) but at various
 repressor copy numbers $R$. The original analysis for both data sets
 assumed that in the absence of inducer all of the Lac repressors were in
@@ -68,7 +66,7 @@ inactive states. We refer to this convoluted energy value as
 $\Delta \tilde{\varepsilon}_{RA}$. We first disentangle the
 relationship between these parameters in Garcia and Phillips and then
 use this relationship to extract the value of $\Delta\varepsilon_{AI}$
-from the Brewster et al. dataset.
+from @brewster2014.
 
 Garcia and Phillips determined the total repressor copy numbers $R$ of
 different strains using quantitative Western blots. Then they measured
@@ -77,25 +75,41 @@ constructs carrying the O1, O2, O3, and Oid *lac* operators integrated
 into the chromosome. These data were then fit to the following
 thermodynamic model to determine the repressor-DNA binding energies
 $\Delta\tilde{\varepsilon}_{RA}$ for each operator,
-\[\label{eq_fold_change_original}
-\foldchange(c=0) = \left(
-1+\frac{R}{N_{NS}}e^{-\beta \Delta\tilde{\varepsilon}_{RA}} \right)^{-1}.\]
+
+$$
+\text{fold-change}(c=0) = \left(
+1+\frac{R}{N_{NS}}e^{-\beta \Delta\tilde{\varepsilon}_{RA}} \right)^{-1}.
+$${#eq:ind_si_simple_fc}
+
 Note that this functional form does not exactly match our fold-change in
-the limit $c=0$, \[\label{eq_appendix_leakiness}
-\foldchange(c=0) = \left(
-1+\frac{1}{1+e^{-\beta \Delta \varepsilon_{AI}}}\frac{R}{N_{NS}}e^{-\beta \Delta\varepsilon_{RA}} \right)^{-1},\]
+the limit $c=0$, 
+
+$$
+\text{fold-change}(c=0) = \left(
+1+\frac{1}{1+e^{-\beta \Delta \varepsilon_{AI}}}\frac{R}{N_{NS}}e^{-\beta
+\Delta\varepsilon_{RA}} \right)^{-1},
+$${#eq:ind_si_leakiness}
+
 since it is missing the factor
 $\frac{1}{1+e^{-\beta \Delta\varepsilon_{AI}}}$ which specifies what
 fraction of repressors are in the active state in the absence of
-inducer, \[\label{eq_appendix_fraction_repressors_active}
-    \frac{1}{1+e^{-\beta \Delta\varepsilon_{AI}}} = p_A(0).\] In other
-words, Garcia and Phillips assumed that in the absence of inducer, all
+inducer, 
+
+$$
+\frac{1}{1+e^{-\beta \Delta\varepsilon_{AI}}} = p_A(0). 
+$${#eq:ind_si_r_active}
+
+In other words, Garcia and Phillips assumed that in the absence of inducer, all
 repressors were active. In terms of our notation, the convoluted energy
 values $\Delta\tilde{\varepsilon}_{RA}$ extracted by Garcia and
 Phillips (namely, $\Delta\tilde{\varepsilon}_{RA}=-15.3~k_B T$ for O1
 and $\Delta\tilde{\varepsilon}_{RA}=-17.0~k_B T$ for Oid) represent
-\[\label{eq_appendix_repressor_operator_energy_conversion}
-    \beta \Delta\tilde{\varepsilon}_{RA} = \beta \Delta\varepsilon_{RA} - \log \left( \frac{1}{1 + e^{-\beta \Delta \varepsilon_{AI}}} \right).\]
+
+$$
+\beta \Delta\tilde{\varepsilon}_{RA} = \beta \Delta\varepsilon_{RA} - \log
+\left( \frac{1}{1 + e^{-\beta \Delta \varepsilon_{AI}}} \right).
+$${#eq:ind_si_tilde_varepsilon}
+
 Note that if $e^{-\beta \Delta \varepsilon_{AI}} \ll 1$, then nearly
 all of the repressors are active in the absence of inducer so that
 $\Delta\tilde{\varepsilon}_{RA} \approx \Delta\varepsilon_{RA}$. In
@@ -104,14 +118,13 @@ $\Delta
 \varepsilon_{RA}$ and $R$, we can use to determine the value of
 $\Delta \varepsilon_{AI}$ by comparing with experimentally determined
 fold-change values. However, the binding energy values that we use from
-Garcia and Phillips (n.d.) are effective parameters
+@garcia2011 are effective parameters
 $\Delta\tilde{\varepsilon}_{RA}$. In this case, we are faced with an
 undetermined system in which we have more variables than equations, and
 we are thus unable to determine the value of
 $\Delta \varepsilon_{AI}$. In order to obtain this parameter, we must
 turn to a more complex regulatory scenario which provides additional
-constraints that allow us to fit for $\Delta
-\varepsilon_{AI}$.
+constraints that allow us to fit for $\Delta \varepsilon_{AI}$.
 
 A variation on simple repression in which multiple copies of the
 promoter are available for repressor binding (for instance, when the
@@ -124,33 +137,55 @@ with known copy number $N$ allows us to perform a fit for the value of
 $\Delta\varepsilon_{AI}$.
 
 To obtain an expression for a system with multiple promoters $N$, we
-follow Weinert et al. (2014), writing the fold-change in terms of the
-the grand canonical ensemble as \[\label{fc_fugacity_A}
-\foldchange = \frac{1}{1 + \lambda_r e^{-\beta \Delta \varepsilon_{RA}}},\]
+follow @weinert2014, writing the fold-change in terms of the
+the grand canonical ensemble as 
+
+$$
+\text{fold-change} = \frac{1}{1 + \lambda_r e^{-\beta \Delta \varepsilon_{RA}}},
+$${#eq:ind_si_fugacity}
+
 where $\lambda_r = e^{\beta \mu}$ is the fugacity and $\mu$ is the
 chemical potential of the repressor. The fugacity will enable us to
 easily enumerate the possible states available to the repressor.
 
 To determine the value of $\lambda_r$, we first consider that the
 total number of repressors in the system, $R_{\text{tot}}$, is fixed
-and given by \[\label{fugacity_rtot_A}
-    R_{\text{tot}} = R_S + R_{NS},\] where $R_S$ represents the number
-of repressors specifically bound to the promoter and $R_{NS}$
-represents the number of repressors nonspecifically bound throughout the
-genome. The value of $R_S$ is given by \[\label{fugacity_rs_A}
-    R_S = N \frac{\lambda_r e^{-\beta \Delta \varepsilon_{RA}}}{1 + \lambda_r e^{-\beta \Delta \varepsilon_{RA}}},\]
+and given by 
+
+$$
+R_{\text{tot}} = R_S + R_{NS}, 
+$${#eq:ind_si_fugacity_rtot}
+
+where $R_S$ represents the number of repressors specifically bound to the
+promoter and $R_{NS}$ represents the number of repressors nonspecifically bound
+throughout the genome. The value of $R_S$ is given by 
+
+$$
+R_S = N \frac{\lambda_r e^{-\beta \Delta \varepsilon_{RA}}}{1 + \lambda_r
+e^{-\beta \Delta \varepsilon_{RA}}},
+$${#eq:ind_si_fugacity_rs}
+
 where $N$ is the number of available promoters in the cell. Note that
 in counting $N$, we do not distinguish between promoters that are on
 plasmid or chromosomally integrated provided that they both have the
 same repressor-operator binding energy (Weinert et al. 2014). The value
-of $R_{NS}$ is similarly give by \[\label{fugacity_rns_A}
-    R_{NS} = N_{NS} \frac{\lambda_r}{1 + \lambda_r},\] where $N_{NS}$
-is the number of non-specific sites in the cell (recall that we use
+of $R_{NS}$ is similarly give by 
+
+$$
+R_{NS} = N_{NS} \frac{\lambda_r}{1 + \lambda_r},
+$${#eq:ind_si_fugacity_rns}
+
+where $N_{NS}$ is the number of non-specific sites in the cell (recall that we use
 $N_{NS} = 4.6 \times 10^6$ for *E. coli*).
 
 Substituting in into the modified yields the form
-\[\label{fugacity_reff_A}
-    p_A(0) R_{\text{tot}} = \frac{1}{1 + e^{-\beta \Delta \varepsilon_{AI}}} \left( N \frac{\lambda_r e^{-\beta \Delta \varepsilon_{RA}}}{1 + \lambda_r e^{-\beta \Delta \varepsilon_{RA}}} + N_{NS} \frac{\lambda_r}{1 + \lambda_r} \right),\]
+
+$$
+p_A(0) R_{\text{tot}} = \frac{1}{1 + e^{-\beta \Delta \varepsilon_{AI}}} \left(
+N \frac{\lambda_r e^{-\beta \Delta \varepsilon_{RA}}}{1 + \lambda_r e^{-\beta
+\Delta \varepsilon_{RA}}} + N_{NS} \frac{\lambda_r}{1 + \lambda_r} \right),
+$${#eq:ind_si_fugacity_pa0}
+
 where we recall from that
 $\beta \Delta \varepsilon_{RA} =   \beta \Delta \tilde\varepsilon_{RA} + \log{\left(\frac{1}{1 + e^{-\beta \Delta \varepsilon_{AI}}}\right)}.$
 Numerically solving for $\lambda_r$ and plugging the value back into
@@ -179,9 +214,7 @@ shows experimental measurements of fold-change for two O1 promoters with
 $N=64$ and $N=52$ copy numbers and one Oid promoter with $N=10$
 from Brewster et al. (2014). By fitting these data to , we extracted the
 parameter value $\Delta\varepsilon_{AI} = 4.5~k_B T$. Substituting
-this value into shows that 99% of the repressors are in the active state
-in the absence of inducer and
-$\Delta\tilde{\varepsilon}_{RA} \approx \Delta\varepsilon_{RA}, so
-that all of the previous energies and calculations made by Garcia and
-Phillips (n.d.; Brewster et al. 2014) were accurate.
-
+this value into shows that 99\% of the repressors are in the active state
+in the absence of inducer and $\Delta\tilde{\varepsilon}_{RA} \approx
+\Delta\varepsilon_{RA}, so that all of the previous energies and calculations
+made by @garcia2011 and @brewster2014 were accurate.

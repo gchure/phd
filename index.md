@@ -46,32 +46,47 @@ grid_navigation:
       url: 'chapter_01'
     - title: >
          Chapter II: Molecular Adaptation
-      excerpt: Signaling processing within allosteric molecules
+      excerpt: Signal processing within allosteric molecules
       cta: read
       url: 'chapter_02'
     - title: >
-         Chapter III: Collapse
-      excerpt: Formulating a state variable for the simple repression motif
+         Chapter III: Evolutionary Adaptation 
+      excerpt: Using the simple repression state variable to predict mutant phenotypes
       cta: read
       url: 'chapter_03'
     - title: >
-         Chapter IV: Evolutionary Adaptation 
-      excerpt: Mutations as modulators of the free energy
+         Chapter IV: Physiological Adaptation 
+      excerpt: On the physiological adaptability of a simple genetic circuit 
       cta: read
       url: 'chapter_04'
     - title: >
-         Chapter V: Physiological Adaptation 
-      excerpt: Adaptability of a genetic circuit to environmental challenges 
-      cta: read
-      url: 'chapter_04'
-    - title: >
-         Chapter VI: Survival
+         Chapter V: Survival
       excerpt: >
-        Adaptation where it counts: surviving environmental insults
+        Adaptation where it counts: surviving environmental insults.
+      cta: read
+      url: 'chapter_04'
+    - title: >
+         Chapter VI: Supplement to Chapter II
+      excerpt: >
+        Supplemental information and extended methods for Chapter II
       cta: read
       url: 'chapter_06'
-
+    - title: >
+         Chapter VII: Supplement to Chapter III
+      excerpt: >
+        Supplemental information and extended methods for Chapter III
+      cta: read
+      url: 'chapter_07'
+    - title: >
+         Chapter VIII: Supplement to Chapter IV
+      excerpt: >
+        Supplemental information and extended methods for Chapter IV
+      cta: read
+      url: 'chapter_08'
+    - title: >
+         Chapter IX: Supplement to Chapter V
+      excerpt: >
+        Supplemental information and extended methods for Chapter V
+      cta: read
+      url: 'chapter_09'
 ---
-
-
-

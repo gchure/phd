@@ -14,8 +14,8 @@ MAX_EXP = 100
 MEAN_AREA = 4.86
 MEAN_CAL = 3272
 
-data = pd.read_csv("../../data/ch6_mscl/mscl_survival_data.csv")
-cal_data = pd.read_csv("../../data/ch6_mscl/mlg910_calibration_data.csv")
+data = pd.read_csv("../../data/ch5_mscl/mscl_survival_data.csv")
+cal_data = pd.read_csv("../../data/ch5_mscl/mlg910_calibration_data.csv")
 data['experiment'] = 'shock'
 data = pd.concat([data, cal_data], ignore_index=True, sort=False)
 
@@ -118,7 +118,7 @@ for a in ax:
 fig.text(0.01, 0.99, "(A)", fontsize=8)
 fig.text(0.45, 0.99, "(B)", fontsize=8)
 plt.tight_layout()
-plt.savefig("../figs/ch6_fig2_plots.svg", bbox_inches="tight", dpi=300)
+plt.savefig("../figs/ch5_fig2_plots.svg", bbox_inches="tight", dpi=300)
 # plt.savefig('../../figs/fig{}_plots.png'.format(FIG_NO), bbox_inches='tight', dpi=300)
 
 

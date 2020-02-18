@@ -11,7 +11,7 @@ import phd.stats
 colors, palette = phd.viz.phd_style()
 
 # Load in the data and isolate to onlly the shock experiments.
-shock_data = pd.read_csv("../../data/ch6_mscl/mscl_survival_data.csv")
+shock_data = pd.read_csv("../../data/ch5_mscl/mscl_survival_data.csv")
 
 # Define the colors
 color_dict = {True: colors["purple"], False: colors["orange"]}
@@ -70,8 +70,8 @@ phd.viz.titlebox(ax[1], "fast shock ($\geq$ 1.0 Hz)", color=colors['black'], bgc
                 fontsize=8, boxsize="10%")
 
 plt.tight_layout()
-plt.savefig("../figs/ch6_fig4.pdf", bbox_inches="tight", dpi=300)
-plt.savefig("../figs/ch6_fig4.png", bbox_inches="tight", dpi=300)
+plt.savefig("../figs/ch5_fig4.pdf", bbox_inches="tight", dpi=300)
+plt.savefig("../figs/ch5_fig4.png", bbox_inches="tight", dpi=300)
 
 
 # %%

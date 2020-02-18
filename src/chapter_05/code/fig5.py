@@ -14,7 +14,7 @@ colors, palette = phd.viz.phd_style()
 MAX_EXP = 100
 
 # # Load the dataset.
-data = pd.read_csv("../../data/ch6_mscl/mscl_survival_data.csv")
+data = pd.read_csv("../../data/ch5_mscl/mscl_survival_data.csv")
 
 def logit(beta_0, beta_1, chan):
     return (1 + chan ** -beta_1 * np.exp(-beta_0)) ** -1
@@ -36,7 +36,7 @@ def compute_mean_sem(df):
 
 
 #%% Compute the survival probability curves given the logistic regression parameters.
-traces = pd.read_csv("../../data/ch6_mscl/complete_mcmc_traces.csv")
+traces = pd.read_csv("../../data/ch5_mscl/complete_mcmc_traces.csv")
 
 # Split by the shock rate.
 slow_data = data[(data["shock_class"] == "slow")].copy()
@@ -200,8 +200,8 @@ ax[3].set_ylim([-0.01, 1.01])
 for a in ax:
     a.set_xlim([1, 1250])
 
-plt.savefig("..//figs/ch6_fig5_plots.pdf", bbox_inches="tight", dpi=300)
-# plt.savefig("../figs/ch6_fig5_plots.png", bbox_inches="tight", dpi=300)
+plt.savefig("..//figs/ch5_fig5_plots.pdf", bbox_inches="tight", dpi=300)
+# plt.savefig("../figs/ch5_fig5_plots.png", bbox_inches="tight", dpi=300)
 
 
 # %%
