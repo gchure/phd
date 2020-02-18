@@ -9,14 +9,20 @@
 
 <script type="text/x-mathjax-config">
 	MathJax.Hub.Config({
+    "HTML-CSS" : {
+        availableFonts : ["STIX"],
+        preferredFont : "Gyre Pagella",
+        webFont : "STIX-Web",
+        imageFont : null
+    },
 	  TeX: {
 		equationNumbers: {
 		  autoNumber: "AMS"
 		}
 	  },
 	  tex2jax: {
-		inlineMath: [ ['$','$']], 
-		displayMath: [ ['$$','$$'] ],
+		inlineMath: [['$','$']], 
+		displayMath: [['$$','$$']],
 		processEscapes: true,
 	  }
 	});
@@ -27,7 +33,7 @@
 	.eqnos-number { position: absolute; right: 0em; top: 50%; line-height: 0; }
   </style>
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <script id="MathJax-script" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
   
 
 <link rel="icon" href="https://gchure.github.io/phd/favicon.ico" type="image/x-icon">
@@ -273,15 +279,11 @@ $$</span><br /><span class="eqnos-number">(10)</span></span></p>
 <p>Flow cytometry data will frequently include a number of spurious events or other undesirable data points such as cell doublets and debris. The process of restricting the collected data set to those data determined to be “real” is commonly referred to as gating. These gates are typically drawn manually and restrict the data set to those points which display a high degree of linear correlation between their forward-scatter (FSC) and side-scatter (SSC). The development of unbiased and unsupervised methods of drawing these gates is an active area of research . For our purposes, we assume that the fluorescence level of the population should be log-normally distributed about some mean value. With this assumption in place, we developed a method that allows us to restrict the data used to compute the mean fluorescence intensity of the population to the smallest two-dimensional region of the <span class="math inline">log (<em>F</em><em>S</em><em>C</em>)</span> vs. <span class="math inline">log (<em>S</em><em>S</em><em>C</em>)</span> space in which 40% of the data is found. This was performed by fitting a bivariate Gaussian distribution and restricting the data used for calculation to those that reside within the 40th percentile. This procedure is described in more detail in the supplemental Chapter 7.</p>
 <h2 id="experimental-determination-of-fold-change">Experimental Determination of Fold-Change</h2>
 <p>For each strain and IPTG concentration, the fold-change in gene expression was calculated by taking the ratio of the population mean YFP expression in the presence of LacI repressor to that of the population mean in the absence of LacI repressor. However, the measured fluorescence intensity of each cell also includes the autofluorescence contributed by the weak excitation of the myriad protein and small molecules within the cell. To correct for this background, we computed the fold change as</p>
-<p><span id="eq:induction_image_def" class="eqnos"><br /><span class="math display">$$
-\text{fold-change} = \frac{\langle I_{R &gt; 0} \rangle - \langle
-I_\text{auto}\rangle}{\langle I_{R = 0} \rangle - \langle I_\text{auto}\rangle},
-$$</span><br /><span class="eqnos-number">(1)</span></span></p>
+<p><span id="eq:induction_image_def" class="eqnos"><span class="math inline">$\text{fold-change} = \frac{\langle I_{R &gt; 0} \rangle - \langle I_\text{auto}\rangle}{\langle I_{R = 0} \rangle - \langle I_\text{auto}\rangle},$</span><span class="eqnos-number">(1)</span></span></p>
 <p>where <span class="math inline">⟨<em>I</em><sub><em>R</em> &gt; 0</sub>⟩</span> is the average cell YFP intensity in the presence of repressor, <span class="math inline">⟨<em>I</em><sub><em>R</em> = 0</sub>⟩</span> is the average cell YFP intensity in the absence of repressor, and <span class="math inline">⟨<em>I</em><sub>auto</sub>⟩</span> is the average cell autofluorescence intensity, as measured from cells that lack the <em>lac</em>-YFP construct.</p>
 <h2 id="bayesian-parameter-estimation">Bayesian Parameter Estimation</h2>
 <p>In this work, we determine the the most likely parameter values for the inducer dissociation constants <span class="math inline"><em>K</em><sub><em>A</em></sub></span> and <span class="math inline"><em>K</em><sub><em>I</em></sub></span> of the active and inactive state, respectively, using Bayesian methods. We compute the probability distribution of the value of each parameter given the data <span class="math inline"><em>D</em></span>, which by Bayes’ theorem is given by</p>
-<p><span id="eq:induction_bayes" class="eqnos"><br /><span class="math display">$$
- P(K_A, K_I \mid D) = \frac{P(D \mid K_A, K_I)P(K_A, K_I)}{P(D)},
+<p><span id="eq:induction_bayes" class="eqnos"><br /><span class="math display">$$P(K_A, K_I \,\vert\, D) = \frac{P(D \,\vert\, K_A, K_I)P(K_A, K_I)}{P(D)},
 $$</span><br /><span class="eqnos-number">(2)</span></span></p>
 <p>where <span class="math inline"><em>D</em></span> is all the data composed of independent variables (repressor copy number <span class="math inline"><em>R</em></span>, repressor-DNA binding energy <span class="math inline"><em>Δ</em><em>ε</em><sub><em>R</em><em>A</em></sub></span>, and inducer concentration <span class="math inline"><em>c</em></span>) and one dependent variable (experimental fold-change). <span class="math inline"><em>P</em>(<em>D</em> ∣ <em>K</em><sub><em>A</em></sub>, <em>K</em><sub><em>I</em></sub>)</span> is the likelihood of having observed the data given the parameter values for the dissociation constants, <span class="math inline"><em>P</em>(<em>K</em><sub><em>A</em></sub>, <em>K</em><sub><em>I</em></sub>)</span> contains all the prior information on these parameters, and <span class="math inline"><em>P</em>(<em>D</em>)</span> serves as a normalization constant, which we can ignore in our parameter estimation. Eq. ?? assumes a deterministic relationship between the parameters and the data, so in order to construct a probabilistic relationship as required by Eq. <a href="#eq:induction_bayes">2</a>, we assume that the experimental fold-change for the <span class="math inline"><em>i</em><sup>th</sup></span> datum given the parameters is of the form <span id="eq:induction_fold_change_experimental" class="eqnos"><br /><span class="math display">$$
 \text{fold-change}_\text{exp}^{(i)} = \left( 1 + \frac{\left(1 +

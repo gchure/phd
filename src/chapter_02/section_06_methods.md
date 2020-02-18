@@ -138,10 +138,7 @@ contributed by the weak excitation of the myriad protein and small
 molecules within the cell. To correct for this background, we computed
 the fold change as
 
-$$
-\text{fold-change} = \frac{\langle I_{R > 0} \rangle - \langle
-I_\text{auto}\rangle}{\langle I_{R = 0} \rangle - \langle I_\text{auto}\rangle},
-$${#eq:induction_image_def}
+$\text{fold-change} = \frac{\langle I_{R > 0} \rangle - \langle I_\text{auto}\rangle}{\langle I_{R = 0} \rangle - \langle I_\text{auto}\rangle},${#eq:induction_image_def}
 
 where $\langle I_{R > 0}\rangle$ is the average cell YFP intensity in
 the presence of repressor, $\langle I_{R = 0}\rangle$ is the average
@@ -157,8 +154,7 @@ inactive state, respectively, using Bayesian methods. We compute the
 probability distribution of the value of each parameter given the data
 $D$, which by Bayes’ theorem is given by 
 
-$$
- P(K_A, K_I \mid D) = \frac{P(D \mid K_A, K_I)P(K_A, K_I)}{P(D)},
+$$P(K_A, K_I \,\vert\, D) = \frac{P(D \,\vert\, K_A, K_I)P(K_A, K_I)}{P(D)},
 $${#eq:induction_bayes}
 
 where $D$ is all the data composed of independent variables (repressor

@@ -45,6 +45,8 @@ gems:
 
 markdown: Pandoc
 pandoc:
+    extensions:
+    - mathjax
     skip:
       full: false
       posts: false

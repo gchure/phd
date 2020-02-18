@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, minimum-scale=1.0">
+<title>Chapter 3</title>
+
+
+<script type="text/x-mathjax-config">
+	MathJax.Hub.Config({
+    "HTML-CSS" : {
+        availableFonts : ["STIX"],
+        preferredFont : "Gyre Pagella",
+        webFont : "STIX-Web",
+        imageFont : null
+    },
+	  TeX: {
+		equationNumbers: {
+		  autoNumber: "AMS"
+		}
+	  },
+	  tex2jax: {
+		inlineMath: [['$','$']], 
+		displayMath: [['$$','$$']],
+		processEscapes: true,
+	  }
+	});
+  </script>
+  <style>
+	.eqnos { display: inline-block; position: relative; width: 100%; }
+	.eqnos br { display: none; }
+	.eqnos-number { position: absolute; right: 0em; top: 50%; line-height: 0; }
+  </style>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+  
+
+<link rel="icon" href="https://gchure.github.io/phd/favicon.ico" type="image/x-icon">
+<link href="https://fonts.googleapis.com/css?family=Nanum+Myeongjo&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Alegreya|Lora&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://gchure.github.io/phd/doks-theme/assets/css/style.css">
+
+	</head>
+	<body class="grey" data-spy="scroll" data-target=".js-scrollspy">
+		
+
+
+	<header class="site-header">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12">
+					
+						<a href="https://gchure.github.io/phd/" class="site-header__logo"><i class="icon icon--chevron-left"></i> Home</a>
+					
+					
+				</div><!-- /.col -->
+			</div><!-- /.row -->
+		</div><!-- /.container -->
+	</header><!-- /.site-header -->
+
+
+		<div class="hero-subheader" style="background-image: url(https://gchure.github.io/phd/doks-theme/assets/images/switchboard.png); background-position: center;">
+
+			<div class="container" style="background-color: rgba(0,0,0, 0.75); border:0.75px solid white;">
+				<div class="row">
+					<div class="col-md-7">
+						<div class="align-container" data-mh>
+							<div class="align-inner">
+								
+									<h2 class="hero-subheader__title">Chapter 3</h2>
+								
+								
+									<h1 class="hero-subheader__title">Known Unknowns, Unknown Knowns, and Unforseen Consequences: Using Free Energy Shifts To Predict Mutant Phenotypes
+</h1>
+								
+								
+								<!-- 
+									
+										<a href="https://gchure.github.io/phdchapter_02" class="btn btn--dark btn--rounded btn--w-icon btn--w-icon-left">
+											<i class="icon icon--arrow-left"></i>	
+										</a>
+									
+									
+										<a href="https://gchure.github.io/phdchapter_04" class="btn btn--dark btn--rounded btn--w-icon">
+											<i class="icon icon--arrow-right"></i>
+										</a>
+									
+								 -->
+							</div><!-- /.align-inner -->
+						</div><!-- /.align-container -->
+					</div><!-- /.col -->
+					
+						<div class="col-md-5 col-md-offset-0 hidden-xs hidden-sm">
+							<div class="align-container" data-mh>
+								<div class="align-inner">
+									<div class="hero-subheader__author">
+										<p class="hero-subheader__author-title">
+												Summary
+												<i class="icon icon--chevron-down"></i>
+										</p><!-- /.hero-subheader__author-title -->
+										<p>
+Here, I present a biophysical model of allosteric transcriptional regulation that directly links the location of a mutation within a repressor to the biophysical parameters that describe its behavior. Here, we explore the phenotypic space of a repressor with mutations in either the inducer binding or DNA binding domains. Using the LacI repressor in <i>Escherichia</i> <i>coli</i>, we make sharp, falsifiable predictions and use this framework to generate a null hypothesis for how double mutants behave, given knowledge of the single mutants. Linking mutations to the parameters which govern the system allows for quantitative predictions of how the free energy of the system changes as a result, permitting coarse graining of high-dimensional data into a single-parameter description of the mutational consequences.
+</p>
+									</div><!-- /.hero-subheader__author -->
+								</div><!-- /.align-inner -->
+							</div><!-- /.align-container -->
+						</div><!-- /.col -->
+					
+				</div><!-- /.row -->
+			</div><!-- /.container -->
+		</div><!-- /.hero-subheader -->
+		
+				<nav class="page-nav">
+					<div class="container" >
+						<div class="row" >
+							<div class="col-xs-12">
+								
+									<a href="https://gchure.github.io/phdchapter_02" class="page-nav__item page-nav__item--prev">
+										<i class="icon icon--arrow-left"></i>
+										Chapter II
+									</a><!-- /.page-nav__item -->
+								
+								
+									<a href="https://gchure.github.io/phdchapter_04" class="page-nav__item page-nav__item--next">
+										Chapter IV
+										<i class="icon icon--arrow-right"></i>
+									</a><!-- /.page-nav__item -->
+								
+							</div><!-- /.col -->
+						</div><!-- /.row -->
+					</div><!-- /.container -->
+				</nav><!-- /.page-nav -->
+			
+
+		<div class="section">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-7">
+						<div class="content">
+							<strong>Published as …</strong>
+<hr/>
+<p>A version of this chapter originally appeared as Chure, G; Razo-Mejia, M., Belliveau, N.M.; Kaczmarek, Zofii A.; Einav, T.; Barnes, Stephanie L.; Lewis, M., and Phillips, R. (2019). Predictive Shifts in Free Energy Couple Mutations to Their Phenotypic Consequences. PNAS 116(37), G.C., M.R.M, N.M.B., Z.A.K., and S.L.B designed the experiments and collected and analyzed data. G.C. developed theoretical treatment of free energy shifts. G.C., M.R.M, N.M.B., Z.A.K., T.E., S.L.B., and R.P. designed the research project. G.C. and R.P. wrote the paper. M.L. provided guidance and advice.</p>
+<h1 id="introduction">Introduction</h1>
+<p>Thermodynamic treatments of transcriptional regulation have been fruitful in their ability to generate quantitative predictions of gene expression as a function of a minimal set of physically meaningful parameters <span class="citation" data-cites="ackers1982 buchler2003 vilar2003 garcia2011 daber2009a brewster2014 weinert2014 rydenfelt2014b razo-mejia2014 razo-mejia2018 bintu2005 bintu2005a kuhlman2007">(Ackers and Johnson <a href="#ref-ackers1982" role="doc-biblioref">1982</a>; Buchler, Gerland, and Hwa <a href="#ref-buchler2003" role="doc-biblioref">2003</a>; Vilar and Leibler <a href="#ref-vilar2003" role="doc-biblioref">2003</a>; Garcia and Phillips <a href="#ref-garcia2011" role="doc-biblioref">2011</a>; Daber, Sharp, and Lewis <a href="#ref-daber2009a" role="doc-biblioref">2009</a>; Brewster et al. <a href="#ref-brewster2014" role="doc-biblioref">2014</a>; Weinert et al. <a href="#ref-weinert2014" role="doc-biblioref">2014</a>; Rydenfelt et al. <a href="#ref-rydenfelt2014b" role="doc-biblioref">2014</a>; Razo-Mejia et al. <a href="#ref-razo-mejia2014" role="doc-biblioref">2014</a>, <a href="#ref-razo-mejia2018" role="doc-biblioref">2018</a>; Bintu, Buchler, Garcia, Gerland, Hwa, Kondev, and Phillips <a href="#ref-bintu2005" role="doc-biblioref">2005</a>; Bintu, Buchler, Garcia, Gerland, Hwa, Kondev, Kuhlman, et al. <a href="#ref-bintu2005a" role="doc-biblioref">2005</a>; Kuhlman et al. <a href="#ref-kuhlman2007" role="doc-biblioref">2007</a>)</span>. These models quantitatively describe numerous properties of input-output functions, such as the leakiness, saturation, dynamic range, steepness of response, and the <span class="math inline"><em>E</em><em>C</em><sub>50</sub></span> – the concentration of inducer at which the response is half maximal. The mathematical forms of these phenotypic properties are couched in terms of a minimal set of experimentally accessible variables, such as the inducer concentration, transcription factor copy number, and the DNA sequence of the binding site <span class="citation" data-cites="razo-mejia2018">(Razo-Mejia et al. <a href="#ref-razo-mejia2018" role="doc-biblioref">2018</a>)</span>. While the amino acid sequence of the transcription factor is another controllable variable, it is seldom implemented in quantitative terms considering mutations with subtle changes in chemistry frequently yield unpredictable physiological consequences. In this work, we examine how a series of mutations in either the DNA binding or inducer binding domains of a transcriptional repressor influence the values of the biophysical parameters which govern its regulatory behavior.</p>
+<p>We build upon the results presented in Chapter 1 of this thesis and present a theoretical framework for understanding how mutations in the amino acid sequenc of the repressor affect different parameters and alter the free energy of the system. We find that the parameters capturing the allosteric nature of the repressor, the repressor copy number, and the DNA binding specificity contribute independently to the free energy of the system with different degrees of sensitivity. Furthermore, changes restricted to one of these three groups of parameters result in characteristic changes in the free energy relative to the wild-type repressor, providing falsifiable predictions of how different classes of mutations should behave.</p>
+<p>Next, we test these descriptions experimentally using the well-characterized transcriptional repressor of the <em>lac</em> operon LacI in <em>E. coli</em> regulating expression of a fluorescent reporter. We introduce a series of point mutations in either the inducer binding or DNA binding domain. We then measure the full induction profile of each mutant, determine the minimal set of parameters that are affected by the mutation, and predict how each mutation tunes the free energy at different inducer concentrations, repressor copy numbers, and DNA binding strengths. We find in general that mutations in the DNA binding domain only influence DNA binding strength, and that mutations within the inducer binding domain affect only the parameters which dictate the allosteric response. The degree to which these parameters are insulated is notable, as the very nature of allostery suggests that all parameters are intimately connected, thus enabling binding events at one domain to be “sensed” by another.</p>
+<p>With knowledge of how a collection of DNA binding and inducer binding single mutants behave, we predict the induction profiles and the free energy changes of pairwise double mutants with quantitative accuracy. We find that the energetic effects of each individual mutation are additive, indicating that epistatic interactions are absent between the mutations examined here. Our model provides a means for identifying and quantifying the extent of epistatic interactions in a more complex set of mutations, and can shed light on how the protein sequence and general regulatory architecture coevolve.</p>
+<div id="refs" class="references hanging-indent" role="doc-bibliography">
+<div id="ref-ackers1982">
+<p>Ackers, Gary K, and Alexander D Johnson. 1982. “Quantitative Model for Gene Regulation by A Phage Repressor.” <em>Proc. Natl. Acad. Sci. USA</em>, 5.</p>
+</div>
+<div id="ref-bintu2005a">
+<p>Bintu, Lacramioara, Nicolas E Buchler, Hernan G Garcia, Ulrich Gerland, Terence Hwa, Jané Kondev, Thomas Kuhlman, and Rob Phillips. 2005. “Transcriptional Regulation by the Numbers: Applications.” <em>Current Opinion in Genetics &amp; Development</em> 15 (2): 125–35. <a href="https://doi.org/10.1016/j.gde.2005.02.006">https://doi.org/10.1016/j.gde.2005.02.006</a>.</p>
+</div>
+<div id="ref-bintu2005">
+<p>Bintu, Lacramioara, Nicolas E Buchler, Hernan G Garcia, Ulrich Gerland, Terence Hwa, Jané Kondev, and Rob Phillips. 2005. “Transcriptional Regulation by the Numbers: Models.” <em>Current Opinion in Genetics &amp; Development</em> 15 (2): 116–24. <a href="https://doi.org/10.1016/j.gde.2005.02.007">https://doi.org/10.1016/j.gde.2005.02.007</a>.</p>
+</div>
+<div id="ref-brewster2014">
+<p>Brewster, Robert C., Franz M. Weinert, Hernan G. Garcia, Dan Song, Mattias Rydenfelt, and Rob Phillips. 2014. “The Transcription Factor Titration Effect Dictates Level of Gene Expression.” <em>Cell</em> 156 (6): 1312–23. <a href="https://doi.org/10.1016/j.cell.2014.02.022">https://doi.org/10.1016/j.cell.2014.02.022</a>.</p>
+</div>
+<div id="ref-buchler2003">
+<p>Buchler, N. E., U. Gerland, and T. Hwa. 2003. “On Schemes of Combinatorial Transcription Logic.” <em>Proceedings of the National Academy of Sciences</em> 100 (9): 5136–41. <a href="https://doi.org/10.1073/pnas.0930314100">https://doi.org/10.1073/pnas.0930314100</a>.</p>
+</div>
+<div id="ref-daber2009a">
+<p>Daber, Robert, Kim Sharp, and Mitchell Lewis. 2009. “One Is Not Enough.” <em>Journal of Molecular Biology</em> 392 (5): 1133–44. <a href="https://doi.org/10.1016/j.jmb.2009.07.050">https://doi.org/10.1016/j.jmb.2009.07.050</a>.</p>
+</div>
+<div id="ref-garcia2011">
+<p>Garcia, H. G., and R. Phillips. 2011. “Quantitative Dissection of the Simple Repression Input-Output Function.” <em>Proceedings of the National Academy of Sciences</em> 108 (29): 12173–8. <a href="https://doi.org/10.1073/pnas.1015616108">https://doi.org/10.1073/pnas.1015616108</a>.</p>
+</div>
+<div id="ref-kuhlman2007">
+<p>Kuhlman, T., Z. Zhang, M. H. Saier, and T. Hwa. 2007. “Combinatorial Transcriptional Control of the Lactose Operon of Escherichia Coli.” <em>Proceedings of the National Academy of Sciences</em> 104 (14): 6043–8. <a href="https://doi.org/10.1073/pnas.0606717104">https://doi.org/10.1073/pnas.0606717104</a>.</p>
+</div>
+<div id="ref-razo-mejia2018">
+<p>Razo-Mejia, Manuel, Stephanie L. Barnes, Nathan M. Belliveau, Griffin Chure, Tal Einav, Mitchell Lewis, and Rob Phillips. 2018. “Tuning Transcriptional Regulation Through Signaling: A Predictive Theory of Allosteric Induction.” <em>Cell Systems</em> 6 (4): 456–469.e10. <a href="https://doi.org/10.1016/j.cels.2018.02.004">https://doi.org/10.1016/j.cels.2018.02.004</a>.</p>
+</div>
+<div id="ref-razo-mejia2014">
+<p>Razo-Mejia, M., J. Q. Boedicker, D. Jones, A. DeLuna, J. B. Kinney, and R. Phillips. 2014. “Comparison of the Theoretical and Real-World Evolutionary Potential of a Genetic Circuit.” <em>Physical Biology</em> 11 (2): 026005. <a href="https://doi.org/10.1088/1478-3975/11/2/026005">https://doi.org/10.1088/1478-3975/11/2/026005</a>.</p>
+</div>
+<div id="ref-rydenfelt2014b">
+<p>Rydenfelt, Mattias, Robert Sidney Cox, Hernan Garcia, and Rob Phillips. 2014. “Statistical Mechanical Model of Coupled Transcription from Multiple Promoters Due to Transcription Factor Titration.” <em>Physical Review E</em> 89 (1): 012702. <a href="https://doi.org/10.1103/PhysRevE.89.012702">https://doi.org/10.1103/PhysRevE.89.012702</a>.</p>
+</div>
+<div id="ref-vilar2003">
+<p>Vilar, José M. G., and Stanislas Leibler. 2003. “DNA Looping and Physical Constraints on Transcription Regulation.” <em>Journal of Molecular Biology</em> 331 (5): 981–89. <a href="https://doi.org/10.1016/S0022-2836(03)00764-2">https://doi.org/10.1016/S0022-2836(03)00764-2</a>.</p>
+</div>
+<div id="ref-weinert2014">
+<p>Weinert, Franz M., Robert C. Brewster, Mattias Rydenfelt, Rob Phillips, and Willem K. Kegel. 2014. “Scaling of Gene Expression with Transcription-Factor Fugacity.” <em>Physical Review Letters</em> 113 (25). <a href="https://doi.org/10.1103/PhysRevLett.113.258101">https://doi.org/10.1103/PhysRevLett.113.258101</a>.</p>
+</div>
+</div>
+						</div><!-- /.content -->
+					</div><!-- /.col -->
+					<div class="col-md-4 col-md-offset-1">
+						<div class="sections-list-wrapper">
+							<div class="sections-list js-sections js-affix js-scrollspy hidden-xs hidden-sm"><span style="font-size: 14pt">Table of Contents</span><hr></div><!-- /.sections-list -->
+						</div>
+					</div><!-- /.col -->
+				</div><!-- /.row -->
+			</div><!-- /.container -->
+		</div><!-- /.section -->
+		
+			<div class="section section--grey">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-7">
+							<div id="disqus_thread"></div>
+<script>
+	/**
+	 *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+	 *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+	 */
+	 /*
+	var disqus_config = function () {
+	this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+		this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+	};
+	*/
+	(function() {
+		var d = document, s = d.createElement('script');
+
+		s.src = 'https://gchure_phd.disqus.com/embed.js';
+
+		s.setAttribute('data-timestamp', +new Date());
+		(d.head || d.body).appendChild(s);
+	})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+						</div><!-- /.col -->
+					</div><!-- /.row -->
+				</div><!-- /.container -->
+			</div><!-- /.section -->
+		
+		<div class="js-footer-area">
+			
+				<nav class="page-nav">	
+					<div class="container">
+						<div class="row">
+							<div class="col-xs-12">
+								
+									<a href="https://gchure.github.io/phdchapter_02" class="page-nav__item page-nav__item--prev">
+										<i class="icon icon--arrow-left"></i>
+										Chapter II
+									</a><!-- /.page-nav__item -->
+								
+								
+									<a href="https://gchure.github.io/phdchapter_04" class="page-nav__item page-nav__item--next">
+										Chapter IV
+										<i class="icon icon--arrow-right"></i>
+									</a><!-- /.page-nav__item -->
+								
+							</div><!-- /.col -->
+						</div><!-- /.row -->
+					</div><!-- /.container -->
+				</nav><!-- /.page-nav -->
+			
+			
+			
+	<footer class="site-footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-6">
+					
+						<a href="https://gchure.github.io/phd/" class="site-footer__logo">Griffin D. Chure | PhD Thesis</a>
+					
+					
+						<hr>
+						<p class="site-footer__copyright">Copyright &copy; 2020. - Griffin D. Chure <br>All rights reserved.</p>
+					
+				</div><!-- /.col -->
+				
+					<div class="col-sm-6 align-right">
+						<ul class="social-list">
+							
+								<li>
+									<a href="https://twitter.com/gdchure" target="_blank" class="social-list__item social-list__item--twitter">
+										<i class="icon icon--twitter"></i>
+									</a>
+								</li>
+							
+						</ul><!-- /.social-list -->
+					</div><!-- /.col -->
+				
+			</div><!-- /.row -->
+		</div><!-- /.container -->
+	</footer><!-- /.site-footer -->
+
+
+<script src="https://gchure.github.io/phd/doks-theme/assets/js/vendor/jquery.min.js"></script>
+<script type="text/javascript" src="https://gchure.github.io/phd/doks-theme/assets/js/vendor/bootstrap/affix.min.js"></script>
+<script type="text/javascript" src="https://gchure.github.io/phd/doks-theme/assets/js/vendor/bootstrap/scrollspy.min.js"></script>
+<script type="text/javascript" src="https://gchure.github.io/phd/doks-theme/assets/js/vendor/matchHeight.min.js"></script>
+<script type="text/javascript" src="https://gchure.github.io/phd/doks-theme/assets/js/scripts.min.js"></script>
+
+
+
+
+		</div><!-- /.js-footer-area -->
+	</body>
+</html>
