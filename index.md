@@ -19,7 +19,7 @@ author:
     description: >
       The ability to adapt is central to the definition of 'Life'. Adaptation can
       be found across the biological scales, governing the nanosecond-scale
-      conformational switching of proteins to millenia-long migrations. This
+      conformational switching of proteins to ecological dynamics. This
       website presents the text of my Ph.D. thesis in which I dissected adaptive
       processes at the molecular and organismal level. All research, unless
       otherwise stated, was performed at the California Institute of Technology

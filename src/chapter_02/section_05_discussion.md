@@ -41,23 +41,23 @@ experimentally accessible parameters, namely, the repressor copy number,
 the repressor-DNA binding energy, and the concentration of inducer. We
 tested these predictions on a range of strains whose repressor copy
 number spanned two orders of magnitude and whose DNA binding affinity
-spanned 6 \(k_BT\). We argue that one would not be able to generate such
+spanned 6 $k_BT$. We argue that one would not be able to generate such
 a wide array of predictions by using a Hill function, which abstracts
 away the biophysical meaning of the parameters into phenomenological
 parameters .
 
 More precisely, we tested our model in the context of a *lac*-based
 simple repression system by first determining the allosteric
-dissociation constants \(K_A\) and \(K_I\) from a single induction data
-set (O2 operator with binding energy \(\Delta
-\varepsilon_{RA} = -13.9~k_BT\) and repressor copy number \(R = 260\))
+dissociation constants $K_A$ and $K_I$ from a single induction data
+set (O2 operator with binding energy $\Delta
+\varepsilon_{RA} = -13.9~k_BT$ and repressor copy number $R = 260$)
 and then using these values to make parameter-free predictions of the
 induction profiles for seventeen other strains where
-\(\Delta \varepsilon_{RA}\) and \(R\) were varied significantly (see ).
+$\Delta \varepsilon_{RA}$ and $R$ were varied significantly (see ).
 We next measured the induction profiles of these seventeen strains using
 flow cytometry and found that our predictions consistently and
 accurately captured the primary features for each induction data set, as
-shown in -. Importantly, we find that fitting \(K_A\) and \(K_I\) to
+shown in -. Importantly, we find that fitting $K_A$ and $K_I$ to
 data from any other strain would have resulted in nearly identical
 predictions (see and , Section “”). This suggests that a few carefully
 chosen measurements can lead to a deep quantitative understanding of how
@@ -73,15 +73,15 @@ underlying molecular mechanism.
 Beyond observing changes in fold-change as a function of effector
 concentration, our application of the MWC model allows us to explicitly
 predict the values of the induction curves’ key parameters, namely, the
-leakiness, saturation, dynamic range, \([EC_{50}]\), and the effective
+leakiness, saturation, dynamic range, $[EC_{50}]$, and the effective
 Hill coefficient (see ). We are consistently able to accurately predict
 the leakiness, saturation, and dynamic range for each of the strains.
 For both the O1 and O2 data sets, our model also accurately predicts the
-effective Hill coefficient and \([EC_{50}]\), though these predictions
+effective Hill coefficient and $[EC_{50}]$, though these predictions
 for O3 are noticeably less accurate. While performing a global fit for
 all model parameters marginally improves the prediction for O3 (see ,
 Section “”), we are still unable to accurately predict the effective
-Hill coefficient or the \([EC_{50}]\). We further tried including
+Hill coefficient or the $[EC_{50}]$. We further tried including
 additional states (such as allowing the inactive repressor to bind to
 the operator), relaxing the weak promoter approximation, accounting for
 changes in gene and repressor copy number throughout the cell cycle ,
@@ -92,11 +92,11 @@ reconciled.
 
 The dynamic range, which is of considerable interest when designing or
 characterizing a genetic circuit, is revealed to have an interesting
-property: although changing the value of \(\Delta \varepsilon_{RA}\)
+property: although changing the value of $\Delta \varepsilon_{RA}$
 causes the dynamic range curves to shift to the right or left, each
 curve has the same shape and in particular the same maximum value. This
 means that strains with strong or weak binding energies can attain the
-same dynamic range when the value of \(R\) is tuned to compensate for
+same dynamic range when the value of $R$ is tuned to compensate for
 the binding energy. This feature is not immediately apparent from the
 IPTG induction curves, which show very low dynamic ranges for several of
 the O1 and O3 strains. Without the benefit of models that can predict
@@ -111,8 +111,8 @@ fold-change can be rewritten in terms of the free energy , which
 encompasses all of the physical parameters of the system. This has
 proven to be an illuminating technique in a number of studies of
 allosteric proteins . Although it is experimentally straightforward to
-observe system responses to changes in effector concentration \(c\),
-framing the input-output function in terms of \(c\) can give the
+observe system responses to changes in effector concentration $c$,
+framing the input-output function in terms of $c$ can give the
 misleading impression that changes in system parameters lead to
 fundamentally altered system responses. Alternatively, if one can find
 the “natural variable" that enables the output to collapse onto a single
@@ -123,9 +123,9 @@ are plotted against the respective free energies for each construct,
 they collapse cleanly onto a single curve (see ). This enables us to
 analyze how parameters can compensate each other. For example, rather
 than viewing strong repression as a consequence of low IPTG
-concentration \(c\) or high repressor copy number \(R\), we can now
+concentration $c$ or high repressor copy number $R$, we can now
 observe that strong repression is achieved when the free energy
-\(F(c) \leq -5 k_BT\), a condition which can be reached in a number of
+$F(c) \leq -5 k_BT$, a condition which can be reached in a number of
 ways.
 
 While our experiments validated the theoretical predictions in the case
@@ -135,14 +135,13 @@ regulation. For example, we can use this model to study more complex
 systems such as when transcription factors interact with multiple
 operators . We can further explore different regulatory configurations
 such as corepression, activation, and coactivation, each of which are
-found in *E. coli* (see Appendix
-[\[AppendixApplications\]](#AppendixApplications)). This work can also
+found in *E. coli* (see Appendix supplemental Chapter 6). This work can also
 serve as a springboard to characterize not just the mean but the full
 gene expression distribution and thus quantify the impact of noise on
 the system . Another extension of this approach would be to
 theoretically predict and experimentally verify whether the
-repressor-inducer dissociation constants \(K_A\) and \(K_I\) or the
-energy difference \(\Delta \varepsilon_{AI}\) between the allosteric
+repressor-inducer dissociation constants $K_A$ and $K_I$ or the
+energy difference $\Delta \varepsilon_{AI}$ between the allosteric
 states can be tuned by making single amino acid substitutions in the
 transcription factor . Finally, we expect that the kind of rigorous
 quantitative description of the allosteric phenomenon provided here will
@@ -162,7 +161,7 @@ single data set. We then accurately predicted the behavior of seventeen
 other data sets in which repressor copy number and repressor-DNA binding
 energy were systematically varied. In addition, our model allowed us to
 understand how key properties such as the leakiness, saturation, dynamic
-range, \([EC_{50}]\), and effective Hill coefficient depended upon the
+range, $[EC_{50}]$, and effective Hill coefficient depended upon the
 small set of parameters governing this system. Finally, we show that by
 framing inducible simple repression in terms of free energy, the data
 from all of our experimental strains collapse cleanly onto a single

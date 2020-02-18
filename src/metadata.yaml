@@ -17,4 +17,5 @@ abstract: abstract.md
 degree_title: Biochemistry and Molecular Biophysics
 lof: true
 chapters: true
+fignos-warning-level: 2
 ---

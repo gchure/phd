@@ -56,7 +56,7 @@ distribution of $K_A$, $K_I$, and $\Delta\varepsilon_{AI}$ from the single
 inducer binding domain mutants. (B) The difference in free energy of each double
 mutant as a function of the reference free
 energy. Points and errors correspond to the median and bounds of the 95%
-credible region of the posterior distribution for the inferred ∆F. Shaded
+credible region of the posterior distribution for the inferred $\Delta F$. Shaded
 lines region are the predicted change in free energy, generated in the same
 manner as the shaded lines in A. All measurements were taken from a strain
 with 260 repressors per cell paired with a reporter with the native O2 LacI
