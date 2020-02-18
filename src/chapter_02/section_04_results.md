@@ -13,7 +13,7 @@ our approach relies on a foundation of previous work as depicted in Fig.
 @fig:induction*types (C). This includes work from our laboratory that used
 *E. coli* constructs based on components of the *lac* system to demonstrate
 how the Lac repressor (LacI) copy number $R$ and operator binding energy
-\$\Delta\varepsilon*{RA}\$ affect gene expression in the absence of inducer
+$\Delta\varepsilon*{RA}$ affect gene expression in the absence of inducer
 [@garcia2011]. @rydenfelt2014b extended the theory used in that work to the
 case of multiple promoters competing for a given transcription factor, which
 was validated experimentally by @brewster2014, who modified this system to
@@ -56,7 +56,7 @@ measured using a Yellow Fluorescent Protein (YFP) gene, driven by a
 *lacUV5* promoter. Each of the six repressor copy number variants were
 paired with the native O1, O2, or O3 *lac* operator [@oehler1994] placed at the YFP
 transcription start site, thereby generating eighteen unique strains.
-The repressor-operator binding energies (O1 \$\Delta\varepsilon*{RA} =
+The repressor-operator binding energies (O1 $\Delta\varepsilon*{RA} =
 -15.3 \pm 0.2~k*BT$, O2 $\Delta\varepsilon*{RA} = -13.9~k*BT \pm 0.2$, and O3
 $\Delta\varepsilon*{RA} = -9.7 \pm 0.1~k*BT$) were previously inferred
 by measuring the fold-change of the *lac* system at different repressor

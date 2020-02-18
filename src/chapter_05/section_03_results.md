@@ -105,7 +105,7 @@ interquartile region of the distribution, the center line displays the
 median, and the whiskers represent 1.5 times the maximum and minimum of the
 interquartile region. Individual measurements are denoted as black points.
 The strain used for calibration of channel copy number (MLG910) is
-highlighted in yellow. ](ch6_fig2){#fig:mscl_boxplot short-caption="Control of MscL
+highlighted in yellow. ](ch5_fig2){#fig:mscl_boxplot short-caption="Control of MscL
 expression and calculation of channel copy number."}
 
 
@@ -143,7 +143,7 @@ the inlets. (B) The typical experimental procedure. Cells are loaded into a
 flow chamber as shown in (A) and mounted to the glass coverslip surface.
 Cells are subjected to a hypo-osmotic shock by flowing hypotonic medium into
 the flow cell. After shock, the cells are monitored for several hours and
-surviving cells are identified.](ch6_fig3){#fig:flow_cell
+surviving cells are identified.](ch5_fig3){#fig:flow_cell
 short-caption="Experimental approach to measuring survival probability"}
 
 Due to the extensive overlap in expression between
@@ -174,7 +174,7 @@ osmotic shock. (B) The empirical cumulative distribution for a fast ($\geq
 1.0$ Hz) osmotic shock. Shaded green and purple regions represent the 95%
 credible region of the effective channel number calculation for each cell.
 Shaded red stripe signifies the range of channels in which no survival was
-observed.](ch6_fig4){#fig:survival_dists short-caption="Distributions of
+observed.](ch5_fig4){#fig:survival_dists short-caption="Distributions of
 survival and death as a function of effective MscL channel
 number."}
 
@@ -295,5 +295,5 @@ survival probability estimated via binning by Shine-Dalgarno sequence and
 binning by groups of 50 channels per cell, respectively. Horizontal error
 bars represent the standard error of the mean from at least 25 measurements.
 Vertical error bars represent the certainty of the probability estimate given
-$n$ survival events from $N$ total observations.](ch6_fig5){#fig:survival
+$n$ survival events from $N$ total observations.](ch5_fig5){#fig:survival
 short-caption="Probability of survival as a function of MscL copy number."}

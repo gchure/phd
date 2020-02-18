@@ -13,6 +13,7 @@ pdf:
 	--template=styles/template.tex \
 	--filter pandoc-xnos \
 	--filter pandoc-citeproc \
+	--filter pandoc-crossref \
 	--lua-filter=frontmatter/short-captions.lua \
 	--top-level-division chapter \
 	--resource-path='.:chapter_01/figs:chapter_02/figs:chapter_06/figs:' \
