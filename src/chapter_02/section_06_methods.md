@@ -169,24 +169,28 @@ estimation. Eq. @eq:fold_change_Full assumes a deterministic relationship betwee
 and the data, so in order to construct a probabilistic relationship as
 required by Eq. @eq:induction_bayes, we assume that the experimental fold-change for the
 $i^\text{th}$ datum given the parameters is of the form
+
 $$
 \text{fold-change}_\text{exp}^{(i)} = \left( 1 + \frac{\left(1 +
 \frac{c^{(i)}}{K_A}\right)^2}{\left( 1 + \frac{c^{(i)}}{K_A}\right)^2 +
 e^{-\beta \Delta \varepsilon_{AI}} \left(1 + \frac{c^{(i)}}{K_I} \right)^2} \frac{R^{(i)}}{N_{NS}} e^{-\beta
 \Delta \varepsilon_{RA}^{(i)}}\right)^{-1} + \epsilon^{(i)},
 $${#eq:induction_fold_change_experimental}
+
 where $\epsilon^{(i)}$ represents the
 departure from the deterministic theoretical prediction for the
 $i^\text{th}$ data point. If we assume that these $\epsilon^{(i)}$
 errors are normally distributed with mean zero and standard deviation
 $\sigma$, the likelihood of the data given the parameters is of the
 form 
+
 $$
 P(D \vert K_A, K_I, \sigma) =
 \frac{1}{(2\pi\sigma^2)^{\frac{n}{2}}}\prod\limits_{i=1}^n \exp 
 \left[-\frac{(\text{fold-change}^{(i)}_\text{exp} - \text{fold-change}(K_A, K_I, R^{(i)},
     \Delta\varepsilon_{RA}^{(i)}, c^{(i)}))^2}{2\sigma^2}\right],
 $${#eq:likelihood}
+
 where $\text{fold-change}^{(i)}_{\text{exp}}$ is the experimental fold-change
 and $\text{fold-change}(\,\cdots)$ is the theoretical prediction. The product
 $\prod_{i=1}^n$ captures the assumption that the $n$ data points are
