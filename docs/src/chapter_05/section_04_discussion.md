@@ -181,7 +181,7 @@ life or death.
 
 | Reported channels per cell | Method  | Reference |
 |:---|:---|:---:|
-| 480 ± 103 | Western blotting   | @bialecka-fornal2012 |
+| 480 $\pm$ 103 | Western blotting   | @bialecka-fornal2012 |
 |  560\* |  Ribosomal profiling  | @li2014a|
 | 331\* | Mass spectrometry  | @schmidt2016|
 | 583\* | Mass spectrometry  | @soufi2015|

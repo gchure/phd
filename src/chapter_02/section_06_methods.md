@@ -1,19 +1,19 @@
-# Methods
+## Methods
 
-## Bacterial Strains and DNA Constructs
+### Bacterial Strains and DNA Constructs
 
 All strains used in these experiments were derived from *E. coli* K12
 MG1655 with the *lac* operon removed, adapted from those created and
 described in @garcia2011. Briefly, the operator variants and YFP reporter gene were
 cloned into a pZS25 background which contains a *lacUV5* promoter that
-drives expression as is shown schematically in Fig. @fig:states_weights. These constructs
+drives expression as is shown schematically in  @Fig:states_weights. These constructs
 carried a kanamycin resistance gene and were integrated into the *galK*
 locus of the chromosome using $\lambda$ Red recombineering @sharan2009. The
 *lacI* gene was constitutively expressed via a
 P$_\text{LtetO-1}$ promoter [@lutz1997], with ribosomal binding site
 mutations made to vary the LacI copy number as described in @salis2009a using
 site-directed mutagenesis (Quickchange II; Stratagene), with further
-details in @garcia2011. These *lacI constructs carried a
+details in @garcia2011. These *lacI* constructs carried a
 chloramphenicol resistance gene and were integrated into the *ybcN*
 locus of the chromosome. Final strain construction was achieved by
 performing repeated P1 transduction [@thomason2007]  of the different operator and
@@ -55,7 +55,7 @@ into a pZS4\*1 backbone [@lutz1997] in which mCherry is driven by the
 *lacUV5* promoter. All microscopy and flow cytometry experiments were
 performed using these strains.
 
-## Growth Conditions for Flow Cytometry Measurements
+### Growth Conditions for Flow Cytometry Measurements
 
 All measurements were performed with *E. coli* cells grown to
 mid-exponential phase in standard M9 minimal media (M9 5X Salts,
@@ -83,7 +83,7 @@ concentrated IPTG in double distilled water was prepared and partitioned
 into $100\,\mu\text{L}$ aliquots. The same parent stock was used for
 all experiments described in this work.
 
-## Flow Cytometry
+### Flow Cytometry
 
 Unless explicitly mentioned, all fold-change measurements were collected
 on a Miltenyi Biotec MACSquant Analyzer 10 Flow Cytometer graciously
@@ -107,7 +107,7 @@ cells per $\mu\text{L}$ which corresponded to a flow rate of
 halted after 100,000 events were detected. Once completed, the data were
 extracted and immediately processed using the following methods.
 
-## Unsupervised Gating of Flow Cytometry Data
+### Unsupervised Gating of Flow Cytometry Data
 
 Flow cytometry data will frequently include a number of spurious events
 or other undesirable data points such as cell doublets and debris. The
@@ -128,7 +128,7 @@ distribution and restricting the data used for calculation to those that
 reside within the 40th percentile. This procedure is described in more
 detail in the supplemental Chapter 7.
 
-## Experimental Determination of Fold-Change
+### Experimental Determination of Fold-Change
 For each strain and IPTG concentration, the fold-change in gene
 expression was calculated by taking the ratio of the population mean YFP
 expression in the presence of LacI repressor to that of the population
@@ -146,7 +146,7 @@ cell YFP intensity in the absence of repressor, and
 $\langle I_\text{auto} \rangle$ is the average cell autofluorescence
 intensity, as measured from cells that lack the *lac*-YFP construct.
 
-## Bayesian Parameter Estimation
+### Bayesian Parameter Estimation
 
 In this work, we determine the the most likely parameter values for the
 inducer dissociation constants $K_A$ and $K_I$ of the active and
@@ -165,9 +165,9 @@ dependent variable (experimental fold-change). $P(D
 parameter values for the dissociation constants, $P(K_A, K_I)$
 contains all the prior information on these parameters, and $P(D)$
 serves as a normalization constant, which we can ignore in our parameter
-estimation. Eq. @eq:fold_change_Full assumes a deterministic relationship between the parameters
+estimation.  @Eq:fold_change_Full assumes a deterministic relationship between the parameters
 and the data, so in order to construct a probabilistic relationship as
-required by Eq. @eq:induction_bayes, we assume that the experimental fold-change for the
+required by  @Eq:induction_bayes, we assume that the experimental fold-change for the
 $i^\text{th}$ datum given the parameters is of the form
 
 $$
@@ -195,7 +195,7 @@ where $\text{fold-change}^{(i)}_{\text{exp}}$ is the experimental fold-change
 and $\text{fold-change}(\,\cdots)$ is the theoretical prediction. The product
 $\prod_{i=1}^n$ captures the assumption that the $n$ data points are
 independent. Note that the likelihood and prior terms now include the extra
-unknown parameter $\sigma$. In applying Eq. @eq:likelihood, a choice of $K_A$
+unknown parameter $\sigma$. In applying  @Eq:likelihood, a choice of $K_A$
 and $K_I$ that provides better agreement between theoretical fold-change
 predictions and experimental measurements will result in a more probable
 likelihood.

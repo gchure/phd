@@ -16,6 +16,15 @@
 \defaultbibliographystyle{plainnat}
 \renewcommand{\bibsection}{\section*{\refname}}
 
+$if(csl-refs)$
+\newlength{\cslhangindent}
+\setlength{\cslhangindent}{1.5em}
+\newenvironment{cslreferences}%
+  {$if(csl-hanging-indent)$\setlength{\parindent}{0pt}%
+  \everypar{\setlength{\hangindent}{\cslhangindent}}\ignorespaces$endif$}%
+  {\par}
+$endif$
+
 \begin{document}
 
 \title{$if(title)$$title$$else$Your Title Here$endif$}

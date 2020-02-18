@@ -11,13 +11,11 @@ pdf:
 	-o ../dst/thesis.pdf \
 	--default-image-extension=.pdf \
 	--template=styles/template.tex \
-	--filter pandoc-eqnos \
-	--filter pandoc-citeproc \
 	--filter pandoc-crossref \
+	--bibliography=references.bib \
 	--lua-filter=frontmatter/short-captions.lua \
 	--top-level-division chapter \
 	--resource-path='.:chapter_01/figs:chapter_02/figs:chapter_03/figs:chapter_05/figs:' \
-	--bibliography='references.bib' \
 	&& cd - \
 
 html:	

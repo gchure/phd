@@ -9,8 +9,8 @@ studies that have parameterized induction curves of simple repression motifs,
 as these have relied on expression systems where proteins are expressed from
 plasmids, resulting in highly variable and unconstrained copy numbers
 [@murphy2007; @murphy2010; @daber2009a; @daber2011a; @sochor2014]. Instead,
-our approach relies on a foundation of previous work as depicted in Fig.
-@fig:induction*types (C). This includes work from our laboratory that used
+our approach relies on a foundation of previous work as depicted in 
+@Fig:induction*types (C). This includes work from our laboratory that used
 *E. coli* constructs based on components of the *lac* system to demonstrate
 how the Lac repressor (LacI) copy number $R$ and operator binding energy
 $\Delta\varepsilon*{RA}$ affect gene expression in the absence of inducer
@@ -38,7 +38,7 @@ systems to determine the values of $K_A$ and $K_I$.
 
 We determine the values of $K_A$ and $K_I$ by fitting to a single
 induction profile using Bayesian inferential methods [@sivia2006]. We then use
-Eq. @eq:foldchange_full to
+ @Eq:foldchange_full to
 predict gene expression for any concentration of inducer, repressor copy
 number, and DNA binding energy and compare these predictions against
 experimental measurements. To obtain induction profiles for a set of
@@ -69,7 +69,7 @@ number of non-specific binding sites as the length in base-pairs of the
 *E. coli* genome, $N_{NS} = 4.6 \times 10^6$.
 
 Our experimental pipeline for determining fold-change using flow
-cytometry is shown in Fig. @fig:flowchart. Briefly, cells were grown to exponential phase,
+cytometry is shown in  @Fig:flowchart. Briefly, cells were grown to exponential phase,
 in which gene expression reaches steady state [@scott2010], under concentrations of
 the inducer IPTG ranging between 0 and $5000\, \mu$M. We measure YFP
 fluorescence using flow cytometry and automatically gate the data to
@@ -104,24 +104,24 @@ be determined by fitting. We used previous LacI fold-change data
 Materials \& Methods). Rather than fitting $K_A$ and $K_I$ to our entire data
 set of eighteen unique constructs, we performed Bayesian parameter estimation
 on data from a single strain with $R=260$ and an O2 operator
-[$\Delta\varepsilon_{RA}=-13.9\,k_BT$ [@garcia2011]] shown in Fig.
-[@fig:induction_predictions](D, orange points). Using Markov Chain Monte
+[$\Delta\varepsilon_{RA}=-13.9\,k_BT$ [@garcia2011]] shown in 
+[@Fig:induction_predictions](D, orange points). Using Markov Chain Monte
 Carlo, we determine the most likely parameter values to be
 $K_A=139^{+29}_{-22} \times 10^{-6} \, \text{M}$ and
 $K_I=0.53^{+0.04}_{-0.04} \times 10^{-6}\, \text{M}$, which are the modes of
 their respective distributions, where the superscripts and subscripts
 represent the upper and lower bounds of the $95^\text{th}$ percentile of the
-parameter value distributions [see Fig. [@fig:induction_predictions] (B)].
+parameter value distributions [see  [@Fig:induction_predictions] (B)].
 Unfortunately, we are not able to make a meaningful value-for-value
 comparison of our parameters to those of earlier studies [@daber2009a;
 @daber2011a] because of uncertainties in both gene copy number and
 transcription factor copy numbers in these studies, as illustrated in
 Supplemental Chapter 7. We then predicted the fold-change for the remaining
-seventeen strains with no further fitting [see Fig.
-[@fig:induction_predictions] (C - E)] together with the specific phenotypic
-properties described in and discussed in detail below [see Fig.
-[@fig:induciton_predictions] (F - J)]. The shaded regions in Fig.
-[@fig:induction_predictions] (C - E) denote the 95% credible regions. Factors
+seventeen strains with no further fitting [see 
+[@Fig:induction_predictions] (C - E)] together with the specific phenotypic
+properties described in and discussed in detail below [see 
+[@Fig:induciton_predictions] (F - J)]. The shaded regions in 
+[@Fig:induction_predictions] (C - E) denote the 95% credible regions. Factors
 determining the width of the credible regions are explored in Supplemental
 Chapter 7.
 
@@ -129,8 +129,8 @@ We stress that the entire suite of predictions in is based upon the induction
 profile of a single strain. Our ability to make such a broad range of
 predictions stems from the fact that our parameters of interest such as the
 repressor copy number and DNA binding energy - appear as distinct physical
-parameters within our model. While the single data set in Fig.
-@fig:induction_predictions could also be fit using a Hill function, such an
+parameters within our model. While the single data set in 
+@Fig:induction_predictions could also be fit using a Hill function, such an
 analysis would be unable to predict any of the other curves in the figure
 (see Materials \& Methods). Phenomenological expressions such as the Hill
 function can describe data, but lack predictive power and are thus unable to
@@ -138,49 +138,34 @@ build our intuition, help us design *de novo* input-output functions, or
 guide future experiments [@kuhlman2007; @murphy2007].
 
 ![**Predicting induction profiles for different biological control
-parameters.** We can quantitatively tune $R$ via ribosomal binding site (RBS)
-modifications, $\Delta\varepsilon_{RA}$ by mutating the operator sequence,
-and $c$ by adding different amounts of IPTG to the growth medium. Previous
-experiments have characterized the $R$, $N_{NS}$, $\Delta\varepsilon_{RA}$,
-and $\Delta\varepsilon_{AI}$ parameters (see ), leaving only the unknown
-dissociation constants $K_A$ and $K_I$ between the inducer and the repressor
-in the active and inactive states, respectively. These two parameters can be
-inferred using Bayesian parameter estimation from a single induction curve.
-Predicted IPTG titration curves for different repressor copy numbers and
-operator strengths. Titration data for the O2 strain [white circles in Panel
-] with $R=260$, $\Delta\varepsilon_{RA} = -13.9\, k_BT$, $n=2$, and
-$\Delta\varepsilon_{AI}=4.5~k_BT$ can be used to determine the thermodynamic
-parameters $K_A=139^{+29}_{-22} \times 10^{-6} , \text{M}$ and
-$K_I=0.53^{+0.04}_{-0.04} \times 10^{-6}, \text{M}$ (orange line). The
-remaining solid lines predict the fold-change for all other combinations of
-repressor copy numbers (shown in the legend) and repressor-DNA binding
-energies corresponding to the O1 operator ($-15.3\, k_B T$), O2 operator
-($-13.9\, k_B T$), and O3 operator ($-9.7\, k_B T$). Error bars of
-experimental data show the standard error of the mean (eight or more
-replicates) when this error is not smaller than the diameter of the data
-point. The shaded regions denote the 95% credible region, although the
-credible region is obscured when it is thinner than the curve itself. To
-display the measured fold-change in the absence of inducer, we alter the
-scaling of the $x$-axis between $0$ and $10^{-7}$ M to linear rather than
-logarithmic, as indicated by a dashed line. Additionally, our model allows us
-to investigate key phenotypic properties of the induction profiles (see ).
-Specifically, we show predictions for the leakiness, saturation, dynamic
-range, $[EC_{50}]$, and effective Hill coefficient of the induction
-profiles.](ch2_fig4.png){@fig:induction_predictions
+parameters.** (A) Schematic representation of experimentally accessible
+variables. Repressor copy number $R$ is tuned by changing the sequence of the
+ribosomal binding site (RBS), DNA binding energy $\Delta\varepsilon_{RA}$ is
+controlled via the squence of the operator, and the inducer concentration $c$ is
+controlled via a dilution series. (B) Markov Chain Monte Carlo (MCMC) sampling
+of the posterior distribution of $K_A$ and $K_I$. Each point corresponds to a 
+single MCMC sample. Distribution on top and left represent the marginal
+posterior probability distribution over $K_A$ and $K_I$, respectively. (C)
+Predicted induction profiles for strains with various repressor copy numbers and
+DNA binding energies. White-faced points represent those to which the inducer
+binding constants $K_A$ and $K_I$ were determined. (D) Predicted properties of
+the induction profiles in (C) using parameter values known *a priori*.  The
+shaded regions denote the 95% credible region. Region between 0 and $10^{-7}\,
+\mu$M  is scaled linearly with log scaling elsewhere.](ch2_fig4.png){#fig:induction_predictions
 short-caption="Predicting induction profiles for different biological control
 parameters."}
 
 
 ### Comparison of Experimental Measurements with Theoretical Predictions
 
-We tested the predictions shown in Fig. @fig:induction_predictions by
+We tested the predictions shown in  @Fig:induction_predictions by
 measuring fold-change induction profiles in strains with a broad range of
 repressor copy numbers and repressor binding energies as characterized in
-@garcia2011. With a few notable exceptions, the results shown in Fig.
-@fig:induction_experiments demonstrate
+@garcia2011. With a few notable exceptions, the results shown in 
+@Fig:induction_experiments demonstrate
 agreement between theory and experiment. We note that there was an apparently
-systematic shift in the O3 $\Delta\varepsilon_{RA} = -9.7\ k_BT$ strains [Fig.
-@fig:induction_experiments (C)]  and all of the $R=1220$ and $R =1740$ strains. This may be partially due to
+systematic shift in the O3 $\Delta\varepsilon_{RA} = -9.7\ k_BT$ strains [
+@Fig:induction_experiments (C)]  and all of the $R=1220$ and $R =1740$ strains. This may be partially due to
 imprecise previous determinations of their $\Delta\varepsilon_{RA}$ and $R$
 values. By performing a global fit where we infer all parameters including
 the repressor copy number $R$ and the binding energy
@@ -200,7 +185,7 @@ $\Delta\varepsilon_{RA}=-17.7\,k_B T$ (see Supplemental Chapter 7).
 To ensure that the agreement between our predictions and data is not an
 accident of the strain we used to perform our fitting, we also inferred
 $K_A$ and $K_I$ from each of the other strains. As discussed in 
-the Materials \& Methods and Fig. @fig:induction_predictions, the inferred values of $K_A$ and $K_I$ depend
+the Materials \& Methods and  @Fig:induction_predictions, the inferred values of $K_A$ and $K_I$ depend
 minimally upon which strain is chosen, indicating that these parameter
 values are highly robust. We also performed a global fit using the data
 from all eighteen strains in which we fitted for the inducer
@@ -216,7 +201,7 @@ cytometry measurements of fold-change over a range of IPTG
 concentrations for O1, O2, and O3 strains at varying repressor copy
 numbers, overlaid on the predicted responses. Error bars for the
 experimental data show the standard error of the mean (eight or more
-replicates). As discussed in Fig. @fig:induction_predictions, all of the predicted induction curves
+replicates). As discussed in  @Fig:induction_predictions, all of the predicted induction curves
 were generated prior to measurement by inferring the MWC parameters
 using a single data set (O2 $R=260$, shown by white circles in Panel
 B). The predictions may therefore depend upon which strain is used to
@@ -228,11 +213,11 @@ profiles would have been predicted regardless of which strain was
 chosen. The points show the mode, and the error bars denote the $95%$
 credible region of the parameter value distribution. Error bars not
 visible are smaller than the size of the
-marker.](ch2_fig5){@fig:induction_experiments short-caption="Comparison of predictions against measured and inferred data."}
+marker.](ch2_fig5){#fig:induction_experiments short-caption="Comparison of predictions against measured and inferred data."}
 
 ### Predicting the Phenotypic Traits of the Induction Response
 
-A subset of the properties shown in Fig. @fig:inducible_types (i.e. the leakiness, saturation,
+A subset of the properties shown in  @Fig:inducible_types (i.e. the leakiness, saturation,
 dynamic range, $[EC_{50}]$, and effective Hill coefficient) are of
 significant interest to synthetic biology. For example, synthetic
 biology is often focused on generating large responses (i.e. a large
@@ -243,22 +228,20 @@ the induction response. We reiterate that a Hill function approach
 cannot predict these features *a priori* and furthermore requires
 fitting each curve individually. The MWC model, on the other hand,
 enables us to quantify how each trait depends upon a single set of
-physical parameters as shown by Fig. @fig:induction_predictions (F-J).
+physical parameters as shown by  @Fig:induction_predictions (F-J).
 
 We define these five phenotypic traits using expressions derived from the
-model presented in Eq. @eq:foldchange_full. These results build upon
+model presented in  @Eq:foldchange_full. These results build upon
 extensive work by @martins2011, who computed many such properties for
 ligand-receptor binding within the MWC model. We begin by analyzing the
 leakiness, which is the minimum fold-change observed in the absence of
 ligand, given by
 
 $$
-\begin{aligned}
 \text{leakiness} &= \text{fold-change}(c=0) \nonumber\\
 &= \left(
 1+\frac{1}{1+e^{-\beta \Delta \varepsilon_{AI} }}\frac{R}{N_{NS}}e^{-\beta
 \Delta\varepsilon_{RA}} \right)^{-1},
-\end{aligned}
 $${#eq:leakiness}
 
 and the saturation, which is the maximum fold change observed in the
@@ -283,8 +266,8 @@ $$
 $${#eq:dynamic_range}
 
 These
-three properties are shown in Fig. @fig:induction_predictions (F-H). We discuss these properties in greater
-detail in the Materials \& Methods section. Fig. @fig:properties_experiment shows that the measurements of these three
+three properties are shown in  @Fig:induction_predictions (F-H). We discuss these properties in greater
+detail in the Materials \& Methods section.  @Fig:properties_experiment shows that the measurements of these three
 properties, derived from the fold-change data in the absence of IPTG and
 the presence of saturating IPTG, closely match the predictions for all
 three operators.
@@ -301,7 +284,7 @@ pairing in - separately to in order to smoothly interpolate between the
 data points. Error bars for - represent the standard error of the mean
 for eight or more replicates; error bars for - represent the 95%
 credible region for the parameter found by propagating the credible
-region of our estimates of $K_A$ and $K_I$ into Eq. @eq:foldchange_full.](ch2_fig6){#eq:properties_experiment short-caption="Predictions and experimental measurements of key properties of
+region of our estimates of $K_A$ and $K_I$ into  @Eq:foldchange_full.](ch2_fig6){#eq:properties_experiment short-caption="Predictions and experimental measurements of key properties of
 induction profiles."}
 
 

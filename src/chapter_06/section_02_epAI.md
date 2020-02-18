@@ -202,8 +202,7 @@ occurs near $p_A(0) R_{\text{tot}} = N$ (as shown by the triangles in
 ), so that merely knowing where the fold-change response transitions
 from concave down to concave up is sufficient to obtain a rough value
 for $\Delta\varepsilon_{AI}$. We note, however, that for
-$\Delta\varepsilon_{AI} \gtrsim 5\
-k_BT$, increasing $\Delta\varepsilon_{AI}$ further does not affect
+$\Delta\varepsilon_{AI} \geq 5\, k_BT$, increasing $\Delta\varepsilon_{AI}$ further does not affect
 the fold-change because essentially every repressors will be in the
 active state in this regime. Thus, if the $\Delta\varepsilon_{AI}$ is
 in this regime, we can only bound it from below.
@@ -213,8 +212,8 @@ known plasmid copy numbers to determine $\Delta\varepsilon_{AI}$.
 shows experimental measurements of fold-change for two O1 promoters with
 $N=64$ and $N=52$ copy numbers and one Oid promoter with $N=10$
 from Brewster et al. (2014). By fitting these data to , we extracted the
-parameter value $\Delta\varepsilon_{AI} = 4.5~k_B T$. Substituting
+parameter value $\Delta\varepsilon_{AI} = 4.5\,k_B T$. Substituting
 this value into shows that 99\% of the repressors are in the active state
 in the absence of inducer and $\Delta\tilde{\varepsilon}_{RA} \approx
-\Delta\varepsilon_{RA}, so that all of the previous energies and calculations
+\Delta\varepsilon_{RA}$, so that all of the previous energies and calculations
 made by @garcia2011 and @brewster2014 were accurate.

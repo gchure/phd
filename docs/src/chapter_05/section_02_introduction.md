@@ -94,5 +94,5 @@ this work. The number of mechanosensitive channels tagged with a fluorescent
 reporter is tuned through modification of the Shine-Dalgarno sequence of the
 *mscL* gene. The cells are then subjected to a hypo-osmotic shock and the
 number of surviving cells are counted, allowing the calculation of a survival
-probability.](ch6_fig1){#fig:overview short-caption="Role of mechanosensitive
+probability.](ch5_fig1){#fig:overview short-caption="Role of mechanosensitive
 channels during hypo-osmotic shock."}

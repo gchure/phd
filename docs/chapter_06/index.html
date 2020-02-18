@@ -36,11 +36,11 @@
   <script id="MathJax-script" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
   
 
-<link rel="icon" href="https://gchure.github.io/phd/favicon.ico" type="image/x-icon">
+<link rel="icon" href="/favicon.ico" type="image/x-icon">
 <link href="https://fonts.googleapis.com/css?family=Nanum+Myeongjo&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Alegreya|Lora&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="https://gchure.github.io/phd/doks-theme/assets/css/style.css">
+<link rel="stylesheet" href="/doks-theme/assets/css/style.css">
 
 	</head>
 	<body class="grey" data-spy="scroll" data-target=".js-scrollspy">
@@ -52,7 +52,7 @@
 			<div class="row">
 				<div class="col-xs-12">
 					
-						<a href="https://gchure.github.io/phd/" class="site-header__logo"><i class="icon icon--chevron-left"></i> Home</a>
+						<a href="/" class="site-header__logo"><i class="icon icon--chevron-left"></i> Home</a>
 					
 					
 				</div><!-- /.col -->
@@ -61,7 +61,7 @@
 	</header><!-- /.site-header -->
 
 
-		<div class="hero-subheader" style="background-image: url(https://gchure.github.io/phd/doks-theme/assets/images/waves.jpg); background-position: center;">
+		<div class="hero-subheader" style="background-image: url(http://127.0.0.1:4000/doks-theme/assets/images/waves.jpg); background-position: center;">
 
 			<div class="container" style="background-color: rgba(0,0,0, 0.75); border:0.75px solid white;">
 				<div class="row">
@@ -78,12 +78,12 @@
 								
 								<!-- 
 									
-										<a href="https://gchure.github.io/phd{{site.doks.baseurl}}/published_content" class="btn btn--dark btn--rounded btn--w-icon btn--w-icon-left">
+										<a href="{{site.doks.baseurl}}/published_content" class="btn btn--dark btn--rounded btn--w-icon btn--w-icon-left">
 											<i class="icon icon--arrow-left"></i>	
 										</a>
 									
 									
-										<a href="https://gchure.github.io/phd{{site.doks.baseurl}}/chapter_02" class="btn btn--dark btn--rounded btn--w-icon">
+										<a href="{{site.doks.baseurl}}/chapter_02" class="btn btn--dark btn--rounded btn--w-icon">
 											<i class="icon icon--arrow-right"></i>
 										</a>
 									
@@ -101,13 +101,13 @@
 						<div class="row" >
 							<div class="col-xs-12">
 								
-									<a href="https://gchure.github.io/phd{{site.doks.baseurl}}/published_content" class="page-nav__item page-nav__item--prev">
+									<a href="{{site.doks.baseurl}}/published_content" class="page-nav__item page-nav__item--prev">
 										<i class="icon icon--arrow-left"></i>
 										Published Content
 									</a><!-- /.page-nav__item -->
 								
 								
-									<a href="https://gchure.github.io/phd{{site.doks.baseurl}}/chapter_02" class="page-nav__item page-nav__item--next">
+									<a href="{{site.doks.baseurl}}/chapter_02" class="page-nav__item page-nav__item--next">
 										Chapter 2
 										<i class="icon icon--arrow-right"></i>
 									</a><!-- /.page-nav__item -->
@@ -135,53 +135,53 @@
 <h3 id="computing-deltavarepsilon_ai">Computing <span class="math inline"><em>Δ</em><em>ε</em><sub><em>A</em><em>I</em></sub></span></h3>
 <p>As shown in the previous section, the fold-change response of a single strain is not sufficient to determine the three MWC parameters (<span class="math inline"><em>K</em><sub><em>A</em></sub></span>, <span class="math inline"><em>K</em><sub><em>I</em></sub></span>, and <span class="math inline"><em>Δ</em><em>ε</em><sub><em>A</em><em>I</em></sub></span>), since degenerate sets of parameters yield nearly identical fold-change responses. To circumvent this degeneracy, we now turn to some previous data from the <em>lac</em> system in order to determine the value of <span class="math inline"><em>Δ</em><em>ε</em><sub><em>A</em><em>I</em></sub></span> in for the induction of the Lac repressor. Specifically, we consider two previous sets of work from: (1) <span class="citation" data-cites="garcia2011">Garcia and Phillips (<a href="#ref-garcia2011" role="doc-biblioref">2011</a>)</span> and (2) <span class="citation" data-cites="brewster2014">Brewster et al. (<a href="#ref-brewster2014" role="doc-biblioref">2014</a>)</span>, both of which measured fold-change with the same simple repression system in the absence of inducer (<span class="math inline"><em>c</em> = 0</span>) but at various repressor copy numbers <span class="math inline"><em>R</em></span>. The original analysis for both data sets assumed that in the absence of inducer all of the Lac repressors were in the active state. As a result, the effective binding energies they extracted were a convolution of the DNA binding energy <span class="math inline"><em>Δ</em><em>ε</em><sub><em>R</em><em>A</em></sub></span> and the allosteric energy difference <span class="math inline"><em>Δ</em><em>ε</em><sub><em>A</em><em>I</em></sub></span> between the Lac repressor’s active and inactive states. We refer to this convoluted energy value as <span class="math inline"><em>Δ</em><em>ε̃</em><sub><em>R</em><em>A</em></sub></span>. We first disentangle the relationship between these parameters in Garcia and Phillips and then use this relationship to extract the value of <span class="math inline"><em>Δ</em><em>ε</em><sub><em>A</em><em>I</em></sub></span> from <span class="citation" data-cites="brewster2014">Brewster et al. (<a href="#ref-brewster2014" role="doc-biblioref">2014</a>)</span>.</p>
 <p>Garcia and Phillips determined the total repressor copy numbers <span class="math inline"><em>R</em></span> of different strains using quantitative Western blots. Then they measured the fold-change at these repressor copy numbers for simple repression constructs carrying the O1, O2, O3, and Oid <em>lac</em> operators integrated into the chromosome. These data were then fit to the following thermodynamic model to determine the repressor-DNA binding energies <span class="math inline"><em>Δ</em><em>ε̃</em><sub><em>R</em><em>A</em></sub></span> for each operator,</p>
-<p><span id="eq:ind_si_simple_fc" class="eqnos"><br /><span class="math display">$$
+<p><span id="eq:ind_si_simple_fc"><br /><span class="math display">$$
 \text{fold-change}(c=0) = \left(
 1+\frac{R}{N_{NS}}e^{-\beta \Delta\tilde{\varepsilon}_{RA}} \right)^{-1}.
-$$</span><br /><span class="eqnos-number">(1)</span></span></p>
+\qquad(1)$$</span><br /></span></p>
 <p>Note that this functional form does not exactly match our fold-change in the limit <span class="math inline"><em>c</em> = 0</span>,</p>
-<p><span id="eq:ind_si_leakiness" class="eqnos"><br /><span class="math display">$$
+<p><span id="eq:ind_si_leakiness"><br /><span class="math display">$$
 \text{fold-change}(c=0) = \left(
 1+\frac{1}{1+e^{-\beta \Delta \varepsilon_{AI}}}\frac{R}{N_{NS}}e^{-\beta
 \Delta\varepsilon_{RA}} \right)^{-1},
-$$</span><br /><span class="eqnos-number">(2)</span></span></p>
+\qquad(2)$$</span><br /></span></p>
 <p>since it is missing the factor <span class="math inline">$\frac{1}{1+e^{-\beta \Delta\varepsilon_{AI}}}$</span> which specifies what fraction of repressors are in the active state in the absence of inducer,</p>
-<p><span id="eq:ind_si_r_active" class="eqnos"><br /><span class="math display">$$
+<p><span id="eq:ind_si_r_active"><br /><span class="math display">$$
 \frac{1}{1+e^{-\beta \Delta\varepsilon_{AI}}} = p_A(0). 
-$$</span><br /><span class="eqnos-number">(3)</span></span></p>
+\qquad(3)$$</span><br /></span></p>
 <p>In other words, Garcia and Phillips assumed that in the absence of inducer, all repressors were active. In terms of our notation, the convoluted energy values <span class="math inline"><em>Δ</em><em>ε̃</em><sub><em>R</em><em>A</em></sub></span> extracted by Garcia and Phillips (namely, <span class="math inline"><em>Δ</em><em>ε̃</em><sub><em>R</em><em>A</em></sub> =  − 15.3 <em>k</em><sub><em>B</em></sub><em>T</em></span> for O1 and <span class="math inline"><em>Δ</em><em>ε̃</em><sub><em>R</em><em>A</em></sub> =  − 17.0 <em>k</em><sub><em>B</em></sub><em>T</em></span> for Oid) represent</p>
-<p><span id="eq:ind_si_tilde_varepsilon" class="eqnos"><br /><span class="math display">$$
+<p><span id="eq:ind_si_tilde_varepsilon"><br /><span class="math display">$$
 \beta \Delta\tilde{\varepsilon}_{RA} = \beta \Delta\varepsilon_{RA} - \log
 \left( \frac{1}{1 + e^{-\beta \Delta \varepsilon_{AI}}} \right).
-$$</span><br /><span class="eqnos-number">(4)</span></span></p>
+\qquad(4)$$</span><br /></span></p>
 <p>Note that if <span class="math inline"><em>e</em><sup> − <em>β</em><em>Δ</em><em>ε</em><sub><em>A</em><em>I</em></sub></sup> ≪ 1</span>, then nearly all of the repressors are active in the absence of inducer so that <span class="math inline"><em>Δ</em><em>ε̃</em><sub><em>R</em><em>A</em></sub> ≈ <em>Δ</em><em>ε</em><sub><em>R</em><em>A</em></sub></span>. In simple repression systems where we definitively know the value of <span class="math inline"><em>Δ</em><em>ε</em><sub><em>R</em><em>A</em></sub></span> and <span class="math inline"><em>R</em></span>, we can use to determine the value of <span class="math inline"><em>Δ</em><em>ε</em><sub><em>A</em><em>I</em></sub></span> by comparing with experimentally determined fold-change values. However, the binding energy values that we use from <span class="citation" data-cites="garcia2011">Garcia and Phillips (<a href="#ref-garcia2011" role="doc-biblioref">2011</a>)</span> are effective parameters <span class="math inline"><em>Δ</em><em>ε̃</em><sub><em>R</em><em>A</em></sub></span>. In this case, we are faced with an undetermined system in which we have more variables than equations, and we are thus unable to determine the value of <span class="math inline"><em>Δ</em><em>ε</em><sub><em>A</em><em>I</em></sub></span>. In order to obtain this parameter, we must turn to a more complex regulatory scenario which provides additional constraints that allow us to fit for <span class="math inline"><em>Δ</em><em>ε</em><sub><em>A</em><em>I</em></sub></span>.</p>
 <p>A variation on simple repression in which multiple copies of the promoter are available for repressor binding (for instance, when the simple repression construct is on plasmid) can be used to circumvent the problems that arise when using <span class="math inline"><em>Δ</em><em>ε̃</em><sub><em>R</em><em>A</em></sub></span>. This is because the behavior of the system is distinctly different when the number of active repressors <span class="math inline"><em>p</em><sub><em>A</em></sub>(0)<em>R</em></span> is less than or greater than the number of available promoters <span class="math inline"><em>N</em></span>. Repression data for plasmids with known copy number <span class="math inline"><em>N</em></span> allows us to perform a fit for the value of <span class="math inline"><em>Δ</em><em>ε</em><sub><em>A</em><em>I</em></sub></span>.</p>
 <p>To obtain an expression for a system with multiple promoters <span class="math inline"><em>N</em></span>, we follow <span class="citation" data-cites="weinert2014">Weinert et al. (<a href="#ref-weinert2014" role="doc-biblioref">2014</a>)</span>, writing the fold-change in terms of the the grand canonical ensemble as</p>
-<p><span id="eq:ind_si_fugacity" class="eqnos"><br /><span class="math display">$$
+<p><span id="eq:ind_si_fugacity"><br /><span class="math display">$$
 \text{fold-change} = \frac{1}{1 + \lambda_r e^{-\beta \Delta \varepsilon_{RA}}},
-$$</span><br /><span class="eqnos-number">(5)</span></span></p>
+\qquad(5)$$</span><br /></span></p>
 <p>where <span class="math inline"><em>λ</em><sub><em>r</em></sub> = <em>e</em><sup><em>β</em><em>μ</em></sup></span> is the fugacity and <span class="math inline"><em>μ</em></span> is the chemical potential of the repressor. The fugacity will enable us to easily enumerate the possible states available to the repressor.</p>
 <p>To determine the value of <span class="math inline"><em>λ</em><sub><em>r</em></sub></span>, we first consider that the total number of repressors in the system, <span class="math inline"><em>R</em><sub>tot</sub></span>, is fixed and given by</p>
-<p><span id="eq:ind_si_fugacity_rtot" class="eqnos"><br /><span class="math display"><em>R</em><sub>tot</sub> = <em>R</em><sub><em>S</em></sub> + <em>R</em><sub><em>N</em><em>S</em></sub>,</span><br /><span class="eqnos-number">(6)</span></span></p>
+<p><span id="eq:ind_si_fugacity_rtot"><br /><span class="math display"><em>R</em><sub>tot</sub> = <em>R</em><sub><em>S</em></sub> + <em>R</em><sub><em>N</em><em>S</em></sub>,   (6)</span><br /></span></p>
 <p>where <span class="math inline"><em>R</em><sub><em>S</em></sub></span> represents the number of repressors specifically bound to the promoter and <span class="math inline"><em>R</em><sub><em>N</em><em>S</em></sub></span> represents the number of repressors nonspecifically bound throughout the genome. The value of <span class="math inline"><em>R</em><sub><em>S</em></sub></span> is given by</p>
-<p><span id="eq:ind_si_fugacity_rs" class="eqnos"><br /><span class="math display">$$
+<p><span id="eq:ind_si_fugacity_rs"><br /><span class="math display">$$
 R_S = N \frac{\lambda_r e^{-\beta \Delta \varepsilon_{RA}}}{1 + \lambda_r
 e^{-\beta \Delta \varepsilon_{RA}}},
-$$</span><br /><span class="eqnos-number">(7)</span></span></p>
+\qquad(7)$$</span><br /></span></p>
 <p>where <span class="math inline"><em>N</em></span> is the number of available promoters in the cell. Note that in counting <span class="math inline"><em>N</em></span>, we do not distinguish between promoters that are on plasmid or chromosomally integrated provided that they both have the same repressor-operator binding energy (Weinert et al. 2014). The value of <span class="math inline"><em>R</em><sub><em>N</em><em>S</em></sub></span> is similarly give by</p>
-<p><span id="eq:ind_si_fugacity_rns" class="eqnos"><br /><span class="math display">$$
+<p><span id="eq:ind_si_fugacity_rns"><br /><span class="math display">$$
 R_{NS} = N_{NS} \frac{\lambda_r}{1 + \lambda_r},
-$$</span><br /><span class="eqnos-number">(8)</span></span></p>
+\qquad(8)$$</span><br /></span></p>
 <p>where <span class="math inline"><em>N</em><sub><em>N</em><em>S</em></sub></span> is the number of non-specific sites in the cell (recall that we use <span class="math inline"><em>N</em><sub><em>N</em><em>S</em></sub> = 4.6 × 10<sup>6</sup></span> for <em>E. coli</em>).</p>
 <p>Substituting in into the modified yields the form</p>
-<p><span id="eq:ind_si_fugacity_pa0" class="eqnos"><br /><span class="math display">$$
+<p><span id="eq:ind_si_fugacity_pa0"><br /><span class="math display">$$
 p_A(0) R_{\text{tot}} = \frac{1}{1 + e^{-\beta \Delta \varepsilon_{AI}}} \left(
 N \frac{\lambda_r e^{-\beta \Delta \varepsilon_{RA}}}{1 + \lambda_r e^{-\beta
 \Delta \varepsilon_{RA}}} + N_{NS} \frac{\lambda_r}{1 + \lambda_r} \right),
-$$</span><br /><span class="eqnos-number">(9)</span></span></p>
+\qquad(9)$$</span><br /></span></p>
 <p>where we recall from that <span class="math inline">$\beta \Delta \varepsilon_{RA} = \beta \Delta \tilde\varepsilon_{RA} + \log{\left(\frac{1}{1 + e^{-\beta \Delta \varepsilon_{AI}}}\right)}.$</span> Numerically solving for <span class="math inline"><em>λ</em><sub><em>r</em></sub></span> and plugging the value back into yields a fold-change function in which the only unknown parameter is <span class="math inline"><em>Δ</em><em>ε</em><sub><em>A</em><em>I</em></sub></span>.</p>
-<p>With these calculations in hand, we can now determine the value of the <span class="math inline"><em>Δ</em><em>ε</em><sub><em>A</em><em>I</em></sub></span> parameter. shows how different values of <span class="math inline"><em>Δ</em><em>ε</em><sub><em>A</em><em>I</em></sub></span> lead to significantly different fold-change response curves. Thus, analyzing the specific fold-change response of any strain with a known plasmid copy number <span class="math inline"><em>N</em></span> will fix <span class="math inline"><em>Δ</em><em>ε</em><sub><em>A</em><em>I</em></sub></span>. Interestingly, the inflection point of occurs near <span class="math inline"><em>p</em><sub><em>A</em></sub>(0)<em>R</em><sub>tot</sub> = <em>N</em></span> (as shown by the triangles in ), so that merely knowing where the fold-change response transitions from concave down to concave up is sufficient to obtain a rough value for <span class="math inline"><em>Δ</em><em>ε</em><sub><em>A</em><em>I</em></sub></span>. We note, however, that for <span class="math inline"><em>Δ</em><em>ε</em><sub><em>A</em><em>I</em></sub> ≳ 5 <em>k</em><sub><em>B</em></sub><em>T</em></span>, increasing <span class="math inline"><em>Δ</em><em>ε</em><sub><em>A</em><em>I</em></sub></span> further does not affect the fold-change because essentially every repressors will be in the active state in this regime. Thus, if the <span class="math inline"><em>Δ</em><em>ε</em><sub><em>A</em><em>I</em></sub></span> is in this regime, we can only bound it from below.</p>
-<p>We now analyze experimental induction data for different strains with known plasmid copy numbers to determine <span class="math inline"><em>Δ</em><em>ε</em><sub><em>A</em><em>I</em></sub></span>. shows experimental measurements of fold-change for two O1 promoters with <span class="math inline"><em>N</em> = 64</span> and <span class="math inline"><em>N</em> = 52</span> copy numbers and one Oid promoter with <span class="math inline"><em>N</em> = 10</span> from Brewster et al. (2014). By fitting these data to , we extracted the parameter value <span class="math inline"><em>Δ</em><em>ε</em><sub><em>A</em><em>I</em></sub> = 4.5 <em>k</em><sub><em>B</em></sub><em>T</em></span>. Substituting this value into shows that 99% of the repressors are in the active state in the absence of inducer and $<em>{RA}  </em>{RA}, so that all of the previous energies and calculations made by <span class="citation" data-cites="garcia2011">Garcia and Phillips (<a href="#ref-garcia2011" role="doc-biblioref">2011</a>)</span> and <span class="citation" data-cites="brewster2014">Brewster et al. (<a href="#ref-brewster2014" role="doc-biblioref">2014</a>)</span> were accurate.</p>
+<p>With these calculations in hand, we can now determine the value of the <span class="math inline"><em>Δ</em><em>ε</em><sub><em>A</em><em>I</em></sub></span> parameter. shows how different values of <span class="math inline"><em>Δ</em><em>ε</em><sub><em>A</em><em>I</em></sub></span> lead to significantly different fold-change response curves. Thus, analyzing the specific fold-change response of any strain with a known plasmid copy number <span class="math inline"><em>N</em></span> will fix <span class="math inline"><em>Δ</em><em>ε</em><sub><em>A</em><em>I</em></sub></span>. Interestingly, the inflection point of occurs near <span class="math inline"><em>p</em><sub><em>A</em></sub>(0)<em>R</em><sub>tot</sub> = <em>N</em></span> (as shown by the triangles in ), so that merely knowing where the fold-change response transitions from concave down to concave up is sufficient to obtain a rough value for <span class="math inline"><em>Δ</em><em>ε</em><sub><em>A</em><em>I</em></sub></span>. We note, however, that for <span class="math inline"><em>Δ</em><em>ε</em><sub><em>A</em><em>I</em></sub> ≥ 5 <em>k</em><sub><em>B</em></sub><em>T</em></span>, increasing <span class="math inline"><em>Δ</em><em>ε</em><sub><em>A</em><em>I</em></sub></span> further does not affect the fold-change because essentially every repressors will be in the active state in this regime. Thus, if the <span class="math inline"><em>Δ</em><em>ε</em><sub><em>A</em><em>I</em></sub></span> is in this regime, we can only bound it from below.</p>
+<p>We now analyze experimental induction data for different strains with known plasmid copy numbers to determine <span class="math inline"><em>Δ</em><em>ε</em><sub><em>A</em><em>I</em></sub></span>. shows experimental measurements of fold-change for two O1 promoters with <span class="math inline"><em>N</em> = 64</span> and <span class="math inline"><em>N</em> = 52</span> copy numbers and one Oid promoter with <span class="math inline"><em>N</em> = 10</span> from Brewster et al. (2014). By fitting these data to , we extracted the parameter value <span class="math inline"><em>Δ</em><em>ε</em><sub><em>A</em><em>I</em></sub> = 4.5 <em>k</em><sub><em>B</em></sub><em>T</em></span>. Substituting this value into shows that 99% of the repressors are in the active state in the absence of inducer and <span class="math inline"><em>Δ</em><em>ε̃</em><sub><em>R</em><em>A</em></sub> ≈ <em>Δ</em><em>ε</em><sub><em>R</em><em>A</em></sub></span>, so that all of the previous energies and calculations made by <span class="citation" data-cites="garcia2011">Garcia and Phillips (<a href="#ref-garcia2011" role="doc-biblioref">2011</a>)</span> and <span class="citation" data-cites="brewster2014">Brewster et al. (<a href="#ref-brewster2014" role="doc-biblioref">2014</a>)</span> were accurate.</p>
 <div id="refs" class="references hanging-indent" role="doc-bibliography">
 <div id="ref-brewster2014">
 <p>Brewster, Robert C., Franz M. Weinert, Hernan G. Garcia, Dan Song, Mattias Rydenfelt, and Rob Phillips. 2014. “The Transcription Factor Titration Effect Dictates Level of Gene Expression.” <em>Cell</em> 156 (6): 1312–23. <a href="https://doi.org/10.1016/j.cell.2014.02.022">https://doi.org/10.1016/j.cell.2014.02.022</a>.</p>
@@ -207,38 +207,6 @@ $$</span><br /><span class="eqnos-number">(9)</span></span></p>
 			</div><!-- /.container -->
 		</div><!-- /.section -->
 		
-			<div class="section section--grey">
-				<div class="container">
-					<div class="row">
-						<div class="col-md-7">
-							<div id="disqus_thread"></div>
-<script>
-	/**
-	 *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-	 *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
-	 */
-	 /*
-	var disqus_config = function () {
-	this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
-		this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-	};
-	*/
-	(function() {
-		var d = document, s = d.createElement('script');
-
-		s.src = 'https://gchure_phd.disqus.com/embed.js';
-
-		s.setAttribute('data-timestamp', +new Date());
-		(d.head || d.body).appendChild(s);
-	})();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
-
-						</div><!-- /.col -->
-					</div><!-- /.row -->
-				</div><!-- /.container -->
-			</div><!-- /.section -->
-		
 		<div class="js-footer-area">
 			
 				<nav class="page-nav">	
@@ -246,13 +214,13 @@ $$</span><br /><span class="eqnos-number">(9)</span></span></p>
 						<div class="row">
 							<div class="col-xs-12">
 								
-									<a href="https://gchure.github.io/phd{{site.doks.baseurl}}/published_content" class="page-nav__item page-nav__item--prev">
+									<a href="{{site.doks.baseurl}}/published_content" class="page-nav__item page-nav__item--prev">
 										<i class="icon icon--arrow-left"></i>
 										Published Content
 									</a><!-- /.page-nav__item -->
 								
 								
-									<a href="https://gchure.github.io/phd{{site.doks.baseurl}}/chapter_02" class="page-nav__item page-nav__item--next">
+									<a href="{{site.doks.baseurl}}/chapter_02" class="page-nav__item page-nav__item--next">
 										Chapter 2
 										<i class="icon icon--arrow-right"></i>
 									</a><!-- /.page-nav__item -->
@@ -269,7 +237,7 @@ $$</span><br /><span class="eqnos-number">(9)</span></span></p>
 			<div class="row">
 				<div class="col-sm-6">
 					
-						<a href="https://gchure.github.io/phd/" class="site-footer__logo">Griffin D. Chure | PhD Thesis</a>
+						<a href="/" class="site-footer__logo">Griffin D. Chure | PhD Thesis</a>
 					
 					
 						<hr>
@@ -294,11 +262,11 @@ $$</span><br /><span class="eqnos-number">(9)</span></span></p>
 	</footer><!-- /.site-footer -->
 
 
-<script src="https://gchure.github.io/phd/doks-theme/assets/js/vendor/jquery.min.js"></script>
-<script type="text/javascript" src="https://gchure.github.io/phd/doks-theme/assets/js/vendor/bootstrap/affix.min.js"></script>
-<script type="text/javascript" src="https://gchure.github.io/phd/doks-theme/assets/js/vendor/bootstrap/scrollspy.min.js"></script>
-<script type="text/javascript" src="https://gchure.github.io/phd/doks-theme/assets/js/vendor/matchHeight.min.js"></script>
-<script type="text/javascript" src="https://gchure.github.io/phd/doks-theme/assets/js/scripts.min.js"></script>
+<script src="/doks-theme/assets/js/vendor/jquery.min.js"></script>
+<script type="text/javascript" src="/doks-theme/assets/js/vendor/bootstrap/affix.min.js"></script>
+<script type="text/javascript" src="/doks-theme/assets/js/vendor/bootstrap/scrollspy.min.js"></script>
+<script type="text/javascript" src="/doks-theme/assets/js/vendor/matchHeight.min.js"></script>
+<script type="text/javascript" src="/doks-theme/assets/js/scripts.min.js"></script>
 
 
 

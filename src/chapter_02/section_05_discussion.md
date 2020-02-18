@@ -1,4 +1,4 @@
-# Discussion
+## Discussion
 
 Since the early work by Monod, Wyman, and Changeux , an array of
 biological phenomena has been tied to the existence of macromolecules

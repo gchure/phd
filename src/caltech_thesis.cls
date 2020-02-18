@@ -10,7 +10,7 @@
 \RequirePackage{etoolbox}
 
 % Overleaf 28 Jan: Page geometry
-\RequirePackage[letterpaper,top=1in,bottom=1in,left=1.5in,right=1.5in,headsep=\dimexpr 0.25in-1em,marginparwidth=1.25in]{geometry}
+\RequirePackage[letterpaper,top=1in,bottom=1in,left=1.25in,right=1.25in,headsep=\dimexpr 0.25in-1em,marginparwidth=1.25in]{geometry}
 
 % Page style
 \makeoddhead{headings}{}{}{\thepage}
@@ -314,5 +314,4 @@ Add the option \texttt{iknowwhattodo} to this environment to dismiss this messag
 
 % Overleaf: 28 January 2016 -- no more pagenumbers in the TOC
 \newcommand{\pocketmaterial}{\addtocontents{toc}{\cftpagenumbersoff{chapter}}}
-
 \endinput

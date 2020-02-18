@@ -25,7 +25,6 @@ model for allosteric transcriptional regulation has made it impossible
 to predict the behavior of even a simple genetic circuit across a range
 of regulatory parameters.
 
-
 The ability to predict circuit behavior robustly— that is, across both
 broad ranges of parameters and regulatory architectures —is important
 for multiple reasons. First, in the context of a specific gene, accurate
@@ -56,8 +55,8 @@ expected behavior across a wide array of experimental conditions, and
 only then do we set out to experimentally confirm these results.
 Building upon previous work [@garcia2011; @brewster2014; @weinert2014] and the
 work of Monod, Wyman, and Changeux [@monod1965], we present a statistical mechanical rendering of allostery in the
-context of induction and corepression (shown schematically in Fig.
-@fig:inducible_types and
+context of induction and corepression (shown schematically in 
+@Fig:inducible_types and
 henceforth referred to as the MWC model) and use it as the basis of
 parameter-free predictions which we then test experimentally. More
 specifically, we study the simple repression motif – a widespread

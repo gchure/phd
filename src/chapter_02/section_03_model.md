@@ -19,7 +19,7 @@ accounting for the equilibrium state of the repressor through the MWC model.
 
 Thermodynamic models of gene expression begin by enumerating all possible
 states of the promoter and their corresponding statistical weights. As shown
-in Fig. @fig:states_weights (A), the promoter can either be empty, occupied
+in  @Fig:states_weights (A), the promoter can either be empty, occupied
 by RNAP, or occupied by either an active or inactive repressor. The
 probability of binding to the promoter will be affected by the protein copy
 number, which we denote as $P$ for RNAP, $R_{A}$ for active repressor, and
@@ -115,7 +115,7 @@ We use the MWC model to compute the probability $p_\text{act}(c)$ that a
 repressor with $n$ inducer binding sites will be active. The value of
 $p_\text{act}(c)$ is given by the sum of the weights of the active repressor
 states divided by the sum of the weights of all possible repressor
-states [see Fig. @fig:states_weights (B)], namely, 
+states [see  @Fig:states_weights (B)], namely, 
 
 $$
 p_\text{act}(c)=\frac{\left(1+\frac{c}{K_A}\right)^n}{\left(1+\frac{c}{K_A}\right)^n+e^{-\beta
@@ -136,7 +136,7 @@ state in the absence of inducer. Thus, a repressor which favors the active
 state in the absence of inducer ($\Delta \varepsilon_{AI} > 0$) will be
 driven towards the inactive state upon inducer binding when $K_I < K_A$. The
 specific case of a repressor dimer with $n=2$ inducer binding sites is shown
-in Fig. @fig:states_weights (B).
+in  @Fig:states_weights (B).
 
 Substituting $p_\text{act}(c)$ from into yields the general formula for
 induction of a simple repression regulatory architecture [@phillips2015],
@@ -152,7 +152,7 @@ $${#eq:fold_change_full}
 While we have used the specific case of simple repression with induction
 to craft this model, the same mathematics describe the case of
 corepression in which binding of an allosteric effector stabilizes the
-active state of the repressor and decreases gene expression (see Fig. @fig:inducible_types).
+active state of the repressor and decreases gene expression (see  @Fig:inducible_types).
 Interestingly, we shift from induction (governed by $K_I < K_A$) to
 corepression ($K_I > K_A$) as the ligand transitions from
 preferentially binding to the inactive repressor state to stabilizing
@@ -161,12 +161,12 @@ describe a variety of other motifs such as activation, multiple
 repressor binding sites, and combinations of activator and repressor
 binding sites [@bintu2005a; @brewster2014; @weinert2014].
 
-The formula presented in Eq. @eq:fold_change_full enables us to make precise
+The formula presented in  @Eq:fold_change_full enables us to make precise
 quantitative statements about induction profiles. Motivated by the broad
-range of predictions implied by Eq. @eq:fold_change_full, we designed a
+range of predictions implied by  @Eq:fold_change_full, we designed a
 series of experiments using the *lac* system in *E. coli* to tune the control
-parameters for a simple repression genetic circuit. As discussed in Fig.
-@fig:inducible_types (C), previous studies from our lab have provided
+parameters for a simple repression genetic circuit. As discussed in 
+@Fig:inducible_types (C), previous studies from our lab have provided
 well-characterized values for many of the parameters in our experimental
 system, leaving only the values of the the MWC parameters ($K_A$, $K_I$, and
 $\Delta \varepsilon_{AI}$) to be determined. We note that while previous
