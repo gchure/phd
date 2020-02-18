@@ -38,18 +38,20 @@ fig, ax = plt.subplots(1, 3, figsize=(6, 2 ))
 for a in ax.ravel():
     a.xaxis.set_tick_params(labelsize=8)
     a.yaxis.set_tick_params(labelsize=8)
+for a in ax:
+    a.grid(False)
 ax[2].set_xlabel('Bohr parameter [$k_BT$]', fontsize=8)
 ax[2].set_ylabel('fold-change', fontsize=8)
 ax[0].set_xscale('log')
-ax[0].set_yscale('log')
-ax[1].set_xscale('log')
-ax[1].set_ylabel('fold-change', fontsize=8)
-ax[0].set_ylabel('leakiness', fontsize=8)
-ax[0].set_xlabel('repressors per cell', fontsize=8)
-ax[1].set_xlabel('IPTG [M]', fontsize=8)
-ax[1].set_ylabel('fold-change', fontsize=8)
-ax[0].set_xlim([1, 1E4])
-ax[1].set_xlim([1E-8, 1E-2])
+ax[1].axis('off')
+ax[0].set_ylabel('fold-change', fontsize=8)
+ax[0].set_xlabel('IPTG [µM]', fontsize=8)
+ax[0].set_xlim([1E-2, 1E4])
+ax[0].set_yticks([0, 0.5, 1.0])
+ax[2].set_yticks([0, 0.5, 1.0])
+ax[0].set_xticks([1E-1, 1E1, 1E3])
+ax[2].set_xticks([-8, 0, 8])
+
 # Plot the master curve. 
 _ = ax[2].plot(bohr_range, collapse, 'k-', label='__nolegend__', lw=1)
 
@@ -57,39 +59,23 @@ _ = ax[2].plot(bohr_range, collapse, 'k-', label='__nolegend__', lw=1)
 _color = {'O1':colors['red'], 'O2':colors['purple'], 'O3':colors['blue'], 'Oid':'k'}
 glyphs = {'garcia':'o', 'brewster':'D'}
 
-for g, d in old_gods.groupby(['author', 'operator', 'repressor']):
-    # Compute and plot bohrconstants.
-    bohr = phd.thermo.SimpleRepression(R=g[2], ep_r=constants[g[1]], ka=constants['Ka'],
-                                      ki=constants['Ki'], effector_conc=0, n_sites=constants['n_sites'], 
-                                       n_ns=constants['Nns'], ep_ai=constants['ep_AI']).bohr_parameter()
-    _ = ax[2].plot(bohr, d['fold_change'], glyphs[g[0]], color=_color[g[1]], ms=1.5, label='__nolegend__', alpha=0.75)
-    
-    # Plot the leakiness values.
-    _ = ax[0].plot(g[-1], d['fold_change'], glyphs[g[0]], color=_color[g[1]], ms=1.5, label='__nolegend__', alpha=0.75)
-
 # Plot the flow data. 
-for g, d in new_gods.groupby(['operator', 'IPTG_uM', 'repressors']):
-    bohr = phd.thermo.SimpleRepression(R=2 * g[2], ep_r=constants[g[0]], ka=constants['Ka'],
+iter = 0
+for g, d in new_gods.groupby(['operator',  'repressors']):
+    bohr = phd.thermo.SimpleRepression(R=2 * g[1], ep_r=constants[g[0]], ka=constants['Ka'],
                                       ki=constants['Ki'], ep_ai=constants['ep_AI'],
                                       n_sites=constants['n_sites'], n_ns=constants['Nns'],
-                                      effector_conc=g[1]).bohr_parameter()
-    _ = ax[2].plot(bohr, d['fold_change_A']['mean'], 'o', color=_color[g[0]], ms=1.5, label='__nolegend__', alpha=0.75, zorder=0)
-    
-    if g[1] == 0:
-        _ = ax[0].plot(2 * g[2], d['fold_change_A']['mean'], 'x', color=_color[g[0]], ms=1.5, label='__nolegend__')
-    
-    else:
-        _ = ax[1].plot(g[1] / 1E6, d['fold_change_A']['mean'], 'x', color=_color[g[0]], ms=1.5, label='__nolegend__')
-        
+                                      effector_conc=d['IPTG_uM']).bohr_parameter()
+    _ = ax[2].plot(bohr, d['fold_change_A']['mean'], 'o', markerfacecolor=palette[iter], ms=2.5, 
+                  label='__nolegend__', alpha=0.75, zorder=2, markeredgecolor='k',
+                  markeredgewidth=0.25)
+    _ = ax[0].plot(d['IPTG_uM'], d['fold_change_A']['mean'], 'o', markerfacecolor=palette[iter], ms=2.5, label='__nolegend__',
+                   markeredgecolor='k', markeredgewidth=0.25)
+    iter += 1
+
 # Plot the theory curves for each. 
+iter = 0
 for i, o in enumerate(_color.keys()):
-    # Plot the leakiness
-    rep_range = np.logspace(0, 4, 200)
-    arch = phd.thermo.SimpleRepression(R=rep_range, ep_r=constants[o], ep_ai=constants['ep_AI'],
-                                      ka=constants['Ka'], ki=constants['Ki'], effector_conc=0,
-                                      n_sites=constants['n_sites'], n_ns=constants['Nns']).fold_change()
-    _ = ax[0].plot(rep_range, arch, '-', lw=1, color=_color[o], label=o)
-    
     # Plot the induction profiles. 
     if o != 'Oid':
         c_range = np.logspace(-2, 4, 200)
@@ -97,17 +83,12 @@ for i, o in enumerate(_color.keys()):
             arch = phd.thermo.SimpleRepression(R=2 * r, ep_r=constants[o], ep_ai=constants['ep_AI'],
                                       ka=constants['Ka'], ki=constants['Ki'], effector_conc=c_range,
                                       n_sites=constants['n_sites'], n_ns=constants['Nns']).fold_change()
-            _ = ax[1].plot(c_range / 1E6, arch, '-', lw=1, color=_color[o], label='__nolegend__')
-    
-# # Add the appropriate labels
-ax[2].plot([], [], 'o', ms=2, color='slategray', label='Garcia & Phillips\n2011')
-ax[2].plot([], [], 'D', ms=2, color='slategray', label='Brewster et al.\n2014')
-ax[2].plot([], [], 'x', ms=2, color='slategray', label='Razo-Mejia et al.\n2018')
+            _ = ax[0].plot(c_range, arch, '-', lw=1, color=palette[iter], label='__nolegend__')
+            iter += 1 
 
-ax[-1].legend(fontsize=6, handletextpad=0.1, handlelength=1, loc='upper left')
-ax[0].legend(fontsize=6, handletextpad=0.2,  handlelength=1, loc='lower left')
+# # Add the appropriate labels
 plt.tight_layout()
-# plt.savefig('Fig1_collapse.svg')
+plt.savefig('../figs/fig1_collapse_plot.svg', bbox_inches='tight')
 
 
 

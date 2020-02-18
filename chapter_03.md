@@ -41,6 +41,8 @@ prefix: chapter_03
 contents:
     - section_01_header
     - section_02_introduction
+    - section_03_model
+    - section_04_DNA_mutants
 ---
 
 **Published as ...**

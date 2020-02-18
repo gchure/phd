@@ -1,4 +1,4 @@
-# Introduction
+## Introduction
 Thermodynamic treatments of transcriptional regulation have been fruitful
 in their ability to generate quantitative predictions of gene expression
 as a function of a minimal set of physically meaningful parameters [@ackers1982;
