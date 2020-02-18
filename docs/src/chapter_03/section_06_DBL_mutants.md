@@ -1,4 +1,4 @@
-## Predicting Effects of Pairwise Double Mutations
+### Predicting Effects of Pairwise Double Mutations
 
 Given full knowledge of each individual mutation, we can draw
 predictions of the behavior of the pairwise double mutants with no free

@@ -45,6 +45,8 @@ contents:
     - section_04_DNA_mutants
     - section_05_IND_mutants
     - section_06_DBL_mutants
+    - section_07_discussion
+    - section_08_methods
     - section_99_references
 ---
 

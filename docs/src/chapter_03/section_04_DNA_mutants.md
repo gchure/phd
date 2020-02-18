@@ -1,4 +1,5 @@
-## DNA Binding Domain Mutants
+## Results
+### DNA Binding Domain Mutants
 
 With this arsenal of analytic diagnostics, we can begin to explore the
 mutational space of the repressor and map these mutations to the

@@ -1,4 +1,4 @@
-## Inducer Binding Domain Mutants
+### Inducer Binding Domain Mutants
 
 Much as in the case of the DNA binding mutants, we cannot safely assume
 *a priori* that a given mutation in the inducer binding domain affects
