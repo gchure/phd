@@ -238,8 +238,8 @@ leakiness, which is the minimum fold-change observed in the absence of
 ligand, given by
 
 $$
-\text{leakiness} &= \text{fold-change}(c=0) \nonumber\\
-&= \left(
+\text{leakiness} = \text{fold-change}(c=0) \nonumber\\
+= \left(
 1+\frac{1}{1+e^{-\beta \Delta \varepsilon_{AI} }}\frac{R}{N_{NS}}e^{-\beta
 \Delta\varepsilon_{RA}} \right)^{-1},
 $${#eq:leakiness}

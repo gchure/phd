@@ -154,6 +154,48 @@ def compute_statistics(df, varnames=None, logprob_name="logp"):
 
     return stat_df
 
+def bin_by_events(df, bin_size, sortby='summed', average=['summed', 'fluct']):
+    """
+    Bins a given data set by number of events rather than bin width and
+    computes the mean value of desired parameters.
+
+    Parameters
+    ----------
+    df : pandas DataFrame
+        Dataframe containing data to bin and average.
+    bin_size : int
+        Number of events to consider for one bin.
+    sortby : str
+        The name of the column to sort the values by. Default is 'summed'
+    average : list
+        The quantities over which to average. These will be returned in the
+        order they are provided.
+
+    Returns
+    -------
+    average_vals : list with shape of `average`.
+        The average of the quantities in each bin. This is a list of lists.
+    """
+    num_quantities = len(average)
+
+    # Sort the dataframe.
+    sorted_df = df.sort_values(sortby)
+
+    # Set the bins.
+    bins = np.arange(0, len(sorted_df) + bin_size, bin_size)
+    averages = {i: np.zeros(len(bins)) for _, i in enumerate(average)}
+    for k in average:
+        averages[f'{k}_sem'] = np.zeros(len(bins))
+    # Iterate through each bin and compute the average quanities.
+    for i in range(1, len(bins)):
+        # Slice the data frame.
+        d = sorted_df.iloc[bins[i - 1]:bins[i]][average]
+        for k in d.keys():
+            val = np.mean(d[k].values)
+            averages[f'{k}_sem'][i-1] = np.std(d[k].values) / np.sqrt(len(d))
+            averages[k][i-1] = val
+    return averages
+
 
 def compute_hpd(trace, mass_frac):
     r"""
