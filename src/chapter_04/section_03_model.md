@@ -9,10 +9,14 @@ in expression of the regulated gene. Thermodynamic models described previously
 [@garcia2011; @razo-mejia2018; @phillips2019] and in Chapters 2-3 of this work 
 result in a succinct input-output function to quantitatively describe the
 fold-change in gene expression and is of the form
+
 $$
 \text{fold-change} = \left(1 + p_{act}(c)\frac{R}{N_{NS}}e^{-\Delta\varepsilon_R
 / k_BT}\right)^{-1},
-$${#eq:foldchange_simple} where $R$ is the total number of
+$${#eq:foldchange_simple} 
+
+
+where $R$ is the total number of
 allosteric repressors per cell, $N_{NS}$ is the number of nonspecific
 binding sites for the repressor, $\Delta\varepsilon_R$ is the
 repressor-DNA binding energy, and $k_BT$ is the thermal energy of the
