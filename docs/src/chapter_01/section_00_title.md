@@ -1,1 +1,1 @@
-# Kneel Before the Janus-Faced Protein: Adaptive Processes Across The Biological Scales
+# Janus-Faced Molecules and Adaptation Across Biological Scales 

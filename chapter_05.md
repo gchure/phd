@@ -45,7 +45,6 @@ contents:
     - section_04_discussion
     - section_05_methods
     - section_06_acknowledgements
-    - section_99_references
 ---
 
 **Published as ...**
@@ -59,3 +58,5 @@ contents:
 {% endif %}
 {% endfor %}
 {% endif %}
+
+## References

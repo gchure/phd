@@ -40,14 +40,14 @@ page_nav:
 prefix: chapter_03
 contents:
     - section_01_header
-    - section_02_introduction
-    - section_03_model
-    - section_04_DNA_mutants
-    - section_05_IND_mutants
-    - section_06_DBL_mutants
-    - section_07_discussion
-    - section_08_methods
-    - section_99_references
+    - section_02_abstract
+    - section_03_introduction
+    - section_04_model
+    - section_05_DNA_mutants
+    - section_06_IND_mutants
+    - section_07_DBL_mutants
+    - section_08_discussion
+    - section_09_methods
 ---
 
 **Published as ...**
@@ -62,3 +62,4 @@ contents:
 {% endfor %}
 {% endif %}
 
+## References

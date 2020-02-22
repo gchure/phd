@@ -37,12 +37,12 @@ page_nav:
 prefix: chapter_02
 contents:
     - section_01_header
-    - section_02_introduction
-    - section_03_model   
-    - section_04_results
-    - section_05_discussion
-    - section_06_methods
-    - section_99_references
+    - section_02_abstract
+    - section_03_introduction
+    - section_04_model   
+    - section_05_results
+    - section_06_discussion
+    - section_07_methods
 ---
 
 **Published as ...**
@@ -57,3 +57,4 @@ contents:
 {% endfor %}
 {% endif %}
 
+## References

@@ -37,9 +37,10 @@ page_nav:
 prefix: chapter_04
 contents:
     - section_01_header
-    - section_02_introduction
-    - section_03_model
-    - section_04_experimental_design
+    - section_02_abstract
+    - section_03_introduction
+    - section_04_model
+    - section_05_experimental_design
 ---
 
 **Published as ...**
@@ -53,3 +54,6 @@ contents:
 {% endif %}
 {% endfor %}
 {% endif %}
+
+
+## References

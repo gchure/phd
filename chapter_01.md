@@ -5,9 +5,9 @@ keywords:
 comments: true
 
 # Hero section
-title: Chapter 2
+title:  Chapter I
 subtitle: >  
-    
+    Janus-Faced Molecules and Adaptation Across Biological Scales     
 
 # Author box
 author:
@@ -26,7 +26,27 @@ page_nav:
     next:
         content: Chapter 2
         url: '{{site.doks.baseurl}}/chapter_2'
+prefix: chapter_01
+contents:
+    - section_01_introduction
+    - section_02_monod
+    - section_03_molecular_adaptation
+    - section_04_data_collapse
+    - section_05_evolutionary_adaptation
+    - section_06_physiological_adaptation
+    - section_07_survival
+    - section_08_conclusion
 ---
+
+{% if page.contents %}
+{% for val in page.contents %}
+{% if jekyll.environment == production %}
+{% include_relative {{site.doks.baseurl}}src/{{page.prefix}}/{{val}}.md %}
+{% else %}
+{% include_relative src/{{page.prefix}}/{{val}}.md %}
+{% endif %}
+{% endfor %}
+{% endif %}
 
 
 Blank placeholder
