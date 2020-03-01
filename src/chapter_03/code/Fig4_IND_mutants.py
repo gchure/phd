@@ -32,6 +32,8 @@ F = (1 + np.exp(-bohr_range))**-1
 # FIGURE INSTANTIATION
 # ##############################################################################
 fig, ax = plt.subplots(3, 4, figsize=(6, 6))
+phd.viz.despine(ax.ravel())
+
 for a in ax.ravel():
     a.xaxis.set_tick_params(labelsize=6)
     a.yaxis.set_tick_params(labelsize=6)
@@ -55,8 +57,8 @@ for i in range(4):
 # Define the axes
 axes = {'F164T':3, 'Q294V':2, 'Q294K':1, 'Q294R':0}
 titles = {'F161T':3, 'Q291V':2, 'Q291K':1, 'Q291R':0}
-op_colors = {'O1':colors['light_blue'], 'O2':colors['light_orange'], 'O3':colors['light_purple']}
-edge_colors = {'O1':colors['dark_blue'], 'O2':colors['dark_orange'], 'O3':colors['dark_purple']}
+op_colors = {'O1':colors['blue'], 'O2':colors['orange'], 'O3':colors['purple']}
+
 
 # Add labels
 for m, a in titles.items():
@@ -93,7 +95,7 @@ for i, o in enumerate(('O1', 'O2', 'O3')):
        arch = phd.thermo.SimpleRepression(R=260, ep_r=ep_r, ka=ka, ki=ki, 
                 ep_ai=4.5, effector_conc=c_range).fold_change()
  
-       ax[0, a].plot(c_range, arch, ':', color=edge_colors[o], lw=0.5)  
+       ax[0, a].plot(c_range, arch, ':', color=op_colors[o], lw=0.5)  
 
         # Plot the credible regions for the kaki and epAI fits.
        _kaki = kaki_epAI_samps[kaki_epAI_samps['mutant']==m]
@@ -149,13 +151,16 @@ for g, d in data.groupby(['mutant', 'operator', 'IPTGuM']):
     # Determine coloring.
     if g[1] == 'O2':
         face = 'w'
+        ec = colors['orange']
     else:
         face = op_colors[g[1]]
+        ec = 'white'
 
     # Plot!
     _ax = ax[1, axes[g[0]]]
-    _ax.errorbar(_bohr, d['mean'], d['sem'], fmt='.', markerfacecolor=face,
-                color=edge_colors[g[1]], ms=6, markeredgewidth=0.5, lw=0.75, capsize=1)
+    _ax.errorbar(_bohr, d['mean'], d['sem'], fmt='o', markerfacecolor=face,
+                color=op_colors[g[1]], ms=4, markeredgewidth=0.5, lw=0.75, 
+                capsize=1, markeredgecolor=ec)
 
 # ##############################################################################
 # FOLD-CHANGE DATA 
@@ -164,11 +169,13 @@ for g, d in data.groupby(['mutant', 'operator']):
     _ax = ax[0, axes[g[0]]]
     if g[1] == 'O2':
         face = 'w'
+        ec = colors['orange']
     else:
         face = op_colors[g[1]]
-    _ax.errorbar(d['IPTGuM'], d['mean'], d['sem'], fmt='.', 
-        markerfacecolor=face, linestyle='none', color=edge_colors[g[1]], capsize=1,
-        label=g[1], markeredgewidth=0.5, ms=6, lw=0.75)
+        ec = 'white'
+    _ax.errorbar(d['IPTGuM'], d['mean'], d['sem'], fmt='o', 
+        markerfacecolor=face, linestyle='none', color=op_colors[g[1]], capsize=1,
+        label=g[1], markeredgewidth=0.5, ms=4, lw=0.75, markeredgecolor=ec)
 
 # ##############################################################################
 # DELTA F DATA
@@ -190,12 +197,14 @@ for g, d in bohr.groupby(['mutant', 'operator', 'IPTGuM']):
         color = op_colors[g[1]]
         alpha = 1 
         lw = 0.5
-        fmt = '.'
+        fmt = 'o'
     if g[1] == 'O2':
         face = 'w'
+        ec = colors['orange']
         zorder=1000
     else:
         face = op_colors[g[1]]
+        ec = 'white'
         zorder=100
     if g[-1] == 0:
         cap_min = -0.1
@@ -204,15 +213,15 @@ for g, d in bohr.groupby(['mutant', 'operator', 'IPTGuM']):
         cap_min = g[-1] * 0.8
         cap_max = g[-1] * 1.2
 
-    _ax.plot(_param['IPTGuM'], _param['median'], linestyle='none', marker=fmt, color=edge_colors[g[1]], 
-            markerfacecolor=face , alpha=alpha, ms=6, zorder=zorder,
+    _ax.plot(_param['IPTGuM'], _param['median'], linestyle='none', marker=fmt, markeredgecolor=ec, 
+            markerfacecolor=face , alpha=alpha, ms=4, zorder=zorder,
             markeredgewidth=0.5)
-    _ax.vlines(_param['IPTGuM'], _param['hpd_min'], _param['hpd_max'], color=edge_colors[g[1]],
+    _ax.vlines(_param['IPTGuM'], _param['hpd_min'], _param['hpd_max'], color=op_colors[g[1]],
             lw=lw, zorder=zorder)
     _ax.hlines(_param['hpd_min'], cap_min, cap_max, lw=lw, zorder=zorder, 
-               color=edge_colors[g[1]])
+               color=op_colors[g[1]])
     _ax.hlines(_param['hpd_max'], cap_min, cap_max, lw=lw, zorder=zorder, 
-               color=edge_colors[g[1]])
+               color=op_colors[g[1]])
 
 # ##############################################################################
 # LEGEND INFORMATION

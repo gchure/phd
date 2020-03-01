@@ -35,6 +35,7 @@ collapse = (1 + np.exp(-bohr_range))**-1
 #%%
 # Instantiate the figure.
 fig, ax = plt.subplots(1, 3, figsize=(6, 2 ))
+phd.viz.despine(ax)
 for a in ax.ravel():
     a.xaxis.set_tick_params(labelsize=8)
     a.yaxis.set_tick_params(labelsize=8)
@@ -66,11 +67,11 @@ for g, d in new_gods.groupby(['operator',  'repressors']):
                                       ki=constants['Ki'], ep_ai=constants['ep_AI'],
                                       n_sites=constants['n_sites'], n_ns=constants['Nns'],
                                       effector_conc=d['IPTG_uM']).bohr_parameter()
-    _ = ax[2].plot(bohr, d['fold_change_A']['mean'], 'o', markerfacecolor=palette[iter], ms=2.5, 
-                  label='__nolegend__', alpha=0.75, zorder=2, markeredgecolor='k',
-                  markeredgewidth=0.25)
-    _ = ax[0].plot(d['IPTG_uM'], d['fold_change_A']['mean'], 'o', markerfacecolor=palette[iter], ms=2.5, label='__nolegend__',
-                   markeredgecolor='k', markeredgewidth=0.25)
+    _ = ax[2].plot(bohr, d['fold_change_A']['mean'], 'o', markerfacecolor=palette[iter], ms=4, 
+                  label='__nolegend__', alpha=0.75, zorder=2, markeredgecolor='white',
+                  markeredgewidth=0.5)
+    _ = ax[0].plot(d['IPTG_uM'], d['fold_change_A']['mean'], 'o', markerfacecolor=palette[iter], ms=4, label='__nolegend__',
+                   markeredgecolor='white', markeredgewidth=0.5)
     iter += 1
 
 # Plot the theory curves for each. 
@@ -83,7 +84,7 @@ for i, o in enumerate(_color.keys()):
             arch = phd.thermo.SimpleRepression(R=2 * r, ep_r=constants[o], ep_ai=constants['ep_AI'],
                                       ka=constants['Ka'], ki=constants['Ki'], effector_conc=c_range,
                                       n_sites=constants['n_sites'], n_ns=constants['Nns']).fold_change()
-            _ = ax[0].plot(c_range, arch, '-', lw=1, color=palette[iter], label='__nolegend__')
+            _ = ax[0].plot(c_range, arch, '-', lw=0.5, color=palette[iter], label='__nolegend__')
             iter += 1 
 
 # # Add the appropriate labels

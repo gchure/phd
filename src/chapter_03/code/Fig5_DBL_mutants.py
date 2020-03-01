@@ -28,6 +28,13 @@ kaki_epai_samps = kaki_epai_samples[kaki_epai_samples['operator']=='O2'].copy()
 # FIGURE INSTANTIATION AND FORMATTING 
 # ##############################################################################
 fig, ax = plt.subplots(3, 7, figsize=(7, 3))
+phd.viz.despine(ax.ravel())
+
+for i in [1, 2, 5, 6]:
+    for j in [0, 1,  2]:
+        ax[j, i].spines['left'].set_visible(False)
+        ax[j, i].set_yticks([])
+    
 
 # Define the mutant axes
 DNA_idx = {'Y20I':0, 'Q21A':1, 'Q21M':2}
@@ -93,8 +100,8 @@ for dna, dna_idx in DNA_idx.items():
         m_data = data[data['mutant']==f'{dna}-{ind}']
 
         ax[dna_idx, ind_idx].errorbar(m_data['IPTGuM'], m_data['mean'], m_data['sem'],
-            fmt='.', lw=1, capsize=1, linestyle='none', color=colors['blue'],
-            ms=5, markerfacecolor=colors['pale_blue'], markeredgewidth=0.5)
+            fmt='o', lw=1, capsize=1, linestyle='none', markeredgecolor='white',
+            ms=3.5, color=colors['blue'], markeredgewidth=0.5)
 
 # ##############################################################################
 # DELTA F DATA
@@ -120,9 +127,9 @@ for dna, dna_idx in DNA_idx.items():
                 else:
                    cap_max = 1.5 * g
                    cap_min = 0.6 * g
-                ax[dna_idx, ind_idx + 4].plot(g, _d['median'], '.', 
-                                color=c, alpha=a, ms=5, markeredgewidth=0.5,
-                                markerfacecolor=colors['pale_blue'])
+                ax[dna_idx, ind_idx + 4].plot(g, _d['median'], 'o', 
+                                color=c, alpha=a, ms=3.5, markeredgewidth=0.5,
+                                markeredgecolor=colors['pale_blue'])
                 ax[dna_idx, ind_idx + 4].vlines(g, _d['hpd_min'], _d['hpd_max'],
                                         lw=1, color=c, alpha=a)
                 ax[dna_idx, ind_idx + 4].hlines(_d['hpd_min'], cap_min, cap_max, 
@@ -135,7 +142,7 @@ for dna, dna_idx in DNA_idx.items():
 # ##############################################################################
 c_range = np.logspace(-3, 4, 200)
 c_range[0] = 0
-ref_bohr = mut.thermo.SimpleRepression(R=260, ep_r=constants['O2'], 
+ref_bohr = phd.thermo.SimpleRepression(R=260, ep_r=constants['O2'], 
                         ka=constants['Ka'], ki=constants['Ki'], ep_ai=constants['ep_AI'],
                         effector_conc=c_range).bohr_parameter()
 n_draws = int(1E4)
@@ -149,11 +156,11 @@ for dna, dna_idx in DNA_idx.items():
         fc_cred_region = np.zeros((2, len(c_range)))
         bohr_cred_region = np.zeros((2, len(c_range)))
         for i, c in enumerate(c_range):
-            arch = mut.thermo.SimpleRepression(R=260, ep_r=epRA_draws,
+            arch = phd.thermo.SimpleRepression(R=260, ep_r=epRA_draws,
                             ka=allo_draws['Ka'], ki=allo_draws['Ki'], 
                             ep_ai=allo_draws['ep_AI'], n_sites=2, effector_conc=c)
-            fc_cred_region[:, i] = mut.stats.compute_hpd(arch.fold_change(), 0.95)
-            bohr_cred_region[:, i] = mut.stats.compute_hpd(arch.bohr_parameter() - ref_bohr[i], 0.95)
+            fc_cred_region[:, i] = phd.stats.compute_hpd(arch.fold_change(), 0.95)
+            bohr_cred_region[:, i] = phd.stats.compute_hpd(arch.bohr_parameter() - ref_bohr[i], 0.95)
 
         ax[dna_idx, ind_idx].fill_between(c_range, fc_cred_region[0, :], 
                                         fc_cred_region[1, :], alpha=0.3, 

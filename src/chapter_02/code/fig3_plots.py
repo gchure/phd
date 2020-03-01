@@ -36,6 +36,7 @@ discarded_cells = cell_cloud[disc_idx]
 
 # Now just generate the plot.
 fig, ax = plt.subplots(1, 1, figsize=(1.5, 1), dpi=150)
+phd.viz.despine(ax)
 plt.plot(discarded_cells['FSC-A'], discarded_cells['SSC-A'], marker=',', color=colors['black'],
                    rasterized=True, label='discarded cells', linestyle='none')
 plt.plot(selected_cells['FSC-A'], selected_cells['SSC-A'], marker=',', color=colors['purple'],
@@ -58,13 +59,14 @@ plt.savefig('../figs/fig4_flow_cloud.pdf', bbox_inches='tight')
 
 #%%
 fig, ax = plt.subplots(2,1, figsize=(3,2), sharex=True)
+phd.viz.despine(ax)
 # Now generate the example distributions.
 colors_RBS1027 = sns.color_palette('Oranges_r', n_colors=8)
 colors_delta = sns.color_palette('Purples_r', n_colors=8)
 IPTG_range = [0, 25, 50, 100, 500, 5000]
-ax[0].plot([], [], 'v', markersize=5, markeredgecolor=colors['black'],
+ax[0].plot([], [], 'v', markersize=5, markeredgecolor='white',
             markerfacecolor=colors_RBS1027[-1], label='mean', linestyle='none')
-ax[1].plot([], [], 'v', markersize=5, markeredgecolor=colors['black'],
+ax[1].plot([], [], 'v', markersize=5, markeredgecolor='white', markeredgewidth=0.5,
             markerfacecolor=colors_delta[-1], label='mean', linestyle='none')
 leg = ax[0].legend(title=r'repressors / cell = 260')
 leg.get_title().set_fontsize(6)
@@ -115,13 +117,14 @@ data = data[(data['date']==20160813) & (data['operator']=='O2') &
             (data['repressors']==130) & (data['username']=='mrazomej')]
 
 fig, ax = plt.subplots(1, 1, figsize=(2.5, 1.75), dpi=150)
-plt.plot([], [], 'o', markersize=4, markeredgecolor=colors['orange'], markerfacecolor=colors['pale_orange'],
-         markeredgewidth=1, label='experimental data')
+phd.viz.despine(ax)
+plt.plot([], [], 'o', markersize=4, markeredgecolor=colors['orange'], markerfacecolor='white',
+        label='experimental data', markeredgewidth=0.5)
 leg = plt.legend(loc='upper left', title="repressors / cell = 260\n " + r"$\Delta\varepsilon_{RA} = -13.9\,k_BT$")
 leg.get_title().set_fontsize(6)
-plt.plot(data['IPTG_uM'], data['fold_change_A'], marker='o', linestyle='--', color=colors['dark_orange'],
-         markeredgecolor=colors['dark_orange'], markerfacecolor=colors['pale_orange'], markeredgewidth=1,
-         markersize=4)
+plt.plot(data['IPTG_uM'], data['fold_change_A'], marker='o', linestyle=':', color=colors['orange'],
+          markersize=4, markeredgecolor=colors['orange'], markeredgewidth=0.5, markerfacecolor='white',
+          linewidth=0.5)
 plt.xscale('log')
 plt.ylabel('fold-change', fontsize=6)
 plt.xlabel('IPTG [µM]', fontsize=6)

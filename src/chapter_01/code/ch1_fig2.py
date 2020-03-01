@@ -3,6 +3,8 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 import phd.viz
+import imp
+imp.reload(phd.viz)
 colors, palette = phd.viz.phd_style()
 
 # Load the three data set. 
@@ -10,25 +12,27 @@ diauxie = pd.read_csv('../../data/ch1_introduction/Monod1941_Fig1_Fig2.csv')
 con_diauxie = pd.read_csv('../../data/ch1_introduction/Monod1947_Fig6.csv')
 muts = pd.read_csv('../../data/ch1_introduction/Monod1946_Fig5.csv')
 
-# %% Set up the figure canvas. 
-fig, ax = plt.subplots(1, 3, figsize=(6, 2))
+
+fig, ax = plt.subplots(1, 3, figsize=(6.3, 2))
 for a in ax:
     a.set_xlabel('hours')
     a.set_ylabel('optical density')
-ax[0].set_ylim([0, 130])
-ax[1].set_ylim([-0.1, 80])
-ax[0].set_xlim([-0.1, 9])
-ax[1].set_xlim([-0.1, 13])
-ax[2].set_xlim([-0.1, 16])
+    a.spines['bottom'].set_position(('outward', 2))
+    a.spines['left'].set_position(('outward', 2))
+ax[0].set_ylim([-0.12, 130])
+ax[1].set_ylim([-0.12, 80])
+ax[0].set_xlim([-0.12, 9])
+ax[1].set_xlim([-0.12, 13])
+ax[2].set_xlim([-0.12, 16])
 ax[2].set_ylim([5, 130])
 
 
 # Diauxie plots. 
 sugar_colors = {'glucose':colors['purple'], 'arabinose':colors['orange']}
 for g, d in diauxie.groupby('secondary_sugar'):
-    ax[0].plot(d['hours'], d['optical_density'], '--o', color=sugar_colors[g],
-    markeredgecolor=colors['black'], markeredgewidth=0.25, label=f'saccharose + {g}',
-    ms=3)
+    ax[0].plot(d['hours'], d['optical_density'], '-o', color=sugar_colors[g],
+                markeredgecolor='white', markeredgewidth=0.35, label=f'saccharose + {g}',
+            ms=3, linewidth=0.5)
 
 # Add indicator of diauxic shift
 ax[0].plot(6, 36, '^', color='white', markeredgecolor=colors['orange'], 
@@ -41,9 +45,9 @@ for g, d in con_diauxie.groupby(['glucose_sorbitol']):
         color = colors['blue']
     else:
         color = ratio_colors[g]
-    ax[1].plot(d['hours'], d['optical_density'], '--o', color=color,
-        markeredgecolor=colors['black'], markeredgewidth=0.25, 
-        label=np.round(g, decimals=2), ms=3)
+    ax[1].plot(d['hours'], d['optical_density'], '-o', color=color,
+        markeredgecolor='white', markeredgewidth=0.35, 
+        label=np.round(g, decimals=2), ms=3, linewidth=0.5)
 
 ax[1].plot(2.4, 15, '^', color='white', ms=4, markeredgewidth=0.5, markeredgecolor=colors['blue'],
         label='__nolegend__')
@@ -61,9 +65,9 @@ for g, d in muts.groupby(['strain']):
     else:
         label = 'lactose negative'
 
-    ax[2].plot(d['hours'], d['optical_density'], '--o', color=mut_colors[g],
-            markeredgecolor=colors['black'], markeredgewidth=0.25, ms=3,
-            label=label)
+    ax[2].plot(d['hours'], d['optical_density'], '-o', color=mut_colors[g],
+            markeredgecolor='white', markeredgewidth=0.35, ms=3,
+            label=label, linewidth=0.5)
 
 # Add diauxie labels
 ax[2].plot(6, 40, '^', color='white',markeredgecolor=colors['blue'], markeredgewidth=0.5,
@@ -85,7 +89,7 @@ for l in legs:
 phd.viz.titlebox(ax[0], 'Monod 1941', color=colors['black'], bgcolor='white', size=6)
 phd.viz.titlebox(ax[1], 'Monod 1947', color=colors['black'], bgcolor='white', size=6)
 phd.viz.titlebox(ax[2], 'Monod & Audureau 1946', color=colors['black'], bgcolor='white', size=6)
-plt.subplots_adjust(wspace=0.35)
+plt.subplots_adjust(wspace=0.4)
 
 # Add panel labels. 
 fig.text(0.05, 0.84, '(A)', fontsize=8)

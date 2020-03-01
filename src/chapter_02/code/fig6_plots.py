@@ -46,7 +46,7 @@ for op, ep in ops.items():
 
 #Instantiate the figure canvas. 
 fig, ax = plt.subplots(2, 3, figsize=(6, 3.5), dpi=100)
-
+phd.viz.despine(ax.ravel())
 # Format axes as needed. 
 for i, a in enumerate(ax.ravel()):
     a.set_xscale('log')
@@ -88,14 +88,14 @@ for g, d in data[(data['repressors']>0) &
     # Leakiness
     leak_d = d[d['IPTG_uM'] == 0]
     ax[0,0].errorbar(2 * g[1], leak_d['fold_change_A'].mean(), leak_d['fold_change_A'].sem(),
-        fmt='.', linestyle='none', color=op_color[g[0]],
-        alpha=0.75, markeredgewidth=1, capsize=1)
+        fmt='o', linestyle='none', color=op_color[g[0]], ms=4,
+        alpha=0.75, markeredgewidth=0.5, capsize=1, markeredgecolor='white')
 
     # Saturation 
     sat_d = d[d['IPTG_uM'] == d['IPTG_uM'].max()]
     ax[0,1].errorbar(2 * g[1], sat_d['fold_change_A'].mean(), sat_d['fold_change_A'].sem(),
-        fmt='.', linestyle='none', color=op_color[g[0]],
-        alpha=0.75, markeredgewidth=1, capsize=1)
+        fmt='o', linestyle='none', color=op_color[g[0]], ms=4,
+        alpha=0.75, markeredgewidth=0.5, capsize=1, markeredgecolor='white')
 
     # Dynamic range. 
     min_len = np.min(np.array([len(leak_d), len(sat_d)]))
@@ -104,8 +104,9 @@ for g, d in data[(data['repressors']>0) &
                     leak_d['fold_change_A'].values[:min_len])
     dyn_sem = np.std(sat_d['fold_change_A'].values[:min_len] -\
                     leak_d['fold_change_A'].values[:min_len]) / min_len
-    ax[0,2].errorbar(2 * g[1], dyn_mean, dyn_sem, fmt='.', linestyle='none', 
-                    color=op_color[g[0]], alpha=0.75, markeredgewidth=1, capsize=1)
+    ax[0,2].errorbar(2 * g[1], dyn_mean, dyn_sem, fmt='o', linestyle='none', 
+                    color=op_color[g[0]], alpha=0.75, markeredgewidth=1, capsize=1,
+                    ms=4, markeredgecolor='white', linewidth=0.5)
 
 
     # Compute the inferred properties
@@ -131,8 +132,8 @@ for g, d in data[(data['repressors']>0) &
         hpd_min, hpd_max = phd.stats.compute_hpd(arch_cred[p], 0.95)
         mode = arch_mode[p]
         ax[1, i].vlines(g[1], hpd_min, hpd_max, color=op_color[g[0]], lw=1)
-        ax[1, i].plot(g[1], mode, marker='s', markeredgecolor=op_color[g[0]], 
-                      markerfacecolor='w', lw=1, ms=4)
+        ax[1, i].plot(g[1], mode, marker='s', markerfacecolor=op_color[g[0]], 
+                      markeredgecolor='w', lw=0.5, ms=4, markeredgewidth=0.5)
 
 plt.tight_layout()
 plt.savefig('../figs/fig6_plots.svg', bbox_inches='tight')

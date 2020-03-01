@@ -23,17 +23,15 @@ c_range[0] = 0
 bohr_range = np.linspace(-8, 8, 200)
 F = (1 + np.exp(-bohr_range))**-1
 
-rep_colors = {60:colors['light_brown'], 124:colors['light_green'], 
-              260:colors['light_orange'], 1220:colors['light_purple']}
-
-edge_colors = {60:colors['dark_brown'], 124:colors['dark_green'], 
-              260:colors['dark_orange'], 1220:colors['dark_purple']}
+rep_colors = {60:colors['brown'], 124:colors['green'], 
+              260:colors['orange'], 1220:colors['purple']}
 
 
 # ##############################################################################
 # FIGURE INSTANTIATION
 # ##############################################################################
 fig, ax = plt.subplots(3, 3, figsize=(6, 6), dpi=150)
+phd.viz.despine(ax.ravel())
 for a in ax.ravel():
     a.xaxis.set_tick_params(labelsize=6)
     a.yaxis.set_tick_params(labelsize=6)
@@ -100,7 +98,7 @@ for r, cor in rep_colors.items():
 # COLLAPSE CURVES
 # ##############################################################################
 for i in range(3):
-    ax[1, i].plot(bohr_range, F, 'k-', lw=0.75)
+    ax[1, i].plot(bohr_range, F, 'k-', lw=0.5)
 
 # ##############################################################################
 # FREE ENERGY PREDICTIONS
@@ -110,7 +108,7 @@ for m, a in axes.items():
                  (stats['parameter']=='ep_RA')][['hpd_min', 'hpd_max']].values[0]
     ax[-1, a].fill_between(c_range, _stats[0] - constants['O2'], 
                          _stats[1] - constants['O2'], color=rep_colors[260], 
-                    alpha=0.4, lw=0.5, edgecolor=edge_colors[260])
+                    alpha=0.5, lw=0.5, edgecolor=rep_colors[260])
 
 # ##############################################################################
 # FOLD-CHANGE DATA
@@ -118,11 +116,13 @@ for m, a in axes.items():
 for g, d in data.groupby(['mutant', 'repressors']):
     if g[1] == 260:
         face = 'w'
+        edge = colors['orange']
     else:
         face = rep_colors[g[1]]
-    ax[0, axes[g[0]]].errorbar(d['IPTGuM'], d['mean'], d['sem'], fmt='.',
-                               color=edge_colors[int(g[1])], markerfacecolor=face,
-                               ms=7, markeredgewidth=0.5, capsize=1, lw=1, linestyle='none',
+        edge = 'white'
+    ax[0, axes[g[0]]].errorbar(d['IPTGuM'], d['mean'], d['sem'], fmt='o',
+                               color=edge, markerfacecolor=face,
+                               ms=4, markeredgewidth=0.5, capsize=1, lw=0.5, linestyle='none',
                                label=int(g[1]))
 
 # ##############################################################################
@@ -137,11 +137,13 @@ for g, d in data.groupby(['mutant', 'repressors']):
                                        effector_conc=d['IPTGuM']).bohr_parameter()
     if g[1] == 260:
         face = 'w'
+        ec = colors['orange']
     else:
         face = rep_colors[g[1]]
-    ax[1, axes[g[0]]].errorbar(bohr, d['mean'], d['sem'], fmt='.', 
-                               linestyle='none', lw=1, capsize=1, ms=7, markeredgewidth=0.5,
-                               color=edge_colors[g[1]], markerfacecolor=face)
+        ec = 'white'
+    ax[1, axes[g[0]]].errorbar(bohr, d['mean'], d['sem'], fmt='o', 
+                               linestyle='none', lw=1, capsize=1, ms=4, markeredgewidth=0.5,
+                               color=ec, markerfacecolor=face)
 
 # ##############################################################################
 # INFERRED F 
@@ -165,19 +167,22 @@ for g, d in empirical_bohr.groupby(['mutant', 'repressors', 'IPTGuM']):
         fmt = '.'
     if g[1] == 260:
         face = 'w'
+        ec = colors['orange']
         zorder=1000
     elif fmt == 'x':
         zorder = 1
         face=color
+        ec = 'white'
     else:
         face = color
+        ec = 'white'
         zorder=100
     _ax = ax[-1, axes[g[0]]]
     _ax.plot(_param['IPTGuM'], _param['median'], marker=fmt, linestyle='none', 
-        color=edge_colors[g[1]], markerfacecolor=face, alpha=alpha, ms=7, zorder=zorder, 
-        markeredgewidth=0.5,)
+        color=rep_colors[g[1]], markerfacecolor=face, alpha=alpha, ms=7, zorder=zorder, 
+        markeredgewidth=0.5, markeredgecolor=ec)
     _ax.vlines(_param['IPTGuM'], _param['hpd_min'], _param['hpd_max'], 
-            lw=lw, color=edge_colors[g[1]],  alpha=alpha, zorder=zorder)
+            lw=lw, color=rep_colors[g[1]],  alpha=alpha, zorder=zorder)
 
 # ##############################################################################
 #  LEGEND INFORMATION

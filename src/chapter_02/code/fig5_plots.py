@@ -36,19 +36,12 @@ c_range[0] = 0
 rep_range = np.logspace(0, 4, 200)
 
 # Set the colors for the strains
-rep_colors = {22: colors['light_red'], 
-              60: colors['light_brown'],  
-              124: colors['light_green'], 
-              260: colors['light_orange'], 
-              1220: colors['light_purple'], 
-              1740: colors['light_blue']} 
-edge_colors = {22: colors['dark_red'], 
-              60: colors['dark_brown'],  
-              124: colors['dark_green'], 
-              260: colors['dark_orange'], 
-              1220: colors['dark_purple'], 
-              1740: colors['dark_blue']} 
-
+rep_colors = {22: colors['red'], 
+              60: colors['brown'],  
+              124: colors['green'], 
+              260: colors['orange'], 
+              1220: colors['purple'], 
+              1740: colors['blue']} 
 # Define the operators and their respective energies
 operators = ['O1', 'O2', 'O3']
 energies = {'O1': -15.3, 'O2': -13.9, 'O3': -9.7}
@@ -104,6 +97,7 @@ for a in [ax3, ax4]:
     a.set_xlim([0, 7])
 
 ax = [ax0, ax1, ax2, ax3, ax4]
+phd.viz.despine(ax)
 op_ax = {'O1':ax0, 'O2':ax1, 'O3':ax2}
 
 for o, a in op_ax.items():
@@ -122,13 +116,13 @@ for g, d in data.groupby(['operator', 'repressors', 'IPTG_uM']):
         ew = 0.5
     else:
         face = rep_colors[2 * g[1]]
-        edge = edge_colors[2 * g[1]]
-        ew = 0.25
+        edge = 'white'
+        ew = 0.5
     mean_fc = d['fold_change_A'].mean()
     sem_fc = d['fold_change_A'].std() / np.sqrt(len(d))
-    _ = op_ax[g[0]].errorbar(g[-1], mean_fc, sem_fc, fmt='.', lw=0.5, 
-        markerfacecolor=face, color=edge, markeredgecolor=edge, 
-        markeredgewidth=ew, ms=6, label='__nolegend__')
+    _ = op_ax[g[0]].errorbar(g[-1], mean_fc, sem_fc, fmt='o', lw=0.5, 
+        markerfacecolor=face, color=rep_colors[2 * g[1]], markeredgecolor=edge, 
+        markeredgewidth=ew, ms=4, label='__nolegend__')
 plt.subplots_adjust(hspace=0.8, wspace=0.65)
 
 axes={'O1':ax[0], 'O2':ax[1], 'O3':ax[2]}
@@ -142,7 +136,7 @@ for g, d in fc_df.groupby('operator'):
     for r, _d in d.groupby('repressors'):
         _ = axes[g].fill_between(_d['IPTGuM'], _d['fc_min'], _d['fc_max'],
                                  alpha=0.75, facecolor=rep_colors[r], label=int(r),
-                                 edgecolor=edge_colors[r], lw=0.25)
+                                 edgecolor=rep_colors[r],  lw=0.25)
     phd.viz.titlebox(axes[g], f'operator {g}', color=colors['black'], 
                     boxsize='12%')
 
@@ -161,16 +155,16 @@ for g, d in params.groupby(['operator', 'repressors']):
     ka = d[d['parameter']=='ka']
     ki = d[d['parameter']=='ki']
     ax3.vlines(rep_pos[g[1]] + fudge[g[0]], ki['hpd_min'], ki['hpd_max'],
-        color=edge_colors[g[1]], 
+        color=rep_colors[g[1]], 
         label='__nolegend__')
     ax3.plot(rep_pos[g[1]] + fudge[g[0]], ki['mode'], op_glyphs[g[0]],
-            markerfacecolor='w', color=edge_colors[g[1]], ms=4,
-            label='__nolegend__')
+            markerfacecolor=rep_colors[g[1]], markeredgecolor="white", ms=4,
+            label='__nolegend__',markeredgewidth=0.5)
     ax4.vlines(rep_pos[g[1]] + fudge[g[0]], ka['hpd_min'], ka['hpd_max'],
-        color=edge_colors[g[1]], label='__nolegend__')
+        color=rep_colors[g[1]], label='__nolegend__')
     ax4.plot(rep_pos[g[1]] + fudge[g[0]], ka['mode'], op_glyphs[g[0]],
-            markerfacecolor='w', color=edge_colors[g[1]], ms=4,
-             label='__nolegend__')
+            markerfacecolor=rep_colors[g[1]], markeredgecolor='white', ms=4,
+             label='__nolegend__', markeredgewidth=0.5)
 
 for op, m in op_glyphs.items():
     ax3.plot([], m, markerfacecolor='w', markeredgecolor='k', label=op,

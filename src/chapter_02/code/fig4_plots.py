@@ -70,7 +70,7 @@ gs = gridspec.GridSpec(4, 4)
 ax0 = fig.add_subplot(gs[1:, :3])
 ax1 = fig.add_subplot(gs[0, :3])
 ax2 = fig.add_subplot(gs[1:, 3])
-
+phd.viz.despine(ax0)
 for a in [ax1, ax2]:
     a.axis('off')
 
@@ -136,6 +136,7 @@ for op, op_en in energies.items():
 
 # Set up the canvas for the operator plots. 
 fig, ax = plt.subplots(1, 3, figsize=(6, 2))
+phd.viz.despine(ax)
 axes={'O1':ax[0], 'O2':ax[1], 'O3':ax[2]}
 for a in ax:
     a.set_xscale('symlog', linthreshx=1E-2)
@@ -159,7 +160,7 @@ fit_strain = data[(data['operator']=='O2') &
 # Plot the aggregated points of the fit strain
 ax[1].errorbar(fit_strain['IPTG_uM'], fit_strain['fold_change_A']['mean'], 
                yerr=fit_strain['fold_change_A']['sem'], fmt='.', 
-               markerfacecolor=colors['light_orange'], markeredgecolor=colors['black'],
+               markerfacecolor='white', markeredgecolor=colors['orange'],
                markeredgewidth=0.5,
                label='__nolegend__', lw=0.1, color=colors['orange'])
 
@@ -173,6 +174,7 @@ plt.savefig('../figs/fig5_induction_profiles.svg', bbox_inches='tight')
 #%% PROPERTIES
 # ##############################################################################
 fig, ax =  plt.subplots(2, 3, figsize=(6, 3.5))
+phd.viz.despine(ax.ravel())
 ax[1, -1].axis('off')
 
 # Assign the properties to axes. 

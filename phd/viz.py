@@ -18,6 +18,12 @@ import bokeh.themes
 import bokeh.io
 import altair as alt
 
+def despine(ax, offset=2):
+    if (type(ax) != np.ndarray) & (type(ax) != list):
+        ax = [ax]
+    for a in ax:
+         a.spines['bottom'].set_position(('outward', 2))
+         a.spines['left'].set_position(('outward', 2))
 
 def color_palette():
     """ 
@@ -83,27 +89,31 @@ def phd_style():
         "axes.linewidth": 0.25,
         "axes.titlesize": 8,
         "text.color": "#444147",
-        "axes.grid": True,
+        "axes.grid": False,
         "lines.linewidth": 0.75,
         "lines.dash_capstyle": "round",
-        "grid.linestyle": "-",
-        "grid.linewidth": 0.75,
-        "grid.color": "#ffffff",
+        "patch.linewidth": 0.25,
+        # "grid.linestyle": "-",
+        # "grid.linewidth": 0.75,
+        # "grid.color": "#ffffff",
         "axes.labelsize": 8,
         "xtick.color": "#444147",
         "ytick.color": "#444147",
         "xtick.labelsize": 6,
         "ytick.labelsize": 6,
-        "xtick.major.size": 0,
-        "ytick.major.size": 0,
+        "xtick.major.size": 3,
+        "ytick.major.size": 3,
+        "xtick.major.width": 0.25,
+        "ytick.major.width": 0.25,
         "xtick.major.pad": 6,
         "ytick.major.pad": 6,
         "xtick.minor.size": 0,
         "ytick.minor.size": 0,
         "legend.fontsize": 6,
         "legend.frameon": True,
-        "axes.xmargin": 0.01,
-        "axes.ymargin": 0.01,
+        "legend.edgecolor": "#444147",
+        "axes.xmargin": 0.03,
+        "axes.ymargin": 0.03,
         "figure.facecolor": "white",
         "figure.dpi": 300,
         "errorbar.capsize": 1,
