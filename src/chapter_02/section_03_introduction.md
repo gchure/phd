@@ -6,24 +6,23 @@ this interaction is mediated by a diverse collection of molecular signaling
 pathways. A pervasive mechanism of signaling in these pathways is allosteric
 regulation, in which the binding of a ligand induces a conformational change
 in some target molecule, triggering a signaling cascade [@lindsley2006a]. One
-of the most important examples of such signaling is offered by
-transcriptional regulation, where a transcription factor’s propensity to bind
-to DNA will be altered upon binding to an allosteric effector.
+of the most important examples of such signaling is offered by transcriptional
+regulation, where a transcription factor’s propensity to bind to DNA will be
+altered upon binding to an allosteric effector.
 
-Despite allostery’s ubiquity, we lack a formal, rigorous, and
-generalizable framework for studying its effects across the broad
-variety of contexts in which it appears. A key example of this is
-transcriptional regulation, in which allosteric transcription factors
-can be induced or corepressed by binding to a ligand. An allosteric
-transcription factor can adopt multiple conformational states, each of
-which has its own affinity for the ligand and for its DNA target site.
-*In vitro* studies have rigorously quantified the equilibria of
-different conformational states for allosteric transcription factors and
-measured the affinities of these states to the ligand [@harman2001; @lanfranco2017]. In spite of
-these experimental observations, the lack of a coherent quantitative
-model for allosteric transcriptional regulation has made it impossible
-to predict the behavior of even a simple genetic circuit across a range
-of regulatory parameters.
+Despite allostery’s ubiquity, we lack a formal, rigorous, and generalizable
+framework for studying its effects across the broad variety of contexts in
+which it appears. A key example of this is transcriptional regulation, in
+which allosteric transcription factors can be induced or corepressed by
+binding to a ligand. An allosteric transcription factor can adopt multiple
+conformational states, each of which has its own affinity for the ligand and
+for its DNA target site. *In vitro* studies have rigorously quantified the
+equilibria of different conformational states for allosteric transcription
+factors and measured the affinities of these states to the ligand
+[@harman2001; @lanfranco2017]. In spite of these experimental observations,
+the lack of a coherent quantitative model for allosteric transcriptional
+regulation has made it impossible to predict the behavior of even a simple
+genetic circuit across a range of regulatory parameters.
 
 The ability to predict circuit behavior robustly— that is, across both
 broad ranges of parameters and regulatory architectures —is important
@@ -46,30 +45,20 @@ regulatory architecture may require a unique analysis that cannot carry
 over to other systems, a worry that is exacerbated by the prevalent use
 of phenomenological functions (e.g. Hill functions or ratios of
 polynomials) that can analyze a single data set but cannot be used to
-extrapolate a system’s behavior in other conditions [@setty2003; @poelwijk2011a;
-@vilar2013; @rogers2015; @rohlhill2017].
+extrapolate a system’s behavior in other conditions [@setty2003; @poelwijk2011a; @vilar2013; @rogers2015; @rohlhill2017].
 
-This work explores what happens when theory takes center stage, namely,
-we first write down the equations governing a system and describe its
-expected behavior across a wide array of experimental conditions, and
-only then do we set out to experimentally confirm these results.
-Building upon previous work [@garcia2011; @brewster2014; @weinert2014] and the
-work of Monod, Wyman, and Changeux [@monod1965], we present a statistical mechanical rendering of allostery in the
-context of induction and corepression (shown schematically in 
-@Fig:inducible_types and
-henceforth referred to as the MWC model) and use it as the basis of
-parameter-free predictions which we then test experimentally. More
-specifically, we study the simple repression motif – a widespread
-bacterial genetic regulatory architecture in which binding of a
-transcription factor occludes binding of an RNA polymerase, thereby
-inhibiting transcription initiation. The MWC model stipulates that an
-allosteric protein fluctuates between two distinct conformations – an
-active and inactive state – in thermodynamic equilibrium [@monod1965]. During
-induction, for example, effector binding increases the probability that
-a repressor will be in the inactive state, weakening its ability to bind
-to the promoter and resulting in increased expression. To test the
-predictions of our model across a wide range of operator binding
-strengths and repressor copy numbers, we design an *E. coli* genetic
+This work explores what happens when theory takes center stage, namely, we first write down the equations governing a system and describe its expected behavior across a wide array of experimental conditions, and only then do we set out to experimentally confirm these results. Building upon previous work [@garcia2011; @brewster2014; @weinert2014] and the work of Monod, Wyman, and Changeux [@monod1965], we present a statistical mechanical rendering of allostery in the context of induction and corepression (shown schematically in 
+@Fig:inducible_types and henceforth referred to as the MWC model) and use it as
+the basis of parameter-free predictions which we then test experimentally. More
+specifically, we study the simple repression motif – a widespread bacterial
+genetic regulatory architecture in which binding of a transcription factor
+occludes binding of an RNA polymerase, thereby inhibiting transcription
+initiation. The MWC model stipulates that an allosteric protein fluctuates
+between two distinct conformations – an active and inactive state – in
+thermodynamic equilibrium [@monod1965]. During induction, for example, effector
+binding increases the probability that a repressor will be in the inactive
+state, weakening its ability to bind to the promoter and resulting in increased
+expression. To test the predictions of our model across a wide range of operator binding strengths and repressor copy numbers, we design an *E. coli* genetic
 construct in which the binding probability of a repressor regulates gene
 expression of a fluorescent reporter.
 
