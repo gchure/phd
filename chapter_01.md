@@ -3,6 +3,7 @@
 layout: default
 keywords:
 comments: true
+image: aspens.jpg
 
 # Hero section
 title:  Chapter I

@@ -82,13 +82,13 @@ ax0.set_ylabel('$K_A$ [µM]')
 _ = ax0.plot(sampling_df['ki'], sampling_df['ka'], linestyle='none', marker='.', 
              color=colors['purple'], ms=1, alpha=0.75, markeredgewidth=0)
 _ = ax1.hist(sampling_df['ki'].values, bins=25, density=True, 
-            color=colors['light_purple'], edgecolor=colors['black'],
+            color=colors['light_purple'], edgecolor='white',
             lw=0.25)
 _ = ax2.hist(sampling_df['ka'].values, bins=25, density=True, 
-            color=colors['light_purple'], edgecolor=colors['black'],
+            color=colors['light_purple'], edgecolor='white',
             lw=0.25, orientation='horizontal')
 plt.subplots_adjust(hspace=0.02, wspace=0.02)
-plt.savefig('../figs/fig5_sampling_jointplot.svg', bbox_incehs='tight')
+plt.savefig('../figs/fig4_sampling_jointplot.svg', bbox_incehs='tight')
 
 # ##############################################################################
 # PREDICTED INDUCTION PROFILES
@@ -133,7 +133,6 @@ for op, op_en in energies.items():
         
 
 #%%
-
 # Set up the canvas for the operator plots. 
 fig, ax = plt.subplots(1, 3, figsize=(6, 2))
 phd.viz.despine(ax)
@@ -168,7 +167,7 @@ ax[1].errorbar(fit_strain['IPTG_uM'], fit_strain['fold_change_A']['mean'],
 leg = ax[0].legend(loc='upper left', title='rep. per cell', fontsize=6, handlelength=1.5)
 leg.get_title().set_fontsize(6)
 plt.tight_layout()
-plt.savefig('../figs/fig5_induction_profiles.svg', bbox_inches='tight')
+plt.savefig('../figs/fig4_induction_profiles.svg', bbox_inches='tight')
 
 # ##############################################################################
 #%% PROPERTIES
@@ -212,5 +211,5 @@ _ax[4].set_ylabel('effective Hill coefficient')
 leg = ax[0,0].legend(handlelength=1.5, title='operator', loc='lower left', fontsize=6)
 leg.get_title().set_fontsize(6)
 plt.tight_layout()
-plt.savefig('../figs/fig5_properties.svg', bbox_inches='tight')
+plt.savefig('../figs/fig4_properties.svg', bbox_inches='tight')
 #%%

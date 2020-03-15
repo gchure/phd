@@ -40,7 +40,7 @@ phd.viz.despine(ax)
 plt.plot(discarded_cells['FSC-A'], discarded_cells['SSC-A'], marker=',', color=colors['black'],
                    rasterized=True, label='discarded cells', linestyle='none')
 plt.plot(selected_cells['FSC-A'], selected_cells['SSC-A'], marker=',', color=colors['purple'],
-               rasterized=True, label='selected cells', linestyle='none')
+               rasterized=True, label='selected cells', linestyle='none', ms=0.5)
 
 
 # Fix formatting and restrict bounds.
@@ -55,7 +55,7 @@ plt.xlim([1E3, 1E5])
 plt.ylim([1E3, 3E5])
 
 # Save the figure.
-plt.savefig('../figs/fig4_flow_cloud.pdf', bbox_inches='tight')
+plt.savefig('../figs/fig3_flow_cloud.pdf', bbox_inches='tight')
 
 #%%
 fig, ax = plt.subplots(2,1, figsize=(3,2), sharex=True)
@@ -65,9 +65,10 @@ colors_RBS1027 = sns.color_palette('Oranges_r', n_colors=8)
 colors_delta = sns.color_palette('Purples_r', n_colors=8)
 IPTG_range = [0, 25, 50, 100, 500, 5000]
 ax[0].plot([], [], 'v', markersize=5, markeredgecolor='white',
-            markerfacecolor=colors_RBS1027[-1], label='mean', linestyle='none')
+            markerfacecolor=colors['orange'], label='mean', linestyle='none',
+            markeredgewidth=0.5)
 ax[1].plot([], [], 'v', markersize=5, markeredgecolor='white', markeredgewidth=0.5,
-            markerfacecolor=colors_delta[-1], label='mean', linestyle='none')
+            markerfacecolor=colors['purple'], label='mean', linestyle='none')
 leg = ax[0].legend(title=r'repressors / cell = 260')
 leg.get_title().set_fontsize(6)
 leg = ax[1].legend(title=r'repressors / cell = 0')
@@ -86,12 +87,12 @@ for i, val in enumerate(IPTG_range):
     ax[0].hist(gate_RBS1027['FITC-A'], color=colors_RBS1027[i],alpha=0.5, bins=100,
             histtype='stepfilled', density=True, edgecolor=colors['dark_red'])
     mean_RBS1027 = np.mean(gate_RBS1027['FITC-A'])
-    ax[0].plot(mean_RBS1027, 1.3E-4, 'v', markeredgecolor=colors['dark_red'], markeredgewidth=0.5,
+    ax[0].plot(mean_RBS1027, 1.3E-4, 'v', markeredgecolor='white', markeredgewidth=0.5,
              markerfacecolor=colors_RBS1027[i], markersize=6)
     ax[1].hist(gate_delta['FITC-A'], color=colors_delta[i], alpha=0.5, bins=100,
             histtype='stepfilled', density=True, edgecolor=colors['dark_purple'])
     mean_delta = np.mean(gate_delta['FITC-A'])
-    ax[1].plot(mean_delta, 7.5E-5, 'v', markeredgecolor=colors['dark_purple'], markeredgewidth=0.5,
+    ax[1].plot(mean_delta, 7.5E-5, 'v', markeredgecolor='white', markeredgewidth=0.5,
              markerfacecolor=colors_delta[i], markersize=6)
 
 ax[0].yaxis.get_major_formatter().set_powerlimits((0, -1))
@@ -103,7 +104,7 @@ for a in ax:
         a.set_xlim([-0.1E5, 0.8E5])
 fig.text(0, 0.45, 'frequency', fontsize=8, rotation='vertical')
 ax[1].set_xlabel('total cell intensity (a.u.)', fontsize=8)
-plt.savefig('../figs/fig4_flow_distributions.svg')
+plt.savefig('../figs/fig3_flow_distributions.svg')
 plt.show()
 
 
@@ -131,7 +132,7 @@ plt.xlabel('IPTG [µM]', fontsize=6)
 plt.xlim([1E-2, 1E4])
 plt.ylim([-0.01, 1.1])
 plt.tick_params(labelsize=6)
-plt.savefig('../figs/fig4_titration.svg')
+plt.savefig('../figs/fig3_titration.svg')
 
 # %%
 #

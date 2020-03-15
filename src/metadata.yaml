@@ -15,4 +15,5 @@ ownpubs: published.md
 acknowledgements: acknowledgements.md
 abstract: abstract.md
 degree_title: Biochemistry and Molecular Biophysics
+indent: true
 ---

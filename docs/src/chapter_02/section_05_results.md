@@ -10,17 +10,17 @@ as these have relied on expression systems where proteins are expressed from
 plasmids, resulting in highly variable and unconstrained copy numbers
 [@murphy2007; @murphy2010; @daber2009a; @daber2011a; @sochor2014]. Instead,
 our approach relies on a foundation of previous work as depicted in 
-@Fig:induction*types (C). This includes work from our laboratory that used
+@Fig:inducible_types (C). This includes work from our laboratory that used
 *E. coli* constructs based on components of the *lac* system to demonstrate
 how the Lac repressor (LacI) copy number $R$ and operator binding energy
-$\Delta\varepsilon*{RA}$ affect gene expression in the absence of inducer
+$\Delta\varepsilon_{RA}$ affect gene expression in the absence of inducer
 [@garcia2011]. @rydenfelt2014b extended the theory used in that work to the
 case of multiple promoters competing for a given transcription factor, which
 was validated experimentally by @brewster2014, who modified this system to
 consider expression from multiple-copy plasmids as well as the presence of
 competing repressor binding sites.
 
-The present study extends this body of work by introducing three additional
+   The present study extends this body of work by introducing three additional
 biophysical parameters – $\Delta\varepsilon_{AI}$, $K_A$, and $K_I$ – which
 capture the allosteric nature of the transcription factor and complement the
 results shown by @garcia2011 and @brewster2014. Although the current work
@@ -56,9 +56,9 @@ measured using a Yellow Fluorescent Protein (YFP) gene, driven by a
 *lacUV5* promoter. Each of the six repressor copy number variants were
 paired with the native O1, O2, or O3 *lac* operator [@oehler1994] placed at the YFP
 transcription start site, thereby generating eighteen unique strains.
-The repressor-operator binding energies (O1 $\Delta\varepsilon*{RA} =
--15.3 \pm 0.2~k*BT$, O2 $\Delta\varepsilon*{RA} = -13.9~k*BT \pm 0.2$, and O3
-$\Delta\varepsilon*{RA} = -9.7 \pm 0.1~k*BT$) were previously inferred
+The repressor-operator binding energies (O1 $\Delta\varepsilon_{RA} =
+-15.3 \pm 0.2~k_BT$, O2 $\Delta\varepsilon_{RA} = -13.9~k_BT \pm 0.2$, and O3
+$\Delta\varepsilon_{RA} = -9.7 \pm 0.1~k_BT$) were previously inferred
 by measuring the fold-change of the *lac* system at different repressor
 copy numbers, where the error arises from model fitting [@garcia2011]. Additionally,
 we were able to obtain the value $\Delta \varepsilon*{AI} = 4.5\, k*BT$ by
@@ -70,29 +70,28 @@ number of non-specific binding sites as the length in base-pairs of the
 
 Our experimental pipeline for determining fold-change using flow
 cytometry is shown in  @Fig:flowchart. Briefly, cells were grown to exponential phase,
-in which gene expression reaches steady state [@scott2010], under concentrations of
+in which gene expression reaches steady state [@scott2010a], under concentrations of
 the inducer IPTG ranging between 0 and $5000\, \mu$M. We measure YFP
 fluorescence using flow cytometry and automatically gate the data to
 include only single-cell measurements (see Materials and Methods). To validate
 the use of flow cytometry, we also measured the fold-change of a subset
 of strains using the established method of single-cell microscopy (see
-Supplemental Information, Chapter 7). We found that
+supplemental Chapter 6). We found that
 the fold-change measurements obtained from microscopy were
 indistinguishable from that of flow-cytometry and yielded values for the
 inducer binding constants $K_A$ and $K_I$ that were within error.
 
-![An experimental pipeline for high-throughput fold-change
-measurements. Cells are grown to exponential steady state and
-their fluorescence is measured using flow cytometry. Automatic gating
-methods using forward- and side-scattering are used to ensure that all
-measurements come from single cells (see Methods). Mean expression is
-then quantified at different IPTG concentrations (top, blue histograms)
-and for a strain without repressor (bottom, green histograms), which
-shows no response to IPTG as expected. Fold-change is computed by
-dividing the mean fluorescence in the presence of repressor by the mean
-fluorescence in the absence of repressor.](ch2_fig3){#fig:flowchart
-short-caption="An experimental pipeline for high-throughput fold-change
-measurements."}
+![An experimental pipeline for high-throughput fold-change measurements.
+Cells are grown to exponential steady state and their fluorescence is
+measured using flow cytometry. Automatic gating methods using forward- and
+side-scattering are used to ensure that all measurements come from single
+cells (see Materials \& Methods). Mean expression is then quantified at
+different IPTG concentrations (top, blue histograms) and for a strain without
+repressor (bottom, green histograms), which shows no response to IPTG as
+expected. Fold-change is computed by dividing the mean fluorescence in the
+presence of repressor by the mean fluorescence in the absence of
+repressor.](ch2_fig3){#fig:flowchart short-caption="An experimental pipeline
+for high-throughput fold-change measurements."}
 
 
 ### Determination of the *in vivo* MWC Parameters
@@ -116,14 +115,14 @@ Unfortunately, we are not able to make a meaningful value-for-value
 comparison of our parameters to those of earlier studies [@daber2009a;
 @daber2011a] because of uncertainties in both gene copy number and
 transcription factor copy numbers in these studies, as illustrated in
-Supplemental Chapter 7. We then predicted the fold-change for the remaining
+supplemental Chapter 6. We then predicted the fold-change for the remaining
 seventeen strains with no further fitting [see 
 [@Fig:induction_predictions] (C - E)] together with the specific phenotypic
 properties described in and discussed in detail below [see 
-[@Fig:induciton_predictions] (F - J)]. The shaded regions in 
+[@Fig:induction_predictions] (F - J)]. The shaded regions in 
 [@Fig:induction_predictions] (C - E) denote the 95% credible regions. Factors
-determining the width of the credible regions are explored in Supplemental
-Chapter 7.
+determining the width of the credible regions are explored in supplemental
+Chapter 6.
 
 We stress that the entire suite of predictions in is based upon the induction
 profile of a single strain. Our ability to make such a broad range of
