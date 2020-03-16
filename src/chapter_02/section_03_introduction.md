@@ -17,15 +17,15 @@ contexts in which it appears. A key example of this is transcriptional
 regulation, in which allosteric transcription factors can be induced or
 corepressed by binding to a ligand. An allosteric transcription factor can
 adopt multiple conformational states, each of which has its own affinity for
-the ligand and for its DNA target site.
-*In vitro* studies have rigorously quantified the equilibria of different
-conformational states for allosteric transcription factors and measured the
-affinities of these states to the ligand [@harman2001; @lanfranco2017]. In
-spite of these experimental observations, the lack of a coherent quantitative
-model for allosteric transcriptional regulation has made it impossible to
-predict the behavior of even a simple genetic circuit across a range of
-regulatory parameters, physiological states of the organism, and evolutionary
-isoforms of the regulatory sequences.
+the ligand and for its DNA target site. *In vitro* studies have rigorously
+quantified the equilibria of different conformational states for allosteric
+transcription factors and measured the affinities of these states to the
+ligand [@harman2001; @lanfranco2017]. In spite of these experimental
+observations, the lack of a coherent quantitative model for allosteric
+transcriptional regulation has made it impossible to predict the behavior of
+even a simple genetic circuit across a range of regulatory parameters,
+physiological states of the organism, and evolutionary isoforms of the
+regulatory sequences.
 
 The ability to predict circuit behavior robustly— that is, across both
 broad ranges of parameters and regulatory architectures —is important for
