@@ -11,14 +11,20 @@
 
 <script type="text/x-mathjax-config">
 	MathJax.Hub.Config({
+    "HTML-CSS" : {
+        availableFonts : ["STIX"],
+        preferredFont : "Gyre Pagella",
+        webFont : "STIX-Web",
+        imageFont : null
+    },
 	  TeX: {
 		equationNumbers: {
 		  autoNumber: "AMS"
 		}
 	  },
 	  tex2jax: {
-		inlineMath: [ ['$','$']], 
-		displayMath: [ ['$$','$$'] ],
+		inlineMath: [['$','$']], 
+		displayMath: [['$$','$$']],
 		processEscapes: true,
 	  }
 	});
@@ -29,10 +35,10 @@
 	.eqnos-number { position: absolute; right: 0em; top: 50%; line-height: 0; }
   </style>
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <script id="MathJax-script" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+  
+
 <link rel="icon" href="https://gchure.github.io/phd/favicon.ico" type="image/x-icon">
-
-
 <link href="https://fonts.googleapis.com/css?family=Nanum+Myeongjo&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Alegreya|Lora&display=swap" rel="stylesheet">
 
@@ -66,7 +72,7 @@
 												<i class="icon icon--chevron-down"></i>
 											</a>
 										</p><!-- /.hero-subheader__author-title -->
-										<p style="color: rgba(255,255,255, 0.85);">The ability to adapt is central to the definition of 'Life'. Adaptation can be found across the biological scales, governing the nanosecond-scale conformational switching of proteins to millenia-long migrations. This website presents the text of my Ph.D. thesis in which I dissected adaptive processes at the molecular and organismal level. All research, unless otherwise stated, was performed at the California Institute of Technology under the guidance of <a href="http://rpgroup.caltech.edu/">Rob Phillips</a>.
+										<p style="color: rgba(255,255,255, 0.85);">The ability to adapt is central to the definition of 'Life'. Adaptation can be found across the biological scales, governing the nanosecond-scale conformational switching of proteins to ecological dynamics. This website presents the text of my Ph.D. thesis in which I dissected adaptive processes at the molecular and organismal level. All research, unless otherwise stated, was performed at the California Institute of Technology under the guidance of <a href="http://rpgroup.caltech.edu/">Rob Phillips</a>.
 </p>
 									</div><!-- /.hero-subheader__author -->
 								</div><!-- /.align-inner -->
@@ -142,7 +148,7 @@
 												<div class="nav-grid__content" data-mh>
 													<h2 class="nav-grid__title">Chapter II: Molecular Adaptation
 </h2>
-													<p>Signaling processing within allosteric molecules</p>
+													<p>Signal processing within allosteric molecules</p>
 												</div><!-- /.nav-grid__content -->
 												<p class="nav-grid__btn">
 													read
@@ -154,9 +160,9 @@
 										<div class="col-sm-6 col-lg-4">
 											<a href="https://gchure.github.io/phd/chapter_03" class="nav-grid__item">
 												<div class="nav-grid__content" data-mh>
-													<h2 class="nav-grid__title">Chapter III: Collapse
+													<h2 class="nav-grid__title">Chapter III: Evolutionary Adaptation 
 </h2>
-													<p>Formulating a state variable for the simple repression motif</p>
+													<p>Using the simple repression state variable to predict mutant phenotypes</p>
 												</div><!-- /.nav-grid__content -->
 												<p class="nav-grid__btn">
 													read
@@ -168,9 +174,9 @@
 										<div class="col-sm-6 col-lg-4">
 											<a href="https://gchure.github.io/phd/chapter_04" class="nav-grid__item">
 												<div class="nav-grid__content" data-mh>
-													<h2 class="nav-grid__title">Chapter IV: Evolutionary Adaptation 
+													<h2 class="nav-grid__title">Chapter IV: Physiological Adaptation 
 </h2>
-													<p>Mutations as modulators of the free energy</p>
+													<p>On the physiological adaptability of a simple genetic circuit</p>
 												</div><!-- /.nav-grid__content -->
 												<p class="nav-grid__btn">
 													read
@@ -182,9 +188,10 @@
 										<div class="col-sm-6 col-lg-4">
 											<a href="https://gchure.github.io/phd/chapter_04" class="nav-grid__item">
 												<div class="nav-grid__content" data-mh>
-													<h2 class="nav-grid__title">Chapter V: Physiological Adaptation 
+													<h2 class="nav-grid__title">Chapter V: Survival
 </h2>
-													<p>Adaptability of a genetic circuit to environmental challenges</p>
+													<p>Adaptation where it counts: surviving environmental insults.
+</p>
 												</div><!-- /.nav-grid__content -->
 												<p class="nav-grid__btn">
 													read
@@ -196,9 +203,54 @@
 										<div class="col-sm-6 col-lg-4">
 											<a href="https://gchure.github.io/phd/chapter_06" class="nav-grid__item">
 												<div class="nav-grid__content" data-mh>
-													<h2 class="nav-grid__title">Chapter VI: Survival
+													<h2 class="nav-grid__title">Chapter VI: Supplement to Chapter II
 </h2>
-													<p>Adaptation where it counts: surviving environmental insults
+													<p>Supplemental information and extended methods for Chapter II
+</p>
+												</div><!-- /.nav-grid__content -->
+												<p class="nav-grid__btn">
+													read
+													<i class="icon icon--arrow-right"></i>
+												</p>
+											</a><!-- /.nav-grid__item -->
+										</div><!-- /.col -->
+									
+										<div class="col-sm-6 col-lg-4">
+											<a href="https://gchure.github.io/phd/chapter_07" class="nav-grid__item">
+												<div class="nav-grid__content" data-mh>
+													<h2 class="nav-grid__title">Chapter VII: Supplement to Chapter III
+</h2>
+													<p>Supplemental information and extended methods for Chapter III
+</p>
+												</div><!-- /.nav-grid__content -->
+												<p class="nav-grid__btn">
+													read
+													<i class="icon icon--arrow-right"></i>
+												</p>
+											</a><!-- /.nav-grid__item -->
+										</div><!-- /.col -->
+									
+										<div class="col-sm-6 col-lg-4">
+											<a href="https://gchure.github.io/phd/chapter_08" class="nav-grid__item">
+												<div class="nav-grid__content" data-mh>
+													<h2 class="nav-grid__title">Chapter VIII: Supplement to Chapter IV
+</h2>
+													<p>Supplemental information and extended methods for Chapter IV
+</p>
+												</div><!-- /.nav-grid__content -->
+												<p class="nav-grid__btn">
+													read
+													<i class="icon icon--arrow-right"></i>
+												</p>
+											</a><!-- /.nav-grid__item -->
+										</div><!-- /.col -->
+									
+										<div class="col-sm-6 col-lg-4">
+											<a href="https://gchure.github.io/phd/chapter_09" class="nav-grid__item">
+												<div class="nav-grid__content" data-mh>
+													<h2 class="nav-grid__title">Chapter IX: Supplement to Chapter V
+</h2>
+													<p>Supplemental information and extended methods for Chapter V
 </p>
 												</div><!-- /.nav-grid__content -->
 												<p class="nav-grid__btn">

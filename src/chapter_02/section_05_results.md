@@ -335,36 +335,47 @@ effective Hill coefficients.
 ### Data Collapse of Induction Profiles
 
 Our primary interest heretofore was to determine the system response at a
-specific inducer concentration, repressor copy number, and repressor-DNA binding energy. However, the cell does not necessarily ``care about'' the precise number of repressors in the system or the binding energy of an individual operator. The relevant quantity for cellular function is the fold-change enacted by the regulatory system. This raises the question: given a specific value of the fold-change, what combination of parameters will give rise to this desired response? In other words, what trade-offs between the parameters of the system will give rise to the same mean cellular output? These are key questions both for understanding how the system is governed and, as will become evident in the following chapters of this work, can provide insight as to what parameters may be changing in response to a physiological or environmental perturbation. To address these questions, we follow
-the data collapse strategy used in a number of previous studies [@sourjik2002, @keymer2006, @swem2008]. 
+specific inducer concentration, repressor copy number, and repressor-DNA binding
+energy. However, the cell does not necessarily ``care about'' the precise number
+of repressors in the system or the binding energy of an individual operator. The
+relevant quantity for cellular function is the fold-change enacted by the
+regulatory system. This raises the question: given a specific value of the
+fold-change, what combination of parameters will give rise to this desired
+response? In other words, what trade-offs between the parameters of the system
+will give rise to the same mean cellular output? These are key questions both
+for understanding how the system is governed and, as will become evident in the
+following chapters of this work, can provide insight as to what parameters may
+be changing in response to a physiological or environmental perturbation. To
+address these questions, we follow the data collapse strategy used in a number
+of previous studies [@sourjik2002, @keymer2006, @swem2008]. 
 
 The equilibrium states and statistical weights outlined in
 @Fig:induction_states_weights (A) can be further coarse grained into two
-@possible states -- one state being where the promoter is occupied by the
-@repressor and another being where the promoter is *not* occupied by the
-@repressor [@Fig:induction_collapse](A)]. As the transcriptionally active state
-@and the states in which the repressor is bound are mutually exclusive, we can
-@compute the probability of the repressor not being bound $p_{\not r}$ to the promoter as 
+possible states -- one state being where the promoter is occupied by the
+repressor and another being where the promoter is *not* occupied by the
+repressor [@Fig:collase_coarse_graining (A)]. As the transcriptionally active state
+and the states in which the repressor is bound are mutually exclusive, we can
+compute the probability of the repressor not being bound $p_{\neg r}$ to the promoter as 
 $$
-p_{\not r} = \frac{\not r}{r + \not r}.
+p_{\neg r} = \frac{\neg r}{r + \neg r}.
 $${#eq:not_r_bound}
 We can now take a similar approach as in @Eq:fold_change_definition and
 define the fold-change as the probability of the repressor not being bound
-when repressor is expressed $p_{\not r}(R > 0)$ relative to the probability
-when no repressor is expressed $p_{\not r}(R = 0)$. As the later term is
+when repressor is expressed $p_{\neg r}(R > 0)$ relative to the probability
+when no repressor is expressed $p_{\neg r}(R = 0)$. As the later term is
 equal to 1, the fold-change in gene expression is directly equivalent to
-$p_{\not r}$ expressed in @Eq:not_r_bound. This form can be algebraically
+$p_{\neg r}$ expressed in @Eq:not_r_bound. This form can be algebraically
 manipulated to the form 
 $$
-\text{fold-change} = \frac{1}{1 + \frac{r}{\not r}} = \frac{1}{1 + e^{-\beta F}}
+\text{fold-change} = \frac{1}{1 + \frac{r}{\neg r}} = \frac{1}{1 + e^{-\beta F}}
 $${#eq:two_state_not_r}
 where $F$ can be interpreted as the difference in free energy between the
 repressor bound and repressor not bound states,
 $$
-F = k_BT \left[\log \not r - \log r]
+F = k_BT \left[\log \neg r - \log r\right]
 $${#eq:not_r_bohr}.
 
-As @Fig:states_weights provides mathematical forms for $r$ and $\not r$, $F$ can
+As @Fig:induction_states_weights provides mathematical forms for $r$ and $\neg r$, $F$ can
 be directly computed as 
 
 $$
@@ -373,6 +384,20 @@ F = \frac{\Delta\varepsilon_{RA}}{k_BT} - \log
 \Delta\varepsilon_{AI} }\left(1+\frac{c}{K_I}\right)^n} - \log
 \frac{R}{N_{NS}}.
 $${#eq:induction_bohr_definition}
+
+![**Coarse graining of promoter occupancy states to a two-state system.** (A)
+The promoter occupancy states shown in @Fig:induction_states_weights(A) can be
+further reduced to a two-state system; one in which the repressor is bound to
+the promoter ($r$ and one in which it is not ($\neg r$). (B) The fold-change in gene
+expression can then be evaluated as the probability of the repressor unbound
+state $\neg r$ which has the form of a Fermi function (top). The energetic
+parameter $F$ denotes the effective free energy difference between the repressor
+bound and unbound states and can be directly computed (bottom) using the
+statistical weights in @Fig:induction_states_weights.
+](ch2_fig7){#fig:collapse_coarse_graining short-caption="Coarse graining of
+promoter occupancy states to a two-state system.}
+
+
 
 The first term in $F$ denotes the repressor-operator binding energy, the second
 the contribution from the inducer concentration, and the last
@@ -383,11 +408,11 @@ effect [@mirny2010; @phillips2015; @einav2016].
 
 Instead of analyzing each induction curve individually, the free energy provides
 a natural means to simultaneously characterize the diversity in our eighteen
-induction profiles. @Fig:induction_collapse (B) demonstrates how the
+induction profiles. @Fig:induction_collapse (A) demonstrates how the
 various induction curves from @Fig:induction_predictions (C-E) all
 collapse onto a single master curve, where points from every induction profile
 that yield the same fold-change are mapped onto the same free energy.
-@Fig:induction_collapse (C) this data collapse for the 216 data
+@Fig:induction_collapse (B) reveals complete data collapse for the 216 data
 points in @Fig:induction_experiments (A-C), demonstrating the
 close match between the theoretical predictions and experimental measurements
 across all eighteen strains.
@@ -404,21 +429,18 @@ parameters that evoke a specific cellular response, but rather that the cell
 explores a large but degenerate space of parameters with multiple, equally valid
 paths.
 
-![](**Collapse of fold-change measurements as a function of the free energy.**
-(B)   )
-    \centering \includegraphics[scale=0.6]{main_figs/fig7.pdf}
+    
+![**Collapse of fold-change measurements as a function of the free energy.**
+(A) Any combination of parameters can be mapped to a single physiological
+response (i.e. fold-change) via the free energy, which encompasses the
+parametric details of the model. (B) Experimental data from
+@Fig:induction_experiments collapse onto a single master curve as a function
+of the free energy. The freeenergy for each strain was calculated from
+@Eq:induction_bohr_definition. using $n=2$, $\Delta\varepsilon_{AI}=4.5~k_BT$, 
+$K_A=139, \mu\text{M}$, $K_I=0.53 \mu\text{M}$, and the strain-specific $R$ and
+$\Delta\varepsilon_{RA}$. All data points represent the mean, and error bars
+arethe standard error of the mean for eight or more
+replicates.](ch2_fig8){#fig:induction_collapse short-caption="Collapse of
+fold-change measurements as a function of the free energy."}
 
-    \caption{\textbf{Fold-change data from a broad collection of different strains
-        collapse onto a single master curve.} \letterParen{A} Any combination of
-    parameters can be mapped to a single physiological response (i.e. fold-change)
-    via the free energy, which encompasses the parametric details of the model.
-    \letterParen{B} Experimental data from \fref[fig_O2_R260_pred_data] collapse
-    onto a single master curve as a function of the free energy
-    \eref[eq_free_energy_MWC_parameters]. The free energy for each strain was
-    calculated from \eref[eq_free_energy_MWC_parameters] using $n=2$,
-    $\Delta\varepsilon_{AI}=4.5~k_BT$, $K_A=139 \times 10^{-6} \, \text{M}$,
-    $K_I=0.53 \times 10^{-6}\, \text{M}$, and the strain-specific $R$ and
-    $\Delta\varepsilon_{RA}$. All data points represent the mean, and error bars are
-    the standard error of the mean for eight or more replicates.}
-\label{fig_datacollapse}
-\end{figure}
+

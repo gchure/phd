@@ -1,0 +1,1979 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<meta charset="UTF-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, minimum-scale=1.0">
+<title>Chapter 2</title>
+
+
+<script type="text/x-mathjax-config">
+	MathJax.Hub.Config({
+	  TeX: {
+		equationNumbers: {
+		  autoNumber: "AMS"
+		}
+	  },
+	  tex2jax: {
+		inlineMath: [ ['$','$']], 
+		displayMath: [ ['$$','$$'] ],
+		processEscapes: true,
+	  }
+	});
+  </script>
+  <style>
+	.eqnos { display: inline-block; position: relative; width: 100%; }
+	.eqnos br { display: none; }
+	.eqnos-number { position: absolute; right: 0em; top: 50%; line-height: 0; }
+  </style>
+  <script src="Chapter%202_files/polyfill.js"></script>
+  <script id="MathJax-script" async="" src="Chapter%202_files/tex-mml-chtml.js"></script>
+  
+
+<link rel="icon" href="http://127.0.0.1:4000/favicon.ico" type="image/x-icon">
+<link href="Chapter%202_files/css.css" rel="stylesheet">
+<link href="Chapter%202_files/css_002.css" rel="stylesheet">
+
+<link rel="stylesheet" href="Chapter%202_files/style.css">
+
+	<style type="text/css">.CtxtMenu_InfoClose {  top:.2em; right:.2em;}
+.CtxtMenu_InfoContent {  overflow:auto; text-align:left; font-size:80%;  padding:.4em .6em; border:1px inset; margin:1em 0px;  max-height:20em; max-width:30em; background-color:#EEEEEE;  white-space:normal;}
+.CtxtMenu_Info.CtxtMenu_MousePost {outline:none;}
+.CtxtMenu_Info {  position:fixed; left:50%; width:auto; text-align:center;  border:3px outset; padding:1em 2em; background-color:#DDDDDD;  color:black;  cursor:default; font-family:message-box; font-size:120%;  font-style:normal; text-indent:0; text-transform:none;  line-height:normal; letter-spacing:normal; word-spacing:normal;  word-wrap:normal; white-space:nowrap; float:none; z-index:201;  border-radius: 15px;                     /* Opera 10.5 and IE9 */  -webkit-border-radius:15px;               /* Safari and Chrome */  -moz-border-radius:15px;                  /* Firefox */  -khtml-border-radius:15px;                /* Konqueror */  box-shadow:0px 10px 20px #808080;         /* Opera 10.5 and IE9 */  -webkit-box-shadow:0px 10px 20px #808080; /* Safari 3 & Chrome */  -moz-box-shadow:0px 10px 20px #808080;    /* Forefox 3.5 */  -khtml-box-shadow:0px 10px 20px #808080;  /* Konqueror */  filter:progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color="gray", Positive="true"); /* IE */}
+</style><style type="text/css">.CtxtMenu_MenuClose {  position:absolute;  cursor:pointer;  display:inline-block;  border:2px solid #AAA;  border-radius:18px;  -webkit-border-radius: 18px;             /* Safari and Chrome */  -moz-border-radius: 18px;                /* Firefox */  -khtml-border-radius: 18px;              /* Konqueror */  font-family: "Courier New", Courier;  font-size:24px;  color:#F0F0F0}
+.CtxtMenu_MenuClose span {  display:block; background-color:#AAA; border:1.5px solid;  border-radius:18px;  -webkit-border-radius: 18px;             /* Safari and Chrome */  -moz-border-radius: 18px;                /* Firefox */  -khtml-border-radius: 18px;              /* Konqueror */  line-height:0;  padding:8px 0 6px     /* may need to be browser-specific */}
+.CtxtMenu_MenuClose:hover {  color:white!important;  border:2px solid #CCC!important}
+.CtxtMenu_MenuClose:hover span {  background-color:#CCC!important}
+.CtxtMenu_MenuClose:hover:focus {  outline:none}
+</style><style type="text/css">.CtxtMenu_Menu {  position:absolute;  background-color:white;  color:black;  width:auto; padding:5px 0px;  border:1px solid #CCCCCC; margin:0; cursor:default;  font: menu; text-align:left; text-indent:0; text-transform:none;  line-height:normal; letter-spacing:normal; word-spacing:normal;  word-wrap:normal; white-space:nowrap; float:none; z-index:201;  border-radius: 5px;                     /* Opera 10.5 and IE9 */  -webkit-border-radius: 5px;             /* Safari and Chrome */  -moz-border-radius: 5px;                /* Firefox */  -khtml-border-radius: 5px;              /* Konqueror */  box-shadow:0px 10px 20px #808080;         /* Opera 10.5 and IE9 */  -webkit-box-shadow:0px 10px 20px #808080; /* Safari 3 & Chrome */  -moz-box-shadow:0px 10px 20px #808080;    /* Forefox 3.5 */  -khtml-box-shadow:0px 10px 20px #808080;  /* Konqueror */}
+.CtxtMenu_MenuItem {  padding: 1px 2em;  background:transparent;}
+.CtxtMenu_MenuArrow {  position:absolute; right:.5em; padding-top:.25em; color:#666666;  font-family: null; font-size: .75em}
+.CtxtMenu_MenuActive .CtxtMenu_MenuArrow {color:white}
+.CtxtMenu_MenuArrow.CtxtMenu_RTL {left:.5em; right:auto}
+.CtxtMenu_MenuCheck {  position:absolute; left:.7em;  font-family: null}
+.CtxtMenu_MenuCheck.CtxtMenu_RTL { right:.7em; left:auto }
+.CtxtMenu_MenuRadioCheck {  position:absolute; left: .7em;}
+.CtxtMenu_MenuRadioCheck.CtxtMenu_RTL {  right: .7em; left:auto}
+.CtxtMenu_MenuInputBox {  padding-left: 1em; right:.5em; color:#666666;  font-family: null;}
+.CtxtMenu_MenuInputBox.CtxtMenu_RTL {  left: .1em;}
+.CtxtMenu_MenuComboBox {  left:.1em; padding-bottom:.5em;}
+.CtxtMenu_MenuLabel {  padding: 1px 2em 3px 1.33em;  font-style:italic}
+.CtxtMenu_MenuRule {  border-top: 1px solid #DDDDDD;  margin: 4px 3px;}
+.CtxtMenu_MenuDisabled {  color:GrayText}
+.CtxtMenu_MenuActive {  background-color: #606872;  color: white;}
+.CtxtMenu_MenuDisabled:focus {  background-color: #E8E8E8}
+.CtxtMenu_MenuLabel:focus {  background-color: #E8E8E8}
+.CtxtMenu_ContextMenu:focus {  outline:none}
+.CtxtMenu_ContextMenu .CtxtMenu_MenuItem:focus {  outline:none}
+.CtxtMenu_Menu .CtxtMenu_MenuClose {  top:-10px; left:-10px}
+</style><style id="MJX-CHTML-styles">
+mjx-container [space="1"] {
+  margin-left: .111em;
+}
+
+mjx-container [space="2"] {
+  margin-left: .167em;
+}
+
+mjx-container [space="3"] {
+  margin-left: .222em;
+}
+
+mjx-container [space="4"] {
+  margin-left: .278em;
+}
+
+mjx-container [space="5"] {
+  margin-left: .333em;
+}
+
+mjx-container [rspace="1"] {
+  margin-right: .111em;
+}
+
+mjx-container [rspace="2"] {
+  margin-right: .167em;
+}
+
+mjx-container [rspace="3"] {
+  margin-right: .222em;
+}
+
+mjx-container [rspace="4"] {
+  margin-right: .278em;
+}
+
+mjx-container [rspace="5"] {
+  margin-right: .333em;
+}
+
+mjx-container [size="s"] {
+  font-size: 70.7%;
+}
+
+mjx-container [size="ss"] {
+  font-size: 50%;
+}
+
+mjx-container [size="Tn"] {
+  font-size: 60%;
+}
+
+mjx-container [size="sm"] {
+  font-size: 85%;
+}
+
+mjx-container [size="lg"] {
+  font-size: 120%;
+}
+
+mjx-container [size="Lg"] {
+  font-size: 144%;
+}
+
+mjx-container [size="LG"] {
+  font-size: 173%;
+}
+
+mjx-container [size="hg"] {
+  font-size: 207%;
+}
+
+mjx-container [size="HG"] {
+  font-size: 249%;
+}
+
+mjx-container [width="full"] {
+  width: 100%;
+}
+
+mjx-box {
+  display: inline-block;
+}
+
+mjx-block {
+  display: block;
+}
+
+mjx-itable {
+  display: inline-table;
+}
+
+mjx-row {
+  display: table-row;
+}
+
+mjx-row > * {
+  display: table-cell;
+}
+
+mjx-mtext {
+  display: inline-block;
+  text-align: left;
+}
+
+mjx-mstyle {
+  display: inline-block;
+}
+
+mjx-merror {
+  display: inline-block;
+  color: red;
+  background-color: yellow;
+}
+
+mjx-mphantom {
+  visibility: hidden;
+}
+
+mjx-math {
+  display: inline-block;
+  text-align: left;
+  line-height: 0;
+  text-indent: 0;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 100%;
+  font-size-adjust: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  word-spacing: normal;
+  white-space: nowrap;
+  direction: ltr;
+  padding: 1px 0;
+}
+
+mjx-container[jax="CHTML"][display="true"] {
+  display: block;
+  text-align: center;
+  margin: 1em 0;
+}
+
+mjx-container[jax="CHTML"][display="true"] mjx-math {
+  padding: 0;
+}
+
+mjx-container[jax="CHTML"][justify="left"] {
+  text-align: left;
+}
+
+mjx-container[jax="CHTML"][justify="right"] {
+  text-align: right;
+}
+
+mjx-mrow {
+  display: inline-block;
+  text-align: left;
+}
+
+mjx-inferredMrow {
+  display: inline-block;
+  text-align: left;
+}
+
+mjx-mi {
+  display: inline-block;
+  text-align: left;
+}
+
+mjx-mo {
+  display: inline-block;
+  text-align: left;
+}
+
+mjx-stretchy-h {
+  display: inline-table;
+  width: 100%;
+}
+
+mjx-stretchy-h > * {
+  display: table-cell;
+  width: 0;
+}
+
+mjx-stretchy-h > * > mjx-c {
+  display: inline-block;
+}
+
+mjx-stretchy-h > * > mjx-c::before {
+  padding: .001em 0;
+  width: initial;
+}
+
+mjx-stretchy-h > mjx-ext {
+  overflow: hidden;
+  width: 100%;
+}
+
+mjx-stretchy-h > mjx-ext > mjx-c::before {
+  transform: scalex(500);
+}
+
+mjx-stretchy-h > mjx-ext > mjx-c {
+  width: 0;
+}
+
+mjx-stretchy-h > mjx-beg > mjx-c {
+  margin-right: -.1em;
+}
+
+mjx-stretchy-h > mjx-end > mjx-c {
+  margin-left: -.1em;
+}
+
+mjx-stretchy-v {
+  display: inline-block;
+}
+
+mjx-stretchy-v > * {
+  display: block;
+}
+
+mjx-stretchy-v > mjx-beg {
+  height: 0;
+}
+
+mjx-stretchy-v > mjx-end > mjx-c {
+  display: block;
+}
+
+mjx-stretchy-v > * > mjx-c {
+  transform: scale(1);
+  transform-origin: left center;
+  overflow: hidden;
+}
+
+mjx-stretchy-v > mjx-ext {
+  display: block;
+  height: 100%;
+  box-sizing: border-box;
+  border: 0px solid transparent;
+  overflow: hidden;
+}
+
+mjx-stretchy-v > mjx-ext > mjx-c::before {
+  width: initial;
+}
+
+mjx-stretchy-v > mjx-ext > mjx-c {
+  transform: scaleY(500) translateY(.1em);
+  overflow: visible;
+}
+
+mjx-mark {
+  display: inline-block;
+  height: 0px;
+}
+
+mjx-mn {
+  display: inline-block;
+  text-align: left;
+}
+
+mjx-mfrac {
+  display: inline-block;
+  text-align: left;
+}
+
+mjx-frac {
+  display: inline-block;
+  vertical-align: 0.17em;
+  padding: 0 .22em;
+}
+
+mjx-frac[type="d"] {
+  vertical-align: .04em;
+}
+
+mjx-frac[delims] {
+  padding: 0 .1em;
+}
+
+mjx-frac[atop] {
+  padding: 0 .12em;
+}
+
+mjx-frac[atop][delims] {
+  padding: 0;
+}
+
+mjx-dtable {
+  display: inline-table;
+  width: 100%;
+}
+
+mjx-dtable > * {
+  font-size: 2000%;
+}
+
+mjx-dbox {
+  display: block;
+  font-size: 5%;
+}
+
+mjx-num {
+  display: block;
+  text-align: center;
+}
+
+mjx-den {
+  display: block;
+  text-align: center;
+}
+
+mjx-mfrac[bevelled] > mjx-num {
+  display: inline-block;
+}
+
+mjx-mfrac[bevelled] > mjx-den {
+  display: inline-block;
+}
+
+mjx-den[align="right"], mjx-num[align="right"] {
+  text-align: right;
+}
+
+mjx-den[align="left"], mjx-num[align="left"] {
+  text-align: left;
+}
+
+mjx-nstrut {
+  display: inline-block;
+  height: .054em;
+  width: 0;
+  vertical-align: -.054em;
+}
+
+mjx-nstrut[type="d"] {
+  height: .217em;
+  vertical-align: -.217em;
+}
+
+mjx-dstrut {
+  display: inline-block;
+  height: .505em;
+  width: 0;
+}
+
+mjx-dstrut[type="d"] {
+  height: .726em;
+}
+
+mjx-line {
+  display: block;
+  box-sizing: border-box;
+  min-height: 1px;
+  height: .06em;
+  border-top: .06em solid;
+  margin: .06em -.1em;
+  overflow: hidden;
+}
+
+mjx-line[type="d"] {
+  margin: .18em -.1em;
+}
+
+mjx-msub {
+  display: inline-block;
+  text-align: left;
+}
+
+mjx-msup {
+  display: inline-block;
+  text-align: left;
+}
+
+mjx-munder {
+  display: inline-block;
+  text-align: left;
+}
+
+mjx-over {
+  text-align: left;
+}
+
+mjx-munder:not([limits="false"]) {
+  display: inline-table;
+}
+
+mjx-munder > mjx-row {
+  text-align: left;
+}
+
+mjx-under {
+  padding-bottom: .1em;
+}
+
+mjx-mover {
+  display: inline-block;
+  text-align: left;
+}
+
+mjx-mover:not([limits="false"]) {
+  padding-top: .1em;
+}
+
+mjx-mover:not([limits="false"]) > * {
+  display: block;
+  text-align: left;
+}
+
+mjx-TeXAtom {
+  display: inline-block;
+  text-align: left;
+}
+
+mjx-c {
+  display: inline-block;
+}
+
+mjx-utext {
+  display: inline-block;
+  padding: .75em 0 .25em 0;
+}
+
+mjx-measure-text {
+  position: absolute;
+  font-family: MJXZERO;
+  white-space: nowrap;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+}
+
+mjx-c::before {
+  display: inline-block;
+  width: 0;
+}
+
+.mjx-n mjx-c {
+  font-family: MJXZERO, MJXTEX, MJXTEX-I, MJXTEX-S1, MJXTEX-A;
+}
+
+.mjx-i mjx-c {
+  font-family: MJXZERO, MJXTEX-I, MJXTEX, MJXTEX-S1, MJXTEX-A;
+}
+
+.mjx-b mjx-c {
+  font-family: MJXZERO, MJXTEX-B, MJXTEX-BI, MJXTEX, MJXTEX-I, MJXTEX-S1, MJXTEX-A;
+}
+
+.mjx-b.mjx-i mjx-c {
+  font-family: MJXZERO, MJXTEX-BI, MJXTEX-B, MJXTEX-I, MJXTEX, MJXTEX-S1, MJXTEX-A;
+}
+
+.mjx-cal mjx-c {
+  font-family: MJXZERO, MJXTEX-C, MJXTEX-I, MJXTEX, MJXTEX-S1, MJXTEX-A;
+}
+
+.mjx-cal.mjx-b mjx-c {
+  font-family: MJXZERO, MJXTEX-C-B, MJXTEX-C, MJXTEX-B, MJXTEX-BI, MJXTEX, MJXTEX-S1, MJXTEX-A;
+}
+
+.mjx-ds mjx-c {
+  font-family: MJXZERO, MJXTEX-A, MJXTEX-B, MJXTEX-BI, MJXTEX, MJXTEX-I, MJXTEX-S1;
+}
+
+.mjx-fr mjx-c {
+  font-family: MJXZERO, MJXTEX-FR, MJXTEX, MJXTEX-I, MJXTEX-S1, MJXTEX-A;
+}
+
+.mjx-fr.mjx-b mjx-c {
+  font-family: MJXZERO, MJXTEX-FR-B, MJXTEX-FR, MJXTEX-B, MJXTEX-BI, MJXTEX, MJXTEX-I, MJXTEX-S1, MJXTEX-A;
+}
+
+.mjx-sc mjx-c {
+  font-family: MJXZERO, MJXTEX-SC, MJXTEX, MJXTEX-I, MJXTEX-S1, MJXTEX-A;
+}
+
+.mjx-sc.mjx-b mjx-c {
+  font-family: MJXZERO, MJXTEX-SC-B, MJXTEX-SC, MJXTEX-B, MJXTEX-BI, MJXTEX, MJXTEX-I, MJXTEX-S1, MJXTEX-A;
+}
+
+.mjx-ss mjx-c {
+  font-family: MJXZERO, MJXTEX-SS, MJXTEX, MJXTEX-I, MJXTEX-S1, MJXTEX-A;
+}
+
+.mjx-ss.mjx-b mjx-c {
+  font-family: MJXZERO, MJXTEX-SS-B, MJXTEX-SS, MJXTEX-B, MJXTEX-BI, MJXTEX, MJXTEX-I, MJXTEX-S1, MJXTEX-A;
+}
+
+.mjx-ss.mjx-i mjx-c {
+  font-family: MJXZERO, MJXTEX-SS-I, MJXTEX-I, MJXTEX, MJXTEX-S1, MJXTEX-A;
+}
+
+.mjx-ss.mjx-b.mjx-i mjx-c {
+  font-family: MJXZERO, MJXTEX-SS-B, MJXTEX-SS-I, MJXTEX-BI, MJXTEX-B, MJXTEX-I, MJXTEX, MJXTEX-S1, MJXTEX-A;
+}
+
+.mjx-ty mjx-c {
+  font-family: MJXZERO, MJXTEX-T, MJXTEX, MJXTEX-I, MJXTEX-S1, MJXTEX-A;
+}
+
+.mjx-var mjx-c {
+  font-family: MJXZERO, MJXTEX-A, MJXTEX, MJXTEX-I, MJXTEX-S1;
+}
+
+.mjx-os mjx-c {
+  font-family: MJXZERO, MJXTEX-C, MJXTEX, MJXTEX-I, MJXTEX-S1, MJXTEX-A;
+}
+
+.mjx-os.mjx-b mjx-c {
+  font-family: MJXZERO, MJXTEX-C-B, MJXTEX-C, MJXTEX-B, MJXTEX-BI, MJXTEX, MJXTEX-I, MJXTEX-S1, MJXTEX-A;
+}
+
+.mjx-mit mjx-c {
+  font-family: MJXZERO, MJXTEX-MI, MJXTEX-I, MJXTEX, MJXTEX-S1, MJXTEX-A;
+}
+
+.mjx-lop mjx-c {
+  font-family: MJXZERO, MJXTEX-S2, MJXTEX-S1, MJXTEX, MJXTEX-I, MJXTEX-A;
+}
+
+.mjx-sop mjx-c {
+  font-family: MJXZERO, MJXTEX-S1, MJXTEX, MJXTEX-I, MJXTEX-A;
+}
+
+.mjx-s3 mjx-c {
+  font-family: MJXZERO, MJXTEX-S3, MJXTEX, MJXTEX-I, MJXTEX-S1, MJXTEX-A;
+}
+
+.mjx-s4 mjx-c {
+  font-family: MJXZERO, MJXTEX-S4, MJXTEX, MJXTEX-I, MJXTEX-S1, MJXTEX-A;
+}
+
+.MJX-TEX {
+  font-family: MJXZERO;
+}
+
+mjx-stretchy-v mjx-c, mjx-stretchy-h mjx-c {
+  font-family: MJXZERO, MJXTEX-S1, MJXTEX-S4, MJXTEX, MJXTEX-A ! important;
+}
+
+@font-face /* 0 */ {
+  font-family: MJXZERO;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Zero.woff") format("woff");
+}
+
+@font-face /* 1 */ {
+  font-family: MJXTEX;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Main-Regular.woff") format("woff");
+}
+
+@font-face /* 2 */ {
+  font-family: MJXTEX-B;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Main-Bold.woff") format("woff");
+}
+
+@font-face /* 3 */ {
+  font-family: MJXTEX-MI;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Main-Italic.woff") format("woff");
+}
+
+@font-face /* 4 */ {
+  font-family: MJXTEX-I;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Math-Italic.woff") format("woff");
+}
+
+@font-face /* 5 */ {
+  font-family: MJXTEX-BI;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Math-BoldItalic.woff") format("woff");
+}
+
+@font-face /* 6 */ {
+  font-family: MJXTEX-S1;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Size1-Regular.woff") format("woff");
+}
+
+@font-face /* 7 */ {
+  font-family: MJXTEX-S2;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Size2-Regular.woff") format("woff");
+}
+
+@font-face /* 8 */ {
+  font-family: MJXTEX-S3;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Size3-Regular.woff") format("woff");
+}
+
+@font-face /* 9 */ {
+  font-family: MJXTEX-S4;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Size4-Regular.woff") format("woff");
+}
+
+@font-face /* 10 */ {
+  font-family: MJXTEX-A;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_AMS-Regular.woff") format("woff");
+}
+
+@font-face /* 11 */ {
+  font-family: MJXTEX-C;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Calligraphic-Regular.woff") format("woff");
+}
+
+@font-face /* 12 */ {
+  font-family: MJXTEX-C-B;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Calligraphic-Bold.woff") format("woff");
+}
+
+@font-face /* 13 */ {
+  font-family: MJXTEX-FR;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Fraktur-Regular.woff") format("woff");
+}
+
+@font-face /* 14 */ {
+  font-family: MJXTEX-FR-B;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Fraktur-Bold.woff") format("woff");
+}
+
+@font-face /* 15 */ {
+  font-family: MJXTEX-SS;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_SansSerif-Regular.woff") format("woff");
+}
+
+@font-face /* 16 */ {
+  font-family: MJXTEX-SS-B;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_SansSerif-Bold.woff") format("woff");
+}
+
+@font-face /* 17 */ {
+  font-family: MJXTEX-SS-I;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_SansSerif-Italic.woff") format("woff");
+}
+
+@font-face /* 18 */ {
+  font-family: MJXTEX-SC;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Script-Regular.woff") format("woff");
+}
+
+@font-face /* 19 */ {
+  font-family: MJXTEX-T;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Typewriter-Regular.woff") format("woff");
+}
+
+@font-face /* 20 */ {
+  font-family: MJXTEX-V;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Vector-Regular.woff") format("woff");
+}
+
+@font-face /* 21 */ {
+  font-family: MJXTEX-VB;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Vector-Bold.woff") format("woff");
+}
+
+mjx-stretchy-v.mjx-c28 mjx-beg mjx-c::before {
+  content: "\239B";
+  padding: 1.154em 0.875em 0.655em 0;
+}
+
+mjx-stretchy-v.mjx-c28 mjx-ext mjx-c::before {
+  content: "\239C";
+}
+
+mjx-stretchy-v.mjx-c28 mjx-end mjx-c::before {
+  content: "\239D";
+  padding: 1.165em 0.875em 0.644em 0;
+}
+
+mjx-stretchy-v.mjx-c28 > mjx-end {
+  margin-top: -1.809em;
+}
+
+mjx-stretchy-v.mjx-c28 > mjx-ext {
+  border-top-width: 1.779em;
+  border-bottom-width: 1.779em;
+}
+
+mjx-stretchy-v.mjx-c29 mjx-beg mjx-c::before {
+  content: "\239E";
+  padding: 1.154em 0.875em 0.655em 0;
+}
+
+mjx-stretchy-v.mjx-c29 mjx-ext mjx-c::before {
+  content: "\239F";
+}
+
+mjx-stretchy-v.mjx-c29 mjx-end mjx-c::before {
+  content: "\23A0";
+  padding: 1.165em 0.875em 0.644em 0;
+}
+
+mjx-stretchy-v.mjx-c29 > mjx-end {
+  margin-top: -1.809em;
+}
+
+mjx-stretchy-v.mjx-c29 > mjx-ext {
+  border-top-width: 1.779em;
+  border-bottom-width: 1.779em;
+}
+
+ mjx-c.mjx-c28::before {
+  content: "(";
+}
+
+mjx-c.mjx-c28 {
+  padding: 0.75em 0.389em 0.25em 0;
+}
+
+ mjx-c.mjx-c29::before {
+  content: ")";
+}
+
+mjx-c.mjx-c29 {
+  padding: 0.75em 0.389em 0.25em 0;
+}
+
+ mjx-c.mjx-c2B::before {
+  content: "+";
+}
+
+mjx-c.mjx-c2B {
+  padding: 0.583em 0.778em 0.082em 0;
+}
+
+ mjx-c.mjx-c2C::before {
+  content: ",";
+}
+
+mjx-c.mjx-c2C {
+  padding: 0.121em 0.278em 0.194em 0;
+}
+
+ mjx-c.mjx-c2D::before {
+  content: "-";
+}
+
+mjx-c.mjx-c2D {
+  padding: 0.252em 0.333em 0 0;
+}
+
+ mjx-c.mjx-c2E::before {
+  content: ".";
+}
+
+mjx-c.mjx-c2E {
+  padding: 0.12em 0.278em 0 0;
+}
+
+ mjx-c.mjx-c30::before {
+  content: "0";
+}
+
+mjx-c.mjx-c30 {
+  padding: 0.666em 0.5em 0.022em 0;
+}
+
+ mjx-c.mjx-c31::before {
+  content: "1";
+}
+
+mjx-c.mjx-c31 {
+  padding: 0.666em 0.5em 0 0;
+}
+
+ mjx-c.mjx-c3D::before {
+  content: "=";
+}
+
+mjx-c.mjx-c3D {
+  padding: 0.583em 0.778em 0.082em 0;
+}
+
+ mjx-c.mjx-c3E::before {
+  content: ">";
+}
+
+mjx-c.mjx-c3E {
+  padding: 0.54em 0.778em 0.04em 0;
+}
+
+ mjx-c.mjx-c61::before {
+  content: "a";
+}
+
+mjx-c.mjx-c61 {
+  padding: 0.448em 0.5em 0.011em 0;
+}
+
+ mjx-c.mjx-c62::before {
+  content: "b";
+}
+
+mjx-c.mjx-c62 {
+  padding: 0.694em 0.556em 0.011em 0;
+}
+
+ mjx-c.mjx-c63::before {
+  content: "c";
+}
+
+mjx-c.mjx-c63 {
+  padding: 0.448em 0.444em 0.011em 0;
+}
+
+ mjx-c.mjx-c64::before {
+  content: "d";
+}
+
+mjx-c.mjx-c64 {
+  padding: 0.694em 0.556em 0.011em 0;
+}
+
+ mjx-c.mjx-c65::before {
+  content: "e";
+}
+
+mjx-c.mjx-c65 {
+  padding: 0.448em 0.444em 0.011em 0;
+}
+
+ mjx-c.mjx-c66::before {
+  content: "f";
+}
+
+mjx-c.mjx-c66 {
+  padding: 0.705em 0.372em 0 0;
+}
+
+mjx-mo[noIC]mjx-c.mjx-c66:last-child {
+  padding-right: 0.306em;
+}
+
+mjx-mi[noIC]mjx-c.mjx-c66:last-child {
+  padding-right: 0.306em;
+}
+
+ mjx-c.mjx-c67::before {
+  content: "g";
+}
+
+mjx-c.mjx-c67 {
+  padding: 0.453em 0.5em 0.206em 0;
+}
+
+ mjx-c.mjx-c68::before {
+  content: "h";
+}
+
+mjx-c.mjx-c68 {
+  padding: 0.694em 0.556em 0 0;
+}
+
+ mjx-c.mjx-c6C::before {
+  content: "l";
+}
+
+mjx-c.mjx-c6C {
+  padding: 0.694em 0.278em 0 0;
+}
+
+ mjx-c.mjx-c6E::before {
+  content: "n";
+}
+
+mjx-c.mjx-c6E {
+  padding: 0.442em 0.556em 0 0;
+}
+
+ mjx-c.mjx-c6F::before {
+  content: "o";
+}
+
+mjx-c.mjx-c6F {
+  padding: 0.448em 0.5em 0.01em 0;
+}
+
+ mjx-c.mjx-c74::before {
+  content: "t";
+}
+
+mjx-c.mjx-c74 {
+  padding: 0.615em 0.389em 0.01em 0;
+}
+
+ mjx-c.mjx-c75::before {
+  content: "u";
+}
+
+mjx-c.mjx-c75 {
+  padding: 0.442em 0.556em 0.011em 0;
+}
+
+mjx-c.mjx-c394::before {
+  content: "\394";
+}
+
+mjx-c.mjx-c394 {
+  padding: 0.716em 0.833em 0 0;
+}
+
+mjx-c.mjx-c2212::before {
+  content: "\2212";
+}
+
+mjx-c.mjx-c2212 {
+  padding: 0.583em 0.778em 0.082em 0;
+}
+
+mjx-c.mjx-c2248::before {
+  content: "\2248";
+}
+
+mjx-c.mjx-c2248 {
+  padding: 0.483em 0.778em 0 0;
+}
+
+mjx-c.mjx-c2261::before {
+  content: "\2261";
+}
+
+mjx-c.mjx-c2261 {
+  padding: 0.464em 0.778em 0 0;
+}
+
+.mjx-i mjx-c.mjx-c41::before {
+  content: "A";
+}
+
+.mjx-i mjx-c.mjx-c41 {
+  padding: 0.716em 0.75em 0 0;
+}
+
+.mjx-i mjx-c.mjx-c49::before {
+  content: "I";
+}
+
+.mjx-i mjx-c.mjx-c49 {
+  padding: 0.683em 0.504em 0 0;
+}
+
+mjx-mo[noIC].mjx-i mjx-c.mjx-c49:last-child {
+  padding-right: 0.44em;
+}
+
+mjx-mi[noIC].mjx-i mjx-c.mjx-c49:last-child {
+  padding-right: 0.44em;
+}
+
+.mjx-i mjx-c.mjx-c4B::before {
+  content: "K";
+}
+
+.mjx-i mjx-c.mjx-c4B {
+  padding: 0.683em 0.849em 0 0;
+}
+
+.mjx-i mjx-c.mjx-c4E::before {
+  content: "N";
+}
+
+.mjx-i mjx-c.mjx-c4E {
+  padding: 0.683em 0.888em 0 0;
+}
+
+mjx-mo[noIC].mjx-i mjx-c.mjx-c4E:last-child {
+  padding-right: 0.803em;
+}
+
+mjx-mi[noIC].mjx-i mjx-c.mjx-c4E:last-child {
+  padding-right: 0.803em;
+}
+
+.mjx-i mjx-c.mjx-c50::before {
+  content: "P";
+}
+
+.mjx-i mjx-c.mjx-c50 {
+  padding: 0.683em 0.751em 0 0;
+}
+
+mjx-mo[noIC].mjx-i mjx-c.mjx-c50:last-child {
+  padding-right: 0.642em;
+}
+
+mjx-mi[noIC].mjx-i mjx-c.mjx-c50:last-child {
+  padding-right: 0.642em;
+}
+
+.mjx-i mjx-c.mjx-c52::before {
+  content: "R";
+}
+
+.mjx-i mjx-c.mjx-c52 {
+  padding: 0.683em 0.759em 0.021em 0;
+}
+
+.mjx-i mjx-c.mjx-c53::before {
+  content: "S";
+}
+
+.mjx-i mjx-c.mjx-c53 {
+  padding: 0.705em 0.613em 0.022em 0;
+}
+
+.mjx-i mjx-c.mjx-c63::before {
+  content: "c";
+}
+
+.mjx-i mjx-c.mjx-c63 {
+  padding: 0.442em 0.433em 0.011em 0;
+}
+
+.mjx-i mjx-c.mjx-c65::before {
+  content: "e";
+}
+
+.mjx-i mjx-c.mjx-c65 {
+  padding: 0.442em 0.466em 0.011em 0;
+}
+
+.mjx-i mjx-c.mjx-c6E::before {
+  content: "n";
+}
+
+.mjx-i mjx-c.mjx-c6E {
+  padding: 0.442em 0.6em 0.011em 0;
+}
+
+.mjx-i mjx-c.mjx-c70::before {
+  content: "p";
+}
+
+.mjx-i mjx-c.mjx-c70 {
+  padding: 0.442em 0.503em 0.194em 0;
+}
+
+mjx-c.mjx-c3B2::before {
+  content: "\3B2";
+}
+
+.mjx-i mjx-c.mjx-c3B2 {
+  padding: 0.705em 0.566em 0.194em 0;
+}
+
+mjx-c.mjx-c3B5::before {
+  content: "\3B5";
+}
+
+.mjx-i mjx-c.mjx-c3B5 {
+  padding: 0.452em 0.466em 0.022em 0;
+}
+
+.mjx-lop mjx-c.mjx-c28::before {
+  content: "(";
+}
+
+.mjx-lop mjx-c.mjx-c28 {
+  padding: 1.15em 0.597em 0.649em 0;
+}
+
+.mjx-lop mjx-c.mjx-c29::before {
+  content: ")";
+}
+
+.mjx-lop mjx-c.mjx-c29 {
+  padding: 1.15em 0.597em 0.649em 0;
+}
+
+.mjx-s3 mjx-c.mjx-c28::before {
+  content: "(";
+}
+
+.mjx-s3 mjx-c.mjx-c28 {
+  padding: 1.45em 0.736em 0.949em 0;
+}
+
+.mjx-s3 mjx-c.mjx-c29::before {
+  content: ")";
+}
+
+.mjx-s3 mjx-c.mjx-c29 {
+  padding: 1.45em 0.736em 0.949em 0;
+}
+</style></head>
+	<body class="grey" data-spy="scroll" data-target=".js-scrollspy">
+		
+
+
+	<header class="site-header">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12">
+					
+						<a href="http://127.0.0.1:4000/" class="site-header__logo"><i class="icon icon--chevron-left"></i> Home</a>
+					
+					
+				</div><!-- /.col -->
+			</div><!-- /.row -->
+		</div><!-- /.container -->
+	</header><!-- /.site-header -->
+
+
+		<div class="hero-subheader" style="background-image: url(//doks-theme/assets/images/switchboard.png);">
+
+			<div class="container" style="background-color: rgba(0,0,0, 0.75); border:0.75px solid white;">
+				<div class="row">
+					<div class="col-md-7">
+						<div class="align-container" data-mh="" style="height: 357px;">
+							<div class="align-inner">
+								
+									<h2 class="hero-subheader__title">Chapter 2</h2>
+								
+								
+									<h1 class="hero-subheader__title">Through The Intramolecular Grapevine: Cellular Decision Making Via Allosteric Transcription factors
+</h1>
+								
+								
+								<!-- 
+									
+										<a href="chapter_01'" class="btn btn--dark btn--rounded btn--w-icon btn--w-icon-left">
+											<i class="icon icon--arrow-left"></i>	
+										</a>
+									
+									
+										<a href="chapter_03" class="btn btn--dark btn--rounded btn--w-icon">
+											<i class="icon icon--arrow-right"></i>
+										</a>
+									
+								 -->
+							</div><!-- /.align-inner -->
+						</div><!-- /.align-container -->
+					</div><!-- /.col -->
+					
+						<div class="col-md-5 col-md-offset-0 hidden-xs hidden-sm">
+							<div class="align-container" data-mh="" style="height: 357px;">
+								<div class="align-inner">
+									<div class="hero-subheader__author">
+										<p class="hero-subheader__author-title">
+												Summary
+												<i class="icon icon--chevron-down"></i>
+										</p><!-- /.hero-subheader__author-title -->
+										<p>Allosteric regulation is found across all domains of life, 
+yet we still lack simple, predictive theories that directly link the 
+experimentally tunable parameters of a system to its input-output 
+response. This chapter presents a general theory of allosteric 
+transcriptional regulation using the Monod-Wyman-Changeux model. We 
+rigorously test this model using the ubiquitous simple repression motif 
+in bacteria by first predicting the behavior of strains that span a 
+large range of repressor copy numbers and DNA binding strengths and then
+ constructing and measuring their response.
+</p>
+									</div><!-- /.hero-subheader__author -->
+								</div><!-- /.align-inner -->
+							</div><!-- /.align-container -->
+						</div><!-- /.col -->
+					
+				</div><!-- /.row -->
+			</div><!-- /.container -->
+		</div><!-- /.hero-subheader -->
+		
+				<nav class="page-nav">
+					<div class="container">
+						<div class="row">
+							<div class="col-xs-12">
+								
+									<a href="http://127.0.0.1:4000/chapter_02/chapter_01'" class="page-nav__item page-nav__item--prev">
+										<i class="icon icon--arrow-left"></i>
+										Chapter I
+									</a><!-- /.page-nav__item -->
+								
+								
+									<a href="http://127.0.0.1:4000/chapter_02/chapter_03" class="page-nav__item page-nav__item--next">
+										Chapter III
+										<i class="icon icon--arrow-right"></i>
+									</a><!-- /.page-nav__item -->
+								
+							</div><!-- /.col -->
+						</div><!-- /.row -->
+					</div><!-- /.container -->
+				</nav><!-- /.page-nav -->
+			
+
+		<div class="section">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-7">
+						<div class="content">
+							<strong>Published as …</strong>
+<hr>
+<p>A version of this chapter originally appeared as Razo-Mejia, M.* , 
+Barnes, S.L.* , Belliveau, N.M.* , Chure, G.* , Einav, T.* , Lewis, M., 
+and Phillips, R. (2018). Tuning Transcriptional Regulation through 
+Signaling: A Predictive Theory of Allosteric Induction. Cell Systems 6, 
+456-469.e10. M.R.M, S.L.B, N.M.B, G.C., and T.E. contributed equally to 
+this work from the theoretical underpinnings to the experimental design 
+and execution. M.R.M, S.L.B, N.M.B, G.C, T.E., and R.P. wrote the paper.
+ M.L. provided extensive guidance and advice.</p>
+<h2 id="introduction"><a href="#introduction" class="title-anchor-link">#</a> Introduction</h2>
+<p>Understanding how organisms sense and respond to changes in their 
+environment has long been a central theme of biological inquiry. At the 
+cellular level, this interaction is mediated by a diverse collection of 
+molecular signaling pathways. A pervasive mechanism of signaling in 
+these pathways is allosteric regulation, in which the binding of a 
+ligand induces a conformational change in some target molecule, 
+triggering a signaling cascade <span class="citation" data-cites="lindsley2006a">(Lindsley and Rutter <a href="#ref-lindsley2006a" role="doc-biblioref">2006</a>)</span>.
+ One of the most important examples of such signaling is offered by 
+transcriptional regulation, where a transcription factor’s propensity to
+ bind to DNA will be altered upon binding to an allosteric effector.</p>
+<p>Despite allostery’s ubiquity, we lack a formal, rigorous, and 
+generalizable framework for studying its effects across the broad 
+variety of contexts in which it appears. A key example of this is 
+transcriptional regulation, in which allosteric transcription factors 
+can be induced or corepressed by binding to a ligand. An allosteric 
+transcription factor can adopt multiple conformational states, each of 
+which has its own affinity for the ligand and for its DNA target site. <em>In vitro</em>
+ studies have rigorously quantified the equilibria of different 
+conformational states for allosteric transcription factors and measured 
+the affinities of these states to the ligand <span class="citation" data-cites="harman2001 lanfranco2017">(Harman <a href="#ref-harman2001" role="doc-biblioref">2001</a>; Lanfranco et al. <a href="#ref-lanfranco2017" role="doc-biblioref">2017</a>)</span>.
+ In spite of these experimental observations, the lack of a coherent 
+quantitative model for allosteric transcriptional regulation has made it
+ impossible to predict the behavior of even a simple genetic circuit 
+across a range of regulatory parameters.</p>
+<p>The ability to predict circuit behavior robustly— that is, across 
+both broad ranges of parameters and regulatory architectures —is 
+important for multiple reasons. First, in the context of a specific 
+gene, accurate prediction demonstrates that all components relevant to 
+the gene’s behavior have been identified and characterized to sufficient
+ quantitative precision. Second, in the context of genetic circuits in 
+general, robust prediction validates the model that generated the 
+prediction. Possessing a validated model also has implications for 
+future work. For example, when we have sufficient confidence in the 
+model, a single data set can be used to accurately extrapolate a 
+system’s behavior in other conditions. Moreover, there is an essential 
+distinction between a predictive model, which is used to predict a 
+system’s behavior given a set of input variables, and a retroactive 
+model, which is used to describe the behavior of data that has already 
+been obtained. We note that even some of the most careful and rigorous 
+analysis of transcriptional regulation often entails only a retroactive 
+reflection on a single experiment. This raises the fear that each 
+regulatory architecture may require a unique analysis that cannot carry 
+over to other systems, a worry that is exacerbated by the prevalent use 
+of phenomenological functions (e.g.&nbsp;Hill functions or ratios of 
+polynomials) that can analyze a single data set but cannot be used to 
+extrapolate a system’s behavior in other conditions <span class="citation" data-cites="setty2003 poelwijk2011a vilar2013 rogers2015 rohlhill2017">(Setty et al. <a href="#ref-setty2003" role="doc-biblioref">2003</a>; Poelwijk et al. <a href="#ref-poelwijk2011a" role="doc-biblioref">2011</a>; Vilar and Saiz <a href="#ref-vilar2013" role="doc-biblioref">2013</a>; Rogers et al. <a href="#ref-rogers2015" role="doc-biblioref">2015</a>; Rohlhill, Sandoval, and Papoutsakis <a href="#ref-rohlhill2017" role="doc-biblioref">2017</a>)</span>.</p>
+<p>This work explores what happens when theory takes center stage, 
+namely, we first write down the equations governing a system and 
+describe its expected behavior across a wide array of experimental 
+conditions, and only then do we set out to experimentally confirm these 
+results. Building upon previous work <span class="citation" data-cites="garcia2011 brewster2014 weinert2014">(Garcia et al. <a href="#ref-garcia2011" role="doc-biblioref">2011</a><a href="#ref-garcia2011" role="doc-biblioref">a</a>; Brewster et al. <a href="#ref-brewster2014" role="doc-biblioref">2014</a>; Weinert et al. <a href="#ref-weinert2014" role="doc-biblioref">2014</a>)</span> and the work of Monod, Wyman, and Changeux <span class="citation" data-cites="monod1965">(Monod, Wyman, and Changeux <a href="#ref-monod1965" role="doc-biblioref">1965</a>)</span>,
+ we present a statistical mechanical rendering of allostery in the 
+context of induction and corepression (shown schematically in Fig. <a href="#fig:inducible_types">1</a>
+ and henceforth referred to as the MWC model) and use it as the basis of
+ parameter-free predictions which we then test experimentally. More 
+specifically, we study the simple repression motif – a widespread 
+bacterial genetic regulatory architecture in which binding of a 
+transcription factor occludes binding of an RNA polymerase, thereby 
+inhibiting transcription initiation. The MWC model stipulates that an 
+allosteric protein fluctuates between two distinct conformations – an 
+active and inactive state – in thermodynamic equilibrium <span class="citation" data-cites="monod1965">(Monod, Wyman, and Changeux <a href="#ref-monod1965" role="doc-biblioref">1965</a>)</span>.
+ During induction, for example, effector binding increases the 
+probability that a repressor will be in the inactive state, weakening 
+its ability to bind to the promoter and resulting in increased 
+expression. To test the predictions of our model across a wide range of 
+operator binding strengths and repressor copy numbers, we design an <em>E. coli</em> genetic construct in which the binding probability of a repressor regulates gene expression of a fluorescent reporter.</p>
+<p>In total, the work presented here demonstrates that one extremely 
+compact set of parameters can be applied self-consistently and 
+predictively to different regulatory situations including simple 
+repression on the chromosome, cases in which decoy binding sites for 
+repressor are put on plasmids, cases in which multiple genes compete for
+ the same regulatory machinery, cases involving multiple binding sites 
+for repressor leading to DNA looping, and induction by signaling <span class="citation" data-cites="garcia2011 garcia2011b brewster2012 brewster2014 boedicker2013a boedicker2013">(Garcia et al. <a href="#ref-garcia2011" role="doc-biblioref">2011</a><a href="#ref-garcia2011" role="doc-biblioref">a</a>, <a href="#ref-garcia2011b" role="doc-biblioref">2011</a><a href="#ref-garcia2011b" role="doc-biblioref">a</a>; Brewster, Jones, and Phillips <a href="#ref-brewster2012" role="doc-biblioref">2012</a>; Brewster et al. <a href="#ref-brewster2014" role="doc-biblioref">2014</a>; Boedicker et al. <a href="#ref-boedicker2013a" role="doc-biblioref">2013</a>; Boedicker, Garcia, and Phillips <a href="#ref-boedicker2013" role="doc-biblioref">2013</a>)</span>
+ . Thus, rather than viewing the behavior of each circuit as giving rise
+ to its own unique input-output response, the MWC model provides a means
+ to characterize these seemingly diverse behaviors using a single 
+unified framework governed by a small set of parameters.</p>
+<div id="fig:inducible_types" class="fignos">
+<figure>
+<img src="Chapter%202_files/ch2_fig1.html" data-short-caption="Transcriptional regulatory architectures involving an allosteric repressor." alt=""><figcaption><span>Figure 1:</span>
+ We consider a promoter regulated solely by an allosteric repressor. 
+When bound, the repressor prevents RNAP from binding and initiating 
+transcription. Induction is characterized by the addition of an effector
+ which binds to the repressor and stabilizes the inactive state (defined
+ as the state which has a low affinity for DNA), thereby increasing gene
+ expression. In corepression, the effector stabilizes the repressor’s 
+active state and thus further reduces gene expression. We list several 
+characterized examples of induction and corepression that support 
+different physiological roles in <span><em>E. coli</em></span> . A 
+schematic regulatory response of the two architectures shown in Panel 
+plotting the fold-change in gene expression as a function of effector 
+concentration, where fold-change is defined as the ratio of gene 
+expression in the presence versus the absence of repressor. We consider 
+the following key phenotypic properties that describe each response 
+curve: the minimum response (leakiness), the maximum response 
+(saturation), the difference between the maximum and minimum response 
+(dynamic range), the concentration of ligand which generates a 
+fold-change halfway between the minimal and maximal response 
+(([EC_{50}])), and the log-log slope at the midpoint of the response 
+(effective Hill coefficient). (C) Over time we have refined our 
+understanding of simple repression architectures. A first round of 
+experiments used colorimetric assays and quantitative Western blots to 
+investigate how single-site repression is modified by the repressor copy
+ number and repressor-DNA binding energy . A second round of experiments
+ used video microscopy to probe how the copy number of the promoter and 
+presence of competing repressor binding sites affect gene expression, 
+and we use this data set to determine the free energy difference between
+ the repressor’s inactive and active conformations . Here we used flow 
+cytometry to determine the inducer-repressor dissociation constants and 
+demonstrate that with these parameters we can predict <em>a priori</em> the behavior of the system for any repressor copy number, DNA binding energy, gene copy number, and inducer concentration.</figcaption>
+</figure>
+</div>
+<h2 id="theoretical-model"><a href="#theoretical-model" class="title-anchor-link">#</a> Theoretical Model</h2>
+<h3 id="inducible-transcriptional-repression-via-the-mwc-model-of-allostery"><a href="#inducible-transcriptional-repression-via-the-mwc-model-of-allostery" class="title-anchor-link">#</a> Inducible Transcriptional Repression Via The MWC Model of Allostery</h3>
+<p>We begin by considering a simple repression genetic architecture in 
+which the binding of an allosteric repressor occludes the binding of RNA
+ polymerase (RNAP) to the DNA <span class="citation" data-cites="ackers1982 buchler2003">(Ackers and Johnson <a href="#ref-ackers1982" role="doc-biblioref">1982</a>; Buchler, Gerland, and Hwa <a href="#ref-buchler2003" role="doc-biblioref">2003</a>)</span>.
+ When an effector (hereafter referred to as an “inducer” for the case of
+ induction) binds to the repressor, it shifts the repressor’s allosteric
+ equilibrium towards the inactive state as specified by the MWC model <span class="citation" data-cites="monod1965">(Monod, Wyman, and Changeux <a href="#ref-monod1965" role="doc-biblioref">1965</a>)</span>.
+ This causes the repressor to bind more weakly to the operator, which 
+increases gene expression. Simple repression motifs in the absence of 
+inducer have been previously characterized by an equilibrium model where
+ the probability of each state of repressor and RNAP promoter occupancy 
+is dictated by the Boltzmann distribution <span class="citation" data-cites="ackers1982 buchler2003 vilar2003 bintu2005a garcia2011 brewster2014">(Ackers and Johnson <a href="#ref-ackers1982" role="doc-biblioref">1982</a>; Buchler, Gerland, and Hwa <a href="#ref-buchler2003" role="doc-biblioref">2003</a>; Vilar and Leibler <a href="#ref-vilar2003" role="doc-biblioref">2003</a>; Bintu, Buchler, Garcia, Gerland, Hwa, Kondev, Kuhlman, et al. <a href="#ref-bintu2005a" role="doc-biblioref">2005</a>; Garcia et al. <a href="#ref-garcia2011" role="doc-biblioref">2011</a><a href="#ref-garcia2011" role="doc-biblioref">a</a>; Brewster et al. <a href="#ref-brewster2014" role="doc-biblioref">2014</a>)</span>
+ [we note that non-equilibrium models of simple repression have been 
+shown to have the same functional form that we derive below <span class="citation" data-cites="phillips2015">(Phillips <a href="#ref-phillips2015" role="doc-biblioref">2015</a>)</span>]. We extend these models to consider allostery by accounting for the equilibrium state of the repressor through the MWC model.</p>
+<p>Thermodynamic models of gene expression begin by enumerating all 
+possible states of the promoter and their corresponding statistical 
+weights. As shown in Fig. <a href="#fig:states_weights">2</a> (A), the 
+promoter can either be empty, occupied by RNAP, or occupied by either an
+ active or inactive repressor. The probability of binding to the 
+promoter will be affected by the protein copy number, which we denote as
+ <span class="math inline"><em>P</em></span> for RNAP, <span class="math inline"><em>R</em><sub><em>A</em></sub></span> for active repressor, and <span class="math inline"><em>R</em><sub><em>I</em></sub></span>
+ for inactive repressor. We note that repressors fluctuate between the 
+active and inactive conformation in thermodynamic equilibrium, such that
+ <span class="math inline"><em>R</em><sub><em>A</em></sub></span> and <span class="math inline"><em>R</em><sub><em>I</em></sub></span> will remain constant for a given inducer concentration <span class="citation" data-cites="monod1965">(Monod, Wyman, and Changeux <a href="#ref-monod1965" role="doc-biblioref">1965</a>)</span>.
+ We assign the repressor a different DNA binding affinity in the active 
+and inactive state. In addition to the specific binding sites at the 
+promoter, we assume that there are <span class="math inline"><em>N</em><sub><em>N</em><em>S</em></sub></span>
+ non-specific binding sites elsewhere (i.e.&nbsp;on parts of the genome 
+outside the simple repression architecture) where the RNAP or the 
+repressor can bind. All specific binding energies are measured relative 
+to the average non-specific binding energy. Thus, <span class="math inline"><em>Δ</em><em>ε</em><sub><em>P</em></sub></span> represents the energy difference between the specific and non-specific binding for RNAP to the DNA. Likewise, <span class="math inline"><em>Δ</em><em>ε</em><sub><em>R</em><em>A</em></sub></span> and <span class="math inline"><em>Δ</em><em>ε</em><sub><em>R</em><em>I</em></sub></span>
+ represent the difference in specific and non-specific binding energies 
+for repressor in the active or inactive state, respectively.</p>
+<div id="fig:states_weights" class="fignos">
+<figure>
+<img src="Chapter%202_files/ch2_fig2.html" data-short-caption="States and statistical weights for the simple repression motif." alt=""><figcaption><span>Figure 2:</span>
+ States and weights for the simple repression motif. (A) Occupancy 
+states of the promoter. RNAP (light blue) and a repressor compete for 
+binding to a promoter of interest. There are <span class="math inline"><em>R</em><sub><em>A</em></sub></span> repressors in the active state (red) and <span class="math inline"><em>R</em><sub><em>I</em></sub></span>
+ repressors in the inactive state (purple). The difference in energy 
+between a repressor bound to the promoter of interest versus another 
+non-specific site elsewhere on the DNA equals <span class="math inline"><em>Δ</em><em>ε</em><sub><em>R</em><em>A</em></sub></span> in the active state and <span class="math inline"><em>Δ</em><em>ε</em><sub><em>R</em><em>I</em></sub></span> in the inactive state; the <span class="math inline"><em>P</em></span> RNAP have a corresponding energy difference <span class="math inline"><em>Δ</em><em>ε</em><sub><em>P</em></sub></span> relative to non-specific binding on the DNA. <span class="math inline"><em>N</em><sub><em>N</em><em>S</em></sub></span>
+ represents the number of non-specific binding sites for both RNAP and 
+repressor. (B) Allosteric states of the repressor. A repressor has an 
+active conformation (red, left column) and an inactive conformation 
+(purple, right column), with the energy difference between these two 
+states given by <span class="math inline"><em>Δ</em><em>ε</em><sub><em>A</em><em>I</em></sub></span>. The inducer (orange circle) at concentration <span class="math inline"><em>c</em></span> is capable of binding to the repressor with dissociation constants <span class="math inline"><em>K</em><sub><em>A</em></sub></span> in the active state and <span class="math inline"><em>K</em><sub><em>I</em></sub></span> in the inactive state. The eight states for a dimer with <span class="math inline"><em>n</em> = 2</span> inducer binding sites are shown along with the sums of the active and inactive states.</figcaption>
+</figure>
+</div>
+<p>Thermodynamic models of transcription <span class="citation" data-cites="ackers1982 buchler2003 vilar2003 bintu2005 bintu2005a kuhlman2007 daber2011a garcia2011 brewster2014 weinert2014">(Ackers and Johnson <a href="#ref-ackers1982" role="doc-biblioref">1982</a>; Buchler, Gerland, and Hwa <a href="#ref-buchler2003" role="doc-biblioref">2003</a>; Vilar and Leibler <a href="#ref-vilar2003" role="doc-biblioref">2003</a>; Bintu, Buchler, Garcia, Gerland, Hwa, Kondev, and Phillips <a href="#ref-bintu2005" role="doc-biblioref">2005</a>; Bintu, Buchler, Garcia, Gerland, Hwa, Kondev, Kuhlman, et al. <a href="#ref-bintu2005a" role="doc-biblioref">2005</a>; Kuhlman et al. <a href="#ref-kuhlman2007" role="doc-biblioref">2007</a>; Daber, Sochor, and Lewis <a href="#ref-daber2011a" role="doc-biblioref">2011</a>; Garcia et al. <a href="#ref-garcia2011" role="doc-biblioref">2011</a><a href="#ref-garcia2011" role="doc-biblioref">a</a>; Brewster et al. <a href="#ref-brewster2014" role="doc-biblioref">2014</a>; Weinert et al. <a href="#ref-weinert2014" role="doc-biblioref">2014</a>)</span> posit that gene expression is proportional to the probability that the RNAP is bound to the promoter <span class="math inline"><em>p</em><sub>bound</sub></span>, which is given by</p>
+<p><span id="eq:pbound_def" class="eqnos"><br><span class="math display"><mjx-container class="MathJax CtxtMenu_Attached_0" jax="CHTML" style="font-size: 113.1%;" display="true" tabindex="0" ctxtmenu_counter="0"><mjx-math display="true" class="MJX-TEX"><mjx-msub><mjx-mi class="mjx-i" noic="true"><mjx-c class="mjx-c70"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em;"><mjx-mtext class="mjx-n" size="s"><mjx-c class="mjx-c62"></mjx-c><mjx-c class="mjx-c6F"></mjx-c><mjx-c class="mjx-c75"></mjx-c><mjx-c class="mjx-c6E"></mjx-c><mjx-c class="mjx-c64"></mjx-c></mjx-mtext></mjx-script></mjx-msub><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mfrac space="4"><mjx-frac type="d"><mjx-num><mjx-nstrut type="d"></mjx-nstrut><mjx-mrow><mjx-mfrac><mjx-frac><mjx-num><mjx-nstrut></mjx-nstrut><mjx-mi class="mjx-i" size="s"><mjx-c class="mjx-c50"></mjx-c></mjx-mi></mjx-num><mjx-dbox><mjx-dtable><mjx-line></mjx-line><mjx-row><mjx-den><mjx-dstrut></mjx-dstrut><mjx-msub size="s"><mjx-mi class="mjx-i" noic="true"><mjx-c class="mjx-c4E"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em;"><mjx-texatom size="s"><mjx-mi class="mjx-i"><mjx-c class="mjx-c4E"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c53"></mjx-c></mjx-mi></mjx-texatom></mjx-script></mjx-msub></mjx-den></mjx-row></mjx-dtable></mjx-dbox></mjx-frac></mjx-mfrac><mjx-msup><mjx-mi class="mjx-i"><mjx-c class="mjx-c65"></mjx-c></mjx-mi><mjx-script style="vertical-align: 0.363em;"><mjx-texatom size="s"><mjx-mo class="mjx-n"><mjx-c class="mjx-c2212"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c3B2"></mjx-c></mjx-mi><mjx-mi class="mjx-n"><mjx-c class="mjx-c394"></mjx-c></mjx-mi><mjx-msub><mjx-mi class="mjx-i" noic="true"><mjx-c class="mjx-c3B5"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em;"><mjx-texatom size="s"><mjx-mi class="mjx-i"><mjx-c class="mjx-c50"></mjx-c></mjx-mi></mjx-texatom></mjx-script></mjx-msub></mjx-texatom></mjx-script></mjx-msup></mjx-mrow></mjx-num><mjx-dbox><mjx-dtable><mjx-line type="d"></mjx-line><mjx-row><mjx-den><mjx-dstrut type="d"></mjx-dstrut><mjx-mrow><mjx-mn class="mjx-n"><mjx-c class="mjx-c31"></mjx-c></mjx-mn><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c2B"></mjx-c></mjx-mo><mjx-mfrac space="3"><mjx-frac><mjx-num><mjx-nstrut></mjx-nstrut><mjx-msub size="s"><mjx-mi class="mjx-i" noic="true"><mjx-c class="mjx-c52"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.153em;"><mjx-mi class="mjx-i" size="s"><mjx-c class="mjx-c41"></mjx-c></mjx-mi></mjx-script></mjx-msub></mjx-num><mjx-dbox><mjx-dtable><mjx-line></mjx-line><mjx-row><mjx-den><mjx-dstrut></mjx-dstrut><mjx-msub size="s"><mjx-mi class="mjx-i" noic="true"><mjx-c class="mjx-c4E"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em;"><mjx-texatom size="s"><mjx-mi class="mjx-i"><mjx-c class="mjx-c4E"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c53"></mjx-c></mjx-mi></mjx-texatom></mjx-script></mjx-msub></mjx-den></mjx-row></mjx-dtable></mjx-dbox></mjx-frac></mjx-mfrac><mjx-msup><mjx-mi class="mjx-i"><mjx-c class="mjx-c65"></mjx-c></mjx-mi><mjx-script style="vertical-align: 0.363em;"><mjx-texatom size="s"><mjx-mo class="mjx-n"><mjx-c class="mjx-c2212"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c3B2"></mjx-c></mjx-mi><mjx-mi class="mjx-n"><mjx-c class="mjx-c394"></mjx-c></mjx-mi><mjx-msub><mjx-mi class="mjx-i" noic="true"><mjx-c class="mjx-c3B5"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.153em;"><mjx-texatom size="s"><mjx-mi class="mjx-i"><mjx-c class="mjx-c52"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c41"></mjx-c></mjx-mi></mjx-texatom></mjx-script></mjx-msub></mjx-texatom></mjx-script></mjx-msup><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c2B"></mjx-c></mjx-mo><mjx-mfrac space="3"><mjx-frac><mjx-num><mjx-nstrut></mjx-nstrut><mjx-msub size="s"><mjx-mi class="mjx-i" noic="true"><mjx-c class="mjx-c52"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em;"><mjx-mi class="mjx-i" size="s"><mjx-c class="mjx-c49"></mjx-c></mjx-mi></mjx-script></mjx-msub></mjx-num><mjx-dbox><mjx-dtable><mjx-line></mjx-line><mjx-row><mjx-den><mjx-dstrut></mjx-dstrut><mjx-msub size="s"><mjx-mi class="mjx-i" noic="true"><mjx-c class="mjx-c4E"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em;"><mjx-texatom size="s"><mjx-mi class="mjx-i"><mjx-c class="mjx-c4E"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c53"></mjx-c></mjx-mi></mjx-texatom></mjx-script></mjx-msub></mjx-den></mjx-row></mjx-dtable></mjx-dbox></mjx-frac></mjx-mfrac><mjx-msup><mjx-mi class="mjx-i"><mjx-c class="mjx-c65"></mjx-c></mjx-mi><mjx-script style="vertical-align: 0.363em;"><mjx-texatom size="s"><mjx-mo class="mjx-n"><mjx-c class="mjx-c2212"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c3B2"></mjx-c></mjx-mi><mjx-mi class="mjx-n"><mjx-c class="mjx-c394"></mjx-c></mjx-mi><mjx-msub><mjx-mi class="mjx-i" noic="true"><mjx-c class="mjx-c3B5"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em;"><mjx-texatom size="s"><mjx-mi class="mjx-i"><mjx-c class="mjx-c52"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c49"></mjx-c></mjx-mi></mjx-texatom></mjx-script></mjx-msub></mjx-texatom></mjx-script></mjx-msup><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c2B"></mjx-c></mjx-mo><mjx-mfrac space="3"><mjx-frac><mjx-num><mjx-nstrut></mjx-nstrut><mjx-mi class="mjx-i" size="s"><mjx-c class="mjx-c50"></mjx-c></mjx-mi></mjx-num><mjx-dbox><mjx-dtable><mjx-line></mjx-line><mjx-row><mjx-den><mjx-dstrut></mjx-dstrut><mjx-msub size="s"><mjx-mi class="mjx-i" noic="true"><mjx-c class="mjx-c4E"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em;"><mjx-texatom size="s"><mjx-mi class="mjx-i"><mjx-c class="mjx-c4E"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c53"></mjx-c></mjx-mi></mjx-texatom></mjx-script></mjx-msub></mjx-den></mjx-row></mjx-dtable></mjx-dbox></mjx-frac></mjx-mfrac><mjx-msup><mjx-mi class="mjx-i"><mjx-c class="mjx-c65"></mjx-c></mjx-mi><mjx-script style="vertical-align: 0.363em;"><mjx-texatom size="s"><mjx-mo class="mjx-n"><mjx-c class="mjx-c2212"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c3B2"></mjx-c></mjx-mi><mjx-mi class="mjx-n"><mjx-c class="mjx-c394"></mjx-c></mjx-mi><mjx-msub><mjx-mi class="mjx-i" noic="true"><mjx-c class="mjx-c3B5"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em;"><mjx-texatom size="s"><mjx-mi class="mjx-i"><mjx-c class="mjx-c50"></mjx-c></mjx-mi></mjx-texatom></mjx-script></mjx-msub></mjx-texatom></mjx-script></mjx-msup></mjx-mrow></mjx-den></mjx-row></mjx-dtable></mjx-dbox></mjx-frac></mjx-mfrac><mjx-mo class="mjx-n"><mjx-c class="mjx-c2C"></mjx-c></mjx-mo></mjx-math></mjx-container></span><br><span class="eqnos-number">(1)</span></span></p>
+<p>with <span class="math inline"><em>β</em> = 1/<em>k</em><sub><em>B</em></sub><em>T</em></span> where <span class="math inline"><em>k</em><sub><em>B</em></sub></span> is the Boltzmann constant and <span class="math inline"><em>T</em></span> is the temperature of the system. As <span class="math inline"><em>k</em><sub><em>B</em></sub><em>T</em></span> is the natural unit of energy at the molecular length scale, we treat the products <span class="math inline"><em>β</em><em>Δ</em><em>ε</em><sub><em>j</em></sub></span> as single parameters within our model. Measuring <span class="math inline"><em>p</em><sub>bound</sub></span> directly is fraught with experimental difficulties, as determining the exact proportionality between expression and <span class="math inline"><em>p</em><sub>bound</sub></span>
+ is not straightforward. Instead, we measure the fold-change in gene 
+expression due to the presence of the repressor. We define fold-change 
+as the ratio of gene expression in the presence of repressor relative to
+ expression in the absence of repressor (i.e.&nbsp;constitutive 
+expression), namely,</p>
+<p><span id="eq:fold_change_definition" class="eqnos"><br><span class="math display"><mjx-container class="MathJax CtxtMenu_Attached_0" jax="CHTML" style="font-size: 113.1%;" display="true" tabindex="0" ctxtmenu_counter="1"><mjx-math display="true" class="MJX-TEX"><mjx-mtext class="mjx-n"><mjx-c class="mjx-c66"></mjx-c><mjx-c class="mjx-c6F"></mjx-c><mjx-c class="mjx-c6C"></mjx-c><mjx-c class="mjx-c64"></mjx-c><mjx-c class="mjx-c2D"></mjx-c><mjx-c class="mjx-c63"></mjx-c><mjx-c class="mjx-c68"></mjx-c><mjx-c class="mjx-c61"></mjx-c><mjx-c class="mjx-c6E"></mjx-c><mjx-c class="mjx-c67"></mjx-c><mjx-c class="mjx-c65"></mjx-c></mjx-mtext><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c2261"></mjx-c></mjx-mo><mjx-mfrac space="4"><mjx-frac type="d"><mjx-num><mjx-nstrut type="d"></mjx-nstrut><mjx-mrow><mjx-msub><mjx-mi class="mjx-i" noic="true"><mjx-c class="mjx-c70"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em;"><mjx-mtext class="mjx-n" size="s"><mjx-c class="mjx-c62"></mjx-c><mjx-c class="mjx-c6F"></mjx-c><mjx-c class="mjx-c75"></mjx-c><mjx-c class="mjx-c6E"></mjx-c><mjx-c class="mjx-c64"></mjx-c></mjx-mtext></mjx-script></mjx-msub><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c52"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3E"></mjx-c></mjx-mo><mjx-mn class="mjx-n" space="4"><mjx-c class="mjx-c30"></mjx-c></mjx-mn><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo></mjx-mrow></mjx-num><mjx-dbox><mjx-dtable><mjx-line type="d"></mjx-line><mjx-row><mjx-den><mjx-dstrut type="d"></mjx-dstrut><mjx-mrow><mjx-msub><mjx-mi class="mjx-i" noic="true"><mjx-c class="mjx-c70"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em;"><mjx-mtext class="mjx-n" size="s"><mjx-c class="mjx-c62"></mjx-c><mjx-c class="mjx-c6F"></mjx-c><mjx-c class="mjx-c75"></mjx-c><mjx-c class="mjx-c6E"></mjx-c><mjx-c class="mjx-c64"></mjx-c></mjx-mtext></mjx-script></mjx-msub><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c52"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mn class="mjx-n" space="4"><mjx-c class="mjx-c30"></mjx-c></mjx-mn><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo></mjx-mrow></mjx-den></mjx-row></mjx-dtable></mjx-dbox></mjx-frac></mjx-mfrac><mjx-mo class="mjx-n"><mjx-c class="mjx-c2E"></mjx-c></mjx-mo></mjx-math></mjx-container></span><br><span class="eqnos-number">(2)</span></span></p>
+<p>We can simplify this expression using two well-justified approximations: firstly, <span class="math inline">(<em>P</em>/<em>N</em><sub><em>N</em><em>S</em></sub>)<em>e</em><sup> − <em>β</em><em>Δ</em><em>ε</em><sub><em>P</em></sub></sup>≪</span> 1 implying that the RNAP binds weakly to the promoter (<span class="math inline"><em>N</em><sub><em>N</em><em>S</em></sub> = 4.6 × 10<sup>6</sup></span>, <span class="math inline"><em>P</em> ≈ 10<sup>3</sup></span> <span class="citation" data-cites="klumpp2008">(Klumpp and Hwa <a href="#ref-klumpp2008" role="doc-biblioref">2008</a>)</span>, <span class="math inline"><em>Δ</em><em>ε</em><sub><em>P</em></sub> ≈  − 2  to  − 5 <em>k</em><sub><em>B</em></sub><em>T</em></span> <span class="citation" data-cites="brewster2012">(Brewster, Jones, and Phillips <a href="#ref-brewster2012" role="doc-biblioref">2012</a>)</span>, so that <span class="math inline">(<em>P</em>/<em>N</em><sub><em>N</em><em>S</em></sub>)<em>e</em><sup> − <em>β</em><em>Δ</em><em>ε</em><sub><em>P</em></sub></sup> ≈ 0.01</span>) and (2) <span class="math inline">(<em>R</em><sub><em>I</em></sub>/<em>N</em><sub><em>N</em><em>S</em></sub>)<em>e</em><sup> − <em>β</em><em>Δ</em><em>ε</em><sub><em>R</em><em>I</em></sub></sup> ≪ 1 + (<em>R</em><sub><em>A</em></sub>/<em>N</em><sub><em>N</em><em>S</em></sub>)<em>e</em><sup> − <em>β</em><em>Δ</em><em>ε</em><sub><em>R</em><em>A</em></sub></sup></span>
+ which reflects our assumption that the inactive repressor binds weakly 
+to the promoter of interest. Using these approximations, the fold-change
+ reduces to the form</p>
+<p><span id="eq:fold_change_RA" class="eqnos"><br><span class="math display"><mjx-container class="MathJax CtxtMenu_Attached_0" jax="CHTML" style="font-size: 113.1%;" display="true" tabindex="0" ctxtmenu_counter="2"><mjx-math display="true" class="MJX-TEX"><mjx-mtext class="mjx-n"><mjx-c class="mjx-c66"></mjx-c><mjx-c class="mjx-c6F"></mjx-c><mjx-c class="mjx-c6C"></mjx-c><mjx-c class="mjx-c64"></mjx-c><mjx-c class="mjx-c2D"></mjx-c><mjx-c class="mjx-c63"></mjx-c><mjx-c class="mjx-c68"></mjx-c><mjx-c class="mjx-c61"></mjx-c><mjx-c class="mjx-c6E"></mjx-c><mjx-c class="mjx-c67"></mjx-c><mjx-c class="mjx-c65"></mjx-c></mjx-mtext><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c2248"></mjx-c></mjx-mo><mjx-msup><mjx-mrow><mjx-mo class="mjx-s3"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mn class="mjx-n"><mjx-c class="mjx-c31"></mjx-c></mjx-mn><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c2B"></mjx-c></mjx-mo><mjx-mfrac space="3"><mjx-frac type="d"><mjx-num><mjx-nstrut type="d"></mjx-nstrut><mjx-msub><mjx-mi class="mjx-i" noic="true"><mjx-c class="mjx-c52"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.153em;"><mjx-mi class="mjx-i" size="s"><mjx-c class="mjx-c41"></mjx-c></mjx-mi></mjx-script></mjx-msub></mjx-num><mjx-dbox><mjx-dtable><mjx-line type="d"></mjx-line><mjx-row><mjx-den><mjx-dstrut type="d"></mjx-dstrut><mjx-msub><mjx-mi class="mjx-i" noic="true"><mjx-c class="mjx-c4E"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em;"><mjx-texatom size="s"><mjx-mi class="mjx-i"><mjx-c class="mjx-c4E"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c53"></mjx-c></mjx-mi></mjx-texatom></mjx-script></mjx-msub></mjx-den></mjx-row></mjx-dtable></mjx-dbox></mjx-frac></mjx-mfrac><mjx-msup><mjx-mi class="mjx-i"><mjx-c class="mjx-c65"></mjx-c></mjx-mi><mjx-script style="vertical-align: 0.413em;"><mjx-texatom size="s"><mjx-mo class="mjx-n"><mjx-c class="mjx-c2212"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c3B2"></mjx-c></mjx-mi><mjx-mi class="mjx-n"><mjx-c class="mjx-c394"></mjx-c></mjx-mi><mjx-msub><mjx-mi class="mjx-i" noic="true"><mjx-c class="mjx-c3B5"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.153em;"><mjx-texatom size="s"><mjx-mi class="mjx-i"><mjx-c class="mjx-c52"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c41"></mjx-c></mjx-mi></mjx-texatom></mjx-script></mjx-msub></mjx-texatom></mjx-script></mjx-msup><mjx-mo class="mjx-s3"><mjx-c class="mjx-c29"></mjx-c></mjx-mo></mjx-mrow><mjx-script style="vertical-align: 1.177em;"><mjx-texatom size="s"><mjx-mo class="mjx-n"><mjx-c class="mjx-c2212"></mjx-c></mjx-mo><mjx-mn class="mjx-n"><mjx-c class="mjx-c31"></mjx-c></mjx-mn></mjx-texatom></mjx-script></mjx-msup><mjx-mo class="mjx-n"><mjx-c class="mjx-c2261"></mjx-c></mjx-mo><mjx-msup><mjx-mrow><mjx-mo class="mjx-s3"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mn class="mjx-n"><mjx-c class="mjx-c31"></mjx-c></mjx-mn><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c2B"></mjx-c></mjx-mo><mjx-msub space="3"><mjx-mi class="mjx-i" noic="true"><mjx-c class="mjx-c70"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em;"><mjx-mtext class="mjx-n" size="s"><mjx-c class="mjx-c61"></mjx-c><mjx-c class="mjx-c63"></mjx-c><mjx-c class="mjx-c74"></mjx-c></mjx-mtext></mjx-script></mjx-msub><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c63"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo><mjx-mfrac><mjx-frac type="d"><mjx-num><mjx-nstrut type="d"></mjx-nstrut><mjx-mi class="mjx-i"><mjx-c class="mjx-c52"></mjx-c></mjx-mi></mjx-num><mjx-dbox><mjx-dtable><mjx-line type="d"></mjx-line><mjx-row><mjx-den><mjx-dstrut type="d"></mjx-dstrut><mjx-msub><mjx-mi class="mjx-i" noic="true"><mjx-c class="mjx-c4E"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em;"><mjx-texatom size="s"><mjx-mi class="mjx-i"><mjx-c class="mjx-c4E"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c53"></mjx-c></mjx-mi></mjx-texatom></mjx-script></mjx-msub></mjx-den></mjx-row></mjx-dtable></mjx-dbox></mjx-frac></mjx-mfrac><mjx-msup><mjx-mi class="mjx-i"><mjx-c class="mjx-c65"></mjx-c></mjx-mi><mjx-script style="vertical-align: 0.413em;"><mjx-texatom size="s"><mjx-mo class="mjx-n"><mjx-c class="mjx-c2212"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c3B2"></mjx-c></mjx-mi><mjx-mi class="mjx-n"><mjx-c class="mjx-c394"></mjx-c></mjx-mi><mjx-msub><mjx-mi class="mjx-i" noic="true"><mjx-c class="mjx-c3B5"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.153em;"><mjx-texatom size="s"><mjx-mi class="mjx-i"><mjx-c class="mjx-c52"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c41"></mjx-c></mjx-mi></mjx-texatom></mjx-script></mjx-msub></mjx-texatom></mjx-script></mjx-msup><mjx-mo class="mjx-s3"><mjx-c class="mjx-c29"></mjx-c></mjx-mo></mjx-mrow><mjx-script style="vertical-align: 1.177em;"><mjx-texatom size="s"><mjx-mo class="mjx-n"><mjx-c class="mjx-c2212"></mjx-c></mjx-mo><mjx-mn class="mjx-n"><mjx-c class="mjx-c31"></mjx-c></mjx-mn></mjx-texatom></mjx-script></mjx-msup><mjx-mo class="mjx-n"><mjx-c class="mjx-c2C"></mjx-c></mjx-mo></mjx-math></mjx-container></span><br><span class="eqnos-number">(3)</span></span></p>
+<p>where in the last step we have introduced the fraction <span class="math inline"><em>p</em><sub>act</sub>(<em>c</em>)</span> of repressors in the active state given a concentration <span class="math inline"><em>c</em></span> of inducer, such that <span class="math inline"><em>R</em><sub><em>A</em></sub>(<em>c</em>) = <em>p</em><sub>act</sub>(<em>c</em>)<em>R</em></span>. Since inducer binding shifts the repressors from the active to the inactive state, <span class="math inline"><em>p</em><sub>act</sub>(<em>c</em>)</span> grows smaller as <span class="math inline"><em>c</em></span> increases .</p>
+<p>We use the MWC model to compute the probability <span class="math inline"><em>p</em><sub>act</sub>(<em>c</em>)</span> that a repressor with <span class="math inline"><em>n</em></span> inducer binding sites will be active. The value of <span class="math inline"><em>p</em><sub>act</sub>(<em>c</em>)</span>
+ is given by the sum of the weights of the active repressor states 
+divided by the sum of the weights of all possible repressor states [see 
+Fig. <a href="#fig:states_weights">2</a> (B)], namely,</p>
+<p><span id="eq:eq_pactive" class="eqnos"><br><span class="math display"><mjx-container class="MathJax CtxtMenu_Attached_0" jax="CHTML" style="font-size: 113.1%;" display="true" tabindex="0" ctxtmenu_counter="3"><mjx-math display="true" class="MJX-TEX"><mjx-msub><mjx-mi class="mjx-i" noic="true"><mjx-c class="mjx-c70"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em;"><mjx-mtext class="mjx-n" size="s"><mjx-c class="mjx-c61"></mjx-c><mjx-c class="mjx-c63"></mjx-c><mjx-c class="mjx-c74"></mjx-c></mjx-mtext></mjx-script></mjx-msub><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c63"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mfrac space="4"><mjx-frac type="d"><mjx-num><mjx-nstrut type="d"></mjx-nstrut><mjx-msup><mjx-mrow><mjx-mo class="mjx-lop"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mn class="mjx-n"><mjx-c class="mjx-c31"></mjx-c></mjx-mn><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c2B"></mjx-c></mjx-mo><mjx-mfrac space="3"><mjx-frac><mjx-num><mjx-nstrut></mjx-nstrut><mjx-mi class="mjx-i" size="s"><mjx-c class="mjx-c63"></mjx-c></mjx-mi></mjx-num><mjx-dbox><mjx-dtable><mjx-line></mjx-line><mjx-row><mjx-den><mjx-dstrut></mjx-dstrut><mjx-msub size="s"><mjx-mi class="mjx-i" noic="true"><mjx-c class="mjx-c4B"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.153em;"><mjx-mi class="mjx-i" size="s"><mjx-c class="mjx-c41"></mjx-c></mjx-mi></mjx-script></mjx-msub></mjx-den></mjx-row></mjx-dtable></mjx-dbox></mjx-frac></mjx-mfrac><mjx-mo class="mjx-lop"><mjx-c class="mjx-c29"></mjx-c></mjx-mo></mjx-mrow><mjx-script style="vertical-align: 0.877em;"><mjx-mi class="mjx-i" size="s"><mjx-c class="mjx-c6E"></mjx-c></mjx-mi></mjx-script></mjx-msup></mjx-num><mjx-dbox><mjx-dtable><mjx-line type="d"></mjx-line><mjx-row><mjx-den><mjx-dstrut type="d"></mjx-dstrut><mjx-mrow><mjx-msup><mjx-mrow><mjx-mo class="mjx-lop"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mn class="mjx-n"><mjx-c class="mjx-c31"></mjx-c></mjx-mn><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c2B"></mjx-c></mjx-mo><mjx-mfrac space="3"><mjx-frac><mjx-num><mjx-nstrut></mjx-nstrut><mjx-mi class="mjx-i" size="s"><mjx-c class="mjx-c63"></mjx-c></mjx-mi></mjx-num><mjx-dbox><mjx-dtable><mjx-line></mjx-line><mjx-row><mjx-den><mjx-dstrut></mjx-dstrut><mjx-msub size="s"><mjx-mi class="mjx-i" noic="true"><mjx-c class="mjx-c4B"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.153em;"><mjx-mi class="mjx-i" size="s"><mjx-c class="mjx-c41"></mjx-c></mjx-mi></mjx-script></mjx-msub></mjx-den></mjx-row></mjx-dtable></mjx-dbox></mjx-frac></mjx-mfrac><mjx-mo class="mjx-lop"><mjx-c class="mjx-c29"></mjx-c></mjx-mo></mjx-mrow><mjx-script style="vertical-align: 0.877em;"><mjx-mi class="mjx-i" size="s"><mjx-c class="mjx-c6E"></mjx-c></mjx-mi></mjx-script></mjx-msup><mjx-mo class="mjx-n"><mjx-c class="mjx-c2B"></mjx-c></mjx-mo><mjx-msup><mjx-mi class="mjx-i"><mjx-c class="mjx-c65"></mjx-c></mjx-mi><mjx-script style="vertical-align: 0.363em;"><mjx-texatom size="s"><mjx-mo class="mjx-n"><mjx-c class="mjx-c2212"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c3B2"></mjx-c></mjx-mi><mjx-mi class="mjx-n"><mjx-c class="mjx-c394"></mjx-c></mjx-mi><mjx-msub><mjx-mi class="mjx-i" noic="true"><mjx-c class="mjx-c3B5"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.153em;"><mjx-texatom size="s"><mjx-mi class="mjx-i"><mjx-c class="mjx-c41"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c49"></mjx-c></mjx-mi></mjx-texatom></mjx-script></mjx-msub></mjx-texatom></mjx-script></mjx-msup><mjx-msup><mjx-mrow><mjx-mo class="mjx-lop"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mn class="mjx-n"><mjx-c class="mjx-c31"></mjx-c></mjx-mn><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c2B"></mjx-c></mjx-mo><mjx-mfrac space="3"><mjx-frac><mjx-num><mjx-nstrut></mjx-nstrut><mjx-mi class="mjx-i" size="s"><mjx-c class="mjx-c63"></mjx-c></mjx-mi></mjx-num><mjx-dbox><mjx-dtable><mjx-line></mjx-line><mjx-row><mjx-den><mjx-dstrut></mjx-dstrut><mjx-msub size="s"><mjx-mi class="mjx-i" noic="true"><mjx-c class="mjx-c4B"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em;"><mjx-mi class="mjx-i" size="s"><mjx-c class="mjx-c49"></mjx-c></mjx-mi></mjx-script></mjx-msub></mjx-den></mjx-row></mjx-dtable></mjx-dbox></mjx-frac></mjx-mfrac><mjx-mo class="mjx-lop"><mjx-c class="mjx-c29"></mjx-c></mjx-mo></mjx-mrow><mjx-script style="vertical-align: 0.877em;"><mjx-mi class="mjx-i" size="s"><mjx-c class="mjx-c6E"></mjx-c></mjx-mi></mjx-script></mjx-msup></mjx-mrow></mjx-den></mjx-row></mjx-dtable></mjx-dbox></mjx-frac></mjx-mfrac><mjx-mo class="mjx-n"><mjx-c class="mjx-c2C"></mjx-c></mjx-mo></mjx-math></mjx-container></span><br><span class="eqnos-number">(4)</span></span></p>
+<p>where <span class="math inline"><em>K</em><sub><em>A</em></sub></span> and <span class="math inline"><em>K</em><sub><em>I</em></sub></span> represent the dissociation constant between the inducer and repressor in the active and inactive states, respectively, and <span class="math inline"><em>Δ</em><em>ε</em><sub><em>A</em><em>I</em></sub> = <em>ε</em><sub><em>I</em></sub> − <em>ε</em><sub><em>A</em></sub></span> is the free energy difference between a repressor in the inactive and active state [the quantity <span class="math inline"><em>e</em><sup> − <em>Δ</em><em>ε</em><sub><em>A</em><em>I</em></sub></sup></span> is sometimes denoted by <span class="math inline"><em>L</em></span> <span class="citation" data-cites="monod1965 marzen2013">(Monod, Wyman, and Changeux <a href="#ref-monod1965" role="doc-biblioref">1965</a>; Marzen, Garcia, and Phillips <a href="#ref-marzen2013" role="doc-biblioref">2013</a>)</span> or <span class="math inline"><em>K</em><sub>RR*</sub></span> <span class="citation" data-cites="daber2011a">(Daber, Sochor, and Lewis <a href="#ref-daber2011a" role="doc-biblioref">2011</a>)</span>]. In this equation, <span class="math inline"><em>c</em>/<em>K</em><sub><em>A</em></sub></span> and <span class="math inline"><em>c</em>/<em>K</em><sub><em>I</em></sub></span> represent the change in free energy when an inducer binds to a repressor in the active or inactive state, respectively, while <span class="math inline"><em>e</em><sup> − <em>β</em><em>Δ</em><em>ε</em><sub><em>A</em><em>I</em></sub></sup></span>
+ represents the change in free energy when the repressor changes from 
+the active to inactive state in the absence of inducer. Thus, a 
+repressor which favors the active state in the absence of inducer (<span class="math inline"><em>Δ</em><em>ε</em><sub><em>A</em><em>I</em></sub> &gt; 0</span>) will be driven towards the inactive state upon inducer binding when <span class="math inline"><em>K</em><sub><em>I</em></sub> &lt; <em>K</em><sub><em>A</em></sub></span>. The specific case of a repressor dimer with <span class="math inline"><em>n</em> = 2</span> inducer binding sites is shown in Fig. <a href="#fig:states_weights">2</a> (B).</p>
+<p>Substituting <span class="math inline"><em>p</em><sub>act</sub>(<em>c</em>)</span> from into yields the general formula for induction of a simple repression regulatory architecture <span class="citation" data-cites="phillips2015">(Phillips <a href="#ref-phillips2015" role="doc-biblioref">2015</a>)</span>, namely, <span id="eq:fold_change_full" class="eqnos"><br><span class="math display"><mjx-container class="MathJax CtxtMenu_Attached_0" jax="CHTML" style="font-size: 113.1%;" display="true" tabindex="0" ctxtmenu_counter="4"><mjx-math display="true" class="MJX-TEX"><mjx-mtext class="mjx-n"><mjx-c class="mjx-c66"></mjx-c><mjx-c class="mjx-c6F"></mjx-c><mjx-c class="mjx-c6C"></mjx-c><mjx-c class="mjx-c64"></mjx-c><mjx-c class="mjx-c2D"></mjx-c><mjx-c class="mjx-c63"></mjx-c><mjx-c class="mjx-c68"></mjx-c><mjx-c class="mjx-c61"></mjx-c><mjx-c class="mjx-c6E"></mjx-c><mjx-c class="mjx-c67"></mjx-c><mjx-c class="mjx-c65"></mjx-c></mjx-mtext><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-msup><mjx-mrow><mjx-mo class="mjx-n"><mjx-stretchy-v style="height: 4.097em; vertical-align: -1.799em;" class="mjx-c28"><mjx-beg><mjx-c></mjx-c></mjx-beg><mjx-ext><mjx-c></mjx-c></mjx-ext><mjx-end><mjx-c></mjx-c></mjx-end><mjx-mark></mjx-mark></mjx-stretchy-v></mjx-mo><mjx-mn class="mjx-n"><mjx-c class="mjx-c31"></mjx-c></mjx-mn><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c2B"></mjx-c></mjx-mo><mjx-mfrac space="3"><mjx-frac type="d"><mjx-num><mjx-nstrut type="d"></mjx-nstrut><mjx-msup><mjx-mrow><mjx-mo class="mjx-lop"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mn class="mjx-n"><mjx-c class="mjx-c31"></mjx-c></mjx-mn><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c2B"></mjx-c></mjx-mo><mjx-mfrac space="3"><mjx-frac><mjx-num><mjx-nstrut></mjx-nstrut><mjx-mi class="mjx-i" size="s"><mjx-c class="mjx-c63"></mjx-c></mjx-mi></mjx-num><mjx-dbox><mjx-dtable><mjx-line></mjx-line><mjx-row><mjx-den><mjx-dstrut></mjx-dstrut><mjx-msub size="s"><mjx-mi class="mjx-i" noic="true"><mjx-c class="mjx-c4B"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.153em;"><mjx-mi class="mjx-i" size="s"><mjx-c class="mjx-c41"></mjx-c></mjx-mi></mjx-script></mjx-msub></mjx-den></mjx-row></mjx-dtable></mjx-dbox></mjx-frac></mjx-mfrac><mjx-mo class="mjx-lop"><mjx-c class="mjx-c29"></mjx-c></mjx-mo></mjx-mrow><mjx-script style="vertical-align: 0.877em;"><mjx-mi class="mjx-i" size="s"><mjx-c class="mjx-c6E"></mjx-c></mjx-mi></mjx-script></mjx-msup></mjx-num><mjx-dbox><mjx-dtable><mjx-line type="d"></mjx-line><mjx-row><mjx-den><mjx-dstrut type="d"></mjx-dstrut><mjx-mrow><mjx-msup><mjx-mrow><mjx-mo class="mjx-lop"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mn class="mjx-n"><mjx-c class="mjx-c31"></mjx-c></mjx-mn><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c2B"></mjx-c></mjx-mo><mjx-mfrac space="3"><mjx-frac><mjx-num><mjx-nstrut></mjx-nstrut><mjx-mi class="mjx-i" size="s"><mjx-c class="mjx-c63"></mjx-c></mjx-mi></mjx-num><mjx-dbox><mjx-dtable><mjx-line></mjx-line><mjx-row><mjx-den><mjx-dstrut></mjx-dstrut><mjx-msub size="s"><mjx-mi class="mjx-i" noic="true"><mjx-c class="mjx-c4B"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.153em;"><mjx-mi class="mjx-i" size="s"><mjx-c class="mjx-c41"></mjx-c></mjx-mi></mjx-script></mjx-msub></mjx-den></mjx-row></mjx-dtable></mjx-dbox></mjx-frac></mjx-mfrac><mjx-mo class="mjx-lop"><mjx-c class="mjx-c29"></mjx-c></mjx-mo></mjx-mrow><mjx-script style="vertical-align: 0.877em;"><mjx-mi class="mjx-i" size="s"><mjx-c class="mjx-c6E"></mjx-c></mjx-mi></mjx-script></mjx-msup><mjx-mo class="mjx-n"><mjx-c class="mjx-c2B"></mjx-c></mjx-mo><mjx-msup><mjx-mi class="mjx-i"><mjx-c class="mjx-c65"></mjx-c></mjx-mi><mjx-script style="vertical-align: 0.363em;"><mjx-texatom size="s"><mjx-mo class="mjx-n"><mjx-c class="mjx-c2212"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c3B2"></mjx-c></mjx-mi><mjx-mi class="mjx-n"><mjx-c class="mjx-c394"></mjx-c></mjx-mi><mjx-msub><mjx-mi class="mjx-i" noic="true"><mjx-c class="mjx-c3B5"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.153em;"><mjx-texatom size="s"><mjx-mi class="mjx-i"><mjx-c class="mjx-c41"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c49"></mjx-c></mjx-mi></mjx-texatom></mjx-script></mjx-msub></mjx-texatom></mjx-script></mjx-msup><mjx-msup><mjx-mrow><mjx-mo class="mjx-lop"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mn class="mjx-n"><mjx-c class="mjx-c31"></mjx-c></mjx-mn><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c2B"></mjx-c></mjx-mo><mjx-mfrac space="3"><mjx-frac><mjx-num><mjx-nstrut></mjx-nstrut><mjx-mi class="mjx-i" size="s"><mjx-c class="mjx-c63"></mjx-c></mjx-mi></mjx-num><mjx-dbox><mjx-dtable><mjx-line></mjx-line><mjx-row><mjx-den><mjx-dstrut></mjx-dstrut><mjx-msub size="s"><mjx-mi class="mjx-i" noic="true"><mjx-c class="mjx-c4B"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em;"><mjx-mi class="mjx-i" size="s"><mjx-c class="mjx-c49"></mjx-c></mjx-mi></mjx-script></mjx-msub></mjx-den></mjx-row></mjx-dtable></mjx-dbox></mjx-frac></mjx-mfrac><mjx-mo class="mjx-lop"><mjx-c class="mjx-c29"></mjx-c></mjx-mo></mjx-mrow><mjx-script style="vertical-align: 0.877em;"><mjx-mi class="mjx-i" size="s"><mjx-c class="mjx-c6E"></mjx-c></mjx-mi></mjx-script></mjx-msup></mjx-mrow></mjx-den></mjx-row></mjx-dtable></mjx-dbox></mjx-frac></mjx-mfrac><mjx-mfrac><mjx-frac type="d"><mjx-num><mjx-nstrut type="d"></mjx-nstrut><mjx-mi class="mjx-i"><mjx-c class="mjx-c52"></mjx-c></mjx-mi></mjx-num><mjx-dbox><mjx-dtable><mjx-line type="d"></mjx-line><mjx-row><mjx-den><mjx-dstrut type="d"></mjx-dstrut><mjx-msub><mjx-mi class="mjx-i" noic="true"><mjx-c class="mjx-c4E"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em;"><mjx-texatom size="s"><mjx-mi class="mjx-i"><mjx-c class="mjx-c4E"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c53"></mjx-c></mjx-mi></mjx-texatom></mjx-script></mjx-msub></mjx-den></mjx-row></mjx-dtable></mjx-dbox></mjx-frac></mjx-mfrac><mjx-msup><mjx-mi class="mjx-i"><mjx-c class="mjx-c65"></mjx-c></mjx-mi><mjx-script style="vertical-align: 0.413em;"><mjx-texatom size="s"><mjx-mo class="mjx-n"><mjx-c class="mjx-c2212"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c3B2"></mjx-c></mjx-mi><mjx-mi class="mjx-n"><mjx-c class="mjx-c394"></mjx-c></mjx-mi><mjx-msub><mjx-mi class="mjx-i" noic="true"><mjx-c class="mjx-c3B5"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.153em;"><mjx-texatom size="s"><mjx-mi class="mjx-i"><mjx-c class="mjx-c52"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c41"></mjx-c></mjx-mi></mjx-texatom></mjx-script></mjx-msub></mjx-texatom></mjx-script></mjx-msup><mjx-mo class="mjx-n"><mjx-stretchy-v style="height: 4.097em; vertical-align: -1.799em;" class="mjx-c29"><mjx-beg><mjx-c></mjx-c></mjx-beg><mjx-ext><mjx-c></mjx-c></mjx-ext><mjx-end><mjx-c></mjx-c></mjx-end><mjx-mark></mjx-mark></mjx-stretchy-v></mjx-mo></mjx-mrow><mjx-script style="vertical-align: 2.026em;"><mjx-texatom size="s"><mjx-mo class="mjx-n"><mjx-c class="mjx-c2212"></mjx-c></mjx-mo><mjx-mn class="mjx-n"><mjx-c class="mjx-c31"></mjx-c></mjx-mn></mjx-texatom></mjx-script></mjx-msup><mjx-mo class="mjx-n"><mjx-c class="mjx-c2E"></mjx-c></mjx-mo></mjx-math></mjx-container></span><br><span class="eqnos-number">(5)</span></span></p>
+<p>While we have used the specific case of simple repression with 
+induction to craft this model, the same mathematics describe the case of
+ corepression in which binding of an allosteric effector stabilizes the 
+active state of the repressor and decreases gene expression (see Fig. <a href="#fig:inducible_types">1</a>). Interestingly, we shift from induction (governed by <span class="math inline"><em>K</em><sub><em>I</em></sub> &lt; <em>K</em><sub><em>A</em></sub></span>) to corepression (<span class="math inline"><em>K</em><sub><em>I</em></sub> &gt; <em>K</em><sub><em>A</em></sub></span>)
+ as the ligand transitions from preferentially binding to the inactive 
+repressor state to stabilizing the active state. Furthermore, this 
+general approach can be used to describe a variety of other motifs such 
+as activation, multiple repressor binding sites, and combinations of 
+activator and repressor binding sites <span class="citation" data-cites="bintu2005a brewster2014 weinert2014">(Bintu, Buchler, Garcia, Gerland, Hwa, Kondev, Kuhlman, et al. <a href="#ref-bintu2005a" role="doc-biblioref">2005</a>; Brewster et al. <a href="#ref-brewster2014" role="doc-biblioref">2014</a>; Weinert et al. <a href="#ref-weinert2014" role="doc-biblioref">2014</a>)</span>.</p>
+<p>The formula presented in Eq. <a href="#eq:fold_change_full">5</a> 
+enables us to make precise quantitative statements about induction 
+profiles. Motivated by the broad range of predictions implied by Eq. <a href="#eq:fold_change_full">5</a>, we designed a series of experiments using the <em>lac</em> system in <em>E. coli</em> to tune the control parameters for a simple repression genetic circuit. As discussed in Fig. <a href="#fig:inducible_types">1</a>
+ (C), previous studies from our lab have provided well-characterized 
+values for many of the parameters in our experimental system, leaving 
+only the values of the the MWC parameters (<span class="math inline"><em>K</em><sub><em>A</em></sub></span>, <span class="math inline"><em>K</em><sub><em>I</em></sub></span>, and <span class="math inline"><em>Δ</em><em>ε</em><sub><em>A</em><em>I</em></sub></span>) to be determined. We note that while previous studies have obtained values for <span class="math inline"><em>K</em><sub><em>A</em></sub></span>, <span class="math inline"><em>K</em><sub><em>I</em></sub></span>, and <span class="math inline"><em>L</em> = <em>e</em><sup> − <em>β</em><em>Δ</em><em>ε</em><sub><em>A</em><em>I</em></sub></sup></span> <span class="citation" data-cites="ogorman1980 daber2011a">(O’Gorman et al. <a href="#ref-ogorman1980" role="doc-biblioref">1980</a>; Daber, Sochor, and Lewis <a href="#ref-daber2011a" role="doc-biblioref">2011</a>)</span>, they were either based upon biochemical experiments or <em>in vivo</em>
+ conditions involving poorly characterized transcription factor copy 
+numbers and gene copy numbers. These differences relative to our 
+experimental conditions and fitting techniques led us to believe that it
+ was important to perform our own analysis of these parameters. After 
+inferring these three MWC parameters (see , Section “” for details 
+regarding the inference of <span class="math inline"><em>Δ</em><em>ε</em><sub><em>A</em><em>I</em></sub></span>, which was fitted separately from <span class="math inline"><em>K</em><sub><em>A</em></sub></span> and <span class="math inline"><em>K</em><sub><em>I</em></sub></span>),
+ we were able to predict the input/output response of the system under a
+ broad range of experimental conditions. For example, this framework can
+ predict the response of the system at different repressor copy numbers <span class="math inline"><em>R</em></span>, repressor-operator affinities <span class="math inline"><em>Δ</em><em>ε</em><sub><em>R</em><em>A</em></sub></span>, inducer concentrations <span class="math inline"><em>c</em></span>, and gene copy numbers (see Chapter 7.2).</p>
+<h2 id="results"><a href="#results" class="title-anchor-link">#</a> Results</h2>
+<h3 id="experimental-design"><a href="#experimental-design" class="title-anchor-link">#</a> Experimental Design</h3>
+<p>We test our model by predicting the induction profiles for an array 
+of strains that could be made using previously characterized repressor 
+copy numbers and DNA binding energies. Our approach contrasts with 
+previous studies that have parameterized induction curves of simple 
+repression motifs, as these have relied on expression systems where 
+proteins are expressed from plasmids, resulting in highly variable and 
+unconstrained copy numbers <span class="citation" data-cites="murphy2007 murphy2010 daber2009a daber2011a sochor2014">(Murphy, Balázsi, and Collins <a href="#ref-murphy2007" role="doc-biblioref">2007</a>; <span class="citeproc-not-found" data-reference-id="murphy2010"><strong>???</strong></span>; Daber, Sharp, and Lewis <a href="#ref-daber2009a" role="doc-biblioref">2009</a>; Daber, Sochor, and Lewis <a href="#ref-daber2011a" role="doc-biblioref">2011</a>; Sochor <a href="#ref-sochor2014" role="doc-biblioref">2014</a>)</span>. Instead, our approach relies on a foundation of previous work as depicted in Fig. ??<em>types (C). This includes work from our laboratory that used </em>E. coli* constructs based on components of the <em>lac</em> system to demonstrate how the Lac repressor (LacI) copy number <span class="math inline"><em>R</em></span> and operator binding energy $$ affect gene expression in the absence of inducer <span class="citation" data-cites="garcia2011">(Garcia et al. <a href="#ref-garcia2011" role="doc-biblioref">2011</a><a href="#ref-garcia2011" role="doc-biblioref">a</a>)</span>. <span class="citation" data-cites="rydenfelt2014b">Rydenfelt et al. (<a href="#ref-rydenfelt2014b" role="doc-biblioref">2014</a>)</span>
+ extended the theory used in that work to the case of multiple promoters
+ competing for a given transcription factor, which was validated 
+experimentally by <span class="citation" data-cites="brewster2014">Brewster et al. (<a href="#ref-brewster2014" role="doc-biblioref">2014</a>)</span>,
+ who modified this system to consider expression from multiple-copy 
+plasmids as well as the presence of competing repressor binding sites.</p>
+<p>The present study extends this body of work by introducing three additional biophysical parameters – <span class="math inline"><em>Δ</em><em>ε</em><sub><em>A</em><em>I</em></sub></span>, <span class="math inline"><em>K</em><sub><em>A</em></sub></span>, and <span class="math inline"><em>K</em><sub><em>I</em></sub></span> – which capture the allosteric nature of the transcription factor and complement the results shown by <span class="citation" data-cites="garcia2011">Garcia et al. (<a href="#ref-garcia2011" role="doc-biblioref">2011</a><a href="#ref-garcia2011" role="doc-biblioref">a</a>)</span> and <span class="citation" data-cites="brewster2014">Brewster et al. (<a href="#ref-brewster2014" role="doc-biblioref">2014</a>)</span>.
+ Although the current work focuses on systems with a single site of 
+repression, in the Materials and Methods, we utilize data from <span class="citation" data-cites="brewster2014">Brewster et al. (<a href="#ref-brewster2014" role="doc-biblioref">2014</a>)</span>, in which multiple sites of repression are explored, to characterize the allosteric free energy difference <span class="math inline"><em>Δ</em><em>ε</em><sub><em>A</em><em>I</em></sub></span>
+ between the repressor’s active and inactive states. This additional 
+data set is critical because multiple degenerate sets of parameters can 
+characterize an induction curve equally well, with the <span class="math inline"><em>Δ</em><em>ε</em><sub><em>A</em><em>I</em></sub></span> parameter compensated by the inducer dissociation constants <span class="math inline"><em>K</em><sub><em>A</em></sub></span> and <span class="math inline"><em>K</em><sub><em>I</em></sub></span> (see Chapter 7, Supplementary Information). After fixing <span class="math inline"><em>Δ</em><em>ε</em><sub><em>A</em><em>I</em></sub></span>
+ as described in the Materials and Methods, we can use data from 
+single-site simple repression systems to determine the values of <span class="math inline"><em>K</em><sub><em>A</em></sub></span> and <span class="math inline"><em>K</em><sub><em>I</em></sub></span>.</p>
+<p>We determine the values of <span class="math inline"><em>K</em><sub><em>A</em></sub></span> and <span class="math inline"><em>K</em><sub><em>I</em></sub></span> by fitting to a single induction profile using Bayesian inferential methods <span class="citation" data-cites="sivia2006">(Sivia and Skilling <a href="#ref-sivia2006" role="doc-biblioref">2006</a>)</span>. We then use Eq. ??<em>full
+ to predict gene expression for any concentration of inducer, repressor 
+copy number, and DNA binding energy and compare these predictions 
+against experimental measurements. To obtain induction profiles for a 
+set of strains with varying repressor copy numbers, we used modified </em>lacI<em> ribosomal binding sites from <span class="citation" data-cites="garcia2011">Garcia et al. (<a href="#ref-garcia2011" role="doc-biblioref">2011</a><a href="#ref-garcia2011" role="doc-biblioref">a</a>)</span> to generate strains with mean repressor copy number per cell of <span class="math inline"><em>R</em> = 22 ± 4</span>, <span class="math inline">60 ± 20</span>, <span class="math inline">124 ± 30</span>, <span class="math inline">260 ± 40</span>, <span class="math inline">1220 ± 160</span>, and <span class="math inline">1740 ± 340</span>, where the error denotes standard deviation of at least three replicates as measured by <span class="citation" data-cites="garcia2011">Garcia et al. (<a href="#ref-garcia2011" role="doc-biblioref">2011</a><a href="#ref-garcia2011" role="doc-biblioref">a</a>)</span>. We note that <span class="math inline"><em>R</em></span> refers to the number of repressor dimers in the cell, which is twice the number of repressor tetramers reported by <span class="citation" data-cites="garcia2011">Garcia et al. (<a href="#ref-garcia2011" role="doc-biblioref">2011</a><a href="#ref-garcia2011" role="doc-biblioref">a</a>)</span>;
+ since both heads of the repressor are assumed to always be either 
+specifically or non-specifically bound to the genome, the two repressor 
+dimers in each LacI tetramer can be considered independently. Gene 
+expression was measured using a Yellow Fluorescent Protein (YFP) gene, 
+driven by a </em>lacUV5* promoter. Each of the six repressor copy number variants were paired with the native O1, O2, or O3 <em>lac</em> operator <span class="citation" data-cites="oehler1994">(Oehler et al. <a href="#ref-oehler1994" role="doc-biblioref">1994</a>)</span>
+ placed at the YFP transcription start site, thereby generating eighteen
+ unique strains. The repressor-operator binding energies (O1 $ = -15.3 
+~k<em>BT$, O2 <span class="math inline"><em>Δ</em><em>ε</em> * <em>R</em><em>A</em> =  − 13.9&nbsp;<em>k</em> * <em>B</em><em>T</em> ± 0.2</span>, and O3 <span class="math inline"><em>Δ</em><em>ε</em> * <em>R</em><em>A</em> =  − 9.7 ± 0.1&nbsp;<em>k</em> * <em>B</em><em>T</em></span>) were previously inferred by measuring the fold-change of the </em>lac* system at different repressor copy numbers, where the error arises from model fitting <span class="citation" data-cites="garcia2011">(Garcia et al. <a href="#ref-garcia2011" role="doc-biblioref">2011</a><a href="#ref-garcia2011" role="doc-biblioref">a</a>)</span>. Additionally, we were able to obtain the value <span class="math inline"><em>Δ</em><em>ε</em> * <em>A</em><em>I</em> = 4.5 <em>k</em> * <em>B</em><em>T</em></span>
+ by fitting to previous data as discussed in the Materials and Methods. 
+We measure fold-change over a range of known IPTG concentrations <span class="math inline"><em>c</em></span>, using <span class="math inline"><em>n</em> = 2</span>
+ inducer binding sites per LacI dimer and approximating the number of 
+non-specific binding sites as the length in base-pairs of the <em>E. coli</em> genome, $N*{NS} = 4.6 ^6$.</p>
+<p>Our experimental pipeline for determining fold-change using flow cytometry is shown in Fig. <a href="#fig:flowchart">3</a>. Briefly, cells were grown to exponential phase, in which gene expression reaches steady state <span class="citation" data-cites="scott2010">(<span class="citeproc-not-found" data-reference-id="scott2010"><strong>???</strong></span>)</span>, under concentrations of the inducer IPTG ranging between 0 and <span class="math inline">5000 <em>μ</em></span>M.
+ We measure YFP fluorescence using flow cytometry and automatically gate
+ the data to include only single-cell measurements (see Materials and 
+Methods). To validate the use of flow cytometry, we also measured the 
+fold-change of a subset of strains using the established method of 
+single-cell microscopy (see Supplemental Information, Chapter 7). We 
+found that the fold-change measurements obtained from microscopy were 
+indistinguishable from that of flow-cytometry and yielded values for the
+ inducer binding constants <span class="math inline"><em>K</em><sub><em>A</em></sub></span> and <span class="math inline"><em>K</em><sub><em>I</em></sub></span> that were within error.</p>
+<div id="fig:flowchart" class="fignos">
+<figure>
+<img src="Chapter%202_files/ch2_fig4.html" data-short-caption="An experimental pipeline for high-throughput fold-change measurements." alt=""><figcaption><span>Figure 3:</span>
+ An experimental pipeline for high-throughput fold-change measurements. 
+Cells are grown to exponential steady state and their fluorescence is 
+measured using flow cytometry. Automatic gating methods using forward- 
+and side-scattering are used to ensure that all measurements come from 
+single cells (see Methods). Mean expression is then quantified at 
+different IPTG concentrations (top, blue histograms) and for a strain 
+without repressor (bottom, green histograms), which shows no response to
+ IPTG as expected. Fold-change is computed by dividing the mean 
+fluorescence in the presence of repressor by the mean fluorescence in 
+the absence of repressor.</figcaption>
+</figure>
+</div>
+<h2 id="determination-of-the-in-vivo-mwc-parameters"><a href="#determination-of-the-in-vivo-mwc-parameters" class="title-anchor-link">#</a> Determination of the <em>in vivo</em> MWC Parameters</h2>
+<p>The three parameters that we tune experimentally are shown in , leaving the three allosteric parameters (<span class="math inline"><em>Δ</em><em>ε</em><sub><em>A</em><em>I</em></sub></span>, <span class="math inline"><em>K</em><sub><em>A</em></sub></span>, and <span class="math inline"><em>K</em><sub><em>I</em></sub></span>) to be determined by fitting. We used previous LacI fold-change data to infer that <span class="math inline"><em>Δ</em><em>ε</em><sub><em>A</em><em>I</em></sub> = 4.5&nbsp;<em>k</em><sub><em>B</em></sub><em>T</em></span> (see , Section “”). Rather than fitting <span class="math inline"><em>K</em><sub><em>A</em></sub></span> and <span class="math inline"><em>K</em><sub><em>I</em></sub></span>
+ to our entire data set of eighteen unique constructs, we performed 
+Bayesian parameter estimation on data from a single strain with <span class="math inline"><em>R</em> = 260</span> and an O2 operator (<span class="math inline"><em>Δ</em><em>ε</em><sub><em>R</em><em>A</em></sub> =  − 13.9&nbsp;<em>k</em><sub><em>B</em></sub><em>T</em></span> ) shown in (white circles). Using Markov Chain Monte Carlo, we determine the most likely parameter values to be <span class="math inline"><em>K</em><sub><em>A</em></sub> = 139<sub> − 22</sub><sup> + 29</sup> × 10<sup> − 6</sup> M</span> and <span class="math inline"><em>K</em><sub><em>I</em></sub> = 0.53<sub> − 0.04</sub><sup> + 0.04</sup> × 10<sup> − 6</sup> M</span>,
+ which are the modes of their respective distributions, where the 
+superscripts and subscripts represent the upper and lower bounds of the <span class="math inline">95<sup>th</sup></span>
+ percentile of the parameter value distributions (see ). Unfortunately, 
+we are not able to make a meaningful value-for-value comparison of our 
+parameters to those of earlier studies because of uncertainties in both 
+gene copy number and transcription factor copy numbers in these studies,
+ as illustrated by the plots in Appendix <a href="#AppendixFugacity">[AppendixFugacity]</a>.
+ We then predicted the fold-change for the remaining seventeen strains 
+with no further fitting (see -) together with the specific phenotypic 
+properties described in and discussed in detail below (see -). The 
+shaded regions in - denote the 95% credible regions. Factors determining
+ the width of the credible regions are explored in Appendix <a href="#AppendixSensitivity">[AppendixSensitivity]</a>.</p>
+<p>We stress that the entire suite of predictions in is based upon the 
+induction profile of a single strain. Our ability to make such a broad 
+range of predictions stems from the fact that our parameters of interest</p>
+<ul>
+<li>such as the repressor copy number and DNA binding energy - appear as
+ distinct physical parameters within our model. While the single data 
+set in could also be fit using a Hill function, such an analysis would 
+be unable to predict any of the other curves in the figure (see , 
+Section “”). Phenomenological expressions such as the Hill function can 
+describe data, but lack predictive power and are thus unable to build 
+our intuition, help us design <em>de novo</em> input-output functions, or guide future experiments .</li>
+</ul>
+<figure>
+<img src="Chapter%202_files/ch2_fig5.html" data-short-caption="Predicting induction profiles for different biological control parameters." alt=""><figcaption><strong>Predicting induction profiles for different biological control parameters.</strong> We can quantitatively tune <span class="math inline"><em>R</em></span> via ribosomal binding site (RBS) modifications, <span class="math inline"><em>Δ</em><em>ε</em><sub><em>R</em><em>A</em></sub></span> by mutating the operator sequence, and <span class="math inline"><em>c</em></span> by adding different amounts of IPTG to the growth medium. Previous experiments have characterized the <span class="math inline"><em>R</em></span>, <span class="math inline"><em>N</em><sub><em>N</em><em>S</em></sub></span>, <span class="math inline"><em>Δ</em><em>ε</em><sub><em>R</em><em>A</em></sub></span>, and <span class="math inline"><em>Δ</em><em>ε</em><sub><em>A</em><em>I</em></sub></span> parameters (see ), leaving only the unknown dissociation constants <span class="math inline"><em>K</em><sub><em>A</em></sub></span> and <span class="math inline"><em>K</em><sub><em>I</em></sub></span>
+ between the inducer and the repressor in the active and inactive 
+states, respectively. These two parameters can be inferred using 
+Bayesian parameter estimation from a single induction curve. Predicted 
+IPTG titration curves for different repressor copy numbers and operator 
+strengths. Titration data for the O2 strain (white circles in Panel ) 
+with <span class="math inline"><em>R</em> = 260</span>, <span class="math inline"><em>Δ</em><em>ε</em><sub><em>R</em><em>A</em></sub> =  − 13.9&nbsp;<em>k</em><sub><em>B</em></sub><em>T</em></span>, <span class="math inline"><em>n</em> = 2</span>, and <span class="math inline"><em>Δ</em><em>ε</em><sub><em>A</em><em>I</em></sub> = 4.5&nbsp;<em>k</em><sub><em>B</em></sub><em>T</em></span> can be used to determine the thermodynamic parameters <span class="math inline"><em>K</em><sub><em>A</em></sub> = 139<sub> − 22</sub><sup> + 29</sup> × 10<sup> − 6</sup>, M</span> and <span class="math inline"><em>K</em><sub><em>I</em></sub> = 0.53<sub> − 0.04</sub><sup> + 0.04</sup> × 10<sup> − 6</sup>, M</span>
+ (orange line). The remaining solid lines predict the fold-change for 
+all other combinations of repressor copy numbers (shown in the legend) 
+and repressor-DNA binding energies corresponding to the O1 operator (<span class="math inline"> − 15.3&nbsp;<em>k</em><sub><em>B</em></sub><em>T</em></span>), O2 operator (<span class="math inline"> − 13.9&nbsp;<em>k</em><sub><em>B</em></sub><em>T</em></span>), and O3 operator (<span class="math inline"> − 9.7&nbsp;<em>k</em><sub><em>B</em></sub><em>T</em></span>).
+ Error bars of experimental data show the standard error of the mean 
+(eight or more replicates) when this error is not smaller than the 
+diameter of the data point. The shaded regions denote the 95% credible 
+region, although the credible region is obscured when it is thinner than
+ the curve itself. To display the measured fold-change in the absence of
+ inducer, we alter the scaling of the <span class="math inline"><em>x</em></span>-axis between <span class="math inline">0</span> and <span class="math inline">10<sup> − 7</sup></span>
+ M to linear rather than logarithmic, as indicated by a dashed line. 
+Additionally, our model allows us to investigate key phenotypic 
+properties of the induction profiles (see ). Specifically, we show 
+predictions for the leakiness, saturation, dynamic range, <span class="math inline">[<em>E</em><em>C</em><sub>50</sub>]</span>, and effective Hill coefficient of the induction profiles.</figcaption>
+</figure>
+<h2 id="comparison-of-experimental-measurements-with-theoretical-predictions"><a href="#comparison-of-experimental-measurements-with-theoretical-predictions" class="title-anchor-link">#</a> Comparison of Experimental Measurements with Theoretical Predictions</h2>
+<p>We tested the predictions shown in by measuring fold-change induction
+ profiles in strains with a broad range of repressor copy numbers and 
+repressor binding energies as characterized in . With a few notable 
+exceptions, the results shown in demonstrate agreement between theory 
+and experiment. We note that there was an apparently systematic shift in
+ the O3 <span class="math inline"><em>Δ</em><em>ε</em><sub><em>R</em><em>A</em></sub> =  − 9.7&nbsp;<em>k</em><sub><em>B</em></sub><em>T</em></span> strains () and all of the <span class="math inline"><em>R</em> = 1220</span> and <span class="math inline"><em>R</em> = 1740</span> strains. This may be partially due to imprecise previous determinations of their <span class="math inline"><em>Δ</em><em>ε</em><sub><em>R</em><em>A</em></sub></span> and <span class="math inline"><em>R</em></span> values. By performing a global fit where we infer all parameters including the repressor copy number <span class="math inline"><em>R</em></span> and the binding energy <span class="math inline"><em>Δ</em><em>ε</em><sub><em>R</em><em>A</em></sub></span>,
+ we found better agreement for these strains, although a discrepancy in 
+the steepness of the response for all O3 strains remains (see , Section 
+“”). We considered a number of hypotheses to explain these discrepancies
+ such as including other states (e.g.&nbsp;non-negligible binding of the
+ inactive repressor), relaxing the weak promoter approximation, and 
+accounting for variations in gene and repressor copy number throughout 
+the cell cycle, but none explained the observed discrepancies. As an 
+additional test of our model, we considered strains using the synthetic 
+Oid operator which exhibits an especially strong binding energy of <span class="math inline"><em>Δ</em><em>ε</em><sub><em>R</em><em>A</em></sub> =  − 17&nbsp;<em>k</em><sub><em>B</em></sub><em>T</em></span>. The global fit agrees well with the Oid microscopy data, though it asserts a stronger Oid binding energy of <span class="math inline"><em>Δ</em><em>ε</em><sub><em>R</em><em>A</em></sub> =  − 17.7&nbsp;<em>k</em><sub><em>B</em></sub><em>T</em></span> (see Supplemental Chapter 7).</p>
+<p>To ensure that the agreement between our predictions and data is not 
+an accident of the strain we used to perform our fitting, we also 
+inferred <span class="math inline"><em>K</em><sub><em>A</em></sub></span> and <span class="math inline"><em>K</em><sub><em>I</em></sub></span> from each of the other strains. As shown in , Section “” and , the inferred values of <span class="math inline"><em>K</em><sub><em>A</em></sub></span> and <span class="math inline"><em>K</em><sub><em>I</em></sub></span>
+ depend minimally upon which strain is chosen, indicating that these 
+parameter values are highly robust. We also performed a global fit using
+ the data from all eighteen strains in which we fitted for the inducer 
+dissociation constants <span class="math inline"><em>K</em><sub><em>A</em></sub></span> and <span class="math inline"><em>K</em><sub><em>I</em></sub></span>, the repressor copy number <span class="math inline"><em>R</em></span>, and the repressor DNA binding energy <span class="math inline"><em>Δ</em><em>ε</em><sub><em>R</em><em>A</em></sub></span>
+ (see Materials &amp; Methods). The resulting parameter values were 
+nearly identical to those fitted from any single strain. For the 
+remainder of the text we continue using parameters fitted from the 
+strain with <span class="math inline"><em>R</em> = 260</span> repressors and an O2 operator.</p>
+<figure>
+<img src="Chapter%202_files/ch2_fig5.html" data-short-caption="Comparison of predictions against measured and inferred data." alt=""><figcaption><strong>Comparison of predictions against measured and inferred data.</strong>
+ Flow cytometry measurements of fold-change over a range of IPTG 
+concentrations for O1, O2, and O3 strains at varying repressor copy 
+numbers, overlaid on the predicted responses. Error bars for the 
+experimental data show the standard error of the mean (eight or more 
+replicates). As discussed in , all of the predicted induction curves 
+were generated prior to measurement by inferring the MWC parameters 
+using a single data set (O2 <span class="math inline"><em>R</em> = 260</span>,
+ shown by white circles in Panel ). The predictions may therefore depend
+ upon which strain is used to infer the parameters. The inferred 
+parameter values of the dissociation constants <span class="math inline"><em>K</em><sub><em>A</em></sub></span> and <span class="math inline"><em>K</em><sub><em>I</em></sub></span> using any of the eighteen strains instead of the O2 <span class="math inline"><em>R</em> = 260</span>
+ strain. Nearly identical parameter values are inferred from each 
+strain, demonstrating that the same set of induction profiles would have
+ been predicted regardless of which strain was chosen. The points show 
+the mode, and the error bars denote the <span class="math inline">95</span> credible region of the parameter value distribution. Error bars not visible are smaller than the size of the marker.</figcaption>
+</figure>
+<h2 id="predicting-the-phenotypic-traits-of-the-induction-response"><a href="#predicting-the-phenotypic-traits-of-the-induction-response" class="title-anchor-link">#</a> Predicting the Phenotypic Traits of the Induction Response</h2>
+<p>A subset of the properties shown in (i.e.&nbsp;the leakiness, saturation, dynamic range, <span class="math inline">[<em>E</em><em>C</em><sub>50</sub>]</span>,
+ and effective Hill coefficient) are of significant interest to 
+synthetic biology. For example, synthetic biology is often focused on 
+generating large responses (i.e.&nbsp;a large dynamic range) or finding a
+ strong binding partner (i.e.&nbsp;a small <span class="math inline">[<em>E</em><em>C</em><sub>50</sub>]</span>)
+ . While these properties are all individually informative, when taken 
+together they capture the essential features of the induction response. 
+We reiterate that a Hill function approach cannot predict these features
+ <em>a priori</em> and furthermore requires fitting each curve 
+individually. The MWC model, on the other hand, enables us to quantify 
+how each trait depends upon a single set of physical parameters as shown
+ by -.</p>
+<p>We define these five phenotypic traits using expressions derived from
+ the model, . These results build upon extensive work by , who computed 
+many such properties for ligand-receptor binding within the MWC model. 
+We begin by analyzing the leakiness, which is the minimum fold-change 
+observed in the absence of ligand, given by</p>
+[
+<p>]</p>
+<p>and the saturation, which is the maximum fold change observed in the presence of saturating ligand,</p>
+[
+<p>]</p>
+<p>Systems that minimize leakiness repress strongly in the absence of 
+effector while systems that maximize saturation have high expression in 
+the presence of effector. Together, these two properties determine the 
+dynamic range of a system’s response, which is given by the difference [
+  =  - .] These three properties are shown in -. We discuss these 
+properties in greater detail in , Section “”. - shows that the 
+measurements of these three properties, derived from the fold-change 
+data in the absence of IPTG and the presence of saturating IPTG, closely
+ match the predictions for all three operators.</p>
+<figure>
+<embed src="Chapter%202_files/fig6.html"><figcaption><strong>Predictions and experimental measurements of key properties of induction profiles.</strong>
+ Data for the leakiness, saturation, and dynamic range are obtained from
+ fold-change measurements in in the absence of IPTG and at saturating 
+concentrations of IPTG. The three repressor-operator binding energies in
+ the legend correspond to the O1 operator (<span class="math inline"> − 15.3&nbsp;<em>k</em><sub><em>B</em></sub><em>T</em></span>), O2 operator (<span class="math inline"> − 13.9&nbsp;<em>k</em><sub><em>B</em></sub><em>T</em></span>), and O3 operator (<span class="math inline"> − 9.7&nbsp;<em>k</em><sub><em>B</em></sub><em>T</em></span>). Both the <span class="math inline">[<em>E</em><em>C</em><sub>50</sub>]</span>
+ and effective Hill coefficient are inferred by individually fitting 
+each operator-repressor pairing in - separately to in order to smoothly 
+interpolate between the data points. Error bars for - represent the 
+standard error of the mean for eight or more replicates; error bars for -
+ represent the 95% credible region for the parameter found by 
+propagating the credible region of our estimates of <span class="math inline"><em>K</em><sub><em>A</em></sub></span> and <span class="math inline"><em>K</em><sub><em>I</em></sub></span> into .</figcaption>
+</figure>
+<p><span id="fig_properties_data" label="fig_properties_data">[fig_properties_data]</span></p>
+<p>Two additional properties of induction profiles are the <span class="math inline">[<em>E</em><em>C</em><sub>50</sub>]</span>
+ and effective Hill coefficient, which determine the range of inducer 
+concentration in which the system’s output goes from its minimum to 
+maximum value. The <span class="math inline">[<em>E</em><em>C</em><sub>50</sub>]</span>
+ denotes the inducer concentration required to generate a system 
+response halfway between its minimum and maximum value, [ (c = 
+[EC_{50}]) = .] The effective Hill coefficient <span class="math inline"><em>h</em></span>, which quantifies the steepness of the curve at the <span class="math inline">[<em>E</em><em>C</em><sub>50</sub>]</span> , is given by [ h = ( 2  )_{c = [EC_{50}]}.]</p>
+<ul>
+<li>shows how the <span class="math inline">[<em>E</em><em>C</em><sub>50</sub>]</span>
+ and effective Hill coefficient depend on the repressor copy number. In ,
+ Section “”, we discuss the analytic forms of these two properties as 
+well as their dependence on the repressor-DNA binding energy.</li>
+</ul>
+<p>- shows the estimated values of the <span class="math inline">[<em>E</em><em>C</em><sub>50</sub>]</span>
+ and the effective Hill coefficient overlaid on the theoretical 
+predictions. Both properties were obtained by fitting to each individual
+ titration curve and computing the <span class="math inline">[<em>E</em><em>C</em><sub>50</sub>]</span>
+ and effective Hill coefficient using and , respectively. We find that 
+the predictions made with the single strain fit closely match those made
+ for each of the strains with O1 and O2 operators, but the predictions 
+for the O3 operator are markedly off. In the , Section “”, we show that 
+the large, asymmetric error bars for the O3 <span class="math inline"><em>R</em> = 22</span>
+ strain arise from its nearly flat response, where the lack of dynamic 
+range makes it impossible to determine the value of the inducer 
+dissociation constants <span class="math inline"><em>K</em><sub><em>A</em></sub></span> and <span class="math inline"><em>K</em><sub><em>I</em></sub></span>, as can be seen in the uncertainty of both the <span class="math inline">[<em>E</em><em>C</em><sub>50</sub>]</span>
+ and effective Hill coefficient. Discrepancies between theory and data 
+for O3 are improved, but not fully resolved, by performing a global fit 
+or fitting the MWC model individually to each curve (see , Sections “” 
+and “”). It remains an open question how to account for discrepancies in
+ O3, in particular regarding the significant mismatch between the 
+predicted and fitted effective Hill coefficients.</p>
+<h2 id="data-collapse-of-induction-profiles"><a href="#data-collapse-of-induction-profiles" class="title-anchor-link">#</a> Data Collapse of Induction Profiles</h2>
+<p>Our primary interest heretofore was to determine the system response 
+at a specific inducer concentration, repressor copy number, and 
+repressor-DNA binding energy. However, the cell does not necessarily 
+“care about” the precise number of repressors in the system or the 
+binding energy of an individual operator. The relevant quantity for 
+cellular function is the fold-change enacted by the regulatory system. 
+This raises the question: given a specific value of the fold-change, 
+what combination of parameters will give rise to this desired response? 
+In other words, what trade-offs between the parameters of the system 
+will give rise to the same mean cellular output? These are key questions
+ both for understanding how the system is governed and for engineering 
+specific responses in a synthetic biology context. To address these 
+questions, we follow the data collapse strategy used in a number of 
+previous studies , and rewrite as a Fermi function, [ = ,] where <span class="math inline"><em>F</em>(<em>c</em>)</span> is the free energy of the repressor binding to the operator of interest relative to the unbound operator state in <span class="math inline"><em>k</em><sub><em>B</em></sub><em>T</em></span> units , which is given by [ F(c) =  -  - .] The first term in <span class="math inline"><em>F</em>(<em>c</em>)</span>
+ denotes the repressor-operator binding energy, the second the 
+contribution from the inducer concentration, and the last the effect of 
+the repressor copy number. We note that elsewhere, this free energy has 
+been dubbed the Bohr parameter since such families of curves are 
+analogous to the shifts in hemoglobin binding curves at different pHs 
+known as the Bohr effect .</p>
+<p>Instead of analyzing each induction curve individually, the free 
+energy provides a natural means to simultaneously characterize the 
+diversity in our eighteen induction profiles. demonstrates how the 
+various induction curves from - all collapse onto a single master curve,
+ where points from every induction profile that yield the same 
+fold-change are mapped onto the same free energy. shows this data 
+collapse for the 216 data points in -, demonstrating the close match 
+between the theoretical predictions and experimental measurements across
+ all eighteen strains.</p>
+<p>There are many different combinations of parameter values that can 
+result in the same free energy as defined in . For example, suppose a 
+system originally has a fold-change of 0.2 at a specific inducer 
+concentration, and then operator mutations increase the <span class="math inline"><em>Δ</em><em>ε</em><sub><em>R</em><em>A</em></sub></span>
+ binding energy . While this serves to initially increase both the free 
+energy and the fold-change, a subsequent increase in the repressor copy 
+number could bring the cell back to the original fold-change level. Such
+ trade-offs hint that there need not be a single set of parameters that 
+evoke a specific cellular response, but rather that the cell explores a 
+large but degenerate space of parameters with multiple, equally valid 
+paths.</p>
+<figure>
+<embed src="Chapter%202_files/fig7.html"><figcaption><strong>Fold-change data from a broad collection of different strains collapse onto a single master curve.</strong>
+ Any combination of parameters can be mapped to a single physiological 
+response (i.e.&nbsp;fold-change) via the free energy, which encompasses 
+the parametric details of the model. Experimental data from collapse 
+onto a single master curve as a function of the free energy . The free 
+energy for each strain was calculated from using <span class="math inline"><em>n</em> = 2</span>, <span class="math inline"><em>Δ</em><em>ε</em><sub><em>A</em><em>I</em></sub> = 4.5&nbsp;<em>k</em><sub><em>B</em></sub><em>T</em></span>, <span class="math inline"><em>K</em><sub><em>A</em></sub> = 139 × 10<sup> − 6</sup>, M</span>, <span class="math inline"><em>K</em><sub><em>I</em></sub> = 0.53 × 10<sup> − 6</sup>, M</span>, and the strain-specific <span class="math inline"><em>R</em></span> and <span class="math inline"><em>Δ</em><em>ε</em><sub><em>R</em><em>A</em></sub></span>. All data points represent the mean, and error bars are the standard error of the mean for eight or more replicates.</figcaption>
+</figure>
+<p><span id="fig_datacollapse" label="fig_datacollapse">[fig_datacollapse]</span></p>
+<h2 class="unnumbered" id="references"><a href="#references" class="title-anchor-link">#</a> References</h2>
+<div id="refs" class="references hanging-indent" role="doc-bibliography">
+<div id="ref-ackers1982">
+<p>Ackers, Gary K, and Alexander D Johnson. 1982. “Quantitative Model for Gene Regulation by A Phage Repressor.” <em>Proc. Natl. Acad. Sci. USA</em>, 5.</p>
+</div>
+<div id="ref-bintu2005a">
+<p>Bintu, Lacramioara, Nicolas E Buchler, Hernan G Garcia, Ulrich 
+Gerland, Terence Hwa, Jané Kondev, Thomas Kuhlman, and Rob Phillips. 
+2005. “Transcriptional Regulation by the Numbers: Applications.” <em>Current Opinion in Genetics &amp; Development</em> 15 (2): 125–35. <a href="https://doi.org/10.1016/j.gde.2005.02.006">https://doi.org/10.1016/j.gde.2005.02.006</a>.</p>
+</div>
+<div id="ref-bintu2005">
+<p>Bintu, Lacramioara, Nicolas E Buchler, Hernan G Garcia, Ulrich 
+Gerland, Terence Hwa, Jané Kondev, and Rob Phillips. 2005. 
+“Transcriptional Regulation by the Numbers: Models.” <em>Current Opinion in Genetics &amp; Development</em> 15 (2): 116–24. <a href="https://doi.org/10.1016/j.gde.2005.02.007">https://doi.org/10.1016/j.gde.2005.02.007</a>.</p>
+</div>
+<div id="ref-boedicker2013a">
+<p>Boedicker, James Q., Hernan G. Garcia, Stephanie Johnson, and Rob 
+Phillips. 2013. “DNA Sequence-Dependent Mechanics and Protein-Assisted 
+Bending in Repressor-Mediated Loop Formation.” <em>Physical Biology</em> 10 (6): 066005. <a href="https://doi.org/10.1088/1478-3975/10/6/066005">https://doi.org/10.1088/1478-3975/10/6/066005</a>.</p>
+</div>
+<div id="ref-boedicker2013">
+<p>Boedicker, James Q., Hernan G. Garcia, and Rob Phillips. 2013. 
+“Theoretical and Experimental Dissection of DNA Loop-Mediated 
+Repression.” <em>Physical Review Letters</em> 110 (1): 018101. <a href="https://doi.org/10.1103/PhysRevLett.110.018101">https://doi.org/10.1103/PhysRevLett.110.018101</a>.</p>
+</div>
+<div id="ref-brewster2012">
+<p>Brewster, Robert C., Daniel L. Jones, and Rob Phillips. 2012. “Tuning
+ Promoter Strength Through RNA Polymerase Binding Site Design in 
+Escherichia Coli.” Edited by Erik van Nimwegen. <em>PLoS Computational Biology</em> 8 (12): e1002811. <a href="https://doi.org/10.1371/journal.pcbi.1002811">https://doi.org/10.1371/journal.pcbi.1002811</a>.</p>
+</div>
+<div id="ref-brewster2014">
+<p>Brewster, Robert C., Franz M. Weinert, Hernan G. Garcia, Dan Song, 
+Mattias Rydenfelt, and Rob Phillips. 2014. “The Transcription Factor 
+Titration Effect Dictates Level of Gene Expression.” <em>Cell</em> 156 (6): 1312–23. <a href="https://doi.org/10.1016/j.cell.2014.02.022">https://doi.org/10.1016/j.cell.2014.02.022</a>.</p>
+</div>
+<div id="ref-buchler2003">
+<p>Buchler, N. E., U. Gerland, and T. Hwa. 2003. “On Schemes of Combinatorial Transcription Logic.” <em>Proceedings of the National Academy of Sciences</em> 100 (9): 5136–41. <a href="https://doi.org/10.1073/pnas.0930314100">https://doi.org/10.1073/pnas.0930314100</a>.</p>
+</div>
+<div id="ref-daber2009a">
+<p>Daber, Robert, Kim Sharp, and Mitchell Lewis. 2009. “One Is Not Enough.” <em>Journal of Molecular Biology</em> 392 (5): 1133–44. <a href="https://doi.org/10.1016/j.jmb.2009.07.050">https://doi.org/10.1016/j.jmb.2009.07.050</a>.</p>
+</div>
+<div id="ref-daber2011a">
+<p>Daber, Robert, Matthew A. Sochor, and Mitchell Lewis. 2011. “Thermodynamic Analysis of Mutant Lac Repressors.” <em>Journal of Molecular Biology</em>, The Operon Model and its Impact on Modern Molecular Biology, 409 (1): 76–87. <a href="https://doi.org/10.1016/j.jmb.2011.03.057">https://doi.org/10.1016/j.jmb.2011.03.057</a>.</p>
+</div>
+<div id="ref-garcia2011b">
+<p>Garcia, Hernan G., Heun Jin Lee, James Q. Boedicker, and Rob 
+Phillips. 2011a. “Comparison and Calibration of Different Reporters for 
+Quantitative Analysis of Gene Expression.” <em>Biophysical Journal</em> 101 (3): 535–44. <a href="https://doi.org/10.1016/j.bpj.2011.06.026">https://doi.org/10.1016/j.bpj.2011.06.026</a>.</p>
+</div>
+<div id="ref-garcia2011">
+<p>Garcia, H. G., and R. Phillips. 2011b. “Quantitative Dissection of the Simple Repression Input-Output Function.” <em>Proceedings of the National Academy of Sciences</em> 108 (29): 12173–8. <a href="https://doi.org/10.1073/pnas.1015616108">https://doi.org/10.1073/pnas.1015616108</a>.</p>
+</div>
+<div id="ref-harman2001">
+<p>Harman, James G. 2001. “Allosteric Regulation of the cAMP Receptor Protein.” <em>Biochimica et Biophysica Acta (BBA) - Protein Structure and Molecular Enzymology</em> 1547 (1): 1–17. <a href="https://doi.org/10.1016/S0167-4838(01)00187-X">https://doi.org/10.1016/S0167-4838(01)00187-X</a>.</p>
+</div>
+<div id="ref-klumpp2008">
+<p>Klumpp, Stefan, and Terence Hwa. 2008. “Growth-Rate-Dependent Partitioning of RNA Polymerases in Bacteria.” <em>Proceedings of the National Academy of Sciences</em> 105 (51): 20245–50. <a href="https://doi.org/10.1073/pnas.0804953105">https://doi.org/10.1073/pnas.0804953105</a>.</p>
+</div>
+<div id="ref-kuhlman2007">
+<p>Kuhlman, T., Z. Zhang, M. H. Saier, and T. Hwa. 2007. “Combinatorial 
+Transcriptional Control of the Lactose Operon of Escherichia Coli.” <em>Proceedings of the National Academy of Sciences</em> 104 (14): 6043–8. <a href="https://doi.org/10.1073/pnas.0606717104">https://doi.org/10.1073/pnas.0606717104</a>.</p>
+</div>
+<div id="ref-lanfranco2017">
+<p>Lanfranco, Maria Fe, Fernanda Gárate, Ashton J. Engdahl, and Rodrigo 
+A. Maillard. 2017. “Asymmetric Configurations in a Reengineered 
+Homodimer Reveal Multiple Subunit Communication Pathways in Protein 
+Allostery.” <em>Journal of Biological Chemistry</em> 292 (15): 6086–93. <a href="https://doi.org/10.1074/jbc.M117.776047">https://doi.org/10.1074/jbc.M117.776047</a>.</p>
+</div>
+<div id="ref-lindsley2006a">
+<p>Lindsley, Janet E., and Jared Rutter. 2006. “Whence Cometh the Allosterome?” <em>Proceedings of the National Academy of Sciences</em> 103 (28): 10533–5. <a href="https://doi.org/10.1073/pnas.0604452103">https://doi.org/10.1073/pnas.0604452103</a>.</p>
+</div>
+<div id="ref-marzen2013">
+<p>Marzen, Sarah, Hernan G. Garcia, and Rob Phillips. 2013. “Statistical Mechanics of MonodWymanChangeux (MWC) Models.” <em>Journal of Molecular Biology</em>, Allosteric Interactions and Biological Regulation (Part I), 425 (9): 1433–60. <a href="https://doi.org/10.1016/j.jmb.2013.03.013">https://doi.org/10.1016/j.jmb.2013.03.013</a>.</p>
+</div>
+<div id="ref-monod1965">
+<p>Monod, Jacque, Jeffries Wyman, and Jean-Pierre Changeux. 1965. “On the Nature of Allosteric Transitions: A Plausible Model.” <em>Journal of Molecular Biology</em> 12 (1): 88–118. <a href="https://doi.org/10.1016/S0022-2836(65)80285-6">https://doi.org/10.1016/S0022-2836(65)80285-6</a>.</p>
+</div>
+<div id="ref-murphy2007">
+<p>Murphy, Kevin F., Gábor Balázsi, and James J. Collins. 2007. 
+“Combinatorial Promoter Design for Engineering Noisy Gene Expression.” <em>Proceedings of the National Academy of Sciences</em> 104 (31): 12726–31. <a href="https://doi.org/10.1073/pnas.0608451104">https://doi.org/10.1073/pnas.0608451104</a>.</p>
+</div>
+<div id="ref-oehler1994">
+<p>Oehler, S., M. Amouyal, P. Kolkhof, B. von Wilcken-Bergmann, and B. 
+Müller-Hill. 1994. “Quality and Position of the Three Lac Operators of 
+E. Coli Define Efficiency of Repression.” <em>The EMBO Journal</em> 13 (14): 3348–55.</p>
+</div>
+<div id="ref-ogorman1980">
+<p>O’Gorman, R. B., J. M. Rosenberg, O. B. Kallai, R. E. Dickerson, K. 
+Itakura, A. D. Riggs, and K. S. Matthews. 1980. “Equilibrium Binding of 
+Inducer to Lac Repressor Operator DNA Complex.” <em>Journal of Biological Chemistry</em> 255 (21): 10107–14.</p>
+</div>
+<div id="ref-phillips2015">
+<p>Phillips, Rob. 2015. “Napoleon Is in Equilibrium.” <em>Annual Review of Condensed Matter Physics</em> 6 (1): 85–111. <a href="https://doi.org/10.1146/annurev-conmatphys-031214-014558">https://doi.org/10.1146/annurev-conmatphys-031214-014558</a>.</p>
+</div>
+<div id="ref-poelwijk2011a">
+<p>Poelwijk, Frank J., Philip D. Heyning, Marjon GJ de Vos, Daniel J. 
+Kiviet, and Sander J. Tans. 2011. “Optimality and Evolution of 
+Transcriptionally Regulated Gene Expression.” <em>BMC Systems Biology</em> 5 (August): 128. <a href="https://doi.org/10.1186/1752-0509-5-128">https://doi.org/10.1186/1752-0509-5-128</a>.</p>
+</div>
+<div id="ref-rogers2015">
+<p>Rogers, Jameson K., Christopher D. Guzman, Noah D. Taylor, Srivatsan 
+Raman, Kelley Anderson, and George M. Church. 2015. “Synthetic 
+Biosensors for Precise Gene Control and Real-Time Monitoring of 
+Metabolites.” <em>Nucleic Acids Research</em> 43 (15): 7648–60. <a href="https://doi.org/10.1093/nar/gkv616">https://doi.org/10.1093/nar/gkv616</a>.</p>
+</div>
+<div id="ref-rohlhill2017">
+<p>Rohlhill, Julia, Nicholas R. Sandoval, and Eleftherios T. 
+Papoutsakis. 2017. “Sort-Seq Approach to Engineering a 
+Formaldehyde-Inducible Promoter for Dynamically Regulated Escherichia 
+Coli Growth on Methanol.” <em>ACS Synthetic Biology</em> 6 (8): 1584–95. <a href="https://doi.org/10.1021/acssynbio.7b00114">https://doi.org/10.1021/acssynbio.7b00114</a>.</p>
+</div>
+<div id="ref-rydenfelt2014b">
+<p>Rydenfelt, Mattias, Robert Sidney Cox, Hernan Garcia, and Rob 
+Phillips. 2014. “Statistical Mechanical Model of Coupled Transcription 
+from Multiple Promoters Due to Transcription Factor Titration.” <em>Physical Review E</em> 89 (1): 012702. <a href="https://doi.org/10.1103/PhysRevE.89.012702">https://doi.org/10.1103/PhysRevE.89.012702</a>.</p>
+</div>
+<div id="ref-setty2003">
+<p>Setty, Y., A. E. Mayo, M. G. Surette, and U. Alon. 2003. “Detailed Map of a Cis-Regulatory Input Function.” <em>Proceedings of the National Academy of Sciences</em> 100 (13): 7702–7. <a href="https://doi.org/10.1073/pnas.1230759100">https://doi.org/10.1073/pnas.1230759100</a>.</p>
+</div>
+<div id="ref-sivia2006">
+<p>Sivia, Devinderjit, and John Skilling. 2006. <em>Data Analysis: A Bayesian Tutorial</em>. OUP Oxford.</p>
+</div>
+<div id="ref-sochor2014">
+<p>Sochor, Matthew Almond. 2014. “In Vitro Transcription Accurately Predicts Lac Repressor Phenotype in Vivo in Escherichia Coli.” <em>PeerJ</em> 2 (July): e498. <a href="https://doi.org/10.7717/peerj.498">https://doi.org/10.7717/peerj.498</a>.</p>
+</div>
+<div id="ref-vilar2013">
+<p>Vilar, Jose M. G., and Leonor Saiz. 2013. “Reliable Prediction of 
+Complex Phenotypes from a Modular Design in Free Energy Space: An 
+Extensive Exploration of the Lac Operon.” <em>ACS Synthetic Biology</em> 2 (10): 576–86. <a href="https://doi.org/10.1021/sb400013w">https://doi.org/10.1021/sb400013w</a>.</p>
+</div>
+<div id="ref-vilar2003">
+<p>Vilar, José M. G., and Stanislas Leibler. 2003. “DNA Looping and Physical Constraints on Transcription Regulation.” <em>Journal of Molecular Biology</em> 331 (5): 981–89. <a href="https://doi.org/10.1016/S0022-2836(03)00764-2">https://doi.org/10.1016/S0022-2836(03)00764-2</a>.</p>
+</div>
+<div id="ref-weinert2014">
+<p>Weinert, Franz M., Robert C. Brewster, Mattias Rydenfelt, Rob 
+Phillips, and Willem K. Kegel. 2014. “Scaling of Gene Expression with 
+Transcription-Factor Fugacity.” <em>Physical Review Letters</em> 113 (25). <a href="https://doi.org/10.1103/PhysRevLett.113.258101">https://doi.org/10.1103/PhysRevLett.113.258101</a>.</p>
+</div>
+</div>
+						</div><!-- /.content -->
+					</div><!-- /.col -->
+					<div class="col-md-4 col-md-offset-1">
+						<div class="sections-list-wrapper">
+							<div class="sections-list js-sections js-affix js-scrollspy hidden-xs hidden-sm affix-top" style="width: 360px;"><span style="font-size: 14pt">Table of Contents</span><hr><ul class="level-2 nav"><li><a href="#introduction">Introduction</a></li><li class="has-submenu"><a href="#theoretical-model">Theoretical Model</a><ul class="level-3"><li><a href="#inducible-transcriptional-repression-via-the-mwc-model-of-allostery">Inducible Transcriptional Repression Via The MWC Model of Allostery</a></li></ul></li><li class="has-submenu"><a href="#results">Results</a><ul class="level-3"><li><a href="#experimental-design">Experimental Design</a></li></ul></li><li><a href="#determination-of-the-in-vivo-mwc-parameters">Determination of the in vivo MWC Parameters</a></li><li><a href="#comparison-of-experimental-measurements-with-theoretical-predictions">Comparison of Experimental Measurements with Theoretical Predictions</a></li><li><a href="#predicting-the-phenotypic-traits-of-the-induction-response">Predicting the Phenotypic Traits of the Induction Response</a></li><li><a href="#data-collapse-of-induction-profiles">Data Collapse of Induction Profiles</a></li><li><a href="#references">References</a></li></ul></div><!-- /.sections-list -->
+						</div>
+					</div><!-- /.col -->
+				</div><!-- /.row -->
+			</div><!-- /.container -->
+		</div><!-- /.section -->
+		
+		<div class="js-footer-area">
+			
+				<nav class="page-nav">	
+					<div class="container">
+						<div class="row">
+							<div class="col-xs-12">
+								
+									<a href="http://127.0.0.1:4000/chapter_02/chapter_01'" class="page-nav__item page-nav__item--prev">
+										<i class="icon icon--arrow-left"></i>
+										Chapter I
+									</a><!-- /.page-nav__item -->
+								
+								
+									<a href="http://127.0.0.1:4000/chapter_02/chapter_03" class="page-nav__item page-nav__item--next">
+										Chapter III
+										<i class="icon icon--arrow-right"></i>
+									</a><!-- /.page-nav__item -->
+								
+							</div><!-- /.col -->
+						</div><!-- /.row -->
+					</div><!-- /.container -->
+				</nav><!-- /.page-nav -->
+			
+			
+			
+	<footer class="site-footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-6">
+					
+						<a href="http://127.0.0.1:4000/" class="site-footer__logo">Griffin D. Chure | PhD Thesis</a>
+					
+					
+						<hr>
+						<p class="site-footer__copyright">Copyright © 2020. - Griffin D. Chure <br>All rights reserved.</p>
+					
+				</div><!-- /.col -->
+				
+					<div class="col-sm-6 align-right">
+						<ul class="social-list">
+							
+								<li>
+									<a href="https://twitter.com/gdchure" target="_blank" class="social-list__item social-list__item--twitter">
+										<i class="icon icon--twitter"></i>
+									</a>
+								</li>
+							
+						</ul><!-- /.social-list -->
+					</div><!-- /.col -->
+				
+			</div><!-- /.row -->
+		</div><!-- /.container -->
+	</footer><!-- /.site-footer -->
+
+
+<script src="Chapter%202_files/jquery.js"></script>
+<script type="text/javascript" src="Chapter%202_files/affix.js"></script>
+<script type="text/javascript" src="Chapter%202_files/scrollspy.js"></script>
+<script type="text/javascript" src="Chapter%202_files/matchHeight.js"></script>
+<script type="text/javascript" src="Chapter%202_files/scripts.js"></script>
+
+
+
+
+		</div><!-- /.js-footer-area -->
+	
+
+</body></html>

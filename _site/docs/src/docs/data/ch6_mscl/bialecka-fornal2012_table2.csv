@@ -1,0 +1,13 @@
+mean,error,method,medium,growth
+531,313,Western blotting,LB-Miller,exponential
+340,68,fluorescence microscopy,LB-Miller,exponential
+475,183,Western blotting,M9 + 0.5% glucose,exponential
+466,64,fluorescence microscopy,M9 + 0.5% glucose,exponential
+421,166,Western blotting,M9 + 0.5% glycerol,exponential
+709,57,fluorescence microscopy,M9 + 0.5% glycerol,exponential
+316,124,Western blotting,LB-Miller,Stationary
+472,95,fluorescence microscopy,LB-Miller,stationary
+732,231,Western blotting,M9 + 0.5% glucose,stationary
+746,150,fluorescence microscopy,M9 + 0.5% glucose,stationary
+482,131,Western blotting,M9 + 0.5% glycerol,stationary
+729,147,fluorescence microscopy,M9 + 0.5% glycerol,stationary

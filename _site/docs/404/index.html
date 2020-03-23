@@ -9,14 +9,20 @@
 
 <script type="text/x-mathjax-config">
 	MathJax.Hub.Config({
+    "HTML-CSS" : {
+        availableFonts : ["STIX"],
+        preferredFont : "Gyre Pagella",
+        webFont : "STIX-Web",
+        imageFont : null
+    },
 	  TeX: {
 		equationNumbers: {
 		  autoNumber: "AMS"
 		}
 	  },
 	  tex2jax: {
-		inlineMath: [ ['$','$']], 
-		displayMath: [ ['$$','$$'] ],
+		inlineMath: [['$','$']], 
+		displayMath: [['$$','$$']],
 		processEscapes: true,
 	  }
 	});
@@ -27,10 +33,10 @@
 	.eqnos-number { position: absolute; right: 0em; top: 50%; line-height: 0; }
   </style>
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <script id="MathJax-script" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+  
+
 <link rel="icon" href="https://gchure.github.io/phd/favicon.ico" type="image/x-icon">
-
-
 <link href="https://fonts.googleapis.com/css?family=Nanum+Myeongjo&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Alegreya|Lora&display=swap" rel="stylesheet">
 
