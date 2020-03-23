@@ -43,7 +43,6 @@ for op, ep in ops.items():
                                       ignore_index=True)
 
 # %%
-
 #Instantiate the figure canvas. 
 fig, ax = plt.subplots(2, 3, figsize=(6, 3.5), dpi=100)
 phd.viz.despine(ax.ravel())
@@ -89,13 +88,13 @@ for g, d in data[(data['repressors']>0) &
     leak_d = d[d['IPTG_uM'] == 0]
     ax[0,0].errorbar(2 * g[1], leak_d['fold_change_A'].mean(), leak_d['fold_change_A'].sem(),
         fmt='o', linestyle='none', color=op_color[g[0]], ms=4,
-        alpha=0.75, markeredgewidth=0.5, capsize=1, markeredgecolor='white')
+        alpha=1, markeredgewidth=0.5, capsize=1, markeredgecolor='white')
 
     # Saturation 
     sat_d = d[d['IPTG_uM'] == d['IPTG_uM'].max()]
     ax[0,1].errorbar(2 * g[1], sat_d['fold_change_A'].mean(), sat_d['fold_change_A'].sem(),
         fmt='o', linestyle='none', color=op_color[g[0]], ms=4,
-        alpha=0.75, markeredgewidth=0.5, capsize=1, markeredgecolor='white')
+        alpha=1, markeredgewidth=0.5, capsize=1, markeredgecolor='white')
 
     # Dynamic range. 
     min_len = np.min(np.array([len(leak_d), len(sat_d)]))
@@ -105,7 +104,7 @@ for g, d in data[(data['repressors']>0) &
     dyn_sem = np.std(sat_d['fold_change_A'].values[:min_len] -\
                     leak_d['fold_change_A'].values[:min_len]) / min_len
     ax[0,2].errorbar(2 * g[1], dyn_mean, dyn_sem, fmt='o', linestyle='none', 
-                    color=op_color[g[0]], alpha=0.75, markeredgewidth=1, capsize=1,
+                    color=op_color[g[0]], alpha=1, markeredgewidth=0.5, capsize=1,
                     ms=4, markeredgecolor='white', linewidth=0.5)
 
 
@@ -136,6 +135,6 @@ for g, d in data[(data['repressors']>0) &
                       markeredgecolor='w', lw=0.5, ms=4, markeredgewidth=0.5)
 
 plt.tight_layout()
-plt.savefig('../figs/fig6_plots.svg', bbox_inches='tight')
+plt.savefig('../figs/fig6_properties.svg', bbox_inches='tight')
 
 # %%

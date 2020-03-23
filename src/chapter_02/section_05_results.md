@@ -38,7 +38,7 @@ systems to determine the values of $K_A$ and $K_I$.
 
 We determine the values of $K_A$ and $K_I$ by fitting to a single induction
 profile using Bayesian inferential methods [@sivia2006]. We then use
-@Eq:foldchange_full to predict gene expression for any concentration of
+@Eq:fold_change_full to predict gene expression for any concentration of
 inducer, repressor copy number, and DNA binding energy and compare these
 predictions against experimental measurements. To obtain induction profiles
 for a set of strains with varying repressor copy numbers, we used modified
@@ -60,7 +60,7 @@ $\Delta\varepsilon_{RA} = -13.9~k_BT \pm 0.2$, and O3 $\Delta\varepsilon_{RA}
 = -9.7 \pm 0.1~k_BT$) were previously inferred by measuring the fold-change
 of the *lac* system at different repressor copy numbers, where the error
 arises from model fitting [@garcia2011]. Additionally, we were able to obtain
-the value $\Delta \varepsilon*{AI} = 4.5\, k*BT$ by fitting to previous data
+the value $\Delta \varepsilon_{AI} = 4.5\, k*BT$ by fitting to previous data
 as discussed in the Materials and Methods. We measure fold-change over a
 range of known IPTG concentrations $c$, using $n=2$ inducer binding sites per
 LacI dimer and approximating the number of non-specific binding sites as the
@@ -101,24 +101,24 @@ be determined by fitting. We used previous LacI fold-change data
 Materials \& Methods). Rather than fitting $K_A$ and $K_I$ to our entire data
 set of eighteen unique constructs, we performed Bayesian parameter estimation
 on data from a single strain with $R=260$ and an O2 operator
-[$\Delta\varepsilon_{RA}=-13.9\,k_BT$ [@garcia2011]] shown in 
-[@Fig:induction_predictions](D, orange points). Using Markov Chain Monte
+($\Delta\varepsilon_{RA}=-13.9\,k_BT$ [@garcia2011]) shown in 
+[@Fig:induction_predictions](D, white-faced points). Using Markov Chain Monte
 Carlo, we determine the most likely parameter values to be
 $K_A=139^{+29}_{-22} \times 10^{-6} \, \text{M}$ and
 $K_I=0.53^{+0.04}_{-0.04} \times 10^{-6}\, \text{M}$, which are the modes of
 their respective distributions, where the superscripts and subscripts
 represent the upper and lower bounds of the $95^\text{th}$ percentile of the
-parameter value distributions [see  [@Fig:induction_predictions] (B)].
+parameter value distributions (see  [@Fig:induction_predictions] (B)).
 Unfortunately, we are not able to make a meaningful value-for-value
 comparison of our parameters to those of earlier studies [@daber2009a;
 @daber2011a] because of uncertainties in both gene copy number and
 transcription factor copy numbers in these studies, as illustrated in
 supplemental Chapter 6. We then predicted the fold-change for the remaining
-seventeen strains with no further fitting [see 
-[@Fig:induction_predictions] (C - E)] together with the specific phenotypic
+seventeen strains with no further fitting (see 
+@Fig:induction_predictions (C - E)) together with the specific phenotypic
 properties described in and discussed in detail below [see 
-[@Fig:induction_predictions] (F - J)]. The shaded regions in 
-[@Fig:induction_predictions] (C - E) denote the 95% credible regions. Factors
+(@Fig:induction_predictions (F - J)). The shaded regions in 
+@Fig:induction_predictions (C - E) denote the 95% credible regions. Factors
 determining the width of the credible regions are explored in supplemental
 Chapter 6.
 
@@ -229,7 +229,7 @@ enables us to quantify how each trait depends upon a single set of
 physical parameters as shown by  @Fig:induction_predictions (F-J).
 
 We define these five phenotypic traits using expressions derived from the
-model presented in  @Eq:foldchange_full. These results build upon
+model presented in  @Eq:fold_change_full. These results build upon
 extensive work by @martins2011, who computed many such properties for
 ligand-receptor binding within the MWC model. We begin by analyzing the
 leakiness, which is the minimum fold-change observed in the absence of
@@ -282,7 +282,7 @@ pairing in - separately to in order to smoothly interpolate between the
 data points. Error bars for - represent the standard error of the mean
 for eight or more replicates; error bars for - represent the 95%
 credible region for the parameter found by propagating the credible
-region of our estimates of $K_A$ and $K_I$ into  @Eq:foldchange_full.](ch2_fig6){#eq:properties_experiment short-caption="Predictions and experimental measurements of key properties of
+region of our estimates of $K_A$ and $K_I$ into  @Eq:fold_change_full.](ch2_fig6){#eq:properties_experiment short-caption="Predictions and experimental measurements of key properties of
 induction profiles."}
 
 
@@ -312,21 +312,20 @@ the repressor copy number. In , Section “”, we discuss the analytic
 forms of these two properties as well as their dependence on the
 repressor-DNA binding energy.
 
-\- shows the estimated values of the $[EC_{50}]$ and the effective
+@Fig:properties_experiment (D-E)  shows the estimated values of the $[EC_{50}]$ and the effective
 Hill coefficient overlaid on the theoretical predictions. Both
 properties were obtained by fitting to each individual titration curve
-and computing the $[EC_{50}]$ and effective Hill coefficient using and
-, respectively. We find that the predictions made with the single strain
+and computing the $[EC_{50}]$ and effective Hill coefficient. We find that the predictions made with the single strain
 fit closely match those made for each of the strains with O1 and O2
 operators, but the predictions for the O3 operator are markedly off. In
-the , Section “”, we show that the large, asymmetric error bars for the
+the supplemental Chapter 6, we show that the large, asymmetric error bars for the
 O3 $R=22$ strain arise from its nearly flat response, where the lack
 of dynamic range makes it impossible to determine the value of the
 inducer dissociation constants $K_A$ and $K_I$, as can be seen in
 the uncertainty of both the $[EC_{50}]$ and effective Hill
 coefficient. Discrepancies between theory and data for O3 are improved,
 but not fully resolved, by performing a global fit or fitting the MWC
-model individually to each curve (see , Sections “” and “”). It remains
+model individually to each curve (see supplemental Chapter 6). It remains
 an open question how to account for discrepancies in O3, in particular
 regarding the significant mismatch between the predicted and fitted
 effective Hill coefficients.
@@ -350,7 +349,7 @@ address these questions, we follow the data collapse strategy used in a number
 of previous studies [@sourjik2002, @keymer2006, @swem2008]. 
 
 The equilibrium states and statistical weights outlined in
-@Fig:induction_states_weights (A) can be further coarse grained into two
+@Fig:states_weights (A) can be further coarse grained into two
 possible states -- one state being where the promoter is occupied by the
 repressor and another being where the promoter is *not* occupied by the
 repressor [@Fig:collase_coarse_graining (A)]. As the transcriptionally active state
@@ -372,10 +371,10 @@ $${#eq:two_state_not_r}
 where $F$ can be interpreted as the difference in free energy between the
 repressor bound and repressor not bound states,
 $$
-F = k_BT \left[\log \neg r - \log r\right]
-$${#eq:not_r_bohr}.
+F = k_BT \left[\log \neg r - \log r\right].
+$${#eq:not_r_bohr}
 
-As @Fig:induction_states_weights provides mathematical forms for $r$ and $\neg r$, $F$ can
+As @Fig:states_weights provides mathematical forms for $r$ and $\neg r$, $F$ can
 be directly computed as 
 
 $$
@@ -386,16 +385,15 @@ F = \frac{\Delta\varepsilon_{RA}}{k_BT} - \log
 $${#eq:induction_bohr_definition}
 
 ![**Coarse graining of promoter occupancy states to a two-state system.** (A)
-The promoter occupancy states shown in @Fig:induction_states_weights(A) can be
+The promoter occupancy states shown in @Fig:states_weights(A) can be
 further reduced to a two-state system; one in which the repressor is bound to
 the promoter ($r$ and one in which it is not ($\neg r$). (B) The fold-change in gene
 expression can then be evaluated as the probability of the repressor unbound
 state $\neg r$ which has the form of a Fermi function (top). The energetic
 parameter $F$ denotes the effective free energy difference between the repressor
 bound and unbound states and can be directly computed (bottom) using the
-statistical weights in @Fig:induction_states_weights.
-](ch2_fig7){#fig:collapse_coarse_graining short-caption="Coarse graining of
-promoter occupancy states to a two-state system.}
+statistical weights in @Fig:states_weights.](ch2_fig7){#fig:collapse_coarse_graining short-caption="Coarse graining of
+promoter occupancy states to a two-state system."}
 
 
 
