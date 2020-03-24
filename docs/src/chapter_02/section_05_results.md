@@ -349,7 +349,7 @@ address these questions, we follow the data collapse strategy used in a number
 of previous studies [@sourjik2002, @keymer2006, @swem2008]. 
 
 The equilibrium states and statistical weights outlined in
-@Fig:induction_states_weights (A) can be further coarse grained into two
+@Fig:states_weights (A) can be further coarse grained into two
 possible states -- one state being where the promoter is occupied by the
 repressor and another being where the promoter is *not* occupied by the
 repressor [@Fig:collase_coarse_graining (A)]. As the transcriptionally active state
@@ -374,7 +374,7 @@ $$
 F = k_BT \left[\log \neg r - \log r\right].
 $${#eq:not_r_bohr}
 
-As @Fig:induction_states_weights provides mathematical forms for $r$ and $\neg r$, $F$ can
+As @Fig:states_weights provides mathematical forms for $r$ and $\neg r$, $F$ can
 be directly computed as 
 
 $$
@@ -385,16 +385,15 @@ F = \frac{\Delta\varepsilon_{RA}}{k_BT} - \log
 $${#eq:induction_bohr_definition}
 
 ![**Coarse graining of promoter occupancy states to a two-state system.** (A)
-The promoter occupancy states shown in @Fig:induction_states_weights(A) can be
+The promoter occupancy states shown in @Fig:states_weights(A) can be
 further reduced to a two-state system; one in which the repressor is bound to
 the promoter ($r$ and one in which it is not ($\neg r$). (B) The fold-change in gene
 expression can then be evaluated as the probability of the repressor unbound
 state $\neg r$ which has the form of a Fermi function (top). The energetic
 parameter $F$ denotes the effective free energy difference between the repressor
 bound and unbound states and can be directly computed (bottom) using the
-statistical weights in @Fig:induction_states_weights.
-](ch2_fig7){#fig:collapse_coarse_graining short-caption="Coarse graining of
-promoter occupancy states to a two-state system.}
+statistical weights in @Fig:states_weights.](ch2_fig7){#fig:collapse_coarse_graining short-caption="Coarse graining of
+promoter occupancy states to a two-state system."}
 
 
 
