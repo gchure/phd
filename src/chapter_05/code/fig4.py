@@ -27,6 +27,7 @@ grouped = shock_data.groupby(["shock_class", "survival"])
 
 # Set up the figure canvas.
 fig, ax = plt.subplots(1, 2, figsize=(6, 3))
+phd.viz.despine(ax)
 fig.text(0.01, 0.99, "(A)", fontsize=8)
 fig.text(0.5, 0.99, "(B)", fontsize=8)
 axes = {"slow": ax[0], "fast": ax[1]}
@@ -41,7 +42,9 @@ for g, d in grouped:
 
     # Plot the ecdf.
     axes[g[0]].plot(
-        x_median, y, ".", ms=2, color=color_dict[g[1]], label="__nolegend__"
+        x_median, y, ".", ms=4, alpha=0.75, markeredgecolor='white', color=color_dict[g[1]], label="__nolegend__",
+        markeredgewidth=0.5
+
     )
     axes[g[0]].fill_betweenx(
         y, x_min, x_max, color=color_dict[g[1]], alpha=0.3, label="__nolegend__"

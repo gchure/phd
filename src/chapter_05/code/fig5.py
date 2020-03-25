@@ -60,6 +60,7 @@ for s in samples.keys():
 fig = plt.figure(figsize=(6, 2))
 gs = gridspec.GridSpec(3, 2, height_ratios=[0.5, 8, 0.5])
 ax = [plt.subplot(gs[i, j]) for i in range(3) for j in range(2)]
+phd.viz.despine(ax)
 # phd.viz.titlebox(ax[2], "slow shock (< 1.0 Hz)", color=colors['black'], 
             # bgcolor=colors["gray"], fontsize=8)
 # phd.viz.titlebox(ax[3], "fast shock ($\geq$ 1.0 Hz)", color=colors['black'], 
@@ -201,7 +202,6 @@ for a in ax:
     a.set_xlim([1, 1250])
 
 plt.savefig("..//figs/ch5_fig5_plots.pdf", bbox_inches="tight", dpi=300)
-# plt.savefig("../figs/ch5_fig5_plots.png", bbox_inches="tight", dpi=300)
 
 
 # %%

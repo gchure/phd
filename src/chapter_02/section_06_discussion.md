@@ -1,6 +1,6 @@
 ## Discussion
 
-Since the early work by Monod, Wyman, and Changeux [@monod1963; @monod1965],
+&nbsp;&nbsp;&nbsp;&nbsp;Since the early work by Monod, Wyman, and Changeux [@monod1963; @monod1965],
 an array of biological phenomena has been tied to the existence of
 macromolecules that switch between inactive and active states. Examples can
 be found in a wide variety of cellular processes, including ligand-gated ion
@@ -22,11 +22,10 @@ allosteric circuits for synthetic biology [@lutz1997; @moon2012; @rogers2015;
 within the MWC model and experimentally measured how mutations alter the
 induction profiles of transcription factors @daber2011a. @vilar2013 analyzed a
 variety of interactions in inducible *lac*-based systems including the
-effects of oligomerization and DNA folding on transcription factor induction
-. Other work has attempted to use the *lac* system to reconcile *in vitro*
+effects of oligomerization and DNA folding on transcription factor induction. Other work has attempted to use the *lac* system to reconcile *in vitro*
 and *in vivo* measurements [@tungtur2011].
 
-Although this body of work has done much to improve our understanding of
+&nbsp;&nbsp;&nbsp;&nbsp;Although this body of work has done much to improve our understanding of
 allosteric transcription factors, there have been few attempts to explicitly
 connect quantitative models to experiments. Here, we generate a predictive
 model of allosteric transcriptional regulation and then test the model
@@ -49,7 +48,7 @@ phenomenological parameters [@forsen1995]. Furthermore, our model reveals
 systematic relationships between behaviors that previously were only
 determined empirically.
 
-One such property is the dynamic range, which is of considerable interest
+&nbsp;&nbsp;&nbsp;&nbsp;One such property is the dynamic range, which is of considerable interest
 when designing or characterizing a genetic circuit, is revealed to have an
 interesting property: although changing the value of $\Delta
 \varepsilon_{RA}$ causes the dynamic range curves to shift to the right or
@@ -76,7 +75,7 @@ generalizations were unable to account for the O3 data. It remains an open
 question as to how the discrepancy between the theory and measurements for O3
 can be reconciled.
 
-Despite the diversity observed in the induction profiles of each of our
+&nbsp;&nbsp;&nbsp;&nbsp;Despite the diversity observed in the induction profiles of each of our
 strains, our data are unified by their reliance on fundamental biophysical
 parameters. In particular, we have shown that our model for fold-change can
 be rewritten in terms of the free energy, which encompasses all of the
@@ -99,7 +98,7 @@ $R$, we can now observe that strong repression is achieved when the free
 energy $F(c) \leq -5 k_BT$, a condition which can be reached in a number of
 ways.
 
-While our experiments validated the theoretical predictions in the case of
+&nbsp;&nbsp;&nbsp;&nbsp;While our experiments validated the theoretical predictions in the case of
 simple repression, we expect the framework presented here to apply much more
 generally to different biological instances of allosteric regulation. For
 example, we can use this model to study more complex systems such as when

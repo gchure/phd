@@ -1,6 +1,6 @@
 ## Introduction
 
-Understanding how organisms sense and respond to changes in their
+&nbsp;&nbsp;&nbsp;&nbsp;Understanding how organisms sense and respond to changes in their
 environment has long been a central theme of biological inquiry. At the
 cellular level, this interaction is mediated by a diverse collection of
 molecular signaling pathways. A pervasive mechanism of signaling in these
@@ -11,7 +11,7 @@ of such signaling is offered by transcriptional regulation, where
 a transcription factors' propensity to bind to DNA will be altered upon
 binding to an allosteric effector.
 
-Despite the ubiquity of allostery, we largely lack a formal, rigorous, and
+&nbsp;&nbsp;&nbsp;&nbsp;Despite the ubiquity of allostery, we largely lack a formal, rigorous, and
 generalizable framework for studying its effects across the broad variety of
 contexts in which it appears. A key example of this is transcriptional
 regulation, in which allosteric transcription factors can be induced or
@@ -27,7 +27,7 @@ even a simple genetic circuit across a range of regulatory parameters,
 physiological states of the organism, and evolutionary isoforms of the
 regulatory sequences.
 
-The ability to predict circuit behavior robustly— that is, across both
+&nbsp;&nbsp;&nbsp;&nbsp;The ability to predict circuit behavior robustly— that is, across both
 broad ranges of parameters and regulatory architectures —is important for
 multiple reasons. First, in the context of a specific gene, accurate
 prediction demonstrates that all components relevant to the genes'
@@ -51,7 +51,7 @@ that can analyze a single data set but cannot be used to extrapolate
 a system’s behavior in other conditions [@setty2003; @poelwijk2011a;
 @vilar2013; @rogers2015; @rohlhill2017].
 
-This work explores what happens when theory takes center stage, namely, we
+&nbsp;&nbsp;&nbsp;&nbsp;This work explores what happens when theory takes center stage, namely, we
 first write down the equations governing a system and describe its expected
 behavior across a wide array of experimental conditions, and only then do we
 set out to experimentally confirm these results. Building upon previous work
@@ -74,7 +74,7 @@ copy numbers, we design a genetic construct in *Escherichia coli* in which
 the binding probability of a repressor regulates gene expression of a
 fluorescent reporter.
 
-In total, the work presented here demonstrates that one extremely compact set
+&nbsp;&nbsp;&nbsp;&nbsp;In total, the work presented here demonstrates that one extremely compact set
 of parameters can be applied self-consistently and predictively to different
 regulatory situations including simple repression on the chromosome, cases in
 which decoy binding sites for repressor are put on plasmids, cases in which

@@ -9,7 +9,7 @@ import glob
 import phd.viz
 import phd.stats
 import altair as alt
-colors, palettes = phd.viz.altair_theme()
+colors, palettes = phd.viz.phd_style()
 MAX_EXP = 100
 MEAN_AREA = 4.86
 MEAN_CAL = 3272
@@ -28,46 +28,12 @@ intensity_order = (
 
 
 #%%
-# Define the chart object. 
-base = alt.Chart(data, width=300, height=250)
-
-
-_points = base.mark_point(size=10).encode(
-             x=alt.X(field='jitter:Q', 
-                     type='ordinal',
-                     sort=list(intensity_order),
-                     axis=alt.Axis(title='Shine-Dalgarno sequence',
-                                   labelAngle=0,
-                                   grid=False)),
-             y=alt.Y(field='effective_channels', 
-                     type="quantitative",
-                     axis=alt.Axis(title='effective channel number')),
-             column=alt.Column('rbs:N'),
-             strokeWidth=alt.value(0),
-             fill=alt.value('black'),
-             opacity=alt.value(0.5)
-    ).transform_calculate(
-             jitter='sqrt(-2*log(random()))*cos(2*PI*random())')
-
-_box = base.mark_boxplot(outliers=False).encode(
-    x=alt.X(field='rbs', 
-            type='ordinal',
-            sort=list(intensity_order),
-            axis=alt.Axis(title='Shine-Dalgarno sequence',
-                          labelAngle=0,
-                          grid=False)),
-    y=alt.Y(field='effective_channels', 
-            type="quantitative",
-            axis=alt.Axis(title='effective channel number')))
-
-_points + _box
-#%%
-
 # Set up the figureself.
 fig, ax = plt.subplots(1, 2, figsize=(6.5, 3))
 ax[0].axis("off")
 ax[1].vlines(1, 0, 1000, color='white', lw=30, zorder=0, alpha=0.75)
 
+phd.viz.despine(ax)
 # Plot the channel number
 channel_order = (
     data.groupby(["rbs"])["effective_channels"].mean().sort_values()[::-1].index
@@ -80,10 +46,13 @@ _ = sns.boxplot(
     data=data,
     order=intensity_order,
     fliersize=0,
-    linewidth=0.75,
-    color=colors['black'],
+    linewidth=0.5,
+    color='white',
     palette= sns.light_palette((210, 90, 60), n_colors=7, input="husl"), #"Greens",
     ax=ax[1],
+    whiskerprops={'color':'black'},
+    boxprops={'edgecolor':'black'},
+    medianprops={'color':'white'}
 )
 _ = sns.stripplot(
     "rbs",
@@ -91,12 +60,14 @@ _ = sns.stripplot(
     data=data,
     order=intensity_order,
     jitter=True,
-    marker=".",
-    size=2.5,
-    alpha=0.75,
+    marker="o",
+    size=1.5,
+    alpha=0.35,
     color=colors['black'],
     ax=ax[1],
     zorder=1001,
+    edgecolor='white',
+    lw=0.75
 )
 
 # Add the marker for the standard candle strain
@@ -119,7 +90,6 @@ fig.text(0.01, 0.99, "(A)", fontsize=8)
 fig.text(0.45, 0.99, "(B)", fontsize=8)
 plt.tight_layout()
 plt.savefig("../figs/ch5_fig2_plots.svg", bbox_inches="tight", dpi=300)
-# plt.savefig('../../figs/fig{}_plots.png'.format(FIG_NO), bbox_inches='tight', dpi=300)
 
 
 # %%

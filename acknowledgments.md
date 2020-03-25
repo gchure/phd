@@ -6,10 +6,10 @@ comments: true
 image: acknowledgements.png
 
 # Hero section
-title:  Chapter 0 
+title:  Acknowledgements
 subtitle: >  
-    If A Dissertation is an Island, Grad School is an Archipelago 
-
+    The Grad School Archipelago
+    
 # Author box
 author:
     title: Summary

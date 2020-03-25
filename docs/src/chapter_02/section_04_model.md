@@ -2,7 +2,7 @@
 
 ### Inducible Transcriptional Repression Via The MWC Model of Allostery
 
-We begin by considering a simple repression genetic architecture in which the
+&nbsp;&nbsp;&nbsp;&nbsp;We begin by considering a simple repression genetic architecture in which the
 binding of an allosteric repressor occludes the binding of RNA polymerase
 (RNAP) to the DNA [@ackers1982; @buchler2003]. When an effector molecule
 (hereafter referred to as an “inducer" for the case of induction) binds to
@@ -19,7 +19,7 @@ repression have been shown to have the same functional form that we derive
 below [@phillips2015]]. We extend these models to consider allostery by
 accounting for the equilibrium state of the repressor through the MWC model.
 
-Thermodynamic models of gene expression begin by enumerating all possible
+&nbsp;&nbsp;&nbsp;&nbsp;Thermodynamic models of gene expression begin by enumerating all possible
 states of the promoter and their corresponding statistical weights. As
 shown in  @Fig:states_weights (A), the promoter can either be empty,
 occupied by RNAP, or occupied by either an active or inactive repressor.
@@ -61,7 +61,7 @@ sites are shown along with the sums of the active and inactive
 states.](ch2_fig2){#fig:states_weights short-caption="States and statistical
 weights for the simple repression motif."}
 
-Thermodynamic models of transcription [@ackers1982; @buchler2003; @vilar2003;
+&nbsp;&nbsp;&nbsp;&nbsp;Thermodynamic models of transcription [@ackers1982; @buchler2003; @vilar2003;
 @bintu2005; @bintu2005a; @kuhlman2007; @daber2011a; @garcia2011;
 @brewster2014; @weinert2014] posit that gene expression is proportional to
 the probability that the RNAP is bound to the promoter $p_\text{bound}$,
@@ -90,7 +90,7 @@ $$
 \text{fold-change} \equiv \frac{p_\text{bound}(R > 0)}{p_\text{bound}(R = 0)}.
 $${#eq:fold_change_definition}
 
-We can simplify this expression using two well-justified approximations:
+&nbsp;&nbsp;&nbsp;&nbsp;We can simplify this expression using two well-justified approximations:
 firstly, $(P / N_{NS})e^{-\beta\Delta\varepsilon_{P}}\ll$ 1 implying that the
 RNAP binds weakly to the promoter ($N_{NS} = 4.6 \times 10^6$, $P \approx
 10^3$ [@klumpp2008], $\Delta\varepsilon_{P} \approx -2\,\, \text{to} \, -5\,
@@ -105,15 +105,14 @@ $$
 \Delta\varepsilon_{RA}}\right)^{-1} \equiv \left( 1+p_\text{act}(c)
 \frac{R}{N_{NS}}e^{-\beta\Delta\varepsilon_{RA}} \right)^{-1},
 $${#eq:fold_change_RA}
-
- where in the last step we
+where in the last step we
 have introduced the fraction $p_\text{act}(c)$ of repressors in the active
 state given a concentration $c$ of inducer, such that
 $R_A(c)=p_\text{act}(c) R$. Since inducer binding shifts the repressors from
 the active to the inactive state, $p_\text{act}(c)$ grows smaller as $c$
-increases .
+increases.
 
-We use the MWC model to compute the probability $p_\text{act}(c)$ that a
+&nbsp;&nbsp;&nbsp;&nbsp;We use the MWC model to compute the probability $p_\text{act}(c)$ that a
 repressor with $n$ inducer binding sites will be active. The value of
 $p_\text{act}(c)$ is given by the sum of the weights of the active repressor
 states divided by the sum of the weights of all possible repressor
@@ -140,7 +139,7 @@ driven towards the inactive state upon inducer binding when $K_I < K_A$. The
 specific case of a repressor dimer with $n=2$ inducer binding sites is shown
 in  @Fig:states_weights (B).
 
-Substituting $p_\text{act}(c)$ from into yields the general formula for
+&nbsp;&nbsp;&nbsp;&nbsp;Substituting $p_\text{act}(c)$ from into yields the general formula for
 induction of a simple repression regulatory architecture [@phillips2015],
 namely,
 $$
@@ -163,7 +162,7 @@ describe a variety of other motifs such as activation, multiple
 repressor binding sites, and combinations of activator and repressor
 binding sites [@bintu2005a; @brewster2014; @weinert2014].
 
-The formula presented in @Eq:fold_change_full enables us to make precise
+&nbsp;&nbsp;&nbsp;&nbsp;The formula presented in @Eq:fold_change_full enables us to make precise
 quantitative statements about induction profiles. Motivated by the broad
 range of predictions implied by @Eq:fold_change_full, we designed a series of
 experiments using the *lac* system in *E. coli* to tune the control
