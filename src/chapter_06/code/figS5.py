@@ -4,7 +4,8 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 from scipy.optimize import fsolve
 import phd.viz
-colors, palette = phd.viz.phd_style()
+_, palette = phd.viz.phd_style()
+sns.set_palette('magma')
 
 # Define functions to be used in figure
 def pact(IPTG, K_A, K_I, e_AI):
@@ -90,70 +91,40 @@ def occupancy(lam, e_s):
 # Define parameter values
 ops = [-15.3, -13.9, -9.7]
 op_names = ['O1', 'O2', 'O3']
-fig_labels = [['(A)', '(B)', '(C)'], ['(D)', '(E)', '(F)']]
-reps = [1740, 1220, 260, 124, 60, 22]
-rep_colors = {22: colors['red'], 
-              60: colors['brown'],  
-              124: colors['green'], 
-              260: colors['orange'], 
-              1220: colors['purple'], 
-              1740: colors['blue']}
-Ns = [10, 100]
+fig_labels = ['(A)', '(B)', '(C)']
+Nc = [1, 10, 50, 100, 250, 500]
+Ns = [1]
 IPTG = np.logspace(-8, -2, 100)
+R = 260
+e_c = -17.0
 
 # Plot figure
-fig, ax = plt.subplots(2, 3, sharey=False, figsize=(6, 4))
-phd.viz.despine(ax.ravel())
-for i, a in enumerate(ax[0]):
-    for rep in reps:
-        lam_array = fugacity(IPTG, rep, Ns=Ns[0], e_s=ops[i])
+fig, ax = plt.subplots(ncols=3,  sharey=False, figsize=(6, 2))
+phd.viz.despine(ax)
+for i, a in enumerate(ax):
+    for N in Nc:
+        lam_array = fugacity(IPTG, R, Ns=1, e_s=ops[i], Nc=N, e_c=e_c)
         fc = occupancy(lam_array, ops[i])
-        _ = a.plot(IPTG*1E6, fc, label=rep, color=rep_colors[rep])
+        a.plot(IPTG*1E6, fc, label=N,)
     a.set_xscale('log')
     a.set_ylabel('fold-change')
     a.set_xlabel('IPTG [µM]')
     a.set_ylim(-0.01, 1.1)
     a.set_xlim(1E-2, 1E4)
-    a.tick_params(labelsize=6)
 
-    # Define figure text
-    phd.viz.titlebox(a, r'%s $\Delta \varepsilon_{RA}= %0.1f\ k_BT$' % (op_names[i], ops[i]),
-                     bgcolor='white', color=colors['black'], boxsize='12%', size=8,
-                     pad=0.04)
-
-
-
-    a.text(-0.28, 1.1, fig_labels[0][i], ha='center', va='center', fontsize=8,
-           transform=a.transAxes)
-
-for i, a in enumerate(ax[1]):
-    for rep in reps:
-        lam_array = fugacity(IPTG, rep, Ns=Ns[1], e_s=ops[i])
-        fc = occupancy(lam_array, ops[i])
-        _ = a.plot(IPTG*1E6, fc, label=rep, color=rep_colors[rep])
-    a.set_xscale('log')
-    a.set_ylabel('fold-change', fontsize=8)
-    a.set_xlabel('IPTG [µM]', fontsize=8)
-    a.set_ylim(-0.01, 1.1)
-    a.set_xlim(1E-2, 1E4)
-    a.tick_params(labelsize=6)
-
-    # Define figure text
-    phd.viz.titlebox(a, r'%s $\Delta \varepsilon_{RA}= %0.1f\ k_BT$' % (op_names[i], ops[i]),
-                     bgcolor='white', color=colors['black'], boxsize='12%', size=8,
-                     pad=0.04)
-
-    a.text(-0.28, 1.1, fig_labels[1][i], ha='center', va='center', fontsize=8,
-           transform=a.transAxes)
+    # Add figure text
+    phd.viz.titlebox(a,r'%s $\Delta \varepsilon_{RA}= %0.1f\ k_BT$' % (
+        op_names[i], ops[i]), bgcolor='white', color=_['black'],
+        boxsize='12%', pad=0.05, size=6)
+    a.text(-0.32, 1.05, fig_labels[i], transform=a.transAxes,
+           fontsize=8)
 
 # Add legend
-leg1 = ax[0][0].legend(title='rep. per cell', loc='upper left', fontsize=6)
+leg1 = ax[2].legend(title=r'$N_c$', loc='lower right', fontsize=6)
 leg1.get_title().set_fontsize(6)
-plt.subplots_adjust(wspace=0.35, hspace=0.5)
 plt.tight_layout()
-plt.savefig('../figs/ch6_figS3.pdf', bbox_inches='tight')
-plt.savefig('../figs/ch6_figS3.png', bbox_inches='tight')
-
+plt.savefig('../figs/ch6_figS5.pdf', bbox_inches='tight')
+plt.savefig('../figs/ch6_figS5.png', bbox_inches='tight')
 
 
 # %%
