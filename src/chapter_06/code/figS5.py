@@ -126,5 +126,3 @@ plt.tight_layout()
 plt.savefig('../figs/ch6_figS5.pdf', bbox_inches='tight')
 plt.savefig('../figs/ch6_figS5.png', bbox_inches='tight')
 
-
-# %%
