@@ -231,4 +231,5 @@ the number of repressors at which $R_A = N$ for each value of
 $\Delta\varepsilon_{AI}$. (B) Using fold--change measurements from @brewster2014
 for the operators and gene copy numbers shown, we can determine the  most likely
 value $\Delta\varepsilon_{AI}$ = 4.5\, k_BT$ for LacI.](ch6_figS2){#fig:fugacity
-short-caption="Fold-change in gene expression for multiple identical promoters."}
+short-caption="Fold-change in gene expression for multiple identical
+promoters."}

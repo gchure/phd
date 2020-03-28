@@ -132,7 +132,7 @@ both an area and eccentricity filter, the remaining objects were
 considered cells of interest and the mean fluorescence intensity of
 each cell was extracted.
 
-### Calculation of Fold-Change
+### Calculation of Fold-Change and Empirical Comparison
 
 Cells exhibited background fluorescence even in the absence of an
 expressed fluorophore. We corrected for this autofluorescence
@@ -148,48 +148,42 @@ where $\langle I_{R > 0}\rangle$ is the mean fluorescence intensity of cells
 expressing LacI repressors, $\langle I_\text{auto}\rangle$ is the mean
 intensity of cells expressing only the mCherry volume marker, and $\langle
 I_{R = 0}\rangle$ is the mean fluorescence intensity of cells in the absence
-of LacI. These fold-change values were very similar to those obtained through
-flow cytometry and were well described using the thermodynamic parameters
-used in the main text. With these experimentally measured fold-change values,
-the best-fit parameter values of the model were inferred and compared to
-those obtained from flow cytometry.
+of LacI. 
 
-## Parameter Estimation and Comparison
+The agreement in the fold-change in gene expression between single-cell
+microscopy and flow cytometry can be seen in @Fig:empirical_comparison (A) where
+the two methods have been plotted against each other. At this level, we see near
+perfect agreement between the methods when examining the mean level of gene
+expression. However, there is a distinct difference in higher moments of the
+gene expression distributions. Empirical cumulative distributions for a
+maximally-induced (5000 $\mu$M IPTG, $R=160$, $\Delta\varepsilon_{RA} = -13.9\,
+k_BT$) sample are shown as purple and orange lines in @Fig:empirical_comparison
+(B), respectively. To make the different methods directly comparable, the
+expressions distributions were normalized to range between 0 and 1 and then
+centered about the mean of the distribution. While the means agree between the
+methods, it is immediately obvious that the width of the distributions are
+different with microscopy yielding distributions with a higher variance. To
+compare the distributions more quantitatively, we computed the central moment
+values for the variance, skewness, and kurtosis of the distributions
+(@Fig:empirical_comparison (C)). This quantitative comparison reveals that the
+value of the moments can differ by close to an order of magnitude between the
+methods with flow cytometry systematically lower than the same distribution
+measured via microscopy. These results show that in terms of measuring the mean
+level of gene expression, the two methods can be used interchangeably. However,
+if one is interested in the higher moments of the distribution, the choice of
+method does matter.  
 
-![**Comparison of measured fold-change between flow cytometry and
-single-cell microscopy.** Experimentally measured fold-change values
-obtained through single-cell microscopy and flow cytometry are shown as
-white filled and solid colored circles, respectively. Solid and dashed
-lines indicate the predicted behavior using the most likely parameter
-values of $K_A$ and $K_I$ inferred from flow cytometry data and
-microscopy data, respectively. The red and blue plotting elements
-correspond to the different operators O1 and O2 with binding energies
-$\Delta\varepsilon_{RA}$ of $-13.9~k_BT$ and $-15.3~k_BT$,
-respectively . The marginalized posterior distributions for $K_A$ and
-$K_I$ are shown in the top and bottom panel, respectively. The
-posterior distribution determined using the microscopy data is wider
-than that computed using the flow cytometry data due to a smaller fig
-collection of data sets (three for microscopy and ten for flow
-cytometry).](ch6_figS10){#fig:flow_microscopy_comparison
-short-caption="Comparison of measured fold-change between flow cytometry and
-single-cell microscopy."}
-
-
-
-To confirm quantitative consistency between flow cytometry and
-microscopy, the parameter values of $K_A$ and $K_I$ were also
-estimated from three biological replicates of IPTG titration curves
-obtained by microscopy for strains with $R=260$ and operators O1 and
-O2. shows the data from these measurements (orange circles) and the ten
-biological replicates from our flow cytometry measurements (blue
-circles), along with the fold-change predictions from each inference. In
-comparison with the values obtained by flow cytometry, each parameter
-estimate overlapped with the 95\% credible region of our flow cytometry
-estimates, as shown in @Fig:flow_microscopy_comparison. Specifically, these
-values were $K_A=142^{+40}_{-34}\,\mu\text{M}$ and
-$K_I=0.6^{+0.1}_{-0.1}\,\mu\text{M}$ from microscopy and
-$K_A = 149^{+14}_{-12}\,\mu\text{M}$ and $K_I =
-0.57^{+0.03}_{-0.02}\,\mu\text{M}$ from the flow cytometry data. We
-note that the credible regions from the microscopy data shown in are
-much broader than those from flow cytometry due to the fewer number of
-replicates performed.
+![**Empirical comparison of flow cytometry and single-cell microscopy.** (A)
+The observed fold-change in gene expression for the IPTG titration of a
+strain with $R=260$ and $\Delta\varepsilon_{RA} = -13.9\, k_BT$ using both
+microscopy (x-axis) and flow cytometry (y-axis). Points and errors represent
+the mean and standard error of 3 (microscopy) or 10 (flow cytometry)
+biological replicates. Black line indicates perfect agreement. (B) Empirical
+cumulative distributions of expression intensity for the strain used in (A)
+maximally induced with 5000 $\mu$M IPTG. Purple and orange lines correspond
+to measurements with microscopy and flow cytometry, respectively.
+Fluorescence was normalized between 0 and 1 and centered about the observed
+mean. (C) Central moments of the distributions shown in (B) for microscopy
+and flow cytometry. Each point represents a single biological
+replicate.](ch6_figS10){#fig:empirical_comparison short-caption="Empirical
+comparison of flow cytometry and single-cell microscopy."}
