@@ -27,6 +27,11 @@ prefix: chapter_06
 contents:
     - section_01_header
     - section_02_epAI
+    - section_03_fugacity
+    - section_04_flow
+    - section_05_microscopy
+    - section_06_sensitivity
+    - section_07_global_fit
 ---
 
 **Published as ...**
