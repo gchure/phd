@@ -32,24 +32,23 @@ ax2.set_ylabel('pressure\n [mmHg]')
 ax2.set_xlabel('time [s]')
 
 # Add marker labels
-ax1.text(0.1, 0.93, 'MscS', fontsize=8, transform=ax1.transAxes,
-        backgroundcolor=colors['light_blue'])
-ax2.text(0.46, 0.93, 'MscL-sfGFP', fontsize=8, transform=ax1.transAxes,
-        backgroundcolor='white')
+ax1.text(0.08, 0.93, 'MscS', fontsize=8, transform=ax1.transAxes)
+        
+ax2.text(0.46, 0.93, 'MscL-sfGFP', fontsize=8, transform=ax1.transAxes)
 
 # Plot the traces and color red
 _ = ax1.plot(data['time'], data['pa'], '-', color=colors['purple'], lw=0.5)
 _ = ax2.plot(data['time'], data['mmHg'], '-', color=colors['purple'], lw=0.75)
 
 # Label the MscS points
-_ = ax1.vlines(19.6, -1.5, 525, lw=28, color=colors['light_blue'], zorder=-1)
-_ = ax2.vlines(19.6, 4, -350, lw=28, color=colors['light_blue'], zorder=-1)
+_ = ax1.vlines(19.6, -1.5, 525, lw=31, color=colors['light_blue'], zorder=-1, alpha=0.5)
+_ = ax2.vlines(19.6, 4, -350, lw=31, color=colors['light_blue'], zorder=-1, alpha=0.5)
 
 # Label the MscL points
-_ = ax1.vlines(21.7, -1.5, 525, lw=100, color='white', zorder=-1)
-_ = ax2.vlines(21.7, 4, -350, lw=100, color='white', zorder=-1)
-plt.savefig('../figs/figS1.pdf', bbox_inches='tight')
-plt.savefig('../figs/figS1.png', bbox_inches='tight') 
+_ = ax1.vlines(21.7, -1.5, 525, lw=100, color=colors['light_orange'], zorder=-1, alpha=0.5)
+_ = ax2.vlines(21.7, 4, -350, lw=100, color=colors['light_orange'], zorder=-1, alpha=0.5)
+plt.savefig('../figs/ch9_figS1.pdf', bbox_inches='tight')
+plt.savefig('../figs/ch9_figS1.png', bbox_inches='tight') 
   
 
 # %%

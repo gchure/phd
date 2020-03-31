@@ -12,7 +12,7 @@ rights_statement: |
     Creative Commons Attribution License CC-BY 4.0.
 logo: true
 bibliography: references.bib
-csl: styles/nature.csl
+csl: styles/cell.csl
 ownpubs: published.md
 acknowledgements: acknowledgements.md
 abstract: abstract.md

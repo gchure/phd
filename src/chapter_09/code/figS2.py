@@ -88,8 +88,8 @@ ax[0].set_ylabel('normalized fluorescence')
 _ = ax[0].plot(dt, np.array(means)/means[-1], '-o', lw=1, color=colors['purple'], 
                        markeredgecolor='white', ms=4.5, markeredgewidth=0.5, 
                        label='measured\nintensity')
-_ = ax[0].fill_betweenx(np.linspace(0, 1.15, 500), 30, 40, color='white', zorder=-1, 
-                label='observed\n growth rate')
+_ = ax[0].fill_betweenx(np.linspace(0, 1.15, 500), 30, 40, color=colors['light_blue'], zorder=-1, 
+                label='observed\n growth rate', alpha=0.5)
 
 time_range = np.linspace(-5, 80, 500)
 _ = ax[1].plot(time_range, mean_lam * time_range, '-', color=colors['purple'], lw=0.75, 
@@ -102,7 +102,7 @@ _ = ax[1].plot(lin_data['adj_time'], lin_data['log_A_A0'], 'o', color=colors['pu
 leg = ax[1].legend(loc='upper left', fontsize=6, title='$t_{double} = 35 \pm 1$ min') 
 leg.get_title().set_fontsize(6)
 plt.tight_layout()
-plt.savefig('../figs/figS2.pdf', bbox_inches='tight')
-plt.savefig('../figs/figS2.png', bbox_inches='tight')
+plt.savefig('../figs/ch9_figS2.pdf', bbox_inches='tight')
+plt.savefig('../figs/ch9_figS2.png', bbox_inches='tight')
 
 # %%

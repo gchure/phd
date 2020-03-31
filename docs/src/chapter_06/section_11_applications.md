@@ -24,9 +24,9 @@ of the repressor. We note that these states and weights exactly match those in
 Fig. 2.2  and yield the same fold-change equation, 
 $$
 \text{fold-change} \approx \left(1 + {\left(1 + {c \over K_A}\right)^n \over
-\left(1 + {c \over K_A}\right)^n + e^{\beta\Delta\varepsilon_{AI}}\left(1 + {c
+\left(1 + {c \over K_A}\right)^n + e^{\beta\Delta\varepsilon_{AI} }\left(1 + {c
 \over K_I}\right)^n} {R \over
-N_{NS}}e^{-\beta\Delta\varepsilon_{RA}}\right)^{-1},
+N_{NS} }e^{-\beta\Delta\varepsilon_{RA} }\right)^{-1},
 $${#eq:corepression_fc}
 where $c$ now represents the concentration of the corepressor
 molecule. Mathematically, the difference between these two architectures
@@ -57,13 +57,11 @@ the states and statistical weights of this architecture and making the
 approximation that the promoter is weak generates a fold-change equation
 of the form 
 $$
-\text{fold-change} = {1 + {\left(1 + {c \over K_A}\right)^n \over \left( 1 + {c
-\over K_A}\right)^n + e^{\beta\Delta\varepsilon_{AI}}\left(1 + {c \over
-K_I}\right)^n}{A \over
-N_{NS}}e^{-\beta\Delta\varepsilon_{AA}}e^{-\beta\varepsilon_{AP}} \over 1 +
+\text{fold-change} = {1 + \frac{\left(1 + \frac{c}{K_A}\right)^n}{\left( 1 + \frac{c}{K_A}\right)^n + e^{\beta\Delta\varepsilon_{AI} }\left(1 + \frac{c}{K_I}\right)^n}\frac{A}{
+N_{NS} }e^{-\beta\Delta\varepsilon_{AA} }e^{-\beta\varepsilon_{AP} } \over 1 +
 {\left(1 + {c \over K_A}\right)^n \over \left(1 + {c \over K_A}\right)^n +
-e^{\beta\Delta\varepsilon_{AI}}\left(1 + {c \over K_I}\right)^n}{A \over
-N_{NS}}e^{-\beta\Delta\varepsilon_{AA}}},
+e^{\beta\Delta\varepsilon_{AI} }\left(1 + {c \over K_I}\right)^n}{A \over
+N_{NS} }e^{-\beta\Delta\varepsilon_{AA} } },
 $${#eq:foldchange_activation}
 where $A$ is the total number of activators per cell, $c$ is the
 concentration of a coactivator molecule, $\Delta\varepsilon_{AA}$ is

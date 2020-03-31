@@ -1,5 +1,4 @@
-
-## Supplement B: Standard Candle Calibration 
+## Calibration of a Standard Candle 
 
 &nbsp;&nbsp;&nbsp;&nbsp;To estimate the single-cell MscL abundance via
 microscopy, we needed to determine a calibration factor that could translate
@@ -15,7 +14,7 @@ an approximate measure of this calibration factor. In this section, we derive
 a statistical model for estimating the most-likely value of this calibration
 factor and its associated error.
 
-### Definition of a calibration factor ###
+### Definition of a calibration factor 
 &nbsp;&nbsp;&nbsp;&nbsp;We assume that all detected fluorescence signal from
 a particular cell is derived from the MscL-sfGFP protein, after background
 subtraction and correction for autofluorescence. The arbitrary units of
@@ -25,7 +24,7 @@ $$
 I_\text{tot} = \alpha N_\text{tot},
 $${#eq:mscl_ian}
 where $I_\text{tot}$ is the total cell fluorescence and $N_\text{tot}$ is the
-total number of MscL proteins per cell. Bialecka-Fornal et al. report the
+total number of MscL proteins per cell. @bialecka-fornal2012 et al. report the
 average cell Mscl copy number for the population rather than the
 distribution. Knowing only the mean, we can rewrite [@Eq:mscl_ian] as
 $$
@@ -105,7 +104,7 @@ culture the distribution of cell size would be normally distributed with a
 mean of $\langle A \rangle$ and a variance $\sigma_{\langle A \rangle}$.
 Mathematically, we can write this as
 $$
-f(A\,\vert\,\langle A \rangle, \sigma_{\langle A \rangle}) \propto {1 \over \sigma_{\langle A \rangle}}\exp\left[-{(A - \langle A \rangle)^2 \over 2\sigma_{\langle A \rangle}^2}\right],
+f(A\,\vert\,\langle A \rangle, \sigma_{\langle A \rangle}) \propto {1 \over \sigma_{\langle A \rangle} }\exp\left[-{(A - \langle A \rangle)^2 \over 2\sigma_{\langle A \rangle}^2}\right],
 $${#eq:area_likelihood}
 where the proportionality results from dropping normalization constants for
 notational simplicity.
@@ -124,12 +123,12 @@ I_A =  {\alpha\langle N_\text{tot} \rangle \over \langle A \rangle}.
 $${#eq:avg_rho}
 Using @Eq:avg_rho to calculate the expected areal intensity for the population, we can write the likelihood as a Gaussian distribution, 
 $$
-f(I_A\,\vert\,\alpha,\langle A \rangle,\langle N_\text{tot} \rangle, \sigma_{I_A}) \propto {1 \over \sigma_{I_A}}\exp\left[-{\left(I_A - {\alpha \langle N_\text{tot} \rangle\over \langle A \rangle}\right)^2 \over 2 \sigma_{I_A}^2}\right].
+f(I_A\,\vert\,\alpha,\langle A \rangle,\langle N_\text{tot} \rangle, \sigma_{I_A}) \propto {1 \over \sigma_{I_A} }\exp\left[-{\left(I_A - {\alpha \langle N_\text{tot} \rangle\over \langle A \rangle}\right)^2 \over 2 \sigma_{I_A}^2}\right].
 $${#eq:rho_likelihood}
 
 &nbsp;&nbsp;&nbsp;&nbsp;With these two likelihoods in hand, we are tasked with determining the appropriate priors. As we have assumed normal distributions for the likelihoods of $\langle A \rangle$ and $I_A$, we have included two additional parameters, $\sigma_{\langle A \rangle}$ and $\sigma_{I_A}$, each requiring their own prior probability distribution. It is common practice to assume maximum ignorance for these variances and use a Jeffreys prior [@sivia2006],
 $$
-g(\sigma_{\langle A \rangle}, \sigma_{I_A}) = {1 \over \sigma_{\langle A \rangle}\sigma_{I_A}}.
+g(\sigma_{\langle A \rangle}, \sigma_{I_A}) = {1 \over \sigma_{\langle A \rangle}\sigma_{I_A} }.
 $${#eq:jeffreys}
 
 &nbsp;&nbsp;&nbsp;&nbsp;The next obvious prior to consider is for the average channel copy number $\langle N_\text{tot} \rangle$, which comes from Bialecka-Fornal et al. 2012. In this work, they report a mean $\mu_N$  and variance $\sigma_N^2$, allowing us to assume a normal distribution for the prior,
@@ -138,13 +137,13 @@ g(\langle N_\text{tot}\rangle\,\vert\, \mu_N,\sigma_N) \propto {1 \over \sigma_N
 $${#eq:informative_prior}
 For $\alpha$ and $\langle A \rangle$, we have some knowledge of what these parameters can and cannot be. For example, we know that neither of these parameters can be negative. As we have been careful to not overexpose the microscopy images, we can say that the maximum value of $\alpha$ would be the bit-depth of our camera. Similarly, it is impossible to segment a single cell with an area larger than our camera's field of view (although there are biological limitations to size below this extreme). To remain maximally uninformative, we can assume that the parameter values are uniformly distributed between these bounds, allowing us to state 
 $$
-g(\alpha) = \begin{cases} {1 \over \alpha_\text{max} - \alpha_\text{min}} & \alpha_\text{min} \leq \alpha \leq \alpha_\text{max} \\
+g(\alpha) = \begin{cases} {1 \over \alpha_\text{max} - \alpha_\text{min} } & \alpha_\text{min} \leq \alpha \leq \alpha_\text{max} \\
 0 & \text{otherwise}
 \end{cases},
 $${#eq:alpha_uniform_prior}
 for $\alpha$ and 
 $$
-g(\langle A \rangle) = \begin{cases} {1 \over \langle A \rangle_\text{max} - \langle A \rangle_\text{min}} & \langle A \rangle_\text{min} \leq \langle A \rangle \leq \langle A \rangle_\text{max}\\
+g(\langle A \rangle) = \begin{cases} {1 \over \langle A \rangle_\text{max} - \langle A \rangle_\text{min} } & \langle A \rangle_\text{min} \leq \langle A \rangle \leq \langle A \rangle_\text{max}\\
 0 & \text{otherwise}
 \end{cases}
 $${#eq:area_uniform_prior}
@@ -153,7 +152,7 @@ for $\langle A \rangle$.
 Piecing @Eq:area_likelihood through @Eq:area_uniform_prior together generates a complete posterior probability distribution for the parameters given a single cell measurement. This can be generalized to a set of $k$ single cell measurements as
 $$
 \begin{aligned}
-g(\alpha,\langle A \rangle, \langle N_\text{tot} & \rangle, \sigma_{I_A}, \sigma_{\langle A \rangle}\,\vert\, [I_A, A], \mu_N, \sigma_N) \propto {1 \over (\alpha_\text{max} - \alpha_\text{min})(\langle A \rangle_\text{max} - \langle A \rangle_\text{min})}{1 \over (\sigma_{I_A}\sigma_{\langle A \rangle})^{k+1}}\,\times\\
+g(\alpha,\langle A \rangle, \langle N_\text{tot} & \rangle, \sigma_{I_A}, \sigma_{\langle A \rangle}\,\vert\, [I_A, A], \mu_N, \sigma_N) \propto {1 \over (\alpha_\text{max} - \alpha_\text{min})(\langle A \rangle_\text{max} - \langle A \rangle_\text{min})}{1 \over (\sigma_{I_A}\sigma_{\langle A \rangle})^{k+1} }\,\times\\
 &{1 \over \sigma_N}\exp\left[- {(\langle N_\text{tot}\rangle - \mu_N)^2 \over 2\sigma_N^2}\right]
 \prod\limits_i^k\exp\left[-{(A^{(i)} - \langle A \rangle)^2 \over 2\sigma_{\langle A \rangle}^2} - {\left(I_A^{(i)} - {\alpha \langle N_\text{tot}\rangle \over \langle A \rangle}\right)^2 \over 2\sigma_{I_A}^2}\right] \end{aligned},
 $${#eq:single_rep_post}
@@ -252,10 +251,10 @@ measurements,
 $$
 \begin{aligned}
 g(\tilde{\alpha}, \tilde{\sigma}_\alpha, \tilde{\langle A \rangle}, \tilde{\sigma}_{\langle A \rangle}, &\{\langle N_\text{tot} \rangle, \langle A \rangle, \alpha, \sigma_{I_A}\}\,\vert\, [I_A, A], \mu_N, \sigma_N) \propto\\
-&{1 \over (\tilde{\alpha}_\text{max} - \tilde{\alpha}_\text{min})(\tilde{\langle A \rangle}_\text{max} - \tilde{\langle A \rangle}_\text{min})\sigma_N^n(\tilde{\sigma}_\alpha\tilde{\sigma}_{\langle A \rangle})^{n + 1}}\,\times\,\\
+&{1 \over (\tilde{\alpha}_\text{max} - \tilde{\alpha}_\text{min})(\tilde{\langle A \rangle}_\text{max} - \tilde{\langle A \rangle}_\text{min})\sigma_N^n(\tilde{\sigma}_\alpha\tilde{\sigma}_{\langle A \rangle})^{n + 1} }\,\times\\
 &\prod\limits_{j=1}^n\exp\left[-{(\langle N \rangle_j^{(i)} - \mu_N)^2 \over 2\sigma_N^2} - {(\alpha_j - \tilde{\alpha})^2 \over 2\tilde{\sigma}_\alpha^2} - {(\langle A \rangle_j - \tilde{\langle A \rangle})^2 \over 2\tilde{\sigma}_{\langle A \rangle}^2}\right]\,\times\,\\ 
-&{1 \over (\sigma_{{I_A}_j}\sigma_{\langle A \rangle_j})^{k_j + 1}}\prod\limits_{i=1}^{k_j}\exp\left[-{(A_j^{(i)} - \langle A \rangle_j)^2 \over 2\sigma^{(i)2}_{\langle A \rangle_j}} - {\left({I_A}_{j}^{(i)} - {\alpha_j \langle N_\text{tot}\rangle_j \over \langle A \rangle_j}\right)\over 2\sigma_{{I_A}_j}^{(i)2}}\right]
-\end{aligned},
+&{1 \over (\sigma_{ {I_A}_j}\sigma_{\langle A \rangle_j})^{k_j + 1} }\prod\limits_{i=1}^{k_j}\exp\left[-{(A_j^{(i)} - \langle A \rangle_j)^2 \over 2\sigma^{(i)2}_{\langle A \rangle_j} } - {\left({I_A}_{j}^{(i)} - {\alpha_j \langle N_\text{tot}\rangle_j \over \langle A \rangle_j}\right)\over 2\sigma_{ {I_A}_j}^{(i)2} }\right]
+\end{aligned}
 $${#eq:cal_factor_posterior}
 where the braces $\{\dots\}$ represent the set of parameters for biological
 replicates and the brackets $[\dots]$ correspond to the set of single-cell
@@ -273,49 +272,87 @@ lower bound of the 95\% credible region as superscript and subscript,
 respectively. These values and associated errors were used in the calculation
 of channel copy number.
 
-![Posterior distributions for hyper-parameters and replicate parameters. (A) The posterior probability distribution for $\tilde{\alpha}$ and $\tilde{\langle A \rangle}$. Probability increases from light to dark red. The replicate parameter (blue) and hyper-parameter (red) marginalized posterior probability distributions for $\alpha$ (B) and $\langle A \rangle$ (C).](../figs/figS3.pdf){#fig:mscl_posterior_samples}
+![**Posterior distributions for hyper-parameters and replicate parameters.** (A)
+The posterior probability distribution for $\tilde{\alpha}$ and
+$\tilde{\langle A \rangle}$. Probability increases from light to dark red.
+The replicate parameter (blue) and hyper-parameter (red) marginalized
+posterior probability distributions for $\alpha$ (B) and $\langle A \rangle$
+(C).](ch9_figS4){#fig:mscl_posterior_samples short-caption="Posterior
+distributions for hyper-parameters and replicate parameters."}
 
 ### Effect of correction
 
-&nbsp;&nbsp;&nbsp;&nbsp; The posterior distributions for $\alpha$ and $\langle A \rangle$ shown in [@Fig:posterior_samples]
-were used directly to compute the most-likely channel copy number for each measurement of the Shine-Dalgarno mutant strains, as is described in the coming section (*Logistic Regression*). The importance of this correction can be seen in [@Fig:area_correction]. Cells with low abundance of MscL channels exhibit notable morphological defects, as illustrated in [@Fig:area_correction]A. While these would all be considered single cells, the two-dimensional area of each may be comparable to two or three wild-type cells. For all of the Shine-Dalgarno mutants, the distribution of projected cell area has a long tail, with the extremes reaching 35 µm$^2$ per cell ([@Fig:area_correction]B). Calcuating the total number of channels per cell  does nothing to decouple this correlation between cell area and measured cell intensity. [@Fig:area_correction]C shows the correlation between cell area and the total number of channels without normalizing to an average cell size $\langle A \rangle$ differentiated by their survival after an osmotic down-shock. This correlation is removed by calculating an effective channel copy number shown in [@Fig:area_correction]D. 
+&nbsp;&nbsp;&nbsp;&nbsp; The posterior distributions for $\alpha$ and $\langle A
+\rangle$ shown in @Fig:posterior_samples were used directly to compute the
+most-likely channel copy number for each measurement of the Shine-Dalgarno
+mutant strains, as is described in the coming section.
+The importance of this correction can be seen in @Fig:area_correction. Cells
+with low abundance of MscL channels exhibit notable morphological defects, as
+illustrated in @Fig:area_correction (A). While these would all be considered
+single cells, the two-dimensional area of each may be comparable to two or three
+wild-type cells. For all of the Shine-Dalgarno mutants, the distribution of
+projected cell area has a long tail, with the extremes reaching 35
+$\mu\text{m}^2$ per cell [@Fig:area_correction (B)]. Calculating the total number
+of channels per cell  does nothing to decouple this correlation between cell
+area and measured cell intensity. @Fig:area_correction (C) shows the correlation
+between cell area and the total number of channels without normalizing to an
+average cell size $\langle A \rangle$ differentiated by their survival after an
+osmotic down-shock. This correlation is removed by calculating an effective
+channel copy number shown in @Fig:area_correction (D). 
 
-![**Influence of area correction for Shine-Dalgarno mutants.** (A) Representative images of aberrant cell morphologies found in low-expressing Shine-Dalgarno mutants. (B) Empirical cumulative distribution of two-dimensional projected cell area for the standard candle strain MLG910 (gray line) and for all Shine-Dalgarno mutants (red line). (C) The correlation between channel copy number and cell area without the area correction. (D) The correlation between effective channel copy number and cell area with the area correction applied. ](../figs/figS2.pdf){#fig:area_correction}
-
+![**Influence of area correction for Shine-Dalgarno mutants.** (A)
+Representative images of aberrant cell morphologies found in low-expressing
+Shine-Dalgarno mutants. (B) Empirical cumulative distribution of
+two-dimensional projected cell area for the standard candle strain MLG910
+(gray line) and for all Shine-Dalgarno mutants (red line). (C) The
+correlation between channel copy number and cell area without the area
+correction. (D) The correlation between effective channel copy number and
+cell area with the area correction applied.
+](ch9_figS5){#fig:area_correction short-caption="Influence of area
+correction for Shine-Dalgarno mutants."}
 
 ### Choice of growth medium
 
 &nbsp;&nbsp;&nbsp;&nbsp; To measure the calibration factor, we chose to grow
 the MLG910 *E. coli* strain in LB Miller medium as was performed in
-Bialecka-Fornal et al. 2012 [@bialecka-fornal2012], despite the fact that the
+@bialecka-fornal2012, despite the fact that the
 Shine-Dalgarno sequence mutants used in this work were grown in LB
 supplemented with 500 mM NaCl. While a variety of growth media were tested in
-Bialecka-Fornal et al. 2012, the MscL-sfGFP copy number was not measured in
+@bialecka-fornal2012, the MscL-sfGFP copy number was not measured in
 this high-salt medium. To test if the calibration factor was dependent on the
 growth medium, we compared the estimated calibration factor in LB to that
-estimated in M9 supplemented with 0.5% glucose. These two media have starkly
+estimated in M9 supplemented with 0.5\% glucose. These two media have starkly
 different compositions, serving as a good probe of the sensitivity of the calibration
 factor to intracellular chemistry.
 
 &nbsp;&nbsp;&nbsp;&nbsp; *E. coli* strain MLG910 expressing an MscL-sfGFP
-fusion was grown in LB Miller, LB + 500 mM NaCl, and in M9 + 0.5% glucose to
-early exponential phase (OD~600nm~ $\sim$ 0.3) and were imaged on a rigid
-agarose substrate. The cumulative intensity distributions for these growth
-media are shown in [@Fig:cal_comparison]. There is a notable difference in
-the fluorescence distribution between LB Miller (blue line) and M9 + 0.5%
+fusion was grown in LB Miller, LB + 500 mM NaCl, and in M9 + 0.5\% glucose to
+early exponential phase (OD$_{600\text{nm} }$ $\approx$ 0.3) and were imaged on
+a rigid agarose substrate. The cumulative intensity distributions for these
+growth media are shown in @Fig:cal_comparison. There is a notable difference
+in the fluorescence distribution between LB Miller (blue line) and M9 + 0.5\%
 glucose (red), as is expected given the estimated channel copy numbers
-reported in [@bialecka-fornal2012]. The fluorescence distribution from MLG910
+reported in @bialecka-fornal2012. The fluorescence distribution from MLG910
 grown in LB + 500 mM NaCl (green line) is similar, yet not identical, to that
 grown in LB Miller broth. Using the count of 340 $\pm$ 68 and 466 $\pm$ 64
-channels per cell for MLG910 grown in LB Miller and M9 + 0.5% glucose,
-respectively, coupled with the measurements shown in [@Fig:cal_comparison] we
+channels per cell for MLG910 grown in LB Miller and M9 + 0.5\% glucose,
+respectively, coupled with the measurements shown in @Fig:cal_comparison we
 computed the posterior probability distribution of the calibration factor for
-each medium ([@Fig:cal_comparison] B). We found that these posterior
-distributions largely overlap, although the modes are distinctly different. 
-We note that the calibration factor obtained
-from LB Miller completely overlaps that obtained from the M9 + 0.5% glucose
-data, suggesting that the error propagated through the final channel
-calculation accounts for any difference between the growth medium chosen.
+each medium [@Fig:cal_comparison (B)]. We found that these posterior
+distributions largely overlap, although the modes are distinctly different.
+We note that the calibration factor obtained from LB Miller completely
+overlaps that obtained from the M9 + 0.5\% glucose data, suggesting that the
+error propagated through the final channel calculation accounts for any
+difference between the growth medium chosen.
 
-![**MLG910 intensity measurements and calibration factor estimation in different growth media.** (A) Cumulative distribution of  measured areal intensity (arbitrary units per square micron) measured for a collection of MLG910 cells grown in LB Miller medium (blue, medium used for calibration factor in this work), M9 + 0.5% glucose (red), and LB + 500mM NaCl (green, medium used for osmotic shock experiments). (B) Posterior probability distributions for the calibration factor (arbitrary units per MscL channel) estimated using MLG910 as a standard candle grown in LB miller (blue) and M9 + 0.5% glucose (red).](../figs/figRX_calibration_factor.png){#fig:cal_comparison} 
-ggk
+![**MLG910 intensity measurements and calibration factor estimation in
+different growth media.** (A) Cumulative distribution of measured areal
+intensity (arbitrary units per square micron) measured for a collection of
+MLG910 cells grown in LB Miller medium (blue, medium used for calibration
+factor in this work), M9 + 0.5\% glucose (red), and LB + 500mM NaCl (green,
+medium used for osmotic shock experiments). (B) Posterior probability
+distributions for the calibration factor (arbitrary units per MscL channel)
+estimated using MLG910 as a standard candle grown in LB miller (blue) and M9
++ 0.5\% glucose (red).](../figs/figRX_calibration_factor.png){#fig:cal_comparison
+short-caption="MLG910 intensity measurements and calibration factor estimation
+in different growth media."}

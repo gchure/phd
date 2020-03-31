@@ -75,10 +75,10 @@ the maturation time of the superfolder GFP protein. We constructed a
 chromosomal integration of sfGFP expressed from a promoter under regulation
 from plasmid-borne TetR (*E. coli* MG1655 K12
 *$\Delta$lacIZYA ybcN::sfGFP*) . These cells were allowed to grow in LB
-supplemented with 500 mM NaCl held at 37°C to an OD~600nm~ of approximately
+supplemented with 500 mM NaCl held at 37$^\circ$C to an OD$_{600\text{nm}}$ of approximately
 0.3. At this time, transcription and translation of the sfGFP gene was
 induced by addition of 10 ng/mL of anhydrous tetracycline. This expression
-was allowed to occur for three minutes before the addition of 100 µg/mL of
+was allowed to occur for three minutes before the addition of 100 $\mu$g/mL of
 kanamycin, ceasing proper protein synthesis. Three minutes of expression was
 chosen to provide enough time for transcription and translation. The sfGFP
 variant used in this work is 1155 base pairs. We can assume that the rate for
@@ -93,7 +93,7 @@ induction to three minutes before translation was ceased.
 
 The excess anhydrous tetracycline was removed from the culture through
 centrifugation and washing with one volume of LB supplemented with 500 mM
-NaCl and 100 µg/mL kanamycin at 37°C. The maturation of sfGFP was then
+NaCl and 100 $\mu$g/mL kanamycin at 37$^\circ$C. The maturation of sfGFP was then
 monitored through flow cytometry by measuring the mean expression of 100,000
 cells every 60 to 90 seconds. The result of these measurements are shown in
 @Fig:maturation_time.
