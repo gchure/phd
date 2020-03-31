@@ -149,7 +149,7 @@ standard deviations from the reported values, the differences were always
 less than $1~k_BT$, which represents a small change in the biological scales
 we are considering. The biggest discrepancy between our fit values and the
 previous measurements arose for the synthetic Oid operator, which we discuss
-in more detail in the coming sections of this chapter.
+in more detail in the following section of this chapter.
 
 | **Parameter** | **Reported Values** [@garcia2011] | **Global Fit**|
 |:--|:--:|--:|
@@ -165,7 +165,7 @@ in more detail in the coming sections of this chapter.
 | O2 $\Delta\varepsilon_{RA}$ | $-13.9\pm 0.2 \, k_BT$| $-13.06^{+0.1}_{-0.1}\, k_BT$ |
 | O3 $\Delta\varepsilon_{RA}$ | $-9.7\pm 0.1\, k_BT$ | $-9.4^{+0.1}_{-0.1}\, k_BT$ |
 | Oid $\Delta\varepsilon_{RA}$| $-17.0 \pm 0.2\, k_BT$| $-17.7^{+0.2}_{-0.1}\, k_BT$ |
-Table : Global parameter estimates and comparison to previously reported values. 
+Table 6.2: Global parameter estimates and comparison to previously reported values. 
 
 ![**Global fit of dissociation constants, repressor copy numbers, and binding
 energies.** Theoretical prediction resulting from simultaneous estimation of
@@ -186,3 +186,14 @@ agreement between the predicted $[EC_{50}]$ and the effective Hill
 coefficient remain poor due the theory being unable to capture the steepness
 of the response curves.
 
+![**Key properties of induction profiles as predicted with a global fit using all
+data.** Data for (A) leakiness, (B) saturation, and (C) dynamic range are
+computed directly from measured fold-change. Points and errors correspond to the
+mean and standard error of 10 - 11 biological replicates. Points in (D) and (E)
+for the [EC$_{50}$] and the effective Hill coefficient, respectively, represent
+the estimated value using parameter estimates of $K_A$ and $K_I$ for that
+particular strain. Errors represent the width of the 95\% credible region. In
+all plots, curves represent the theoretical predictions given the parameter
+estimates conditioned on all datasets.](ch6_figS13){#fig:properties_global_fit
+short-caption="Key properties of induction profiles as predicted with a global
+fit using all data."}

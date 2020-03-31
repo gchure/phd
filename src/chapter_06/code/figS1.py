@@ -19,7 +19,7 @@ ki = data_a[data_a.parameter == 'logKI']
 c_range = np.logspace(-8, -2, 500)
 R = 260
 ep_r = -13.9
-_colors = sns.color_palette('viridis', n_colors=len(data_b))
+_colors = sns.color_palette('magma', n_colors=len(data_b)+1)
 
 def foldchange(c, R, ep_ai, ep_r, ep_a, ep_i):
     mwc_term = (1 + c / ep_a)**2 * (1 + np.exp(-ep_ai)) / ((1 + c / ep_a)**2 +
@@ -32,7 +32,7 @@ phd.viz.despine(ax)
 _ = ax[0].set_xlabel(r'allosteric parameter $\Delta\varepsilon_{AI}\,(k_BT)$')
 _ = ax[0].set_ylabel(r'best-fit parameter value')
 _ = ax[1].set_xscale('log')
-_ = ax[1].set_xlabel('IPTG [M]')
+_ = ax[1].set_xlabel('IPTG [µM]')
 _ = ax[1].set_ylabel('fold-change')
 
 # Plots for panel (A)
