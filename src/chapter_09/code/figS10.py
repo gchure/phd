@@ -132,7 +132,7 @@ logit = beta_0 + beta_1 * np.log(X) + beta_2 * Y
 prob = (1 + np.exp(-logit))**-1
 
 # Plot the contours of probability. 
-_ = ax[3].contourf(X, Y, prob, cmap='viridis', levels=[0, 0.2, 0.4, 0.6, 0.8, 0.9, 1])
+_ = ax[3].contourf(X, Y, prob, cmap='magma', levels=[0, 0.2, 0.4, 0.6, 0.8, 0.9, 1])
 _cont = ax[3].contour(X, Y, prob, colors='w', levels = [0, 0.2, 0.4, 0.6, 0.8, 0.9, 1])
 
 # Plot the points of cells.
