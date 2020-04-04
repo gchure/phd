@@ -1,4 +1,4 @@
-# %%
+#%%
 import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib.gridspec as gridspec
@@ -74,7 +74,7 @@ for a in (ax1, ax2):
     a.set_yticks([])
 plt.tight_layout()
 plt.savefig('../figs/ch9_figS4.png', bbox_inches='tight')
-plt.savefig('../figs/ch9_fig4.pdf', bbox_inches='tight')
+plt.savefig('../figs/ch9_figS4.pdf', bbox_inches='tight')
 
 
 # %%
