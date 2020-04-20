@@ -2,7 +2,7 @@
 
 ### Bacterial Strains and DNA Constructs
 
-All strains used in these experiments were derived from *E. coli* K12
+&nbsp;&nbsp;&nbsp;&nbsp;All strains used in these experiments were derived from *E. coli* K12
 MG1655 with the *lac* operon removed, adapted from those created and
 described in @garcia2011. Briefly, the operator variants and YFP reporter gene were
 cloned into a pZS25 background which contains a *lacUV5* promoter that
@@ -22,7 +22,7 @@ Integration was confirmed by PCR amplification of the replaced
 chromosomal region and by sequencing. Primers and final strain genotypes
 are listed in supplemental Chapter 7.
 
-It is important to note that the rest of the *lac* operon (*lacZYA*) was
+&nbsp;&nbsp;&nbsp;&nbsp;It is important to note that the rest of the *lac* operon (*lacZYA*) was
 never expressed. The LacY protein is a transmembrane protein which
 actively transports lactose as well as IPTG into the cell. As LacY was
 never produced in our strains, we assume that the extracellular and
@@ -30,7 +30,7 @@ intracellular IPTG concentration was approximately equal due to
 diffusion across the membrane into the cell as is suggested by previous
 work [@fernandez-castane2012].
 
-To make this theory applicable to transcription factors with any number
+&nbsp;&nbsp;&nbsp;&nbsp;To make this theory applicable to transcription factors with any number
 of DNA binding domains, we used a different definition for repressor
 copy number than has been used previously. We define the LacI copy
 number as the average number of repressor dimers per cell whereas in @garcia2011,
@@ -47,7 +47,7 @@ of repressors reported in @garcia2011 by a factor of two. This factor is include
 as a keyword argument in the numerous Python functions used to perform
 this analysis, as discussed in the code documentation.
 
-A subset of strains in these experiments were measured using fluorescence
+&nbsp;&nbsp;&nbsp;&nbsp;A subset of strains in these experiments were measured using fluorescence
 microscopy for validation of the flow cytometry data and results. To aid in
 the high-fidelity segmentation of individual cells, the strains were modified
 to constitutively express an mCherry fluorophore. This reporter was cloned
@@ -57,7 +57,7 @@ performed using these strains.
 
 ### Growth Conditions for Flow Cytometry Measurements
 
-All measurements were performed with *E. coli* cells grown to
+&nbsp;&nbsp;&nbsp;&nbsp;All measurements were performed with *E. coli* cells grown to
 mid-exponential phase in standard M9 minimal media (M9 5X Salts,
 Sigma-Aldrich M6030; $2\,\text{mM}$ magnesium sulfate, Mallinckrodt
 Chemicals 6066-04; $100\,\mu\text{M}$ calcium chloride, Fisher
@@ -85,13 +85,13 @@ all experiments described in this work.
 
 ### Flow Cytometry
 
-Unless explicitly mentioned, all fold-change measurements were collected
+&nbsp;&nbsp;&nbsp;&nbsp;Unless explicitly mentioned, all fold-change measurements were collected
 on a Miltenyi Biotec MACSquant Analyzer 10 Flow Cytometer graciously
 provided by the Pamela Björkman lab at Caltech. Detailed information
 regarding the voltage settings of the photo-multiplier detectors can be
 found in the supplemental Chapter 7. 
 
-Prior to each
+&nbsp;&nbsp;&nbsp;&nbsp;Prior to each
 day’s experiments, the analyzer was calibrated using MACSQuant
 Calibration Beads (Cat. No. 130-093-607) such that day-to-day
 experiments would be comparable. All YFP fluorescence measurements were
@@ -109,7 +109,7 @@ extracted and immediately processed using the following methods.
 
 ### Unsupervised Gating of Flow Cytometry Data
 
-Flow cytometry data will frequently include a number of spurious events
+&nbsp;&nbsp;&nbsp;&nbsp;Flow cytometry data will frequently include a number of spurious events
 or other undesirable data points such as cell doublets and debris. The
 process of restricting the collected data set to those data determined
 to be “real” is commonly referred to as gating. These gates are
@@ -117,7 +117,7 @@ typically drawn manually  and restrict the data set to those points
 which display a high degree of linear correlation between their
 forward-scatter (FSC) and side-scatter (SSC). The development of
 unbiased and unsupervised methods of drawing these gates is an active
-area of research . For our purposes, we assume that the fluorescence
+area of research [@lo2008k; @aghaeepour2013]. For our purposes, we assume that the fluorescence
 level of the population should be log-normally distributed about some
 mean value. With this assumption in place, we developed a method that
 allows us to restrict the data used to compute the mean fluorescence
@@ -129,7 +129,7 @@ reside within the 40th percentile. This procedure is described in more
 detail in the supplemental Chapter 7.
 
 ### Experimental Determination of Fold-Change
-For each strain and IPTG concentration, the fold-change in gene
+&nbsp;&nbsp;&nbsp;&nbsp;For each strain and IPTG concentration, the fold-change in gene
 expression was calculated by taking the ratio of the population mean YFP
 expression in the presence of LacI repressor to that of the population
 mean in the absence of LacI repressor. However, the measured
@@ -147,8 +147,7 @@ $\langle I_\text{auto} \rangle$ is the average cell autofluorescence
 intensity, as measured from cells that lack the *lac*-YFP construct.
 
 ### Bayesian Parameter Estimation
-
-In this work, we determine the the most likely parameter values for the
+&nbsp;&nbsp;&nbsp;&nbsp;In this work, we determine the the most likely parameter values for the
 inducer dissociation constants $K_A$ and $K_I$ of the active and
 inactive state, respectively, using Bayesian methods. We compute the
 probability distribution of the value of each parameter given the data
@@ -200,9 +199,9 @@ and $K_I$ that provides better agreement between theoretical fold-change
 predictions and experimental measurements will result in a more probable
 likelihood.
 
-Both mathematically and numerically, it is convenient to define
-$\tilde{k}_A = -\log \frac{K_A}{1\,\text{M}}$ and
-$\tilde{k}_I = -\log \frac{K_I}{1\,\text{M}}$ and fit for these
+&nbsp;&nbsp;&nbsp;&nbsp;Both mathematically and numerically, it is convenient to define
+$\tilde{k}_A = -\log \frac{K_A}{1\,\mu\text{M}}$ and
+$\tilde{k}_I = -\log \frac{K_I}{1\,\mu\text{M}}$ and fit for these
 parameters on a log scale. Dissociation constants are scale invariant,
 so that a change from $10\,\mu\text{M}$ to $1\,\mu\text{M}$ leads to
 an equivalent increase in affinity as a change from $1\,\mu\text{M}$
@@ -223,14 +222,14 @@ ranges uniform on the range of $-7$ to $7$, although we note that
 this particular choice does not affect the outcome provided the chosen
 range is sufficiently wide.
 
-Putting all these terms together we can now sample from $P(\tilde{k}_A,
+&nbsp;&nbsp;&nbsp;&nbsp;Putting all these terms together we can now sample from $P(\tilde{k}_A,
 \tilde{k}_I, \sigma \mid D)$ using Markov chain Monte Carlo  to compute the most
 likely parameter as well as the error bars (given by the 95\% credible region)
 for $K_A$ and $K_I$.
 
 ## Data Curation
 
-All of the data used in this work as well as all relevant code can be
+&nbsp;&nbsp;&nbsp;&nbsp;All of the data used in this work as well as all relevant code can be
 found at this [dedicated
 website](http://rpgroup-pboc.github.io/mwc_induction). Data were
 collected, stored, and preserved using the Git version control software

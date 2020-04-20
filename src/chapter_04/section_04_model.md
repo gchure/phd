@@ -12,14 +12,14 @@ fold-change in gene expression and is of the form
 
 
 $$
-\text{fold-change} = \left(1 + p_{act}(c)\frac{R}{N_{NS}}e^{-\Delta\varepsilon_R
+\text{fold-change} = \left(1 + p_{act}(c)\frac{R}{N_{NS}}e^{-\Delta\varepsilon_{RA}
 / k_BT}\right)^{-1},
 $${#eq:foldchange_simple} 
 
 
 where $R$ is the total number of allosteric repressors per cell, $N_{NS}$ is
 the number of nonspecific binding sites for the repressor,
-$\Delta\varepsilon_R$ is the repressor-DNA binding energy, and $k_BT$ is the
+$\Delta\varepsilon_{RA}$ is the repressor-DNA binding energy, and $k_BT$ is the
 thermal energy of the system. The prefactor $p_{act}(c)$ defines the
 probability of the repressor being in the active state at a given concentration
 of inducer $c$. In the absence of inducer, $p_{act}(c = 0)$ can be written as

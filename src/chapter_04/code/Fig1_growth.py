@@ -1,16 +1,3 @@
-"""
-Author: 
-    Griffin Chure
-License:
-    MIT
-Description:
-    This script generates both plots seen in figure 1. The first plots
-    representative growth curves of each carbon source and temperature. The
-    second makes a jitter plot of the maximum growth rate for each condition.
-Required Data Sets:
-    compiled_growth_plates.csv
-    compiled_growth_statistics.csv
-"""
 #%%
 import numpy as np 
 import pandas as pd 
@@ -77,14 +64,12 @@ sub_plates = pd.concat(_sub_plates)
 #%%
 # Choose representable samples. 
 #Define the colors
-fill_colors = {'acetate': colors['light_brown'], 'glycerol': colors['light_green'],
-               'glucose':colors['light_purple'], 37: colors['light_purple'],
-               32:colors['light_blue'], 42:colors['light_red']}
-edge_colors = {'acetate': colors['dark_brown'], 'glycerol': colors['dark_green'],
-               'glucose':colors['dark_purple'], 37: colors['dark_purple'],
-               32:colors['dark_blue'], 42:colors['dark_red']}
+fill_colors = {'acetate': colors['brown'], 'glycerol': colors['green'],
+               'glucose':colors['purple'], 37: colors['purple'],
+              32:colors['blue'], 42:colors['red']}
 
 fig, ax = plt.subplots(1, 1, figsize=(3.25, 2), dpi=300)
+phd.viz.despine(ax)
 ax.xaxis.set_tick_params(labelsize=8)
 ax.yaxis.set_tick_params(labelsize=8)
 ax.set_xticks([0, 100, 300, 500])
@@ -97,18 +82,19 @@ temps = [37, 37, 37, 32, 42]
 for c, t, l, v in zip(carbs, temps, labels, vals):
     for g, d in sub_plates[(sub_plates['carbon']==c) & (sub_plates['temp_C']==t)].groupby('carbon'):
         grp = d.groupby('time_min')['rel_od'].agg(('mean', 'std')).reset_index()
-        ax.errorbar(grp['time_min'], grp['mean'], grp['std'], capsize=1.5, fmt='.', ms=3,
-                lw=.75, label=l, linestyle='-', markerfacecolor=fill_colors[v],
-                color=edge_colors[v], markeredgewidth=0.5)
+        ax.errorbar(grp['time_min'], grp['mean'], grp['std'], capsize=1, fmt='o', ms=6,
+                lw=.75, label=l, markerfacecolor=fill_colors[v],
+                color=fill_colors[v], markeredgewidth=0.4, markeredgecolor=colors['grey'])
 
 ax.legend(handlelength=1, fontsize=6)
 ax.set_xlabel('time [min]', fontsize=8)
 ax.set_ylabel('relative OD$_{600nm}$', fontsize=8)
-plt.savefig('../figs/fig1_growth_curve_comparison.svg', bbox_inches='tight')
+plt.savefig('../figs/ch4_fig1_growth_curves.svg', bbox_inches='tight')
 
 #%%
 # Instantiate the figure canvas
 fig, ax = plt.subplots(1, 1, figsize=(3.25, 2))
+phd.viz.despine(ax)
 ax.xaxis.set_tick_params(labelsize=6)
 ax.yaxis.set_tick_params(labelsize=8)
 
@@ -123,29 +109,31 @@ temps.loc[temps['temp_C']==32, 'pos'] = 2
 # Plot the scatters
 for g, d in carbs.groupby(['carbon', 'pos']):
     if g[0] != 'glucose':
-        ax.errorbar(np.random.normal(g[1], 0.1, len(d)), d['growth_rate'], d['growth_err'], fmt='.', 
-                alpha=0.75, markerfacecolor=fill_colors[g[0]], markeredgecolor=edge_colors[g[0]],
-                markeredgewidth=0.75, ms=8, linestyle='none', capsize=1.5, color=edge_colors[g[0]])
+        ax.errorbar(np.random.normal(g[1], 0.1, len(d)), d['growth_rate'], d['growth_err'], fmt='o', 
+                alpha=0.75, markerfacecolor=fill_colors[g[0]], markeredgecolor=colors['grey'],
+                markeredgewidth=0.5, ms=5, linestyle='none', capsize=1, color=fill_colors[g[0]])
 for g, d in temps.groupby(['temp_C', 'pos']):
-    ax.errorbar(np.random.normal(g[1], 0.1, len(d)), d['growth_rate'], d['growth_err'], fmt='.', 
-                alpha=0.75, markerfacecolor=fill_colors[g[0]], markeredgecolor=edge_colors[g[0]],
-                markeredgewidth=0.75, ms=8, linestyle='none', capsize=1.5, color=edge_colors[g[0]])
+    ax.errorbar(np.random.normal(g[1], 0.1, len(d)), d['growth_rate'], d['growth_err'], fmt='o', 
+                alpha=0.75, markerfacecolor=fill_colors[g[0]], markeredgecolor=colors['grey'],
+                markeredgewidth=0.75, ms=5, linestyle='none', capsize=1.5, color=fill_colors[g[0]])
 
 glu = carbs[carbs['carbon']=='glucose']
-ax.errorbar(np.random.normal(4, 0.1, len(glu)), glu['growth_rate'], glu['growth_err'], fmt='.',
-           alpha=0.75, markerfacecolor=fill_colors['glucose'], markeredgecolor=edge_colors['glucose'],
-           color=edge_colors['glucose'], markeredgewidth=0.75, ms=8, linestyle='none', capsize=1.5)
+ax.errorbar(np.random.normal(4, 0.1, len(glu)), glu['growth_rate'], glu['growth_err'], fmt='o',
+           alpha=0.75, markerfacecolor=fill_colors['glucose'], markeredgecolor=colors['grey'],
+           color=fill_colors['glucose'], markeredgewidth=0.75, ms=5, linestyle='none', capsize=1.5)
 
 ax.set_ylabel('growth rate [hr$^{-1}$]', fontsize=8)
 ax.set_xticks([0, 1, 2, 3, 4])
 ax.set_xticklabels(['acetate\n37° C', 'glycerol\n37 °C', 'glucose\n32 °C',
                     'glucose\n42° C', 'glucose\n 37°C'], 
                     fontsize=8)
+
 ax.set_xlabel('growth condition', fontsize=8)
 ax.xaxis.grid(False)
 ax.set_xlim([-0.5, 4.5])
-# ax.set_yscale('log')
 ax.set_ylim([0.15, 0.7])
-plt.savefig('../figs/Fig1_growth_rate_jitter.svg', bbox_inches='tight')
+plt.savefig('../figs/ch4_fig1_growth_rate_jitter.svg', bbox_inches='tight')
+
+
 
 # %%

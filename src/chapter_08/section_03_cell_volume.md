@@ -27,8 +27,10 @@ the camera interpixel distance.
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;We approximated each segmented cell as a cylinder of length $a$ and
 radius $r$ capped on each end by hemispheres with a radius $r$. With
 these measurements in hand, the total cell volume was computed as
-$$V_\text{\itshape cell} =\pi r^2 \left(a + \frac{4}{3}r\right).
-\label{eq:cell_volume}$$ The output of the SuperSegger segmentation
+$$
+V_\text{cell} =\pi r^2 \left(a + \frac{4}{3}r\right).
+$${#eq:cell_volume}
+The output of the SuperSegger segmentation
 process is an individual matrix for each cell with a variety of
 fluorescence statistics and information regarding the cell shape. Of the
 latter category, the software reports in pixels the total length $\ell$
@@ -37,10 +39,11 @@ we computed the radius $r$ of the spherocylinder as
 $$
 r = \frac{w}{2}
 $${#eq:radius}
- and the cylinder length $a$ as 
- $$
- a = \ell - w.
- $${#eq:length}
+and the cylinder length $a$ as 
+
+$$
+a = \ell - w.
+$${#eq:length}
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;@Fig:cell_shape shows the validity of modeling the
 segmentation masks as a spherocylinder in two dimensions. Here, the thin

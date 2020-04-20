@@ -159,7 +159,7 @@ of MscL or MscS should be necessary for 100% protection given our knowledge
 of the conductance and the maximal water flux through the channel in its open
 state [@louhivuori2010; @booth2014]. However, recent proteomic studies have
 revealed average MscL copy numbers to be in the range of several hundred per
-cell, depending on the condition, as can be seen in Table 1 [@li2014a;
+cell, depending on the condition, as can be seen in Table 5.1 [@li2014a;
 @schmidt2016; @soufi2015]. Studies focusing solely on MscL have shown similar
 counts through quantitative Western blotting and fluorescence microscopy
 [@bialecka-fornal2012]. Electrophysiology studies have told another story
@@ -191,3 +191,5 @@ life or death.
 Table: Measured cellular copy numbers of MscL. Asterisk (\*) Indicates
 inferred MscL channel copy number from the total number of detected MscL
 peptides.
+
+

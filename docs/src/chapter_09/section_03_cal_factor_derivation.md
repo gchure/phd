@@ -152,11 +152,11 @@ for $\langle A \rangle$.
 Piecing @Eq:area_likelihood through @Eq:area_uniform_prior together generates a complete posterior probability distribution for the parameters given a single cell measurement. This can be generalized to a set of $k$ single cell measurements as
 $$
 \begin{aligned}
-g(\alpha,\langle A \rangle, \langle N_\text{tot} & \rangle, \sigma_{I_A}, \sigma_{\langle A \rangle}\,\vert\, [I_A, A], \mu_N, \sigma_N) \propto {1 \over (\alpha_\text{max} - \alpha_\text{min})(\langle A \rangle_\text{max} - \langle A \rangle_\text{min})}{1 \over (\sigma_{I_A}\sigma_{\langle A \rangle})^{k+1} }\,\times\\
+g(\alpha,\langle A \rangle, \langle N_\text{tot} & \rangle, \sigma_{I_A}, \sigma_{\langle A \rangle}\,\vert\, [I_A, A], \mu_N, \sigma_N) \propto {1 \over (\alpha_\text{max} - \alpha_\text{min})(\langle A \rangle_\text{max} - \langle A \rangle_\text{min})}{1 \over (\sigma_{I_A}\sigma_{\langle A \rangle})^{k+1} }\,\times\\\\
 &{1 \over \sigma_N}\exp\left[- {(\langle N_\text{tot}\rangle - \mu_N)^2 \over 2\sigma_N^2}\right]
 \prod\limits_i^k\exp\left[-{(A^{(i)} - \langle A \rangle)^2 \over 2\sigma_{\langle A \rangle}^2} - {\left(I_A^{(i)} - {\alpha \langle N_\text{tot}\rangle \over \langle A \rangle}\right)^2 \over 2\sigma_{I_A}^2}\right] \end{aligned},
 $${#eq:single_rep_post}
-where $[I_A, A]$ represents the set of $k$ single-cell measurements.
+where $[I_A, A]$ represents the set of $k$ single-cell measurements.****
 
 &nbsp;&nbsp;&nbsp;&nbsp;As small variations in the day-to-day details of cell
 growth and sample preparation can alter the final channel count of the

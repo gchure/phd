@@ -17,7 +17,7 @@ estimate the average brightness of a single fluorophore or, in other words,
 determine a calibration factor $\alpha$ that permits translation from copy
 number to intensity or vice versa. Several methods have been used over the
 past decade to estimate this factor, such as measuring single-molecule
-photobleaching steps [@garcia2011a; @bialecka-fornal2012], measurement of *in
+photobleaching steps [@garcia2011c; @bialecka-fornal2012], measurement of *in
 vivo* photobleaching rates [@nayak2011; @kim2016], and through measuring the
 partitioning of fluorescent molecules between sibling cells after cell
 division [@rosenfeld2005; @rosenfeld2006; @brewster2014]. In this work, we
@@ -189,7 +189,6 @@ quantified.](ch8_figS3){#fig:growth_si_microscopy_workflow short-caption="An exp
 workflow for determination of a fluorescence calibration factor."}
 
 ### Lineage Tracking and Fluorescence Quantification
-
 
 Segmentation and lineage tracking of both the fluorescence snap shots
 and time-lapse growth images were performed using the SuperSegger
@@ -560,7 +559,7 @@ single cell division event coupled with direct measurement of the repressor
 copy number using the same binomial partitioning method. This implementation
 required an extensive degree of manual curation of segmentation as well as
 correcting for photobleaching of the reporter, which in itself is a
-non-trivial correction [@garcia2011a]. The experimental approach presented
+non-trivial correction [@garcia2011c]. The experimental approach presented
 here sacrifices a direct measure of the repressor copy number for each cell
 via the binomial partitioning method, but permits the much higher throughput
 needed to assay the variety of environmental conditions. Ultimately, the
