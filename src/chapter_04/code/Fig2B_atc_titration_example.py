@@ -1,14 +1,3 @@
-"""
-Author: 
-    Griffin Chure
-License: 
-     MIT
-Description:
-    This script generates the example ATC titration shown in Fig. 1 
-
-Required Data Sets:
-    analyzed_foldchange.csv
-"""
 #%%
 import numpy as np 
 import matplotlib.pyplot as plt
@@ -16,7 +5,6 @@ import pandas as pd
 import phd.stats
 import phd.viz
 colors, color_list = phd.viz.phd_style()
-
 
 carbon = 'glucose'
 temp = 37 
@@ -49,12 +37,12 @@ phd.viz.titlebox(ax2, 'glucose, 37 °C', size=6, color=colors['black'],
 # Set the maximum to normalize
 max_yfp = 2.5E5
 max_mch = 1.4E5
-ax.errorbar(summarized['atc_ngml'], summarized['yfp_sub']['mean']/max_yfp, summarized['yfp_sub']['sem']/max_yfp, linestyle='-', fmt='.',
-                    color=colors['orange'], label='__nolegend__', markerfacecolor=colors['light_orange'],
-                    capsize=2, lw=0.75, ms=8, markeredgewidth=0.75)
-ax2.errorbar(summarized['atc_ngml'], summarized['mch_sub']['mean']/max_mch, summarized['mch_sub']['sem']/max_mch, linestyle='-', fmt='.',
-                    color=colors['dark_red'], label='__nolegend__', markerfacecolor=colors['light_red'],
-                    capsize=2, lw=0.75, ms=8, markeredgewidth=0.75)
+ax.errorbar(summarized['atc_ngml'], summarized['yfp_sub']['mean']/max_yfp, summarized['yfp_sub']['sem']/max_yfp, linestyle='-', fmt='o',
+                    color=colors['orange'], label='__nolegend__', markeredgecolor=colors['grey'],
+                    capsize=1, lw=0.75, ms=5, markeredgewidth=0.5)
+ax2.errorbar(summarized['atc_ngml'], summarized['mch_sub']['mean']/max_mch, summarized['mch_sub']['sem']/max_mch, linestyle='-', fmt='o',
+                    color=colors['red'], label='__nolegend__', markeredgecolor=colors['grey'],
+                    capsize=2, lw=0.75, ms=5, markeredgewidth=0.75)
 
 plt.tight_layout()
 ax.set_ylim([ax.get_ylim()[0], 1.2])

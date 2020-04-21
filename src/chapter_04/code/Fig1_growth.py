@@ -82,7 +82,7 @@ temps = [37, 37, 37, 32, 42]
 for c, t, l, v in zip(carbs, temps, labels, vals):
     for g, d in sub_plates[(sub_plates['carbon']==c) & (sub_plates['temp_C']==t)].groupby('carbon'):
         grp = d.groupby('time_min')['rel_od'].agg(('mean', 'std')).reset_index()
-        ax.errorbar(grp['time_min'], grp['mean'], grp['std'], capsize=1, fmt='o', ms=6,
+        ax.errorbar(grp['time_min'], grp['mean'], grp['std'], capsize=1, fmt='o', ms=2.5,
                 lw=.75, label=l, markerfacecolor=fill_colors[v],
                 color=fill_colors[v], markeredgewidth=0.4, markeredgecolor=colors['grey'])
 
@@ -136,4 +136,4 @@ plt.savefig('../figs/ch4_fig1_growth_rate_jitter.svg', bbox_inches='tight')
 
 
 
-# %%
+i# %%
