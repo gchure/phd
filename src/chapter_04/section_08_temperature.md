@@ -93,7 +93,7 @@ nonspecific binding.
 (A) The fold-change in gene expression for growth in glucose supplemented medium
 at 32$^\circ$ C (left) and 42$^\circ$ C (right). Points and errors correspond to
 the mean and standard error of five biological replicates. Predictions of the
-fold-change are shwon without correcting for temperature (purple), with
+fold-change are shown without correcting for temperature (purple), with
 multiplicative scaling (orange), and with an entropic penalty (grey). The width
 of the prediction of the entropic penalty is the 95\% credible region. (B)
 Predicted and observed shifts in the free energy  for growth in glucose medium

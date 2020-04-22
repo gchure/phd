@@ -9,40 +9,40 @@ difference in DNA binding energy and the allosteric parameters are
 strictly additive. Thus, deviations from the predicted change in free
 energy would suggest epistatic interactions between the two mutations.
 
-To test this additive model, we constructed nine double mutant strains, each
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; To test this additive model, we constructed nine double mutant strains, each
 having a unique inducer binding (F161T, Q291V, Q291K) and DNA binding
 mutation (Y17I, Q18A, Q18M). To make predictions with an appropriate
 representation of the uncertainty, we computed a large array of induction
 profiles given random draws from the posterior distribution for the DNA
 binding energy (determined from the single DNA binding mutants) as well as
 from the joint posterior for the allosteric parameters (determined from the
-single inducer binding mutants). These predictions, shown in Fig.
-@fig:dbl_muts (A) and (B) as shaded blue curves, capture all experimental
-measurements of the fold-change [Fig. @fig:dbl_muts (A)] and the inferred
-difference in free energy [Fig. @fig:dbl_muts (B)]. The latter indicates that
+single inducer binding mutants). These predictions, shown in 
+@Fig:dbl_muts (A) and (B) as shaded blue curves, capture all experimental
+measurements of the fold-change [@Fig:dbl_muts (A)] and the inferred
+difference in free energy [@Fig:dbl_muts (B)]. The latter indicates that
 there are no epistatic interactions between the mutations queried in this
 work, though if there were, systematic deviations from these predictions
 would shed light on how the epistasis is manifest.
 
-The precise agreement between the predictions and measurements for Q291K
-paired with either Q18A or Q18M is striking as Q291K drastically changed
-$\Delta\varepsilon_{AI}$ in addition to $K_A$ and $K_I$. Our ability to
-predict the induction profile and free energy change underscores the extent
-to which the DNA binding energy and the allosteric parameters are insulated
-from one another. Despite this insulation, the repressor still functions as
-an allosteric molecule, emphasizing that the mutations we have inserted do
-not alter the pathway of communication between the two domains of the
-protein. As the double mutant Y17I-Q291K exhibits fold-change of
-approximately $1$ across all IPTG concentrations [Fig. @fig:dbl_muts (A)],
-these mutations in tandem make repression so weak it is beyond the limits
-which are detectable by our experiments. As a consequence, we are unable to
-estimate $\Delta F$ nor experimentally verify the corresponding prediction
-[grey box in Fig. @fig:dbl_muts (B)]. However, as the predicted fold-change
-in gene expression is also approximately $1$ for all $c$, we believe that the
-prediction shown for $\Delta F$ is likely accurate. One would be able to
-infer the $\Delta F$ to confirm these predictions using a more sensitive
-method for measuring the fold-change, such as single-cell microscopy or
-colorimetric assays.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The precise agreement between the predictions
+and measurements for Q291K paired with either Q18A or Q18M is striking as
+Q291K drastically changed $\Delta\varepsilon_{AI}$ in addition to $K_A$ and
+$K_I$. Our ability to predict the induction profile and free energy change
+underscores the extent to which the DNA binding energy and the allosteric
+parameters are insulated from one another. Despite this insulation, the
+repressor still functions as an allosteric molecule, emphasizing that the
+mutations we have inserted do not alter the pathway of communication between
+the two domains of the protein. As the double mutant Y17I-Q291K exhibits
+fold-change of approximately $1$ across all IPTG concentrations
+[@Fig:dbl_muts (A)], these mutations in tandem make repression so weak it is
+beyond the limits which are detectable by our experiments. As a consequence,
+we are unable to estimate $\Delta F$ nor experimentally verify the
+corresponding prediction [grey box in @Fig:dbl_muts (B)]. However, as the
+predicted fold-change in gene expression is also approximately $1$ for all
+$c$, we believe that the prediction shown for $\Delta F$ is likely accurate.
+One would be able to infer the $\Delta F$ to confirm these predictions using
+a more sensitive method for measuring the fold-change, such as single-cell
+microscopy or colorimetric assays.
 
 ![**Induction and free-energy profiles of DNA binding and inducer binding
 double mutants.** (A) Fold change in gene expression for each double mutant as
