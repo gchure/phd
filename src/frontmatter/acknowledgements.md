@@ -9,16 +9,19 @@ fragility of human memory rather than from a place of malice.
 
 Rob Phillips, my Ph.D. adviser, is a man who escapes description. As such, it
 feels impossible to properly convey my gratitude for his mentorship and, more
-importantly, his friendship.  
-
-His unceasing desire and unique ability to pursue
-the physical reality of any problem has shaped how I approach scientific
-
+importantly, his friendship. His unceasing desire and unique ability to pursue
+the physical reality of any problem has sculpted my scientific process. Among
+his many scientific qualities, its his refusal to differentiate between research
+and teaching that has had the largest impact. I've been lucky enough to travel
+the world (or, at least four continents) with him teaching principles of
+physical biology and learning to be a physical biologist along the way. I'll
+forever be grateful for his willingness to take me as a graduate student and his
+kindness in treating me as a friend.
 
 Aside from Rob, Justin Bois has perhaps had the strongest influence on my scientific
 philosophy. Throughout my Ph.D., he has been both a dear friend and statistical
 shaman. His remarkable ability to teach the complex details of statistical
-inference, physical biology, and computer program transformed the way I consider
+inference, physical biology, and computer programming transformed the way I consider
 and approach biological questions.
 
 I owe a great deal of my development as a scientist to those with whom I've
@@ -26,31 +29,26 @@ shared the lab. Heun Jin Lee is a master of all things precise and served as
 someone I could go to for advice on any topic ranging from the scientific to
 the deeply personal. His dedication to writing down theory and performing
 experiments and theory with extreme care has shaped my impression of how
-science should be performed and, just as importantly, communicated. I
-interacted closely with Heun Jin on nearly all of my research projects and
-had the immense pleasure coauthoring a paper with which is presented in
-Chapter 5 of this thesis. Heun Jin tirelessly performed all experiments in
-this chapter and provided detailed advice and supervision during the data
-analysis, drafting, and revision process.
-
-Alongside Heun Jin, I've had the pleasure to be coauthors with Manuel
-Razo-Mejia, Soichi Hirokawa, Muir Morrison, Zofii Kaczmarek, Nathan Belliveau,
-Stephanie Barnes, and Tal Einav. Soichi and Muir have faithfully served as my
-office-mates for the past six years and have served as a sounding board for many
-of the ideas presented in this thesis. Muir and Soichi's deep knowledge of
-physics helped me develop the physical intuition I have today and I will forever
-owe them for the time they took out of their days help me understand my science.
-Manuel and Nathan are those who I've spent the most time with at the bench, the
-whiteboard, and hunched over the keyboard. Alongside Soichi and Muir, they have
-helped me figure out what makes a good experiment and what makes a bad theory
-(and vice-versa). Stephanie and Zofii, both stellar scientists in their own
-right, also served as a reminder of how creative expression is as important as
-scientific rigor. Tal Einav, a Phillips' lab alumnus who needs no introduction,
-has taught me much about the nature of collaboration over the years. 
+science should be performed and, just as importantly, communicated. Alongside
+Heun Jin, I've had the pleasure to be coauthors with Manuel Razo-Mejia,
+Soichi Hirokawa, Muir Morrison, Zofii Kaczmarek, Nathan Belliveau, Stephanie
+Barnes, and Tal Einav. Soichi and Muir have faithfully served as my
+office-mates for the past six years and have served as a sounding board for
+many of the ideas presented in this thesis. Muir and Soichi's deep knowledge
+of physics helped me develop the physical intuition I have today and I will
+forever owe them for the time they took out of their days help me understand
+my science. Manuel and Nathan are those who I've spent the most time with at
+the bench, the whiteboard, and hunched over the keyboard. Alongside Soichi
+and Muir, they have helped me figure out what makes a good experiment and
+what makes a bad theory (and vice-versa). Stephanie and Zofii, both stellar
+scientists in their own right, also served as a reminder of how creative
+expression is as important as scientific rigor. Tal Einav, a Phillips' lab
+alumnus who needs no introduction, has taught me much about the nature of
+collaboration over the years.
 
 Suzy Beeler, though I never had the pleasure of listing as a coauthor, has
 always someone I could turn to when in need of scientific advice or personal
-support. Her ability to cut through the bullshit and provide an honest
+support. Her ability to provide an honest
 opinion, either scientific or personal has proven to be invaluable over the
 years. Bill Ireland, Rachel Banks, Rebecca Rousseau, Vahe Galstyan, Niko
 McCarty, Tom R\"{o}schinger, Molly Bassette, Jonathan Gross, Celene Barrera,
@@ -77,8 +75,6 @@ Garcia, James Boedicker, and Franz Weinert who all passed through Rob's lab in
 their own right. As I taught alongside them, I learned enough from them to be
 qualified as yet another one of their students.
 
-
-
 While my academics have been focused on the things that are small and alive,
 I have had a life-long love affair with paleontology where the subjects are
 often big and always dead. This comes from the opportunities provided to me
@@ -99,8 +95,14 @@ unwavering support of my interests and passions (from skateboarding and death
 metal to coffee and bread baking) have helped pull me through tough parts of
 grad school and have taught me to savor the good.   
 
-
-
+The final four years of graduate school have been the most satisfying, and not
+because my experiments started to work. In July of 2016, I met Barbara de Araujo
+Soares, a wonderful woman who two years later helped me slice into a wedding
+cake. Barb's unwavering love and support is why I have made it to where I am
+today. Without her wit, creativity, cheerfulness and honesty, I don't know how I
+would have survived the long hours, the cheering successes, and the crushing
+failures of scientific research. While we have had a blast of the past four
+years, I think I speak for both of us when I say "at\'{e} que enfim!"
 
 Stephen Jay Gould, one of my scientific heroes, once wrote "I am, somehow,
 less interested in the weight and convolutions of Einstein’s brain than in
@@ -111,9 +113,9 @@ life is not lost on me. I write this paragraph as someone with a home with fresh
 and running water. As someone with loving family and friends. As someone who
 is being paid to do what he loves. The physical, emotional, and intellectual
 security I have been so lucky to have comes at some level at the cost of
-others.
+others. 
 
-We stand on the shoulders of giants. These giants are nameless and
+We stand on the shoulders of giants. These giants are faceless, nameless, and
 enumerable. For a section of this work dedicated to naming those to whom I am
 indebted, I want to close it with thanking all those who to me are nameless.
 To those who lived a harsher life to build a better one for people like me.
