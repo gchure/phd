@@ -6,7 +6,6 @@ import phd.thermo
 import matplotlib.pyplot as plt
 import phd.viz
 import phd.thermo
-mut.viz.plotting_style()
 colors, palette = phd.viz.phd_style()
 constants = phd.thermo.load_constants()
 
@@ -41,7 +40,9 @@ legend = {'garcia': 'Garcia & Phillips 2011', 'brewster':'Brewster et al. 2014'}
 # ##############################################################################
 # FIGURE INSTANTIATION
 # ##############################################################################
+#%%
 fig, ax = plt.subplots(1, 1, figsize=(3.42, 3))
+phd.viz.despine(ax)
 ax.xaxis.set_tick_params(labelsize=6)
 ax.yaxis.set_tick_params(labelsize=6)
 ax.set_ylim([-0.05, 1.25])

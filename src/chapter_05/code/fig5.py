@@ -73,6 +73,11 @@ for a in ax:
     a.tick_params(labelsize=8)
     a.spines['bottom'].set_visible(False)
     a.spines['left'].set_visible(False)
+
+ax[4].spines['bottom'].set_visible(True)
+ax[5].spines['bottom'].set_visible(True)
+ax[2].spines['left'].set_visible(True)
+ax[3].spines['left'].set_visible(True)
 ax[2].set_xticklabels([])
 ax[3].set_xticklabels([])
 
@@ -100,12 +105,15 @@ for i, exp in enumerate([slow_data, fast_data]):
         xerr=grouped["chan_err"],
         yerr=grouped["prob_err"],
         color=colors["red"],
-        lw=1,
+        lw=0.75,
         linestyle="none",
-        marker=".",
+        marker="o",
         ms=4,
         zorder=100,
         label="1 SD mutant/bin",
+        markeredgecolor=colors['grey'],
+        markeredgewidth=0.5
+
     )
     binned = phd.mscl.density_binning(
         exp,
@@ -121,12 +129,14 @@ for i, exp in enumerate([slow_data, fast_data]):
         xerr=grouped["chan_err"],
         yerr=grouped["prob_err"],
         color="#4b4b4b",
-        lw=1,
+        lw=0.75,
         linestyle="none",
-        marker=".",
+        marker="o",
         ms=4,
         zorder=99,
         label="{} channels/bin".format(bin_width),
+        markeredgecolor=colors['grey'],
+        markeredgewidth=0.5
     )
 
 # Properly format the axes labels.
@@ -200,8 +210,7 @@ ax[2].set_ylim([-0.01, 1.01])
 ax[3].set_ylim([-0.01, 1.01])
 for a in ax:
     a.set_xlim([1, 1250])
-
-plt.savefig("..//figs/ch5_fig5_plots.pdf", bbox_inches="tight", dpi=300)
+plt.savefig("../figs/ch5_fig5_plots.svg", bbox_inches="tight", dpi=300)
 
 
 # %%

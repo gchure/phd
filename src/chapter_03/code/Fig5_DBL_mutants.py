@@ -30,11 +30,6 @@ kaki_epai_samps = kaki_epai_samples[kaki_epai_samples['operator']=='O2'].copy()
 fig, ax = plt.subplots(3, 7, figsize=(7, 3))
 phd.viz.despine(ax.ravel())
 
-for i in [1, 2, 5, 6]:
-    for j in [0, 1,  2]:
-        ax[j, i].spines['left'].set_visible(False)
-        ax[j, i].set_yticks([])
-    
 
 # Define the mutant axes
 DNA_idx = {'Y20I':0, 'Q21A':1, 'Q21M':2}
@@ -58,6 +53,15 @@ for i in range(3):
         ax[i, j].set_ylim([-0.1, 1.2])
         ax[i, j+4].set_ylim([-8, 8])
         ax[i, j].set_yticks([0, 0.5, 1])
+
+for i in range(7):
+    for j in range(2):
+        ax[j, i].spines['bottom'].set_visible(False)
+        ax[j, i].set_xticks([])
+for i in range(3):
+    for j in [1, 2, 5, 6]:
+        ax[i,  j].spines['left'].set_visible(False)
+        ax[i,  j].set_yticks([])
 
 # Set the titles and axis labels. 
 IND_titles = {'F161T':0, 'Q291V':1, 'Q291K':2}

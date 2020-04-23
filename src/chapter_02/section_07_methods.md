@@ -138,7 +138,10 @@ contributed by the weak excitation of the myriad protein and small
 molecules within the cell. To correct for this background, we computed
 the fold change as
 
-$\text{fold-change} = \frac{\langle I_{R > 0} \rangle - \langle I_\text{auto}\rangle}{\langle I_{R = 0} \rangle - \langle I_\text{auto}\rangle},${#eq:induction_image_def}
+$$
+\text{fold-change} = \frac{\langle I_{R > 0} \rangle - \langle
+I_\text{auto}\rangle}{\langle I_{R = 0} \rangle - \langle I_\text{auto}\rangle},
+$${#eq:induction_image_def}
 
 where $\langle I_{R > 0}\rangle$ is the average cell YFP intensity in
 the presence of repressor, $\langle I_{R = 0}\rangle$ is the average
