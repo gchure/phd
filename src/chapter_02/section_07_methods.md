@@ -1,4 +1,4 @@
-## Methods
+## Materials \& Methods
 
 ### Bacterial Strains and DNA Constructs
 
@@ -230,7 +230,7 @@ range is sufficiently wide.
 likely parameter as well as the error bars (given by the 95\% credible region)
 for $K_A$ and $K_I$.
 
-## Data Curation
+### Data Curation
 
 &nbsp;&nbsp;&nbsp;&nbsp;All of the data used in this work as well as all relevant code can be
 found at this [dedicated

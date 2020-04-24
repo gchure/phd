@@ -41,6 +41,10 @@ contents:
     - section_03_introduction
     - section_04_model
     - section_05_experimental_design
+    - section_06_scaling
+    - section_08_temperature
+    - section_09_discussion
+    - section_10_methods
 ---
 
 **Published as ...**

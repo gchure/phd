@@ -36,11 +36,11 @@
   <script id="MathJax-script" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
   
 
-<link rel="icon" href="https://gchure.github.io/phd/favicon.ico" type="image/x-icon">
+<link rel="icon" href="/favicon.ico" type="image/x-icon">
 <link href="https://fonts.googleapis.com/css?family=Nanum+Myeongjo&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Alegreya|Lora&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="https://gchure.github.io/phd/doks-theme/assets/css/style.css">
+<link rel="stylesheet" href="/doks-theme/assets/css/style.css">
 
 	</head>
 	<body class="grey" data-spy="scroll" data-target=".js-scrollspy">
@@ -52,7 +52,7 @@
 			<div class="row">
 				<div class="col-xs-12">
 					
-						<a href="https://gchure.github.io/phd/" class="site-header__logo"><i class="icon icon--chevron-left"></i> Home</a>
+						<a href="/" class="site-header__logo"><i class="icon icon--chevron-left"></i> Home</a>
 					
 					
 				</div><!-- /.col -->
@@ -61,7 +61,7 @@
 	</header><!-- /.site-header -->
 
 
-		<div class="hero-subheader" style="background-image: url(https://gchure.github.io/phd/doks-theme/assets/images/waves.jpg); background-position: center; object-fit: cover; width:100%;">
+		<div class="hero-subheader" style="background-image: url(http://127.0.0.1:4000/doks-theme/assets/images/waves.jpg); background-position: center; object-fit: cover; width:100%;">
 
 			<div class="container" style="background-color: rgba(0,0,0, 0.75); border:0.75px solid white;">
 				<div class="row">
@@ -78,12 +78,12 @@
 								
 								<!-- 
 									
-										<a href="https://gchure.github.io/phd{{site.doks.baseurl}}/published_content" class="btn btn--dark btn--rounded btn--w-icon btn--w-icon-left">
+										<a href="{{site.doks.baseurl}}/published_content" class="btn btn--dark btn--rounded btn--w-icon btn--w-icon-left">
 											<i class="icon icon--arrow-left"></i>	
 										</a>
 									
 									
-										<a href="https://gchure.github.io/phd{{site.doks.baseurl}}/chapter_02" class="btn btn--dark btn--rounded btn--w-icon">
+										<a href="{{site.doks.baseurl}}/chapter_02" class="btn btn--dark btn--rounded btn--w-icon">
 											<i class="icon icon--arrow-right"></i>
 										</a>
 									
@@ -101,13 +101,13 @@
 						<div class="row" >
 							<div class="col-xs-12">
 								
-									<a href="https://gchure.github.io/phd{{site.doks.baseurl}}/published_content" class="page-nav__item page-nav__item--prev">
+									<a href="{{site.doks.baseurl}}/published_content" class="page-nav__item page-nav__item--prev">
 										<i class="icon icon--arrow-left"></i>
 										Published Content
 									</a><!-- /.page-nav__item -->
 								
 								
-									<a href="https://gchure.github.io/phd{{site.doks.baseurl}}/chapter_02" class="page-nav__item page-nav__item--next">
+									<a href="{{site.doks.baseurl}}/chapter_02" class="page-nav__item page-nav__item--next">
 										Chapter 2
 										<i class="icon icon--arrow-right"></i>
 									</a><!-- /.page-nav__item -->
@@ -255,9 +255,9 @@ g(\mu)=\begin{cases}{1\over \mu_\text{max} - \mu_\text{min}} &amp; \mu_\text{min
 \qquad(22)$$</span><br /></span> Here, <span class="math inline"><em>μ</em><sub>min</sub> = 0</span> and <span class="math inline"><em>μ</em><sub>max</sub> = 1</span>, reducing <span class="math inline"><em>g</em>(<em>μ</em>)</span> to 1. For <span class="math inline"><em>σ</em></span>, we can again assume a half-normal distribution with a standard deviation of 0.1 as was used for estimating the DNA binding energy Eq. 12, <span id="eq:fc_sigma_prior"><br /><span class="math display"><em>g</em>(<em>σ</em>) = HalfNormal{0, 0.1}.   (23)</span><br /></span></p>
 <p>     With a full generative model defined, we can now use prior predictive checks to ensure that our choices of prior are appropriate for the inference.</p>
 <h3 id="prior-predictive-checks-1">Prior Predictive Checks</h3>
-<p>     To check the validity of the chosen priors, we pulled 1000 combinations of <span class="math inline"><em>μ</em></span> and <span class="math inline"><em>σ</em></span> from their respective distributions Fig. <strong>¿fig:empirical_F_prior_pred?</strong> (A) and subsequently drew a set of 10 fold-change values (a number comparable to the number of biological replicates used in this work) from a normal distribution defined by <span class="math inline"><em>μ</em></span> and <span class="math inline"><em>σ</em></span>. To visualize the range of values generated from these checks, we computed the percentiles of the empirical cumulative distributions of the fold-change values, as can be seen in Fig. <strong>¿fig:empirical_F_prior_pred?</strong> (C). Approximately 95% of the the generated fold-change measurements were between the theoretical bounds of [<span class="math inline">0, 1</span>] whereas 5% of the data sets fell outside with the maximum and minimum values extending to <span class="math inline"> ≈ 1.2</span> and <span class="math inline"> − 0.2</span>, respectively. Given our familiarity with these experimental strains and the detection sensitivity of the flow cytometer, these excursions beyond the theoretical bounds agree with our intuition. Satisfied with our choice of prior distributions, we can proceed to check the sensitivity and computational tractability of our model through simulation based calibration.</p>
+<p>     To check the validity of the chosen priors, we pulled 1000 combinations of <span class="math inline"><em>μ</em></span> and <span class="math inline"><em>σ</em></span> from their respective distributions Fig. 7 (A) and subsequently drew a set of 10 fold-change values (a number comparable to the number of biological replicates used in this work) from a normal distribution defined by <span class="math inline"><em>μ</em></span> and <span class="math inline"><em>σ</em></span>. To visualize the range of values generated from these checks, we computed the percentiles of the empirical cumulative distributions of the fold-change values, as can be seen in Fig. 7 (C). Approximately 95% of the the generated fold-change measurements were between the theoretical bounds of [<span class="math inline">0, 1</span>] whereas 5% of the data sets fell outside with the maximum and minimum values extending to <span class="math inline"> ≈ 1.2</span> and <span class="math inline"> − 0.2</span>, respectively. Given our familiarity with these experimental strains and the detection sensitivity of the flow cytometer, these excursions beyond the theoretical bounds agree with our intuition. Satisfied with our choice of prior distributions, we can proceed to check the sensitivity and computational tractability of our model through simulation based calibration.</p>
 <figure>
-<img src="ch7_figS7.png" id="fig:empirial_F_prior_pred" data-short-caption="Prior predictive checks for inference of the mean fold-change" alt="" /><figcaption>Figure 7: **Prior predictive checks for inference of the mean fold-change. (A) The prior distributions for <span class="math inline"><em>μ</em></span> (left) and <span class="math inline"><em>σ</em></span> (right). The vertical axis is proportional to the probability of the value. Black points above distributions correspond to the values used to perform the prior predictive checks. (B) Percentiles of the data generated for each draw from the prior distributions shown as a cumulative distribution. Percentiles were calculated for 1000 generated data sets, each with 10 fold-change measurements drawn from the likelihood given the drawn values of <span class="math inline"><em>μ</em></span> and <span class="math inline"><em>σ</em></span>.</figcaption>
+<img src="ch7_figS7.png" id="fig:empirical_F_prior_pred" data-short-caption="Prior predictive checks for inference of the mean fold-change" alt="" /><figcaption>Figure 7: **Prior predictive checks for inference of the mean fold-change. (A) The prior distributions for <span class="math inline"><em>μ</em></span> (left) and <span class="math inline"><em>σ</em></span> (right). The vertical axis is proportional to the probability of the value. Black points above distributions correspond to the values used to perform the prior predictive checks. (B) Percentiles of the data generated for each draw from the prior distributions shown as a cumulative distribution. Percentiles were calculated for 1000 generated data sets, each with 10 fold-change measurements drawn from the likelihood given the drawn values of <span class="math inline"><em>μ</em></span> and <span class="math inline"><em>σ</em></span>.</figcaption>
 </figure>
 <h3 id="simulation-based-calibration">Simulation Based Calibration</h3>
 <p>     To ensure that the parameters can be estimated with confidence, we sampled the posterior distribution of <span class="math inline"><em>μ</em></span> and <span class="math inline"><em>σ</em></span> for each data set generated from the prior predictive checks. For each inference, we computed the <span class="math inline"><em>z</em></span>-score and shrinkage for each parameter, shown in Fig. Fig. 8(A). For both parameters, the <span class="math inline"><em>z</em></span>-scores are approximately centered about zero, indicating that the posteriors concentrate about the ground truth value of the parameter. The <span class="math inline"><em>z</em></span>-scores for <span class="math inline"><em>σ</em></span> green points in Fig. 8) (A) appear to be slightly off centered with more negative values than positive. This suggests that <span class="math inline"><em>σ</em></span> is more likely to be slightly overestimated in some cases. The shrinkage parameter for <span class="math inline"><em>μ</em></span> (red points) is very tightly distributed about <span class="math inline">1.0</span>, indicating that the prior is being strongly informed by the data. The shrinkage is more broadly distributed for for <span class="math inline"><em>σ</em></span> with a minimum value of <span class="math inline"> ≈ 0.5</span>. However, the median shrinkage for <span class="math inline"><em>σ</em></span> is <span class="math inline"> ≈ 0.9</span>, indicating that half of the inferences shrank the prior distribution by at least 90%. While we could revisit the model to try and improve the shrinkage values, we are more concerned with <span class="math inline"><em>μ</em></span> which shows high shrinkage and zero-centered <span class="math inline"><em>z</em></span>-scores.</p>
@@ -1222,38 +1222,6 @@ P(\neg r) = {\mathcal{Z}_{\neg r} \over \mathcal{Z}_{\neg r} + \mathcal{Z}_r}.
 			</div><!-- /.container -->
 		</div><!-- /.section -->
 		
-			<div class="section section--grey">
-				<div class="container">
-					<div class="row">
-						<div class="col-md-7">
-							<div id="disqus_thread"></div>
-<script>
-	/**
-	 *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-	 *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
-	 */
-	 /*
-	var disqus_config = function () {
-	this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
-		this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-	};
-	*/
-	(function() {
-		var d = document, s = d.createElement('script');
-
-		s.src = 'https://gchure_phd.disqus.com/embed.js';
-
-		s.setAttribute('data-timestamp', +new Date());
-		(d.head || d.body).appendChild(s);
-	})();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
-
-						</div><!-- /.col -->
-					</div><!-- /.row -->
-				</div><!-- /.container -->
-			</div><!-- /.section -->
-		
 		<div class="js-footer-area">
 			
 				<nav class="page-nav">	
@@ -1261,13 +1229,13 @@ P(\neg r) = {\mathcal{Z}_{\neg r} \over \mathcal{Z}_{\neg r} + \mathcal{Z}_r}.
 						<div class="row">
 							<div class="col-xs-12">
 								
-									<a href="https://gchure.github.io/phd{{site.doks.baseurl}}/published_content" class="page-nav__item page-nav__item--prev">
+									<a href="{{site.doks.baseurl}}/published_content" class="page-nav__item page-nav__item--prev">
 										<i class="icon icon--arrow-left"></i>
 										Published Content
 									</a><!-- /.page-nav__item -->
 								
 								
-									<a href="https://gchure.github.io/phd{{site.doks.baseurl}}/chapter_02" class="page-nav__item page-nav__item--next">
+									<a href="{{site.doks.baseurl}}/chapter_02" class="page-nav__item page-nav__item--next">
 										Chapter 2
 										<i class="icon icon--arrow-right"></i>
 									</a><!-- /.page-nav__item -->
@@ -1284,7 +1252,7 @@ P(\neg r) = {\mathcal{Z}_{\neg r} \over \mathcal{Z}_{\neg r} + \mathcal{Z}_r}.
 			<div class="row">
 				<div class="col-sm-6">
 					
-						<a href="https://gchure.github.io/phd/" class="site-footer__logo">Griffin D. Chure | PhD Thesis</a>
+						<a href="/" class="site-footer__logo">Griffin D. Chure | PhD Thesis</a>
 					
 					
 						<hr>
@@ -1309,11 +1277,11 @@ P(\neg r) = {\mathcal{Z}_{\neg r} \over \mathcal{Z}_{\neg r} + \mathcal{Z}_r}.
 	</footer><!-- /.site-footer -->
 
 
-<script src="https://gchure.github.io/phd/doks-theme/assets/js/vendor/jquery.min.js"></script>
-<script type="text/javascript" src="https://gchure.github.io/phd/doks-theme/assets/js/vendor/bootstrap/affix.min.js"></script>
-<script type="text/javascript" src="https://gchure.github.io/phd/doks-theme/assets/js/vendor/bootstrap/scrollspy.min.js"></script>
-<script type="text/javascript" src="https://gchure.github.io/phd/doks-theme/assets/js/vendor/matchHeight.min.js"></script>
-<script type="text/javascript" src="https://gchure.github.io/phd/doks-theme/assets/js/scripts.min.js"></script>
+<script src="/doks-theme/assets/js/vendor/jquery.min.js"></script>
+<script type="text/javascript" src="/doks-theme/assets/js/vendor/bootstrap/affix.min.js"></script>
+<script type="text/javascript" src="/doks-theme/assets/js/vendor/bootstrap/scrollspy.min.js"></script>
+<script type="text/javascript" src="/doks-theme/assets/js/vendor/matchHeight.min.js"></script>
+<script type="text/javascript" src="/doks-theme/assets/js/scripts.min.js"></script>
 
 
 

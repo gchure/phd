@@ -32,6 +32,11 @@ contents:
     - section_05_microscopy
     - section_06_sensitivity
     - section_07_global_fit
+    - section_08_Oid
+    - section_09_comparison
+    - section_10_properties
+    - section_11_applications
+    - section_12_tables
 ---
 
 **Published as ...**

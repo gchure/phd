@@ -36,11 +36,11 @@
   <script id="MathJax-script" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
   
 
-<link rel="icon" href="https://gchure.github.io/phd/favicon.ico" type="image/x-icon">
+<link rel="icon" href="/favicon.ico" type="image/x-icon">
 <link href="https://fonts.googleapis.com/css?family=Nanum+Myeongjo&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Alegreya|Lora&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="https://gchure.github.io/phd/doks-theme/assets/css/style.css">
+<link rel="stylesheet" href="/doks-theme/assets/css/style.css">
 
 	</head>
 	<body class="grey" data-spy="scroll" data-target=".js-scrollspy">
@@ -52,7 +52,7 @@
 			<div class="row">
 				<div class="col-xs-12">
 					
-						<a href="https://gchure.github.io/phd/" class="site-header__logo"><i class="icon icon--chevron-left"></i> Home</a>
+						<a href="/" class="site-header__logo"><i class="icon icon--chevron-left"></i> Home</a>
 					
 					
 				</div><!-- /.col -->
@@ -61,7 +61,7 @@
 	</header><!-- /.site-header -->
 
 
-		<div class="hero-subheader" style="background-image: url(https://gchure.github.io/phd/doks-theme/assets/images/waves.jpg); background-position: center; object-fit: cover; width:100%;">
+		<div class="hero-subheader" style="background-image: url(http://127.0.0.1:4000/doks-theme/assets/images/waves.jpg); background-position: center; object-fit: cover; width:100%;">
 
 			<div class="container" style="background-color: rgba(0,0,0, 0.75); border:0.75px solid white;">
 				<div class="row">
@@ -78,12 +78,12 @@
 								
 								<!-- 
 									
-										<a href="https://gchure.github.io/phd{{site.doks.baseurl}}/published_content" class="btn btn--dark btn--rounded btn--w-icon btn--w-icon-left">
+										<a href="{{site.doks.baseurl}}/published_content" class="btn btn--dark btn--rounded btn--w-icon btn--w-icon-left">
 											<i class="icon icon--arrow-left"></i>	
 										</a>
 									
 									
-										<a href="https://gchure.github.io/phd{{site.doks.baseurl}}/chapter_02" class="btn btn--dark btn--rounded btn--w-icon">
+										<a href="{{site.doks.baseurl}}/chapter_02" class="btn btn--dark btn--rounded btn--w-icon">
 											<i class="icon icon--arrow-right"></i>
 										</a>
 									
@@ -101,13 +101,13 @@
 						<div class="row" >
 							<div class="col-xs-12">
 								
-									<a href="https://gchure.github.io/phd{{site.doks.baseurl}}/published_content" class="page-nav__item page-nav__item--prev">
+									<a href="{{site.doks.baseurl}}/published_content" class="page-nav__item page-nav__item--prev">
 										<i class="icon icon--arrow-left"></i>
 										Published Content
 									</a><!-- /.page-nav__item -->
 								
 								
-									<a href="https://gchure.github.io/phd{{site.doks.baseurl}}/chapter_02" class="page-nav__item page-nav__item--next">
+									<a href="{{site.doks.baseurl}}/chapter_02" class="page-nav__item page-nav__item--next">
 										Chapter 2
 										<i class="icon icon--arrow-right"></i>
 									</a><!-- /.page-nav__item -->
@@ -285,10 +285,257 @@ g(\tilde{\alpha}, \tilde{\sigma}_\alpha, \tilde{\langle A \rangle}, \tilde{\sigm
 </tr>
 </tbody>
 </table>
+<h2 id="logistic-regression">Logistic Regression</h2>
+<p>    In this work, we were interested in computing the survival probability under a large hypo-osmotic shock as a function of MscL channel number. As the channel copy number distributions for each Shine-Dalgarno sequence mutant were broad and overlapping, we chose to calculate the survival probability through logistic regression – a method that requires no binning of the data providing the least biased estimate of survival probability. Logistic regression is a technique that has been used in medical statistics since the late 1950’s to describe diverse phenomena such as dose response curves, criminal recidivism, and survival probabilities for patients after treatment <span class="citation" data-cites="anderson2003 mishra2016 stahler2013">(Anderson, Jin, and Grunkemeier <a href="#ref-anderson2003" role="doc-biblioref">2003</a>; Mishra et al. <a href="#ref-mishra2016" role="doc-biblioref">2016</a>; Stahler et al. <a href="#ref-stahler2013" role="doc-biblioref">2013</a>)</span>. It has also found much use in machine learning to tune a binary or categorical response given a continuous input <span class="citation" data-cites="cheng2009 dreiseitl2002">(Cheng and Hüllermeier <a href="#ref-cheng2009" role="doc-biblioref">2009</a>; Dreiseitl and Ohno-Machado <a href="#ref-dreiseitl2002" role="doc-biblioref">2002</a>)</span>.</p>
+<p>    In this section, we derive a statistical model for estimating the most-likely values for the coefficients <span class="math inline"><em>β</em><sub>0</sub></span> and <span class="math inline"><em>β</em><sub>1</sub></span> and use Bayes’ theorem to provide an interpretation for the statistical meaning.</p>
+<h3 id="bayesian-parameter-estimation-of-beta_0-and-beta_1">Bayesian parameter estimation of <span class="math inline"><em>β</em><sub>0</sub></span> and <span class="math inline"><em>β</em><sub>1</sub></span></h3>
+<p>    The central challenge of this work is to estimate the probability of survival <span class="math inline"><em>p</em><sub><em>s</em></sub></span> given only a measure of the total number of MscL channels in that cell. In other words, for a given measurement of <span class="math inline"><em>N</em><sub><em>c</em></sub></span> channels, we want to know likelihood that a cell would survive an osmotic shock. Using Bayes’ theorem, we can write a statistical model for the survival probability as <span id="eq:bayes_surv_prob"><br /><span class="math display">$$
+g(p_s\,\vert\, N_c) = {f(N_c\,\vert\, p_s)g(p_s) \over f(N_c)},
+\qquad(17)$$</span><br /></span></p>
+<p>where <span class="math inline"><em>g</em></span> and <span class="math inline"><em>f</em></span> represent probability density functions over parameters and data, respectively. The posterior probability distribution <span class="math inline"><em>g</em>(<em>p</em><sub><em>s</em></sub> | <em>N</em><sub><em>c</em></sub>)</span> describes the probability of <span class="math inline"><em>p</em><sub><em>s</em></sub></span> given a specific number of channels <span class="math inline"><em>N</em><sub><em>c</em></sub></span>. This distribution is dependent on the likelihood of observing <span class="math inline"><em>N</em><sub><em>c</em></sub></span> channels assuming a value of <span class="math inline"><em>p</em><sub><em>s</em></sub></span> multiplied by all prior knowledge we have about knowing nothing about the data, <span class="math inline"><em>g</em>(<em>s</em>)</span>. The denominator <span class="math inline"><em>f</em>(<em>N</em><sub><em>c</em></sub>)</span> in Eq. 17 captures all knowledge we have about the available values of <span class="math inline"><em>N</em><sub><em>c</em></sub></span>, knowing nothing about the true survival probability. As this term acts as a normalization constant, we will neglect it in the following calculations for convenience.     To begin, we must come up with a statistical model that describes the experimental measurable in our experiment – survival or death. As this is a binary response, we can consider each measurement as a Bernoulli trial with a probability of success matching our probability of survival <span class="math inline"><em>p</em><sub><em>s</em></sub></span>, <span id="eq:bernoulli"><br /><span class="math display"><em>f</em>(<em>s</em> | <em>p</em><sub><em>s</em></sub>) = <em>p</em><sub><em>s</em></sub><sup><em>s</em></sup>(1 − <em>p</em><sub><em>s</em></sub>)<sup>1 − <em>s</em></sup>,   (18)</span><br /></span> where <span class="math inline"><em>s</em></span> is the binary response of <span class="math inline">1</span> or <span class="math inline">0</span> for survival and death, respectively. As is stated in the introduction to this section, we decided to use a logistic function to describe the survival probability. We assume that the log-odds of survival is linear with respect to the effective channel copy number <span class="math inline"><em>N</em><sub><em>c</em></sub></span> as <span id="eq:logit"><br /><span class="math display">$$ \log{p_s \over 1 - p_s} = \beta_0 + \beta_1
+N_c, \qquad(19)$$</span><br /></span> where <span class="math inline"><em>β</em><sub>0</sub></span> and <span class="math inline"><em>β</em><sub>1</sub></span> are coefficients which describe the survival probability in the absence of channels and the increase in log-odds of survival conveyed by a single channel. The rationale behind this interpretation is presented in the following section, <em>A Bayesian interpretation of <span class="math inline"><em>β</em><sub>0</sub></span> and <span class="math inline"><em>β</em><sub>1</sub></span></em>. Using this assumption, we can solve for the survival probability <span class="math inline"><em>p</em><sub><em>s</em></sub></span> as, <span id="eq:logistic_prob"><br /><span class="math display">$$ p_s = {1 \over 1 +
+e^{-\beta_0 -\beta_1 N_c}}. \qquad(20)$$</span><br /></span></p>
+<p>With a functional form for the survival probability, the likelihood stated in Eq. 17 can be restated as <span id="eq:bernoulli_likelihood"><br /><span class="math display">$$
+f(N_c, s\,\vert\,\beta_0,\beta_1) = \left({1 \over 1 + e^{-\beta_0 - \beta_1 N_c}}\right)^s\left(1 - {1 \over 1 + e^{-\beta_0 - \beta_1 N_c}}\right)^{1 - s}.
+\qquad(21)$$</span><br /></span> As we have now introduced two parameters, <span class="math inline"><em>β</em><sub>0</sub></span>, and <span class="math inline"><em>β</em><sub>1</sub></span>, we must provide some description of our prior knowledge regarding their values. As is typically the case, we know nothing about the values for <span class="math inline"><em>β</em><sub>0</sub></span> and <span class="math inline"><em>β</em><sub>1</sub></span>. These parameters are allowed to take any value, so long as it is a real number. Since all values are allowable, we can assume a flat distribution where any value has an equally likely probability. This value of this constant probability is not necessary for our calculation and is ignored. For a set of <span class="math inline"><em>k</em></span> single-cell measurements, we can write the posterior probability distribution stated in Eq. 17 as <span id="eq:known_nc_post"><br /><span class="math display">$$
+g(\beta_0, \beta_1\,\vert\, N_c, s) = \prod\limits_{i=1}^n\left({1 \over 1 + e^{-\beta_0 - \beta_1 N_c^{(i)}}}\right)^{s^{(i)}}\left(1 - {1 \over 1 + e^{-\beta_0 - \beta_1 N_c^{(i)}}}\right)^{1 - s^{(i)}}
+\qquad(22)$$</span><br /></span></p>
+<p>    Implicitly stated in Eq. 22 is absolute knowledge of the channel copy number <span class="math inline"><em>N</em><sub><em>c</em></sub></span>. However, as is described in <em>Standard Candle Calibration</em>, we must convert from a measured areal sfGFP intensity <span class="math inline"><em>I</em><sub><em>A</em></sub></span> to a effective channel copy number, <span id="eq:standard_candle"><br /><span class="math display">$$
+N_c = {I_A \tilde{\langle A \rangle} \over \tilde{\alpha}},
+\qquad(23)$$</span><br /></span> where <span class="math inline">$\tilde{\langle A \rangle}$</span> is the average cell area of the standard candle strain and <span class="math inline"><em>α̃</em></span> is the most-likely value for the calibration factor between arbitrary units and protein copy number. In <em>Standard Candle Calibration</em>, we detailed a process for generating an estimate for the most-likely value of <span class="math inline">$\tilde{\langle A \rangle}$</span> and <span class="math inline"><em>α̃</em></span>. Given these estimates, we can include an informative prior for each value. From the Markov chain Monte Carlo samples shown in Fig. <strong>¿fig:posterior_samples?</strong>, the posterior distribution for each parameter is approximately Gaussian. By approximating them as Gaussian distributions, we can assign an informative prior for each as <span id="eq:alpha_prior"><br /><span class="math display">$$
+g(\alpha\,\vert\,\tilde{\alpha}, \tilde{\sigma}_\alpha) \propto {1 \over \tilde{\sigma}_\alpha^k}\prod\limits_{i=1}^k\exp\left[-{(\alpha_i - \tilde{\alpha})^2 \over  2\tilde{\sigma}_\alpha^2}\right]
+\qquad(24)$$</span><br /></span> for the calibration factor for each cell and <span id="eq:area_prior"><br /><span class="math display">$$
+g(\langle A \rangle\,\vert\,\tilde{\langle A \rangle},\tilde{\sigma}_{\langle A \rangle}) = {1 \over \tilde{\sigma}_{\langle A \rangle}^k}\prod\limits_{i=1}^k\exp\left[-{(\langle A \rangle_i - \tilde{\langle A \rangle})^2 \over 2\tilde{\sigma}_{\langle A \rangle}^2}\right],
+\qquad(25)$$</span><br /></span> where <span class="math inline"><em>σ̃</em><sub><em>α</em></sub></span> and <span class="math inline"><em>σ̃</em><sub>⟨<em>A</em>⟩</sub></span> represent the variance from approximating each posterior as a Gaussian. The proportionality for each prior arises from the neglecting of normalization constants for notational convenience.</p>
+<p>    Given Eq. 21 through Eq. 25, the complete posterior distribution for estimating the most likely values of <span class="math inline"><em>β</em><sub>0</sub></span> and <span class="math inline"><em>β</em><sub>1</sub></span> can be written as <span id="eq:logistic_posterior"><br /><span class="math display">$$
+\begin{aligned}
+g(\beta_0, &amp;\beta_1\,\vert\,[I_A, s],\tilde{\langle A \rangle}, \tilde{\sigma}_{\langle A \rangle}, \tilde{\alpha}, \tilde{\sigma}_\alpha) \propto{1 \over (\tilde{\sigma}_\alpha\tilde{\sigma}_{\langle A \rangle})^k}\prod\limits_{i=1}^k\left(1 + \exp\left[-\beta_0 - \beta_1 { {I_A}_i \langle A \rangle_i \over \alpha_i}\right]\right)^{-s_i}\,\times\,\\
+&amp;\left(1 - \left(1 + \exp\left[-\beta_0 - \beta_1 { {I_A}_i\langle A \rangle_i \over \alpha_i}\right]\right)^{-1}\right)^{1 - s_i}
+\exp\left[-{(\langle A \rangle_i - \tilde{\langle A \rangle})^2 \over 2\tilde{\sigma}_{\langle A \rangle}} - {(\alpha_i - \tilde{\alpha})^2\over 2\tilde{\sigma}_\alpha^2}\right]
+\end{aligned}.
+\qquad(26)$$</span><br /></span></p>
+<p>As this posterior distribution is not solvable analytically, we used Markov chain Monte Carlo to draw samples out of this distribution, using the log of the effective channel number as described in the main text. The posterior distributions for <span class="math inline"><em>β</em><sub>0</sub></span> and <span class="math inline"><em>β</em><sub>1</sub></span> for both slow and fast shock rate data can be seen in Fig. 8</p>
+<figure>
+<embed src="../figs/figS4.pdf" id="fig:logistic_posterior_distributions" data-short-caption="Posterior distributions for logistic regression coefficients evaluated for fast and slow shock rates." /><figcaption>Figure 8: <strong>Posterior distributions for logistic regression coefficients evaluated for fast and slow shock rates.</strong> (A) Kernel density estimates of the posterior distribution for <span class="math inline"><em>β</em><sub>0</sub></span> for fast (blue) and slow (purple) shock rates. (B) Kernel density estimates of posterior distribution for <span class="math inline"><em>β</em><sub>1</sub></span>.</figcaption>
+</figure>
+<h3 id="a-bayesian-interpretation-of-beta_0-and-beta_1">A Bayesian interpretation of <span class="math inline"><em>β</em><sub>0</sub></span> and <span class="math inline"><em>β</em><sub>1</sub></span></h3>
+<p>The assumption of a linear relationship between the log-odds of survival and the predictor variable <span class="math inline"><em>N</em><sub><em>c</em></sub></span> appears to be arbitrary and is presented without justification. However, this relationship is directly connected to the manner in which Bayes’ theorem updates the posterior probability distribution upon the observation of new data. In following section, we will demonstrate this connection using the relationship between survival and channel copy number. However, this description is general and can be applied to any logistic regression model so long as the response variable is binary. This connection was shown briefly by Allen Downey in 2014 and has been expanded upon in this work <span class="citation" data-cites="downey2014">(Downey <a href="#ref-downey2014" role="doc-biblioref">2014</a>)</span>.</p>
+<p>    The probability of observing a survival event <span class="math inline"><em>s</em></span> given a measurement of <span class="math inline"><em>N</em><sub><em>c</em></sub></span> channels can be stated using Bayes’ theorem as <span id="eq:survival_bayes"><br /><span class="math display">$$
+g(s\,\vert\, N_c) = {f(N_c\,\vert\, s)g(s) \over f(N_c)}.
+\qquad(27)$$</span><br /></span> where <span class="math inline"><em>g</em></span> and <span class="math inline"><em>f</em></span> represent probability density functions over parameters and data respectively. The posterior distribution <span class="math inline"><em>g</em>(<em>s</em> | <em>N</em><sub><em>c</em></sub>)</span> is the quantity of interest and implicitly related to the probability of survival. The likelihood <span class="math inline"><em>g</em>(<em>N</em><sub><em>c</em></sub> | <em>s</em>)</span> tells us the probability of observing <span class="math inline"><em>N</em><sub><em>c</em></sub></span> channels in this cell given that it survives. The quantity <span class="math inline"><em>g</em>(<em>s</em>)</span> captures all <em>a priori</em> knowledge we have regarding the probability of this cell surviving and the denominator <span class="math inline"><em>f</em>(<em>N</em><sub><em>c</em></sub>)</span> tells us the converse – the probability of observing <span class="math inline"><em>N</em><sub><em>c</em></sub></span> cells irrespective of the survival outcome.</p>
+<p>    Proper calculation of Eq. 27 requires that we have knowledge of <span class="math inline"><em>f</em>(<em>N</em><sub><em>c</em></sub>)</span>, which is difficult to estimate. While we are able to give appropriate bounds on this term, such as a requirement of positivity and some knowledge of the maximum membrane packing density, it is not so obvious to determine the distribution between these bounds. Given this difficulty, it’s easier to compute the odds of survival <span class="math inline">𝒪(<em>s</em> | <em>N</em><sub><em>c</em></sub>)</span>, the probability of survival <span class="math inline"><em>s</em></span> relative to death <span class="math inline"><em>d</em></span>, <span id="eq:odds_definition"><br /><span class="math display">$$
+\mathcal{O}(s\,\vert\, N_c) = {g(s\,\vert\,N_c) \over g(d\,\vert\, N_c)} = {f(N_c\,\vert\, s)g(s) \over f(N_c\,\vert\,d)g(d)},
+\qquad(28)$$</span><br /></span> where <span class="math inline"><em>f</em>(<em>N</em><sub><em>c</em></sub>)</span> is cancelled. The only stipulation on the possible value of the odds is that it must be a positive value. As we would like to equally weigh odds less than one as those of several hundred or thousand, it is more convenient to compute the log-odds, given as <span id="eq:log_odds"><br /><span class="math display">$$
+\log \mathcal{O}(s\,\vert\,N_c)= \log {g(s) \over g(d)} + \log {f(N_c \,\vert\, s )\over f(N_c\,\vert\, d)}.
+\qquad(29)$$</span><br /></span> Computing the log-transform reveals two interesting quantities. The first term is the ratio of the priors and tells us the <em>a priori</em> knowledge of the odds of survival irrespective of the number of channels. As we have no reason to think that survival is more likely than death, this ratio goes to unity. The second term is the log likelihood ratio and tells us how likely we are to observe a given channel copy number <span class="math inline"><em>N</em><sub><em>c</em></sub></span> given the cell survives relative to when it dies.</p>
+<p>    For each channel copy number, we can evaluate Eq. 29 to measure the log-odds of survival. If we start with zero channels per cell, we can write the log-odds of survival as <span id="eq:nc_0"><br /><span class="math display">$$
+\log \mathcal{O}(s\,\vert\,N_c=0) = \log {g(s) \over g(d)} + \log {f(N_c=0\,\vert\, s) \over f(N_c=0\,\vert\, d)}.
+\qquad(30)$$</span><br /></span> For a channel copy number of one, the odds of survival is <span id="eq:nc_1"><br /><span class="math display">$$
+\log \mathcal{O}(s\,\vert\,N_c=1) = \log{g(s) \over g(d)} + \log{f(N_c=1\,\vert\, s) \over f(N_c=1\,\vert\, d)}.
+\qquad(31)$$</span><br /></span> In both Eq. 30 and Eq. 31, the log of our <em>a priori</em> knowledge of survival versus death remains. The only factor that is changing is log likelihood ratio. We can be more general in our language and say that the log-odds of survival is increased by the difference in the log-odds conveyed by addition of a single channel. We can rewrite the log likelihood ratio in a more general form as <span id="eq:generalized_LLR"><br /><span class="math display">$$
+\log {f(N_c\, \vert\, s) \over f(N_c\,\vert\, d)} = \log{f(N_c = 0\,\vert\,s) \over f(N_c=0\,\vert\, d)} + N_c \left[\log{f(N_c=1 \,\vert\,s) \over f(N_c=1\,\vert\, d)} - \log{f(N_c=0\,\vert\, s) \over f(N_c=0\,\vert\, d)}\right],
+\qquad(32)$$</span><br /></span> where we are now only considering the case in which <span class="math inline"><em>N</em><sub><em>c</em></sub> ∈ [0, 1]</span>. The bracketed term in Eq. 32 is the log of the odds of survival given a single channel relative to the odds of survival given no channels. Mathematically, this odds-ratio can be expressed as <span id="eq:odds_ratio"><br /><span class="math display">$$
+\log\mathcal{OR}_{N_c}(s) = \log{ {f(N_c=1\,\vert\,s)g(s)\over f(N_c=1\,\vert\,d)g(d)}\over {f(N_c=0\,\vert\,s)g(s)\over f(N_c=0\,\vert\,d)g(d)}} = \log{f(N_c=1\,\vert\,s) \over f(N_c=1\,\vert\,d)} - \log{f(N_c=0\,\vert\,s)\over f(N_c=0\,\vert\,d)} .
+\qquad(33)$$</span><br /></span> Eq. 33 is mathematically equivalent to the bracketed term shown in Eq. 32.</p>
+<p>    We can now begin to staple these pieces together to arrive at an expression for the log odds of survival. Combining Eq. 32 with Eq. 29 yields <span id="eq:combined_v1"><br /><span class="math display">$$
+\log \mathcal{O}(s\,\vert\,N_c) = \log{g(s) \over g(d)} + \log {f(N_c=0\,\vert\, s) \over f(N_c=0\,\vert\, d)} + N_c\left[{f(N_c=1\,\vert\,s)\over f(N_c=1\,\vert\,d)} - \log{f(N_c=0\,\vert\,s) \over f(N_c=0\,\vert\,d)}\right].
+\qquad(34)$$</span><br /></span> Using our knowledge that the bracketed term is the log odds-ratio and the first two times represents the log-odds of survival with <span class="math inline"><em>N</em><sub><em>c</em></sub> = 0</span>, we conclude with <span id="eq:bayesian_logit"><br /><span class="math display">log 𝒪(<em>s</em> | <em>N</em><sub><em>c</em></sub>) = log 𝒪(<em>s</em> | <em>N</em><sub><em>c</em></sub> = 0) + <em>N</em><sub><em>c</em></sub>log 𝒪ℛ<sub><em>N</em><sub><em>c</em></sub></sub>(<em>s</em>).   (35)</span><br /></span> This result can be directly compared to Eq. 1 presented in the main text, <span id="eq:"><br /><span class="math display">$$
+\log {p_s \over 1 - p_s} = \beta_0 + \beta_1 N_c,
+\qquad(36)$$</span><br /></span> which allows for an interpretation of the seemingly arbitrary coefficients <span class="math inline"><em>β</em><sub>0</sub></span> and <span class="math inline"><em>β</em><sub>1</sub></span>. The intercept term, <span class="math inline"><em>β</em><sub>0</sub></span>, captures the log-odds of survival with no MscL channels. The slope, <span class="math inline"><em>β</em><sub>1</sub></span>, describes the log odds-ratio of survival which a single channel relative to the odds of survival with no channels at all. While we have examined this considering only two possible channel copy numbers (<span class="math inline">1</span> and <span class="math inline">0</span>), the relationship between them is linear. We can therefore generalize this for any MscL copy number as the increase in the log-odds of survival is constant for addition of a single channel.</p>
+<h3 id="other-properties-as-predictor-variables">Other properties as predictor variables</h3>
+<p>     The previous two sections discuss in detail the logic and practice behind the application of logistic regression to cell survival data using only the effective channel copy number as the predictor of survival. However, there are a variety of properties that could rightly be used as predictor variables, such as cell area and shock rate. As is stipulated in our standard candle calibration, there should be no correlation between survival and cell area. Fig. 9A and B show the logistic regression performed on the cell area. We see for both slow and fast shock groups,there is little change in survival probability with changing cell area and the wide credible regions allow for both positive and negative correlation between survival and area. The appearance of a bottle neck in the notably wide credible regions is a result of a large fraction of the measurements being tightly distributed about a mean value. Fig. 9C shows the predicted survival probability as a function of the the shock rate. There is a slight decrease in survivability as a function of increasing shock rate, however the width of the credible region allows for slightly positive or slightly negative correlation. While we have presented logistic regression in this section as a one-dimensional method, Eq. 19 can be generalized to <span class="math inline"><em>n</em></span> predictor variables <span class="math inline"><em>x</em></span> as <span id="eq:generalized_logit"><br /><span class="math display">$$
+\log {p_s \over 1 - p_s} = \beta_0 + \sum\limits_{i}^n \beta_ix_i.
+\qquad(37)$$</span><br /></span> Using this generalization, we can use both shock rate and the effective channel copy number as predictor variables. The resulting two-dimensional surface of survival probability is shown in Fig. 9 (D). As is suggested by Fig. 9 (C), the magnitude of change in survivability as the shock rate is increased is smaller than that along increasing channel copy number, supporting our conclusion that for MscL alone, the copy number is the most important variable in determining survival.</p>
+<figure>
+<img src="ch9_figS10.png" id="fig:alternative_predictor_variables" data-short-caption="Survival probability estimation using alternative predictor variables." alt="" /><figcaption>Figure 9: <strong>Survival probability estimation using alternative predictor variables.</strong> (A) Estimated survival probability as a function of cell area for the slow shock group. (B) Estimated survival probability as a function of cell area for the fast shock group. (C) Estimated survival probability as a function shock rate. Black points at top and bottom of plots represent single-cell measurements of cells who survived and perished, respectively. Shaded regions in (A) - (C) represent the 95% credible region. (D) Surface of estimated survival probability using both shock rate and effective channel number as predictor variables. Black points at left and right of plot represent single-cell measurements of cells which survived and died, respectively, sorted by shock rate. Points at top and bottom of plot represent survival and death sorted by their effective channel copy number. Labeled contours correspond to the survival probability.</figcaption>
+</figure>
+<h2 id="classification-of-shock-rate">Classification Of Shock Rate</h2>
+<p>    Its been previously shown that the rate of hypo-osmotic shock dictates the survival probability <span class="citation" data-cites="bialecka-fornal2015">(Bialecka-Fornal, Lee, and Phillips <a href="#ref-bialecka-fornal2015" role="doc-biblioref">2015</a>)</span>. To investigate how a single channel contributes to survival, we queried survival at several shock rates with varying MscL copy number. In the main text of this work, we separated our experiments into arbitrary bins of “fast” (<span class="math inline">≥</span> 1.0 Hz) and “slow” (<span class="math inline">&lt;</span> 1.0 Hz) shock rates. In this section, we discuss our rationale for coarse graining our data into these two groupings.</p>
+<p>    As is discussed in the main text and in the supplemental section <em>Logistic Regression</em>, we used a bin-free method of estimating the survival probability given the MscL channel copy number as a predictor variable. While this method requires no binning of the data, it requires a data set that sufficiently covers the physiological range of channel copy number to accurately allow prediction of survivability. Fig. 10 shows the results of the logistic regression treating each shock rate as an individual data set. The most striking feature of the plots shown in Fig. 10 is the inconsistent behavior of the predicted survivability from shock rate to shock rate. The appearance of bottle necks in the credible regions for some shock rates (0.2Hz, 0.5Hz, 2.00Hz, and 2.20 Hz) appear due to a high density of measurements within a narrow range of the channel copy number at the narrowest point in the bottle neck. While this results in a seemingly accurate prediction of the survival probability at that point, the lack of data in other copy number regimes severely limits our extrapolation outside of the copy number range of that data set. Other shock rates (0.018 Hz, 0.04 Hz, and 1.00 Hz) demonstrate completely pathological survival probability curves due to either complete survival or complete death of the population.</p>
+<p>    Ideally, we would like to have a wide range of MscL channel copy numbers at each shock rate shown in Fig. 10. However, the low-throughput nature of these single-cell measurements prohibits completion of this within a reasonable time frame. It is also unlikely that thoroughly dissecting the shock rate dependence will change the overall finding from our work that several hundred MscL channels are needed to convey survival under hypo-osmotic stress.</p>
+<figure>
+<img src="ch9_figS11.png" id="fig:indiv_shock_group" data-short-caption="Binning by individual shock rates." alt="" /><figcaption>Figure 10: <strong>Binning by individual shock rates.</strong> Survival probability estimates from logistic regression (red lines) and the computed survival probability for all SD mutants subjected to that shock rate (blue points). Black points at top and bottom of each plot correspond to single cell measurements of survival (top) and death (bottom). Red shaded regions signify the 95% credible region of the logistic regression. Horizontal error bars of blue points are the standard error of the mean channel copy number. Vertical error bars of blue points correspond to the uncertainty in survival probability by observing <span class="math inline"><em>n</em></span> survival events from <span class="math inline"><em>N</em></span> single-cell measurements.</figcaption>
+</figure>
+<p>     Given the data shown in Fig. 10, we can try to combine the data sets into several bins. Fig. 11 shows the data presented in Fig. 10 separated into “slow” (<span class="math inline">&lt;</span> 0.5 Hz, A), “intermediate” (0.5 - 1.0 Hz, B), and “fast” (<span class="math inline">&gt;</span> 1.0 Hz, C) shock groups. Using these groupings, the full range of MscL channel copy numbers are covered for each case, with the intermediate shock rate sparsely sampling copy numbers greater than 200 channels per cell. In all three of these cases, the same qualitative story is told – several hundred channels per cell are necessary for an appreciable level of survival when subjected to an osmotic shock. This argument is strengthened when examining the predicted survival probability by considering all shock rates as a single group, shown in Fig. 11 (D). This treatment tells nearly the same quantitative and qualitative story as the three rate grouping shown in this section and the two rate grouping presented in the main text. While there does appear to be a dependence on the shock rate for survival when only MscL is expressed, the effect is relatively weak with overlapping credible regions for the logistic regression across the all curves. To account for the sparse sampling of high copy numbers observed in the intermediate shock group, we split this set and partitioned the measurements into either the “slow” (<span class="math inline">&lt;</span> 1.0 Hz) or “fast” (<span class="math inline">≥</span> 1.0 Hz) groups presented in the main text of this work.</p>
+<figure>
+<img src="ch9_figS12.png" id="fig:three_shock_group" data-short-caption="Coarse graining shock rates into different groups." alt="" /><figcaption>Figure 11: <strong>Coarse graining shock rates into different groups.</strong> Estimated survival probability curve for slow (A), intermediate (B), and fast (C) shock rates. (D) Estimated survival probability curve from pooling all data together, ignoring varying shock rates. Red shaded regions correspond to the 95% credible region of the survival probability estimated via logistic regression. Black points at top and bottom of each plot represent single-cell measurements of cells which survived and died, respectively. Black points and error bars represent survival probability calculations from bins of 50 channels per cell. Blue points represent the survival probability for a given Shine-Dalgarno mutant. Horizontal error bars are the standard error of the mean with at least 25 measurements and vertical error bars signifies the uncertainty in the survival probability from observing <span class="math inline"><em>n</em></span> survival events out of <span class="math inline"><em>N</em></span> total measurements.</figcaption>
+</figure>
+<h2 id="comparison-of-survival-probability-with-van-den-berg-et-al.-2016">Comparison of Survival Probability with van den Berg et al. 2016</h2>
+<p>    In van den Berg et al. 2016, the authors report a 100% survival rate at approximately 100 channels per cell. While the number of mechanosensitive channels per cell was quantified at the level of single cells, the survival probability was measured in bulk using ensemble plating assays. The results of these experiments considering the contribution of MscL to survival is shown in Figure 5 of their work, although with out displayed uncertainty in the survival probability. Figure S6B of their work shows the approximate error in survival probability through ensemble plating assays for three different strains Fig. 12(A), which is approximately 30%. Using this approximate error and the data shown in their Figure 5B, we have reproduced this plot with error bars in both measured dimensions Fig. 12(B). This plot shows that even when the mean survival probability is 100%, the variation in the measured survival probability is large, extending as low as <span class="math inline">≈</span> 70%. This variation is likely born from a multitude of experimental steps including time of outgrowth, variation in shock rate, plating efficiency, and counting errors. As our experimental approach directly measures the survival/death of individual cells, we remove many sources of error that would arise from an ensemble approach, albeit at lower throughput. While it is possible that the discrepancy between <span class="citation" data-cites="vandenberg2016">van den Berg et al. (<a href="#ref-vandenberg2016" role="doc-biblioref">2016</a>)</span> and the work presented in Chapter 5 could arise from other unknown factors, we believe that single-cell experiments introduce the fewest sources of error.</p>
+<figure>
+<img src="ch9_figS13.png" id="fig:poolman_comparison" data-short-caption="MscL abundance verus survival data reported in van den Berg et al. 2016 with included error." alt="" /><figcaption>Figure 12: <strong>MscL abundance vs survival data reported in van den Berg et al. 2016 with included error.</strong> (A) Reported survival probabilities of a strain lacking all mechanosensitive channels (“no plasmid”), plasmid borne MscL-mEos3.2, and plasmid borne MscS-mEos3.2. Approximate reported errors for MscL-mEos3.2 survival probability is 30%. (B) The measurement of survival probability as a function of MscL channel copy number was obtained from Figure 5B in van den Berg et al 2016. Errors in channel copy number represent the standard deviation of several biological replicates (present in original figure) while the error in survival probability is taken as <span class="math inline">≈</span> 30%.</figcaption>
+</figure>
+<h2 id="e.-coli-strains"><em>E. coli</em> Strains</h2>
+<table style="width:100%;">
+<caption><em>Escherichia coli</em> strains used in Chapters 5 and 9.</caption>
+<colgroup>
+<col style="width: 16%" />
+<col style="width: 70%" />
+<col style="width: 13%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Strain name</th>
+<th>Genotype</th>
+<th>Reference</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>MJF641</td>
+<td>Frag1, <em><span class="math inline"><em>Δ</em></span>mscL::cm, <span class="math inline"><em>Δ</em></span>mscS, <span class="math inline"><em>Δ</em></span>mscK::kan, <span class="math inline"><em>Δ</em></span>ybdG::apr, <span class="math inline"><em>Δ</em></span>ynaI, <span class="math inline"><em>Δ</em></span>yjeP, <span class="math inline"><em>Δ</em></span>ybiO, ycjM::Tn10</em></td>
+<td><span class="citation" data-cites="edwards2012">Edwards et al. (<a href="#ref-edwards2012" role="doc-biblioref">2012</a>)</span></td>
+</tr>
+<tr class="even">
+<td>MLG910</td>
+<td>MG1655, <em><span class="math inline"><em>Δ</em></span>mscL ::<span class="math inline"><em>ϕ</em></span>mscL-sfGFP, <span class="math inline"><em>Δ</em></span>galK::kan, <span class="math inline"><em>Δ</em></span>lacI, <span class="math inline"><em>Δ</em></span>lacZY A</em></td>
+<td><span class="citation" data-cites="bialecka-fornal2012">Bialecka-Fornal et al. (<a href="#ref-bialecka-fornal2012" role="doc-biblioref">2012</a>)</span></td>
+</tr>
+<tr class="odd">
+<td>D6LG-Tn10</td>
+<td>Frag1, <em><span class="math inline"><em>Δ</em></span>mscL ::<span class="math inline"><em>ϕ</em></span>mscL-sfGFP, <span class="math inline"><em>Δ</em></span>mscS, <span class="math inline"><em>Δ</em></span>mscK::kan, <span class="math inline"><em>Δ</em></span>ybdG::apr, <span class="math inline"><em>Δ</em></span>ynaI, <span class="math inline"><em>Δ</em></span>yjeP, <span class="math inline"><em>Δ</em></span>ybiO, ycjM::Tn10</em></td>
+<td><span class="citation" data-cites="chure2018">Chure, Lee, and Phillips (<a href="#ref-chure2018" role="doc-biblioref">2018</a>)</span></td>
+</tr>
+<tr class="even">
+<td>D6LG (SD0)</td>
+<td>Frag1, <em><span class="math inline"><em>Δ</em></span>mscL ::<span class="math inline"><em>ϕ</em></span>mscL-sfGFP, <span class="math inline"><em>Δ</em></span>mscS, <span class="math inline"><em>Δ</em></span>mscK::kan, <span class="math inline"><em>Δ</em></span>ybdG::apr, <span class="math inline"><em>Δ</em></span>ynaI, <span class="math inline"><em>Δ</em></span>yjeP, <span class="math inline"><em>Δ</em></span>ybiO</em></td>
+<td><span class="citation" data-cites="chure2018">Chure, Lee, and Phillips (<a href="#ref-chure2018" role="doc-biblioref">2018</a>)</span></td>
+</tr>
+<tr class="odd">
+<td>XTL298</td>
+<td>CC4231<em>, araD:: tetA-sacB-amp</em></td>
+<td><span class="citation" data-cites="li2013">(Li et al. <a href="#ref-li2013" role="doc-biblioref">2013</a>)</span></td>
+</tr>
+<tr class="even">
+<td>D6LTetSac</td>
+<td>Frag1, <em>mscL-sfGFP:: tetA-sacB, <span class="math inline"><em>Δ</em></span>mscS, <span class="math inline"><em>Δ</em></span>mscK::kan, <span class="math inline"><em>Δ</em></span>ybdG::apr, <span class="math inline"><em>Δ</em></span>ynaI, <span class="math inline"><em>Δ</em></span>yjeP, <span class="math inline"><em>Δ</em></span>ybiO</em></td>
+<td><span class="citation" data-cites="chure2018">Chure, Lee, and Phillips (<a href="#ref-chure2018" role="doc-biblioref">2018</a>)</span></td>
+</tr>
+<tr class="odd">
+<td>D6LG (SD1)</td>
+<td>Frag1, <em><span class="math inline"><em>Δ</em></span>mscL ::<span class="math inline"><em>ϕ</em></span>mscL-sfGFP, <span class="math inline"><em>Δ</em></span>mscS, <span class="math inline"><em>Δ</em></span>mscK::kan, <span class="math inline"><em>Δ</em></span>ybdG::apr, <span class="math inline"><em>Δ</em></span>ynaI, <span class="math inline"><em>Δ</em></span>yjeP, <span class="math inline"><em>Δ</em></span>ybiO</em></td>
+<td><span class="citation" data-cites="chure2018">Chure, Lee, and Phillips (<a href="#ref-chure2018" role="doc-biblioref">2018</a>)</span></td>
+</tr>
+<tr class="even">
+<td>D6LG (SD2)</td>
+<td>Frag1, <em><span class="math inline"><em>Δ</em></span>mscL ::<span class="math inline"><em>ϕ</em></span>mscL-sfGFP, <span class="math inline"><em>Δ</em></span>mscS, <span class="math inline"><em>Δ</em></span>mscK::kan, <span class="math inline"><em>Δ</em></span>ybdG::apr, <span class="math inline"><em>Δ</em></span>ynaI, <span class="math inline"><em>Δ</em></span>yjeP, <span class="math inline"><em>Δ</em></span>ybiO</em></td>
+<td><span class="citation" data-cites="chure2018">Chure, Lee, and Phillips (<a href="#ref-chure2018" role="doc-biblioref">2018</a>)</span></td>
+</tr>
+<tr class="odd">
+<td>D6LG (SD4)</td>
+<td>Frag1, <em><span class="math inline"><em>Δ</em></span>mscL ::<span class="math inline"><em>ϕ</em></span>mscL-sfGFP, <span class="math inline"><em>Δ</em></span>mscS, <span class="math inline"><em>Δ</em></span>mscK::kan, <span class="math inline"><em>Δ</em></span>ybdG::apr, <span class="math inline"><em>Δ</em></span>ynaI, <span class="math inline"><em>Δ</em></span>yjeP, <span class="math inline"><em>Δ</em></span>ybiO</em></td>
+<td><span class="citation" data-cites="chure2018">Chure, Lee, and Phillips (<a href="#ref-chure2018" role="doc-biblioref">2018</a>)</span></td>
+</tr>
+<tr class="even">
+<td>D6LG (SD6)</td>
+<td>Frag1, <em><span class="math inline"><em>Δ</em></span>mscL ::<span class="math inline"><em>ϕ</em></span>mscL-sfGFP, <span class="math inline"><em>Δ</em></span>mscS, <span class="math inline"><em>Δ</em></span>mscK::kan, <span class="math inline"><em>Δ</em></span>ybdG::apr, <span class="math inline"><em>Δ</em></span>ynaI, <span class="math inline"><em>Δ</em></span>yjeP, <span class="math inline"><em>Δ</em></span>ybiO</em></td>
+<td><span class="citation" data-cites="chure2018">Chure, Lee, and Phillips (<a href="#ref-chure2018" role="doc-biblioref">2018</a>)</span></td>
+</tr>
+<tr class="odd">
+<td>D6LG (12SD2)</td>
+<td>Frag1, <em><span class="math inline"><em>Δ</em></span>mscL ::<span class="math inline"><em>ϕ</em></span>mscL-sfGFP, <span class="math inline"><em>Δ</em></span>mscS, <span class="math inline"><em>Δ</em></span>mscK::kan, <span class="math inline"><em>Δ</em></span>ybdG::apr, <span class="math inline"><em>Δ</em></span>ynaI, <span class="math inline"><em>Δ</em></span>yjeP, <span class="math inline"><em>Δ</em></span>ybiO</em></td>
+<td><span class="citation" data-cites="chure2018">Chure, Lee, and Phillips (<a href="#ref-chure2018" role="doc-biblioref">2018</a>)</span></td>
+</tr>
+<tr class="even">
+<td>D6LG (16SD0)</td>
+<td>Frag1, <em><span class="math inline"><em>Δ</em></span>mscL ::<span class="math inline"><em>ϕ</em></span>mscL-sfGFP, <span class="math inline"><em>Δ</em></span>mscS, <span class="math inline"><em>Δ</em></span>mscK::kan, <span class="math inline"><em>Δ</em></span>ybdG::apr, <span class="math inline"><em>Δ</em></span>ynaI, <span class="math inline"><em>Δ</em></span>yjeP, <span class="math inline"><em>Δ</em></span>ybiO</em></td>
+<td><span class="citation" data-cites="chure2018">Chure, Lee, and Phillips (<a href="#ref-chure2018" role="doc-biblioref">2018</a>)</span></td>
+</tr>
+</tbody>
+</table>
+<table>
+<caption>Oligonucleotide sequences used in Chapters 5 and 9. Bold and italics correspond to Shine-Dalgarno sequence modifications and <code>AT</code> hairpin insertion modifications, respectively. Double bar <code>||</code> indicates a transposon insertion site.</caption>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Primer Name</th>
+<th style="text-align: left;">Sequence (5’ <span class="math inline">→</span> 3’)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><em>Tn10delR</em></td>
+<td style="text-align: left;"><code>taaagccaacggcatccaggcggacatactcagca||</code></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><code>cctttcgcaaggtaacagagtaaaacatccaccat</code></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><em>MscLSPSac</em></td>
+<td style="text-align: left;"><code>gaaaatggcttaacatttgttagacttatggttgtcgg</code></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><code>cttcat</code><strong><code>agggag</code></strong><code>TCCTAATTTTTGTTGACACTCTATC</code></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><em>MscLSPSacR</em></td>
+<td style="text-align: left;"><code>accacgttcccgcgcatcgcaaattcgcgaaat</code></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><code>tctttaataatgctcatATCAAAGGGAAAACTGTCCATA</code></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><em>MscL-SD1R</em></td>
+<td style="text-align: left;"><code>atcgcaaattcgcgaaattctttaataatgctcat</code></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><code>gttatt</code><strong><code>ctcctc</code></strong><code>atgaagccgacaaccataagtctaacaaa</code></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><em>MscL-SD2R</em></td>
+<td style="text-align: left;"><code>atcgcaaattcgcgaaattctttaataatgctcat</code><em><code>gttatt</code></em></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><strong><code>tcccct</code></strong><code>atgaagccgacaaccataagtctaacaaa</code></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><em>MscL-SD4R</em></td>
+<td style="text-align: left;"><code>atcgcaaattcgcgaaattctttaataatgctcat</code></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><em><code>gttatt</code></em> <strong><code>cctgct</code></strong><code>atgaagccgacaaccataagtctaacaaa</code></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><em>MscL-SD6R</em></td>
+<td style="text-align: left;"><code>atcgcaaattcgcgaaattctttaataatgctcat</code></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><em><code>gttatt</code></em> <strong><code>gctcgt</code></strong><code>atgaagccgacaaccataagtctaacaaa</code></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><em>MscL-12SD2R</em></td>
+<td style="text-align: left;"><code>atcgcaaattcgcgaaattctttaataatgctcat</code></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><em><code>atatatatatat</code></em> <strong><code>tcccct</code></strong><code>atgaagccgacaaccataagtctaacaaa</code></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><em>MscL-16SD0R</em></td>
+<td style="text-align: left;"><code>atcgcaaattcgcgaaattctttaataatgctcat</code></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><em><code>atatatatatatatat</code></em> <strong><code>ctccct</code></strong><code>atgaagccgacaaccataagtctaacaaa</code></td>
+</tr>
+</tbody>
+</table>
 <h2 class="unnumbered" id="references" class="unnumbered">References</h2>
 <div id="refs" class="references hanging-indent" role="doc-bibliography">
+<div id="ref-anderson2003">
+<p>Anderson, Richard P, Ruyun Jin, and Gary L Grunkemeier. 2003. “Understanding Logistic Regression Analysis in Clinical Reports: An Introduction.” <em>The Annals of Thoracic Surgery</em> 75 (3): 753–57. <a href="https://doi.org/10.1016/S0003-4975(02)04683-0">https://doi.org/10.1016/S0003-4975(02)04683-0</a>.</p>
+</div>
 <div id="ref-bialecka-fornal2012">
 <p>Bialecka-Fornal, Maja, Heun Jin Lee, Hannah A. DeBerg, Chris S. Gandhi, and Rob Phillips. 2012. “Single-Cell Census of Mechanosensitive Channels in Living Bacteria.” Edited by Arnold Driessen. <em>PLoS ONE</em> 7 (3): e33077. <a href="https://doi.org/10.1371/journal.pone.0033077">https://doi.org/10.1371/journal.pone.0033077</a>.</p>
+</div>
+<div id="ref-bialecka-fornal2015">
+<p>Bialecka-Fornal, Maja, Heun Jin Lee, and Rob Phillips. 2015. “The Rate of Osmotic Downshock Determines the Survival Probability of Bacterial Mechanosensitive Channel Mutants.” Edited by P. de Boer. <em>Journal of Bacteriology</em> 197 (1): 231–37. <a href="https://doi.org/10.1128/JB.02175-14">https://doi.org/10.1128/JB.02175-14</a>.</p>
 </div>
 <div id="ref-blount1999">
 <p>Blount, P., S. I. Sukharev, P. C. Moe, B. Martinac, and C. Kung. 1999. “Mechanosensitive Channels of Bacteria.” <em>Methods in Enzymology</em> 294: 458–82.</p>
@@ -296,11 +543,38 @@ g(\tilde{\alpha}, \tilde{\sigma}_\alpha, \tilde{\langle A \rangle}, \tilde{\sigm
 <div id="ref-blount1996">
 <p>Blount, P., S. I. Sukharev, M. J. Schroeder, S. K. Nagle, and C. Kung. 1996. “Single Residue Substitutions That Change the Gating Properties of a Mechanosensitive Channel in <em>Escherichia Coli</em>.” <em>Proc Natl Acad Sci U S A</em> 93 (October): 11652–7.</p>
 </div>
+<div id="ref-cheng2009">
+<p>Cheng, Weiwei, and Eyke Hüllermeier. 2009. “Combining Instance-Based Learning and Logistic Regression for Multilabel Classification.” <em>Machine Learning</em> 76 (2-3): 211–25. <a href="https://doi.org/10.1007/s10994-009-5127-5">https://doi.org/10.1007/s10994-009-5127-5</a>.</p>
+</div>
+<div id="ref-chure2018">
+<p>Chure, Griffin, Heun Jin Lee, and Rob Phillips. 2018. “MCMC Chains Generated in "Connecting the Dots Between Mechanosensitive Channel Abundance, Osmotic Shock, and Survival at Single-Cell Resolution" Accessible Through DOI 10.22002/D1.942,” May.</p>
+</div>
+<div id="ref-downey2014">
+<p>Downey, Allen. 2014. “Probably Overthinking It: Bayes’s Theorem and Logistic Regression.” <em>Probably Overthinking It</em>, April.</p>
+</div>
+<div id="ref-dreiseitl2002">
+<p>Dreiseitl, Stephan, and Lucila Ohno-Machado. 2002. “Logistic Regression and Artificial Neural Network Classification Models: A Methodology Review.” <em>Journal of Biomedical Informatics</em> 35 (5): 352–59. <a href="https://doi.org/10.1016/S1532-0464(03)00034-0">https://doi.org/10.1016/S1532-0464(03)00034-0</a>.</p>
+</div>
+<div id="ref-edwards2012">
+<p>Edwards, M. D., S. Black, T. Rasmussen, A. Rasmussen, N. R. Stokes, T. L. Stephen, S. Miller, and I. R. Booth. 2012. “Characterization of Three Novel Mechanosensitive Channel Activities in <em>Escherichia Coli</em>.” <em>Channels (Austin)</em> 6: 272–81. <a href="https://doi.org/10.4161/chan.20998\\\%002020998\\\%0020%5Bpii%5D">https://doi.org/10.4161/chan.20998\\\%002020998\\\%0020[pii]</a>.</p>
+</div>
+<div id="ref-li2013">
+<p>Li, Xin-tian, Lynn C. Thomason, James A. Sawitzke, Nina Costantino, and Donald L. Court. 2013. “Positive and Negative Selection Using the tetA-sacB Cassette: Recombineering and P1 Transduction in <em>Escherichia Coli</em>.” <em>Nucleic Acids Research</em> 41 (22): e204–e204.</p>
+</div>
 <div id="ref-milo2010">
 <p>Milo, Ron, Paul Jorgensen, Uri Moran, Griffin Weber, and Michael Springer. 2010. “BioNumbersthe Database of Key Numbers in Molecular and Cell Biology.” <em>Nucleic Acids Research</em> 38 (suppl_1): D750–D753. <a href="https://doi.org/10.1093/nar/gkp889">https://doi.org/10.1093/nar/gkp889</a>.</p>
 </div>
+<div id="ref-mishra2016">
+<p>Mishra, Vikas, Maciej Skotak, Heather Schuetz, Abi Heller, James Haorah, and Namas Chandra. 2016. “Primary Blast Causes Mild, Moderate, Severe and Lethal TBI with Increasing Blast Overpressures: Experimental Rat Injury Model.” <em>Scientific Reports</em> 6 (June): 26992. <a href="https://doi.org/10.1038/srep26992">https://doi.org/10.1038/srep26992</a>.</p>
+</div>
 <div id="ref-sivia2006">
 <p>Sivia, Devinderjit, and John Skilling. 2006. <em>Data Analysis: A Bayesian Tutorial</em>. OUP Oxford.</p>
+</div>
+<div id="ref-stahler2013">
+<p>Stahler, Gerald J., Jeremy Mennis, Steven Belenko, Wayne N. Welsh, Matthew L. Hiller, and Gary Zajac. 2013. “Predicting Recidivism for Released State Prison Offenders.” <em>Criminal Justice and Behavior</em> 40 (6): 690–711. <a href="https://doi.org/10.1177/0093854812469609">https://doi.org/10.1177/0093854812469609</a>.</p>
+</div>
+<div id="ref-vandenberg2016">
+<p>van den Berg, Jonas, Heloisa Galbiati, Akiko Rasmussen, Samantha Miller, and Bert Poolman. 2016. “On the Mobility, Membrane Location and Functionality of Mechanosensitive Channels in <em>Escherichia Coli</em>.” <em>Scientific Reports</em> 6 (1). <a href="https://doi.org/10.1038/srep32709">https://doi.org/10.1038/srep32709</a>.</p>
 </div>
 </div>
 						</div><!-- /.content -->
@@ -314,38 +588,6 @@ g(\tilde{\alpha}, \tilde{\sigma}_\alpha, \tilde{\langle A \rangle}, \tilde{\sigm
 			</div><!-- /.container -->
 		</div><!-- /.section -->
 		
-			<div class="section section--grey">
-				<div class="container">
-					<div class="row">
-						<div class="col-md-7">
-							<div id="disqus_thread"></div>
-<script>
-	/**
-	 *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-	 *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
-	 */
-	 /*
-	var disqus_config = function () {
-	this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
-		this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-	};
-	*/
-	(function() {
-		var d = document, s = d.createElement('script');
-
-		s.src = 'https://gchure_phd.disqus.com/embed.js';
-
-		s.setAttribute('data-timestamp', +new Date());
-		(d.head || d.body).appendChild(s);
-	})();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
-
-						</div><!-- /.col -->
-					</div><!-- /.row -->
-				</div><!-- /.container -->
-			</div><!-- /.section -->
-		
 		<div class="js-footer-area">
 			
 				<nav class="page-nav">	
@@ -353,13 +595,13 @@ g(\tilde{\alpha}, \tilde{\sigma}_\alpha, \tilde{\langle A \rangle}, \tilde{\sigm
 						<div class="row">
 							<div class="col-xs-12">
 								
-									<a href="https://gchure.github.io/phd{{site.doks.baseurl}}/published_content" class="page-nav__item page-nav__item--prev">
+									<a href="{{site.doks.baseurl}}/published_content" class="page-nav__item page-nav__item--prev">
 										<i class="icon icon--arrow-left"></i>
 										Published Content
 									</a><!-- /.page-nav__item -->
 								
 								
-									<a href="https://gchure.github.io/phd{{site.doks.baseurl}}/chapter_02" class="page-nav__item page-nav__item--next">
+									<a href="{{site.doks.baseurl}}/chapter_02" class="page-nav__item page-nav__item--next">
 										Chapter 2
 										<i class="icon icon--arrow-right"></i>
 									</a><!-- /.page-nav__item -->
@@ -376,7 +618,7 @@ g(\tilde{\alpha}, \tilde{\sigma}_\alpha, \tilde{\langle A \rangle}, \tilde{\sigm
 			<div class="row">
 				<div class="col-sm-6">
 					
-						<a href="https://gchure.github.io/phd/" class="site-footer__logo">Griffin D. Chure | PhD Thesis</a>
+						<a href="/" class="site-footer__logo">Griffin D. Chure | PhD Thesis</a>
 					
 					
 						<hr>
@@ -401,11 +643,11 @@ g(\tilde{\alpha}, \tilde{\sigma}_\alpha, \tilde{\langle A \rangle}, \tilde{\sigm
 	</footer><!-- /.site-footer -->
 
 
-<script src="https://gchure.github.io/phd/doks-theme/assets/js/vendor/jquery.min.js"></script>
-<script type="text/javascript" src="https://gchure.github.io/phd/doks-theme/assets/js/vendor/bootstrap/affix.min.js"></script>
-<script type="text/javascript" src="https://gchure.github.io/phd/doks-theme/assets/js/vendor/bootstrap/scrollspy.min.js"></script>
-<script type="text/javascript" src="https://gchure.github.io/phd/doks-theme/assets/js/vendor/matchHeight.min.js"></script>
-<script type="text/javascript" src="https://gchure.github.io/phd/doks-theme/assets/js/scripts.min.js"></script>
+<script src="/doks-theme/assets/js/vendor/jquery.min.js"></script>
+<script type="text/javascript" src="/doks-theme/assets/js/vendor/bootstrap/affix.min.js"></script>
+<script type="text/javascript" src="/doks-theme/assets/js/vendor/bootstrap/scrollspy.min.js"></script>
+<script type="text/javascript" src="/doks-theme/assets/js/vendor/matchHeight.min.js"></script>
+<script type="text/javascript" src="/doks-theme/assets/js/scripts.min.js"></script>
 
 
 

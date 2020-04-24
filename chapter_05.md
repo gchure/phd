@@ -40,11 +40,11 @@ page_nav:
 prefix: chapter_05
 contents:
     - section_01_header
-    - section_02_introduction
-    - section_03_results
-    - section_04_discussion
-    - section_05_methods
-    - section_06_acknowledgements
+    - section_02_abstract
+    - section_03_introduction
+    - section_04_results
+    - section_05_discussion
+    - section_06_methods
 ---
 
 **Published as ...**

@@ -36,11 +36,11 @@
   <script id="MathJax-script" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
   
 
-<link rel="icon" href="https://gchure.github.io/phd/favicon.ico" type="image/x-icon">
+<link rel="icon" href="/favicon.ico" type="image/x-icon">
 <link href="https://fonts.googleapis.com/css?family=Nanum+Myeongjo&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Alegreya|Lora&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="https://gchure.github.io/phd/doks-theme/assets/css/style.css">
+<link rel="stylesheet" href="/doks-theme/assets/css/style.css">
 
 	</head>
 	<body class="grey" data-spy="scroll" data-target=".js-scrollspy">
@@ -52,7 +52,7 @@
 			<div class="row">
 				<div class="col-xs-12">
 					
-						<a href="https://gchure.github.io/phd/" class="site-header__logo"><i class="icon icon--chevron-left"></i> Home</a>
+						<a href="/" class="site-header__logo"><i class="icon icon--chevron-left"></i> Home</a>
 					
 					
 				</div><!-- /.col -->
@@ -61,7 +61,7 @@
 	</header><!-- /.site-header -->
 
 
-		<div class="hero-subheader" style="background-image: url(https://gchure.github.io/phd/doks-theme/assets/images/waves.jpg); background-position: center; object-fit: cover; width:100%;">
+		<div class="hero-subheader" style="background-image: url(http://127.0.0.1:4000/doks-theme/assets/images/waves.jpg); background-position: center; object-fit: cover; width:100%;">
 
 			<div class="container" style="background-color: rgba(0,0,0, 0.75); border:0.75px solid white;">
 				<div class="row">
@@ -78,12 +78,12 @@
 								
 								<!-- 
 									
-										<a href="https://gchure.github.io/phd{{site.doks.baseurl}}/published_content" class="btn btn--dark btn--rounded btn--w-icon btn--w-icon-left">
+										<a href="{{site.doks.baseurl}}/published_content" class="btn btn--dark btn--rounded btn--w-icon btn--w-icon-left">
 											<i class="icon icon--arrow-left"></i>	
 										</a>
 									
 									
-										<a href="https://gchure.github.io/phd{{site.doks.baseurl}}/chapter_02" class="btn btn--dark btn--rounded btn--w-icon">
+										<a href="{{site.doks.baseurl}}/chapter_02" class="btn btn--dark btn--rounded btn--w-icon">
 											<i class="icon icon--arrow-right"></i>
 										</a>
 									
@@ -101,13 +101,13 @@
 						<div class="row" >
 							<div class="col-xs-12">
 								
-									<a href="https://gchure.github.io/phd{{site.doks.baseurl}}/published_content" class="page-nav__item page-nav__item--prev">
+									<a href="{{site.doks.baseurl}}/published_content" class="page-nav__item page-nav__item--prev">
 										<i class="icon icon--arrow-left"></i>
 										Published Content
 									</a><!-- /.page-nav__item -->
 								
 								
-									<a href="https://gchure.github.io/phd{{site.doks.baseurl}}/chapter_02" class="page-nav__item page-nav__item--next">
+									<a href="{{site.doks.baseurl}}/chapter_02" class="page-nav__item page-nav__item--next">
 										Chapter 2
 										<i class="icon icon--arrow-right"></i>
 									</a><!-- /.page-nav__item -->
@@ -443,10 +443,257 @@ g(\Delta\varepsilon_{RA}^{(j)}) = \frac{1}{\sqrt{2\pi\sigma_{\varepsilon_j}^2}}
 <figure>
 <img src="ch6_figS13.png" id="fig:properties_global_fit" data-short-caption="Key properties of induction profiles as predicted with a global fit using all data." alt="" /><figcaption>Figure 13: <strong>Key properties of induction profiles as predicted with a global fit using all data.</strong> Data for (A) leakiness, (B) saturation, and (C) dynamic range are computed directly from measured fold-change. Points and errors correspond to the mean and standard error of 10 - 11 biological replicates. Points in (D) and (E) for the [EC<span class="math inline"><em></em><sub>50</sub></span>] and the effective Hill coefficient, respectively, represent the estimated value using parameter estimates of <span class="math inline"><em>K</em><sub><em>A</em></sub></span> and <span class="math inline"><em>K</em><sub><em>I</em></sub></span> for that particular strain. Errors represent the width of the 95% credible region. In all plots, curves represent the theoretical predictions given the parameter estimates conditioned on all datasets.</figcaption>
 </figure>
+<h2 id="applicability-of-theory-to-the-oid-operator-sequence">Applicability of Theory to the Oid Operator Sequence</h2>
+<p>In addition to the native operator sequences (O1, O2, and O3) considered in the main text, we were also interested in testing our model predictions against the synthetic Oid operator. In contrast to the other operators, Oid is one base pair shorter in length (20 bp), is fully symmetric, and is known to provide stronger repression than the native operator sequences considered so far. While the theory should be similarly applicable, measuring the lower fold-changes associated with this YFP construct was expected to be near the sensitivity limit for our flow cytometer, due to the especially strong binding energy of Oid (<span class="math inline"><em>Δ</em><em>ε</em><sub><em>R</em><em>A</em></sub> =  − 17.0 <em>k</em><sub><em>B</em></sub><em>T</em></span>) <span class="citation" data-cites="garcia2011">(Garcia et al. <a href="#ref-garcia2011" role="doc-biblioref">2011</a><a href="#ref-garcia2011" role="doc-biblioref">a</a>)</span>. Accordingly, fluorescence data for Oid were obtained using microscopy, which is more sensitive than flow cytometry.</p>
+<p>     We follow the approach of the main text and make fold-change predictions based on the parameter estimates from our strain with <span class="math inline"><em>R</em> = 260</span> and an O2 operator. These predictions are shown in Fig. 14, where we also plot data taken in triplicate for strains containing <span class="math inline"><em>R</em> = 22</span>, 60, and 124, obtained by single-cell microscopy. We find that the data are systematically below the theoretical predictions. We also considered our global fitting approach (see previous section) to see whether we might find better agreement with the observed data. Interestingly, we find that the majority of the parameters remain largely unchanged, but our estimate for the Oid binding energy <span class="math inline"><em>Δ</em><em>ε</em><sub><em>R</em><em>A</em></sub></span> is shifted to <span class="math inline"> − 17.7 <em>k</em><sub><em>B</em></sub><em>T</em></span> instead of the value <span class="math inline"> − 17.0 <em>k</em><sub><em>B</em></sub><em>T</em></span> found in <span class="citation" data-cites="garcia2011">Garcia et al. (<a href="#ref-garcia2011" role="doc-biblioref">2011</a><a href="#ref-garcia2011" role="doc-biblioref">a</a>)</span>. In Fig. 14 we again plot the Oid fold-change data but with theoretical predictions using the new estimate for the Oid binding energy from our global fit and find substantially better agreement.</p>
+<figure>
+<img src="ch6_figS14.png" id="fig:oid_refit" data-short-caption="Predictions of fold-change for strains with an Oid binding sequence versus experimental measurements with different repressor copy numbers." alt="" /><figcaption>Figure 14: <strong>Predictions of fold-change for strains with an Oid binding sequence versus experimental measurements with different repressor copy numbers.</strong> Experimental data is plotted against the parameter-free predictions that are based on our fit to the O2 strain with <span class="math inline"><em>R</em> = 260</span>. Here we use the previously measured binding energy <span class="math inline"><em>Δ</em><em>ε</em><sub><em>R</em><em>A</em></sub> =  − 17.0 <em>k</em><sub><em>B</em></sub><em>T</em></span> <span class="citation" data-cites="garcia2011">(Garcia et al. <a href="#ref-garcia2011" role="doc-biblioref">2011</a><a href="#ref-garcia2011" role="doc-biblioref">a</a>)</span>. The same experimental data is plotted against the best-fit parameters using the complete O1, O2, O3, and Oid data sets to infer <span class="math inline"><em>K</em><sub><em>A</em></sub></span>, <span class="math inline"><em>K</em><sub><em>I</em></sub></span>, repressor copy numbers, and the binding energies of all operators. Here the major difference in the inferred parameters is a shift in the binding energy for Oid from <span class="math inline"><em>Δ</em><em>ε</em><sub><em>R</em><em>A</em></sub> =  − 17.0 <em>k</em><sub><em>B</em></sub><em>T</em></span> to <span class="math inline"><em>Δ</em><em>ε</em><sub><em>R</em><em>A</em></sub> =  − 17.7 <em>k</em><sub><em>B</em></sub><em>T</em></span>, which now shows agreement between the theoretical predictions and experimental data. Shaded regions from the theoretical curves denote the 95% credible region.</figcaption>
+</figure>
+<h2 id="comparison-of-parameter-estimation-and-fold-change-predictions-across-strains">Comparison of Parameter Estimation and Fold-Change Predictions across Strains</h2>
+<p>The inferred parameter values for <span class="math inline"><em>K</em><sub><em>A</em></sub></span> and <span class="math inline"><em>K</em><sub><em>I</em></sub></span> in Chapter 2 were determined by fitting to induction fold-change measurements from a single strain (<span class="math inline"><em>R</em> = 260</span>, <span class="math inline"><em>Δ</em><em>ε</em><sub><em>R</em><em>A</em></sub> =  − 13.9 <em>k</em><sub><em>B</em></sub><em>T</em></span>, <span class="math inline"><em>n</em> = 2</span>, and <span class="math inline"><em>Δ</em><em>ε</em><sub><em>A</em><em>I</em></sub> = 4.5 <em>k</em><sub><em>B</em></sub><em>T</em></span>). After determining these parameters, we were able to predict the fold-change of the remaining strains without any additional fitting. However, the theory should be independent of the specific strain used to estimate <span class="math inline"><em>K</em><sub><em>A</em></sub></span> and <span class="math inline"><em>K</em><sub><em>I</em></sub></span>; using any alternative strain to fit <span class="math inline"><em>K</em><sub><em>A</em></sub></span> and <span class="math inline"><em>K</em><sub><em>I</em></sub></span> should yield similar predictions. For the sake of completeness, here we discuss the values for <span class="math inline"><em>K</em><sub><em>A</em></sub></span> and <span class="math inline"><em>K</em><sub><em>I</em></sub></span> that are obtained by fitting to each of the induction data sets individually. These fit parameters are shown in Fig. 2.6 (D) of Chapter 2, where we find close agreement between strains, but with some deviation and poorer inferences observed with the O3 operator strains. Overall, we find that regardless of which strain is chosen to determine the unknown parameters, the predictions laid out by the theory closely match the experimental measurements. Here we present a comparison of the strain specific predictions and measured fold-change data for each of the three operators considered.</p>
+<p>     We follow the approach taken in Chapter 2 and infer values for <span class="math inline"><em>K</em><sub><em>A</em></sub></span> and <span class="math inline"><em>K</em><sub><em>I</em></sub></span> by fitting to each combination of binding energy <span class="math inline"><em>Δ</em><em>ε</em><sub><em>R</em><em>A</em></sub></span> and repressor copy number <span class="math inline"><em>R</em></span>. We then use these fitted parameters to predict the induction curves of all other strains. In Fig. 15, we plot these fold-change predictions along with experimental data for each of our strains that contains an O1 operator. To make sense of this plot we consider the first row as an example. In the first row, <span class="math inline"><em>K</em><sub><em>A</em></sub></span> and <span class="math inline"><em>K</em><sub><em>I</em></sub></span> were estimated using data from the strain containing <span class="math inline"><em>R</em> = 22</span> and an O1 operator (top leftmost plot). The remaining plots in this row show the predicted fold-change using these values for <span class="math inline"><em>K</em><sub><em>A</em></sub></span> and <span class="math inline"><em>K</em><sub><em>I</em></sub></span>. In each row, we then infer <span class="math inline"><em>K</em><sub><em>A</em></sub></span> and <span class="math inline"><em>K</em><sub><em>I</em></sub></span> using data from a strain containing a different repressor copy number (<span class="math inline"><em>R</em> = 60</span> in the second row, <span class="math inline"><em>R</em> = 124</span> in the third row, and so on). In Fig. 16 and Fig. 17, we similarly apply this inference to our strains with O2 and O3 operators, respectively. We note that the overwhelming majority of predictions closely match the experimental data.The notable exception is that using the <span class="math inline"><em>R</em> = 22</span> strain provides poor predictions for the strains with large copy numbers (especially <span class="math inline"><em>R</em> = 1220</span> and <span class="math inline"><em>R</em> = 1740</span>), though it should be noted that predictions made from the <span class="math inline"><em>R</em> = 22</span> strain have considerably broader credible regions. This loss in predictive power is due to the poorer estimates of <span class="math inline"><em>K</em><sub><em>A</em></sub></span> and <span class="math inline"><em>K</em><sub><em>I</em></sub></span> for the <span class="math inline"><em>R</em> = 22</span> strain as shown in Fig. 2.6 (D).</p>
+<figure>
+<img src="ch6_figS15.png" id="fig:O1_comparison" data-short-caption="O1 strain fold-change predictions based on strain-specific parameter estimation of $K_A$ and $K_I$." alt="" /><figcaption>Figure 15: <strong>O1 strain fold-change predictions based on strain-specific parameter estimation of <span class="math inline"><em>K</em><sub><em>A</em></sub></span> and <span class="math inline"><em>K</em><sub><em>I</em></sub></span>.</strong> Fold-change in expression is plotted as a function of IPTG concentration for all strains containing an O1 operator.</figcaption>
+</figure>
+<figure>
+<img src="ch6_figS16.png" id="fig:O2_comparison" data-short-caption="O2 strain fold-change predictions based on strain-specific parameter estimation of $K_A$ and $K_I$." alt="" /><figcaption>Figure 16: <strong>O2 strain fold-change predictions based on strain-specific parameter estimation of <span class="math inline"><em>K</em><sub><em>A</em></sub></span> and <span class="math inline"><em>K</em><sub><em>I</em></sub></span>.</strong> Fold-change in expression is plotted as a function of IPTG concentration for all strains containing an O2 operator.</figcaption>
+</figure>
+<figure>
+<img src="ch6_figS17.png" id="fig:O3_comparison" data-short-caption="O3 strain fold-change predictions based on strain-specific parameter estimation of $K_A$ and $K_I$." alt="" /><figcaption>Figure 17: <strong>O3 strain fold-change predictions based on strain-specific parameter estimation of <span class="math inline"><em>K</em><sub><em>A</em></sub></span> and <span class="math inline"><em>K</em><sub><em>I</em></sub></span>.</strong> Fold-change in expression is plotted as a function of IPTG concentration for all strains containing an O3 operator.</figcaption>
+</figure>
+<h2 id="properties-of-induction-titration-curves">Properties of Induction Titration Curves</h2>
+<p>In this section, we expand on the phenotypic properties of the induction response that were explored in Chapter 2. We begin by expanding on our discussion of dynamic range and then show the analytic form of the <span class="math inline">[<em>E</em><em>C</em><sub>50</sub>]</span> for simple repression.</p>
+<p>     As stated in the main text, the dynamic range is defined as the difference between the maximum and minimum system response, or equivalently, as the difference between the saturation and leakiness of the system. The dynamic range is therefore given by <span id="eq:induction_si_dyn_rng"><br /><span class="math display">$$
+\text{dynamic range} = \left(
+1+\frac{1}{1+e^{-\beta \Delta \varepsilon_{AI} } \left(\frac{K_A}{K_I}\right)^n }\frac{R}{N_{NS}}e^{-\beta \Delta\varepsilon_{RA}} \right)^{-1} - \left(
+1+\frac{1}{1+e^{-\beta \Delta \varepsilon_{AI} }}\frac{R}{N_{NS}}e^{-\beta
+\Delta\varepsilon_{RA}} \right)^{-1}.
+\qquad(30)$$</span><br /></span></p>
+<p>     The dynamic range, along with saturation and leakiness were plotted with our experimental data in Fig. 2.7(A-C) as a function of repressor copy number. Fig. 18 shows how these properties are expected to vary as a function of the repressor-operator binding energy. Note that the resulting curves for all three properties have the same shape as in Fig. 2.7 (A-C), since the dependence of the fold-change upon the repressor copy number and repressor-operator binding energy are both contained in a single multiplicative term, <span class="math inline"><em>R</em><em>e</em><sup> − <em>β</em><em>Δ</em><em>ε</em><sub><em>R</em><em>A</em></sub></sup></span>. Hence, increasing <span class="math inline"><em>R</em></span> on a logarithmic scale is equivalent to decreasing <span class="math inline"><em>Δ</em><em>ε</em><sub><em>R</em><em>A</em></sub></span> on a linear scale.</p>
+<p>     An interesting aspect of the dynamic range is that it exhibits a peak as a function of either the repressor copy number (or equivalently of the repressor-operator binding energy). Differentiating the dynamic range (Eq. 30) and setting it equal to zero, we find that this peak occurs at <span id="eq:loc_max_dyn_rng"><br /><span class="math display">$$
+\frac{R^*}{N_{NS}} = e^{-\beta (\Delta\varepsilon_{AI} -
+\Delta\varepsilon_{RA})} \sqrt{e^{\Delta\varepsilon_{AI}} + 1}
+\sqrt{e^{\Delta\varepsilon_{AI}} + \left( \frac{K_A}{K_I} \right)^n}.
+\qquad(31)$$</span><br /></span> The magnitude of the peak is given by <span id="eq:mag_max_dyn_rng"><br /><span class="math display">$$
+\text{max dynamic range} = \frac{\left( \sqrt{e^{\Delta\varepsilon_{AI}} + 1} -
+\sqrt{e^{\Delta\varepsilon_{AI}} + \left( \frac{K_A}{K_I} \right)^n}
+\right)^2}{\left( \frac{K_A}{K_I} \right)^n - 1},
+\qquad(32)$$</span><br /></span> which is independent of the repressor-operator binding energy <span class="math inline"><em>Δ</em><em>ε</em><sub><em>R</em><em>A</em></sub></span> or <span class="math inline"><em>R</em></span>, and will only cause a shift in the location of the peak but not its magnitude.</p>
+<figure>
+<img src="ch6_figS18.png" id="fig:properties_expanded" data-short-caption="Dependence of leakiness, saturation, and dynamic range on the operator binding energy and repressor copy number." alt="" /><figcaption>Figure 18: <strong>Dependence of leakiness, saturation, and dynamic range on the operator binding energy and repressor copy number.</strong> Increasing repressor copy number or decreasing the repressor-operator binding energy suppresses gene expression and decreases both the (A) leakiness and (B) saturation. (C) The dynamic range retains its shape, but shifts right as the repressor copy number increases. The peak in the dynamic range can be understood by considering the two extremes for <span class="math inline"><em>Δ</em><em>ε</em><sub><em>R</em><em>A</em></sub></span>: for small repressor-operator binding energies, the leakiness is small but the saturation increases with <span class="math inline"><em>Δ</em><em>ε</em><sub><em>R</em><em>A</em></sub></span>, thereby decreasing the dynamic range. Repressor copy number does not affect the maximum dynamic range.</figcaption>
+</figure>
+<p>     We now consider the two remaining properties, the <span class="math inline">[<em>E</em><em>C</em><sub>50</sub>]</span> and effective Hill coefficient, which determine the horizontal properties of a system - that is, they determine the range of inducer concentration in which the system’s response goes from its minimum to maximum values. The <span class="math inline">[<em>E</em><em>C</em><sub>50</sub>]</span> denotes the inducer concentration required to generate fold-change halfway between its minimum and maximum value and was defined implicitly in Eq. 2.9. For the simple repression system, the <span class="math inline">[<em>E</em><em>C</em><sub>50</sub>]</span> is given by <span id="eq:ec50_explicit"><br /><span class="math display">$$
+\frac{[EC_{50}]}{K_A} = \frac{\frac{K_A}{K_I} - 1}{\frac{K_A}{K_I} - \left(
+\frac{\left( 1 + \frac{R}{N_{NS}} e^{-\beta \Delta\varepsilon_{RA}} \right) +
+\left( \frac{K_A}{K_I} \right)^n \left( 2 e^{-\beta \Delta \varepsilon_{AI}} +
+\left( 1 + \frac{R}{N_{NS}} e^{-\beta \Delta\varepsilon_{RA}} \right) \right)
+}{ 2 \left( 1 + \frac{R}{N_{NS}} e^{-\beta \Delta\varepsilon_{RA}} \right) +
+e^{-\beta \Delta \varepsilon_{AI}} + \left( \frac{K_A}{K_I} \right)^n e^{-\beta
+\Delta \varepsilon_{AI}} } \right)^{\frac{1}{n}}} - 1.
+\qquad(33)$$</span><br /></span> Using this expression, we can then find the effective Hill coefficient <span class="math inline"><em>h</em></span>, which equals twice the log-log slope of the normalized fold-change evaluated at <span class="math inline"><em>c</em> = [<em>E</em><em>C</em><sub>50</sub>]</span>. In Fig. 2.7 (D-E) we show how these two properties vary with repressor copy number, and in Fig. 19, we demonstrate how they depend on the repressor-operator binding energy. Both the <span class="math inline">[<em>E</em><em>C</em><sub>50</sub>]</span> and <span class="math inline"><em>h</em></span> vary significantly with repressor copy number for sufficiently strong operator binding energies. Interestingly, for weak operator binding energies on the order of the O3 operator, it is predicted that the effective Hill coefficient should not vary with repressor copy number. In addition, the maximum possible Hill coefficient is roughly 1.75, which stresses the point that the effective Hill coefficient should not be interpreted as the number of inducer binding sites, which is exactly 2.</p>
+<figure>
+<img src="ch6_figS19.png" id="fig:ec50_ehill" data-short-caption="[EC$_{50}$] and effective Hill coefficient depend strongly on repressor copy number and operator binding energy." alt="" /><figcaption>Figure 19: <strong>[EC<span class="math inline"><em></em><sub>50</sub></span>] and effective Hill coefficient depend strongly on repressor copy number and operator binding energy.</strong> (A) [EC<span class="math inline"><em></em><sub>50</sub></span>] values from very small and tightly clustered to relatively large and expanded for stronger operator binding energies. (B) The effective Hill coefficient generally decreases with increasing repressor copy number, indicating a flatter normalized response. The maximum possible HIll coefficient is roughly 1.75 for all repressor-operator binding energies.</figcaption>
+</figure>
+<h2 id="applications-to-other-regulatory-architectures">Applications to Other Regulatory Architectures</h2>
+<p>In this section, we discuss how the theoretical framework presented in this work is sufficiently general to include a variety of regulatory architectures outside of simple repression by LacI. We begin by noting that the exact same formula for fold-change given in can also describe corepression. We then demonstrate how our model can be generalized to include other architectures, such as a coactivator binding to an activator to promote gene expression. In each case, we briefly describe the system and describe its corresponding theoretical description. For further details, we invite the interested reader to read <span class="citation" data-cites="bintu2005">Bintu et al. (<a href="#ref-bintu2005" role="doc-biblioref">2005</a>)</span> and <span class="citation" data-cites="marzen2013">Marzen, Garcia, and Phillips (<a href="#ref-marzen2013" role="doc-biblioref">2013</a>)</span>.</p>
+<h3 id="corepression">Corepression</h3>
+<p>Consider a regulatory architecture where binding of a transcriptional repressor occludes the binding of RNAP to the DNA. A corepressor molecule binds to the repressor and shifts its allosteric equilibrium towards the active state in which it binds more tightly to the DNA, thereby decreasing gene expression (in contrast, an inducer shifts the allosteric equilibrium towards the inactive state where the repressor binds more weakly to the DNA). As in the main text, we can enumerate the states and statistical weights of the promoter and the allosteric states of the repressor. We note that these states and weights exactly match those in Fig. 2.2 and yield the same fold-change equation, <span id="eq:corepression_fc"><br /><span class="math display">$$
+\text{fold-change} \approx \left(1 + {\left(1 + {c \over K_A}\right)^n \over
+\left(1 + {c \over K_A}\right)^n + e^{\beta\Delta\varepsilon_{AI} }\left(1 + {c
+\over K_I}\right)^n} {R \over
+N_{NS} }e^{-\beta\Delta\varepsilon_{RA} }\right)^{-1},
+\qquad(34)$$</span><br /></span> where <span class="math inline"><em>c</em></span> now represents the concentration of the corepressor molecule. Mathematically, the difference between these two architectures can be seen in the relative sizes of the dissociation constants <span class="math inline"><em>K</em><sub><em>A</em></sub></span> and <span class="math inline"><em>K</em><sub><em>I</em></sub></span> between the inducer and repressor in the active and inactive states, respectively. The corepressor is defined by <span class="math inline"><em>K</em><sub><em>A</em></sub> &lt; <em>K</em><sub><em>I</em></sub></span>, since the corepressor favors binding to the repressor’s active state; an inducer must satisfy <span class="math inline"><em>K</em><sub><em>I</em></sub> &lt; <em>K</em><sub><em>A</em></sub></span>, as was found in Chapter 2. Much as was performed in Chapter 2, we can make some predictions about the how the response of a corepressor. In Fig. 20 (A), we show how varying the repressor copy number <span class="math inline"><em>R</em></span> and the repressor-DNA binding energy <span class="math inline"><em>Δ</em><em>ε</em><sub><em>R</em><em>A</em></sub></span> influence the response. We draw the reader’s attention to the decrease in fold-change as the concentration of effector is increased.</p>
+<h3 id="activation">Activation</h3>
+<p>We now turn to the case of activation. While this architecture was not studied in this work, we wish to demonstrate how the framework presented here can be extended to include transcription factors other than repressors. To that end, we consider a transcriptional activator which binds to DNA and aids in the binding of RNAP through energetic interaction term <span class="math inline"><em>ε</em><sub><em>A</em><em>P</em></sub></span>. Note that in this architecture, binding of the activator does not occlude binding of the polymerase. Binding of a coactivator molecule shifts its allosteric equilibrium towards the active state (<span class="math inline"><em>K</em><sub><em>A</em></sub> &lt; <em>K</em><sub><em>I</em></sub></span>), where the activator is more likely to be bound to the DNA and promote expression. Enumerating all of the states and statistical weights of this architecture and making the approximation that the promoter is weak generates a fold-change equation of the form <span id="eq:foldchange_activation"><br /><span class="math display">$$
+\text{fold-change} = {1 + \frac{\left(1 + \frac{c}{K_A}\right)^n}{\left( 1 + \frac{c}{K_A}\right)^n + e^{\beta\Delta\varepsilon_{AI} }\left(1 + \frac{c}{K_I}\right)^n}\frac{A}{
+N_{NS} }e^{-\beta\Delta\varepsilon_{AA} }e^{-\beta\varepsilon_{AP} } \over 1 +
+{\left(1 + {c \over K_A}\right)^n \over \left(1 + {c \over K_A}\right)^n +
+e^{\beta\Delta\varepsilon_{AI} }\left(1 + {c \over K_I}\right)^n}{A \over
+N_{NS} }e^{-\beta\Delta\varepsilon_{AA} } },
+\qquad(35)$$</span><br /></span> where <span class="math inline"><em>A</em></span> is the total number of activators per cell, <span class="math inline"><em>c</em></span> is the concentration of a coactivator molecule, <span class="math inline"><em>Δ</em><em>ε</em><sub><em>A</em><em>A</em></sub></span> is the binding energy of the activator to the DNA in the active allosteric state, and <span class="math inline"><em>ε</em><sub><em>A</em><em>P</em></sub></span> is the interaction energy between the activator and the RNAP. Unlike in the cases of induction and corepression, the fold-change formula for activation includes terms from when the RNAP is bound by itself on the DNA as well as when both RNAP and the activator are simultaneously bound to the DNA. explores predictions of the fold-change in gene expression by manipulating the activator copy number, DNA binding energy, and the polymerase-activator interaction energy. Note that with this activation scheme, the fold-change must necessarily be greater than one. An interesting feature of these predictions is the observation that even small changes in the interaction energy (<span class="math inline"> &lt; 0.5 <em>k</em><sub><em>B</em></sub><em>T</em></span>) can result in dramatic increase in fold-change.</p>
+<p>     As in the case of induction, the is straightforward to generalize. For example, the relative values of <span class="math inline"><em>K</em><sub><em>I</em></sub></span> and <span class="math inline"><em>K</em><sub><em>A</em></sub></span> can be switched such that <span class="math inline"><em>K</em><sub><em>I</em></sub> &lt; <em>K</em><sub><em>A</em></sub></span> in which the secondary molecule drives the activator to assume the inactive state represents induction of an activator. While these cases might be viewed as separate biological phenomena, mathematically they can all be described by the same underlying formalism.</p>
+<figure>
+<img src="ch6_figS20.png" id="fig:applications" data-short-caption="Representative fold-change predictions for allosteric corepression and activation." alt="" /><figcaption>Figure 20: <strong>Representative fold-change predictions for allosteric corepression and activation.</strong> (A) Contrary to the case of induction described in the main text, addition of a corepressor decreases fold-change in gene expression. The left and right panels demonstrate how varying the values of the repressor copy number <span class="math inline"><em>R</em></span> and repressor-DNA binding energy <span class="math inline"><em>Δ</em><em>ε</em><sub><em>R</em><em>A</em></sub></span>, respectively, change the predicted response profiles. (B) In the case of inducible activation, binding of an effector molecule to an activator transcription factor increases the fold-change in gene expression. Note that for activation, the fold-change is greater than 1. The left and center panels show how changing the activator copy number <span class="math inline"><em>A</em></span> and activator-DNA binding energy <span class="math inline"><em>Δ</em><em>ε</em><sub><em>A</em><em>A</em></sub></span> alter response, respectively. The right panel shows how varying the polymerase-activator interaction energy <span class="math inline"><em>ε</em><sub><em>A</em><em>P</em></sub></span> alters the fold-change. Relatively small perturbations to this energetic parameter drastically changes the level of activation and plays a major role in dictating the dynamic range of the system.</figcaption>
+</figure>
+<h2 id="e.-coli-primer-and-strain-list"><em>E. coli</em> Primer and Strain List</h2>
+<p>Here we provide additional details about the genotypes of the strains used, as well as the primer sequences used to generate them. <em>E. coli</em> strains were derived from K12 MG1655. For those containing <span class="math inline"><em>R</em> = 22</span>, we used strain HG104 which additionally has the <em>lacYZA</em> operon deleted (positions 360,483 to 365,579) but still contains the native <em>lacI</em> locus. All other strains used strain HG105, where both the <em>lacYZA</em> and <em>lacI</em> operons have both been deleted (positions 360,483 to 366,637).</p>
+<p>     All 25x+11-yfp expression constructs were integrated at the <em>galK</em> locus (between positions 1,504,078 and 1,505,112) while the 3*1x-lacI constructs were integrated at the <em>ybcN</em> locus (between positions 1,287,628 and 1,288,047). Integration was performed with <span class="math inline"><em>λ</em></span> Red recombineering <span class="citation" data-cites="sharan2009">(Sharan et al. <a href="#ref-sharan2009" role="doc-biblioref">2009</a>)</span> as described in <span class="citation" data-cites="garcia2011">Garcia et al. (<a href="#ref-garcia2011" role="doc-biblioref">2011</a><a href="#ref-garcia2011" role="doc-biblioref">a</a>)</span> using the primers listed in Table 6.3. We follow the notation of Lutz and Bujard <span class="citation" data-cites="lutz1997">(Lutz and Bujard <a href="#ref-lutz1997" role="doc-biblioref">1997</a>)</span> for the nomenclature of the different constructs used. Specifically, the first number refers to the antibiotic resistance cassette that is present for selection (2 = kanamycin, 3 = chloramphenicol, and 4 = spectinomycin) and the second number refers to the promoter used to drive expression of either YFP or LacI (1 = <span class="math inline"><em>P</em><sub><em>L</em><em>t</em><em>e</em><em>t</em><em>O</em> − 1</sub></span>, and 5 = <em>lacUV5</em>). Note that in 25x+11-yfp, x refers to the LacI operator used, which is centered at +11 (or alternatively, begins at the transcription start site). For the different LacI constructs, 3*1x-lacI, x refers to the different ribosomal binding site modifications that provide different repressor copy numbers and follows from <span class="citation" data-cites="garcia2011">Garcia et al. (<a href="#ref-garcia2011" role="doc-biblioref">2011</a><a href="#ref-garcia2011" role="doc-biblioref">a</a>)</span>. The asterisk refers to the presence of FLP recombinase sites flanking the chloramphenicol resistance gene that can be used to lose this resistance. However, we maintained the resistance gene in our constructs. A summary of the final genotypes of each strain is listed in Table 6.4. In addition each strain also contained the plasmid pZS4*1-mCherry and provided constitutive expression of the mCherry fluorescent protein. This pZS plasmid is a low copy (SC101 origin of replication) where like with 3*1x-lacI, mCherry is driven by a <span class="math inline"><em>P</em><sub><em>L</em><em>t</em><em>e</em><em>t</em><em>O</em> − 1</sub></span> promoter.</p>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;"><strong>Primer</strong></th>
+<th style="text-align: left;"><strong>Sequence (5’ <span class="math inline">→</span> 3’)</strong></th>
+<th style="text-align: left;"><strong>Notes</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">pZSForwSeq2</td>
+<td style="text-align: left;">TTCCCAACC TTACCAGAGG GC</td>
+<td style="text-align: left;">Forward sequencing primer for 3*1x-lacI</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">251 F</td>
+<td style="text-align: left;">CCTTTCGTCT TCACCTCGA</td>
+<td style="text-align: left;">Forward sequencing primer for 25x+11-YFP</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">YFP1</td>
+<td style="text-align: left;">ACTAGCAACAC CAGAACAGCCC</td>
+<td style="text-align: left;">Reverse sequencing primer for 3*1x-lacI and 25x+11-YFP</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">HG 6.1 (<em>galK</em>)</td>
+<td style="text-align: left;">gtttgcgcgc agtcagcgat atccattttc gcgaatccg gagtgtaag aaACTAGCAAC ACCAGAACA GCC</td>
+<td style="text-align: left;">Reverse primer for 25x+11-YFP integration in to the <em>galK</em> locus (lowercase).</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">HG 6.3 (<em>galK</em>)</td>
+<td style="text-align: left;">ttcatattgt tcagcgacag cttgctgtac ggcaggcac cagctcttc cgGGCTAATGC ACCCAGTAA GG</td>
+<td style="text-align: left;">Forward integration primer for 25x+11-YFP with homology to the <em>galK</em> locus (lowercase.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">HG11.1 (<em>ybcN</em>)</td>
+<td style="text-align: left;">acctctgcgg aggggaagcg tgaacctctc acaagacgg catcaaatt acACTAGCAAC ACCAGAACA GCC</td>
+<td style="text-align: left;">Reverse integration primer for 3*1x-lacI with homology to the <em>ybcN</em> locus (lowercase).</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">HG11.3 (<em>ybcN</em>)</td>
+<td style="text-align: left;">ctgtagatgtg tccgttcatg acacgaataa gcggtgtag ccattacgc cGGCTAATGCA CCCAGTAAG G</td>
+<td style="text-align: left;">Forward integration primer for 3*1x-lacI with homology to the <em>ybcN</em> locus (lowercase).</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">ybcN-control-upstream-1</td>
+<td style="text-align: left;">AGCGTTTGA CCTCTGCGGA</td>
+<td style="text-align: left;">Sequencing primer to verify integration</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">ybcN-control-downstream-1</td>
+<td style="text-align: left;">GCTCAGGTT TACGCTTAC GACG</td>
+<td style="text-align: left;">Sequencing primer to verify integration</td>
+</tr>
+</tbody>
+</table>
+<p>Table 6.3 : Primers used in this work.</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;"><strong>Strain</strong></th>
+<th style="text-align: left;"><strong>Genotype</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">O1, <span class="math inline"><em>R</em> = 0</span></td>
+<td style="text-align: left;">HG105::<em>galK</em>&lt;&gt;25O1+11-YFP</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">O1, <span class="math inline"><em>R</em> = 22</span></td>
+<td style="text-align: left;">HG104::<em>galK</em>&lt;&gt;25O1+11-YFP</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">O1, <span class="math inline"><em>R</em> = 60</span></td>
+<td style="text-align: left;">HG105::<em>galK</em>&lt;&gt;25O1+11-YFP, <em>ybcN</em>&lt;&gt;3*1RBS1147-lacI</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">O1, <span class="math inline"><em>R</em> = 124</span></td>
+<td style="text-align: left;">HG105::<em>galK</em>&lt;&gt;25O1+11-YFP, <em>ybcN</em>&lt;&gt;3*1RBS446-lacI</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">O1, <span class="math inline"><em>R</em> = 260</span></td>
+<td style="text-align: left;">HG105::<em>galK</em>&lt;&gt;25O1+11-YFP, <em>ybcN</em>&lt;&gt;3*1RBS1027-lacI</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">O1, <span class="math inline"><em>R</em> = 1220</span></td>
+<td style="text-align: left;">HG105::<em>galK</em>&lt;&gt;25O1+11-YFP, <em>ybcN</em>&lt;&gt;3*1RBS1-lacI</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">O1, <span class="math inline"><em>R</em> = 1740</span></td>
+<td style="text-align: left;">HG105::<em>galK</em>&lt;&gt;25O1+11-YFP, <em>ybcN</em>&lt;&gt;3*1RBS1L-lacI</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">O2, <span class="math inline"><em>R</em> = 0</span></td>
+<td style="text-align: left;">HG105::<em>galK</em>&lt;&gt;25O2+11-YFP</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">O2, <span class="math inline"><em>R</em> = 22</span></td>
+<td style="text-align: left;">HG104::<em>galK</em>&lt;&gt;25O2+11-YFP</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">O2, <span class="math inline"><em>R</em> = 60</span></td>
+<td style="text-align: left;">HG105::<em>galK</em>&lt;&gt;25O2+11-YFP, <em>ybcN</em>&lt;&gt;3*1RBS1147-lacI</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">O2, <span class="math inline"><em>R</em> = 124</span></td>
+<td style="text-align: left;">HG105::<em>galK</em>&lt;&gt;25O2+11-YFP, <em>ybcN</em>&lt;&gt;3*1RBS446-lacI</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">O2, <span class="math inline"><em>R</em> = 260</span></td>
+<td style="text-align: left;">HG105::<em>galK</em>&lt;&gt;25O2+11-YFP, <em>ybcN</em>&lt;&gt;3*1RBS1027-lacI</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">O2, <span class="math inline"><em>R</em> = 1220</span></td>
+<td style="text-align: left;">HG105::<em>galK</em>&lt;&gt;25O2+11-YFP, <em>ybcN</em>&lt;&gt;3*1RBS1-lacI</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">O2, <span class="math inline"><em>R</em> = 1740</span></td>
+<td style="text-align: left;">HG105::<em>galK</em>&lt;&gt;25O2+11-YFP, <em>ybcN</em>&lt;&gt;3*1RBS1L-lacI</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">O3, <span class="math inline"><em>R</em> = 0</span></td>
+<td style="text-align: left;">HG105::<em>galK</em>&lt;&gt;25O3+11-YFP</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">O3, <span class="math inline"><em>R</em> = 22</span></td>
+<td style="text-align: left;">HG104::<em>galK</em>&lt;&gt;25O3+11-YFP</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">O3, <span class="math inline"><em>R</em> = 60</span></td>
+<td style="text-align: left;">HG105::<em>galK</em>&lt;&gt;25O3+11-YFP, <em>ybcN</em>&lt;&gt;3*1RBS1147-lacI</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">O3, <span class="math inline"><em>R</em> = 124</span></td>
+<td style="text-align: left;">HG105::<em>galK</em>&lt;&gt;25O3+11-YFP, <em>ybcN</em>&lt;&gt;3*1RBS446-lacI</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">O3, <span class="math inline"><em>R</em> = 260</span></td>
+<td style="text-align: left;">HG105::<em>galK</em>&lt;&gt;25O3+11-YFP, <em>ybcN</em>&lt;&gt;3*1RBS1027-lacI</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">O3, <span class="math inline"><em>R</em> = 1220</span></td>
+<td style="text-align: left;">HG105::<em>galK</em>&lt;&gt;25O3+11-YFP, <em>ybcN</em>&lt;&gt;3*1RBS1-lacI</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">O3, <span class="math inline"><em>R</em> = 1740</span></td>
+<td style="text-align: left;">HG105::<em>galK</em>&lt;&gt;25O3+11-YFP, <em>ybcN</em>&lt;&gt;3*1RBS1L-lacI</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Oid, <span class="math inline"><em>R</em> = 22</span></td>
+<td style="text-align: left;">HG104::<em>galK</em>&lt;&gt;25Oid+11-YFP</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Oid, <span class="math inline"><em>R</em> = 60</span></td>
+<td style="text-align: left;">HG105::<em>galK</em>&lt;&gt;25Oid+11-YFP, <em>ybcN</em>&lt;&gt;3*1RBS1147-lacI</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Oid, <span class="math inline"><em>R</em> = 124</span></td>
+<td style="text-align: left;">HG105::<em>galK</em>&lt;&gt;25Oid+11-YFP, <em>ybcN</em>&lt;&gt;3*1RBS446-lacI</td>
+</tr>
+</tbody>
+</table>
+<p>Table 6.4 : <em>E. coli</em> strains used in this work.</p>
 <h2 class="unnumbered" id="references" class="unnumbered">References</h2>
 <div id="refs" class="references hanging-indent" role="doc-bibliography">
 <div id="ref-aghaeepour2013">
 <p>Aghaeepour, Nima, Greg Finak, Holger Hoos, Tim R. Mosmann, Ryan Brinkman, Raphael Gottardo, and Richard H. Scheuermann. 2013. “Critical Assessment of Automated Flow Cytometry Data Analysis Techniques.” <em>Nature Methods</em> 10 (3): 228–38. <a href="https://doi.org/10.1038/nmeth.2365">https://doi.org/10.1038/nmeth.2365</a>.</p>
+</div>
+<div id="ref-bintu2005">
+<p>Bintu, Lacramioara, Nicolas E Buchler, Hernan G Garcia, Ulrich Gerland, Terence Hwa, Jané Kondev, and Rob Phillips. 2005. “Transcriptional Regulation by the Numbers: Models.” <em>Current Opinion in Genetics &amp; Development</em> 15 (2): 116–24. <a href="https://doi.org/10.1016/j.gde.2005.02.007">https://doi.org/10.1016/j.gde.2005.02.007</a>.</p>
 </div>
 <div id="ref-boulton2016">
 <p>Boulton, Stephen, and Giuseppe Melacini. 2016. “Advances in NMR Methods to Map Allosteric Sites: From Models to Translation.” <em>Chemical Reviews</em> 116 (11): 6267–6304. <a href="https://doi.org/10.1021/acs.chemrev.5b00718">https://doi.org/10.1021/acs.chemrev.5b00718</a>.</p>
@@ -469,6 +716,12 @@ g(\Delta\varepsilon_{RA}^{(j)}) = \frac{1}{\sqrt{2\pi\sigma_{\varepsilon_j}^2}}
 <div id="ref-gardino2003">
 <p>Gardino, Alexandra K., Brian F. Volkman, Ho S. Cho, Seok-Yong Lee, David E. Wemmer, and Dorothee Kern. 2003. “The NMR Solution Structure of BeF3–Activated Spo0F Reveals the Conformational Switch in a Phosphorelay System.” <em>Journal of Molecular Biology</em> 331 (1): 245–54. <a href="https://doi.org/10.1016/S0022-2836(03)00733-2">https://doi.org/10.1016/S0022-2836(03)00733-2</a>.</p>
 </div>
+<div id="ref-lutz1997">
+<p>Lutz, Rolf, and Hermann Bujard. 1997. “Independent and Tight Regulation of Transcriptional Units in Escherichia Coli via the LacR/O, the TetR/O and AraC/I1-I2 Regulatory Elements.” <em>Nucleic Acids Research</em> 25 (6): 1203–10. <a href="https://doi.org/10.1093/nar/25.6.1203">https://doi.org/10.1093/nar/25.6.1203</a>.</p>
+</div>
+<div id="ref-marzen2013">
+<p>Marzen, Sarah, Hernan G. Garcia, and Rob Phillips. 2013. “Statistical Mechanics of MonodWymanChangeux (MWC) Models.” <em>Journal of Molecular Biology</em>, Allosteric Interactions and Biological Regulation (Part I), 425 (9): 1433–60. <a href="https://doi.org/10.1016/j.jmb.2013.03.013">https://doi.org/10.1016/j.jmb.2013.03.013</a>.</p>
+</div>
 <div id="ref-oehler1994">
 <p>Oehler, S., M. Amouyal, P. Kolkhof, B. von Wilcken-Bergmann, and B. Müller-Hill. 1994. “Quality and Position of the Three Lac Operators of E. Coli Define Efficiency of Repression.” <em>The EMBO Journal</em> 13 (14): 3348–55.</p>
 </div>
@@ -480,6 +733,9 @@ g(\Delta\varepsilon_{RA}^{(j)}) = \frac{1}{\sqrt{2\pi\sigma_{\varepsilon_j}^2}}
 </div>
 <div id="ref-setty2003">
 <p>Setty, Y., A. E. Mayo, M. G. Surette, and U. Alon. 2003. “Detailed Map of a Cis-Regulatory Input Function.” <em>Proceedings of the National Academy of Sciences</em> 100 (13): 7702–7. <a href="https://doi.org/10.1073/pnas.1230759100">https://doi.org/10.1073/pnas.1230759100</a>.</p>
+</div>
+<div id="ref-sharan2009">
+<p>Sharan, S. K., L. C. Thomason, S. G. Kuznetsov, and D. L. Court. 2009. “Recombineering: A Homologous Recombination-Based Method of Genetic Engineering.” <em>Nat Protoc</em> 4: 206–23. <a href="https://doi.org/nprot.2008.227\\\%0020%5Bpii%5D\\\%002010.1038/nprot.2008.227">https://doi.org/nprot.2008.227\\\%0020[pii]\\\%002010.1038/nprot.2008.227</a>.</p>
 </div>
 <div id="ref-shis2014">
 <p>Shis, David L., Faiza Hussain, Sarah Meinhardt, Liskin Swint-Kruse, and Matthew R. Bennett. 2014. “Modular, Multi-Input Transcriptional Logic Gating with Orthogonal LacI/GalR Family Chimeras.” <em>ACS Synthetic Biology</em> 3 (9): 645–51. <a href="https://doi.org/10.1021/sb500262f">https://doi.org/10.1021/sb500262f</a>.</p>
@@ -508,38 +764,6 @@ g(\Delta\varepsilon_{RA}^{(j)}) = \frac{1}{\sqrt{2\pi\sigma_{\varepsilon_j}^2}}
 			</div><!-- /.container -->
 		</div><!-- /.section -->
 		
-			<div class="section section--grey">
-				<div class="container">
-					<div class="row">
-						<div class="col-md-7">
-							<div id="disqus_thread"></div>
-<script>
-	/**
-	 *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-	 *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
-	 */
-	 /*
-	var disqus_config = function () {
-	this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
-		this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-	};
-	*/
-	(function() {
-		var d = document, s = d.createElement('script');
-
-		s.src = 'https://gchure_phd.disqus.com/embed.js';
-
-		s.setAttribute('data-timestamp', +new Date());
-		(d.head || d.body).appendChild(s);
-	})();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
-
-						</div><!-- /.col -->
-					</div><!-- /.row -->
-				</div><!-- /.container -->
-			</div><!-- /.section -->
-		
 		<div class="js-footer-area">
 			
 				<nav class="page-nav">	
@@ -547,13 +771,13 @@ g(\Delta\varepsilon_{RA}^{(j)}) = \frac{1}{\sqrt{2\pi\sigma_{\varepsilon_j}^2}}
 						<div class="row">
 							<div class="col-xs-12">
 								
-									<a href="https://gchure.github.io/phd{{site.doks.baseurl}}/published_content" class="page-nav__item page-nav__item--prev">
+									<a href="{{site.doks.baseurl}}/published_content" class="page-nav__item page-nav__item--prev">
 										<i class="icon icon--arrow-left"></i>
 										Published Content
 									</a><!-- /.page-nav__item -->
 								
 								
-									<a href="https://gchure.github.io/phd{{site.doks.baseurl}}/chapter_02" class="page-nav__item page-nav__item--next">
+									<a href="{{site.doks.baseurl}}/chapter_02" class="page-nav__item page-nav__item--next">
 										Chapter 2
 										<i class="icon icon--arrow-right"></i>
 									</a><!-- /.page-nav__item -->
@@ -570,7 +794,7 @@ g(\Delta\varepsilon_{RA}^{(j)}) = \frac{1}{\sqrt{2\pi\sigma_{\varepsilon_j}^2}}
 			<div class="row">
 				<div class="col-sm-6">
 					
-						<a href="https://gchure.github.io/phd/" class="site-footer__logo">Griffin D. Chure | PhD Thesis</a>
+						<a href="/" class="site-footer__logo">Griffin D. Chure | PhD Thesis</a>
 					
 					
 						<hr>
@@ -595,11 +819,11 @@ g(\Delta\varepsilon_{RA}^{(j)}) = \frac{1}{\sqrt{2\pi\sigma_{\varepsilon_j}^2}}
 	</footer><!-- /.site-footer -->
 
 
-<script src="https://gchure.github.io/phd/doks-theme/assets/js/vendor/jquery.min.js"></script>
-<script type="text/javascript" src="https://gchure.github.io/phd/doks-theme/assets/js/vendor/bootstrap/affix.min.js"></script>
-<script type="text/javascript" src="https://gchure.github.io/phd/doks-theme/assets/js/vendor/bootstrap/scrollspy.min.js"></script>
-<script type="text/javascript" src="https://gchure.github.io/phd/doks-theme/assets/js/vendor/matchHeight.min.js"></script>
-<script type="text/javascript" src="https://gchure.github.io/phd/doks-theme/assets/js/scripts.min.js"></script>
+<script src="/doks-theme/assets/js/vendor/jquery.min.js"></script>
+<script type="text/javascript" src="/doks-theme/assets/js/vendor/bootstrap/affix.min.js"></script>
+<script type="text/javascript" src="/doks-theme/assets/js/vendor/bootstrap/scrollspy.min.js"></script>
+<script type="text/javascript" src="/doks-theme/assets/js/vendor/matchHeight.min.js"></script>
+<script type="text/javascript" src="/doks-theme/assets/js/scripts.min.js"></script>
 
 
 

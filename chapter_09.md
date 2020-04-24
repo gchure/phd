@@ -29,6 +29,10 @@ contents:
     - section_02_electrophysiology
     - section_03_cal_factor_derivation
     - section_04_survival_classification
+    - section_05_logistic_regression
+    - section_06_shock_classification
+    - section_07_vandenberg_comparison
+    - section_08_strains
 ---
 
 **Published as ...**

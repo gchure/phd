@@ -3,98 +3,59 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 import phd.viz
-import imp
-imp.reload(phd.viz)
+import scipy.interpolate
 colors, palette = phd.viz.phd_style()
 
 # Load the three data set. 
 diauxie = pd.read_csv('../../data/ch1_introduction/Monod1941_Fig1_Fig2.csv')
-con_diauxie = pd.read_csv('../../data/ch1_introduction/Monod1947_Fig6.csv')
-muts = pd.read_csv('../../data/ch1_introduction/Monod1946_Fig5.csv')
+triauxie = pd.read_csv('../../data/ch1_introduction/Monod1947_Fig11.csv')
 
-
-fig, ax = plt.subplots(1, 3, figsize=(6.3, 2))
+#%%
+fig, ax = plt.subplots(1, 2, figsize=(6, 2))
+phd.viz.despine(ax.ravel())
 for a in ax:
     a.set_xlabel('hours')
     a.set_ylabel('optical density')
     a.spines['bottom'].set_position(('outward', 2))
     a.spines['left'].set_position(('outward', 2))
-ax[0].set_ylim([-0.12, 130])
+ax[0].set_ylim([-0.12, 95])
 ax[1].set_ylim([-0.12, 80])
-ax[0].set_xlim([-0.12, 9])
-ax[1].set_xlim([-0.12, 13])
-ax[2].set_xlim([-0.12, 16])
-ax[2].set_ylim([5, 130])
+ax[0].set_xlim([-0.12, 10])
+ax[1].set_xlim([-0.12, 6])
 
 
 # Diauxie plots. 
-sugar_colors = {'glucose':colors['purple'], 'arabinose':colors['orange']}
+sugar_colors = {'glucose':colors['blue'], 'arabinose':colors['green']}
 for g, d in diauxie.groupby('secondary_sugar'):
-    ax[0].plot(d['hours'], d['optical_density'], '-o', color=sugar_colors[g],
-                markeredgecolor='white', markeredgewidth=0.35, label=f'saccharose + {g}',
-            ms=3, linewidth=0.5)
+    time = np.linspace(0, d['hours'].max()+0.1, 200)
+    spline = scipy.interpolate.UnivariateSpline(d['hours'], d['optical_density'])    
+    ax[0].plot(time, spline(time), '-', color=sugar_colors[g], lw=0.75, label='__nolegend__')
+    ax[0].plot(d['hours'], d['optical_density'], 'o', color=sugar_colors[g],
+                markeredgecolor=colors['grey'], markeredgewidth=0.5, label=f'saccharose + {g}',
+            ms=5, linewidth=0.5)
 
-# Add indicator of diauxic shift
-ax[0].plot(6, 36, '^', color='white', markeredgecolor=colors['orange'], 
-            markeredgewidth=0.5, ms=4, label='diauxic shift')
+# Triauxie plot
+time = np.linspace(0, triauxie['time_hrs'].max() + 0.1, 200)
+spline = scipy.interpolate.UnivariateSpline(triauxie['time_hrs'], triauxie['optical_density'])
+spline.set_smoothing_factor(0.5)
+ax[1].plot(time, spline(time), '-', lw=0.75, color=colors['purple'])
+ax[1].plot(triauxie['time_hrs'], triauxie['optical_density'], 'o', color=colors['light_purple'],
+       markeredgecolor='white', markeredgewidth=0.5, ms=5)
 
-# Controlled diauxie plots
-ratio_colors = {1/3: colors['blue'], 1: colors['purple'], 3: colors['orange']}
-for g, d in con_diauxie.groupby(['glucose_sorbitol']):
-    if g < 1:
-        color = colors['blue']
-    else:
-        color = ratio_colors[g]
-    ax[1].plot(d['hours'], d['optical_density'], '-o', color=color,
-        markeredgecolor='white', markeredgewidth=0.35, 
-        label=np.round(g, decimals=2), ms=3, linewidth=0.5)
-
-ax[1].plot(2.4, 15, '^', color='white', ms=4, markeredgewidth=0.5, markeredgecolor=colors['blue'],
-        label='__nolegend__')
-ax[1].plot(7, 25, '^', color='white', ms=4, markeredgewidth=0.5, markeredgecolor=colors['purple'],
-        label='__nolegend__')
-ax[1].plot(10.5, 34, '^', color='white', ms=4, markeredgewidth=0.5, markeredgecolor=colors['orange'],
-        label='__nolegend__')
-
-
-# Mutation Plots
-mut_colors = {'L+':colors['blue'], 'L-':colors['green']}
-for g, d in muts.groupby(['strain']):
-    if g == 'L+':
-        label = 'lactose positive'
-    else:
-        label = 'lactose negative'
-
-    ax[2].plot(d['hours'], d['optical_density'], '-o', color=mut_colors[g],
-            markeredgecolor='white', markeredgewidth=0.35, ms=3,
-            label=label, linewidth=0.5)
-
-# Add diauxie labels
-ax[2].plot(6, 40, '^', color='white',markeredgecolor=colors['blue'], markeredgewidth=0.5,
-            label='__nolegend__', ms=4)
-ax[2].plot(11, 38, '^', color='white',markeredgecolor=colors['green'], markeredgewidth=0.5,
-            label='__nolegend__', ms=4)
-legs = [0, 0, 0]
-
-legs = [0, 0, 0]
-legs[0] = ax[0].legend(loc='upper left', fontsize=6)
-legs[1] = ax[1].legend(loc='upper left', title='glucose / xylose', fontsize=6, ncol=3,
-                    columnspacing=0.5)
-legs[2] = ax[2].legend(loc='upper left', fontsize=6)
-
-for l in legs:
-    l.get_title().set_fontsize(6)
-
+ax[0].vlines(6.2, 0, 100, color='white', lw=18, alpha=0.75)
+ax[0].text(3.2, 60, 'sucrose\n+ glucose', color=colors['blue'], fontsize=7)
+ax[0].text(7.4, 38, 'sucrose\n+ arabinose', color=colors['green'], fontsize=7)
+ax[1].text(0.5, 20, 'glucose', color=colors['purple'], fontsize=7)
+ax[1].text(2, 40, 'sorbitol', color=colors['purple'], fontsize=7)
+ax[1].text(3.25, 65, 'glycerol', color=colors['purple'], fontsize=7)
 # Add titles
-phd.viz.titlebox(ax[0], 'Monod 1941', color=colors['black'], bgcolor='white', size=6)
-phd.viz.titlebox(ax[1], 'Monod 1947', color=colors['black'], bgcolor='white', size=6)
-phd.viz.titlebox(ax[2], 'Monod & Audureau 1946', color=colors['black'], bgcolor='white', size=6)
+phd.viz.titlebox(ax[0], 'Monod 1941', color=colors['black'], bgcolor='white', size=7)
+phd.viz.titlebox(ax[1], 'Monod 1947', color=colors['black'], bgcolor='white', size=7)
 plt.subplots_adjust(wspace=0.4)
 
 # Add panel labels. 
 fig.text(0.05, 0.84, '(A)', fontsize=8)
-fig.text(0.35, 0.84, '(B)', fontsize=8)
-fig.text(0.622, 0.84, '(C)', fontsize=8)
+fig.text(0.5, 0.84, '(B)', fontsize=8)
 plt.savefig('../figs/ch1_fig2.png', bbox_inches='tight', dpi=300)
 plt.savefig('../figs/ch1_fig2.pdf', bbox_inches='tight')
 

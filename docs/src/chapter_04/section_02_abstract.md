@@ -1,4 +1,4 @@
-## Abstract {#sec:growth_abstract -}
+## Abstract 
 
 The intimate relationship between the environment and cellular growth rate
 has remained a major topic of inquiry in bacterial physiology for over a

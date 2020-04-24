@@ -36,11 +36,11 @@
   <script id="MathJax-script" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
   
 
-<link rel="icon" href="https://gchure.github.io/phd/favicon.ico" type="image/x-icon">
+<link rel="icon" href="/favicon.ico" type="image/x-icon">
 <link href="https://fonts.googleapis.com/css?family=Nanum+Myeongjo&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Alegreya|Lora&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="https://gchure.github.io/phd/doks-theme/assets/css/style.css">
+<link rel="stylesheet" href="/doks-theme/assets/css/style.css">
 
 	</head>
 	<body class="grey" data-spy="scroll" data-target=".js-scrollspy">
@@ -52,7 +52,7 @@
 			<div class="row">
 				<div class="col-xs-12">
 					
-						<a href="https://gchure.github.io/phd/" class="site-header__logo"><i class="icon icon--chevron-left"></i> Home</a>
+						<a href="/" class="site-header__logo"><i class="icon icon--chevron-left"></i> Home</a>
 					
 					
 				</div><!-- /.col -->
@@ -61,7 +61,7 @@
 	</header><!-- /.site-header -->
 
 
-		<div class="hero-subheader" style="background-image: url(https://gchure.github.io/phd/doks-theme/assets/images/waves.jpg); background-position: center; object-fit: cover; width:100%;">
+		<div class="hero-subheader" style="background-image: url(http://127.0.0.1:4000/doks-theme/assets/images/waves.jpg); background-position: center; object-fit: cover; width:100%;">
 
 			<div class="container" style="background-color: rgba(0,0,0, 0.75); border:0.75px solid white;">
 				<div class="row">
@@ -78,12 +78,12 @@
 								
 								<!-- 
 									
-										<a href="https://gchure.github.io/phd{{site.doks.baseurl}}/published_content" class="btn btn--dark btn--rounded btn--w-icon btn--w-icon-left">
+										<a href="{{site.doks.baseurl}}/published_content" class="btn btn--dark btn--rounded btn--w-icon btn--w-icon-left">
 											<i class="icon icon--arrow-left"></i>	
 										</a>
 									
 									
-										<a href="https://gchure.github.io/phd{{site.doks.baseurl}}/chapter_2" class="btn btn--dark btn--rounded btn--w-icon">
+										<a href="{{site.doks.baseurl}}/chapter_2" class="btn btn--dark btn--rounded btn--w-icon">
 											<i class="icon icon--arrow-right"></i>
 										</a>
 									
@@ -116,13 +116,13 @@
 						<div class="row" >
 							<div class="col-xs-12">
 								
-									<a href="https://gchure.github.io/phd{{site.doks.baseurl}}/published_content" class="page-nav__item page-nav__item--prev">
+									<a href="{{site.doks.baseurl}}/published_content" class="page-nav__item page-nav__item--prev">
 										<i class="icon icon--arrow-left"></i>
 										Published Content
 									</a><!-- /.page-nav__item -->
 								
 								
-									<a href="https://gchure.github.io/phd{{site.doks.baseurl}}/chapter_2" class="page-nav__item page-nav__item--next">
+									<a href="{{site.doks.baseurl}}/chapter_2" class="page-nav__item page-nav__item--next">
 										Chapter 2
 										<i class="icon icon--arrow-right"></i>
 									</a><!-- /.page-nav__item -->
@@ -141,6 +141,8 @@
 							<strong>Published as …</strong>
 <hr/>
 <p>A version of this chapter was published as Chure, G.* , Lee, H.J.* , Rasmussen, A., and Phillips, R. (2018). <em>Connecting the Dots between Mechanosensitive Channel Abundance, Osmotic Shock, and Survival at Single-Cell Resolution.</em> Journal of Bacteriology 200. (* contributed equally). G.C., H.J.L, and R.P. designed and planned experiments. G.C. and H.J.L performed experiments. H.J.L constructed bacterial strains. A.R. performed electrophysiology experiments. G.C. performed data analysis and figure generation. G.C. and R.P. wrote the manuscript</p>
+<h2 id="abstract">Abstract</h2>
+<p>Rapid changes in extracellular osmolarity are one of many insults microbial cells face on a daily basis. To protect against such shocks, <em>Escherichia coli</em> and other microbes express several types of transmembrane channels that open and close in response to changes in membrane tension. In <em>E. coli</em>, one of the most abundant channels is the mechanosensitive channel of large conductance (MscL). While this channel has been heavily characterized through structural methods, electrophysiology, and theoretical modeling, our understanding of its physiological role in preventing cell death by alleviating high membrane tension remains tenuous. In this work, we examine the contribution of MscL alone to cell survival after osmotic shock at single-cell resolution using quantitative fluorescence microscopy. We conducted these experiments in an <em>E. coli</em> strain which is lacking all mechanosensitive channel genes save for MscL, whose expression was tuned across 3 orders of magnitude through modifications of the Shine-Dalgarno sequence. While theoretical models suggest that only a few MscL channels would be needed to alleviate even large changes in osmotic pressure, we find that between 500 and 700 channels per cell are needed to convey upwards of 80% survival. This number agrees with the average MscL copy number measured in wild-type <em>E. coli</em> cells through proteomic studies and quantitative Western blotting. Furthermore, we observed zero survival events in cells with fewer than <span class="math inline">≈</span> 100 channels per cell. This work opens new questions concerning the contribution of other mechanosensitive channels to survival, as well as regulation of their activity.</p>
 <h2 id="introduction">Introduction</h2>
 <p>Changes in the extracellular osmolarity can be a fatal event for the bacterial cell. Upon a hypo-osmotic shock, water rushes into the cell across the membrane, leaving the cell with no choice but to equalize the pressure. This equalization occurs either through damage to the cell membrane (resulting in death) or through the regulated flux of water molecules through transmembrane protein channels (Fig 1A). Such proteinaceous pressure release valves have been found across all domains of life, with the first bacterial channel being described in 1987 <span class="citation" data-cites="martinac1987">(Martinac et al. <a href="#ref-martinac1987" role="doc-biblioref">1987</a>)</span>. Over the past thirty years, several more channels have been discovered, described, and (in many cases) biophysically characterized. <em>E. coli</em>, for example, has seven of these channels (one MscL and six MscS homologs) which have varied conductance, gating mechanisms, and expression levels. While they have been the subject of much experimental and theoretical dissection, much remains a mystery with regard to the roles their abundance and interaction with other cellular processes play in the greater context of physiology <span class="citation" data-cites="bavi2016 bialecka-fornal2012 bialecka-fornal2015 edwards2012 naismith2012 ursell2008 vandenberg2016">(Bavi et al. <a href="#ref-bavi2016" role="doc-biblioref">2016</a>; Bialecka-Fornal et al. <a href="#ref-bialecka-fornal2012" role="doc-biblioref">2012</a>; Bialecka-Fornal, Lee, and Phillips <a href="#ref-bialecka-fornal2015" role="doc-biblioref">2015</a>; Edwards et al. <a href="#ref-edwards2012" role="doc-biblioref">2012</a>; Naismith and Booth <a href="#ref-naismith2012" role="doc-biblioref">2012</a>; Ursell et al. <a href="#ref-ursell2008" role="doc-biblioref">2008</a>; van den Berg et al. <a href="#ref-vandenberg2016" role="doc-biblioref">2016</a>)</span>.</p>
 <p>      Of the seven channels in <em>E. coli</em>, the mechanosensitive channel of large conductance (MscL) is one of the most abundant and the best characterized. This channel has a large conductance (3 nS) and mediates the flux of water molecules across the membrane via a ~3 nm wide pore in the open state <span class="citation" data-cites="cruickshank1997 haswell2011">(Cruickshank et al. <a href="#ref-cruickshank1997" role="doc-biblioref">1997</a>; Haswell, Phillips, and Rees <a href="#ref-haswell2011" role="doc-biblioref">2011</a>)</span>. Molecular dynamics simulations indicate that a single open MscL channel permits the flux of <span class="math inline">4 × 10<sup>9</sup></span> water molecules per second, which is an order of magnitude larger than a single aquaporin channel (BNID 100479) <span class="citation" data-cites="louhivuori2010 milo2010">(Louhivuori et al. <a href="#ref-louhivuori2010" role="doc-biblioref">2010</a>; Milo et al. <a href="#ref-milo2010" role="doc-biblioref">2010</a>)</span>. This suggests that having only a few channels per cell could be sufficient to relieve even large changes in membrane tension. Electrophysiological experiments have suggested a small number of channels per cell <span class="citation" data-cites="booth2005 hase1997">(Booth et al. <a href="#ref-booth2005" role="doc-biblioref">2005</a>; Hase et al. <a href="#ref-hase1997" role="doc-biblioref">1997</a>)</span>, however, more recent approaches using quantitative Western blotting, fluorescence microscopy, and proteomics have measured several hundred MscL per cell <span class="citation" data-cites="bialecka-fornal2012 schmidt2016 soufi2015">(Bialecka-Fornal et al. <a href="#ref-bialecka-fornal2012" role="doc-biblioref">2012</a>; Schmidt et al. <a href="#ref-schmidt2016" role="doc-biblioref">2016</a>; Soufi et al. <a href="#ref-soufi2015" role="doc-biblioref">2015</a>)</span>. To further complicate matters, the expression profile of MscL appears to depend on growth phase, available carbon source, and other environmental challenges <span class="citation" data-cites="bialecka-fornal2012 soufi2015 stokes2003a">(Bialecka-Fornal et al. <a href="#ref-bialecka-fornal2012" role="doc-biblioref">2012</a>, [@schmidt2016]; Soufi et al. <a href="#ref-soufi2015" role="doc-biblioref">2015</a>; Stokes et al. <a href="#ref-stokes2003a" role="doc-biblioref">2003</a>)</span>. While there are likely more than just a few channels per cell, why cells seem to need so many and the biological rationale behind their condition-dependent expression both remain a mystery.</p>
@@ -304,8 +306,6 @@ dp_s^2}\Bigg\vert_{p_s=p_s^*}\right)^{-1}.
 <p><span id="eq:"><br /><span class="math display"><em>p</em><sub><em>s</em></sub> = <em>p</em><sub><em>s</em></sub><sup>*</sup> ± <em>σ</em><sub><em>p</em><sub><em>s</em></sub></sub>.   (14)</span><br /></span></p>
 <h3 id="data-and-software-availability">Data and software availability</h3>
 <p>All raw image data is freely available and is stored on the CaltechDATA Research Data Repository. The raw Markov chain Monte Carlo samples are stored as <code>.csv</code> files on CaltechDATA. All processed experimental data, Python, and Stan code used in this work are freely available through our GitHub repository (http://github.com/rpgroup-pboc/mscl_survival) accessible through DOI: 10.5281/zenodo.1252524. The scientific community is invited to fork our repository and open constructive issues.</p>
-<h2 id="acknowledgements">Acknowledgements</h2>
-<p>       We thank Nathan Belliveau, Maja Bialecka-Fornal, Justin Bois, Soichi Hirokawa, Jaspar Landman, Manuel Razo-Mejia, Muir Morrison, and Shyam Saladi for useful advice and discussion. We thank Don Court for strain XTL298 and Samantha Miller for strain MJF641. This work was supported by the National Institutes of Health DP1 OD000217 (Director’s Pioneer Award), R01 GM085286, GM084211-A1 , GM118043-01, and La Fondation Pierre Gilles de Gennes.</p>
 <h2 class="unnumbered" id="references" class="unnumbered">References</h2>
 <div id="refs" class="references hanging-indent" role="doc-bibliography">
 <div id="ref-anderson2003">
@@ -458,38 +458,6 @@ dp_s^2}\Bigg\vert_{p_s=p_s^*}\right)^{-1}.
 			</div><!-- /.container -->
 		</div><!-- /.section -->
 		
-			<div class="section section--grey">
-				<div class="container">
-					<div class="row">
-						<div class="col-md-7">
-							<div id="disqus_thread"></div>
-<script>
-	/**
-	 *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-	 *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
-	 */
-	 /*
-	var disqus_config = function () {
-	this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
-		this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-	};
-	*/
-	(function() {
-		var d = document, s = d.createElement('script');
-
-		s.src = 'https://gchure_phd.disqus.com/embed.js';
-
-		s.setAttribute('data-timestamp', +new Date());
-		(d.head || d.body).appendChild(s);
-	})();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
-
-						</div><!-- /.col -->
-					</div><!-- /.row -->
-				</div><!-- /.container -->
-			</div><!-- /.section -->
-		
 		<div class="js-footer-area">
 			
 				<nav class="page-nav">	
@@ -497,13 +465,13 @@ dp_s^2}\Bigg\vert_{p_s=p_s^*}\right)^{-1}.
 						<div class="row">
 							<div class="col-xs-12">
 								
-									<a href="https://gchure.github.io/phd{{site.doks.baseurl}}/published_content" class="page-nav__item page-nav__item--prev">
+									<a href="{{site.doks.baseurl}}/published_content" class="page-nav__item page-nav__item--prev">
 										<i class="icon icon--arrow-left"></i>
 										Published Content
 									</a><!-- /.page-nav__item -->
 								
 								
-									<a href="https://gchure.github.io/phd{{site.doks.baseurl}}/chapter_2" class="page-nav__item page-nav__item--next">
+									<a href="{{site.doks.baseurl}}/chapter_2" class="page-nav__item page-nav__item--next">
 										Chapter 2
 										<i class="icon icon--arrow-right"></i>
 									</a><!-- /.page-nav__item -->
@@ -520,7 +488,7 @@ dp_s^2}\Bigg\vert_{p_s=p_s^*}\right)^{-1}.
 			<div class="row">
 				<div class="col-sm-6">
 					
-						<a href="https://gchure.github.io/phd/" class="site-footer__logo">Griffin D. Chure | PhD Thesis</a>
+						<a href="/" class="site-footer__logo">Griffin D. Chure | PhD Thesis</a>
 					
 					
 						<hr>
@@ -545,11 +513,11 @@ dp_s^2}\Bigg\vert_{p_s=p_s^*}\right)^{-1}.
 	</footer><!-- /.site-footer -->
 
 
-<script src="https://gchure.github.io/phd/doks-theme/assets/js/vendor/jquery.min.js"></script>
-<script type="text/javascript" src="https://gchure.github.io/phd/doks-theme/assets/js/vendor/bootstrap/affix.min.js"></script>
-<script type="text/javascript" src="https://gchure.github.io/phd/doks-theme/assets/js/vendor/bootstrap/scrollspy.min.js"></script>
-<script type="text/javascript" src="https://gchure.github.io/phd/doks-theme/assets/js/vendor/matchHeight.min.js"></script>
-<script type="text/javascript" src="https://gchure.github.io/phd/doks-theme/assets/js/scripts.min.js"></script>
+<script src="/doks-theme/assets/js/vendor/jquery.min.js"></script>
+<script type="text/javascript" src="/doks-theme/assets/js/vendor/bootstrap/affix.min.js"></script>
+<script type="text/javascript" src="/doks-theme/assets/js/vendor/bootstrap/scrollspy.min.js"></script>
+<script type="text/javascript" src="/doks-theme/assets/js/vendor/matchHeight.min.js"></script>
+<script type="text/javascript" src="/doks-theme/assets/js/scripts.min.js"></script>
 
 
 

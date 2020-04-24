@@ -36,11 +36,11 @@
   <script id="MathJax-script" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
   
 
-<link rel="icon" href="https://gchure.github.io/phd/favicon.ico" type="image/x-icon">
+<link rel="icon" href="/favicon.ico" type="image/x-icon">
 <link href="https://fonts.googleapis.com/css?family=Nanum+Myeongjo&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Alegreya|Lora&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="https://gchure.github.io/phd/doks-theme/assets/css/style.css">
+<link rel="stylesheet" href="/doks-theme/assets/css/style.css">
 
 	</head>
 	<body class="grey" data-spy="scroll" data-target=".js-scrollspy">
@@ -52,7 +52,7 @@
 			<div class="row">
 				<div class="col-xs-12">
 					
-						<a href="https://gchure.github.io/phd/" class="site-header__logo"><i class="icon icon--chevron-left"></i> Home</a>
+						<a href="/" class="site-header__logo"><i class="icon icon--chevron-left"></i> Home</a>
 					
 					
 				</div><!-- /.col -->
@@ -61,7 +61,7 @@
 	</header><!-- /.site-header -->
 
 
-		<div class="hero-subheader" style="background-image: url(https://gchure.github.io/phd/doks-theme/assets/images/waves.jpg); background-position: center; object-fit: cover; width:100%;">
+		<div class="hero-subheader" style="background-image: url(http://127.0.0.1:4000/doks-theme/assets/images/waves.jpg); background-position: center; object-fit: cover; width:100%;">
 
 			<div class="container" style="background-color: rgba(0,0,0, 0.75); border:0.75px solid white;">
 				<div class="row">
@@ -78,12 +78,12 @@
 								
 								<!-- 
 									
-										<a href="https://gchure.github.io/phd{{site.doks.baseurl}}/published_content" class="btn btn--dark btn--rounded btn--w-icon btn--w-icon-left">
+										<a href="{{site.doks.baseurl}}/published_content" class="btn btn--dark btn--rounded btn--w-icon btn--w-icon-left">
 											<i class="icon icon--arrow-left"></i>	
 										</a>
 									
 									
-										<a href="https://gchure.github.io/phd{{site.doks.baseurl}}/chapter_02" class="btn btn--dark btn--rounded btn--w-icon">
+										<a href="{{site.doks.baseurl}}/chapter_02" class="btn btn--dark btn--rounded btn--w-icon">
 											<i class="icon icon--arrow-right"></i>
 										</a>
 									
@@ -101,13 +101,13 @@
 						<div class="row" >
 							<div class="col-xs-12">
 								
-									<a href="https://gchure.github.io/phd{{site.doks.baseurl}}/published_content" class="page-nav__item page-nav__item--prev">
+									<a href="{{site.doks.baseurl}}/published_content" class="page-nav__item page-nav__item--prev">
 										<i class="icon icon--arrow-left"></i>
 										Published Content
 									</a><!-- /.page-nav__item -->
 								
 								
-									<a href="https://gchure.github.io/phd{{site.doks.baseurl}}/chapter_02" class="page-nav__item page-nav__item--next">
+									<a href="{{site.doks.baseurl}}/chapter_02" class="page-nav__item page-nav__item--next">
 										Chapter 2
 										<i class="icon icon--arrow-right"></i>
 									</a><!-- /.page-nav__item -->
@@ -346,13 +346,13 @@ g(\sigma) \sim \text{\itshape HalfNormal}(\phi=0.1).
 <p>      Using a similar inferential approach as described in the previous section, we sample the posterior distribution of these parameters using Markov chain Monte Carlo and compute the fold-change and shift in free energy for each temperature. As seen in Fig. 12, there is a negligible improvement in the description of the data by including this temperature dependent entropic parameter.</p>
 <p>     These results together suggest that our understanding of temperature dependence in this regulatory architecture is incomplete and requires further research from both theoretical and experimental standpoints.</p>
 <figure>
-<img src="ch8_figS11.png" id="fig:entropy_corner" alt="" /><figcaption>Figure 10: <strong>Sampled posterior probability distributions of entropic penalty parameter inference.</strong> Marginal and joint distributions conditioned only on data collected at 32<span class="math inline"><em></em><sup>∘</sup></span> C, only on 42 <span class="math inline"><em></em><sup>∘</sup></span> C, or on both temperatures are shown in blue, red, and black, respectively. The value <span class="math inline"><em>Δ</em><em>S</em><sub><em>R</em></sub></span> and <span class="math inline"><em>Δ</em><em>S</em><sub><em>A</em><em>I</em></sub></span> are given in <span class="math inline"><em>k</em><sub><em>B</em></sub><em>T</em>/<em>K</em></span> where <span class="math inline"><em>K</em></span> is 1 degree Kelvin.</figcaption>
+<img src="ch8_figS11.png" id="fig:entropy_corner" data-short-caption="Sampled posterior probability distributions of entropic penalty parameter inference." alt="" /><figcaption>Figure 10: <strong>Sampled posterior probability distributions of entropic penalty parameter inference.</strong> Marginal and joint distributions conditioned only on data collected at 32<span class="math inline"><em></em><sup>∘</sup></span> C, only on 42 <span class="math inline"><em></em><sup>∘</sup></span> C, or on both temperatures are shown in blue, red, and black, respectively. The value <span class="math inline"><em>Δ</em><em>S</em><sub><em>R</em></sub></span> and <span class="math inline"><em>Δ</em><em>S</em><sub><em>A</em><em>I</em></sub></span> are given in <span class="math inline"><em>k</em><sub><em>B</em></sub><em>T</em>/<em>K</em></span> where <span class="math inline"><em>K</em></span> is 1 degree Kelvin.</figcaption>
 </figure>
 <figure>
-<img src="ch8_figS12.png" id="fig:entropy_pairwise" alt="" /><figcaption>Figure 11: <strong>Pairwise predictions of fold-change in gene expression at different temperatures.</strong> Each row represents the condition used to infer the entropic parameters and columns are the conditions that are being predicted. color shaded regions represent the 95% credible region of the predicted fold-change given the inferred values of <span class="math inline"><em>Δ</em><em>S</em><sub><em>R</em></sub></span> and <span class="math inline"><em>Δ</em><em>S</em><sub><em>A</em><em>I</em></sub></span> for each condition. The black dashed line represents the predicted fold-change in gene expression by a simple rescaling of the binding energy determined at 37<span class="math inline"><em></em><sup><em>c</em></sup><em>i</em><em>r</em><em>c</em></span> C. The grey shaded region is the 95% credible region of the fold-change given estimation of <span class="math inline"><em>Δ</em><em>S</em><sub><em>R</em></sub></span> and <span class="math inline"><em>Δ</em><em>S</em><sub><em>A</em><em>I</em></sub></span> conditioned on both temperatures pooled together.</figcaption>
+<img src="ch8_figS12.png" id="fig:entropy_pairwise" data-short-caption="Pairwise predictions of fold-change in gene expression at different temperatures." alt="" /><figcaption>Figure 11: <strong>Pairwise predictions of fold-change in gene expression at different temperatures.</strong> Each row represents the condition used to infer the entropic parameters and columns are the conditions that are being predicted. color shaded regions represent the 95% credible region of the predicted fold-change given the inferred values of <span class="math inline"><em>Δ</em><em>S</em><sub><em>R</em></sub></span> and <span class="math inline"><em>Δ</em><em>S</em><sub><em>A</em><em>I</em></sub></span> for each condition. The black dashed line represents the predicted fold-change in gene expression by a simple rescaling of the binding energy determined at 37<span class="math inline"><em></em><sup><em>c</em></sup><em>i</em><em>r</em><em>c</em></span> C. The grey shaded region is the 95% credible region of the fold-change given estimation of <span class="math inline"><em>Δ</em><em>S</em><sub><em>R</em></sub></span> and <span class="math inline"><em>Δ</em><em>S</em><sub><em>A</em><em>I</em></sub></span> conditioned on both temperatures pooled together.</figcaption>
 </figure>
 <figure>
-<img src="ch8_figS13.png" id="fig:t_dependent" alt="" /><figcaption>Figure 12: <strong>Fold-change and shift in free energy including a temperature-dependent entropic contribution.</strong> Top row illustrates the estimated fold-change in gene expression at 32<span class="math inline"><em></em><sup>∘</sup></span> C (left) and 42<span class="math inline"><em></em><sup>∘</sup></span> C (right). Bottom row shows the estimated shift in free energy for each temperature. The grey transparent line in all plots shows the relevant quantity including only a temperature-independent entropic parameter. Purple hashed line illustrates the relevant quantity including a temperature-dependent entropic contribution. The width of each curve indicates the 95% credible region of thee relevant quantity. Points in each correspond to the experimental measurements. The points in the top row represent the mean and standard error of five to eight biological replicates. Points in the bottom row correspond to the median value of the inferred free energy shift and the mean of five to eight biological replicates for the repressor copy number. Vertical error represents the upper and lower bounds of the 95% credible region of the parameter. Horizontal error bars correspond to the standard error of five to eight biological replicates.</figcaption>
+<img src="ch8_figS13.png" id="fig:t_dependent" data-short-caption="Fold-change and shift in free energy including a temperature-dependent entropic contribution." alt="" /><figcaption>Figure 12: <strong>Fold-change and shift in free energy including a temperature-dependent entropic contribution.</strong> Top row illustrates the estimated fold-change in gene expression at 32<span class="math inline"><em></em><sup>∘</sup></span> C (left) and 42<span class="math inline"><em></em><sup>∘</sup></span> C (right). Bottom row shows the estimated shift in free energy for each temperature. The grey transparent line in all plots shows the relevant quantity including only a temperature-independent entropic parameter. Purple hashed line illustrates the relevant quantity including a temperature-dependent entropic contribution. The width of each curve indicates the 95% credible region of thee relevant quantity. Points in each correspond to the experimental measurements. The points in the top row represent the mean and standard error of five to eight biological replicates. Points in the bottom row correspond to the median value of the inferred free energy shift and the mean of five to eight biological replicates for the repressor copy number. Vertical error represents the upper and lower bounds of the 95% credible region of the parameter. Horizontal error bars correspond to the standard error of five to eight biological replicates.</figcaption>
 </figure>
 <h2 id="media-recipes-and-bacterial-strains">Media Recipes and Bacterial Strains</h2>
 <p>The primary interest in varying the available carbon source in growth media was to modulate the quality of the carbon rather than the quantity. With this in mind, we developed the various growth media to contain the same net number of carbon atoms per cell. The standard reference was 0.5% (w/v) glucose <span class="citation" data-cites="garcia2011">(H. G. Garcia and Phillips <a href="#ref-garcia2011" role="doc-biblioref">2011</a>)</span>, which results in <span class="math inline">10<sup>8</sup></span> carbon atoms per <span class="math inline">10<sup> − 15</sup></span> L. The base recipe is given in Table 8.2. The bacterial strains used in this work are given in Table 8.3.</p>
@@ -547,38 +547,6 @@ g(\sigma) \sim \text{\itshape HalfNormal}(\phi=0.1).
 			</div><!-- /.container -->
 		</div><!-- /.section -->
 		
-			<div class="section section--grey">
-				<div class="container">
-					<div class="row">
-						<div class="col-md-7">
-							<div id="disqus_thread"></div>
-<script>
-	/**
-	 *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-	 *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
-	 */
-	 /*
-	var disqus_config = function () {
-	this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
-		this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-	};
-	*/
-	(function() {
-		var d = document, s = d.createElement('script');
-
-		s.src = 'https://gchure_phd.disqus.com/embed.js';
-
-		s.setAttribute('data-timestamp', +new Date());
-		(d.head || d.body).appendChild(s);
-	})();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
-
-						</div><!-- /.col -->
-					</div><!-- /.row -->
-				</div><!-- /.container -->
-			</div><!-- /.section -->
-		
 		<div class="js-footer-area">
 			
 				<nav class="page-nav">	
@@ -586,13 +554,13 @@ g(\sigma) \sim \text{\itshape HalfNormal}(\phi=0.1).
 						<div class="row">
 							<div class="col-xs-12">
 								
-									<a href="https://gchure.github.io/phd{{site.doks.baseurl}}/published_content" class="page-nav__item page-nav__item--prev">
+									<a href="{{site.doks.baseurl}}/published_content" class="page-nav__item page-nav__item--prev">
 										<i class="icon icon--arrow-left"></i>
 										Published Content
 									</a><!-- /.page-nav__item -->
 								
 								
-									<a href="https://gchure.github.io/phd{{site.doks.baseurl}}/chapter_02" class="page-nav__item page-nav__item--next">
+									<a href="{{site.doks.baseurl}}/chapter_02" class="page-nav__item page-nav__item--next">
 										Chapter 2
 										<i class="icon icon--arrow-right"></i>
 									</a><!-- /.page-nav__item -->
@@ -609,7 +577,7 @@ g(\sigma) \sim \text{\itshape HalfNormal}(\phi=0.1).
 			<div class="row">
 				<div class="col-sm-6">
 					
-						<a href="https://gchure.github.io/phd/" class="site-footer__logo">Griffin D. Chure | PhD Thesis</a>
+						<a href="/" class="site-footer__logo">Griffin D. Chure | PhD Thesis</a>
 					
 					
 						<hr>
@@ -634,11 +602,11 @@ g(\sigma) \sim \text{\itshape HalfNormal}(\phi=0.1).
 	</footer><!-- /.site-footer -->
 
 
-<script src="https://gchure.github.io/phd/doks-theme/assets/js/vendor/jquery.min.js"></script>
-<script type="text/javascript" src="https://gchure.github.io/phd/doks-theme/assets/js/vendor/bootstrap/affix.min.js"></script>
-<script type="text/javascript" src="https://gchure.github.io/phd/doks-theme/assets/js/vendor/bootstrap/scrollspy.min.js"></script>
-<script type="text/javascript" src="https://gchure.github.io/phd/doks-theme/assets/js/vendor/matchHeight.min.js"></script>
-<script type="text/javascript" src="https://gchure.github.io/phd/doks-theme/assets/js/scripts.min.js"></script>
+<script src="/doks-theme/assets/js/vendor/jquery.min.js"></script>
+<script type="text/javascript" src="/doks-theme/assets/js/vendor/bootstrap/affix.min.js"></script>
+<script type="text/javascript" src="/doks-theme/assets/js/vendor/bootstrap/scrollspy.min.js"></script>
+<script type="text/javascript" src="/doks-theme/assets/js/vendor/matchHeight.min.js"></script>
+<script type="text/javascript" src="/doks-theme/assets/js/scripts.min.js"></script>
 
 
 

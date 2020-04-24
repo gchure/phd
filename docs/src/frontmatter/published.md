@@ -1,17 +1,19 @@
 Laxhauber, Kathrin S.; Morrison, M. J; \textbf{Chure, G.}; Belliveau, N.M.;
 Strankvist, C.; Phillips, R. (2020). Theoretical investigation of a genetic switch for 
-metabolic adaptation.  BioRxiv
+metabolic adaptation. PLoS ONE (in press)
 
 Razo-Mejia, M.; Marzen, S.; \textbf{Chure, G.}; Taubman, R.; Morrison, M. J.;
 Phillips, R. (2020). First-principles prediction of the information processing capacity
-of a simple genetic circuit. BioRxiv 
+of a simple genetic circuit. BioRxiv (in submission)
 
 \textbf{Chure, G.}; Kaczmarek, Z.A.; and Phillips, R. (2019b). Physiological Adaptability
-and Parametric Versatility in a Simple Genetic Circuit. BioRxiv 2019.12.19.878462.
+and Parametric Versatility in a Simple Genetic Circuit. BioRxiv (under review at
+Cell Systems) 2019.12.19.878462.
 
 Hirokawa, S.; \textbf{Chure, G.}; Belliveau, N.M.; Lovely, G.A.; Anaya, M.; Schatz, D.G.;
 Baltimore, D.; and Phillips, R. (2019). Sequence-Dependent Dynamics of Synthetic
-and Endogenous RSSs in V(D)J Recombination. BioRxiv 791954.
+and Endogenous RSSs in V(D)J Recombination. BioRxiv (under review at Nucleic
+Acids Research) 791954.
 
 \textbf{Chure, G.}; Razo-Mejia, M.; Belliveau, N.M.; Einav, T.; Kaczmarek, Z.A.; Barnes,
 S.L.; and Phillips, R. (2019). Predictive Shifts in Free Energy Couple

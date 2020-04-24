@@ -24,7 +24,7 @@ the simultaneous binding of an activator and an RNA polymerase amplifies gene
 expression, is another common mode of regulation. Combinatorial regulation such
 as dual repression, dual activation, or combined activation and repression can
 also be found throughout the genome, albeit with lower
-frequency[@phillips2019]. The ubiquity of the simple repression and simple
+frequency [@phillips2019]. The ubiquity of the simple repression and simple
 activation motifs illustrate that, for many genes, the complex systems-level
 response to a physiological perturbation boils down the binding and unbinding
 of a single regulator to its cognate binding sites.

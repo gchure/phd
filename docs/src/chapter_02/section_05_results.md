@@ -87,9 +87,12 @@ cells (see Materials \& Methods). Mean expression is then quantified at
 different IPTG concentrations (top, blue histograms) and for a strain without
 repressor (bottom, green histograms), which shows no response to IPTG as
 expected. Fold-change is computed by dividing the mean fluorescence in the
-presence of repressor by the mean fluorescence in the absence of
-repressor.](ch2_fig3){#fig:flowchart short-caption="An experimental pipeline
-for high-throughput fold-change measurements."}
+presence of repressor by the mean fluorescence in the absence of repressor.
+The [Python code (`ch2_fig3.py`)](https://github.com/gchure/phd/blob/master/src/chapter_02/code/ch2_fig3.py)
+used to generate this figure can be found on the thesis [GitHub
+repository](https://github.com/gchure/phd).](ch2_fig3){#fig:flowchart
+short-caption="An experimental pipeline for high-throughput fold-change
+measurements."}
 
 
 ### Determination of the *in vivo* MWC Parameters
@@ -138,20 +141,23 @@ guide future experiments [@kuhlman2007; @murphy2007].
 parameters.** (A) Schematic representation of experimentally accessible
 variables. Repressor copy number $R$ is tuned by changing the sequence of the
 ribosomal binding site (RBS), DNA binding energy $\Delta\varepsilon_{RA}$ is
-controlled via the squence of the operator, and the inducer concentration $c$ is
-controlled via a dilution series. (B) Markov Chain Monte Carlo (MCMC) sampling
-of the posterior distribution of $K_A$ and $K_I$. Each point corresponds to a 
-single MCMC sample. Distribution on top and left represent the marginal
-posterior probability distribution over $K_A$ and $K_I$, respectively. (C)
-Predicted induction profiles for strains with various repressor copy numbers and
-DNA binding energies. White-faced points represent those to which the inducer
-binding constants $K_A$ and $K_I$ were determined. (D) Predicted properties of
-the induction profiles in (C) using parameter values known *a priori*.  The
-shaded regions denote the 95% credible region. Region between 0 and $10^{-7}\,
-\mu$M  is scaled linearly with log scaling elsewhere.](ch2_fig4.png){#fig:induction_predictions
-short-caption="Predicting induction profiles for different biological control
-parameters."}
-
+controlled via the squence of the operator, and the inducer concentration $c$
+is controlled via a dilution series. (B) Markov Chain Monte Carlo (MCMC)
+sampling of the posterior distribution of $K_A$ and $K_I$. Each point
+corresponds to a single MCMC sample. Distribution on top and left represent
+the marginal posterior probability distribution over $K_A$ and $K_I$,
+respectively. (C) Predicted induction profiles for strains with various
+repressor copy numbers and DNA binding energies. White-faced points represent
+those to which the inducer binding constants $K_A$ and $K_I$ were determined.
+(D) Predicted properties of the induction profiles in (C) using parameter
+values known *a priori*. The shaded regions denote the 95% credible region.
+Region between 0 and $10^{-7}\, \mu$M is scaled linearly with log scaling
+elsewhere. The [Python code
+(`ch2_fig4.py`)](https://github.com/gchure/phd/blob/master/src/chapter_02/code/ch2_fig4.py)
+used to generate this figure can be found on the thesis [GitHub
+repository](https://github.com/gchure/phd).
+](ch2_fig4.png){#fig:induction_predictions short-caption="Predicting
+induction profiles for different biological control parameters."}
 
 ### Comparison of Experimental Measurements with Theoretical Predictions
 
@@ -211,7 +217,10 @@ profiles would have been predicted regardless of which strain was
 chosen. The points show the mode, and the error bars denote the $95%$
 credible region of the parameter value distribution. Error bars not
 visible are smaller than the size of the
-marker.](ch2_fig5){#fig:induction_experiments short-caption="Comparison of predictions against measured and inferred data."}
+marker. The [Python code
+(`ch2_fig5.py`)](https://github.com/gchure/phd/blob/master/src/chapter_02/code/ch2_fig5.py)
+used to generate this figure can be found on the thesis [GitHub
+repository](https://github.com/gchure/phd). ](ch2_fig5){#fig:induction_experiments short-caption="Comparison of predictions against measured and inferred data."}
 
 ### Predicting the Phenotypic Traits of the Induction Response
 
@@ -282,7 +291,10 @@ pairing in - separately to in order to smoothly interpolate between the
 data points. Error bars for - represent the standard error of the mean
 for eight or more replicates; error bars for - represent the 95%
 credible region for the parameter found by propagating the credible
-region of our estimates of $K_A$ and $K_I$ into  @Eq:fold_change_full.](ch2_fig6){#eq:properties_experiment short-caption="Predictions and experimental measurements of key properties of
+region of our estimates of $K_A$ and $K_I$ into  @Eq:fold_change_full. The [Python code
+(`ch2_fig6.py`)](https://github.com/gchure/phd/blob/master/src/chapter_02/code/ch2_fig6.py)
+used to generate this figure can be found on the thesis [GitHub
+repository](https://github.com/gchure/phd). ](ch2_fig6){#eq:properties_experiment short-caption="Predictions and experimental measurements of key properties of
 induction profiles."}
 
 
@@ -436,7 +448,10 @@ of the free energy. The freeenergy for each strain was calculated from
 $K_A=139, \mu\text{M}$, $K_I=0.53 \mu\text{M}$, and the strain-specific $R$ and
 $\Delta\varepsilon_{RA}$. All data points represent the mean, and error bars
 arethe standard error of the mean for eight or more
-replicates.](ch2_fig8){#fig:induction_collapse short-caption="Collapse of
+replicates.The [Python code
+(`ch2_fig8.py`)](https://github.com/gchure/phd/blob/master/src/chapter_02/code/ch2_fig8.py)
+used to generate this figure can be found on the thesis [GitHub
+repository](https://github.com/gchure/phd). ] ](ch2_fig8){#fig:induction_collapse short-caption="Collapse of
 fold-change measurements as a function of the free energy."}
 
 

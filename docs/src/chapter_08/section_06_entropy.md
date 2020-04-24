@@ -197,7 +197,8 @@ inference.** Marginal and joint distributions conditioned only on data
 collected at 32$^\circ$ C, only on 42 $^\circ$ C, or on both temperatures are
 shown in blue, red, and black, respectively. The value $\Delta S_R$ and
 $\Delta S_{AI}$ are given in $k_BT / K$ where $K$ is 1 degree
-Kelvin.](ch8_figS11){#fig:entropy_corner}
+Kelvin.](ch8_figS11){#fig:entropy_corner short-caption="Sampled posterior
+probability distributions of entropic penalty parameter inference."}
 
 
 ![**Pairwise predictions of fold-change in gene expression at different
@@ -209,7 +210,9 @@ each condition. The black dashed line represents the predicted fold-change in
 gene expression by a simple rescaling of the binding energy determined at
 37$^circ$ C. The grey shaded region is the 95\% credible region of the
 fold-change given estimation of $\Delta S_R$ and $\Delta S_{AI}$ conditioned
-on both temperatures pooled together.](ch8_figS12){#fig:entropy_pairwise}
+on both temperatures pooled together.](ch8_figS12){#fig:entropy_pairwise
+short-caption="Pairwise predictions of fold-change in gene expression at
+different temperatures."}
 
 ![**Fold-change and shift in free energy including a temperature-dependent
 entropic contribution.** Top row illustrates the estimated fold-change in
@@ -226,5 +229,7 @@ to the median value of the inferred free energy shift and the mean of five to
 eight biological replicates for the repressor copy number. Vertical error
 represents the upper and lower bounds of the 95\% credible region of the
 parameter. Horizontal error bars correspond to the standard error of five to
-eight biological replicates.](ch8_figS13){#fig:t_dependent}
+eight biological replicates.](ch8_figS13){#fig:t_dependent
+short-caption="Fold-change and shift in free energy including a
+temperature-dependent entropic contribution."}
 

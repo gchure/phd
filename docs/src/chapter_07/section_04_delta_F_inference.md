@@ -111,7 +111,7 @@ from the prior distributions shown as a cumulative distribution.
 Percentiles were calculated for 1000 generated data sets, each with 10
 fold-change measurements drawn from the likelihood given the drawn
 values of $\mu$ and
-$\sigma$.](ch7_figS7){#fig:empirial_F_prior_pred short-caption="Prior predictive
+$\sigma$.](ch7_figS7){#fig:empirical_F_prior_pred short-caption="Prior predictive
 checks for inference of the mean fold-change"}
 
 
