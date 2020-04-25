@@ -129,3 +129,12 @@ the biophysical parameters, compute the free energy, and make a concrete
 prediction of what the fold-change in gene expression will be. Or, as we will
 see in the following section, details of the biophysical parameters can be
 determined directly from an empirical measurement of the free energy. 
+
+![**Collapse of individual induction profiles onto a simple scaling function.**
+(A) Many different combinations of parameter values yield the same value of the
+fold-change in gene expression, shown as red and blue horizontal planes. Any
+point on those planes corresponds to a single value of the free energy (middle)
+and will appear on the master curve. (B) Data presented in @Fig:induction_intro
+(C) collapsed onto the master curve defined by the predicted value of the free
+energy.](ch1_fig5){#fig:collapse_intro short-caption="Collapse of individual
+induction profiles onto a simple scaling function."}
