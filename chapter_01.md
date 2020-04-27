@@ -30,13 +30,11 @@ page_nav:
 prefix: chapter_01
 contents:
     - section_01_introduction
-    - section_02_monod
-    - section_03_molecular_adaptation
-    - section_04_data_collapse
-    - section_05_evolutionary_adaptation
-    - section_06_physiological_adaptation
-    - section_07_survival
-    - section_08_conclusion
+    - section_02_molecular_adaptation
+    - section_03_evolutionary_adaptation
+    - section_04_physiological_adaptation
+    - section_05_survival
+    - section_06_conclusion
 ---
 
 {% if page.contents %}
