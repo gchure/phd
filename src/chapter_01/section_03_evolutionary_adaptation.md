@@ -1,18 +1,19 @@
 ## Topic II: Using Free Energy to Examine Evolutionary Adaptation
 
-Allow us to briefly return to Monod and his biphasic growth curves in the mid
-1940's. At this point in scientific history, the French vision of biology had
-taken a strongly finalistic and vitalistic turn [@loison2013]. In particular, a
-neo-Lamarckian view had been employed to explain the phenomenon of enzymatic
-adaptation where the formation of the appropriate genes could formed out the
-bacterial cytoplasm and inherited by the cell's descendents, completely
-independent of genes. In general, this approach to biology deeply
-frustrated Monod and strongly influenced his desire to "physicalize" the science
-[@loison2013]. One tool he knew was critical to this mission was the burgeoning
-field of genetics. In the mid 1930's Monod undertook a short retreat to Thomas
-Hunt Morgan's lab at Caltech where he was introduced to "biology's first
-discipline", genetics [@loison2013]. This visit had a profound impact on Monod,
-who remarked on it some three decades later: 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Allow us to briefly return to Monod and his
+biphasic growth curves in the mid 1940's. At this point in scientific
+history, the French vision of biology had taken a strongly finalistic and
+vitalistic turn [@loison2013]. In particular, a neo-Lamarckian view had been
+employed to explain the phenomenon of enzymatic adaptation where the the
+enzymes appropriate for digesting the substrate could spontaneously formed
+out the bacterial cytoplasm and inherited by the cell's descendents,
+completely independent of genes. In general, this approach to biology deeply
+frustrated Monod and strongly influenced his desire to "physicalize" the
+science [@loison2013]. One tool he knew was critical to this mission was the
+burgeoning field of genetics. In the mid 1930's Monod undertook a short
+retreat to Thomas Hunt Morgan's lab at Caltech where he was introduced to
+"biology's first discipline", genetics [@loison2013]. This visit had a
+profound impact on Monod, who remarked on it some three decades later:
 
 > *"Upon my return to France, I had again taken up the study of bacterial growth.
 > But my mind remained full of the concepts of genetics and I was confident of
@@ -29,7 +30,7 @@ the Nobel prize with twenty years later) which was unable to digest lactose
 would not display a diauxic shift and would only be able to consume the
 glucose in the medium (@Fig:lacneg, black). However, Monod and Alice Audureau
 discovered a mutation in this strain which *enabled* the digestion of
-lactose, termed $L+$ [@monod1947]. This growth curve of this strain had the
+lactose, termed $L+$ [@monod1947]. The growth curve of this strain had the
 striking feature of diauxic growth. Rather than this mutation merely enabling
 the digestion of lactose, it did so in a non-constitutive manner and
 preserved the phenomenon of adaptation. This was an important step forward in
@@ -88,7 +89,7 @@ along with the corresponding free energy. However, once a mutation has been
 introduced *into the repressor protein*  (resulting in a non-synonymous amino
 acid change), we are once again ignorant *a priori* of what changes, if any,
 that mutation may have imparted on the system. In @Fig:pedagogical_delF_intro,
-we show two separate hypothetical mutations ,shown in purple and orange, which
+we examine two separate hypothetical mutations, shown in purple and orange, which
 significantly change the character of the system by either increasing or
 decreasing the fold-change in gene expression, respectively. If we assume that
 these mutations do not change the underlying physics of the system, we are
@@ -130,7 +131,7 @@ double mutants (one inducer binding and one DNA binding each), across four
 repressor copy numbers and three operator sequences. While this process of
 strain generation and data collection is not the primary focus of the work,
 it took $\approx 80\%$ of the effort. Without them, this work would have
-remained an untested theoretical approach. While we leave many of the rich
+remained an untested theoretical novelty. While we leave many of the rich
 details of this prediction to the reader in Chapter 3, we showcase our 
 experimental success in  @Fig:double_muts_intro (B) where the predicted induction profiles
 of nine double mutants (light blue shaded regions) are overlaid with their
