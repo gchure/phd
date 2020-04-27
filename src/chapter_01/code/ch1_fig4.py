@@ -61,11 +61,3 @@ leg.get_title().set_fontsize(6)
 plt.savefig('../figs/ch1_fig4_induction_plot.svg')
 # %%
 
-
-# %%
-
-
-# %%
-
-
-# %%

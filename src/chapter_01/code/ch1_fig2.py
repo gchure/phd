@@ -8,7 +8,8 @@ colors, palette = phd.viz.phd_style()
 
 # Load the three data set. 
 diauxie = pd.read_csv('../../data/ch1_introduction/Monod1941_Fig1_Fig2.csv')
-triauxie = pd.read_csv('../../data/ch1_introduction/Monod1947_Fig11.csv')
+concs = pd.read_csv('../../data/ch1_introduction/Monod1947_Fig6.csv')
+
 
 #%%
 fig, ax = plt.subplots(1, 2, figsize=(6, 2))
@@ -19,9 +20,9 @@ for a in ax:
     a.spines['bottom'].set_position(('outward', 2))
     a.spines['left'].set_position(('outward', 2))
 ax[0].set_ylim([-0.12, 95])
-ax[1].set_ylim([-0.12, 80])
 ax[0].set_xlim([-0.12, 10])
-ax[1].set_xlim([-0.12, 6])
+ax[1].set_ylim([0, 70])
+# ax[1].set_xlim([-0.12, 6])
 
 
 # Diauxie plots. 
@@ -34,25 +35,45 @@ for g, d in diauxie.groupby('secondary_sugar'):
                 markeredgecolor=colors['grey'], markeredgewidth=0.5, label=f'saccharose + {g}',
             ms=5, linewidth=0.5)
 
-# Triauxie plot
-time = np.linspace(0, triauxie['time_hrs'].max() + 0.1, 200)
-spline = scipy.interpolate.UnivariateSpline(triauxie['time_hrs'], triauxie['optical_density'])
-spline.set_smoothing_factor(0.5)
-ax[1].plot(time, spline(time), '-', lw=0.75, color=colors['purple'])
-ax[1].plot(triauxie['time_hrs'], triauxie['optical_density'], 'o', color=colors['light_purple'],
-       markeredgecolor='white', markeredgewidth=0.5, ms=5)
+# Concentration plot
+for g, d in concs.groupby(['glucose_sorbitol']):
+    print(g)
+    if g < 1:
+        c = colors['light_purple']
+    if g == 1:
+        c = colors['black']
+    if g==3:
+        c = colors['orange']
 
+    # Fit the splines. 
+    time_range = np.linspace(d['hours'].min(), d['hours'].max(), 200)
+    spline = scipy.interpolate.UnivariateSpline(d['hours'], d['optical_density'])
+    spline.set_smoothing_factor(0.5)
+    ax[1].plot(time_range, spline(time_range), '-', lw=0.75, color=c)
+    ax[1].plot(d['hours'], d['optical_density'], 'o', ms=4, markeredgewidth=0.5,
+        color=c, markeredgecolor=colors['grey'])
+
+# Ad lines indicating adaptation time
 ax[0].vlines(6.2, 0, 100, color='white', lw=18, alpha=0.75)
+ax[1].vlines(2.2, 0, 70, color='white', lw=10, alpha=0.75)
+ax[1].vlines(7, 0, 70, color='white', lw=14, alpha=0.75)
+ax[1].vlines(10.2, 0, 70, color='white', lw=12, alpha=0.75)
+
+# Add textual labels
 ax[0].text(3.2, 60, 'sucrose\n+ glucose', color=colors['blue'], fontsize=7)
 ax[0].text(7.4, 38, 'sucrose\n+ arabinose', color=colors['green'], fontsize=7)
-ax[1].text(0.5, 20, 'glucose', color=colors['purple'], fontsize=7)
-ax[1].text(2, 40, 'sorbitol', color=colors['purple'], fontsize=7)
-ax[1].text(3.25, 65, 'glycerol', color=colors['purple'], fontsize=7)
+ax[1].text(0.0, 36, r'$\frac{[\mathrm{glucose}]}{[\mathrm{sorbitol}]} < 1$', 
+           fontsize=6, color=colors['purple'])
+ax[1].text(4.5, 40, r'$\frac{[\mathrm{glucose}]}{[\mathrm{sorbitol}]} = 1$', 
+           fontsize=6, color=colors['black'])
+ax[1].text(9, 15, r'$\frac{[\mathrm{glucose}]}{[\mathrm{sorbitol}]} > 1$', 
+           fontsize=6, color=colors['orange'])
+
 # Add titles
 phd.viz.titlebox(ax[0], 'Monod 1941', color=colors['black'], bgcolor='white', size=7)
-phd.viz.titlebox(ax[1], 'Monod 1947', color=colors['black'], bgcolor='white', size=7)
-plt.subplots_adjust(wspace=0.4)
+phd.viz.titlebox(ax[1], 'Monod 1947', size=7, color=colors['black'])
 
+plt.subplots_adjust(wspace=0.4)
 # Add panel labels. 
 fig.text(0.05, 0.84, '(A)', fontsize=8)
 fig.text(0.5, 0.84, '(B)', fontsize=8)

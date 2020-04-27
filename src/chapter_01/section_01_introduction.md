@@ -2,18 +2,16 @@
 
 From archaea thriving in hydrothermal vents on the ocean floor to aspen trees
 dominating a Coloradan mountainside, all forms of life are unified in their
-ability to sense the state of their environment and, if they are lucky, adapt
-to whatever the conditions may be. It is relatively easy for us
-anthropormorphize these organisms and use terms such as "sense" and "adapt",
-but can we do the same for things at the molecular scale? Adaptive phenomena
-can be found traversing the spatial and temporal scales in biology, ranging
-the nanosecond scale conformational switching of proteins
-[@Fig:adaptation_levels (A)], to the minutes to hours long rewiring of
-metabolic networks [@Fig:adaptation_levels (B)], to the 3.5 billion years of
-speciation which has reared the biological diversity we see to day
-[@Fig:adaptation_levels(C)]. Much as our archaeon and aspen trees at the
-beginning of this paragraph, individual proteins are also capable of sensing
-changes in the environment and adapting.
+obedience to the whims of their environment. Over the past 3.5 billion years of
+evolution, life has evolved myriad clever ways to combat (and exploit)
+environmental fluctuations to amplify reproductive success. The mechanisms
+behind this adaptation are diverse and traverse the biological scales ranging
+from nanosecond-scale conformational switching of proteins
+(@Fig:adaptation_levels(C)), to large-scale reconfiguration of metabolic
+networks (@Fig:adaptation_levels (B)), to evolutionary trajectories that become
+detectable over many generations (@Fig:adaptation_levels (C)). Thus, while
+"adaptation" is colloquialy associated *only* with organisms, one can use the same
+language to describe the microscopic operations of molecules.
 
 ![**The spatial, temporal, and mechanistic scale of adaptation.** (A)
 Molecular adaptation in this work is defined through the lens of allostery
@@ -30,8 +28,8 @@ ultimately define the cellular fitness.](ch1_fig1){#fig:adaptation_levels
 short-caption="The spatial, temporal, and mechanistic scale of adaptation."}
 
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This idea of molecular adaption is not novel by
-any means and demands a brief foray into the history of bacterial growth and
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This idea of molecular adaption is not novel
+and demands a brief foray into the history of bacterial growth and
 the dawn of regulatory biology. In the late 1890's, Emilé Duclaux and his
 graduate student Frédéric Diénert performed a series of experiments that
 revealed the phenomenon of *enzymatic adaptation* where "the production of
@@ -56,9 +54,11 @@ He noted that for some mixtures of carbon sources, the culture grew
 points, @Fig:diauxie_fig (A)]. However, some mixtures (such as sucrose and
 arabinose) led biphasic growth mode where the culture would grow
 exponentially, undergo a period where growth had ceased, followed by again by
-another round of exponential growth [blue points, @Fig:diauxie_fig (A)]. In
-particular mixtures of three carbon sources, Monod even found that "triauxic"
-growth could be observed [@Fig:diauxie_fig (B)].
+another round of exponential growth [blue points, @Fig:diauxie_fig (A)].
+Additionally, Monod showed that the onset of this diauxic shift could be tuned
+by varying the relative concentrations of the carbon sources, indicating a
+controllable, chemical basis for the adaptive process(@Fig:diauxie_fig (B)).
+
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Monod immediately recognized a connection
 between diauxic growth and enzymatic adaptation [@loison2013]. Despite his
@@ -87,13 +87,12 @@ curves.** (A) Optical density measurements of *Bacillus subtilis* cultures grown
 mixture of sucrose and either glucose (blue points) or arabinose (green points).
 Biphasic growth can be observed in the sucrose/arabinose mixture where the pause
 in growth (white vertical line) corresponds to enzymatic adaptation. Data
-digitized from @monod1941. (C) A triauxic growth curve of *Escherichia coli*
-cells grown on a mixture of glucose, sorbitol, and glycerol. Periods of
-enzymatic adaptation are highlighted by white vertical
-lines.](ch1_fig2){#fig:diauxie_fig short-caption="The phenomenon of enzymatic
+digitized from @monod1941. (B)  Diauxic growth curves of *Escherichia coli*
+cells grown on a mixture of glucose and sorbitol  in different proportions. Data
+digitized from @monod1947. Periods of enzymatic adaptation are highlighted by white vertical lines. ](ch1_fig2){#fig:diauxie_fig short-caption="The phenomenon of enzymatic
 adaptation revealed in bacterial growth curves."}
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The di- and triauxic growth transitions shown
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The diauxic growth transitions shown
 in @Fig:diauxie_fig, in my opinion, illustrate adaptive processes across the
 biological scales, as were schematized in @Fig:adaptation_levels. While it was
 not known to Monod at the time, we now know that many cases of enzymatic
@@ -109,7 +108,7 @@ senses and responds to these signals. Finally, the precision with which these
 genes are regulated are determined by their sensitivity to **physiological
 adaptation**. For example, in @Fig:diauxie_fig (B), the ability to digest
 glycerol is prohibited by a molecular regulator through two physiological states
-(consumpttion of glucose and sorbitol), which have different metabolic pathways
+(consumption of glucose and sorbitol), which have different metabolic pathways
 and therefore represent different physiological states of the organism. 
 
 The central aim of this dissertation is to explore the biophysical mechanisms
