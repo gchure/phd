@@ -179,9 +179,13 @@ fluorescence of a single LacI-mCherry repressor dimer given a set of
 intensity measurements of sibling cells, $[I_1, I_2]$. The intensity of a
 given cell $I$ is related to the number of LacI-mCherry dimers it is
 expressing by a multiplicative factor $\alpha$ which can be enumerated
-mathematically as $$I = \alpha N, \label{eq:ian}$$ where $N$ is the total
-number of LacI-mCherry dimers. We can define the posterior probability
-distribution of $\alpha$ conditioned on the intensity measurements using
+mathematically as 
+$$
+I = \alpha N,
+$${#eq:growth_ian}
+where $N$ is the total number of LacI-mCherry dimers. We can define the
+posterior probability distribution of $\alpha$ conditioned on the intensity
+measurements using
 Bayes' theorem as
 $$
 g(\alpha\,\vert\, [I_1, I_2]) = \frac{f([I_1, I_2]\,\vert\,

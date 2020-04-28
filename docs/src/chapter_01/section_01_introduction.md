@@ -2,16 +2,17 @@
 
 From archaea thriving in hydrothermal vents on the ocean floor to aspen trees
 dominating a Coloradan mountainside, all forms of life are unified in their
-obedience to the whims of their environment. Over the past 3.5 billion years of
-evolution, life has evolved myriad clever ways to combat (and exploit)
+obedience to the whims of their environment. Over the past 3.5 billion years
+of evolution, life has evolved myriad clever ways to combat (and exploit)
 environmental fluctuations to amplify reproductive success. The mechanisms
-behind this adaptation are diverse and traverse the biological scales ranging
+behind this adaptation are diverse and traverse the biological scales, ranging
 from nanosecond-scale conformational switching of proteins
-(@Fig:adaptation_levels(C)), to large-scale reconfiguration of metabolic
-networks (@Fig:adaptation_levels (B)), to evolutionary trajectories that become
-detectable over many generations (@Fig:adaptation_levels (C)). Thus, while
-"adaptation" is colloquialy associated *only* with organisms, one can use the same
-language to describe the microscopic operations of molecules.
+(@Fig:adaptation_levels(C)), to reconfiguration of metabolic
+networks to consume different sugars(@Fig:adaptation_levels (B)), to evolutionary trajectories that only
+become visible over many generations (@Fig:adaptation_levels (C)). 
+While "adaptation" is typically only associated with organisms (at least
+colloquially), one can use the same language to describe the microscopic
+operations of molecules.
 
 ![**The spatial, temporal, and mechanistic scale of adaptation.** (A)
 Molecular adaptation in this work is defined through the lens of allostery
@@ -28,20 +29,20 @@ ultimately define the cellular fitness.](ch1_fig1){#fig:adaptation_levels
 short-caption="The spatial, temporal, and mechanistic scale of adaptation."}
 
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This idea of molecular adaption is not novel
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The idea of molecular adaption is not novel
 and demands a brief foray into the history of bacterial growth and
 the dawn of regulatory biology. In the late 1890's, Emilé Duclaux and his
-graduate student Frédéric Diénert performed a series of experiments that
-revealed the phenomenon of *enzymatic adaptation* where "the production of
-diastases [enzymes] depends on the manner of nutrition" in which the cultures
-were grown [@loison2013]. This is one of the the first observations of the
+graduate student Frédéric Diénert performed a series of experiments illustrating
+that the common yeast could only consume galactose after an incubation period
+with the sugar. This led to a general conclusion that "the production of diastases [enzymes] depends on the manner of nutrition" in which the cultures
+were grown [@loison2013], a phenomenon later coined *enzymatic adaptation*. This is one of the the first observations of the
 fact that, while an organism may be able to digest a certain sugar, it may
 not *always* be able to do so. Rather, there seemed to be certain conditions
 in which the production or formation of these enzymes could occur. In his
 doctoral thesis in 1900, Diénert proposed two mechanisms for the origin of
-enzymatic adaptation observed for galactozymase [@loison2013]. Either (a) the
-presence of galactose directly transformed enzymes already present in the
-cell (*S. cerevisiae*) into galactozymase or (b) that the galactose activated
+enzymatic adaptation observed for galactozymase in *S. cerevisae* [@loison2013]. Either (a) the
+presence of galactose *directly* transformed enzymes already present in the
+cell into galactozymase or (b) that the galactose activated
 the production of galactozymase *de novo* [@dienert1900, @loison2013].
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Nearly half a century later, Jacques Monod
@@ -50,30 +51,29 @@ context of bacterial growth. In his 1941 work, *Sur un phénoméne nouveau de
 croissance complexe dans les cultures bactériennes*, Monod for the first time
 reported on the phenomenon of diauxic growth, shown in @Fig:diauxie_fig (A).
 He noted that for some mixtures of carbon sources, the culture grew
-"kinetically normal" meaning exponential growth to a saturating level [blue
-points, @Fig:diauxie_fig (A)]. However, some mixtures (such as sucrose and
-arabinose) led biphasic growth mode where the culture would grow
+"kinetically normal" meaning they grew exponentially to saturation (blue
+points, @Fig:diauxie_fig (A)). However, some mixtures (such as sucrose and
+arabinose) led to biphasic growth where the culture would grow
 exponentially, undergo a period where growth had ceased, followed by again by
-another round of exponential growth [blue points, @Fig:diauxie_fig (A)].
+another round of exponential growth (blue points, @Fig:diauxie_fig (A)).
 Additionally, Monod showed that the onset of this diauxic shift could be tuned
-by varying the relative concentrations of the carbon sources, indicating a
-controllable, chemical basis for the adaptive process(@Fig:diauxie_fig (B)).
+by varying the relative concentrations of the carbon sources, revealing a
+controllable chemical basis for the adaptation (@Fig:diauxie_fig (B)).
 
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Monod immediately recognized a connection
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Monod immediately made the connection
 between diauxic growth and enzymatic adaptation [@loison2013]. Despite his
-work appearing 40 years after the pioneering work of Ducleaux and Diéner,
+work appearing 40 years after the pioneering work of Ducleaux and Diénért,
 there had been little progress towards a mechanistic, needless to say
-quantitative, explanation for the phenomenon of enzymatic adaptation. In
-fact, Monod was particularly disappointed by the teleological "explanations"
-for the phenomenon where the cells somehow controlled their behavior to
-perform only the chemical reactions that were needed [@loison2013]. The
+quantitative, explanation for the phenomenon. In
+fact, Monod was particularly disappointed by the teleological explanations
+where the cells simply changed  their behavior to
+perform only the chemical reactions that were "needed" [@loison2013]. The
 teleological approach to much of biology during this time period, especially
 in the French scientific community, severely bothered Monod. To him, this
-kind of approach lacked the "postulate of objectivity" that other fields of
-science (particularly physics) had adopted and belonged to a pre-scientific
-era of biology [@loison2013]. Near the middle of the 20th century, Monod
-published a remarkable treatise on the the phenomena of enzymatic adaptation
+kind of approach belonged to a pre-scientific era and lacked the "postulate of
+objectivity" that other fields of science (particularly physics) had adopted [@loison2013]. Near the middle of the 20th century, Monod
+published a 60-page treatise on the the phenomena of enzymatic adaptation
 with the level of quantitative rigor he thought it deserved [@monod1947]. In
 this work, he set out to progressively deconstruct and invalidate a series of
 hypotheses for the phenomenon of enzymatic adaptation. In doing so, he laid
@@ -93,10 +93,10 @@ digitized from @monod1947. Periods of enzymatic adaptation are highlighted by wh
 adaptation revealed in bacterial growth curves."}
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The diauxic growth transitions shown
-in @Fig:diauxie_fig, in my opinion, illustrate adaptive processes across the
+in @Fig:diauxie_fig illustrate adaptive processes across the
 biological scales, as were schematized in @Fig:adaptation_levels. While it was
 not known to Monod at the time, we now know that many cases of enzymatic
-adaptation are driven the regulation of gene expression. As the bacterial
+adaptation are driven by the regulation of gene expression. As the bacterial
 culture approaches the auxic shift, the presence
 or absence of the substrate  is sensed by regulatory molecules that control
 whether the genes encoding the enzymes for metabolism of the substrate are
@@ -105,21 +105,16 @@ binding or unbinding of the substrate molecule, the activity of the regulatory
 protein is modulated. The amino acid sequence of these proteinaceous regulators 
 are the product of billions of years of **evolutionary adaptation** and define how the regulatory
 senses and responds to these signals. Finally, the precision with which these
-genes are regulated are determined by their sensitivity to **physiological
-adaptation**. For example, in @Fig:diauxie_fig (B), the ability to digest
-glycerol is prohibited by a molecular regulator through two physiological states
-(consumption of glucose and sorbitol), which have different metabolic pathways
-and therefore represent different physiological states of the organism. 
+genes are regulated are determined by their sensitivity to physiological states,
+capturing the level of **physiological adaptation**. j
 
-The central aim of this dissertation is to explore the biophysical mechanisms
-by which these levels of adaptation -- molecular, physiological, and
-evolutionary, schematized in @Fig:adaptation_levels -- are interconnected.
-Furthermore, in the spirit of Monod, we seek to make our exploration
-quantitative and leverage the tools of statistical physics to provide precise
-predictions from pen-and-paper theory that can be rigorously tested through
-experiment. The remaining sections of this chapter will summarize this
-journey and present the key findings and will finish with a discussion of how
-these types of models can be used to explore the predictability of evolution. 
-
-
-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The central aim of this dissertation is to
+explore the biophysical mechanisms by which these levels of adaptation --
+molecular, physiological, and evolutionary -- are interconnected. Furthermore, in the spirit of
+Monod, we seek to make our exploration quantitative and leverage the tools of
+statistical physics to provide precise predictions from pen-and-paper theory
+that can be rigorously tested through experiment. The remaining sections of
+this chapter will outline the major topics of this thesis and place them in a
+historical context alongside the work of Monod. Finally, we will close with a
+discussion of how these types of models can be used to explore the
+predictability of evolution.
