@@ -55,7 +55,7 @@ energies.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The model presented here only considers entropy by enumerating the
 multiplicity of states in which the repressor can bind to the DNA
-nonspecifically, resulting in terms of the form ${R \over N_{NS}}$.
+nonspecifically, resulting in terms of the form ${R / N_{NS}}$.
 However, there are many other temperature-dependent entropic
 contributions to the effective energies such as the fraction of
 repressors bound to DNA versus in solution [@elf2007; @kao-huang1977],
@@ -82,8 +82,8 @@ discussion on this parameter estimation). The grey shaded lines in
 represents the 95\% credible region of the prediction given the estimated
 values of $\Delta S_R$ and $\Delta S_{AI}$. Including this
 phenomenological treatment of the entropy improves the prediction of the
-fold-change in gene expression [@Fig:deltaF_temp (A)] as well as shift in free energy
-[@Fig:deltaF_temp (B)]. This phenomenological description
+fold-change in gene expression (@Fig:deltaF_temp (A)) as well as shift in free energy
+(@Fig:deltaF_temp (B)). This phenomenological description
 suggests that even small shifts in temperature can drastically alter the
 expression of a genetic circuit simply by tuning hidden entropic effects
 rather than scaling the difference in affinity between specific and
@@ -101,5 +101,8 @@ at 32$^\circ$ C (left) and 42$^\circ$ C (right). Points correspond to the median
 of the inferred shift in free energy. Vertical error bars indicate the bounds of
 the 95\% credible region. Horizontal position and error corresponds to the mean
 and standard error for the repressor count over five to eight biological
-replicates](ch4_fig5){#fig:deltaF_temp short-caption="Temperature effects on the
+replicates. The [Python code
+(`ch4_fig5.py`)](https://github.com/gchure/phd/blob/master/src/chapter_04/code/ch4_fig5.py)
+used to generate this figure can be found on the thesis [GitHub
+repository](https://github.com/gchure/phd).](ch4_fig5){#fig:deltaF_temp short-caption="Temperature effects on the
 fold-change in gene expression and free energy."}

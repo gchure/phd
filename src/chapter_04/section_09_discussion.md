@@ -26,7 +26,7 @@ change to the fold-change in gene expression or in the expression of the
 transcription factor itself, within the resolution of our experiments. Given
 numerous quantitative studies of the proteomic composition reveal a
 dependence on protein content with growth rate [@hui2015; @schmidt2016;
-@li2014], we find this robustness to be striking.
+@li2014a], we find this robustness to be striking.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;@schmidt2016 found that the native expression of
 LacI has a weak positive correlation with the growth rate. The native
@@ -79,7 +79,7 @@ was borne out of similar phenomenological characterization
 experiment [@phillips2001]. Further work is now needed to develop a
 theory of temperature effects in the regulation of gene expression.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The effective free energy $F$, as defined in @Eq:bohr_parameter, is a state variable of the simple
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The effective free energy $F$, as defined in @Eq:growh_bohr_parameter, is a state variable of the simple
 repression regulatory architecture. This is illustrated in @Fig:collapse
  where fold-change measurements from a wide array of conditions (and measurement techniques) can be collapsed onto
 the same theoretical description. Evolutionary perturbations (such as
@@ -105,6 +105,9 @@ the extracellular inducer [green squares, @razo-mejia2018 and Chapter 2],
 amino-acid sequence of the repressor [blue points, @chure2019 and Chapter 3],
 and the various growth conditions queried in this work can be collapsed as a
 function of the effective free energy. Error bars correspond to the standard
-error of five to 10 biological replicates.](ch4_fig6){#fig:collapse
+error of five to 10 biological replicates. The [Python code
+(`ch4_fig6.py`)](https://github.com/gchure/phd/blob/master/src/chapter_04/code/ch4_fig6.py)
+used to generate this figure can be found on the thesis [GitHub
+repository](https://github.com/gchure/phd).](ch4_fig6){#fig:collapse
 short-caption="A singular theoretical description for the molecular biophysics
 of physiological and evolutionary adaptation in the simple repression motif."}
