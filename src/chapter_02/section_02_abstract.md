@@ -1,4 +1,4 @@
-## Abstract {#sec:ind_abstract -}
+## Abstract
 Allosteric regulation is found across all domains of life, yet we still lack
 simple, predictive theories that directly link the experimentally tunable
 parameters of a system to its input-output response. To that end, we present
