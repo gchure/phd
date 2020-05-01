@@ -42,7 +42,10 @@ distribution for the free energy. Error bars represent the upper and lower
 bounds of the 95\% credible region. Shaded curves are the predictions. IPTG
 concentration is shown on a symmetric log scaling axis with the linear region
 spanning from 0 to $10^{-2}$ $\mu$M and log scaling
-elsewhere.](ch3_fig4){#fig:IND_muts short-caption="Induction profiles and
+elsewhere. The [Python code
+(`ch3_fig4.py`)](https://github.com/gchure/phd/blob/master/src/chapter_03/code/ch3_fig4.py)
+used to generate this figure can be found on the thesis [GitHub
+repository](https://github.com/gchure/phd).](ch3_fig4){#fig:IND_muts short-caption="Induction profiles and
 free-energy differences of inducer binding domain mutants."}
 
 
@@ -86,7 +89,7 @@ are able to accurately predict the induction profiles of other operators
 as seen by the shaded lines in 
 @Fig:IND_muts (A). With these modified parameters,
 all experimental measurements collapse as a function of their free
-energy as prescribed by @Eq:mut_collapse [@Fig:IND_muts (B)]. All four mutations
+energy as prescribed by @Eq:mut_collapse (@Fig:IND_muts (B)). All four mutations
 significantly diminish the binding affinity of both states of the
 repressor to the inducer, as seen by the estimated parameter values
 reported in Table 3.1. As evident in
@@ -115,8 +118,8 @@ perturbed parameters is correct. The change in free energy can be seen in
 @Fig:IND_muts (C). For all mutants, the free energy difference inferred from
 the observed fold-change measurements falls within error of the predictions
 generated under the hypothesis that $K_A$, $K_I$, and
-$\Delta\varepsilon_{AI}$ are all affected by the mutation [shaded curves in
-@Fig:IND_muts (C). The profile of the free energy change exhibits some of the
+$\Delta\varepsilon_{AI}$ are all affected by the mutation (shaded curves in
+@Fig:IND_muts (C)). The profile of the free energy change exhibits some of the
 rich phenomenology illustrated in @Fig:deltaF_theory (A) and (B). Q291K,
 F161T, and Q291V exhibit a non-monotonic dependence on the inducer
 concentration, a feature that can only appear when $K_A$ and $K_I$ are

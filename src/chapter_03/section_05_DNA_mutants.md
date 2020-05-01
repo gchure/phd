@@ -1,11 +1,12 @@
 ## Results
+
 ### DNA Binding Domain Mutants
 
 With this arsenal of analytic diagnostics, we can begin to explore the
 mutational space of the repressor and map these mutations to the
 biophysical parameters they control. As one of the most thoroughly
 studied transcription factors, LacI has been subjected to numerous
-crystallographic and mutational studies [@lewis1996; @daber2009a; @daber2011a; @swerdlow2014]. One such work generated a set
+crystallographic and mutational studies [@lewis1996; @daber2009a; @daber2011a]. One such work generated a set
 of point mutations in the LacI repressor and examined the diversity of
 the phenotypic response to different allosteric effectors [@daber2011a]. However,
 several experimental variables were unknown, precluding precise
@@ -19,7 +20,7 @@ measured gene expression and calculation of $\Delta F$ is dependent on
 knowledge of their values. While the approach presented in 
 @daber2011a considers the Lac repressor as an MWC molecule, the copy numbers of the
 repressor and the reporter gene were swept into an effective parameter
-${R \over K_{DNA}}$, hindering our ability to distinguish between
+${R  / K_{DNA}}$, hindering our ability to distinguish between
 changes in repressor copy number or in DNA binding energy. To test our
 hypothesis of free energy differences resulting from various parameter
 perturbations, we used the dataset in @daber2011a as a guide and chose a
@@ -76,7 +77,10 @@ symmetric log scale with linear scaling ranging from 0 to $10^{-2}$ $\mu$M and l
 scaling elsewhere. The shaded red lines in C correspond to the 95% credible
 region of our predictions for $\Delta F$ based solely on estimation of
 $\Delta\varepsilon_{RA}$ from the
-strain with $R = 260$ repressors per cell.](ch3_fig3){#fig:DNA_muts
+strain with $R = 260$ repressors per cell. The [Python code
+(`ch3_fig3.py`)](https://github.com/gchure/phd/blob/master/src/chapter_03/code/ch3_fig3.py)
+used to generate this figure can be found on the thesis [GitHub
+repository](https://github.com/gchure/phd).](ch3_fig3){#fig:DNA_muts
 short-caption="Induction profiles and free-energy differences of DNA binding
 domain mutations in the *lac* repressor."}
 
@@ -90,7 +94,7 @@ means to discriminate between these two hypotheses by examining the
 change in the free energy. Using a single induction profile (white-faced
 points in @Fig:DNA_muts), we estimated the DNA
 binding energy using Bayesian inferential methods, the details of which
-are thoroughly discussed in the Materials and Methods as well as in the
+are thoroughly discussed in the Materials \& Methods as well as in the
 supplemental Chapter 7. The shaded red region for each mutant in
 @Fig:DNA_muts represents the 95\% credible region of
 this fit whereas all other shaded regions are 95% credible regions of
@@ -132,12 +136,12 @@ diagnostic power of the decomposition of the free energy described in
 @Fig:deltaF_theory. To compute the
 $\Delta F$ for each mutation, we inferred the observed mean free
 energy of the mutant strain for each inducer concentration and repressor
-copy number (see Materials and Methods as well as the SI text for a
+copy number (see Materials \& Methods as well as the supplemental Chapter 7 for a
 detailed explanation of the inference). We note that in the limit of
 extremely low or high fold-change, the inference of the free energy is
 either over- or under-estimated, respectively, introducing a systematic
 error. Thus, points which are close to these limits are omitted in the
-calculation of $\Delta F$. We direct the reader to the SI text for a
+calculation of $\Delta F$. We direct the reader to the supplemental Chapter 7 for a
 detailed discussion of this systematic error. With a measure of
 $F^\mathrm{(mut)}$ for each mutant at each repressor copy number, we
 compute the difference in free energy relative to the wild-type strain
@@ -149,8 +153,8 @@ $\Delta\varepsilon_{RA}$.
 shown in @Fig:DNA_muts (C). It can be seen that the $\Delta F$ for each
 mutant is constant as a function of the inducer concentration and is
 concordant with the prediction generated from fitting
-$\Delta\varepsilon_{RA}$ to a single repressor copy number [red lines
-@Fig:DNA_muts (C)]. This is in line with the predictions outlined in
+$\Delta\varepsilon_{RA}$ to a single repressor copy number (orange lines
+@Fig:DNA_muts (C)]) This is in line with the predictions outlined in
 @Fig:deltaF_theory (C) and (D), indicating that the allosteric parameters are
 "insulated", meaning they are not affected by the DNA binding domain
 mutations. As the $\Delta F$ for all repressor copy numbers collapses onto
