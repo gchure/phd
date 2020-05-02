@@ -42,10 +42,7 @@ for g, d in grouped:
 
     # Plot the ecdf.
     axes[g[0]].plot(
-        x_median, y, ".", ms=4, alpha=0.75, markeredgecolor='white', color=color_dict[g[1]], label="__nolegend__",
-        markeredgewidth=0.5
-
-    )
+        x_median, y, ".", ms=4, alpha=0.75, color=color_dict[g[1]], label="__nolegend__")
     axes[g[0]].fill_betweenx(
         y, x_min, x_max, color=color_dict[g[1]], alpha=0.3, label="__nolegend__"
     )
