@@ -2,7 +2,7 @@
 We made the choice to perform all of our experiments using strains in which
 a single copy of our simple repression construct had been integrated into the
 chromosome. This stands in contrast to the methods used by a number of other
-studies [@oehler1994; @setty2003; @oehler2006; @daber2009a; @daber2011a;
+studies [@oehler1994; @setty2003; @daber2009a; @daber2011a;
 @vilar2013; @shis2014; @sochor2014], in which reporter constructs are placed on
 plasmid, meaning that the number of constructs in the cell is not precisely
 known. It is also common to express repressor on plasmid to boost its copy
@@ -17,7 +17,7 @@ profile.
 ### Chemical Potential Formulation to Calculate Fold-Change
 
 In this section, we discuss a simple repression construct which we
-generalize in two ways from the scenario discussed in the text. First,
+generalize in two ways from the scenario discussed in Chapter 2. First,
 we will allow the repressor to bind to $N_S$ identical specific
 promoters whose fold-change we are interested in measuring, with each
 promoter containing a single repressor binding site ($N_S = 1$ in Chapter 2). Second, we consider $N_C$ identical competitor sites which
@@ -34,7 +34,7 @@ repressor’s binding affinity to the specific operator of interest
 relative to the repressor’s non-specific binding affinity to the rest of
 the genome.
 
-We now expand our definition of the total number of repressors in the
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;We now expand our definition of the total number of repressors in the
 system, $R_{\text{tot}}$, so that it is given by
 $$
 R_\text{tot} = R_S + R_{NS} + R_C,
@@ -58,12 +58,12 @@ where $N_C$ is the number of competitor sites in the cell and $\Delta
 site relative to its non-specific binding energy to the rest of the
 genome.
 
-To account for the induction of the repressor, we replace the total
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;To account for the induction of the repressor, we replace the total
 number of repressors $R_{\text{tot}}$ in @Eq:fugacity_rtot by the number of active repressors in the cell, $p_\text{act}(c) R_{\text{tot}}$. Here, $p_\text{act}$ denotes the probability that the repressor is in the active state (Eq. 2.4),
 $$
 p_\text{act}(c)=\frac{\left(1+\frac{c}{K_A}\right)^n}{\left(1+\frac{c}{K_A}\right)^n+e^{-\beta \Delta \varepsilon_{AI} }\left(1+\frac{c}{K_I}\right)^n}.
 $${#eq:fugacity_pact}
-Substituting @Eq:fugacity_rs - @Eq:fugacity_rc into the modified @Eq:fugacity_rtot yields
+Substituting @Eq:fugacity_rs into the modified @Eq:fugacity_rtot yields
 $$
 p_\text{active}(c) R_{\text{tot}} = N_S \frac{\lambda_r e^{-\beta \Delta \varepsilon_{RA}}}{1 + \lambda_r e^{-\beta \Delta \varepsilon_{RA}}} + N_{NS} \frac{\lambda_r}{1 + \lambda_r} + N_C \frac{\lambda_r e^{-\beta \Delta \varepsilon_C}}{1 + \lambda_r e^{-\beta \Delta \varepsilon_C}}.
 $${#eq:fugacity_reff}
@@ -91,15 +91,27 @@ copy number plasmid. A few features stand out in these profiles. First,
 as the magnitude of $N_S$ surpasses the number of repressors $R$,
 the leakiness begins to increase significantly, since there are no
 longer enough repressors to regulate all copies of the promoter of
-interest. Second, in the cases where $\Delta \varepsilon_{RA} = -15.3\,k_B T$ for the O1 operator or $\Delta \varepsilon_{RA} = -13.9\,k_B T$ for the O2 operator, the profiles where $N_S = 100$ are notably sharper than the profiles where $N_S = 10$, and it is possible to achieve dynamic ranges approaching 1. Finally, it is interesting to note that the profiles for the O3 operator where
-$\Delta \varepsilon_{RA} = -9.7~k_B T$ are nearly indifferent to the
+interest. Second, in the cases where $\Delta \varepsilon_{RA} = -15.3\,k_B T$ for the
+O1 operator or $\Delta \varepsilon_{RA} = -13.9\,k_B T$ for the O2 operator,
+the profiles where $N_S = 100$ are notably sharper than the profiles where
+$N_S = 10$, and it is possible to achieve dynamic ranges approaching 1.
+Finally, it is interesting to note that the profiles for the O3 operator
+where $\Delta \varepsilon_{RA} = -9.7~k_B T$ are nearly indifferent to the
 value of $N_S$.
 
-![**Induction with variable $\boldsymbol{R}$ and multiple specific
-binding sites.** Induction profiles are shown for strains with variable
-R and $\Delta \varepsilon_{RA} = -15.3$, $-13.9$, or $-9.7~k_B T$. The number
-of specific sites, $N_S$, is held constant at 10 as $R$ and $\Delta \varepsilon_{RA}$ are varied. $N_S$ is held constant at 100 as $R$ and $\Delta \varepsilon_{RA}$ are varied. These situations mimic the common scenario in which a promoter construct is placed on either a low or high copy number plasmid.](ch6_figS3){#fig:fugacity_r short-caption="Induction with variable $\boldsymbol{R}$ and multiple specific binding sites."}
-
+![**Induction with variable $\boldsymbol{R}$ and multiple specific binding
+sites.** Induction profiles are shown for strains with variable R and $\Delta
+\varepsilon_{RA} = -15.3$, $-13.9$, or $-9.7~k_B T$. The number of specific
+sites, $N_S$, is held constant at 10 as $R$ and $\Delta \varepsilon_{RA}$ are
+varied. $N_S$ is held constant at 100 as $R$ and $\Delta \varepsilon_{RA}$
+are varied. These situations mimic the common scenario in which a promoter
+construct is placed on either a low or high copy number plasmid. The [Python
+code
+(`ch6_figS3.py`)](https://github.com/gchure/phd/blob/master/src/chapter_06/code/ch6_figS3.py)
+used to generate this figure can be found on the thesis [GitHub
+repository](https://github.com/gchure/phd). ](ch6_figS3){#fig:fugacity_r
+short-caption="Induction with variable $\boldsymbol{R}$ and multiple specific
+binding sites."}
 
 ## Variable Number of Specific Binding Sites $\boldsymbol{N_S}$ with Fixed Repressor Copy Number ($\boldsymbol{R}$)
 
@@ -114,11 +126,14 @@ particular, the O1 and O2 profiles with $\Delta \varepsilon_{RA} = -15.3$ and
 $-13.9\, k_BT$, respectively, have dynamic ranges approaching 1 for $N_S = 50$
 and 100.
 
-![**Induction with variable specific sites and fixed
-$\boldsymbol{R}$.** Induction profiles are shown for strains with
-$R=260$ and $\Delta \varepsilon_{RA} = -15.3~k_BT$, $\Delta \varepsilon_{RA} = -13.9\,k_BT$, or $\Delta \varepsilon_{RA} = -9.7~k_BT$. The number
-of specific sites $N_S$ is varied from 1 to 500.](ch6_figS4){#fig:fugacity_Ns short-caption="Induction with variable specific sites and fixed
-$\boldsymbol{R}$."}
+![**Induction with variable specific sites and fixed $\boldsymbol{R}$.**
+Induction profiles are shown for strains with $R=260$ and $\Delta
+\varepsilon_{RA} = -15.3~k_BT$, $\Delta \varepsilon_{RA} = -13.9\,k_BT$, or
+$\Delta \varepsilon_{RA} = -9.7~k_BT$. The number of specific sites $N_S$ is
+varied from 1 to 500. The [Python code                                      
+(`ch6_figS4.py`)](https://github.com/gchure/phd/blob/master/src/chapter_06/code/ch6_figS4.py) used to generate this figure can be found on the thesis [GitHub
+repository](https://github.com/gchure/phd). ](ch6_figS4){#fig:fugacity_Ns short-caption="Induction
+with variable specific sites and fixed $\boldsymbol{R}$."}
 
 
 ## Competitor Binding Sites
@@ -143,7 +158,9 @@ O2 operator, or $\Delta \varepsilon_{RA} = -9.7~k_B T$ for the O3
 operator. The number of specific sites, $N_C$, is varied from 1 to
 500. This mimics the common scenario in which a transcription factor has
 multiple binding sites in the
-genome.<span label="fig:Nc"></span>](ch6_figS5){#fig:Nc short-caption="Induction with variable competitor sites, a single specific site, and fixed $\boldsymbol{R}$."}
+genome. The [Python code                                      
+(`ch6_figS5.py`)](https://github.com/gchure/phd/blob/master/src/chapter_06/code/ch6_figS5.py) used to generate this figure can be found on the thesis [GitHub
+repository](https://github.com/gchure/phd).](ch6_figS5){#fig:Nc short-caption="Induction with variable competitor sites, a single specific site, and fixed $\boldsymbol{R}$."}
 
 ## Properties of the Induction Response
 
@@ -153,7 +170,7 @@ we consider the leakiness, saturation, and dynamic range (diagrammed in Fig. 2.1
 $$
 R_\text{tot} \frac{1}{1 + e^{-\beta \Delta \varepsilon_{AI}}} = N_S \frac{\lambda_r e^{-\beta \Delta \varepsilon_{RA}}}{1 + \lambda_r e^{-\beta \Delta \varepsilon_{RA}}} + N_{NS} \frac{\lambda_r}{1 + \lambda_r} + N_C \frac{\lambda_r e^{-\beta \Delta \varepsilon_C}}{1 + \lambda_r e^{-\beta \Delta \varepsilon_C}},
 $${#eq:fugacity_leakiness}
-whereupon substituting in the value of $\lambda_r$ into @Eq:fugacity_foldchange will yield the leakiness. Similarly, the limit of saturating inducer is found by
+whereupon substituting in the value of $\lambda_r$ into @Eq:fugacity_fc will yield the leakiness. Similarly, the limit of saturating inducer is found by
 determining $\lambda_r$ from the form
 $$
 R_{\text{tot}} \frac{1}{1 + e^{-\beta \Delta \varepsilon_{AI}} \left(\frac{K_A}{K_I} \right)^2} = N_S \frac{\lambda_r e^{-\beta \Delta \varepsilon_{RA}}}{1 + \lambda_r e^{-\beta \Delta \varepsilon_{RA}}} + N_{NS} \frac{\lambda_r}{1 + \lambda_r} + N_C \frac{\lambda_r e^{-\beta \Delta \varepsilon_C}}{1 + \lambda_r e^{-\beta \Delta \varepsilon_C}}.
@@ -175,10 +192,12 @@ numbers.
 ![**Phenotypic properties of induction with multiple specific binding
 sites.** The leakiness, saturation, and dynamic range are shown for
 systems with number of specific binding sites $N_S = 10$ or
-$N_S = 100$ . The vertical white line indicates the point at which
-$N_S = R$.](ch6_figS6){#fig:fugacity_properties_Ns short-caption="Phenotypic properties of induction with multiple specific binding sites."}
+$N_S = 100$. The vertical white line indicates the point at which
+$N_S = R$. The [Python code                                      
+(`ch6_figS6.py`)](https://github.com/gchure/phd/blob/master/src/chapter_06/code/ch6_figS6.py) used to generate this figure can be found on the thesis [GitHub
+repository](https://github.com/gchure/phd). ](ch6_figS6){#fig:fugacity_properties_Ns short-caption="Phenotypic properties of induction with multiple specific binding sites."}
 
-In @Fig:fugacity_properties_Nc, we similarly show how the leakiness, saturation, and dynamic range
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;In @Fig:fugacity_properties_Nc, we similarly show how the leakiness, saturation, and dynamic range
 vary with $R$ and $\Delta \varepsilon_{RA}$ in systems with
 $N_S =1$ and multiple competitor sites $N_C = 10$ or $N_C = 100$.
 Each of the competitor sites has a binding energy of
@@ -191,15 +210,18 @@ insufficient repressors to interact with all of the specific binding
 sites.
 
 ![**Phenotypic properties of induction with a single specific site and
-multiple competitor sites.** The leakiness, saturation, and dynamic
-range are shown for systems with a single specific binding site
-$N_S = 1$ and a number of competitor sites $N_C = 10$ or
-$N_C = 100$. All competitor sites have a binding energy of
-$\Delta \varepsilon_C = -17.0~k_BT$. The vertical white line
-indicates the point at which $N_C = R$.](ch6_figS7){#fig:fugacity_properties_Nc short-caption="Phenotypic properties of induction with a single specific site and multiple competitor sites."}
+multiple competitor sites.** The leakiness, saturation, and dynamic range are
+shown for systems with a single specific binding site $N_S = 1$ and a number
+of competitor sites $N_C = 10$ or $N_C = 100$. All competitor sites have a
+binding energy of $\Delta \varepsilon_C = -17.0~k_BT$. The vertical white
+line indicates the point at which $N_C = R$. The [Python code
+(`ch6_figS7.py`)](https://github.com/gchure/phd/blob/master/src/chapter_06/code/ch6_figS7.py)
+used to generate this figure can be found on the thesis [GitHub
+repository](https://github.com/gchure/phd).
+](ch6_figS7){#fig:fugacity_properties_Nc short-caption="Phenotypic properties
+of induction with a single specific site and multiple competitor sites."}
 
-
-This section of the appendix gives a quantitative analysis of the
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This section gives a quantitative analysis of the
 nuances imposed on induction response in the case of systems involving
 multiple gene copies as are found in the vast majority of studies on
 induction. In these cases, the intrinsic parameters of the MWC model get
