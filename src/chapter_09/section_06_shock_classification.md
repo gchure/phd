@@ -9,8 +9,7 @@ text of this work, we separated our experiments into arbitrary bins of "fast"
 ($\geq$ 1.0 Hz) and "slow" ($<$ 1.0 Hz) shock rates. In this section, we
 discuss our rationale for coarse graining our data into these two groupings.
 
-&nbsp;&nbsp;&nbsp;&nbsp;As is discussed in the main text and in the
-supplemental section *Logistic Regression*, we used a bin-free method of
+&nbsp;&nbsp;&nbsp;&nbsp;As is discussed in Chapter 5, we used a bin-free method of
 estimating the survival probability given the MscL channel copy number as a
 predictor variable. While this method requires no binning of the data, it
 requires a data set that sufficiently covers the physiological range of
@@ -46,7 +45,10 @@ of the logistic regression. Horizontal error bars of blue points are the
 standard error of the mean channel copy number. Vertical error bars of blue
 points correspond to the uncertainty in survival probability by observing $n$
 survival events from $N$ single-cell
-measurements.](ch9_figS11){#fig:indiv_shock_group short-caption="Binning by
+measurements. The [Python code                                                
+(`ch9_figS11.py`)](https://github.com/gchure/phd/blob/master/src/chapter_09/code/ch9_figS11.py)
+used to generate this figure can be found on the thesis [GitHub
+repository](https://github.com/gchure/phd). ](ch9_figS11){#fig:indiv_shock_group short-caption="Binning by
 individual shock rates."}
 
 

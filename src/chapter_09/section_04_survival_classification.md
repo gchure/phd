@@ -13,7 +13,7 @@ counted in our experiments and were not included in the final tally of
 survival versus death. Across our 2822 single cell measurements, such “no
 call” classifications were observed only 83 times, constituting only 3\% of
 the total cell measurements. A breakdown of all classification types and
-their respective abundances can be seen in Table S1.
+their respective abundances can be seen in Table 9.1.
 
 ![**Time lapse of a representative field after osmotic shock and the resulting
 classifications.** Each row shows an individual cell or pair of neighboring
@@ -30,6 +30,7 @@ resulting classifications."}
 | Death | 1246 | 44\% |
 | Survival | 1482 | 53\% |
 : Cell fate classifications and their relative abundances in the complete data set.
+
 
 &nbsp;&nbsp;&nbsp;&nbsp;To assess the validity of our morphology-based
 classification scheme, we performed a subset of the osmotic shock experiments
