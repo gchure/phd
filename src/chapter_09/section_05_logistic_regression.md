@@ -282,8 +282,8 @@ predictor variables. Black points at left and right of plot represent
 single-cell measurements of cells which survived and died, respectively,
 sorted by shock rate. Points at top and bottom of plot represent survival and
 death sorted by their effective channel copy number. Labeled contours
-correspond to the survival probability. The [Python code (`ch9_figS10.py`)](https://github.com/gchure/phd/blob/master/src/chapter_09/code/ch9_figS10.py)
+correspond to the survival probability. The [Python code (`ch9_figS9.py`)](https://github.com/gchure/phd/blob/master/src/chapter_09/code/ch9_figS9.py)
 used to generate this figure can be found on the thesis [GitHub
 repository](https://github.com/gchure/phd).
-](ch9_figS10){#fig:alternative_predictor_variables short-caption="Survival
+](ch9_figS9){#fig:alternative_predictor_variables short-caption="Survival
 probability estimation using alternative predictor variables."}

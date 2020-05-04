@@ -46,9 +46,9 @@ standard error of the mean channel copy number. Vertical error bars of blue
 points correspond to the uncertainty in survival probability by observing $n$
 survival events from $N$ single-cell
 measurements. The [Python code                                                
-(`ch9_figS11.py`)](https://github.com/gchure/phd/blob/master/src/chapter_09/code/ch9_figS11.py)
+(`ch9_figS10.py`)](https://github.com/gchure/phd/blob/master/src/chapter_09/code/ch9_figS10.py)
 used to generate this figure can be found on the thesis [GitHub
-repository](https://github.com/gchure/phd). ](ch9_figS11){#fig:indiv_shock_group short-caption="Binning by
+repository](https://github.com/gchure/phd). ](ch9_figS10){#fig:indiv_shock_group short-caption="Binning by
 individual shock rates."}
 
 
@@ -86,5 +86,8 @@ channels per cell. Blue points represent the survival probability for a given
 Shine-Dalgarno mutant. Horizontal error bars are the standard error of the
 mean with at least 25 measurements and vertical error bars signifies the
 uncertainty in the survival probability from observing $n$ survival events
-out of $N$ total measurements.](ch9_figS12){#fig:three_shock_group
+out of $N$ total measurements. The [Python code                                                
+(`ch9_figS10.py`)](https://github.com/gchure/phd/blob/master/src/chapter_09/code/ch9_figS10.py)
+used to generate this figure can be found on the thesis [GitHub
+repository](https://github.com/gchure/phd). ](ch9_figS11){#fig:three_shock_group
 short-caption="Coarse graining shock rates into different groups."}
