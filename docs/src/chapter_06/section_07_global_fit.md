@@ -1,6 +1,6 @@
 ## Global Fit of All Parameters
 
-In the main text, we used the repressor copy numbers $R$ and
+In Chapter 2, we used the repressor copy numbers $R$ and
 repressor-DNA binding energies $\Delta\varepsilon_{RA}$ as reported by
 @garcia2011. However, any error in these previous measurements of $R$ and
 $\Delta\varepsilon_{RA}$ will necessarily propagate into our own
@@ -26,7 +26,7 @@ strains. As in the main text, we fit the logarithms $\tilde{k}_A = -\log
 \frac{K_A}{1\,\text{M}}$ and $\tilde{k}_I = -\log \frac{K_I}{1\,\text{M}}$ of
 the dissociation constants which grants better numerical stability.
 
-We assume that deviations of the experimental fold-change from
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;We assume that deviations of the experimental fold-change from
 the theoretical predictions are normally distributed with mean zero and
 standard deviation $\sigma$. We begin by writing Bayes’ theorem,
 $$
@@ -116,9 +116,9 @@ g(\Delta\varepsilon_{RA}^{(j)}) = \frac{1}{\sqrt{2\pi\sigma_{\varepsilon_j}^2}}
 $${#eq:global_prior_epra}
 where $\Delta\bar{\varepsilon}_{RA}^{(j)}$ is the binding energy and
 $\sigma_{\varepsilon_j}$ is the variability associated with that
-parameter around the mean value as reported in  .
+parameter around the mean value as reported in @garcia2011.
 
-The $\sigma_{R_i}$ and $\sigma_{\varepsilon_j}$ parameters will
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The $\sigma_{R_i}$ and $\sigma_{\varepsilon_j}$ parameters will
 constrain the range of values for $R^{(i)}$ and
 $\Delta\varepsilon_{RA}^{(j)}$ found from the fitting. For example, if
 for some $i$ the standard deviation $\sigma_{R_i}$ is very small, it
@@ -165,7 +165,7 @@ in more detail in the following section of this chapter.
 | O2 $\Delta\varepsilon_{RA}$ | $-13.9\pm 0.2 \, k_BT$| $-13.06^{+0.1}_{-0.1}\, k_BT$ |
 | O3 $\Delta\varepsilon_{RA}$ | $-9.7\pm 0.1\, k_BT$ | $-9.4^{+0.1}_{-0.1}\, k_BT$ |
 | Oid $\Delta\varepsilon_{RA}$| $-17.0 \pm 0.2\, k_BT$| $-17.7^{+0.2}_{-0.1}\, k_BT$ |
-Table 6.2: Global parameter estimates and comparison to previously reported values. 
+: Global parameter estimates and comparison to previously reported values. 
 
 ![**Global fit of dissociation constants, repressor copy numbers, and binding
 energies.** Theoretical prediction resulting from simultaneous estimation of
@@ -173,11 +173,13 @@ the dissociation constants $K_A$ and $K_I$, the six repressor copy numbers $R$,
 and the four repressor-DNA binding energies $\Delta\varepsilon_{RA}$ using the
 entire dataset. Points and errors represent the mean and standard error of ~10
 biological replicates for O1, O2, and O3 and 3 biological replicates for
-Oid.](ch6_figS12){#fig:induction_global_fit short-caption="Induction curves
+Oid. The [Python code                                      
+(`ch6_fig12.py`)](https://github.com/gchure/phd/blob/master/src/chapter_06/code/ch6_figS12.py) used to generate this figure can be found on the thesis [GitHub
+repository](https://github.com/gchure/phd).](ch6_figS12){#fig:induction_global_fit short-caption="Induction curves
 using global parameter estimates."}
 
 
-@Fig:properties_global_fit shows the same key properties as in Fig. 2.7 , but
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;@Fig:properties_global_fit shows the same key properties as in Fig. 2.7 , but
 uses the parameters obtained from this global fitting approach. We note that
 even by increasing the number of degrees of freedom in our fit, the result
 does not change substantially, due to in general, only minor improvements
@@ -194,6 +196,8 @@ for the [EC$_{50}$] and the effective Hill coefficient, respectively, represent
 the estimated value using parameter estimates of $K_A$ and $K_I$ for that
 particular strain. Errors represent the width of the 95\% credible region. In
 all plots, curves represent the theoretical predictions given the parameter
-estimates conditioned on all datasets.](ch6_figS13){#fig:properties_global_fit
+estimates conditioned on all data sets.The [Python code                                      
+(`ch6_figS13.py`)](https://github.com/gchure/phd/blob/master/src/chapter_06/code/ch6_figS13.py) used to generate this figure can be found on the thesis [GitHub
+repository](https://github.com/gchure/phd).](ch6_figS13){#fig:properties_global_fit
 short-caption="Key properties of induction profiles as predicted with a global
 fit using all data."}

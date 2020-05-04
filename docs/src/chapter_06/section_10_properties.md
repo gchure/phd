@@ -55,7 +55,9 @@ peak in the dynamic range can be understood by considering the two extremes for
 $\Delta\varepsilon_{RA}$: for small repressor-operator binding energies, the
 leakiness is small but the saturation increases with $\Delta\varepsilon_{RA}$,
 thereby decreasing the dynamic range. Repressor copy number does not affect the
-maximum dynamic range.](ch6_figS18){#fig:properties_expanded short-caption="Dependence of
+maximum dynamic range. The [Python code                                      
+(`ch6_figS18-S19.py`)](https://github.com/gchure/phd/blob/master/src/chapter_06/code/ch6_figS18-S19.py) used to generate this figure can be found on the thesis [GitHub
+repository](https://github.com/gchure/phd).](ch6_figS18){#fig:properties_expanded short-caption="Dependence of
 leakiness, saturation, and dynamic range on the operator binding energy and
 repressor copy number."}
 
@@ -95,6 +97,8 @@ tightly clustered to relatively large and expanded for stronger operator binding
 energies. (B) The effective Hill coefficient generally decreases with
 increasing repressor copy number, indicating a flatter normalized response. The
 maximum possible HIll coefficient is roughly 1.75 for all repressor-operator
-binding energies.](ch6_figS19){#fig:ec50_ehill short-caption="[EC$_{50}$] and
+binding energies. The [Python code                                      
+(`ch6_figS18-S19.py`)](https://github.com/gchure/phd/blob/master/src/chapter_06/code/ch6_figS18-S19.py) used to generate this figure can be found on the thesis [GitHub
+repository](https://github.com/gchure/phd).](ch6_figS19){#fig:ec50_ehill short-caption="[EC$_{50}$] and
 effective Hill coefficient depend strongly on repressor copy number and operator
 binding energy."}

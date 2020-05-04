@@ -73,7 +73,7 @@ e^{-\beta\Delta\varepsilon_{AI} }{K_A^\text{(wt)} }^2\left(c +
 {K_I^\text{(wt)} }\right)^2\right]} \right).
 \end{gathered}
 $${#eq:partial_theta} 
-With this derivative in hand, we can examine the limits of inducer
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;With this derivative in hand, we can examine the limits of inducer
 concentration. As discussed in the main text, the free energy difference
 between the mutant and wild-type repressors when $c = 0$ should be equal to
 $0$. However, the derivative at $c =0$ will be different between the
@@ -103,8 +103,7 @@ $$
 e^{-\beta\Delta\varepsilon_{AI} }{K_A^\text{(wt)} }^2\right)} \left(\theta -
 1\right).
 $${#eq:partial_cinf} 
-
-When $\theta > 1$, @Eq:partial_cinf is positive. This is the opposite sign of
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;When $\theta > 1$, @Eq:partial_cinf is positive. This is the opposite sign of
 the derivative when $c = 0$ when $\theta > 1$. When $\theta < 1$, @Eq:partial_cinf
 becomes negative whereas @Eq:partial_c0 is positive. As the derivative of $\Delta F$
 with respect to $c$ changes signs across the defined range of inducer
@@ -112,8 +111,8 @@ concentrations, we can say the function is non-monotonic.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;@Fig:nonmono shows the non-monotonic behavior
 of $\Delta F$ when $K_A$ and $K_I$ change by the same factor $\theta$
-\[maintaining the wild-type ratio, @Fig:nonmono (A) and when $K_A$ and $K_I$
-change by different factors [@Fig:nonmono (B)]. In both cases, non-monotonic
+(maintaining the wild-type ratio, @Fig:nonmono (A)) and when $K_A$ and $K_I$
+change by different factors (@Fig:nonmono (B)). In both cases, non-monotonic
 behavior is observed with the peak difference in the free energy covering
 several $k_BT$. We have hosted an interactive figure similar to @Fig:nonmono
 on the [paper website](https://rpgroup.caltech.edu/mwc_mutants) where the
@@ -128,10 +127,13 @@ difference $\Delta F$ as a function of inducer concentration, revealing
 non-monotonicity. (A) Behavior of $F$ and $\Delta F$ when the values of $K_A$
 and $K_I$ change relative to wild-type, but maintain the same ratio. $\theta$
 is the scaling factor for both inducer dissociation constants. (B) Behavior
-of $F$ and $\Delta FF$ when the values of $K_A$ and $K_I$ change relative to
+of $F$ and $\Delta F$ when the values of $K_A$ and $K_I$ change relative to
 the wild-type, but by different factors. In both panels, the wild-type
 parameter values were taken to be $K_A = 200\,\mu$M, $K_I = 1\,\mu$M and
 $\Delta\varepsilon_{AI} = 4.5\,k_BT$. An interactive version of this figure
-is available on the [paper website](http://rpgroup.caltech.edu/mwc_mutants)](ch7_figS1){#fig:nonmono
+is available on the [paper website.](http://rpgroup.caltech.edu/mwc_mutants) The [Python code                                                
+(`ch7_figS1.py`)](https://github.com/gchure/phd/blob/master/src/chapter_07/code/ch7_figS1.py)
+used to generate this figure can be found on the thesis [GitHub
+repository](https://github.com/gchure/phd).](ch7_figS1){#fig:nonmono
 short-caption="Non-monotonic behavior of $\Delta F$ with changes in $K_A$ and
 $K_I$."}

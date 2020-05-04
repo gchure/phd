@@ -62,7 +62,7 @@ survival probability.
 
 &nbsp; &nbsp; &nbsp; &nbsp;In this work, we present an experimental system to
 quantitatively probe the interplay between MscL copy number and survival at
-single-cell resolution, as is seen in [@Fig:overview]B. We generated an *E.
+single-cell resolution, as is seen in @Fig:overview(B). We generated an *E.
 coli* strain in which all seven mechanosensitive channels had been deleted
 from the chromosome followed by a chromosomal integration of a single gene
 encoding an MscL-super-folder GFP (sfGFP) fusion protein. To explore copy
@@ -79,13 +79,13 @@ the observed range. In addition, we show that several hundred channels are
 needed to convey high rates of survival and observe a minimum number of
 channels needed to permit any degree of survival.
 
-![Role of mechanosensitive channels during hypo-osmotic shock. (A) A
+![**Role of mechanosensitive channels during hypo-osmotic shock.** (A) A
 hypo-osmotic shock results in a large difference in the osmotic strength
 between the intracellular and extracellular spaces. As a result, water rushes
 into the cell to equalize this gradient increasing the turgor pressure and
 tension in the cell membrane. If no mechanosensitive channels are present and
 membrane tension is high (left panel), the membrane ruptures releasing
-intracellular content into the environment resulting in cell death . If
+intracellular content into the environment resulting in cell death. If
 mechanosensitive channels are present (right panel) and membrane tension is
 beyond the gating tension, the mechanosensitive channel MscL opens, releasing
 water and small intracellular molecules into the environment thus relieving

@@ -10,7 +10,7 @@ masks.
 its dependence on the total growth rate has been the target of numerous
 quantitative studies using a variety of methods including microscopy
 [@pilizota2012; @pilizota2014; @taheri-araghi2015a; @schmidt2016;
-@schaechter1958] and microfluidics [@kubitschek1986a] revealing fascinating
+@schaechter1958] and microfluidics [@kubitschek1986] revealing fascinating
 phenomenology of growth at the single cell level . Despite the high precision
 and extensive calibration of these methods, it is not uncommon to have
 different methods yield different estimates, indicating that it is not a
@@ -20,7 +20,7 @@ field of bacterial physiology to ensure that our experimental protocol does
 not alter the physiology beyond expectations. As the bulk of this work is
 performed using single-cell microscopy, we chose to infer the approximate the
 cell volume from the segmentation masks produced by the SuperSegger MATLAB
-software [@stylianidou2016a] which reported the cell length and width in
+software [@stylianidou2016] which reported the cell length and width in
 units of pixels which can be converted to meaningful units given knowledge of
 the camera interpixel distance.
 
@@ -55,5 +55,8 @@ It appears that this simple approximation is reasonable for the purposes of this
 ![**Growth-rate dependence of cell shape and spherocylinder approximation.**
 Contours of segmentation masks for a single experiment of each condition are
 shown as thin colored lines for (A) carbon quality variation and (B) temperature
-variation.](ch8_figS2){#fig:cell_shape short-caption="Growth-rate dependence of
+variation. The [Python code                                                
+(`ch8_figS2.py`)](https://github.com/gchure/phd/blob/master/src/chapter_08/code/ch8_figS2.py)
+used to generate this figure can be found on the thesis [GitHub
+repository](https://github.com/gchure/phd). ](ch8_figS2){#fig:cell_shape short-caption="Growth-rate dependence of
 cell shape and approximation as a spherocylinder."}

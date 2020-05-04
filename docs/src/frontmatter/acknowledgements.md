@@ -23,14 +23,17 @@ kindness in treating me as a friend.
 strongest influence on my scientific philosophy. Throughout my Ph.D., he has
 been both a dear friend and statistical shaman. His remarkable ability to
 teach the complex details of statistical inference, physical biology, and
-computer programming transformed the way I consider and approach biological
-questions.
+computer programming transformed the way I view the world around me. Like Rob,
+Justins dedication to education is far beyond that of most other scientists.
+During my years at Caltech, I've TA'd with for Justin $\approx 10$ times. Every
+time, I left the course with a deeper knowledge of the subject and a greater
+appreciation for his dedication to his students. 
 
 \hspace{10mm}I owe a great deal of my development as a
 scientist to those with whom I've shared the lab. Heun Jin Lee is a master of
 all things precise and served as someone I could go to for advice on any
 topic ranging from the scientific to the deeply personal. His dedication to
-writing down theory and performing experiments and theory with extreme care
+writing down theory and performing experiments with extreme care
 has shaped my impression of how science should be performed and, just as
 importantly, communicated. Alongside Heun Jin, I've had the pleasure to be
 coauthors with Manuel Razo-Mejia, Soichi Hirokawa, Muir Morrison, Zofii
@@ -48,15 +51,24 @@ as a reminder of how creative expression is as important as scientific rigor.
 Tal Einav, a Phillips' lab alumnus who needs no introduction, has taught me
 much about the nature of collaboration over the years.
 
-\hspace{10mm}Suzy Beeler, though I never had the pleasure of
-listing as a coauthor, has always someone I could turn to when in need of
-scientific advice or personal support. Her ability to provide an honest
-opinion, either scientific or personal has proven to be invaluable over the
-years. Bill Ireland, Rachel Banks, Rebecca Rousseau, Vahe Galstyan, Niko
-McCarty, Tom R\"{o}schinger, Molly Bassette, Jonathan Gross, Celene Barrera,
-Matthias Rydenfelt, Kimberly Berry, Gita Mahmoudabadi, and Daniel Jones are
-others who are or have since left the group to whom I am grateful for their
-scientific discussions over the years.
+\hspace{10mm}Suzy Beeler, though I never had the pleasure of listing as a
+coauthor, has always been someone I could turn to when in need of scientific
+advice or personal support. Her ability to provide an honest opinion, either
+scientific or personal has proven to be invaluable over the years. Bill
+Ireland, Rachel Banks, Rebecca Rousseau, Vahe Galstyan, Niko McCarty, Tom
+R\"{o}schinger, Molly Bassette, Jonathan Gross, Celene Barrera, Matthias
+Rydenfelt, Kimberly Berry, Gita Mahmoudabadi, and Daniel Jones are others who
+are currently in (or, at least recently departed) the group to whom I am
+grateful for their scientific discussions over the years.
+
+Of course, mentorship and camaraderie wasn't restricted to the lab. I am lucky
+to consider fellow Caltech PhD students like Belinda Wenke, Emily Blythe, Andy
+Zhou, Catie Blunt, Shyam Saladi, Sam Ho, Ferdinand Huber, Kyu Hyun Lee, Porfirio
+Quintero, Renee Arias, Joe Redford, Kelsey Boyle, and many others as some of my
+closest friends. During a recent PhD defense, on of my friends remarked that
+"grad school can feel like an island." This is half true. Grad school *is* an
+island, but your island is part of an archipelago. I was lucky enough to have
+friends who made my island feel not so lonesome. 
 
 \hspace{10mm}Some of my most cherished memories of graduate
 school stem from my time at the Marine Biological Laboratory, an institution
@@ -66,10 +78,10 @@ assistant for the Physiology summer course from 2015 to 2018 and for Physical
 Biology of the Cell course in 2018. During this time, I met dozens of
 graduate students, professors, post docs, research technicians, and more who
 have all helped me develop as a scientist and educator. In no particular
-order, I would like to Celine Aklelmide, George Bell, Ambika Nadkarni, Damien
-Dudka, Cat Triandifiliou, Mason Kamb, Lizzy Mueller, Chandrima Patra, Miranda
+order, I would like to Celine Alkelmade, George Bell, Ambika Nadkarni, Damien
+Dudka, Cat Triandafillou, Mason Kamb, Lizzy Mueller, Chandrima Patra, Miranda
 Hunter, Kyle Naughton, Cayla Jewett, Emily Meltzer, Roya Huang, Charlotte
-Strankvist, Simon Alamos, Sean McInally, Karna Gowda, Alina Guna, Nalin
+Strandkvist, Simon Alamos, Sean McInally, Karna Gowda, Alina Guna, Nalin
 Ratinyake, Joe Brzostowski, Carolynn Ott, Steven Wilbert, Ana Gayek, Wallace
 Marshall, and all of those who have passed through the halls of Loeb Lab with
 me for forging so many great memories. During these courses, I had the
@@ -81,8 +93,8 @@ another one of their students.
 \hspace{10mm}While my academics have been focused on the
 things that are small and alive, I have had a life-long love affair with
 paleontology where the subjects are often big and always dead. This comes
-from the opportunities provided to me by Mom and Dad, Lorraine and Dan Chure.
-Dan and Lorraine Chure. During my father’s 38 years as the chief
+from the opportunities provided to me by my Mom and Dad, Lorraine and Dan Chure.
+During my father’s 38 years as the chief
 paleontologist at Dinosaur National Monument in Utah, he instilled in me a
 curiosity for the natural world and its long, tumultuous biological history.
 My childhood and adolescent years are peppered with fond memories of hiking
@@ -100,7 +112,7 @@ bread baking) have helped pull me through tough parts of grad school and have
 taught me to savor the good.
 
 \hspace{10mm}The final four years of graduate school have
-been the most satisfying, and not because my experiments started to work. In
+been the most satisfying, and not just because my experiments started to work. In
 July of 2016, I met Barbara de Araujo Soares, a wonderful woman who two years
 later helped me slice into a wedding cake. Barb's unwavering love and support
 is why I have made it to where I am today. Without her wit, creativity,
@@ -118,14 +130,14 @@ I have had throughout my life is not lost on me. I write this paragraph as
 someone with a home with fresh food and running water. As someone with loving
 family and friends. As someone who is being paid to do what he loves. The
 physical, emotional, and intellectual security I have been so lucky to have
-comes at some level at the cost of others. 
+comes, at some level, at the cost of others. 
 
 \hspace{10mm}We stand on the shoulders of giants. These
 giants are faceless, nameless, and enumerable. For a section of this work
 dedicated to naming those to whom I am indebted, I want to close it with
 thanking all those who to me are nameless. To those who lived a harsher life
 to build a better one for people like me. To those who were more courageous
-in fighting injustice and cruelty than I. To those who lived and died in dire
+in fighting injustice and cruelty than I have been. To those who lived and died in dire
 straits simply because of who they were, where they were born, or what they
 believed in. This is a debt that can never be repaid, but I hope that I can
 at least give to the future a fraction of what they gave to me.

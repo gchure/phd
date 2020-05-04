@@ -37,7 +37,7 @@ consider what may be affected.
 say that there is a temperature-dependent entropic parameter that was
 neglected in the estimation of the energetic parameters in Garcia and
 Phillips 2011 [@garcia2011] and Razo-Mejia *et al.* 2018 [@razo-mejia2018].
-In this case, the inferred energetic parameter $\Delta\varepsilon$ is
+In this case, the inferred energetic parameter $\Delta\varepsilon^*$ is
 composed of enthalpic ($\Delta H$) and entropic ($\Delta S$) parameters,
 $$\Delta\varepsilon^* = \Delta H - T\Delta S. \label{eq:utds}$$ For a set of
 fold-change measurements at a temperature $T_{exp}$, we are interested in
@@ -142,7 +142,7 @@ that estimating $\Delta S$ from one temperature is not sufficient to predict
 the fold-change in gene expression at another temperature. The addition of
 the entropic parameter leads to better fit of the 32$^\circ$ C condition than
 the simple rescaling of the energy as described by @Eq:epstar
-[@Fig:entropy_pairwise, dashed line\], but poorly predicts the behavior at
+(@Fig:entropy_pairwise, dashed line), but poorly predicts the behavior at
 42$^\circ C$. Performing the inference on the combined 32$^\circ$ C and
 42$^\circ$ C data strikes a middle ground between the the predictions
 resulting from the two temperatures alone [@Fig:entropy_pairwise, grey shaded
@@ -197,7 +197,10 @@ inference.** Marginal and joint distributions conditioned only on data
 collected at 32$^\circ$ C, only on 42 $^\circ$ C, or on both temperatures are
 shown in blue, red, and black, respectively. The value $\Delta S_R$ and
 $\Delta S_{AI}$ are given in $k_BT / K$ where $K$ is 1 degree
-Kelvin.](ch8_figS11){#fig:entropy_corner short-caption="Sampled posterior
+Kelvin. The [Python code                                                
+(`ch8_figS11.py`)](https://github.com/gchure/phd/blob/master/src/chapter_08/code/ch8_figS11.py)
+used to generate this figure can be found on the thesis [GitHub
+repository](https://github.com/gchure/phd).](ch8_figS11){#fig:entropy_corner short-caption="Sampled posterior
 probability distributions of entropic penalty parameter inference."}
 
 
@@ -210,7 +213,10 @@ each condition. The black dashed line represents the predicted fold-change in
 gene expression by a simple rescaling of the binding energy determined at
 37$^circ$ C. The grey shaded region is the 95\% credible region of the
 fold-change given estimation of $\Delta S_R$ and $\Delta S_{AI}$ conditioned
-on both temperatures pooled together.](ch8_figS12){#fig:entropy_pairwise
+on both temperatures pooled together. The [Python code                                                
+(`ch8_figS12.py`)](https://github.com/gchure/phd/blob/master/src/chapter_08/code/ch8_figS12.py)
+used to generate this figure can be found on the thesis [GitHub
+repository](https://github.com/gchure/phd). ](ch8_figS12){#fig:entropy_pairwise
 short-caption="Pairwise predictions of fold-change in gene expression at
 different temperatures."}
 
@@ -229,7 +235,10 @@ to the median value of the inferred free energy shift and the mean of five to
 eight biological replicates for the repressor copy number. Vertical error
 represents the upper and lower bounds of the 95\% credible region of the
 parameter. Horizontal error bars correspond to the standard error of five to
-eight biological replicates.](ch8_figS13){#fig:t_dependent
+eight biological replicates. The [Python code                                                
+(`ch8_figS13.py`)](https://github.com/gchure/phd/blob/master/src/chapter_08/code/ch8_figS13.py)
+used to generate this figure can be found on the thesis [GitHub
+repository](https://github.com/gchure/phd). ](ch8_figS13){#fig:t_dependent
 short-caption="Fold-change and shift in free energy including a
 temperature-dependent entropic contribution."}
 

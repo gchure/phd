@@ -9,11 +9,10 @@ to understanding the sequence-structure relationship have permitted us to
 examine how the residues of allosteric proteins evolve, revealing conserved
 regions which hint to their function. Co-evolving residues reveal sectors of
 conserved interactions which traverse the protein that act as the allosteric
-communication channel between domains [@suel2002; @mclaughlin2012;
+communication channel between domains [@suel2003; @mclaughlinjr2012;
 @reynolds2011]. Elucidating these sectors has advanced our understanding of
 how distinct domains "talk" to one another and has permitted direct
-engineering of allosteric responses into non-allosteric enzymes [@raman2014;
-@poelwijk2011a; @raman2016]. Even so, we are left without a quantitative
+engineering of allosteric responses into non-allosteric enzymes [@poelwijk2011a; @raman2016]. Even so, we are left without a quantitative
 understanding of how these admittedly complex networks set the energetic
 difference between active and inactive states or how a given mutation
 influences binding affinity. In this context, a biophysical model in which
@@ -122,8 +121,8 @@ pairing libraries of protein and operator sequence mutants will provide
 insight as to how the protein and regulatory sequence coevolve, a topic rich
 with opportunity for a dialogue between theory and experiment.
 
-![**Data collapse of the simple repression regulatory architecture. All
-data are means of biological replicates.** Where present, error bars
+![**Data collapse of the simple repression regulatory architecture.** All
+data are means of biological replicates. Where present, error bars
 correspond to the standard error of the mean of five to fifteen
 biological replicates. Red triangles indicate data from @garcia2011
 obtained by colorimetric assays. Blue squares are data from
@@ -133,6 +132,9 @@ correspond to the work presented here. An interactive version of this
 figure can be found on the [paper
 website](https://www.rpgroup.caltech.edu/mwc_mutants) where the
 different data sets can be viewed in more
-detail.](ch3_fig6){#fig:all_data_collapse short-caption="Data collapse of the
+detail. The [Python code
+(`ch3_fig6.py`)](https://github.com/gchure/phd/blob/master/src/chapter_03/code/ch3_fig6.py)
+used to generate this figure can be found on the thesis [GitHub
+repository](https://github.com/gchure/phd).](ch3_fig6){#fig:all_data_collapse short-caption="Data collapse of the
 simple repression regulatory architecture. All data are means of biological
 replicates."}

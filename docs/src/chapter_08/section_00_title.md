@@ -1,2 +1,2 @@
-# Supplemental Information for Chapter IV: The Physiological Adaptability of a Simple Genetic Circuit
+# Supplemental Information for Chapter 4: The Physiological Adaptability of a Simple Genetic Circuit
 

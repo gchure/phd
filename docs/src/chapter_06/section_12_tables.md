@@ -44,7 +44,7 @@ a $P_{LtetO-1}$ promoter.
 | HG11.3 (*ybcN*)| ctgtagatgtg tccgttcatg acacgaataa gcggtgtag ccattacgc cGGCTAATGCA CCCAGTAAG G| Forward integration primer for 3\*1x-lacI with homology to the *ybcN* locus (lowercase).|
 | ybcN-control-upstream-1 | AGCGTTTGA CCTCTGCGGA | Sequencing primer to verify integration | 
 | ybcN-control-downstream-1| GCTCAGGTT TACGCTTAC GACG | Sequencing primer to verify integration | 
-Table 6.3 : Primers used in this work.
+: Primers used in this work.
 
 
 |**Strain** | **Genotype** |
@@ -73,6 +73,6 @@ Table 6.3 : Primers used in this work.
 | Oid, $R=22$ | HG104::*galK*<>25Oid+11-YFP |
 | Oid, $R=60$ | HG105::*galK*<>25Oid+11-YFP, *ybcN*<>3\*1RBS1147-lacI |
 | Oid, $R=124$ | HG105::*galK*<>25Oid+11-YFP, *ybcN*<>3\*1RBS446-lacI |
-Table 6.4 : *E. coli* strains used in this work.
+: *E. coli* strains used in this work.
 
 

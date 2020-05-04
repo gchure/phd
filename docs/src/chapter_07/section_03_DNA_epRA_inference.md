@@ -56,7 +56,6 @@ physical model. Ultimately, we want to know how probable a particular
 value of $\Delta\varepsilon_{RA}$ is given a set of experimental
 measurements $y$. Bayes' theorem computes this distribution, termed the
 *posterior distribution* as
-
 $$
 g(\Delta\varepsilon_{RA}\,\vert\, y) = {f(y\,\vert\,
  \Delta\varepsilon_{RA}) g(\Delta\varepsilon_{RA}) \over f(y)}
@@ -78,7 +77,7 @@ $$
 g(\Delta\varepsilon_{RA}\,\vert\, y) \propto f(y\,\vert\,\Delta\varepsilon_{RA})g(\Delta\varepsilon_{RA}).
 $${#eq:epRA_post_prop}
 
-&nbsp;nbsp;&nbsp;&nbsp;&nbsp;&nbsp;We are now tasked with translating this
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;We are now tasked with translating this
 generic notation into a concrete functional form. Our physical model derived
 in Chapter 2 given by computes the average fold-change in gene expression.
 Speaking practically, we make several replicate measurements of the
@@ -99,7 +98,7 @@ $$
 f(y\,\vert\,\Delta\varepsilon_{RA}) = \text{Normal}\{\mu(\Delta\varepsilon_{RA}),
 \sigma\}\, 
 $${#eq:likelihood_DNA_short}
-$$ which we will use for the remainder of this section.
+which we will use for the remainder of this section.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Using a normal distribution for our likelihood
 has introduced a new parameter $\sigma$ which describes the spread of our
@@ -116,11 +115,11 @@ too dependent on the choice of prior, it is important to choose one that
 is in agreement with our physical and physiological intuition of the
 system.
 
-We can impose physically reasonable bounds on the possible values of the
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;We can impose physically reasonable bounds on the possible values of the
 DNA binding energy $\Delta\varepsilon_{RA}$. We can say that it is
 unlikely that any given mutation in the DNA binding domain will result
-in an affinity greater than that of biotin to streptavidin \[$1\,
-\mathrm{fM} \approx -35\, \mathrm{k_BT}$, BNID 107139 [@milo2009]\], one
+in an affinity greater than that of biotin to streptavidin ($1\,
+\mathrm{fM} \approx -35\, \mathrm{k_BT}$, BNID 107139 [@milo2010]), one
 of the strongest known non-covalent bonds. Similarly, it's unlikely that
 a given mutation will result in a large, positive binding energy,
 indicating non-specific binding is preferable to specific binding
@@ -131,7 +130,7 @@ a weakly informative prior as a normal distribution with a mean and
 standard deviation as the average of these bounds,
 $$
 g(\Delta\varepsilon_{RA}) \sim \text{Normal}\{-12, 12\}
-$${eq:epRA_prior}
+$${#eq:epRA_prior}
 whose probability density function in shown in @Fig:epRA_prior_pred (A).
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;By definition, fold-change is restricted to the
@@ -168,7 +167,10 @@ represent draws used to generate fold-change measurements from the likelihood
 distribution. Percentiles in (C) generated from 800 draws from the prior
 distributions. For each draw from the prior distributions, a data set of 70
 measurements over 12 IPTG concentrations (ranging from $0$ to $5000\,\mu$M) were
-generated from the likelihood.](ch7_figS2){#fig:epRA_prior_pred
+generated from the likelihood. The [Python code                                                
+(`ch7_figS2.py`)](https://github.com/gchure/phd/blob/master/src/chapter_07/code/ch7_figS2.py)
+used to generate this figure can be found on the thesis [GitHub
+repository](https://github.com/gchure/phd).](ch7_figS2){#fig:epRA_prior_pred
 short-caption="Prior distributions and prior predictive check for estimation of
 the DNA binding energy."}
 
@@ -265,9 +267,8 @@ statistical model is malformed or the computational method is not behaving as
 expected. There are a variety of ways we can ensure that this condition is
 satisfied, which we outline below.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-Using the data set generated for the prior predictive checks \[shown in
-@Fig:epRA_prior_pred (C)\], we sampled the posterior
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Using the data set generated for the prior predictive checks (shown in
+@Fig:epRA_prior_pred (C)), we sampled the posterior
 distribution and compute $\Delta\varepsilon_{RA}$ and $\sigma$ for each
 simulation and checked that they matched the original prior
 distribution. To perform the inference, we use Markov chain Monte Carlo
@@ -277,15 +278,14 @@ programming language [@carpenter2017]. The specific code files can be
 accessed through the [paper website](http://rpgroup.caltech.edu/mwc_mutants) or
 the associated [GitHub repository](https://github.com/rpgroup-pboc/mwc_mutants).
 The original prior distribution and the distribution of inferred parameter
-values can be seen in Fig.
-@Fig:epRA_sbc (A) and (B). For both $\Delta\varepsilon_{RA}$
+values can be seen in @Fig:epRA_sbc (A) and (B). For both $\Delta\varepsilon_{RA}$
 and $\sigma$, we can accurately recover the ground truth distribution
 (purple) via sampling with MCMC (orange). For $\Delta\varepsilon_{RA}$, there
 appears to be an upper and lower limit past which we are unable to
 accurately infer the binding energy. This can be seen in both the
 histogram [@Fig:epRA_sbc(A)] and the empirical cumulative distribution
 [@Fig:epRA_sbc (B)] as deviations from the ground truth when
-DNA binding is below $\approx -25 k_BT$ or above $\approx -5 k_BT$.
+DNA binding is below $\approx -25\,k_BT$ or above $\approx -5\,k_BT$.
 These limits hinder our ability to comment on exceptionally strong or
 weak binding affinities. However, as all mutants queried in this work
 exhibited binding energies between these limits, we surmise that the
@@ -294,12 +294,15 @@ binding strengths.
 
 ![**Comparison of averaged posterior and prior distributions for
 $\Delta\varepsilon_{RA}$ and $\sigma$.** (A) Distribution of the average
-values for the DNA binding energy $\Delta\varepsilon_{RA}$ (red)
-overlaid with the ground truth distribution (blue). (B) Data averaged
-posterior (red) for the standard deviation of fold-change measurements
-overlaid with the ground truth distribution (blue). Top and bottom show
+values for the DNA binding energy $\Delta\varepsilon_{RA}$ (orange)
+overlaid with the ground truth distribution (purple). (B) Data averaged
+posterior (orange) for the standard deviation of fold-change measurements
+overlaid with the ground truth distribution (purple). Top and bottom show
 the same data with different
-visualizations.](ch7_figS3){#fig:epRA_sbc short-caption="Comparison of averaged
+visualizations. The [Python code                                                
+(`ch7_figS3.py`)](https://github.com/gchure/phd/blob/master/src/chapter_07/code/ch7_figS3.py)
+used to generate this figure can be found on the thesis [GitHub
+repository](https://github.com/gchure/phd).](ch7_figS3){#fig:epRA_sbc short-caption="Comparison of averaged
 posterior and prior distributions for DNA binding energy and homoscedastic error."}
 
 
@@ -342,7 +345,7 @@ it is being highly informed by the data. A shrinkage less than 0 indicates
 that the posterior is wider than the prior distribution, revealing a severe
 pathology in either the model itself or the implementation.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;In @Fig:epRA_sbc_sensitivity), we compute these summary
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;In @Fig:epRA_sbc_sensitivity, we compute these summary
 statistics for each parameter. For both $\Delta\varepsilon_{RA}$ and
 $\sigma$, we see clustering of the $z$-score about 0 with the extrema
 reaching $\approx \pm 3$. This suggests that for the vast majority of
@@ -363,7 +366,10 @@ $\sigma$**. The posterior $z$-score for each posterior distribution
 inferred from a simulated data set is plotted against the shrinkage for
 (A) the DNA binding energy $\Delta\varepsilon_{RA}$ and (B) the standard
 deviation of fold-change measurements
-$\sigma$](ch7_figS4){#fig:epRA_sbc_sensitivity short-caption="Inferential
+$\sigma$. The [Python code                                                
+(`ch7_figS4.py`)](https://github.com/gchure/phd/blob/master/src/chapter_07/code/ch7_figS4.py)
+used to generate this figure can be found on the thesis [GitHub
+repository](https://github.com/gchure/phd). ](ch7_figS4){#fig:epRA_sbc_sensitivity short-caption="Inferential
 sensitivity for estimation of the DNA binding energy and homoscedastic error."}
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The general self-consistency condition given by
@@ -373,11 +379,10 @@ value for the DNA binding energy from the prior distribution, simulate a
 data set, and sample the posterior using MCMC. The result of this
 sampling is a collection of $N$ values of the parameter which may be
 above, below, or equal to the ground-truth value. From this set of
-values, we select $L$ of them and rank order them by their value. Talts
-and colleagues [@talts2018] derived a general theorem which states that
-the number of samples less than the ground truth value of the parameter
+values, we select $L$ of them and rank order them by their value. @talts2018 
+derived a general theorem which states that the number of samples less than the ground truth value of the parameter
 (termed the rank statistic) is uniformly distributed over the interval
-$[0, L]$. As @Eq:self_consistency_relation) *must* hold true for any
+$[0, L]$. As @Eq:self_consistency_relation *must* hold true for any
 statistical model, deviations from uniformity signal that there is a
 problem in the implementation of the statistical model. How the
 distribution deviates is also informative as different types of failures
@@ -407,7 +412,10 @@ row is the cumulative distribution for the same data. Purple bands
 correspond to the 99th percentile of expected variation from a uniform
 distribution. (A) Distribution for the DNA binding energy
 $\Delta\varepsilon_{RA}$ and (B) for the standard deviation
-$\sigma$.](ch7_figS5){#fig:epRA_sbc_rank short-caption="Rank distribution of the
+$\sigma$. The [Python code                                                
+(`ch7_figS5.py`)](https://github.com/gchure/phd/blob/master/src/chapter_07/code/ch7_figS5.py)
+used to generate this figure can be found on the thesis [GitHub
+repository](https://github.com/gchure/phd). ](ch7_figS5){#fig:epRA_sbc_rank short-caption="Rank distribution of the
 posterior samples from simulated data for the DNA binding energy and
 homoscedastic error."}
 
@@ -429,7 +437,7 @@ $\Delta\varepsilon_{RA}$ and $\sigma$ is shown in the lower left hand
 corner, and the marginal distributions for each parameter are shown
 above and to the right of the joint distribution, respectively. The
 joint distribution is color coded by the value of the log posterior,
-with yellow and blue corresponding to high and low probability,
+with bright orange and dark purple corresponding to high and low probability,
 respectively. The symmetric shape of the joint distribution is a telling
 sign that there is no correlation between two parameters. The marginal
 distributions for each parameter are also relatively narrow, with the
@@ -482,12 +490,14 @@ distributions for DNA binding energy $\Delta\varepsilon_{RA}$ and
 $\sigma$. Each point in the joint distribution is a single sample.
 Marginal distributions for each parameter are shown adjacent to joint
 distribution. Color in the joint distribution corresponds to the value
-of the log posterior with the progression of blue to yellow
+of the log posterior with the progression of dark purple to bright orange
 corresponding to increasing probability. (B) The posterior predictive
 check of model. The measurements of the fold-change in gene expression
 are shown as black open-faced circles. The percentiles are shown as
 colored bands and indicate the fraction of simulated data drawn from the
-likelihood that fall within the shaded region.
-](ch7_figS6){#fig:epRA_ppc short-caption="Markov chain Monte Carlo samples and
+likelihood that fall within the shaded region. The [Python code
+(`ch7_figS6.py`)](https://github.com/gchure/phd/blob/master/src/chapter_07/code/ch7_figS6.py)
+used to generate this figure can be found on the thesis [GitHub
+repository](https://github.com/gchure/phd).](ch7_figS6){#fig:epRA_ppc short-caption="Markov chain Monte Carlo samples and
 posterior predictive check for DNA binding mutant Q18M."}
 

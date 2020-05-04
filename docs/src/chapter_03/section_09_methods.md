@@ -53,16 +53,16 @@ the cultures were held at approximately 4$^\circ$ C by placing the 96-well
 plate on a MACSQuant ice block. All fluorescence measurements were made using
 a 488 nm excitation wavelength with a 525/50 nm emission filter. The
 photomultiplier tube voltage settings for the instrument are the same as
-those used in @razo-mejia2018 and are listed in supplemental Chapter 7.
+those used in @razo-mejia2018 and are listed in supplemental Chapter 6.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The data was processed using an automatic
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The data were processed using an automatic
 unsupervised gating procedure based on the front and side-scattering values,
 where we fit a two-dimensional Gaussian function to the $\log_{10}$
 forward-scattering (FSC) and the $\log_{10}$ side-scattering (SSC) data. Here
 we assume that the region with highest density of points in these two
 channels corresponds to single-cell measurements and consider data points
 that fall within 40\% of the highest density region of the two-dimensional
-Gaussian function. We direct the reader to Reference [@razo-mejia2018] for
+Gaussian function. We direct the reader to @razo-mejia2018 and supplemental Chapter 6 for
 further detail and comparison of flow cytometry with single-cell microscopy.
 
 ### Bayesian Parameter Estimation
@@ -87,7 +87,7 @@ of $\theta$ are described by $g(\theta)$.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;In all inferential models used in this work, we assumed that all experimental measurements at a
 given inducer concentration were normally distributed about a mean value $\mu$
-dictated by @Eq:foldchange with a variance $\sigma^2$, 
+dictated by @Eq:mut_foldchange with a variance $\sigma^2$, 
 $$
 f(y\,\vert\, \theta) = {1 \over (2\pi\sigma^2)^{N/2}}\prod\limits_i^N \exp\left[-{(y_i - \mu(\theta))^2 \over 2\sigma^2}\right], 
 $${#eq:generic_likelihood}
@@ -105,9 +105,9 @@ $${#eq:sigma_prior}
 where $x$ is a given range of values for $\sigma$. A standard deviation of
 $\phi=0.1$ was chosen given our knowledge of the scale of our measurement
 error from other experiments. As the absolute measurement of fold-change is
-restricted between $0$ and $1.0$, and given our knowledge of the sensitivity
+restricted between $0$ and $1$, and given our knowledge of the sensitivity
 of the experiment, it is reasonable to assume that the error will be closer
-to $0$ than to $1.0$. Further justification of this choice of prior through
+to $0$ than to $1$. Further justification of this choice of prior through
 simulation based methods are given in the supplemental Chapter 7. The prior
 distribution for $\theta$ is dependent on the parameter and its associated
 physical and physiological restrictions. Detailed discussion of our chosen prior
@@ -138,12 +138,12 @@ g(\mu)g(\sigma){1\over(2\pi\sigma^2)^{N/2}}\prod\limits_i^N
 $${#eq:post_fc_mu}
 where $y$ is a collection of fold-change measurements. The prior distribution
 for $\mu$ was chosen to be uniform between 0 and 1 while the prior on $\sigma$
-was chosen to be half normal, as written in Eq. @{eq:sigma_prior. The
+was chosen to be half normal, as written in @Eq:sigma_prior. The
 posterior distribution was sampled independently for each set of fold-change
 measurements using MCMC. The `.stan` model for this inference is available on the
 [paper website](http://www.rpgroup.caltech.edu/mwc_mutants). 
 
-For each MCMC sample of $\mu$, the free energy was calculated as 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;For each MCMC sample of $\mu$, the free energy was calculated as 
 $$
 F = -\log\left(\mu^{-1} - 1\right)
 $${#eq:empirical_F}
@@ -166,10 +166,8 @@ limitation in the supplemental Chapter 7.
 
 All data was collected, stored, and preserved using the Git version control
 software. Code for data processing, analysis, and figure generation is
-available on the GitHub repository
-([https://www.github.com/rpgroup-pboc/mwc_mutants}{https://www.github.com/rpgroup-pboc/mwc\_mutants](https://www.github.com/rpgroup-pboc/mwc_mutants}{https://www.github.com/rpgroup-pboc/mwc\_mutants))
-or can be accessed via the
+available on the [GitHub repository]
+(https://www.github.com/rpgroup-pboc/mwc_mutants) or can be accessed via the
 [paper website](http://www.rpgroup.caltech.edu/mwc_mutants). Raw flow
 cytometry data is stored on the CaltechDATA data repository and can be
 accessed via DOI 10.22002/D1.1241.
-

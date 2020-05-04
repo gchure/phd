@@ -6,12 +6,12 @@ function of a minimal set of physically meaningful parameters [@ackers1982;
 @weinert2014; @rydenfelt2014b; @razo-mejia2014; @razo-mejia2018; @bintu2005;
 @bintu2005a; @kuhlman2007]. These models quantitatively describe numerous
 properties of input-output functions, such as the leakiness, saturation,
-dynamic range, steepness of response, and the $EC_{50}$ – the concentration
+dynamic range, steepness of response, and the $[EC_{50}]$ – the concentration
 of inducer at which the response is half maximal. The mathematical forms of
 these phenotypic properties are couched in terms of a minimal set of
 experimentally accessible variables, such as the inducer concentration,
 transcription factor copy number, and the DNA sequence of the binding site
-[@razo-mejia2018]. While the amino acid sequence of the transcription factor
+(see Chapter 2 and @razo-mejia2018). While the amino acid sequence of the transcription factor
 is another controllable variable, it is seldom implemented in quantitative
 terms considering mutations with subtle changes in chemistry frequently yield
 unpredictable physiological consequences. In this work, we examine how a
@@ -20,7 +20,7 @@ transcriptional repressor influence the values of the biophysical parameters
 which govern its regulatory behavior.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;We build upon the results presented in Chapter
-1 of this thesis and present a theoretical framework for understanding how
+2 of this thesis and present a theoretical framework for understanding how
 mutations in the amino acid sequence of the repressor affect different
 parameters and alter the free energy of the system. We find that the
 parameters capturing the allosteric nature of the repressor, the repressor

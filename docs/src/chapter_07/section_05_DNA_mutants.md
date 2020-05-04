@@ -46,7 +46,7 @@ distribution with the upper and lower bounds of the 95\% credible regions.
 
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The predicted change in free energy $\Delta F$
-using each fit strain can be seen in @Fig:DNA_delF_pairwise_comparison. In
+using each fit strain can be seen in @Fig:DNA_delF_pairwise_comparison . In
 this figure, the rows represent the repressor copy number of the strain to
 which the DNA binding energy was fit whereas the columns correspond to each
 mutant. In each plot, we have shown the data for all repressor copy numbers
@@ -63,7 +63,10 @@ correspond to the repressor copy number of the strain used to estimate
 the DNA binding energy for each mutant. Columns correspond to the
 repressor copy number of the strains that are predicted. Diagonals in
 which the data used to estimate the DNA binding energy are shown with a
-gray background.](ch7_figS12){#fig:DNA_profile_pairwise_comparisons
+gray background. The [Python code                                                
+(`ch7_figS11.py`)](https://github.com/gchure/phd/blob/master/src/chapter_07/code/ch7_figS11.py)
+used to generate this figure can be found on the thesis [GitHub
+repository](https://github.com/gchure/phd). ](ch7_figS11){#fig:DNA_profile_pairwise_comparisons
 short-caption="Pairwise comparisons of DNA binding mutant estimated induction profiles."}
 
 ![**Dependence of fitting strain on $\Delta F$ predictions of DNA binding
@@ -71,9 +74,12 @@ domain mutants.** Rows correspond to the repressor copy number used to
 estimate the DNA binding energy. Columns correspond to the particular
 mutant. Colored lines are the bounds of the 95% credible region of the
 predicted $\Delta F$. Open face points indicate the strain to which the
-DNA binding energy was fit.](ch7_figS13){#fig:DNA_delF_pairwise_comparison
+DNA binding energy was fit. The [Python code                                                
+(`ch7_figS12.py`)](https://github.com/gchure/phd/blob/master/src/chapter_07/code/ch7_figS12.py)
+used to generate this figure can be found on the thesis [GitHub
+repository](https://github.com/gchure/phd).](ch7_figS12){#fig:DNA_delF_pairwise_comparison
 short-caption="Dependence of fitting strain on $\Delta F$ predictions of DNA
-binding domain mutants.**}
+binding domain mutants."}
 
 
 

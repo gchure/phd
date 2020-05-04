@@ -6,7 +6,7 @@
 
 Three genotypes were primarily used in this work, all in the genetic
 background of *Escherichia coli* MG1655-K12 and all derived from those
-used in [@brewster2014. The three genotypes are as follows. For
+used in @brewster2014. For
 each experiment, an autofluorescence control was used which contained no
 fluorescent reporters [except for a CFP volume marker used for
 segmentation in @brewster2014] which had the *lacI* and *lacZYA*
@@ -21,8 +21,8 @@ using FLP/FRT recombination [@schlake1994; @zhu1995]. The strain was
 then transformed with plasmid [pZS3-pN25-tetR following notation
 described in @lutz1997] constitutively expressing the TetR
 repressor along with a chloramphenicol resistance cassette. All
-bacterial strains and plasmids used in this work are reported in the SI
-Text.
+bacterial strains and plasmids used in this work are reported in the
+supplemental Chapter 8. 
 
 ### Bacterial Growth Curves
 
@@ -98,7 +98,7 @@ that all differences in intensity between two daughter cells result from
 binomial partitioning of the fluorophores and not from continuing
 expression. This was achieved by removing the anhydrous tetracycline
 inducer from the growth medium through several washing steps as outlined
-in @brewster2014 ]. Aliquots of 100 $\mu$L from each ATC-induced
+in @brewster2014. Aliquots of 100 $\mu$L from each ATC-induced
 culture were combined and pelleted at 13000$\times g$ for 2 minutes. The
 supernatant (containing ATC) was aspirated and replaced with 1 mL of M9
 growth medium without ATC. The pellet was resuspended and pelleted at
@@ -107,11 +107,9 @@ residual ATC had been removed and LacI-mCherry production was halted.
 After the final wash, the cell pellet was resuspended in 1 mL of M9
 medium and diluted ten-fold. A 1 $\mu$L aliquot of the diluted mixture
 was then spotted onto an agarose substrate containing the appropriate
-carbon source.
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The remaining bacterial cultures
+carbon source. The remaining bacterial cultures
 (autofluorescence control, constitutive expression control, and the
-ATC-induced samples) were diluted ten-fold into sterile M9 medium.This
+ATC-induced samples) were diluted ten-fold into sterile M9 medium. This
 dilution was thoroughly mixed and 1 $\mu$L aliquots were spotted onto agarose
 substrates lacking the carbon source.
 
@@ -155,7 +153,7 @@ storage and a computational cluster for analysis.
 
 Cells were segmented and lineages reconstructed using the
 deep-learning-based bacterial segmentation software SuperSegger `v1.1`
-[@stylianidou2016a; @cass2017] operated through MATLAB (Mathworks,
+[@stylianidou2016; @cass2017] operated through MATLAB (Mathworks,
 `v2017b`). We found that the pre-trained network constants `100XEcM9`
 (packaged with the SuperSegger software) worked well for all growth
 conditions tested in this work. The generated files (`clist.mat`)
@@ -170,7 +168,7 @@ to ensure proper lineage tracking.
 To estimate the calibration factor $\alpha$, we used a Bayesian
 definition of probability to define a posterior distribution of $\alpha$
 conditioned on intensity measurements of sibling cells after division.
-We direct the reader to the SI text for a detailed discussion of the
+We direct the reader to supplemental Chapter 8 for a detailed discussion of the
 inferential procedures and estimation of systematic error. We give a
 brief description of the inference below.
 
@@ -202,8 +200,8 @@ division, the number of repressors that each sibling cell receives after
 division of the parent cell is binomially distributed with a probability
 $p$. We can make the approximation that partitioning of the repressors
 is even such that $p =
-1/2$. The validity of this approximation is discussed in detail in the
-SI text. Using @Eq:growth_ian and the change-of-variables formula, we can define
+1/2$. The validity of this approximation is discussed in detail in
+Chapter 8. Using @Eq:growth_ian and the change-of-variables formula, we can define
 the likelihood $g([I_1, I_2]\,\vert\, \alpha)$ as
 $$
 g([I_1, I_2]\,\vert\,\alpha) =
@@ -235,7 +233,7 @@ website](https://rpgroup.caltech.edu/mwc_growth).
 
 ### Counting Repressors 
 Given an estimation for $\alpha$ for each experiment, we calculate the
-total number of repressors per cell from a
+total number of repressors per cell from 
 $$
 R = \frac{I_{mCherry}}{\alpha}.
 $${#eq:nia}
@@ -251,7 +249,7 @@ cells that had a pole-to-pole length $\ell \geq 3.5\,\mu$m, indicating
 that they had likely not undergone a division during the sample
 preparation.
 
-### Code and Data Availability {#code-and-data-availability .unnumbered}
+### Code and Data Availability 
 
 All code used in this work is available on the [paper
 website](https://github.com/rpgroup-pboc/mwc_growth) and [associated
@@ -259,7 +257,7 @@ GitHub repository](https://www.github.com/rpgroup-pboc/mwc_growth)(DOI:
 0.5281/zenodo.3560369). This work also used the open-source software
 tools
 [SuperSegger](http://mtshasta.phys.washington.edu/website/SuperSegger.php)
-`v.1.1`[@stylianidou2016a; @cass2017] for lineage tracking and
+`v.1.1`[@stylianidou2016; @cass2017] for lineage tracking and
 [FitDeriv](http://swainlab.bio.ed.ac.uk/software/fitderiv/) `v.1.03`
 [@swain2016] for the nonparametric estimation of growth rates. Raw image
 files are large (1.8 Tb) and are therefore available upon request. The

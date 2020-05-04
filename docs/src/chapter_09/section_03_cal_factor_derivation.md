@@ -149,14 +149,17 @@ g(\langle A \rangle) = \begin{cases} {1 \over \langle A \rangle_\text{max} - \la
 $${#eq:area_uniform_prior}
 for $\langle A \rangle$.
 
-Piecing @Eq:area_likelihood through @Eq:area_uniform_prior together generates a complete posterior probability distribution for the parameters given a single cell measurement. This can be generalized to a set of $k$ single cell measurements as
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Piecing @Eq:area_likelihood through @Eq:area_uniform_prior together generates
+a complete posterior probability distribution for the parameters given a
+single cell measurement. This can be generalized to a set of $k$ single cell
+measurements as
 $$
 \begin{aligned}
 g(\alpha,\langle A \rangle, \langle N_\text{tot} & \rangle, \sigma_{I_A}, \sigma_{\langle A \rangle}\,\vert\, [I_A, A], \mu_N, \sigma_N) \propto {1 \over (\alpha_\text{max} - \alpha_\text{min})(\langle A \rangle_\text{max} - \langle A \rangle_\text{min})}{1 \over (\sigma_{I_A}\sigma_{\langle A \rangle})^{k+1} }\,\times\\\\
 &{1 \over \sigma_N}\exp\left[- {(\langle N_\text{tot}\rangle - \mu_N)^2 \over 2\sigma_N^2}\right]
 \prod\limits_i^k\exp\left[-{(A^{(i)} - \langle A \rangle)^2 \over 2\sigma_{\langle A \rangle}^2} - {\left(I_A^{(i)} - {\alpha \langle N_\text{tot}\rangle \over \langle A \rangle}\right)^2 \over 2\sigma_{I_A}^2}\right] \end{aligned},
 $${#eq:single_rep_post}
-where $[I_A, A]$ represents the set of $k$ single-cell measurements.****
+where $[I_A, A]$ represents the set of $k$ single-cell measurements.
 
 &nbsp;&nbsp;&nbsp;&nbsp;As small variations in the day-to-day details of cell
 growth and sample preparation can alter the final channel count of the
@@ -193,7 +196,7 @@ may have a unique value, they are all related to one another. Unfortunately,
 proper sampling of this distribution requires an extensive amount of
 experimental work, making inferential approaches more attractive.
 
-This approach, often called a multi-level or hierarchical model, is
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This approach, often called a multi-level or hierarchical model, is
 schematized in @Fig:hierarchical_model. Here, we use an informative prior
 for $\alpha$ and $\langle A \rangle$ for each biological replicate. This
 informative prior probability distribution can be described by summary
@@ -272,18 +275,22 @@ lower bound of the 95\% credible region as superscript and subscript,
 respectively. These values and associated errors were used in the calculation
 of channel copy number.
 
-![**Posterior distributions for hyper-parameters and replicate parameters.** (A)
-The posterior probability distribution for $\tilde{\alpha}$ and
+![**Posterior distributions for hyper-parameters and replicate parameters.**
+(A) The posterior probability distribution for $\tilde{\alpha}$ and
 $\tilde{\langle A \rangle}$. Probability increases from light to dark red.
 The replicate parameter (blue) and hyper-parameter (red) marginalized
 posterior probability distributions for $\alpha$ (B) and $\langle A \rangle$
-(C).](ch9_figS4){#fig:mscl_posterior_samples short-caption="Posterior
+(C). The [Python code
+(`ch9_figS4.py`)](https://github.com/gchure/phd/blob/master/src/chapter_09/code/ch9_figS4.py)
+used to generate this figure can be found on the thesis [GitHub
+repository](https://github.com/gchure/phd).
+](ch9_figS4){#fig:mscl_posterior_samples short-caption="Posterior
 distributions for hyper-parameters and replicate parameters."}
 
 ### Effect of correction
 
 &nbsp;&nbsp;&nbsp;&nbsp; The posterior distributions for $\alpha$ and $\langle A
-\rangle$ shown in @Fig:posterior_samples were used directly to compute the
+\rangle$ shown in @Fig:mscl_posterior_samples were used directly to compute the
 most-likely channel copy number for each measurement of the Shine-Dalgarno
 mutant strains, as is described in the coming section.
 The importance of this correction can be seen in @Fig:area_correction. Cells
@@ -292,7 +299,7 @@ illustrated in @Fig:area_correction (A). While these would all be considered
 single cells, the two-dimensional area of each may be comparable to two or three
 wild-type cells. For all of the Shine-Dalgarno mutants, the distribution of
 projected cell area has a long tail, with the extremes reaching 35
-$\mu\text{m}^2$ per cell [@Fig:area_correction (B)]. Calculating the total number
+$\mu\text{m}^2$ per cell *@Fig:area_correction (B)). Calculating the total number
 of channels per cell  does nothing to decouple this correlation between cell
 area and measured cell intensity. @Fig:area_correction (C) shows the correlation
 between cell area and the total number of channels without normalizing to an
@@ -307,6 +314,9 @@ two-dimensional projected cell area for the standard candle strain MLG910
 (gray line) and for all Shine-Dalgarno mutants (red line). (C) The
 correlation between channel copy number and cell area without the area
 correction. (D) The correlation between effective channel copy number and
-cell area with the area correction applied.
-](ch9_figS5){#fig:area_correction short-caption="Influence of area
-correction for Shine-Dalgarno mutants."}
+cell area with the area correction applied. The [Python code
+(`ch9_figS5.py`)](https://github.com/gchure/phd/blob/master/src/chapter_09/code/ch9_figS5.py)
+used to generate this figure can be found on the thesis [GitHub
+repository](https://github.com/gchure/phd).
+ ](ch9_figS5){#fig:area_correction
+short-caption="Influence of area correction for Shine-Dalgarno mutants."}

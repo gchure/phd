@@ -51,9 +51,12 @@ profiles, suggesting that the choice of fit strain makes little difference.
 $K_A$ and $K_I$ are influenced by the mutation.** Rows correspond to the
 operator sequence of the strain used for the parameter inference.
 Columns correspond to the operator sequence of the predicted strain.
-Colors identify the mutation. Diagonal positions (gray background) show
+Colors identify the mutation. Diagonal positions show
 the induction fit strain and
-profiles.](ch7_figS17){#fig:KaKi_only_pairwise_comparison
+profiles. The [Python code                                                
+(`ch7_figS17-S18.py`)](https://github.com/gchure/phd/blob/master/src/chapter_07/code/ch7_figS17-S18.py)
+used to generate this figure can be found on the thesis [GitHub
+repository](https://github.com/gchure/phd).](ch7_figS17){#fig:KaKi_only_pairwise_comparison
 short-caption="Pairwise comparison of fit strain versus predictions assuming
 only $K_A$ and $K_I$ are influenced by mutations in the inducer binding domain."}
 
@@ -64,7 +67,10 @@ the operator of the strain used to fit the parameters. Columns
 correspond to the operator of the strains whose induction profile is
 predicted. Mutants are identified by color. Diagonals (gray background)
 show the induction profiles of the strain to which the parameters were
-fit.](ch7_figS18){#fig:KaKi_epAI_pairwise_comparison short-caption="Pairwise
+fit. The [Python code                                                
+(`ch7_figS17-S18.py`)](https://github.com/gchure/phd/blob/master/src/chapter_07/code/ch7_figS17-S18.py)
+used to generate this figure can be found on the thesis [GitHub
+repository](https://github.com/gchure/phd).  ](ch7_figS18){#fig:KaKi_epAI_pairwise_comparison short-caption="Pairwise
 comparison of fit strain versus predictions assuming all allosteric parameters
 are affected by the mutation in the inducer binding domain."}
 
@@ -73,7 +79,10 @@ Rows correspond to the operator of the strain to which the parameters
 were fit. Columns correspond to mutations. Points are colored by their
 operator sequence. The data corresponding to the operator of the fit
 strain are shown as white-faced
-points.](ch7_figS19){#fig:IND_deltaF_comparison short-caption="Comparison of
+points. The [Python code                                                
+(`ch7_figS19.py`)](https://github.com/gchure/phd/blob/master/src/chapter_07/code/ch7_figS19.py)
+used to generate this figure can be found on the thesis [GitHub
+repository](https://github.com/gchure/phd). ](ch7_figS19){#fig:IND_deltaF_comparison short-caption="Comparison of
 choice of fit strain on predicted $\Delta F$ profiles for inducer binding domain
 mutants."}
 

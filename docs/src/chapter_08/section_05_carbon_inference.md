@@ -1,6 +1,6 @@
 ## Parameter Estimation of DNA Binding Energies and Comparison Across Carbon Source 
 
-In the main text, we conclude that the biophysical parameters defining
+In Chapter 4, we conclude that the biophysical parameters defining
 the fold-change input-output function are unperturbed between different
 carbon sources. This conclusion is reached primarily by comparing how
 well the fold-change and the free energy shift $\Delta F$ is predicted
@@ -122,7 +122,6 @@ variation in carbon quality.
 growth condition. reported as median and upper/lower bounds of 95\% credible
 region.
 
-
 ![**Posterior probability distributions of effective DNA binding energy
 $\epsilon$ and standard deviation $\sigma$.** Top plot shows the marginal
 probability distribution of $\epsilon$ conditioned only on the purple (glucose),
@@ -130,15 +129,21 @@ glycerol (green), or acetate (brown) measurements. Bottom left plot shows the
 joint probability distribution between the effective DNA binding energy
 $\epsilon$ and the standard deviation $\sigma$. Bottom right shows the marginal
 posterior distribution over the standard deviation
-$\sigma$.](ch8_figS9){#fig:carbon_cornerplot short-caption="Posterior
+$\sigma$. The [Python code                                                
+(`ch8_figS9.py`)](https://github.com/gchure/phd/blob/master/src/chapter_08/code/ch8_figS9.py)
+used to generate this figure can be found on the thesis [GitHub
+repository](https://github.com/gchure/phd).](ch8_figS9){#fig:carbon_cornerplot short-caption="Posterior
 probability distributions of effective DNA binding and standard deviation for
-different carbon sources.}
+different carbon sources."}
 
 ![**Pairwise estimation and prediction of DNA binding energies.** Rows indicate
 the strain to which the effective DNA binding energy $\epsilon$ was estimated and
 columns are the strains whose fold-change is predicted. Shaded lines represent
 the 95\% credible region of the prediction given the estimated value of
 $\epsilon$. Points and error correspond to the median and standard error of fie
-to eight biological replicates.](ch8_figS10){#fig:pairwise_carbon
+to eight biological replicates. The [Python code                                                
+(`ch8_figS10.py`)](https://github.com/gchure/phd/blob/master/src/chapter_08/code/ch8_figS10.py)
+used to generate this figure can be found on the thesis [GitHub
+repository](https://github.com/gchure/phd).](ch8_figS10){#fig:pairwise_carbon
 short-caption="Pairwise estimation and prediction of DNA binding energies
 estimated from different carbon sources."}

@@ -3,7 +3,7 @@
 In this section, we detail the procedures and results from single-cell
 microscopy verification of our flow cytometry measurements. Our previous
 measurements of fold-change in gene expression have been measured using
-bulk-scale Miller assays  or through single-cell microscopy . In this
+bulk-scale Miller assays [@garcia2011] or through single-cell microscopy [@brewster2014]. In this
 work, flow cytometry was an attractive method due to the ability to
 screen through many different strains at different concentrations of
 inducer in a short amount of time. To verify our results from flow
@@ -59,7 +59,7 @@ dishes (Ted Pella Wilco Dish, Cat. No. 14027-20) and sealed with parafilm.
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;All imaging was performed on a Nikon Ti-Eclipse
 inverted fluorescent microscope outfitted with a custom-built laser
 illumination system and operated by the open-source MicroManager control
-software . The YFP fluorescence was imaged using a CrystaLaser
+software [@edelstein2014]. The YFP fluorescence was imaged using a CrystaLaser
 $514\,\text{nm}$ excitation laser coupled with a laser-optimized (Semrock
 Cat. No. LF514-C-000) emission filter.
 
@@ -113,7 +113,7 @@ neighborhood. Bacterial cells were defined as regions within an intact
 and closed identified edge. All segmented objects were then labeled and
 passed through a series of filtering steps.
 
-To ensure that primarily single cells were segmented, we imposed area
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;To ensure that primarily single cells were segmented, we imposed area
 and eccentricity bounds. We assumed that single cells projected into two
 dimensions are roughly $2\,\mu\text{m}$ long and $1\,\mu\text{m}$
 wide, so that cells are likely to have an area between
@@ -125,7 +125,7 @@ respectively. The eccentricity of this hypothetical cell can be computed
 as 
 $$
 \text{eccentricity} = \sqrt{1 - \left(\frac{b}{a}\right)^2},
-$${eq:eccentricity}
+$${#eq:eccentricity}
 yielding a value of approximately 0.8. Any objects with an eccentricity
 below this value were not considered to be single cells. After imposing
 both an area and eccentricity filter, the remaining objects were
@@ -150,7 +150,7 @@ intensity of cells expressing only the mCherry volume marker, and $\langle
 I_{R = 0}\rangle$ is the mean fluorescence intensity of cells in the absence
 of LacI. 
 
-The agreement in the fold-change in gene expression between single-cell
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The agreement in the fold-change in gene expression between single-cell
 microscopy and flow cytometry can be seen in @Fig:empirical_comparison (A) where
 the two methods have been plotted against each other. At this level, we see near
 perfect agreement between the methods when examining the mean level of gene
@@ -185,5 +185,7 @@ to measurements with microscopy and flow cytometry, respectively.
 Fluorescence was normalized between 0 and 1 and centered about the observed
 mean. (C) Central moments of the distributions shown in (B) for microscopy
 and flow cytometry. Each point represents a single biological
-replicate.](ch6_figS10){#fig:empirical_comparison short-caption="Empirical
+replicate. The [Python code                                      
+(`ch6_figS10.py`)](https://github.com/gchure/phd/blob/master/src/chapter_06/code/ch6_figS10.py) used to generate this figure can be found on the thesis [GitHub
+repository](https://github.com/gchure/phd).  ](ch6_figS10){#fig:empirical_comparison short-caption="Empirical
 comparison of flow cytometry and single-cell microscopy."}

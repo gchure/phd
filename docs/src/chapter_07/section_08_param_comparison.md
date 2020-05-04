@@ -7,7 +7,7 @@ section has an accompanying interactive figure available on the [paper
 website](http://rpgroup.caltech.edu/mwc_mutants) which allows the reader
 to examine different combinations of parameter values and their
 agreement or disagreement with data taken from 
-@garcia2011; @brewster2014; @razo-mejia2018.
+@garcia2011; @brewster2014 and @razo-mejia2018.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;While the mutations used in this work and those in @daber2011a
 are the same, we report significantly different values for the inducer
@@ -21,7 +21,7 @@ Lac repressor has been the subject of intense biochemical and structural
 study. Many measurements of the inducer and DNA binding kinetics of the
 repressor *in vitro* [such as @ogorman1980] and their values
 have informed the fitting of other parameters from measurements *in
-vivo* [such as @daber2011a; @daber2009]. All of these
+vivo* (such as @daber2011a and  @daber2009a). All of these
 measurements, however, do not *directly* measure the DNA- or
 inducer-binding kinetics nor the equilibrium constant between the active
 and inactive states of the repressor. To properly estimate the
@@ -30,8 +30,8 @@ parameters or make assumptions regarding the states of the system.
 Examples of the estimated allosteric parameter values of the wild-type
 LacI repressor from our previous work [@razo-mejia2018], that of @daber2011a, and *in vitro* measurements from @ogorman1980 are given in Table 7.3
 The theoretical predictions for the
-fold-change in gene expression, along with values reported in
-@daber2009, can be seen using the interactive figure on the [paper
+fold-change in gene expression, along with the values reported in
+@daber2009a, can be seen using the interactive figure on the [paper
 website](https://rpgroup.caltech.edu/mwc_mutants), where the reader can
 also enter their own parameter values and independently assess the
 agreement or lack thereof with the data.
@@ -110,7 +110,10 @@ on plasmids, the fold-change as a function of repressor copy number
 exhibits strong nonlinearities. We used this effect as a way to
 independently infer the parameter $\Delta\varepsilon_{AI}$ and it can be
 seen that this breaks the degeneracy between different
-parameters.](ch7_figS20){#fig:lit_degeneracy short-caption="Degenerate fits of data using parameter values from the literature."} 
+parameters. The [Python code                                                
+(`ch7_figS20.py`)](https://github.com/gchure/phd/blob/master/src/chapter_07/code/ch7_figS20.py)
+used to generate this figure can be found on the thesis [GitHub
+repository](https://github.com/gchure/phd).  ](ch7_figS20){#fig:lit_degeneracy short-caption="Degenerate fits of data using parameter values from the literature."} 
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Without some direct *in vivo* measurements of
 these parameters, one must make assumptions about the system to make any
@@ -166,9 +169,9 @@ response.
 | $\Delta\varepsilon_{RA}$ (O1 operator) |  $-15.1^{+0.1}_{-0.1}\, k_BT$ |$4.5\, k_BT$ [@razo-mejia2018]|
 |                                         |  $-17.1_{-0.1}^{+0.1}\, k_BT$ | $-1.75\, k_BT$ [@daber2011a]|
 |                                         |  $-15.7_{-0.1}^{+0.1}\, k_BT$ | $0.35\, k_BT$ [@ogorman1980]|
-| $\Delta\varepsilon_{RA}$ (O1 operator)  | $-15.1^{+0.1}_{-0.1}\, k_BT$ |$4.5\, k_BT$ [@Razo-Mejia2018]| 
-|                                         |  $-17.1_{-0.1}^{+0.1}\, k_BT$| $-1.75\, k_BT$ [@Daber2011a]|
-|                                         |  $-15.7_{-0.1}^{+0.1}\, k_BT$| $0.35\, k_BT$ [@OGorman1980]|
+| $\Delta\varepsilon_{RA}$ (O1 operator)  | $-15.1^{+0.1}_{-0.1}\, k_BT$ |$4.5\, k_BT$ [@razo-mejia2018]| 
+|                                         |  $-17.1_{-0.1}^{+0.1}\, k_BT$| $-1.75\, k_BT$ [@daber2011a]|
+|                                         |  $-15.7_{-0.1}^{+0.1}\, k_BT$| $0.35\, k_BT$ [@ogorman1980]|
 |  $\Delta\varepsilon_{RA}$ (O2 operator) |  $-13.4_{-0.1}^{+0.1}\, k_BT$   |   $4.5 k_BT$ [@razo-mejia2018]| 
 |                                         |  $-15.4_{-0.1}^{+0.1}\, k_BT$   |   $-1.75\, k_BT$ [@daber2011a]|
 |                                         |  $-14.0_{-0.1}^{+0.1}\, k_BT$   |   $0.35\, k_BT$ [@ogorman1980]|

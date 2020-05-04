@@ -43,18 +43,31 @@ $K_A$ and $K_I$ for the $R=22$ strain as shown in Fig. 2.6 (D).
 
 ![**O1 strain fold-change predictions based on strain-specific parameter
 estimation of $K_A$ and $K_I$.** Fold-change in expression is plotted as a
-function of IPTG concentration for all strains containing an O1
-operator.](ch6_figS15){#fig:O1_comparison short-caption="O1 strain fold-change
-predictions based on strain-specific parameter estimation of $K_A$ and $K_I$."}
+function of IPTG concentration for all strains containing an O1 operator. The
+[Python code
+(`ch6_figS15-S17.py`)](https://github.com/gchure/phd/blob/master/src/chapter_06/code/ch6_figS15-17.py)
+used to generate this figure can be found on the thesis [GitHub
+repository](https://github.com/gchure/phd). ](ch6_figS15){#fig:O1_comparison
+short-caption="O1 strain fold-change predictions based on strain-specific
+parameter estimation of $K_A$ and $K_I$."}
 
 ![**O2 strain fold-change predictions based on strain-specific parameter
 estimation of $K_A$ and $K_I$.** Fold-change in expression is plotted as a
-function of IPTG concentration for all strains containing an O2 operator.](ch6_figS16){#fig:O2_comparison short-caption="O2 strain fold-change
-predictions based on strain-specific parameter estimation of $K_A$ and $K_I$."}
+function of IPTG concentration for all strains containing an O2 operator. The
+[Python code
+(`ch6_figS15-S17.py`)](https://github.com/gchure/phd/blob/master/src/chapter_06/code/ch6_figS15-17.py)
+used to generate this figure can be found on the thesis [GitHub
+repository](https://github.com/gchure/phd).](ch6_figS16){#fig:O2_comparison
+short-caption="O2 strain fold-change predictions based on strain-specific
+parameter estimation of $K_A$ and $K_I$."}
 
 ![**O3 strain fold-change predictions based on strain-specific parameter
 estimation of $K_A$ and $K_I$.** Fold-change in expression is plotted as a
-function of IPTG concentration for all strains containing an O3
-operator.](ch6_figS17){#fig:O3_comparison short-caption="O3 strain fold-change
-predictions based on strain-specific parameter estimation of $K_A$ and $K_I$."}
+function of IPTG concentration for all strains containing an O3 operator. The
+[Python code
+(`ch6_figS15-S17.py`)](https://github.com/gchure/phd/blob/master/src/chapter_06/code/ch6_figS15-17.py)
+used to generate this figure can be found on the thesis [GitHub
+repository](https://github.com/gchure/phd). ](ch6_figS17){#fig:O3_comparison
+short-caption="O3 strain fold-change predictions based on strain-specific
+parameter estimation of $K_A$ and $K_I$."}
 

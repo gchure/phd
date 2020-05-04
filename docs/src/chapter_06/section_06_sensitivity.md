@@ -88,12 +88,15 @@ fold-change to the $K_I$ parameter relative to the best-fit value
 $K_I=0.53^{+0.04}_{-0.04} \mu\text{M}$. Note that only the magnitude, and not
 the sign, of this difference describes the sensitivity of each parameter.
 Hence, the O3 strain is again less sensitive than the O1 and O2 strains. As
-in (A), but showing how the fold-change sensitivity for different
-repressor copy numbers. The strains with lower repressor copy number are less
-sensitive to changes in the dissociation constants, and hence their
-corresponding curves in have tighter credible regions. All curves were made
-using $\Delta\varepsilon_{RA} = -13.9~k_B T$. As in (C), the sensitivity
-of fold-change with respect to $K_I$ is again smallest (in magnitude) for the
-low repressor copy number strains.](ch6_figS11){#fig:kaki_sensitivity
-short-caption="Sensitivity analysis of the fold-change function to $K_A$ and
-$K_I$ estimates."}
+in (A), but showing how the fold-change sensitivity for different repressor
+copy numbers. The strains with lower repressor copy number are less sensitive
+to changes in the dissociation constants, and hence their corresponding
+curves in have tighter credible regions. All curves were made using
+$\Delta\varepsilon_{RA} = -13.9~k_B T$. As in (C), the sensitivity of
+fold-change with respect to $K_I$ is again smallest (in magnitude) for the
+low repressor copy number strains. The [Python code
+(`ch6_figS11.py`)](https://github.com/gchure/phd/blob/master/src/chapter_06/code/ch6_figS11.py)
+used to generate this figure can be found on the thesis [GitHub
+repository](https://github.com/gchure/phd).
+](ch6_figS11){#fig:kaki_sensitivity short-caption="Sensitivity analysis of
+the fold-change function to $K_A$ and $K_I$ estimates."}

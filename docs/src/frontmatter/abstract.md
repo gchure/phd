@@ -1,5 +1,5 @@
 Central to any definition of Life is the ability sense changes in ones'
-environment and respond in kind or, in other words, the ability to adapt.
+environment and respond in kind.
 Adaptive phenomena can be found across the biological scales ranging from the
 nanosecond-scale conformational changes of proteins, to temporary rewiring of
 metabolic networks, to the 3.5 billion years of evolution that produced the
@@ -25,7 +25,7 @@ term the free energy of the regulatory architecture. This permits us to
 collapse nearly 500 distinct measurements of the level of gene expression
 onto a master curve defined by this free energy.
 
-\hspace{10mm}We leverage this feature of the model to use
+\hspace{10mm}We leverage this feature of the model and use
 data collapse as a method to identify the effects of mutation, a strong
 evolutionary force responsible for much of the genetic diversity in bacteria.
 In this chapter, we examine how mutations within the allosteric repressor
@@ -38,7 +38,7 @@ illustrate that given sufficient knowledge of how single mutants behave, the
 complete phenotypic response of pairwise double mutants can be predicted with
 quantitative accuracy.
 
-\hspace{10mm}With this framework in hand we then turn to
+\hspace{10mm}With this framework in hand, we turn to
 exploring how changes in the physiological state of the cell influence the
 molecular biophysics of the regulatory architecture. We hypothesize that
 changes in the source of carbon in the growth medium or changes in the growth

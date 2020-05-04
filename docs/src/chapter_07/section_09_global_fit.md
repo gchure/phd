@@ -18,7 +18,7 @@ agree. We acknowledge that even when using *all* repressor copy numbers,
 the fit to Q18A remains imperfect. However we contend that this
 disagreement is comparable to that observed in @razo-mejia2018 which
 described the induction profile of the wild-type repressor. We find that
-the predicted change in free energy [bottom row in @Fig:global_DNA_profiles (B)]
+the predicted change in free energy (bottom row in @Fig:global_DNA_profiles (B))
 narrows compared to that in @Fig:DNA_delF_pairwise_comparison
 and Fig. 3.3 of Chapter 3, confirming that considering all induction profiles improves our
 inference of the most-likely DNA binding energy. There appears to be a
@@ -34,7 +34,10 @@ reported in Table 7.5. Bottom row shows the 95\% credible regions of the
 predicted change in free energy (shaded lines) along with the inferred free
 energy of data shown in the top row. In all plots, the inducer concentration
 is shown on a symmetric log scale with linear scaling between 0 and
-$10^{-2}\,\mu$M and log scaling elsewhere.](ch7_figS21){#fig:global_DNA_profiles short-caption="Induction profiles and predicted change in free energy using parameters estimated from the complete data sets."}
+$10^{-2}\,\mu$M and log scaling elsewhere. The [Python code                                                
+(`ch7_figS21.py`)](https://github.com/gchure/phd/blob/master/src/chapter_07/code/ch7_figS21.py)
+used to generate this figure can be found on the thesis [GitHub
+repository](https://github.com/gchure/phd).](ch7_figS21){#fig:global_DNA_profiles short-caption="Induction profiles and predicted change in free energy using parameters estimated from the complete data sets."}
 
 | **Mutant** |  $\Delta\varepsilon_{RA}$ [$k_BT$] |
 | :--: |:--:| 
@@ -65,7 +68,7 @@ sufficient to describe how the free energy changes as a result of the
 mutation.
 
 ![**Induction profiles and predicted change in free energy using parameters
-estimated from the complete data sets for inducer binding domain mutants. Top
+estimated from the complete data sets for inducer binding domain mutants.** Top
 row shows fold-change measurements (points) as mean and standard error with
 ten to fifteen biological replicates. Shaded lines correspond to the 95\%
 credible regions of the induction profiles using the estimated values of the
@@ -73,7 +76,10 @@ allosteric parameters reported in Table 7.6. Bottom row shows the 95\%
 credible regions of the predicted change in free energy (shaded lines) along
 with the inferred free energy of data shown in the top row. In all plots, the
 inducer concentration is shown on a symmetric log scale with linear scaling
-between 0 and 10$^{-2}\, mu$M and log scaling elsewhere.](ch7_figS22){#fig:global_IND_profiles short-caption="Induction profiles and predicted change in free energy using parameters estimated from the complete data sets for inducer binding domain mutants."}
+between 0 and 10$^{-2}\, mu$M and log scaling elsewhere. The [Python code                                                
+(`ch7_figS22.py`)](https://github.com/gchure/phd/blob/master/src/chapter_07/code/ch7_figS22.py)
+used to generate this figure can be found on the thesis [GitHub
+repository](https://github.com/gchure/phd).](ch7_figS22){#fig:global_IND_profiles short-caption="Induction profiles and predicted change in free energy using parameters estimated from the complete data sets for inducer binding domain mutants."}
 
 | **Mutant** |  $K_A$ \[$\mu$M\]  |    $K_I$ \[$\mu$M\]   |  $\Delta\varepsilon_{AI}$ \[$k_BT$\]  |
 |:----------:| :-----------------:| :--------------------:| :-----------------------------------: |

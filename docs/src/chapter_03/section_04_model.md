@@ -55,12 +55,15 @@ gene expression as a function of inducer concentration from @razo-mejia2018.
 Points and errors correspond to the mean and SEM of at least 10
 biological replicates. The thin lines represent the line of best fit given
 the model shown in (B). This model can be rewritten as a Fermi function with an
-energetic parameter F, which is the energetic difference between the
+energetic parameter $F$, which is the energetic difference between the
 repressor bound and unbound states of the promoter, schematized in C, Middle.
 The points in (C), Bottom correspond to the data shown in (C, left) collapsed onto
-a master curve defined by their calculated free energy F. The solid black
+a master curve defined by their calculated free energy $F$. The solid black
 line is the master curve defined by the Fermi function shown in (C,
-Middle)](ch3_fig1){#fig:mut_induction_summary short-caption="Summary of Chapter
+Middle). The [Python code
+(`ch3_fig1.py`)](https://github.com/gchure/phd/blob/master/src/chapter_03/code/ch3_fig1.py)
+used to generate this figure can be found on the thesis [GitHub
+repository](https://github.com/gchure/phd).](ch3_fig1){#fig:mut_induction_summary short-caption="Summary of Chapter
 2. A predictive framework for dissection of the simple repression motif"}
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A key feature of @Eq:mut_foldchange and
@@ -90,11 +93,11 @@ strains, the method of data collapse inspired by  @Eq:mut_collapse and
 regulatory architecture [@swem2008]. Similar data collapse approaches have
 been used previously in such a manner and have proved vital for
 distinguishing between changes in parameter values and changes in the
-fundamental behavior of the system[@swem2008; @keymer2006].
+fundamental behavior of the system [@swem2008; @keymer2006].
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Assuming that a given mutation does not result in a non-functional
 protein, it is reasonable to say that any or all of the parameters in
-@Eq:foldchange can be affected by the mutation,
+@Eq:mut_foldchange can be affected by the mutation,
 changing the observed induction profile and therefore the free energy.
 To examine how the free energy of a mutant $F^\text{(mut)}$ differs
 from that of the wild-type $F^\text{(wt)}$, we define $\Delta F = F^\mathrm{(mut)}-
@@ -106,7 +109,7 @@ $$
     \end{aligned}
 $${#eq:delF}
 $\Delta F$ describes how a mutation translates a point across the master
-curve shown in @Fig:mut_induction_theory (C). As we will show in the
+curve shown in @Fig:mut_induction_summary (C). As we will show in the
 coming paragraphs (illustrated in @Fig:deltaF_theory), this formulation
 coarse grains the myriad parameters shown in @Eq:mut_foldchange and 
 @Eq:mut_pact into three distinct quantities, each with different sensitivities to
@@ -165,14 +168,14 @@ measuring the change in free energy. A rigorous proof of this
 non-monotonic behavior given changing $K_A$ and $K_I$ can be found
 in supplemental Chapter 7.
 
-The second term in @Eq:delF captures how changes in the
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The second term in @Eq:delF captures how changes in the
 repressor copy number contributes to changes in free energy. It is
 important to note that this contribution to the free energy change
 depends on the total number of repressors in the cell, not just those in
 the active state. This emphasizes that changes in the expression of the
 repressor are energetically divorced from changes to the allosteric
 nature of the repressor. As a consequence, the change in free energy is
-constant for all inducer concentrations, as is schematized in Fig.
+constant for all inducer concentrations, as is schematized in 
 @Fig:deltaF_theory (C). Because the magnitude
 of the change in free energy scales logarithmically with changing
 repressor copy number, a mutation which increases expression from 1 to
@@ -185,7 +188,7 @@ magnitude are certainly possible from a single point mutation, as it has
 been shown that even synonymous substitutions can drastically change
 translation efficiency [@frumkin2018].
 
-The third and final term in @Eq:delF is the difference in
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The third and final term in @Eq:delF is the difference in
 the DNA binding energy between the mutant and wild-type repressors. All
 else being equal, if the mutated state binds more tightly to the DNA
 than the wild type
@@ -215,7 +218,7 @@ changes for (A) perturbations to $K_A$ and $K_I$, (B) changes to the
 allosteric energy difference $\Delta\varepsilon_{AI}$, (C) changes to
 repressor copy number, and (D) changes in DNA binding affinity**. The first
 column schematizes the changed parameters and the second column reflects
-which quantity in Eq. @eq:delF is affected. The third column shows
+which quantity in @Eq:delF is affected. The third column shows
 representative induction profiles from mutants which have smaller (purple)
 and larger (orange) values for the parameters than the wild type (gray). The
 fourth and fifth columns illustrate how the free energy is changed as a
@@ -223,6 +226,7 @@ result. Purple and red arrows indicate the direction in which the points are
 translated about the master curve. Three concentrations (points labeled 1, 2,
 and 3) are shown to illustrate how each point is moved in free-energy space.
 An interactive version of this figure can be found on the paper website
-(https://www.rpgroup.caltech.edu/mwc\_mutants).](ch3_fig2){#eq:deltaF_theory
+(https://www.rpgroup.caltech.edu/mwc\_mutants).](ch3_fig2){#fig:deltaF_theory
 short-caption="Parametric changes due to mutations and their corresponding
 free-energy shifts."}
+
