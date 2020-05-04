@@ -356,7 +356,7 @@ of previous studies [@sourjik2002b; @keymer2006; @swem2008].
 @Fig:states_weights (A) can be further coarse grained into two
 possible states -- one state being where the promoter is occupied by the
 repressor and another being where the promoter is *not* occupied by the
-repressor [@Fig:collapse_coarse_graining (A)]. As the transcriptionally active state
+repressor (@Fig:collapse_coarse_graining (A)). As the transcriptionally active state
 and the states in which the repressor is bound are mutually exclusive, we can
 compute the probability of the repressor not being bound $p_{\neg r}$ to the promoter as 
 $$
