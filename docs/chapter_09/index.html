@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, minimum-scale=1.0">
+<title>Chapter IX</title>
+
+
+<script type="text/x-mathjax-config">
+	MathJax.Hub.Config({
+    "HTML-CSS" : {
+        availableFonts : ["STIX"],
+        preferredFont : "Gyre Pagella",
+        webFont : "STIX-Web",
+        imageFont : null
+    },
+	  TeX: {
+		equationNumbers: {
+		  autoNumber: "AMS"
+		}
+	  },
+	  tex2jax: {
+		inlineMath: [['$','$']], 
+		displayMath: [['$$','$$']],
+		processEscapes: true,
+	  }
+	});
+  </script>
+  <style>
+	.eqnos { display: inline-block; position: relative; width: 100%; }
+	.eqnos br { display: none; }
+	.eqnos-number { position: absolute; right: 0em; top: 50%; line-height: 0; }
+  </style>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+  
+
+<link rel="icon" href="https://gchure.github.io/phd/favicon.ico" type="image/x-icon">
+<link href="https://fonts.googleapis.com/css?family=Nanum+Myeongjo&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Alegreya|Lora&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://gchure.github.io/phd/doks-theme/assets/css/style.css">
+
+	</head>
+	<body class="grey" data-spy="scroll" data-target=".js-scrollspy">
+		
+
+
+	<header class="site-header">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12">
+					
+						<a href="https://gchure.github.io/phd/" class="site-header__logo"><i class="icon icon--chevron-left"></i> Home</a>
+					
+					
+				</div><!-- /.col -->
+			</div><!-- /.row -->
+		</div><!-- /.container -->
+	</header><!-- /.site-header -->
+
+
+		<div class="hero-subheader" style="background-image: url(https://gchure.github.io/phd/doks-theme/assets/images/waves.jpg); background-position: center; object-fit: cover; width:100%;">
+
+			<div class="container" style="background-color: rgba(0,0,0, 0.75); border:0.75px solid white;">
+				<div class="row">
+					<div class="col-md-7">
+						<div class="align-container" data-mh>
+							<div class="align-inner">
+								
+									<h2 class="hero-subheader__title">Chapter IX</h2>
+								
+								
+									<h1 class="hero-subheader__title">Supplemental Information For Chapter V: How Bacteria Survive Osmotic Shocks
+</h1>
+								
+								
+								<!-- 
+									
+										<a href="https://gchure.github.io/phdchapter_07" class="btn btn--dark btn--rounded btn--w-icon btn--w-icon-left">
+											<i class="icon icon--arrow-left"></i>	
+										</a>
+									
+									
+										<a href="https://gchure.github.io/phdchapter_09" class="btn btn--dark btn--rounded btn--w-icon">
+											<i class="icon icon--arrow-right"></i>
+										</a>
+									
+								 -->
+							</div><!-- /.align-inner -->
+						</div><!-- /.align-container -->
+					</div><!-- /.col -->
+					
+				</div><!-- /.row -->
+			</div><!-- /.container -->
+		</div><!-- /.hero-subheader -->
+		
+				<nav class="page-nav">
+					<div class="container" >
+						<div class="row" >
+							<div class="col-xs-12">
+								
+									<a href="https://gchure.github.io/phdchapter_07" class="page-nav__item page-nav__item--prev">
+										<i class="icon icon--arrow-left"></i>
+										Chapter VII
+									</a><!-- /.page-nav__item -->
+								
+								
+									<a href="https://gchure.github.io/phdchapter_09" class="page-nav__item page-nav__item--next">
+										Chapter IX
+										<i class="icon icon--arrow-right"></i>
+									</a><!-- /.page-nav__item -->
+								
+							</div><!-- /.col -->
+						</div><!-- /.row -->
+					</div><!-- /.container -->
+				</nav><!-- /.page-nav -->
+			
+
+		<div class="section">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-7">
+						<div class="content">
+							<strong>Published as …</strong>
+<hr/>
+<p>A version of this chapter was published as Chure, G.* , Lee, H.J.* , Rasmussen, A., and Phillips, R. (2018). <em>Connecting the Dots between Mechanosensitive Channel Abundance, Osmotic Shock, and Survival at Single-Cell Resolution.</em> Journal of Bacteriology 200. (* contributed equally). G.C., H.J.L, and R.P. designed and planned experiments. G.C. and H.J.L performed experiments. H.J.L constructed bacterial strains. A.R. performed electrophysiology experiments. G.C. performed data analysis and figure generation. G.C. and R.P. wrote the manuscript.</p>
+<h2 id="experimental-validation-of-mscl-sfgfp">Experimental validation of MscL-sfGFP</h2>
+<p>Despite revolutionizing modern cell biology, tagging proteins with fluorophores can lead to myriad deleterious effects such as mislocalization, abrogation of functionality, or even cytotoxicity. In this section, we examine the stability and functionality of the MscL-sfGFP construct used in this work.</p>
+<h3 id="comparing-functionality-of-wild-type-and-fluorescently-tagged-mscl">Comparing functionality of wild-type and fluorescently tagged MscL</h3>
+<p>     To quantitatively compare the functionality between the wild-type MscL and MscL-sfGFP, patch-clamp electrophysiology experiments were conducted on each channel. Patch-clamp recordings were performed on membrane patches derived from giant protoplasts which were prepared as previously described <span class="citation" data-cites="blount1999">(Blount et al. <a href="#ref-blount1999" role="doc-biblioref">1999</a>)</span>. In brief, cells were grown in Luria-Bertani (LB) medium with 0.06 mg/ml cephalexin for 2.5 hours. The elongated cells were then collected by centrifugation and digested by 0.2 mg/ml lysozyme to form giant protoplasts.</p>
+<p>     Excised, inside-out patches were analyzed at a membrane potential of -20 mV with pipette and bath solutions containing 200 mM KCl, 90 mM MgCl<span class="math inline"><em></em><sub>2</sub></span>, 10 mM CaCl<span class="math inline"><em></em><sub>2</sub></span>, and 5 mM HEPES buffer at pH 7. All data were acquired at a sampling rate of 50 kHz with 5 kHz filtration using an AxoPatch 200B amplifier and pClamp software (Molecular Devices). The pressure threshold for activation a single MscS channel (blue stripe in Fig. 1) was compared to that of single MscL channels (orange strip in Fig. 1). The pressure threshold for activation of the MscL channels was referenced against the activation threshold of MscS to determine the pressure ratio (PL:PS) for gating as previously described <span class="citation" data-cites="blount1996">(Blount et al. <a href="#ref-blount1996" role="doc-biblioref">1996</a>)</span>. Recordings of the transmembrane current were made of three individual patches with an average PL:PS ratio of 1.56 for MscL-sfGFP. This ratio quantitatively agrees with the PL:PS ratio of 1.54 measured in a strain (MJF429 from the Booth laboratory) which expresses the wild-type MscL protein from the chromosome. The average transient current change from MscL openings (Fig. 1 shaded orange region) is 75 pA, corresponding to a single channel conductance of 3.7 nS, comparable to the reported values of wild-type MscL. The agreement between these two strains indicates that there is negligible difference in functionality between MscL and MscL-sfGFP, allowing us to make physiological conclusions of the wild-type channel from our experiments.</p>
+<figure>
+<img src="ch9_figS1.png" id="fig:ephys" data-short-caption="Characteristic MscL-sfGFP conductance obtained through patch-clamp electrophysiology" alt="" /><figcaption>Figure 1: <strong>Characteristic MscL-sfGFP conductance obtained through patch-clamp electrophysiology</strong>. Top panel presents a characteristic measurement of channel current obtained through a patch-clamp electrophysiology measurement of bacterial protoplasts. The bottom panel shows the applied pressure through the micropipette to facilitate opening of the mechanosensitive channels. The blue shaded region indicates opening of the mechanosensitive channel of small conductance (MscS). The shaded orange region represents opening of single MscL channels. These regions were used to compute the PL:PS ratio. The <a href="https://github.com/gchure/phd/blob/master/src/chapter_09/code/ch9_figS1.py">Python code (<code>ch9_figS1.py</code>)</a> used to generate this figure can be found on the thesis <a href="https://github.com/gchure/phd">GitHub repository</a>.</figcaption>
+</figure>
+<h3 id="maturation-time-of-mscl-sfgfp">Maturation time of MscL-sfGFP</h3>
+<p>     Reliable quantification of the channel copy number is paramount to this work. As such, it is important to verify that the detected fluorescence per cell accurately represents the total cellular MscL copy number. We have made the assumption that the total fluorescence per represents all MscL-sfGFP channels present. However, it is possible that there are more channels present per cell but are not detected as the fluorophores have not properly matured. This potential error becomes more significant with longer maturation times of the fluorophore as the mean expression level changes with the growth phase of the culture. With a maturation time much longer than the typical cell division time, it is possible that the measured channel copy number represents only a fraction of the total number inherited over generations.</p>
+<p>     In our earlier work, we quantified the MscL-sfGFP channel copy number using fluorescence microscopy as well as with quantitative Western blotting. We found that these two methods agreed within 20% of the mean value, often with the counts resulting from microscopy being slightly larger than those measured through Western blotting <span class="citation" data-cites="bialecka-fornal2012">(Bialecka-Fornal et al. <a href="#ref-bialecka-fornal2012" role="doc-biblioref">2012</a>)</span>. This strongly suggests that a negligible amount of channels are not observed due to inactive fluorophores.</p>
+<p>    Despite these suggestive data, we directly measured the maturation time of the superfolder GFP protein. We constructed a chromosomal integration of sfGFP expressed from a promoter under regulation from plasmid-borne TetR (<em>E. coli</em> MG1655 K12 <em><span class="math inline"><em>Δ</em></span>lacIZYA ybcN::sfGFP</em>) . These cells were allowed to grow in LB supplemented with 500 mM NaCl held at 37<span class="math inline"><em></em><sup>∘</sup></span>C to an OD<span class="math inline"><em></em><sub>600nm</sub></span> of approximately 0.3. At this time, transcription and translation of the sfGFP gene was induced by addition of 10 ng/mL of anhydrous tetracycline. This expression was allowed to occur for three minutes before the addition of 100 <span class="math inline"><em>μ</em></span>g/mL of kanamycin, ceasing proper protein synthesis. Three minutes of expression was chosen to provide enough time for transcription and translation. The sfGFP variant used in this work is 1155 base pairs. We can assume that the rate for transcription is 42 nucleotides per second (BNID 108488)<span class="citation" data-cites="milo2010">(Milo et al. <a href="#ref-milo2010" role="doc-biblioref">2010</a>)</span>, meaning approximately 28 seconds are needed to transcribe the gene. The translation rate is on the order of 10 amino acids per second, (12 - 42 amino acids / s, BNID 100059)<span class="citation" data-cites="milo2010">(Milo et al. <a href="#ref-milo2010" role="doc-biblioref">2010</a>)</span>. This means that 39 seconds are needed to complete translation. In total, approximately one minute is needed to complete expression of the genes. These numbers are not known for LB supplemented with 500 mM NaCl but may be reduced. For this reason, we extended the length of induction to three minutes before translation was ceased.</p>
+<p>     The excess anhydrous tetracycline was removed from the culture through centrifugation and washing with one volume of LB supplemented with 500 mM NaCl and 100 <span class="math inline"><em>μ</em></span>g/mL kanamycin at 37<span class="math inline"><em></em><sup>∘</sup></span>C. The maturation of sfGFP was then monitored through flow cytometry by measuring the mean expression of 100,000 cells every 60 to 90 seconds. The result of these measurements are shown in Fig. 2.</p>
+<p>    We observe complete maturation of the protein within 20 minutes after translation of the sfGFP gene was ceased. While the growth rate in LB + 500mM NaCl varies depending on the expression of MscL-sfGFP, we typically observe doubling times between 30 and 40 minutes, as indicated by a orange stripe in Fig. 2 (A). To examine the ``best case” scenario for cell growth in this medium, we measured the growth rate of the same <em>E. coli</em> strain used to measure the fluorophore maturation time (Fig. 2 B). We observed a doubling time of 35 <span class="math inline">±</span> 1 min, which falls in the middle of the yellow stripe shown in Fig. 2 A. These data, coupled with our previous quantification of MscL copy number using independent methods, suggests that the fluorescence measurements made in this work reflect the total amount of MscL protein expressed.</p>
+<figure>
+<img src="ch9_figS2.png" id="fig:maturation_time" data-short-caption="Measurement of sfGFP maturation as a function of time through flow cytometry." alt="" /><figcaption>Figure 2: <strong>Measurement of sfGFP maturation as a function of time through flow cytometry.</strong> (A) Measurement of sfGFP fluorescence intensity as a function of time after cessation of protein translation. Points and connected lines indicate means of gated flow cytometry intensity distributions. Yellow stripe indicates the range of doubling times observed for the various RBS mutant strains described in this work (B) Growth curve of <em>E. coli</em> MG1655 cells in LB + 500mM NaCl. Red points indicate individual absorbance measurements. Line of best fit is shown in black with the uncertainty shown in shaded gray. The measured doubling time was 35 <span class="math inline">±</span> 1 min. The <a href="https://github.com/gchure/phd/blob/master/src/chapter_09/code/ch9_figS2.py">Python code (<code>ch9_figS2.py</code>)</a> used to generate this figure can be found on the thesis <a href="https://github.com/gchure/phd">GitHub repository</a>.</figcaption>
+</figure>
+<h2 id="calibration-of-a-standard-candle">Calibration of a Standard Candle</h2>
+<p>    To estimate the single-cell MscL abundance via microscopy, we needed to determine a calibration factor that could translate arbitrary fluorescence units to protein copy number. To compute this calibration factor, we relied on <em>a priori</em> knowledge of the mean copy number of MscL-sfGFP for a particular bacterial strain in specific growth conditions. In Bialecka-Fornal et al. 2012 <span class="citation" data-cites="bialecka-fornal2012">(Bialecka-Fornal et al. <a href="#ref-bialecka-fornal2012" role="doc-biblioref">2012</a>)</span>, the average MscL copy number for a population of cells expressing an MscL-sfGFP fusion (<em>E. coli</em> K-12 MG1655 <span class="math inline"><em>ϕ</em></span>(<em>mscL-sfGFP</em>)) cells was measured using quantitative Western blotting and single-molecule photobleaching assays. By growing this strain in identical growth and imaging conditions, we can make an approximate measure of this calibration factor. In this section, we derive a statistical model for estimating the most-likely value of this calibration factor and its associated error.</p>
+<h3 id="definition-of-a-calibration-factor">Definition of a calibration factor</h3>
+<p>    We assume that all detected fluorescence signal from a particular cell is derived from the MscL-sfGFP protein, after background subtraction and correction for autofluorescence. The arbitrary units of fluorescence can be directly related to the protein copy number via a calibration factor <span class="math inline"><em>α</em></span>, <span id="eq:mscl_ian"><br /><span class="math display"><em>I</em><sub>tot</sub> = <em>α</em><em>N</em><sub>tot</sub>,   (1)</span><br /></span> where <span class="math inline"><em>I</em><sub>tot</sub></span> is the total cell fluorescence and <span class="math inline"><em>N</em><sub>tot</sub></span> is the total number of MscL proteins per cell. <span class="citation" data-cites="bialecka-fornal2012">Bialecka-Fornal et al. (<a href="#ref-bialecka-fornal2012" role="doc-biblioref">2012</a>)</span> et al. report the average cell Mscl copy number for the population rather than the distribution. Knowing only the mean, we can rewrite Eq. 1 as <span id="eq:mscl_avg_ian"><br /><span class="math display">⟨<em>I</em><sub>tot</sub>⟩ = <em>α</em>⟨<em>N</em><sub>tot</sub>⟩,   (2)</span><br /></span> assuming that <span class="math inline"><em>α</em></span> is a constant value that does not change from cell to cell or fluorophore to fluorophore.</p>
+<p>    The experiments presented in this work were performed using non-synchronously growing cultures. As there is a uniform distribution of growth phases in the culture, the cell size distribution is broad the the extremes being small, newborn cells and large cells in the process of division. As described in the main text, the cell size distribution of a population is broadened further by modulating the MscL copy number with low copy numbers resulting in aberrant cell morphology. To speak in the terms of an effective channel copy number, we relate the average areal intensity of the population to the average cell size, <span id="eq:area_conversion"><br /><span class="math display">⟨<em>I</em><sub>tot</sub>⟩ = ⟨<em>I</em><sub><em>A</em></sub>⟩⟨<em>A</em>⟩ = <em>α</em>⟨<em>N</em><sub>tot</sub>⟩,   (3)</span><br /></span> where <span class="math inline">⟨<em>I</em><sub><em>A</em></sub>⟩</span> is the average areal intensity in arbitrary units per pixel of the population and <span class="math inline">⟨<em>A</em>⟩</span> is the average area of a segmented cell. As only one focal plane was imaged in these experiments, we could not compute an appropriate volume for each cell given the highly aberrant morphology. We therefore opted to use the projected two-dimensional area of each cell as a proxy for cell size. Given this set of measurements, the calibration factor can be computed as <span id="eq:mscl_simple_cal_factor"><br /><span class="math display">$$
+\alpha = {\langle I_A \rangle\langle A \rangle \over \langle N_\text{tot} \rangle}.
+\qquad(4)$$</span><br /></span>     While it is tempting to use Eq. 4 directly, there are multiple sources of error that are important to propagate through the final calculation. The most obvious error to include is the measurement error reported in Bialecka-Fornal et al. 2012 for the average MscL channel count <span class="citation" data-cites="bialecka-fornal2012">(Bialecka-Fornal et al. <a href="#ref-bialecka-fornal2012" role="doc-biblioref">2012</a>)</span>. There are also slight variations in expression across biological replicates that arise from a myriad of day-to-day differences. Rather than abstracting all sources of error away into a systematic error budget, we used an inferential model derived from Bayes’ theorem that allows for the computation of the probability distribution of <span class="math inline"><em>α</em></span>.</p>
+<h3 id="estimation-of-alpha-for-a-single-biological-replicate">Estimation of <span class="math inline"><em>α</em></span> for a single biological replicate</h3>
+<p>    A single data set consists of several hundred single-cell measurements of intensity, area of the segmentation mask, and other morphological quantities. The areal density <span class="math inline"><em>I</em><sub><em>A</em></sub></span> is computed by dividing the total cell fluorescence by the cell area <span class="math inline"><em>A</em></span>. We are interested in computing the probability distributions for the calibration factor <span class="math inline"><em>α</em></span>, the average cell area <span class="math inline">⟨<em>A</em>⟩</span>, and the mean number of channels per cell <span class="math inline">⟨<em>N</em><sub>tot</sub>⟩</span> for the data set as a whole given only <span class="math inline"><em>I</em><sub><em>A</em></sub></span> and <span class="math inline"><em>A</em></span>. Using Bayes’ theorem, the probability distribution for these parameters given a single cell measurement, hereafter called the posterior distribution, can be written as <span id="eq:simple_bayes"><br /><span class="math display">$$
+g(\alpha, \langle A \rangle, \langle N_\text{tot} \rangle\,\vert\, A, I_A) = {f(A, I_A\,\vert
+\, \alpha,\langle A \rangle, \langle N_\text{tot} \rangle) g(\alpha,\langle A \rangle, \langle N_\text{tot} \rangle) \over f(\alpha, I_A)},
+\qquad(5)$$</span><br /></span> where <span class="math inline"><em>g</em></span> and <span class="math inline"><em>f</em></span> represent probability density functions over parameters and data, respectively. The term <span class="math inline"><em>f</em>(<em>A</em>, <em>I</em><sub><em>A</em></sub> | <em>α</em>, ⟨<em>A</em>⟩, ⟨<em>N</em><sub>tot</sub>⟩)</span> in the numerator represents the likelihood of observing the areal intensity <span class="math inline"><em>I</em><sub><em>A</em></sub></span> and area <span class="math inline"><em>A</em></span> of a cell for a given values of <span class="math inline"><em>α</em></span>, <span class="math inline">⟨<em>A</em>⟩</span>, and <span class="math inline">⟨<em>N</em><sub>tot</sub>⟩</span>. The second term in the numerator <span class="math inline"><em>g</em>(<em>α</em>, ⟨<em>A</em>⟩, ⟨<em>N</em><sub>tot</sub>⟩)</span> captures all prior knowledge we have regarding the possible values of these parameters knowing nothing about the measured data. The denominator, <span class="math inline"><em>f</em>(<em>I</em><sub><em>A</em></sub>, <em>A</em>)</span> captures the probability of observing the data knowing nothing about the parameter values. This term, in our case, serves simply as a normalization constant and is neglected for the remainder of this section.</p>
+<p>    To determine the appropriate functional form for the likelihood and prior, we must make some assumptions regarding the biological processes that generate them. As there are many independent processes that regulate the timing of cell division and cell growth, such as DNA replication and peptidoglycan synthesis, it is reasonable to assume that for a given culture the distribution of cell size would be normally distributed with a mean of <span class="math inline">⟨<em>A</em>⟩</span> and a variance <span class="math inline"><em>σ</em><sub>⟨<em>A</em>⟩</sub></span>. Mathematically, we can write this as <span id="eq:area_likelihood"><br /><span class="math display">$$
+f(A\,\vert\,\langle A \rangle, \sigma_{\langle A \rangle}) \propto {1 \over \sigma_{\langle A \rangle} }\exp\left[-{(A - \langle A \rangle)^2 \over 2\sigma_{\langle A \rangle}^2}\right],
+\qquad(6)$$</span><br /></span> where the proportionality results from dropping normalization constants for notational simplicity.</p>
+<p>     While total cell intensity is intrinsically dependent on the cell area the areal intensity <span class="math inline"><em>I</em><sub><em>A</em></sub></span> is independent of cell size. The myriad processes leading to the detected fluorescence, such as translation and proper protein folding, are largely independent, allowing us to assume a normal distribution for <span class="math inline"><em>I</em><sub><em>A</em></sub></span> as well with a mean <span class="math inline">⟨<em>I</em><sub><em>A</em></sub>⟩</span> and a variance <span class="math inline"><em>σ</em><sub><em>I</em><sub><em>A</em></sub></sub><sup>2</sup></span>. However, we do not have knowledge of the average areal intensity for the standard candle strain <em>a priori</em>. This can be calculated knowing the calibration factor, total MscL channel copy number, and the average cell area as <span id="eq:avg_rho"><br /><span class="math display">$$
+I_A =  {\alpha\langle N_\text{tot} \rangle \over \langle A \rangle}.
+\qquad(7)$$</span><br /></span> Using Eq. 7 to calculate the expected areal intensity for the population, we can write the likelihood as a Gaussian distribution, <span id="eq:rho_likelihood"><br /><span class="math display">$$
+f(I_A\,\vert\,\alpha,\langle A \rangle,\langle N_\text{tot} \rangle, \sigma_{I_A}) \propto {1 \over \sigma_{I_A} }\exp\left[-{\left(I_A - {\alpha \langle N_\text{tot} \rangle\over \langle A \rangle}\right)^2 \over 2 \sigma_{I_A}^2}\right].
+\qquad(8)$$</span><br /></span></p>
+<p>    With these two likelihoods in hand, we are tasked with determining the appropriate priors. As we have assumed normal distributions for the likelihoods of <span class="math inline">⟨<em>A</em>⟩</span> and <span class="math inline"><em>I</em><sub><em>A</em></sub></span>, we have included two additional parameters, <span class="math inline"><em>σ</em><sub>⟨<em>A</em>⟩</sub></span> and <span class="math inline"><em>σ</em><sub><em>I</em><sub><em>A</em></sub></sub></span>, each requiring their own prior probability distribution. It is common practice to assume maximum ignorance for these variances and use a Jeffreys prior <span class="citation" data-cites="sivia2006">(Sivia and Skilling <a href="#ref-sivia2006" role="doc-biblioref">2006</a>)</span>, <span id="eq:jeffreys"><br /><span class="math display">$$
+g(\sigma_{\langle A \rangle}, \sigma_{I_A}) = {1 \over \sigma_{\langle A \rangle}\sigma_{I_A} }.
+\qquad(9)$$</span><br /></span></p>
+<p>    The next obvious prior to consider is for the average channel copy number <span class="math inline">⟨<em>N</em><sub>tot</sub>⟩</span>, which comes from Bialecka-Fornal et al. 2012. In this work, they report a mean <span class="math inline"><em>μ</em><sub><em>N</em></sub></span> and variance <span class="math inline"><em>σ</em><sub><em>N</em></sub><sup>2</sup></span>, allowing us to assume a normal distribution for the prior, <span id="eq:informative_prior"><br /><span class="math display">$$
+g(\langle N_\text{tot}\rangle\,\vert\, \mu_N,\sigma_N) \propto {1 \over \sigma_N}\exp\left[-{(\langle N_\text{tot} \rangle - \mu_N)^2 \over 2 \sigma_N^2}\right].
+\qquad(10)$$</span><br /></span> For <span class="math inline"><em>α</em></span> and <span class="math inline">⟨<em>A</em>⟩</span>, we have some knowledge of what these parameters can and cannot be. For example, we know that neither of these parameters can be negative. As we have been careful to not overexpose the microscopy images, we can say that the maximum value of <span class="math inline"><em>α</em></span> would be the bit-depth of our camera. Similarly, it is impossible to segment a single cell with an area larger than our camera’s field of view (although there are biological limitations to size below this extreme). To remain maximally uninformative, we can assume that the parameter values are uniformly distributed between these bounds, allowing us to state <span id="eq:alpha_uniform_prior"><br /><span class="math display">$$
+g(\alpha) = \begin{cases} {1 \over \alpha_\text{max} - \alpha_\text{min} } &amp; \alpha_\text{min} \leq \alpha \leq \alpha_\text{max} \\
+0 &amp; \text{otherwise}
+\end{cases},
+\qquad(11)$$</span><br /></span> for <span class="math inline"><em>α</em></span> and <span id="eq:area_uniform_prior"><br /><span class="math display">$$
+g(\langle A \rangle) = \begin{cases} {1 \over \langle A \rangle_\text{max} - \langle A \rangle_\text{min} } &amp; \langle A \rangle_\text{min} \leq \langle A \rangle \leq \langle A \rangle_\text{max}\\
+0 &amp; \text{otherwise}
+\end{cases}
+\qquad(12)$$</span><br /></span> for <span class="math inline">⟨<em>A</em>⟩</span>.</p>
+<p>     Piecing Eq. 6 through Eq. 12 together generates a complete posterior probability distribution for the parameters given a single cell measurement. This can be generalized to a set of <span class="math inline"><em>k</em></span> single cell measurements as <span id="eq:single_rep_post"><br /><span class="math display">$$
+\begin{aligned}
+g(\alpha,\langle A \rangle, \langle N_\text{tot} &amp; \rangle, \sigma_{I_A}, \sigma_{\langle A \rangle}\,\vert\, [I_A, A], \mu_N, \sigma_N) \propto {1 \over (\alpha_\text{max} - \alpha_\text{min})(\langle A \rangle_\text{max} - \langle A \rangle_\text{min})}{1 \over (\sigma_{I_A}\sigma_{\langle A \rangle})^{k+1} }\,\times\\\\
+&amp;{1 \over \sigma_N}\exp\left[- {(\langle N_\text{tot}\rangle - \mu_N)^2 \over 2\sigma_N^2}\right]
+\prod\limits_i^k\exp\left[-{(A^{(i)} - \langle A \rangle)^2 \over 2\sigma_{\langle A \rangle}^2} - {\left(I_A^{(i)} - {\alpha \langle N_\text{tot}\rangle \over \langle A \rangle}\right)^2 \over 2\sigma_{I_A}^2}\right] \end{aligned},
+\qquad(13)$$</span><br /></span> where <span class="math inline">[<em>I</em><sub><em>A</em></sub>, <em>A</em>]</span> represents the set of <span class="math inline"><em>k</em></span> single-cell measurements.</p>
+<p>    As small variations in the day-to-day details of cell growth and sample preparation can alter the final channel count of the standard candle strain, it is imperative to perform more than a single biological replicate. However, properly propagating the error across replicates is non trivial. One option would be to pool together all measurements of <span class="math inline"><em>n</em></span> biological replicates and evaluate the posterior given in Eq. 13. However, this by definition assumes that there is no difference between replicates. Another option would be to perform this analysis on each biological replicate individually and then compute a mean and standard deviation of the resulting most-likely parameter estimates for <span class="math inline"><em>α</em></span> and <span class="math inline">⟨<em>A</em>⟩</span>. While this is a better approach than simply pooling all data together, it suffers a bias from giving each replicate equal weight, skewing the estimate of the most-likely parameter value if one replicate is markedly brighter or dimmer than the others. Given this type of data and a limited number of biological replicates (<span class="math inline"><em>n</em> = 6</span> in this work), we chose to extend the Bayesian analysis presented in this section to model the posterior probability distribution for <span class="math inline"><em>α</em></span> and <span class="math inline">⟨<em>A</em>⟩</span> as a hierarchical process in which <span class="math inline"><em>α</em></span> and <span class="math inline">⟨<em>A</em>⟩</span> for each replicate is drawn from the same distribution.</p>
+<h3 id="a-hierarchical-model-for-estimating-alpha">A hierarchical model for estimating <span class="math inline"><em>α</em></span></h3>
+<p>    In the previous section, we assumed maximally uninformative priors for the most-likely values of <span class="math inline"><em>α</em></span> and <span class="math inline">⟨<em>A</em>⟩</span>. While this is a fair approach to take, we are not completely ignorant with regard to how these values are distributed across biological replicates. A major assumption of our model is that the most-likely value of <span class="math inline"><em>α</em></span> and <span class="math inline">⟨<em>A</em>⟩</span> for each biological replicate are comparable, so long as the experimental error between them is minimized. In other words, we are assuming that the most-likely value for each parameter for each replicate is drawn from the same distribution. While each replicate may have a unique value, they are all related to one another. Unfortunately, proper sampling of this distribution requires an extensive amount of experimental work, making inferential approaches more attractive.</p>
+<p>     This approach, often called a multi-level or hierarchical model, is schematized in Fig. 3. Here, we use an informative prior for <span class="math inline"><em>α</em></span> and <span class="math inline">⟨<em>A</em>⟩</span> for each biological replicate. This informative prior probability distribution can be described by summary statistics, often called hyper-parameters, which are then treated as the “true” value and are used to calculate the channel copy number. As this approach allows us to get a picture of the probability distribution of the hyper-parameters, we are able to report a point estimate for the most-likely value along with an error estimate that captures all known sources of variation.</p>
+<figure>
+<img src="ch9_figS3.png" id="fig:hierarchical_model" data-short-caption="Schematic of hierarchical model structure for estimating MscL-sfGFP fluorescence calibration factor." alt="" /><figcaption>Figure 3: <strong>Schematic of hierarchical model structure.</strong> The hyper-parameter probability distributions (top panel) are used as an informative prior for the most-likely parameter values for each biological replicate (middle panel). The single-cell measurements of cell area and areal intensity (bottom panel) are used as data in the evaluation of the likelihood.</figcaption>
+</figure>
+<p>    The choice for the functional form for the informative prior is often not obvious and can require other experimental approaches or back-of-the-envelope estimates to approximate. Each experiment in this work was carefully constructed to minimize the day-to-day variation. This involved adhering to well-controlled growth temperatures and media composition, harvesting of cells at comparable optical densities, and ensuring identical imaging parameters. As the experimental variation is minimized, we can use our knowledge of the underlying biological processes to guess at the approximate functional form. For similar reasons presented in the previous section, cell size is controlled by a myriad of independent processes. As each replicate is independent of another, it is reasonable to assume a normal distribution for the average cell area for each replicate. This normal distribution is described by a mean <span class="math inline">$\tilde{\langle A \rangle}$</span> and variance <span class="math inline"><em>σ̃</em><sub>⟨<em>A</em>⟩</sub></span>. Therefore, the prior for <span class="math inline">⟨<em>A</em>⟩</span> for <span class="math inline"><em>n</em></span> biological replicates can be written as <span id="eq:hyperprior_area"><br /><span class="math display">$$
+g(\langle A \rangle\, \vert\, \tilde{\langle A \rangle}, \tilde{\sigma}_{\langle A \rangle}) \propto {1 \over \tilde{\sigma}_{\langle A \rangle}^n}\prod\limits_{j=1}^{n}\exp\left[-{(\langle A \rangle_j - \tilde{\langle A \rangle})^2 \over 2 \tilde{\sigma}_{\langle A \rangle}^2}\right].
+\qquad(14)$$</span><br /></span> In a similar manner, we can assume that the calibration factor for each replicate is normally distributed with a mean <span class="math inline"><em>α̃</em></span> and variance <span class="math inline"><em>σ̃</em><sub><em>α</em></sub></span>, <span id="eq:hyperprior_alpha"><br /><span class="math display">$$
+g(\alpha\,\vert\,\tilde{\alpha}, \tilde{\sigma}_\alpha) \propto {1 \over \tilde{\sigma}_\alpha^n}\prod\limits_{j=1}^n \exp\left[-{(\alpha_j - \tilde{\alpha})^2 \over 2\tilde{\sigma}_\alpha^2}\right].
+\qquad(15)$$</span><br /></span></p>
+<p>    With the inclusion of two more normal distributions, we have introduced four new parameters, each of which needing their own prior. However, our knowledge of the reasonable values for the hyper-parameters has not changed from those described for a single replicate. We can therefore use the same maximally uninformative Jeffreys priors given in Eq. 9 for the variances and the uniform distributions given in Eq. 11 and Eq. 12 for the means. Stitching all of this work together generates the full posterior probability distribution for the best-estimate of <span class="math inline"><em>α̃</em></span> and <span class="math inline">$\tilde{\langle A \rangle}$</span> shown in Eq. 2 given <span class="math inline"><em>n</em></span> replicates of <span class="math inline"><em>k</em></span> single cell measurements, <span id="eq:cal_factor_posterior"><br /><span class="math display">$$
+\begin{aligned}
+g(\tilde{\alpha}, \tilde{\sigma}_\alpha, \tilde{\langle A \rangle}, \tilde{\sigma}_{\langle A \rangle}, &amp;\{\langle N_\text{tot} \rangle, \langle A \rangle, \alpha, \sigma_{I_A}\}\,\vert\, [I_A, A], \mu_N, \sigma_N) \propto\\
+&amp;{1 \over (\tilde{\alpha}_\text{max} - \tilde{\alpha}_\text{min})(\tilde{\langle A \rangle}_\text{max} - \tilde{\langle A \rangle}_\text{min})\sigma_N^n(\tilde{\sigma}_\alpha\tilde{\sigma}_{\langle A \rangle})^{n + 1} }\,\times\\
+&amp;\prod\limits_{j=1}^n\exp\left[-{(\langle N \rangle_j^{(i)} - \mu_N)^2 \over 2\sigma_N^2} - {(\alpha_j - \tilde{\alpha})^2 \over 2\tilde{\sigma}_\alpha^2} - {(\langle A \rangle_j - \tilde{\langle A \rangle})^2 \over 2\tilde{\sigma}_{\langle A \rangle}^2}\right]\,\times\,\\ 
+&amp;{1 \over (\sigma_{ {I_A}_j}\sigma_{\langle A \rangle_j})^{k_j + 1} }\prod\limits_{i=1}^{k_j}\exp\left[-{(A_j^{(i)} - \langle A \rangle_j)^2 \over 2\sigma^{(i)2}_{\langle A \rangle_j} } - {\left({I_A}_{j}^{(i)} - {\alpha_j \langle N_\text{tot}\rangle_j \over \langle A \rangle_j}\right)\over 2\sigma_{ {I_A}_j}^{(i)2} }\right]
+\end{aligned}
+\qquad(16)$$</span><br /></span> where the braces <span class="math inline">{…}</span> represent the set of parameters for biological replicates and the brackets <span class="math inline">[…]</span> correspond to the set of single-cell measurements for a given replicate.</p>
+<p>    While Eq. 16 is not analytically solvable, it can be easily sampled using Markov chain Monte Carlo (MCMC). The results of the MCMC sampling for <span class="math inline"><em>α̃</em></span> and <span class="math inline">$\tilde{\langle A \rangle}$</span> can be seen in Fig. 4. From this approach, we found the most-likely parameter values of <span class="math inline">3300<sub> − 700</sub><sup> + 700</sup></span> a.u. per MscL channel and <span class="math inline">5.4<sub> − 0.5</sub><sup> + 0.4</sup></span> <span class="math inline"><em>μ</em></span>m<span class="math inline"><em></em><sup>2</sup></span> for <span class="math inline"><em>α̃</em></span> and <span class="math inline">$\tilde{\langle A \rangle}$</span>, respectively. Here, we’ve reported the median value of the posterior distribution for each parameter with the upper and lower bound of the 95% credible region as superscript and subscript, respectively. These values and associated errors were used in the calculation of channel copy number.</p>
+<figure>
+<img src="ch9_figS4.png" id="fig:mscl_posterior_samples" data-short-caption="Posterior distributions for hyper-parameters and replicate parameters." alt="" /><figcaption>Figure 4: <strong>Posterior distributions for hyper-parameters and replicate parameters.</strong> (A) The posterior probability distribution for <span class="math inline"><em>α̃</em></span> and <span class="math inline">$\tilde{\langle A \rangle}$</span>. Probability increases from light to dark red. The replicate parameter (blue) and hyper-parameter (red) marginalized posterior probability distributions for <span class="math inline"><em>α</em></span> (B) and <span class="math inline">⟨<em>A</em>⟩</span> (C). The <a href="https://github.com/gchure/phd/blob/master/src/chapter_09/code/ch9_figS4.py">Python code (<code>ch9_figS4.py</code>)</a> used to generate this figure can be found on the thesis <a href="https://github.com/gchure/phd">GitHub repository</a>.</figcaption>
+</figure>
+<h3 id="effect-of-correction">Effect of correction</h3>
+<p>     The posterior distributions for <span class="math inline"><em>α</em></span> and <span class="math inline">⟨<em>A</em>⟩</span> shown in Fig. 4 were used directly to compute the most-likely channel copy number for each measurement of the Shine-Dalgarno mutant strains, as is described in the coming section. The importance of this correction can be seen in Fig. 5. Cells with low abundance of MscL channels exhibit notable morphological defects, as illustrated in Fig. 5 (A). While these would all be considered single cells, the two-dimensional area of each may be comparable to two or three wild-type cells. For all of the Shine-Dalgarno mutants, the distribution of projected cell area has a long tail, with the extremes reaching 35 <span class="math inline"><em>μ</em>m<sup>2</sup></span> per cell *Fig. 5 (B)). Calculating the total number of channels per cell does nothing to decouple this correlation between cell area and measured cell intensity. Fig. 5 (C) shows the correlation between cell area and the total number of channels without normalizing to an average cell size <span class="math inline">⟨<em>A</em>⟩</span> differentiated by their survival after an osmotic down-shock. This correlation is removed by calculating an effective channel copy number shown in Fig. 5 (D).</p>
+<figure>
+<img src="ch9_figS5.png" id="fig:area_correction" data-short-caption="Influence of area correction for Shine-Dalgarno mutants." alt="" /><figcaption>Figure 5: <strong>Influence of area correction for Shine-Dalgarno mutants.</strong> (A) Representative images of aberrant cell morphologies found in low-expressing Shine-Dalgarno mutants. (B) Empirical cumulative distribution of two-dimensional projected cell area for the standard candle strain MLG910 (gray line) and for all Shine-Dalgarno mutants (red line). (C) The correlation between channel copy number and cell area without the area correction. (D) The correlation between effective channel copy number and cell area with the area correction applied. The <a href="https://github.com/gchure/phd/blob/master/src/chapter_09/code/ch9_figS5.py">Python code (<code>ch9_figS5.py</code>)</a> used to generate this figure can be found on the thesis <a href="https://github.com/gchure/phd">GitHub repository</a>.</figcaption>
+</figure>
+<h2 id="classification-of-cell-fates">Classification of Cell Fates</h2>
+<p>     We defined a survival event as a cell that went on to divide at least twice in the several hours following the applied osmotic shock. In nearly all of our experiments, cells which did not survive an osmotic shock exhibited necrosis with loss of phase contrast, extensive blebbing and bursting of the membrane, and the presence of dark aggregates at the cell poles. An example field across time is shown below in Fig. 6 where the cells are necrotic. On occasion, we observed cells which did not obviously display the aforementioned death criteria yet did not undergo one or two division events. These cells were not counted in our experiments and were not included in the final tally of survival versus death. Across our 2822 single cell measurements, such “no call” classifications were observed only 83 times, constituting only 3% of the total cell measurements. A breakdown of all classification types and their respective abundances can be seen in Table 9.1.</p>
+<figure>
+<img src="ch9_figS6.png" id="fig:phase_death" data-short-caption="Time lapse of a representative field after osmotic shock and the resulting classifications." alt="" /><figcaption>Figure 6: <strong>Time lapse of a representative field after osmotic shock and the resulting classifications.</strong> Each row shows an individual cell or pair of neighboring cells over time after the application of a fast osmotic shock. Cells classified as dead are denoted by red arrows. The lone surviving cell in this field (bottom row, top 1/4 of image) is marked in green.</figcaption>
+</figure>
+<table>
+<caption>Cell fate classifications and their relative abundances in the complete data set.</caption>
+<thead>
+<tr class="header">
+<th style="text-align: center;"><strong>Classification</strong></th>
+<th style="text-align: center;"><strong>Number of Observations</strong></th>
+<th style="text-align: center;"><strong>Percentage of Measurements</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">Dead-On-Arrival</td>
+<td style="text-align: center;">11</td>
+<td style="text-align: center;">0.4%</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">No Call</td>
+<td style="text-align: center;">83</td>
+<td style="text-align: center;">3%</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Death</td>
+<td style="text-align: center;">1246</td>
+<td style="text-align: center;">44%</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Survival</td>
+<td style="text-align: center;">1482</td>
+<td style="text-align: center;">53%</td>
+</tr>
+</tbody>
+</table>
+<table>
+<caption>Comparison of morphology-based and dye-based survival classification.</caption>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;"><strong>Classification</strong></th>
+<th style="text-align: center;"><strong>Observations via Morphology</strong></th>
+<th style="text-align: center;"><strong>Observations via Propidium Iodide Staining</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">Dead-On-Arrival</td>
+<td style="text-align: center;">184</td>
+<td style="text-align: center;">185</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">No Call</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Survival</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">5</td>
+</tr>
+</tbody>
+</table>
+<p>    To assess the validity of our morphology-based classification scheme, we performed a subset of the osmotic shock experiments described in the manuscript using propidium iodide staining to mark cells which had compromised membranes, identifying them as dead. Briefly, cells expressing on average <span class="math inline">≈</span> 80 MscL channels per cell were grown in LB + 500 mM NaCl to an OD<span class="math inline"><em></em><sub>600nm</sub></span> of approximately 0.25. The cells were then mounted in the flow cell as described in the Materials and Methods in the main text and subjected to a large osmotic shock. After the shock, the cells were monitored for two hours. The propidium iodide stain (LIVE/DEAD BacLight Bacterial Cell Viability Staining, Thermo Fisher) was then passed into the flow chamber and imaged. An example of image of the phase contrast and propidium iodide fluorescence images are shown in Fig. 7. We note that cells matching our death criteria, meaning loss of phase contrast and visible distortion of the cell membrane, were strongly marked with propidium iodide, confirming that these cells were dead. The few example of “no call” classification where survival or death could not be determined from morphology alone showed that these cells were in fact dead (see highlighted row in Fig. 7). Cells that went on to divide two or more times in this period were not significantly stained with propidium iodide, confirming their viability and effectiveness of the stain itself. Given this data set, we compared the classification breakdown using our morphology-based method with the conclusive results from the propidium iodide staining (Table 9.2). We found that the two approaches to defining death agreed within 1%. This agreement leads us to believe that our definition of cell survival as morphological regularity and sustained cell growth is sufficiently accurate to draw physiological conclusions from our experiments.</p>
+<figure>
+<img src="ch9_figS7.png" id="fig:pi_death" data-short-caption="Representative images of propidium iodide staining after a strong osmotic shock." alt="" /><figcaption>Figure 7: <strong>Representative images of propidium iodide staining after a strong osmotic shock.</strong> Phase contrast images of individual or pairs of cells as a function of time (columns). The final column corresponds to fluorescence from propidium iodide. Bright fluorescence indicates intercalation with DNA indicating cell death. Classification of survival based only from morphology is shown as text in the final column. Highlighted row indicates a “no call” event where morphology alone could not be used to determine survival or death.</figcaption>
+</figure>
+<h2 id="logistic-regression">Logistic Regression</h2>
+<p>    In this work, we were interested in computing the survival probability under a large hypo-osmotic shock as a function of MscL channel number. As the channel copy number distributions for each Shine-Dalgarno sequence mutant were broad and overlapping, we chose to calculate the survival probability through logistic regression – a method that requires no binning of the data providing the least biased estimate of survival probability. Logistic regression is a technique that has been used in medical statistics since the late 1950’s to describe diverse phenomena such as dose response curves, criminal recidivism, and survival probabilities for patients after treatment <span class="citation" data-cites="anderson2003 mishra2016 stahler2013">(Anderson, Jin, and Grunkemeier <a href="#ref-anderson2003" role="doc-biblioref">2003</a>; Mishra et al. <a href="#ref-mishra2016" role="doc-biblioref">2016</a>; Stahler et al. <a href="#ref-stahler2013" role="doc-biblioref">2013</a>)</span>. It has also found much use in machine learning to tune a binary or categorical response given a continuous input <span class="citation" data-cites="cheng2009 dreiseitl2002">(Cheng and Hüllermeier <a href="#ref-cheng2009" role="doc-biblioref">2009</a>; Dreiseitl and Ohno-Machado <a href="#ref-dreiseitl2002" role="doc-biblioref">2002</a>)</span>.</p>
+<p>    In this section, we derive a statistical model for estimating the most-likely values for the coefficients <span class="math inline"><em>β</em><sub>0</sub></span> and <span class="math inline"><em>β</em><sub>1</sub></span> and use Bayes’ theorem to provide an interpretation for the statistical meaning.</p>
+<h3 id="bayesian-parameter-estimation-of-beta_0-and-beta_1">Bayesian parameter estimation of <span class="math inline"><em>β</em><sub>0</sub></span> and <span class="math inline"><em>β</em><sub>1</sub></span></h3>
+<p>The central challenge of this work is to estimate the probability of survival <span class="math inline"><em>p</em><sub><em>s</em></sub></span> given only a measure of the total number of MscL channels in that cell. In other words, for a given measurement of <span class="math inline"><em>N</em><sub><em>c</em></sub></span> channels, we want to know likelihood that a cell would survive an osmotic shock. Using Bayes’ theorem, we can write a statistical model for the survival probability as <span id="eq:bayes_surv_prob"><br /><span class="math display">$$
+g(p_s\,\vert\, N_c) = {f(N_c\,\vert\, p_s)g(p_s) \over f(N_c)},
+\qquad(17)$$</span><br /></span></p>
+<p>where <span class="math inline"><em>g</em></span> and <span class="math inline"><em>f</em></span> represent probability density functions over parameters and data, respectively. The posterior probability distribution <span class="math inline"><em>g</em>(<em>p</em><sub><em>s</em></sub> | <em>N</em><sub><em>c</em></sub>)</span> describes the probability of <span class="math inline"><em>p</em><sub><em>s</em></sub></span> given a specific number of channels <span class="math inline"><em>N</em><sub><em>c</em></sub></span>. This distribution is dependent on the likelihood of observing <span class="math inline"><em>N</em><sub><em>c</em></sub></span> channels assuming a value of <span class="math inline"><em>p</em><sub><em>s</em></sub></span> multiplied by all prior knowledge we have about knowing nothing about the data, <span class="math inline"><em>g</em>(<em>s</em>)</span>. The denominator <span class="math inline"><em>f</em>(<em>N</em><sub><em>c</em></sub>)</span> in Eq. 17 captures all knowledge we have about the available values of <span class="math inline"><em>N</em><sub><em>c</em></sub></span>, knowing nothing about the true survival probability. As this term acts as a normalization constant, we will neglect it in the following calculations for convenience.</p>
+<p>    To begin, we must come up with a statistical model that describes the experimental measurable in our experiment – survival or death. As this is a binary response, we can consider each measurement as a Bernoulli trial with a probability of success matching our probability of survival <span class="math inline"><em>p</em><sub><em>s</em></sub></span>, <span id="eq:bernoulli"><br /><span class="math display"><em>f</em>(<em>s</em> | <em>p</em><sub><em>s</em></sub>) = <em>p</em><sub><em>s</em></sub><sup><em>s</em></sup>(1 − <em>p</em><sub><em>s</em></sub>)<sup>1 − <em>s</em></sup>,   (18)</span><br /></span> where <span class="math inline"><em>s</em></span> is the binary response of <span class="math inline">1</span> or <span class="math inline">0</span> for survival and death, respectively. As is stated in the introduction to this section, we decided to use a logistic function to describe the survival probability. We assume that the log-odds of survival is linear with respect to the effective channel copy number <span class="math inline"><em>N</em><sub><em>c</em></sub></span> as <span id="eq:logit"><br /><span class="math display">$$ \log{p_s \over 1 - p_s} = \beta_0 + \beta_1
+N_c, \qquad(19)$$</span><br /></span> where <span class="math inline"><em>β</em><sub>0</sub></span> and <span class="math inline"><em>β</em><sub>1</sub></span> are coefficients which describe the survival probability in the absence of channels and the increase in log-odds of survival conveyed by a single channel. The rationale behind this interpretation is presented in the following section, <em>A Bayesian interpretation of <span class="math inline"><em>β</em><sub>0</sub></span> and <span class="math inline"><em>β</em><sub>1</sub></span></em>. Using this assumption, we can solve for the survival probability <span class="math inline"><em>p</em><sub><em>s</em></sub></span> as, <span id="eq:logistic_prob"><br /><span class="math display">$$ p_s = {1 \over 1 +
+e^{-\beta_0 -\beta_1 N_c}}. \qquad(20)$$</span><br /></span></p>
+<p>With a functional form for the survival probability, the likelihood stated in Eq. 17 can be restated as <span id="eq:bernoulli_likelihood"><br /><span class="math display">$$
+f(N_c, s\,\vert\,\beta_0,\beta_1) = \left({1 \over 1 + e^{-\beta_0 - \beta_1 N_c}}\right)^s\left(1 - {1 \over 1 + e^{-\beta_0 - \beta_1 N_c}}\right)^{1 - s}.
+\qquad(21)$$</span><br /></span></p>
+<p>     sAs we have now introduced two parameters, <span class="math inline"><em>β</em><sub>0</sub></span>, and <span class="math inline"><em>β</em><sub>1</sub></span>, we must provide some description of our prior knowledge regarding their values. As is typically the case, we know nothing about the values for <span class="math inline"><em>β</em><sub>0</sub></span> and <span class="math inline"><em>β</em><sub>1</sub></span>. These parameters are allowed to take any value, so long as it is a real number. Since all values are allowable, we can assume a flat distribution where any value has an equally likely probability. This value of this constant probability is not necessary for our calculation and is ignored. For a set of <span class="math inline"><em>k</em></span> single-cell measurements, we can write the posterior probability distribution stated in Eq. 17 as <span id="eq:known_nc_post"><br /><span class="math display">$$
+g(\beta_0, \beta_1\,\vert\, N_c, s) = \prod\limits_{i=1}^n\left({1 \over 1 + e^{-\beta_0 - \beta_1 N_c^{(i)}}}\right)^{s^{(i)}}\left(1 - {1 \over 1 + e^{-\beta_0 - \beta_1 N_c^{(i)}}}\right)^{1 - s^{(i)}}
+\qquad(22)$$</span><br /></span></p>
+<p>    Implicitly stated in Eq. 22 is absolute knowledge of the channel copy number <span class="math inline"><em>N</em><sub><em>c</em></sub></span>. However, as is described in the previous sections, we must convert from a measured areal sfGFP intensity <span class="math inline"><em>I</em><sub><em>A</em></sub></span> to a effective channel copy number, <span id="eq:standard_candle"><br /><span class="math display">$$
+N_c = {I_A \tilde{\langle A \rangle} \over \tilde{\alpha}},
+\qquad(23)$$</span><br /></span> where <span class="math inline">$\tilde{\langle A \rangle}$</span> is the average cell area of the standard candle strain and <span class="math inline"><em>α̃</em></span> is the most-likely value for the calibration factor between arbitrary units and protein copy number. In <em>Standard Candle Calibration</em>, we detailed a process for generating an estimate for the most-likely value of <span class="math inline">$\tilde{\langle A \rangle}$</span> and <span class="math inline"><em>α̃</em></span>. Given these estimates, we can include an informative prior for each value. From the Markov chain Monte Carlo samples shown in Fig. 8 , the posterior distribution for each parameter is approximately Gaussian. By approximating them as Gaussian distributions, we can assign an informative prior for each as <span id="eq:alpha_prior"><br /><span class="math display">$$
+g(\alpha\,\vert\,\tilde{\alpha}, \tilde{\sigma}_\alpha) \propto {1 \over \tilde{\sigma}_\alpha^k}\prod\limits_{i=1}^k\exp\left[-{(\alpha_i - \tilde{\alpha})^2 \over  2\tilde{\sigma}_\alpha^2}\right]
+\qquad(24)$$</span><br /></span> for the calibration factor for each cell and <span id="eq:area_prior"><br /><span class="math display">$$
+g(\langle A \rangle\,\vert\,\tilde{\langle A \rangle},\tilde{\sigma}_{\langle A \rangle}) = {1 \over \tilde{\sigma}_{\langle A \rangle}^k}\prod\limits_{i=1}^k\exp\left[-{(\langle A \rangle_i - \tilde{\langle A \rangle})^2 \over 2\tilde{\sigma}_{\langle A \rangle}^2}\right],
+\qquad(25)$$</span><br /></span> where <span class="math inline"><em>σ̃</em><sub><em>α</em></sub></span> and <span class="math inline"><em>σ̃</em><sub>⟨<em>A</em>⟩</sub></span> represent the variance from approximating each posterior as a Gaussian. The proportionality for each prior arises from the neglecting of normalization constants for notational convenience.</p>
+<p>    Given Eq. 21 through Eq. 25, the complete posterior distribution for estimating the most likely values of <span class="math inline"><em>β</em><sub>0</sub></span> and <span class="math inline"><em>β</em><sub>1</sub></span> can be written as <span id="eq:logistic_posterior"><br /><span class="math display">$$
+\begin{aligned}
+g(\beta_0, &amp;\beta_1\,\vert\,[I_A, s],\tilde{\langle A \rangle}, \tilde{\sigma}_{\langle A \rangle}, \tilde{\alpha}, \tilde{\sigma}_\alpha) \propto{1 \over (\tilde{\sigma}_\alpha\tilde{\sigma}_{\langle A \rangle})^k}\prod\limits_{i=1}^k\left(1 + \exp\left[-\beta_0 - \beta_1 { {I_A}_i \langle A \rangle_i \over \alpha_i}\right]\right)^{-s_i}\,\times\,\\
+&amp;\left(1 - \left(1 + \exp\left[-\beta_0 - \beta_1 { {I_A}_i\langle A \rangle_i \over \alpha_i}\right]\right)^{-1}\right)^{1 - s_i}
+\exp\left[-{(\langle A \rangle_i - \tilde{\langle A \rangle})^2 \over 2\tilde{\sigma}_{\langle A \rangle}} - {(\alpha_i - \tilde{\alpha})^2\over 2\tilde{\sigma}_\alpha^2}\right]
+\end{aligned}.
+\qquad(26)$$</span><br /></span></p>
+<p>As this posterior distribution is not solvable analytically, we used Markov chain Monte Carlo to draw samples out of this distribution, using the log of the effective channel number as described in the main text. The posterior distributions for <span class="math inline"><em>β</em><sub>0</sub></span> and <span class="math inline"><em>β</em><sub>1</sub></span> for both slow and fast shock rate data can be seen in Fig. 8.</p>
+<figure>
+<img src="ch9_figS8.png" id="fig:logistic_posterior_distributions" data-short-caption="Posterior distributions for logistic regression coefficients evaluated for fast and slow shock rates." alt="" /><figcaption>Figure 8: <strong>Posterior distributions for logistic regression coefficients evaluated for fast and slow shock rates.</strong> (A) Kernel density estimates of the posterior distribution for <span class="math inline"><em>β</em><sub>0</sub></span> for fast (blue) and slow (purple) shock rates. (B) Kernel density estimates of posterior distribution for <span class="math inline"><em>β</em><sub>1</sub></span>. The <a href="https://github.com/gchure/phd/blob/master/src/chapter_09/code/ch9_figS8.py">Python code<br />
+(<code>ch9_figS8.py</code>)</a> used to generate this figure can be found on the thesis <a href="https://github.com/gchure/phd">GitHub repository</a>.</figcaption>
+</figure>
+<h3 id="a-bayesian-interpretation-of-beta_0-and-beta_1">A Bayesian interpretation of <span class="math inline"><em>β</em><sub>0</sub></span> and <span class="math inline"><em>β</em><sub>1</sub></span></h3>
+<p>The assumption of a linear relationship between the log-odds of survival and the predictor variable <span class="math inline"><em>N</em><sub><em>c</em></sub></span> appears to be arbitrary and is presented without justification. However, this relationship is directly connected to the manner in which Bayes’ theorem updates the posterior probability distribution upon the observation of new data. In following section, we will demonstrate this connection using the relationship between survival and channel copy number. However, this description is general and can be applied to any logistic regression model so long as the response variable is binary. This connection was shown briefly by Allen Downey in 2014 and has been expanded upon in this work <span class="citation" data-cites="downey2014">(Downey <a href="#ref-downey2014" role="doc-biblioref">2014</a>)</span>.</p>
+<p>    The probability of observing a survival event <span class="math inline"><em>s</em></span> given a measurement of <span class="math inline"><em>N</em><sub><em>c</em></sub></span> channels can be stated using Bayes’ theorem as <span id="eq:survival_bayes"><br /><span class="math display">$$
+g(s\,\vert\, N_c) = {f(N_c\,\vert\, s)g(s) \over f(N_c)}.
+\qquad(27)$$</span><br /></span> where <span class="math inline"><em>g</em></span> and <span class="math inline"><em>f</em></span> represent probability density functions over parameters and data respectively. The posterior distribution <span class="math inline"><em>g</em>(<em>s</em> | <em>N</em><sub><em>c</em></sub>)</span> is the quantity of interest and implicitly related to the probability of survival. The likelihood <span class="math inline"><em>g</em>(<em>N</em><sub><em>c</em></sub> | <em>s</em>)</span> tells us the probability of observing <span class="math inline"><em>N</em><sub><em>c</em></sub></span> channels in this cell given that it survives. The quantity <span class="math inline"><em>g</em>(<em>s</em>)</span> captures all <em>a priori</em> knowledge we have regarding the probability of this cell surviving and the denominator <span class="math inline"><em>f</em>(<em>N</em><sub><em>c</em></sub>)</span> tells us the converse – the probability of observing <span class="math inline"><em>N</em><sub><em>c</em></sub></span> cells irrespective of the survival outcome.</p>
+<p>    Proper calculation of Eq. 27 requires that we have knowledge of <span class="math inline"><em>f</em>(<em>N</em><sub><em>c</em></sub>)</span>, which is difficult to estimate. While we are able to give appropriate bounds on this term, such as a requirement of positivity and some knowledge of the maximum membrane packing density, it is not so obvious to determine the distribution between these bounds. Given this difficulty, it’s easier to compute the odds of survival <span class="math inline">𝒪(<em>s</em> | <em>N</em><sub><em>c</em></sub>)</span>, the probability of survival <span class="math inline"><em>s</em></span> relative to death <span class="math inline"><em>d</em></span>, <span id="eq:odds_definition"><br /><span class="math display">$$
+\mathcal{O}(s\,\vert\, N_c) = {g(s\,\vert\,N_c) \over g(d\,\vert\, N_c)} = {f(N_c\,\vert\, s)g(s) \over f(N_c\,\vert\,d)g(d)},
+\qquad(28)$$</span><br /></span> where <span class="math inline"><em>f</em>(<em>N</em><sub><em>c</em></sub>)</span> is cancelled. The only stipulation on the possible value of the odds is that it must be a positive value. As we would like to equally weigh odds less than one as those of several hundred or thousand, it is more convenient to compute the log-odds, given as <span id="eq:log_odds"><br /><span class="math display">$$
+\log \mathcal{O}(s\,\vert\,N_c)= \log {g(s) \over g(d)} + \log {f(N_c \,\vert\, s )\over f(N_c\,\vert\, d)}.
+\qquad(29)$$</span><br /></span> Computing the log-transform reveals two interesting quantities. The first term is the ratio of the priors and tells us the <em>a priori</em> knowledge of the odds of survival irrespective of the number of channels. As we have no reason to think that survival is more likely than death, this ratio goes to unity. The second term is the log likelihood ratio and tells us how likely we are to observe a given channel copy number <span class="math inline"><em>N</em><sub><em>c</em></sub></span> given the cell survives relative to when it dies.</p>
+<p>    For each channel copy number, we can evaluate Eq. 29 to measure the log-odds of survival. If we start with zero channels per cell, we can write the log-odds of survival as <span id="eq:nc_0"><br /><span class="math display">$$
+\log \mathcal{O}(s\,\vert\,N_c=0) = \log {g(s) \over g(d)} + \log {f(N_c=0\,\vert\, s) \over f(N_c=0\,\vert\, d)}.
+\qquad(30)$$</span><br /></span> For a channel copy number of one, the odds of survival is <span id="eq:nc_1"><br /><span class="math display">$$
+\log \mathcal{O}(s\,\vert\,N_c=1) = \log{g(s) \over g(d)} + \log{f(N_c=1\,\vert\, s) \over f(N_c=1\,\vert\, d)}.
+\qquad(31)$$</span><br /></span> In both Eq. 30 and Eq. 31, the log of our <em>a priori</em> knowledge of survival versus death remains. The only factor that is changing is log likelihood ratio. We can be more general in our language and say that the log-odds of survival is increased by the difference in the log-odds conveyed by addition of a single channel. We can rewrite the log likelihood ratio in a more general form as <span id="eq:generalized_LLR"><br /><span class="math display">$$
+\log {f(N_c\, \vert\, s) \over f(N_c\,\vert\, d)} = \log{f(N_c = 0\,\vert\,s) \over f(N_c=0\,\vert\, d)} + N_c \left[\log{f(N_c=1 \,\vert\,s) \over f(N_c=1\,\vert\, d)} - \log{f(N_c=0\,\vert\, s) \over f(N_c=0\,\vert\, d)}\right],
+\qquad(32)$$</span><br /></span> where we are now only considering the case in which <span class="math inline"><em>N</em><sub><em>c</em></sub> ∈ [0, 1]</span>. The bracketed term in Eq. 32 is the log of the odds of survival given a single channel relative to the odds of survival given no channels. Mathematically, this odds-ratio can be expressed as <span id="eq:odds_ratio"><br /><span class="math display">$$
+\log\mathcal{OR}_{N_c}(s) = \log{ {f(N_c=1\,\vert\,s)g(s)\over f(N_c=1\,\vert\,d)g(d)}\over {f(N_c=0\,\vert\,s)g(s)\over f(N_c=0\,\vert\,d)g(d)}} = \log{f(N_c=1\,\vert\,s) \over f(N_c=1\,\vert\,d)} - \log{f(N_c=0\,\vert\,s)\over f(N_c=0\,\vert\,d)} .
+\qquad(33)$$</span><br /></span> Eq. 33 is mathematically equivalent to the bracketed term shown in Eq. 32.</p>
+<p>    We can now begin to staple these pieces together to arrive at an expression for the log odds of survival. Combining Eq. 32 with Eq. 29 yields <span id="eq:combined_v1"><br /><span class="math display">$$
+\log \mathcal{O}(s\,\vert\,N_c) = \log{g(s) \over g(d)} + \log {f(N_c=0\,\vert\, s) \over f(N_c=0\,\vert\, d)} + N_c\left[{f(N_c=1\,\vert\,s)\over f(N_c=1\,\vert\,d)} - \log{f(N_c=0\,\vert\,s) \over f(N_c=0\,\vert\,d)}\right].
+\qquad(34)$$</span><br /></span> Using our knowledge that the bracketed term is the log odds-ratio and the first two times represents the log-odds of survival with <span class="math inline"><em>N</em><sub><em>c</em></sub> = 0</span>, we conclude with <span id="eq:bayesian_logit"><br /><span class="math display">log 𝒪(<em>s</em> | <em>N</em><sub><em>c</em></sub>) = log 𝒪(<em>s</em> | <em>N</em><sub><em>c</em></sub> = 0) + <em>N</em><sub><em>c</em></sub>log 𝒪ℛ<sub><em>N</em><sub><em>c</em></sub></sub>(<em>s</em>).   (35)</span><br /></span> This result can be directly compared to Eq. 1 presented in the main text, <span id="eq:"><br /><span class="math display">$$
+\log {p_s \over 1 - p_s} = \beta_0 + \beta_1 N_c,
+\qquad(36)$$</span><br /></span> which allows for an interpretation of the seemingly arbitrary coefficients <span class="math inline"><em>β</em><sub>0</sub></span> and <span class="math inline"><em>β</em><sub>1</sub></span>. The intercept term, <span class="math inline"><em>β</em><sub>0</sub></span>, captures the log-odds of survival with no MscL channels. The slope, <span class="math inline"><em>β</em><sub>1</sub></span>, describes the log odds-ratio of survival which a single channel relative to the odds of survival with no channels at all. While we have examined this considering only two possible channel copy numbers (<span class="math inline">1</span> and <span class="math inline">0</span>), the relationship between them is linear. We can therefore generalize this for any MscL copy number as the increase in the log-odds of survival is constant for addition of a single channel.</p>
+<h3 id="other-properties-as-predictor-variables">Other properties as predictor variables</h3>
+<p>     The previous two sections discuss in detail the logic and practice behind the application of logistic regression to cell survival data using only the effective channel copy number as the predictor of survival. However, there are a variety of properties that could rightly be used as predictor variables, such as cell area and shock rate. As is stipulated in our standard candle calibration, there should be no correlation between survival and cell area. Fig. 9 (A) and (B) show the logistic regression performed on the cell area. We see for both slow and fast shock groups,there is little change in survival probability with changing cell area and the wide credible regions allow for both positive and negative correlation between survival and area. The appearance of a bottle neck in the notably wide credible regions is a result of a large fraction of the measurements being tightly distributed about a mean value. Fig. 9 (C) shows the predicted survival probability as a function of the the shock rate. There is a slight decrease in survivability as a function of increasing shock rate, however the width of the credible region allows for slightly positive or slightly negative correlation. While we have presented logistic regression in this section as a one-dimensional method, Eq. 19 can be generalized to <span class="math inline"><em>n</em></span> predictor variables <span class="math inline"><em>x</em></span> as <span id="eq:generalized_logit"><br /><span class="math display">$$
+\log {p_s \over 1 - p_s} = \beta_0 + \sum\limits_{i}^n \beta_ix_i.
+\qquad(37)$$</span><br /></span> Using this generalization, we can use both shock rate and the effective channel copy number as predictor variables. The resulting two-dimensional surface of survival probability is shown in Fig. 9 (D). As is suggested by Fig. 9 (C), the magnitude of change in survivability as the shock rate is increased is smaller than that along increasing channel copy number, supporting our conclusion that for MscL alone, the copy number is the most important variable in determining survival.</p>
+<figure>
+<img src="ch9_figS9.png" id="fig:alternative_predictor_variables" data-short-caption="Survival probability estimation using alternative predictor variables." alt="" /><figcaption>Figure 9: <strong>Survival probability estimation using alternative predictor variables.</strong> (A) Estimated survival probability as a function of cell area for the slow shock group. (B) Estimated survival probability as a function of cell area for the fast shock group. (C) Estimated survival probability as a function shock rate. Black points at top and bottom of plots represent single-cell measurements of cells who survived and perished, respectively. Shaded regions in (A) – (C) represent the 95% credible region. (D) Surface of estimated survival probability using both shock rate and effective channel number as predictor variables. Black points at left and right of plot represent single-cell measurements of cells which survived and died, respectively, sorted by shock rate. Points at top and bottom of plot represent survival and death sorted by their effective channel copy number. Labeled contours correspond to the survival probability. The <a href="https://github.com/gchure/phd/blob/master/src/chapter_09/code/ch9_figS9.py">Python code (<code>ch9_figS9.py</code>)</a> used to generate this figure can be found on the thesis <a href="https://github.com/gchure/phd">GitHub repository</a>.</figcaption>
+</figure>
+<h2 id="classification-of-shock-rate">Classification Of Shock Rate</h2>
+<p>    Its been previously shown that the rate of hypo-osmotic shock dictates the survival probability <span class="citation" data-cites="bialecka-fornal2015">(Bialecka-Fornal, Lee, and Phillips <a href="#ref-bialecka-fornal2015" role="doc-biblioref">2015</a>)</span>. To investigate how a single channel contributes to survival, we queried survival at several shock rates with varying MscL copy number. In the main text of this work, we separated our experiments into arbitrary bins of “fast” (<span class="math inline">≥</span> 1.0 Hz) and “slow” (<span class="math inline">&lt;</span> 1.0 Hz) shock rates. In this section, we discuss our rationale for coarse graining our data into these two groupings.</p>
+<p>    As is discussed in Chapter 5, we used a bin-free method of estimating the survival probability given the MscL channel copy number as a predictor variable. While this method requires no binning of the data, it requires a data set that sufficiently covers the physiological range of channel copy number to accurately allow prediction of survivability. Fig. 10 shows the results of the logistic regression treating each shock rate as an individual data set. The most striking feature of the plots shown in Fig. 10 is the inconsistent behavior of the predicted survivability from shock rate to shock rate. The appearance of bottle necks in the credible regions for some shock rates (0.2Hz, 0.5Hz, 2.00Hz, and 2.20 Hz) appear due to a high density of measurements within a narrow range of the channel copy number at the narrowest point in the bottle neck. While this results in a seemingly accurate prediction of the survival probability at that point, the lack of data in other copy number regimes severely limits our extrapolation outside of the copy number range of that data set. Other shock rates (0.018 Hz, 0.04 Hz, and 1.00 Hz) demonstrate completely pathological survival probability curves due to either complete survival or complete death of the population.</p>
+<p>    Ideally, we would like to have a wide range of MscL channel copy numbers at each shock rate shown in Fig. 10. However, the low-throughput nature of these single-cell measurements prohibits completion of this within a reasonable time frame. It is also unlikely that thoroughly dissecting the shock rate dependence will change the overall finding from our work that several hundred MscL channels are needed to convey survival under hypo-osmotic stress.</p>
+<figure>
+<img src="ch9_figS10.png" id="fig:indiv_shock_group" data-short-caption="Binning by individual shock rates." alt="" /><figcaption>Figure 10: <strong>Binning by individual shock rates.</strong> Survival probability estimates from logistic regression (red lines) and the computed survival probability for all SD mutants subjected to that shock rate (blue points). Black points at top and bottom of each plot correspond to single cell measurements of survival (top) and death (bottom). Red shaded regions signify the 95% credible region of the logistic regression. Horizontal error bars of blue points are the standard error of the mean channel copy number. Vertical error bars of blue points correspond to the uncertainty in survival probability by observing <span class="math inline"><em>n</em></span> survival events from <span class="math inline"><em>N</em></span> single-cell measurements. The <a href="https://github.com/gchure/phd/blob/master/src/chapter_09/code/ch9_figS10.py">Python code<br />
+(<code>ch9_figS10.py</code>)</a> used to generate this figure can be found on the thesis <a href="https://github.com/gchure/phd">GitHub repository</a>.</figcaption>
+</figure>
+<p>     Given the data shown in Fig. 10, we can try to combine the data sets into several bins. Fig. 11 shows the data presented in Fig. 10 separated into “slow” (<span class="math inline">&lt;</span> 0.5 Hz, A), “intermediate” (0.5 - 1.0 Hz, B), and “fast” (<span class="math inline">&gt;</span> 1.0 Hz, C) shock groups. Using these groupings, the full range of MscL channel copy numbers are covered for each case, with the intermediate shock rate sparsely sampling copy numbers greater than 200 channels per cell. In all three of these cases, the same qualitative story is told – several hundred channels per cell are necessary for an appreciable level of survival when subjected to an osmotic shock. This argument is strengthened when examining the predicted survival probability by considering all shock rates as a single group, shown in Fig. 11 (D). This treatment tells nearly the same quantitative and qualitative story as the three rate grouping shown in this section and the two rate grouping presented in the main text. While there does appear to be a dependence on the shock rate for survival when only MscL is expressed, the effect is relatively weak with overlapping credible regions for the logistic regression across the all curves. To account for the sparse sampling of high copy numbers observed in the intermediate shock group, we split this set and partitioned the measurements into either the “slow” (<span class="math inline">&lt;</span> 1.0 Hz) or “fast” (<span class="math inline">≥</span> 1.0 Hz) groups presented in the main text of this work.</p>
+<figure>
+<img src="ch9_figS11.png" id="fig:three_shock_group" data-short-caption="Coarse graining shock rates into different groups." alt="" /><figcaption>Figure 11: <strong>Coarse graining shock rates into different groups.</strong> Estimated survival probability curve for slow (A), intermediate (B), and fast (C) shock rates. (D) Estimated survival probability curve from pooling all data together, ignoring varying shock rates. Red shaded regions correspond to the 95% credible region of the survival probability estimated via logistic regression. Black points at top and bottom of each plot represent single-cell measurements of cells which survived and died, respectively. Black points and error bars represent survival probability calculations from bins of 50 channels per cell. Blue points represent the survival probability for a given Shine-Dalgarno mutant. Horizontal error bars are the standard error of the mean with at least 25 measurements and vertical error bars signifies the uncertainty in the survival probability from observing <span class="math inline"><em>n</em></span> survival events out of <span class="math inline"><em>N</em></span> total measurements. The <a href="https://github.com/gchure/phd/blob/master/src/chapter_09/code/ch9_figS10.py">Python code<br />
+(<code>ch9_figS10.py</code>)</a> used to generate this figure can be found on the thesis <a href="https://github.com/gchure/phd">GitHub repository</a>.</figcaption>
+</figure>
+<h2 id="comparison-of-survival-probability-with-van-den-berg-et-al.-2016">Comparison of Survival Probability with van den Berg et al. 2016</h2>
+<p>    In <span class="citation" data-cites="vandenberg2016">van den Berg et al. (<a href="#ref-vandenberg2016" role="doc-biblioref">2016</a>)</span>, the authors report a 100% survival rate at approximately 100 channels per cell. While the number of mechanosensitive channels per cell was quantified at the level of single cells, the survival probability was measured in bulk using ensemble plating assays. The results of these experiments considering the contribution of MscL to survival is shown in Figure 5 of their work, although with out displayed uncertainty in the survival probability. Figure S6B of their work shows the approximate error in survival probability through ensemble plating assays for three different strains (Fig. 12 (A)), which is approximately 30%. Using this approximate error and the data shown in their Figure 5B, we have reproduced this plot with error bars in both measured dimensions (Fig. 12 (B)). This plot shows that even when the mean survival probability is 100%, the variation in the measured survival probability is large, extending as low as <span class="math inline">≈</span> 70%. This variation is likely born from a multitude of experimental steps including time of outgrowth, variation in shock rate, plating efficiency, and counting errors. As our experimental approach directly measures the survival/death of individual cells, we remove many sources of error that would arise from an ensemble approach, albeit at lower throughput. While it is possible that the discrepancy between <span class="citation" data-cites="vandenberg2016">van den Berg et al. (<a href="#ref-vandenberg2016" role="doc-biblioref">2016</a>)</span> and the work presented in Chapter 5 could arise from other unknown factors, we believe that single-cell experiments introduce the fewest sources of error.</p>
+<figure>
+<img src="ch9_figS12.png" id="fig:poolman_comparison" data-short-caption="MscL abundance versus survival data reported in van den Berg et al. 2016 with included error." alt="" /><figcaption>Figure 12: <strong>MscL abundance vs survival data reported in <span class="citation" data-cites="vandenberg2016">van den Berg et al. (<a href="#ref-vandenberg2016" role="doc-biblioref">2016</a>)</span> with included error.</strong> (A) Reported survival probabilities of a strain lacking all mechanosensitive channels (“no plasmid”), plasmid borne MscL-mEos3.2, and plasmid borne MscS-mEos3.2. Approximate reported errors for MscL-mEos3.2 survival probability is 30%. (B) The measurement of survival probability as a function of MscL channel copy number was obtained from Figure 5B in van den Berg et al 2016. Errors in channel copy number represent the standard deviation of several biological replicates (present in original figure) while the error in survival probability is taken as <span class="math inline">≈</span> 30%. The <a href="https://github.com/gchure/phd/blob/master/src/chapter_09/code/ch9_figS12.py">Python code<br />
+(<code>ch9_figS12.py</code>)</a> used to generate this figure can be found on the thesis <a href="https://github.com/gchure/phd">GitHub repository</a>.</figcaption>
+</figure>
+<h2 id="e.-coli-strains"><em>E. coli</em> Strains</h2>
+<table style="width:100%;">
+<caption><em>Escherichia coli</em> strains used in Chapters 5 and 9.</caption>
+<colgroup>
+<col style="width: 16%" />
+<col style="width: 70%" />
+<col style="width: 13%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Strain name</th>
+<th>Genotype</th>
+<th>Reference</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>MJF641</td>
+<td>Frag1, <em><span class="math inline"><em>Δ</em></span>mscL::cm, <span class="math inline"><em>Δ</em></span>mscS, <span class="math inline"><em>Δ</em></span>mscK::kan, <span class="math inline"><em>Δ</em></span>ybdG::apr, <span class="math inline"><em>Δ</em></span>ynaI, <span class="math inline"><em>Δ</em></span>yjeP, <span class="math inline"><em>Δ</em></span>ybiO, ycjM::Tn10</em></td>
+<td><span class="citation" data-cites="edwards2012">Edwards et al. (<a href="#ref-edwards2012" role="doc-biblioref">2012</a>)</span></td>
+</tr>
+<tr class="even">
+<td>MLG910</td>
+<td>MG1655, <em><span class="math inline"><em>Δ</em></span>mscL ::<span class="math inline"><em>ϕ</em></span>mscL-sfGFP, <span class="math inline"><em>Δ</em></span>galK::kan, <span class="math inline"><em>Δ</em></span>lacI, <span class="math inline"><em>Δ</em></span>lacZY A</em></td>
+<td><span class="citation" data-cites="bialecka-fornal2012">Bialecka-Fornal et al. (<a href="#ref-bialecka-fornal2012" role="doc-biblioref">2012</a>)</span></td>
+</tr>
+<tr class="odd">
+<td>D6LG-Tn10</td>
+<td>Frag1, <em><span class="math inline"><em>Δ</em></span>mscL ::<span class="math inline"><em>ϕ</em></span>mscL-sfGFP, <span class="math inline"><em>Δ</em></span>mscS, <span class="math inline"><em>Δ</em></span>mscK::kan, <span class="math inline"><em>Δ</em></span>ybdG::apr, <span class="math inline"><em>Δ</em></span>ynaI, <span class="math inline"><em>Δ</em></span>yjeP, <span class="math inline"><em>Δ</em></span>ybiO, ycjM::Tn10</em></td>
+<td><span class="citation" data-cites="chure2018">Chure, Lee, and Phillips (<a href="#ref-chure2018" role="doc-biblioref">2018</a>)</span></td>
+</tr>
+<tr class="even">
+<td>D6LG (SD0)</td>
+<td>Frag1, <em><span class="math inline"><em>Δ</em></span>mscL ::<span class="math inline"><em>ϕ</em></span>mscL-sfGFP, <span class="math inline"><em>Δ</em></span>mscS, <span class="math inline"><em>Δ</em></span>mscK::kan, <span class="math inline"><em>Δ</em></span>ybdG::apr, <span class="math inline"><em>Δ</em></span>ynaI, <span class="math inline"><em>Δ</em></span>yjeP, <span class="math inline"><em>Δ</em></span>ybiO</em></td>
+<td><span class="citation" data-cites="chure2018">Chure, Lee, and Phillips (<a href="#ref-chure2018" role="doc-biblioref">2018</a>)</span></td>
+</tr>
+<tr class="odd">
+<td>XTL298</td>
+<td>CC4231<em>, araD:: tetA-sacB-amp</em></td>
+<td><span class="citation" data-cites="li2013">(Li et al. <a href="#ref-li2013" role="doc-biblioref">2013</a>)</span></td>
+</tr>
+<tr class="even">
+<td>D6LTetSac</td>
+<td>Frag1, <em>mscL-sfGFP:: tetA-sacB, <span class="math inline"><em>Δ</em></span>mscS, <span class="math inline"><em>Δ</em></span>mscK::kan, <span class="math inline"><em>Δ</em></span>ybdG::apr, <span class="math inline"><em>Δ</em></span>ynaI, <span class="math inline"><em>Δ</em></span>yjeP, <span class="math inline"><em>Δ</em></span>ybiO</em></td>
+<td><span class="citation" data-cites="chure2018">Chure, Lee, and Phillips (<a href="#ref-chure2018" role="doc-biblioref">2018</a>)</span></td>
+</tr>
+<tr class="odd">
+<td>D6LG (SD1)</td>
+<td>Frag1, <em><span class="math inline"><em>Δ</em></span>mscL ::<span class="math inline"><em>ϕ</em></span>mscL-sfGFP, <span class="math inline"><em>Δ</em></span>mscS, <span class="math inline"><em>Δ</em></span>mscK::kan, <span class="math inline"><em>Δ</em></span>ybdG::apr, <span class="math inline"><em>Δ</em></span>ynaI, <span class="math inline"><em>Δ</em></span>yjeP, <span class="math inline"><em>Δ</em></span>ybiO</em></td>
+<td><span class="citation" data-cites="chure2018">Chure, Lee, and Phillips (<a href="#ref-chure2018" role="doc-biblioref">2018</a>)</span></td>
+</tr>
+<tr class="even">
+<td>D6LG (SD2)</td>
+<td>Frag1, <em><span class="math inline"><em>Δ</em></span>mscL ::<span class="math inline"><em>ϕ</em></span>mscL-sfGFP, <span class="math inline"><em>Δ</em></span>mscS, <span class="math inline"><em>Δ</em></span>mscK::kan, <span class="math inline"><em>Δ</em></span>ybdG::apr, <span class="math inline"><em>Δ</em></span>ynaI, <span class="math inline"><em>Δ</em></span>yjeP, <span class="math inline"><em>Δ</em></span>ybiO</em></td>
+<td><span class="citation" data-cites="chure2018">Chure, Lee, and Phillips (<a href="#ref-chure2018" role="doc-biblioref">2018</a>)</span></td>
+</tr>
+<tr class="odd">
+<td>D6LG (SD4)</td>
+<td>Frag1, <em><span class="math inline"><em>Δ</em></span>mscL ::<span class="math inline"><em>ϕ</em></span>mscL-sfGFP, <span class="math inline"><em>Δ</em></span>mscS, <span class="math inline"><em>Δ</em></span>mscK::kan, <span class="math inline"><em>Δ</em></span>ybdG::apr, <span class="math inline"><em>Δ</em></span>ynaI, <span class="math inline"><em>Δ</em></span>yjeP, <span class="math inline"><em>Δ</em></span>ybiO</em></td>
+<td><span class="citation" data-cites="chure2018">Chure, Lee, and Phillips (<a href="#ref-chure2018" role="doc-biblioref">2018</a>)</span></td>
+</tr>
+<tr class="even">
+<td>D6LG (SD6)</td>
+<td>Frag1, <em><span class="math inline"><em>Δ</em></span>mscL ::<span class="math inline"><em>ϕ</em></span>mscL-sfGFP, <span class="math inline"><em>Δ</em></span>mscS, <span class="math inline"><em>Δ</em></span>mscK::kan, <span class="math inline"><em>Δ</em></span>ybdG::apr, <span class="math inline"><em>Δ</em></span>ynaI, <span class="math inline"><em>Δ</em></span>yjeP, <span class="math inline"><em>Δ</em></span>ybiO</em></td>
+<td><span class="citation" data-cites="chure2018">Chure, Lee, and Phillips (<a href="#ref-chure2018" role="doc-biblioref">2018</a>)</span></td>
+</tr>
+<tr class="odd">
+<td>D6LG (12SD2)</td>
+<td>Frag1, <em><span class="math inline"><em>Δ</em></span>mscL ::<span class="math inline"><em>ϕ</em></span>mscL-sfGFP, <span class="math inline"><em>Δ</em></span>mscS, <span class="math inline"><em>Δ</em></span>mscK::kan, <span class="math inline"><em>Δ</em></span>ybdG::apr, <span class="math inline"><em>Δ</em></span>ynaI, <span class="math inline"><em>Δ</em></span>yjeP, <span class="math inline"><em>Δ</em></span>ybiO</em></td>
+<td><span class="citation" data-cites="chure2018">Chure, Lee, and Phillips (<a href="#ref-chure2018" role="doc-biblioref">2018</a>)</span></td>
+</tr>
+<tr class="even">
+<td>D6LG (16SD0)</td>
+<td>Frag1, <em><span class="math inline"><em>Δ</em></span>mscL ::<span class="math inline"><em>ϕ</em></span>mscL-sfGFP, <span class="math inline"><em>Δ</em></span>mscS, <span class="math inline"><em>Δ</em></span>mscK::kan, <span class="math inline"><em>Δ</em></span>ybdG::apr, <span class="math inline"><em>Δ</em></span>ynaI, <span class="math inline"><em>Δ</em></span>yjeP, <span class="math inline"><em>Δ</em></span>ybiO</em></td>
+<td><span class="citation" data-cites="chure2018">Chure, Lee, and Phillips (<a href="#ref-chure2018" role="doc-biblioref">2018</a>)</span></td>
+</tr>
+</tbody>
+</table>
+<table>
+<caption>Oligonucleotide sequences used in Chapters 5 and 9. Bold and italics correspond to Shine-Dalgarno sequence modifications and <code>AT</code> hairpin insertion modifications, respectively. Double bar <code>||</code> indicates a transposon insertion site.</caption>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Primer Name</th>
+<th style="text-align: left;">Sequence (5’ <span class="math inline">→</span> 3’)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><em>Tn10delR</em></td>
+<td style="text-align: left;"><code>taaagccaacggcatccaggcggacatactcagca||</code></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><code>cctttcgcaaggtaacagagtaaaacatccaccat</code></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><em>MscLSPSac</em></td>
+<td style="text-align: left;"><code>gaaaatggcttaacatttgttagacttatggttgtcgg</code></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><code>cttcat</code><strong><code>agggag</code></strong><code>TCCTAATTTTTGTTGACACTCTATC</code></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><em>MscLSPSacR</em></td>
+<td style="text-align: left;"><code>accacgttcccgcgcatcgcaaattcgcgaaat</code></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><code>tctttaataatgctcatATCAAAGGGAAAACTGTCCATA</code></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><em>MscL-SD1R</em></td>
+<td style="text-align: left;"><code>atcgcaaattcgcgaaattctttaataatgctcat</code></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><code>gttatt</code><strong><code>ctcctc</code></strong><code>atgaagccgacaaccataagtctaacaaa</code></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><em>MscL-SD2R</em></td>
+<td style="text-align: left;"><code>atcgcaaattcgcgaaattctttaataatgctcat</code><em><code>gttatt</code></em></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><strong><code>tcccct</code></strong><code>atgaagccgacaaccataagtctaacaaa</code></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><em>MscL-SD4R</em></td>
+<td style="text-align: left;"><code>atcgcaaattcgcgaaattctttaataatgctcat</code></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><em><code>gttatt</code></em> <strong><code>cctgct</code></strong><code>atgaagccgacaaccataagtctaacaaa</code></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><em>MscL-SD6R</em></td>
+<td style="text-align: left;"><code>atcgcaaattcgcgaaattctttaataatgctcat</code></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><em><code>gttatt</code></em> <strong><code>gctcgt</code></strong><code>atgaagccgacaaccataagtctaacaaa</code></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><em>MscL-12SD2R</em></td>
+<td style="text-align: left;"><code>atcgcaaattcgcgaaattctttaataatgctcat</code></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><em><code>atatatatatat</code></em> <strong><code>tcccct</code></strong><code>atgaagccgacaaccataagtctaacaaa</code></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><em>MscL-16SD0R</em></td>
+<td style="text-align: left;"><code>atcgcaaattcgcgaaattctttaataatgctcat</code></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><em><code>atatatatatatatat</code></em> <strong><code>ctccct</code></strong><code>atgaagccgacaaccataagtctaacaaa</code></td>
+</tr>
+</tbody>
+</table>
+<h2 class="unnumbered" id="references" class="unnumbered">References</h2>
+<div id="refs" class="references hanging-indent" role="doc-bibliography">
+<div id="ref-anderson2003">
+<p>Anderson, Richard P, Ruyun Jin, and Gary L Grunkemeier. 2003. “Understanding Logistic Regression Analysis in Clinical Reports: An Introduction.” <em>The Annals of Thoracic Surgery</em> 75 (3): 753–57. <a href="https://doi.org/10.1016/S0003-4975(02)04683-0">https://doi.org/10.1016/S0003-4975(02)04683-0</a>.</p>
+</div>
+<div id="ref-bialecka-fornal2012">
+<p>Bialecka-Fornal, Maja, Heun Jin Lee, Hannah A. DeBerg, Chris S. Gandhi, and Rob Phillips. 2012. “Single-Cell Census of Mechanosensitive Channels in Living Bacteria.” Edited by Arnold Driessen. <em>PLoS ONE</em> 7 (3): e33077. <a href="https://doi.org/10.1371/journal.pone.0033077">https://doi.org/10.1371/journal.pone.0033077</a>.</p>
+</div>
+<div id="ref-bialecka-fornal2015">
+<p>Bialecka-Fornal, Maja, Heun Jin Lee, and Rob Phillips. 2015. “The Rate of Osmotic Downshock Determines the Survival Probability of Bacterial Mechanosensitive Channel Mutants.” Edited by P. de Boer. <em>Journal of Bacteriology</em> 197 (1): 231–37. <a href="https://doi.org/10.1128/JB.02175-14">https://doi.org/10.1128/JB.02175-14</a>.</p>
+</div>
+<div id="ref-blount1999">
+<p>Blount, P., S. I. Sukharev, P. C. Moe, B. Martinac, and C. Kung. 1999. “Mechanosensitive Channels of Bacteria.” <em>Methods in Enzymology</em> 294: 458–82.</p>
+</div>
+<div id="ref-blount1996">
+<p>Blount, P., S. I. Sukharev, M. J. Schroeder, S. K. Nagle, and C. Kung. 1996. “Single Residue Substitutions That Change the Gating Properties of a Mechanosensitive Channel in <em>Escherichia</em> <em>Coli</em>.” <em>Proc Natl Acad Sci U S A</em> 93 (October): 11652–7.</p>
+</div>
+<div id="ref-cheng2009">
+<p>Cheng, Weiwei, and Eyke Hüllermeier. 2009. “Combining Instance-Based Learning and Logistic Regression for Multilabel Classification.” <em>Machine Learning</em> 76 (2-3): 211–25. <a href="https://doi.org/10.1007/s10994-009-5127-5">https://doi.org/10.1007/s10994-009-5127-5</a>.</p>
+</div>
+<div id="ref-chure2018">
+<p>Chure, Griffin, Heun Jin Lee, and Rob Phillips. 2018. “MCMC Chains Generated in "Connecting the Dots Between Mechanosensitive Channel Abundance, Osmotic Shock, and Survival at Single-Cell Resolution" Accessible Through DOI 10.22002/D1.942,” May.</p>
+</div>
+<div id="ref-downey2014">
+<p>Downey, Allen. 2014. “Probably Overthinking It: Bayes’s Theorem and Logistic Regression.” <em>Probably Overthinking It</em>, April.</p>
+</div>
+<div id="ref-dreiseitl2002">
+<p>Dreiseitl, Stephan, and Lucila Ohno-Machado. 2002. “Logistic Regression and Artificial Neural Network Classification Models: A Methodology Review.” <em>Journal of Biomedical Informatics</em> 35 (5): 352–59. <a href="https://doi.org/10.1016/S1532-0464(03)00034-0">https://doi.org/10.1016/S1532-0464(03)00034-0</a>.</p>
+</div>
+<div id="ref-edwards2012">
+<p>Edwards, M. D., S. Black, T. Rasmussen, A. Rasmussen, N. R. Stokes, T. L. Stephen, S. Miller, and I. R. Booth. 2012. “Characterization of Three Novel Mechanosensitive Channel Activities in <em>Escherichia Coli</em>.” <em>Channels (Austin)</em> 6: 272–81. <a href="https://doi.org/10.4161/chan.20998\\\%002020998\\\%0020%5Bpii%5D">https://doi.org/10.4161/chan.20998\\\%002020998\\\%0020[pii]</a>.</p>
+</div>
+<div id="ref-li2013">
+<p>Li, Xin-tian, Lynn C. Thomason, James A. Sawitzke, Nina Costantino, and Donald L. Court. 2013. “Positive and Negative Selection Using the tetA-sacB Cassette: Recombineering and P1 Transduction in <em>Escherichia Coli</em>.” <em>Nucleic Acids Research</em> 41 (22): e204–e204.</p>
+</div>
+<div id="ref-milo2010">
+<p>Milo, Ron, Paul Jorgensen, Uri Moran, Griffin Weber, and Michael Springer. 2010. “BioNumbersthe Database of Key Numbers in Molecular and Cell Biology.” <em>Nucleic Acids Research</em> 38 (suppl_1): D750–D753. <a href="https://doi.org/10.1093/nar/gkp889">https://doi.org/10.1093/nar/gkp889</a>.</p>
+</div>
+<div id="ref-mishra2016">
+<p>Mishra, Vikas, Maciej Skotak, Heather Schuetz, Abi Heller, James Haorah, and Namas Chandra. 2016. “Primary Blast Causes Mild, Moderate, Severe and Lethal TBI with Increasing Blast Overpressures: Experimental Rat Injury Model.” <em>Scientific Reports</em> 6 (June): 26992. <a href="https://doi.org/10.1038/srep26992">https://doi.org/10.1038/srep26992</a>.</p>
+</div>
+<div id="ref-sivia2006">
+<p>Sivia, Devinderjit, and John Skilling. 2006. <em>Data Analysis: A Bayesian Tutorial</em>. OUP Oxford.</p>
+</div>
+<div id="ref-stahler2013">
+<p>Stahler, Gerald J., Jeremy Mennis, Steven Belenko, Wayne N. Welsh, Matthew L. Hiller, and Gary Zajac. 2013. “Predicting Recidivism for Released State Prison Offenders.” <em>Criminal Justice and Behavior</em> 40 (6): 690–711. <a href="https://doi.org/10.1177/0093854812469609">https://doi.org/10.1177/0093854812469609</a>.</p>
+</div>
+<div id="ref-vandenberg2016">
+<p>van den Berg, Jonas, Heloisa Galbiati, Akiko Rasmussen, Samantha Miller, and Bert Poolman. 2016. “On the Mobility, Membrane Location and Functionality of Mechanosensitive Channels in <em>Escherichia Coli</em>.” <em>Scientific Reports</em> 6 (1). <a href="https://doi.org/10.1038/srep32709">https://doi.org/10.1038/srep32709</a>.</p>
+</div>
+</div>
+						</div><!-- /.content -->
+					</div><!-- /.col -->
+					<div class="col-md-4 col-md-offset-1">
+						<div class="sections-list-wrapper">
+							<div class="sections-list js-sections js-affix js-scrollspy hidden-xs hidden-sm"><span style="font-size: 14pt">Table of Contents</span><hr></div><!-- /.sections-list -->
+						</div>
+					</div><!-- /.col -->
+				</div><!-- /.row -->
+			</div><!-- /.container -->
+		</div><!-- /.section -->
+		
+			<div class="section section--grey">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-7">
+							<div id="disqus_thread"></div>
+<script>
+	/**
+	 *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+	 *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+	 */
+	 /*
+	var disqus_config = function () {
+	this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+		this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+	};
+	*/
+	(function() {
+		var d = document, s = d.createElement('script');
+
+		s.src = 'https://gchure-phd.disqus.com/embed.js';
+
+		s.setAttribute('data-timestamp', +new Date());
+		(d.head || d.body).appendChild(s);
+	})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+						</div><!-- /.col -->
+					</div><!-- /.row -->
+				</div><!-- /.container -->
+			</div><!-- /.section -->
+		
+		<div class="js-footer-area">
+			
+				<nav class="page-nav">	
+					<div class="container">
+						<div class="row">
+							<div class="col-xs-12">
+								
+									<a href="https://gchure.github.io/phdchapter_07" class="page-nav__item page-nav__item--prev">
+										<i class="icon icon--arrow-left"></i>
+										Chapter VII
+									</a><!-- /.page-nav__item -->
+								
+								
+									<a href="https://gchure.github.io/phdchapter_09" class="page-nav__item page-nav__item--next">
+										Chapter IX
+										<i class="icon icon--arrow-right"></i>
+									</a><!-- /.page-nav__item -->
+								
+							</div><!-- /.col -->
+						</div><!-- /.row -->
+					</div><!-- /.container -->
+				</nav><!-- /.page-nav -->
+			
+			
+			
+	<footer class="site-footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-6">
+					
+						<a href="https://gchure.github.io/phd/" class="site-footer__logo">Griffin D. Chure | PhD Thesis</a>
+					
+					
+						<hr>
+						<p class="site-footer__copyright">Copyright &copy; 2020. - Griffin D. Chure <br>All rights reserved.</p>
+					
+				</div><!-- /.col -->
+				
+					<div class="col-sm-6 align-right">
+						<ul class="social-list">
+							
+								<li>
+									<a href="https://twitter.com/gdchure" target="_blank" class="social-list__item social-list__item--twitter">
+										<i class="icon icon--twitter"></i>
+									</a>
+								</li>
+							
+						</ul><!-- /.social-list -->
+					</div><!-- /.col -->
+				
+			</div><!-- /.row -->
+		</div><!-- /.container -->
+	</footer><!-- /.site-footer -->
+
+
+<script src="https://gchure.github.io/phd/doks-theme/assets/js/vendor/jquery.min.js"></script>
+<script type="text/javascript" src="https://gchure.github.io/phd/doks-theme/assets/js/vendor/bootstrap/affix.min.js"></script>
+<script type="text/javascript" src="https://gchure.github.io/phd/doks-theme/assets/js/vendor/bootstrap/scrollspy.min.js"></script>
+<script type="text/javascript" src="https://gchure.github.io/phd/doks-theme/assets/js/vendor/matchHeight.min.js"></script>
+<script type="text/javascript" src="https://gchure.github.io/phd/doks-theme/assets/js/scripts.min.js"></script>
+
+
+
+
+		</div><!-- /.js-footer-area -->
+	</body>
+</html>

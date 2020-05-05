@@ -4,11 +4,11 @@ layout: default
 keywords:
 comments: true
 image: abstract.png
+permalink: abstract
 
 # Hero section
 title:  Abstract
-subtitle: >  
-    The Grad School Archipelago
+    
     
 # Author box
 author:
@@ -25,7 +25,7 @@ page_nav:
     next:
         content: Chapter I
         url: phd/chapter_01
-prefix: 
+
 ---
 
 Central to any definition of Life is the ability sense changes in ones'

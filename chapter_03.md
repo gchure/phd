@@ -3,12 +3,12 @@
 layout: default
 keywords:
 comments: true
-image: switchboard.png
+image: islands.jpg
 
 # Hero section
 title: Chapter 3
 subtitle: >
-    Unknown Knowns, Known Unknowns, and Unforseen Consequences: Using Free Energy Shifts To Predict Mutant Phenotypes
+    Unknown Knowns, Known Unknowns, and Unforeseen Consequences: Using Free Energy Shifts To Predict Mutant Phenotypes
     
 # Author box
 author:
@@ -33,10 +33,10 @@ author:
 page_nav:
     prev:
         content: Chapter II 
-        url: phd/chapter_02
+        url: chapter_02
     next:
         content: Chapter IV
-        url: phd/chapter_04
+        url: chapter_04
 prefix: chapter_03
 contents:
     - section_01_header

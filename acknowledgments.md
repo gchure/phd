@@ -4,6 +4,7 @@ layout: default
 keywords:
 comments: true
 image: acknowledgements.png
+permalink: acknowledgements
 
 # Hero section
 title:  Acknowledgements
@@ -16,7 +17,7 @@ author:
     title_url: ''
     external_url: false
     description: >
-      Tbw 
+
 # Page navigation
 page_nav:
     next:

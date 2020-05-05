@@ -122,6 +122,7 @@ $$
 \Delta F_\text{mutations 1 \& 2} = \Delta F_\text{mutation 1} +
 \Delta F_\text{mutation 2},
 $${#eq:delF_null_intro}
+
 assuming there is no interaction between the mutations. Given the fact that we can compute the fold-change in gene expression given
 knowledge of the free energy, we can therefore predict the double mutant
 phenotype *a priori*, a prediction not possible prior to this work.

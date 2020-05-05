@@ -3,7 +3,7 @@
 layout: default
 keywords:
 comments: true
-image: waves.jpg
+image: islands.jpg
 
 # Hero section
 title: Chapter VII 
@@ -19,10 +19,10 @@ author:
 page_nav:
     prev:
         content: Chapter VI
-        url: phd/chapter_06
+        url: chapter_06
     next:
         content: Chapter VIII
-        url: phd/chapter_08
+        url: chapter_08
 prefix: chapter_07
 contents:
     - section_01_header

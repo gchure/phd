@@ -18,7 +18,7 @@ doks:
     google_analytics:
         tracking_code: # Add your Google Analytics tracking code to activate Google Analytics
     comments:
-        disqus_forum_shortname: gchure_phd # Add your disqus forum shortname
+        disqus_forum_shortname: gchure-phd # Add your disqus forum shortname
 
 # SASS settings
 sass:

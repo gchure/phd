@@ -49,7 +49,7 @@ Diénert proposed two mechanisms for the origin of enzymatic adaptation
 observed for galactozymase in *S. cerevisae* [@loison2013]. Either (a) the
 presence of galactose *directly* transformed enzymes already present in the
 cell into galactozymase or (b) that the galactose activated the production of
-galactozymase *de novo* [@dienert1900, @loison2013].
+galactozymase *de novo* [@dienert1900; @loison2013].
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Nearly half a century later, Jacques Monod
 would rediscover the phenomenon of enzymatic adaptation, this time in the
@@ -83,8 +83,8 @@ with the level of quantitative rigor he thought it deserved [@monod1947]. In
 this work, he set out to progressively deconstruct and invalidate a series of
 hypotheses for the phenomenon of enzymatic adaptation. In doing so, he laid
 the groundwork for what would become (in his opinion) his greatest
-contribution to science, the nature of allosteric transitions [@loison2013,
-@monod1963, @monod1965], a topic that will feature prominently in the
+contribution to science, the nature of allosteric transitions [@loison2013;
+@monod1963; @monod1965], a topic that will feature prominently in the
 remainder of this thesis.
 
 ![**The phenomenon of enzymatic adaptation revealed in bacterial growth

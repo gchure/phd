@@ -3,12 +3,11 @@
 layout: default
 keywords:
 comments: true
-image: aspens.jpg
-
+image: migration.jpg
 # Hero section
 title:  Chapter I
 subtitle: >  
-    Janus-Faced Molecules and Adaptation Across Biological Scales     
+    The Phenomenon of Adaptation Across The Biological Scales 
 
 # Author box
 author:
@@ -18,15 +17,16 @@ author:
     description: >
        All forms of life are united in their obedience to the forces of evolution.
        The ability to adapt -- either at the level of molecules or at the level of
-       populations -- is central to evolution. Blah Blah 
+       populations -- is central to evolution. This chapter outlines the focus of
+       my dissertation and places the results in a historical context.
 # Page navigation
 page_nav:
     prev:
-        content: Published Content
-        url: 'phd/published_content'
+        content: Abstract
+        url: abstract
     next:
         content: Chapter 2
-        url: 'phd/chapter_02'
+        url: chapter_02
 prefix: chapter_01
 contents:
     - section_01_introduction
@@ -47,5 +47,4 @@ contents:
 {% endfor %}
 {% endif %}
 
-
-Blank placeholder
+## References

@@ -8,7 +8,7 @@ image: prismatic.jpg
 # Hero section
 title: Chapter IV
 subtitle: > 
-    In Blissful Ignorance of Dire Straits: The Physiological Adaptability of a Simple Genetic Circuit 
+   On The Physiological Adaptability of a Simple Genetic Circuit 
 # Author box
 author:
     title: Summary
@@ -30,10 +30,10 @@ author:
 page_nav:
     prev:
         content: Chapter III
-        url: phd/chapter_03
+        url: chapter_03
     next:
         content: Chapter 2
-        url: phd/chapter_05
+        url: chapter_05
 prefix: chapter_04
 contents:
     - section_01_header

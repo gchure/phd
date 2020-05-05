@@ -3,12 +3,13 @@
 layout: default
 keywords:
 comments: true
-image: waves.jpg
+image: prismatic.jpg
 
 # Hero section
-title: Chapter IX
+title: Chapter VIII
 subtitle: > 
-    Supplemental Information For Chapter V: How Bacteria Survive Osmotic Shocks
+    Supplemental Information For Chapter IV: The Physiological Adaptability of a
+    Simple Genetic Circuit 
 
 # Author box
 author:
@@ -19,10 +20,10 @@ author:
 page_nav:
     prev:
         content: Chapter VII
-        url: phd/chapter_07
+        url: chapter_07
     next:
         content: Chapter IX
-        url: phd/chapter_09
+        url: chapter_09
 prefix: chapter_08
 contents:
     - section_01_header
