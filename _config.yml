@@ -1,6 +1,6 @@
 # Theme settings
 doks:
-    baseurl: "https://gchure.github.io/phd"
+    baseurl: "https://gchure.github.io/phd/"
     color_theme:  grey # Available themes: blue (default), green, purple, red and yellow
     header:
         logo:
