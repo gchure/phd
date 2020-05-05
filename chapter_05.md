@@ -32,11 +32,11 @@ author:
 # Page navigation
 page_nav:
     prev:
-        content: Published Content
-        url: '{{site.doks.baseurl}}/published_content'
+        content: Chapter IV
+        url: 'phd/chapter_04'
     next:
-        content: Chapter 2
-        url: '{{site.doks.baseurl}}/chapter_2'
+        content: Chapter VI
+        url: phd/chapter_06
 prefix: chapter_05
 contents:
     - section_01_header

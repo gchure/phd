@@ -21,7 +21,7 @@ mM KCl, 90 mM MgCl$_2$, 10 mM CaCl$_2$, and 5 mM HEPES buffer at pH 7. All
 data were acquired at a sampling rate of 50 kHz with 5 kHz filtration using
 an AxoPatch 200B amplifier and pClamp software (Molecular Devices). The
 pressure threshold for activation a single MscS channel (blue stripe in
-[@Fig:ephys]) was compared to that of single MscL channels (yellow strip in
+[@Fig:ephys]) was compared to that of single MscL channels (orange strip in
 [@Fig:ephys]). The pressure threshold for activation of the MscL channels was
 referenced against the activation threshold of MscS to determine the pressure
 ratio (PL:PS) for gating as previously described [@blount1996]. Recordings of
@@ -29,8 +29,8 @@ the transmembrane current were made of three individual patches with an
 average PL:PS ratio of 1.56 for MscL-sfGFP. This ratio quantitatively agrees
 with the PL:PS ratio of 1.54 measured in a strain (MJF429 from the Booth
 laboratory) which expresses the wild-type MscL protein from the chromosome.
-The average transient current change from MscL openings (Fig. S1 shaded
-yellow region ) is 75 pA, corresponding to a single channel conductance of
+The average transient current change from MscL openings (@Fig:ephys shaded
+orange region) is 75 pA, corresponding to a single channel conductance of
 3.7 nS, comparable to the reported values of wild-type MscL. The agreement
 between these two strains indicates that there is negligible difference in
 functionality between MscL and MscL-sfGFP, allowing us to make physiological
@@ -42,9 +42,12 @@ channel current obtained through a patch-clamp electrophysiology measurement
 of bacterial protoplasts. The bottom panel shows the applied pressure through
 the micropipette to facilitate opening of the mechanosensitive channels. The
 blue shaded region indicates opening of the mechanosensitive channel of small
-conductance (MscS). The shaded yellow region represents opening of single
-MscL channels. These regions were used to compute the PL:PS ratio.
-](ch9_figS1){#fig:ephys short-caption="Characteristic MscL-sfGFP conductance
+conductance (MscS). The shaded orange region represents opening of single
+MscL channels. These regions were used to compute the PL:PS ratio. The [Python
+code
+(`ch9_figS1.py`)](https://github.com/gchure/phd/blob/master/src/chapter_09/code/ch9_figS1.py)
+used to generate this figure can be found on the thesis [GitHub
+repository](https://github.com/gchure/phd).](ch9_figS1){#fig:ephys short-caption="Characteristic MscL-sfGFP conductance
 obtained through patch-clamp electrophysiology"}
 
 ### Maturation time of MscL-sfGFP
@@ -91,7 +94,7 @@ expression of the genes. These numbers are not known for LB supplemented with
 500 mM NaCl but may be reduced. For this reason, we extended the length of
 induction to three minutes before translation was ceased.
 
-The excess anhydrous tetracycline was removed from the culture through
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The excess anhydrous tetracycline was removed from the culture through
 centrifugation and washing with one volume of LB supplemented with 500 mM
 NaCl and 100 $\mu$g/mL kanamycin at 37$^\circ$C. The maturation of sfGFP was then
 monitored through flow cytometry by measuring the mean expression of 100,000
@@ -102,7 +105,7 @@ cells every 60 to 90 seconds. The result of these measurements are shown in
 20 minutes after translation of the sfGFP gene was ceased. While the growth
 rate in LB + 500mM NaCl varies depending on the expression of MscL-sfGFP, we
 typically observe doubling times between 30 and 40 minutes, as indicated by a
-yellow stripe in [@Fig:maturation_time]A. To examine the ``best case”
+orange stripe in @Fig:maturation_time (A). To examine the ``best case”
 scenario for cell growth in this medium, we measured the growth rate of the
 same *E. coli* strain used to measure the fluorophore maturation time
 ([@Fig:maturation_time] B). We observed a doubling time of 35 $\pm$ 1 min,
@@ -120,7 +123,10 @@ indicates the range of doubling times observed for the various RBS mutant
 strains described in this work (B) Growth curve of *E. coli* MG1655 cells in
 LB + 500mM NaCl. Red points indicate individual absorbance measurements. Line
 of best fit is shown in black with the uncertainty shown in shaded gray. The
-measured doubling time was 35 $\pm$ 1 min.](ch9_figS2){#fig:maturation_time
+measured doubling time was 35 $\pm$ 1 min. The [Python
+code (`ch9_figS2.py`)](https://github.com/gchure/phd/blob/master/src/chapter_09/code/ch9_figS2.py)
+used to generate this figure can be found on the thesis [GitHub
+repository](https://github.com/gchure/phd). ](ch9_figS2){#fig:maturation_time
 short-caption="Measurement of sfGFP maturation as a function of time through
 flow cytometry."}
 

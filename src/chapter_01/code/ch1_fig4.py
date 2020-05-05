@@ -12,7 +12,7 @@ colors, palette = phd.viz.phd_style()
 data = pd.read_csv('../../data/ch2_induction/RazoMejia_2018.csv', comment='#')
 data = data[data['repressors'] > 0]
 data['repressors'] *= 2
-data_summarized = data.groupby(['operator', 'IPTG_uM', 'repressors'])['fold_change_A'].mean().reset_index()
+data_summarized = data.groupby(['operator', 'IPTG_uM', 'repressors'])['fold_change_A'].agg(('mean', 'sem')).reset_index()
 
 #%%
 c_range = np.logspace(-2, 4, 200)
@@ -33,8 +33,11 @@ ax[-1].set_xlabel('inducer [µM]', fontsize=6)
 # Define the operator axes
 op_ax = {'O1':ax[0], 'O2':ax[1], 'O3':ax[2]}
 
+titles = {'O1':'operator O1 (high DNA affinity)',
+          'O2':'operator O2 (medium DNA affinity)',
+          'O3': 'operator O3 (low DNA affinity)'}
 for o, a in op_ax.items():
-    phd.viz.titlebox(a, f'operator {o}', size=6, color=colors['black'],
+    phd.viz.titlebox(a, f'{titles[o]}', size=6, color=colors['black'],
                     boxsize='15%')
 
 
@@ -53,11 +56,11 @@ for g, d in data_summarized.groupby(['operator', 'repressors']):
         zorder = 11
     op_ax[g[0]].plot(c_range, theo, '-', lw=0.75, color=rep_colors[g[1]], 
                     label=int(g[1]), zorder=10)
-    op_ax[g[0]].plot(d['IPTG_uM'], d['fold_change_A'], 'o', markerfacecolor=fill,
-                    markeredgecolor=edge, markeredgewidth=0.5, ms=2.5, label='__nolegend__', 
-                    zorder=zorder)
+    op_ax[g[0]].errorbar(d['IPTG_uM'], d['mean'], d['sem'], 
+                        fmt='o', markerfacecolor=fill, markeredgecolor=edge, markeredgewidth=0.5, ms=4, label='__nolegend__', 
+                    zorder=zorder, lw=0.75, color=rep_colors[g[1]])
 
-leg.get_title().set_fontsize(6)
+# leg.get_title().set_fontsize(6)
 plt.savefig('../figs/ch1_fig4_induction_plot.svg')
 # %%
 

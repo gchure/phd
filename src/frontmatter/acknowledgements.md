@@ -13,7 +13,7 @@ gratitude for his mentorship and, more importantly, his friendship. His
 unceasing desire and unique ability to pursue the physical reality of any
 problem has sculpted my scientific process. Among his many scientific
 qualities, its his refusal to differentiate between research and teaching
-that has had the largest impact. I've been lucky enough to travel the world
+that has had the largest impact on me personally. I've been lucky enough to travel the world
 (or, at least four continents) with him teaching principles of physical
 biology and learning to be a physical biologist along the way. I'll forever
 be grateful for his willingness to take me as a graduate student and his
@@ -24,10 +24,10 @@ strongest influence on my scientific philosophy. Throughout my Ph.D., he has
 been both a dear friend and statistical shaman. His remarkable ability to
 teach the complex details of statistical inference, physical biology, and
 computer programming transformed the way I view the world around me. Like Rob,
-Justins dedication to education is far beyond that of most other scientists.
-During my years at Caltech, I've TA'd with for Justin $\approx 10$ times. Every
-time, I left the course with a deeper knowledge of the subject and a greater
-appreciation for his dedication to his students. 
+Justin's dedication to education is far beyond that of most other scientists.
+During my years at Caltech, I've TA'd with for Justin $\approx 10$ times and on
+every occasion, I left the course with a deeper knowledge of the subject and a
+greater appreciation for his dedication to his students. 
 
 \hspace{10mm}I owe a great deal of my development as a
 scientist to those with whom I've shared the lab. Heun Jin Lee is a master of
@@ -61,12 +61,12 @@ Rydenfelt, Kimberly Berry, Gita Mahmoudabadi, and Daniel Jones are others who
 are currently in (or, at least recently departed) the group to whom I am
 grateful for their scientific discussions over the years.
 
-Of course, mentorship and camaraderie wasn't restricted to the lab. I am lucky
+\hspace{10mm}Of course, mentorship and camaraderie wasn't restricted to the lab. I am lucky
 to consider fellow Caltech PhD students like Belinda Wenke, Emily Blythe, Andy
 Zhou, Catie Blunt, Shyam Saladi, Sam Ho, Ferdinand Huber, Kyu Hyun Lee, Porfirio
 Quintero, Renee Arias, Joe Redford, Kelsey Boyle, and many others as some of my
 closest friends. During a recent PhD defense, on of my friends remarked that
-"grad school can feel like an island." This is half true. Grad school *is* an
+"grad school can feel like an island." This is half true. Grad school is an
 island, but your island is part of an archipelago. I was lucky enough to have
 friends who made my island feel not so lonesome. 
 
@@ -74,7 +74,7 @@ friends who made my island feel not so lonesome.
 school stem from my time at the Marine Biological Laboratory, an institution
 where suspension of disbelief is the rule rather than the exception. While I
 never took a course, I had the immense privilege of being a teaching
-assistant for the Physiology summer course from 2015 to 2018 and for Physical
+assistant for the Physiology summer course from 2015 to 2018 and for the Physical
 Biology of the Cell course in 2018. During this time, I met dozens of
 graduate students, professors, post docs, research technicians, and more who
 have all helped me develop as a scientist and educator. In no particular
@@ -82,7 +82,7 @@ order, I would like to Celine Alkelmade, George Bell, Ambika Nadkarni, Damien
 Dudka, Cat Triandafillou, Mason Kamb, Lizzy Mueller, Chandrima Patra, Miranda
 Hunter, Kyle Naughton, Cayla Jewett, Emily Meltzer, Roya Huang, Charlotte
 Strandkvist, Simon Alamos, Sean McInally, Karna Gowda, Alina Guna, Nalin
-Ratinyake, Joe Brzostowski, Carolynn Ott, Steven Wilbert, Ana Gayek, Wallace
+Ratinyake, Victoria Yan, Joe Brzostowski, Carolynn Ott, Steven Wilbert, Ana Gayek, Wallace
 Marshall, and all of those who have passed through the halls of Loeb Lab with
 me for forging so many great memories. During these courses, I had the
 pleasure to teach alongside Rob Brewster, Hernan Garcia, James Boedicker, and

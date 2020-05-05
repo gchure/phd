@@ -1,4 +1,4 @@
-## Topic IV: The Physiological Adaptability of Transient Molecular Interactions
+## On The Physiological Adaptability of Transient Molecular Interactions
 
 In **Chapers 4 and 5** (and the associated supplementary **Chapters 8 and 9**),
 we explore the final level of adaptation in @Fig:adaptation_levels --
@@ -10,29 +10,36 @@ by changing the temperature. Secondly, we examine
 physiological adaptation in the context of osmoregulation -- a true matter of
 life and death in the single-celled world.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Up to this point in our travels through scientific history, we have examined
-Monod's growth curves  in various pairwise combinations of sugars. A feature of
-note is that the presence of diauxic shifts can be seen in various organisms and
-for many different types of sugars such as sucrose/arabinose, glucose/sorbitol, 
-and glucose/lactose pairings [@monod1947]. These combinations reveal that cells
-are able to juggle dual-input logic systems where the "decision" to digest one
-carbon source or another relies on monitoring changes in concentrations of
-either sugar. In his 1947 treatise, Monod showed that this phenomenon was not
-limited to dual-carbon mixtures and presented a "triauxic" growth curve of *E.
-coli* grown on a glucose/sorbitol/glycerol mixture, shown in
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Up to this point in our travels through
+scientific history, we have examined Monod's growth curves in various
+pairwise combinations of sugars. A feature of note is that the presence of
+diauxic shifts can be seen in various organisms and for many different types
+of sugars such as sucrose/arabinose, glucose/sorbitol, and glucose/lactose
+pairings [@monod1947]. These combinations reveal that cells are able to
+juggle dual-input logic systems where the "decision" to digest one carbon
+source or another relies on monitoring changes in concentrations of either
+sugar. In his 1947 treatise, Monod showed that this phenomenon was not
+limited to dual-carbon mixtures and presented a "triauxic" growth curve of
+*E. coli* grown on a glucose/sorbitol/glycerol mixture, shown in
 @Fig:triauxic_growth. This result illustrated to Monod that the mechanisms
 underlying enzymatic adaptation "have the character of *competitive
-interactions* between different specific enzyme forming systems" [@monod1947]. 
+interactions* between different specific enzyme forming systems"
+[@monod1947].
 
 ![**A metabolic hierarchy in a three-component growth mixture of glucose,
-sorbitol, and glycerol.** A "triauxic" growth curve illustrating a hierarchy of
-carbon source metabolism. An *E. coli* culture was grown in an medium with equal
-parts glucose, sorbitol and glycerol with utilization in that order. Auxic
-transitions are shown as black points and white vertical lines. Regions of the
-growth curve where glucose, sorbitol, and glycrol are primarily consumed are
-colored in blue, orange, and green, respectively. Data digitized from
-@monod1947.](ch1_fig9){#fig:triauxic_growth short-caption="A metabolic hierarchy
-in a growth medium containing glucose, sorbitol, and glycerol."}
+sorbitol, and glycerol.** A "triauxic" growth curve illustrating a hierarchy
+of carbon source metabolism. An *E. coli* culture was grown in an medium with
+equal parts glucose, sorbitol and glycerol with utilization in that order.
+Auxic transitions are shown as black points and white vertical lines. Regions
+of the growth curve where glucose, sorbitol, and glycrol are primarily
+consumed are colored in blue, orange, and green, respectively. Data digitized
+from @monod1947. Smooth line corresponds to a univariate spline applied to
+the data to retain the presentation in the literature. The [Python code
+(`ch1_fig9.py`)](https://github.com/gchure/phd/blob/master/src/chapter_01/code/ch1_fig9.py)
+used to generate this figure can be accessed via the thesis [GitHub
+repository](https://github.com/gchure/phd).](ch1_fig9){#fig:triauxic_growth
+short-caption="A metabolic hierarchy in a growth medium containing glucose,
+sorbitol, and glycerol."}
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;These competing interactions must be resilient
 to a variety of physiological states. Despite the fact that the carbon atoms
@@ -74,11 +81,14 @@ Growth temperatures explored in Chapter 4 (left) with "star rating" indicating
 fastest growth rate. Growth curves (right) are shown for the three temperatures,
 all of which use glucose as the sole carbon source. For right-hand panels in (A)
 and (B), optical density is computed relative to the initial optical density of
-the culture.](ch1_fig10){#fig:growth_intro short-caption="Methods of
+the culture. The [Python code
+(`ch1_fig10.py`)](https://github.com/gchure/phd/blob/master/src/chapter_01/code/ch1_fig10.py)
+used to generate this figure can be accessed via the thesis [GitHub
+repository](https://github.com/gchure/phd).](ch1_fig10){#fig:growth_intro short-caption="Methods of
 physiological control used in Chapter 4."}
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; How could this variation in cellular physiology
-be incorporated into our thermodynamic model? Up to this point in this thesis, a
+be incorporated into our thermodynamic model? Up to this point in this thesis, all
 experiments have been conducted in a growth medium supplemented with glucose
 held at a balmy 37$^\circ$ C. However, nowhere in the thermodynamic model
 schematized in @Fig:induction_intro (B) is it specified *which* carbon source
@@ -126,7 +136,7 @@ sufficient to predict the output of this genetic circuit when the temperature
 is varied (dashed lines in left-hand side of @Fig:growth_results_intro, (B)). This is
 not necessarily a surprising result as binding of transcription factors is not
 strictly an enthalpic process. Temperature is known to have a strong influence
-on many material properties of DNA ,such as persistence length and salt
+on many material properties of DNA, such as persistence length and salt
 release [@goethe2015], excluded volume effects [@driessen2014], and
 repressor-DNA solubility [@elf2007], to name a few of many effects. To phenomenologically
 characterize the influence of temperature on the fold-change in gene expression,
@@ -152,7 +162,10 @@ displayed are the mean and standard error of three to eight biological
 replicates. Light-grey points in right hand panels are data from @garcia2011,
 @brewster2014, @razo-mejia2018, and @chure2019, all of which were measured in
 glucose-supplemented media at 37$^\circ$
-C.](ch1_fig11){#fig:growth_results_intro short-caption="Performance of a
+C. The [Python code
+(`ch1_fig11.py`)](https://github.com/gchure/phd/blob/master/src/chapter_01/code/ch1_fig11.py)
+used to generate this figure can be accessed via the thesis [GitHub
+repository](https://github.com/gchure/phd). ](ch1_fig11){#fig:growth_results_intro short-caption="Performance of a
 simple thermodynamic model of simple repression in diverse physiological
 states."}
 

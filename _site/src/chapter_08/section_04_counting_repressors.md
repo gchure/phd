@@ -2,8 +2,8 @@
 
 
 In this section, we expand upon the theoretical and experimental
-implementation of the fluorescence calibration method derived in Ref.
-[@rosenfeld2005]. We cover several experimental data validation steps as
+implementation of the fluorescence calibration method derived in 
+@rosenfeld2005. We cover several experimental data validation steps as
 well as details regarding the parameter inference. Finally, we comment
 on the presence of a systematic error in the repressor counts due to
 continued asynchronous division between sample preparation and imaging.
@@ -17,7 +17,7 @@ estimate the average brightness of a single fluorophore or, in other words,
 determine a calibration factor $\alpha$ that permits translation from copy
 number to intensity or vice versa. Several methods have been used over the
 past decade to estimate this factor, such as measuring single-molecule
-photobleaching steps [@garcia2011a; @bialecka-fornal2012], measurement of *in
+photobleaching steps [@garcia2011c; @bialecka-fornal2012], measurement of *in
 vivo* photobleaching rates [@nayak2011; @kim2016], and through measuring the
 partitioning of fluorescent molecules between sibling cells after cell
 division [@rosenfeld2005; @rosenfeld2006; @brewster2014]. In this work, we
@@ -120,7 +120,7 @@ fluorescence units correspond to a single fluorescent protein.
 
 The fluorescence calibration method  was first described and implemented by
 @rosenfeld2005 followed by a more in-depth approach on the statistical
-inference of the calibration factor in 2006 [@rosenfeld2006]. In both of
+inference of the calibration factor in @rosenfeld2006. In both of
 these works, the partitioning of a fluorescent protein was tracked
 across many generations from a single parent cell, permitting inference
 of a calibration factor from a single lineage. @brewster2014
@@ -190,10 +190,9 @@ workflow for determination of a fluorescence calibration factor."}
 
 ### Lineage Tracking and Fluorescence Quantification
 
-
 Segmentation and lineage tracking of both the fluorescence snap shots
 and time-lapse growth images were performed using the SuperSegger
-`v1.03` [@stylianidou2016a] software using MATLAB R2017B (MathWorks,
+`v1.03` [@stylianidou2016] software using MATLAB R2017B (MathWorks,
 Inc). The result of this segmentation is a list of matrices for each
 unique imaged position with identifying data for each segmented cell
 such as an assigned ID number, the ID of the sibling cell, the ID of the
@@ -225,7 +224,7 @@ fluorescence distributions between the two sibling cells to be identical.
 all siblings from a single experiment, indicating that the pairing of
 siblings is independent of their fluorescence.
 
-Furthermore, we examined the partitioning of the fluorescence between
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Furthermore, we examined the partitioning of the fluorescence between
 the siblings. In @Eq:binomial_mean, we defined the mean number of proteins
 inherited by one sibling. This can be easily translated into the
 language of intensity as
@@ -249,8 +248,8 @@ approximately equal between siblings. Furthermore, we see no correlation
 between the cell volume immediately after division and the observed
 fractional intensity. This suggests that the probability of partitioning
 to one sibling or the other is not dependent on the cell size. An
-assumption \[backed by experimental measurements
-[@garcia2011; @phillips2019]\] in our thermodynamic model is that all
+assumption (backed by experimental measurements
+[@garcia2011; @phillips2019]) in our thermodynamic model is that all
 repressors in a given cell are bound to the chromosome, either
 specifically or nonspecifically. As the chromosome is duplicated and
 partitioned into the two siblings without fail, our assumption of
@@ -269,13 +268,16 @@ of sibling 1 upon division. For each sibling pair, the fractional intensity is
 computed as the intensity of sibling 1 $I_2$ divided by the summed intensities
 of both siblings $I_1 + I_2$. (C) Partitioning intensity as a function of cell
 volume. The fractional intensity of every sibling cell is plotted against its
-estimated newborn volume.](ch8_figS4){#fig:sanity_check
-short-caption="Experimental sanity checks and inference ofa . fluorescence
+estimated newborn volume. The [Python code                                                
+(`ch8_figS4.py`)](https://github.com/gchure/phd/blob/master/src/chapter_08/code/ch8_figS4.py)
+used to generate this figure can be found on the thesis [GitHub
+repository](https://github.com/gchure/phd).](ch8_figS4){#fig:sanity_check
+short-caption="Experimental sanity checks and inference of a fluorescence
 calibration factor."}
 
 ### Statistical Inference of the Fluorescence Calibration Factor
 
-As is outlined in the Materials and Methods section of the Chapter 4, we
+As is outlined in the Materials \& Methods section of the Chapter 4, we
 took a Bayesian approach towards our inference of the calibration factor
 given fluorescence measurements of sibling cells. Here, we expand in
 detail on this statistical model and its implementation.
@@ -370,7 +372,7 @@ distribution,
 $$
 g(\alpha) = \sqrt{2 \over \pi\sigma^2}\exp\left[{-\alpha^2 \over
    2\sigma^2}\right]\,;\, \forall \alpha > 0. 
-$${#eq:alpha_prior}
+$${#eq:growth_alpha_prior}
 where the standard deviation is large, for example, $\sigma = 500$ a.u.
 / fluorophore. We evaluated the posterior distribution using Markov
 chain Monte Carlo (MCMC) as is implemented in the Stan probabilistic
@@ -389,7 +391,10 @@ Empirical cumulative distribution functions and (B) histograms of the posterior
 distribution for the calibration factor $\alpha$ for several biological
 replicates. Different colors indicate different biological replicates of
 experiments performed in glucose supplemented medium at 37$^\circ$ C.
-](ch8_figS5){#fig:cal_factor_posts short-caption="Representative posterior distributions
+The [Python code                                                
+(`ch8_figS5.py`)](https://github.com/gchure/phd/blob/master/src/chapter_08/code/ch8_figS5.py)
+used to generate this figure can be found on the thesis [GitHub
+repository](https://github.com/gchure/phd). ](ch8_figS5){#fig:cal_factor_posts short-caption="Representative posterior distributions
 for inference of the fluorescence calibration factor."}
 
 ### Correcting for Systematic Experimental Error
@@ -403,7 +408,7 @@ Given these snapshots, individual cells were segmented again using the SuperSegg
 R2017b. The result of this analysis is an array of single-cell
 measurements of the YFP and mCherry fluorescence intensities. With these
 values and a calibration factor estimated by @Eq:full_likelihood 
-and @Eq:alpha_prior, we can compute the estimated number of
+and @Eq:growth_alpha_prior, we can compute the estimated number of
 repressors per cell in every condition.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;However, as outlined previously
@@ -452,10 +457,10 @@ the parent cell. Therefore, the fold-change in gene expression can be
 calculated as 
 $$
 \langle \text{ fold-change}_{parent}\rangle =
-\frac{2 \times \langle I^{(YFP)}_\text{ newborn}(R > 0) \rangle}{2
-\times \langle I^{(YFP)}_\text{ newborn}(R = 0)\rangle} =
-\frac{\langle I^{(YFP)}_\text{ newborn}(R > 0) \rangle}{\langle
-I^{(YFP)}_\text{ newborn}(R = 0)\rangle}.
+\frac{2 \times \langle I^\text{(YFP)}_\text{ newborn}(R > 0) \rangle}{2
+\times \langle I^\text{(YFP)}_\text{ newborn}(R = 0)\rangle} =
+\frac{\langle I^\text{(YFP)}_\text{ newborn}(R > 0) \rangle}{\langle
+I^\text{(YFP)}_\text{ newborn}(R = 0)\rangle}.
 $${#eq:fc_correction}
 Thus, when calculating the fold-change in gene expression one does not
 need to correct for any cell division that occurs between sample
@@ -493,7 +498,10 @@ the two vertical lines to be "medium" sized, and "long" cells tot he right of
 the second vertical line. Cells below the 2.4$\mu$m threshold were treated as
 cells who divided after production of lacI-mCherry had been halted. Bottom row
 shows the same data as the top row but as the empirical cumulative
-distribution.](ch8_figS7){#fig:length_distributions short-caption="Cell length
+distribution. The [Python code                                                
+(`ch8_figS7.py`)](https://github.com/gchure/phd/blob/master/src/chapter_08/code/ch8_figS7.py)
+used to generate this figure can be found on the thesis [GitHub
+repository](https://github.com/gchure/phd).](ch8_figS7){#fig:length_distributions short-caption="Cell length
 distributions of fluorescence snapshots and newborn cells."}
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Given this coarse delineation of cell age by
@@ -507,8 +515,7 @@ overlap with data from the literature (@Fig:correction_factor(A), light
 purple). Using the uncorrected measurements, we estimated the DNA binding
 energy to be $\Delta\varepsilon_R \approx -15\, k_BT$ which does not agree
 with the value for the O2 operator reported in @garcia2011 or with the
-inferred DNA binding energies from the other data sources
-(@Fig:correction_factor (B)).
+inferred DNA binding energies from the other data sources (@Fig:correction_factor (B)).
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;These results emphasize the need to correct for undesired dilution of
 repressors through cell division during the sample preparation period,
@@ -523,7 +530,7 @@ this correction, we find that the observed fold-change in gene
 expression agrees with the prediction and data from other sources in the
 literature. The estimated DNA binding energy $\Delta\varepsilon_R$ from
 these data is also in agreement with other data sources
-[@Fig:correction_factor(B), dark red]. 
+(@Fig:correction_factor(B), dark red). 
 This result suggests
 that over the course of sample preparation, a non-negligible fraction of
 the diluted culture undergoes a division event before being imaged.
@@ -560,7 +567,7 @@ single cell division event coupled with direct measurement of the repressor
 copy number using the same binomial partitioning method. This implementation
 required an extensive degree of manual curation of segmentation as well as
 correcting for photobleaching of the reporter, which in itself is a
-non-trivial correction [@garcia2011a]. The experimental approach presented
+non-trivial correction [@garcia2011c]. The experimental approach presented
 here sacrifices a direct measure of the repressor copy number for each cell
 via the binomial partitioning method, but permits the much higher throughput
 needed to assay the variety of environmental conditions. Ultimately, the
@@ -571,7 +578,7 @@ the purposes of this work, we erred on the side of caution and only used the
 cells deemed "large" for the measurements reported in Chapter 4 and the
 remaining sections of this chapter. 
 
-![**Influence of a correction factor on fold-change and the DNA binding energy.
+![**Influence of a correction factor on fold-change and the DNA binding energy.**
 (A) Fold-change in gene expression measurements from [@brewster2014;
 @garcia2011; @razo-mejia2018] along with data rom this work. Data from this work
 shown are with no correction (purple), correcting for small cells only (dark
@@ -583,7 +590,10 @@ over the DNA binding energy. Horizontal lines indicate the width of the
 95\%
 credible region of the posterior distribution. Grey lines in (A) and (B)
 correspond to the theoretical prediction and estimated binding energy from
-@garcia2011, respectively.](ch8_figS8){#fig:correction_factor
+@garcia2011, respectively. The [Python code                                                
+(`ch8_figS8.py`)](https://github.com/gchure/phd/blob/master/src/chapter_08/code/ch8_figS8.py)
+used to generate this figure can be found on the thesis [GitHub
+repository](https://github.com/gchure/phd). ](ch8_figS8){#fig:correction_factor
 short-caption="Influence of a correction factor on fold-change and the DNA
 binding energy."}
 

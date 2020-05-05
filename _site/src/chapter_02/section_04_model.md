@@ -2,7 +2,7 @@
 
 ### Inducible Transcriptional Repression Via The MWC Model of Allostery
 
-&nbsp;&nbsp;&nbsp;&nbsp;We begin by considering a simple repression genetic architecture in which the
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;We begin by considering a simple repression genetic architecture in which the
 binding of an allosteric repressor occludes the binding of RNA polymerase
 (RNAP) to the DNA [@ackers1982; @buchler2003]. When an effector molecule
 (hereafter referred to as an “inducer" for the case of induction) binds to
@@ -14,12 +14,12 @@ repression motifs in the absence of inducer have been previously
 characterized by an equilibrium model where the probability of each state of
 repressor and RNAP promoter occupancy is dictated by the Boltzmann
 distribution [@ackers1982; @buchler2003; @vilar2003; @bintu2005a;
-@garcia2011; @brewster2014] [we note that non-equilibrium models of simple
+@garcia2011; @brewster2014] (we note that non-equilibrium models of simple
 repression have been shown to have the same functional form that we derive
-below [@phillips2015]]. We extend these models to consider allostery by
+below [@phillips2015]). We extend these models to consider allostery by
 accounting for the equilibrium state of the repressor through the MWC model.
 
-&nbsp;&nbsp;&nbsp;&nbsp;Thermodynamic models of gene expression begin by enumerating all possible
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Thermodynamic models of gene expression begin by enumerating all possible
 states of the promoter and their corresponding statistical weights. As
 shown in  @Fig:states_weights (A), the promoter can either be empty,
 occupied by RNAP, or occupied by either an active or inactive repressor.
@@ -61,19 +61,17 @@ sites are shown along with the sums of the active and inactive
 states.](ch2_fig2){#fig:states_weights short-caption="States and statistical
 weights for the simple repression motif."}
 
-&nbsp;&nbsp;&nbsp;&nbsp;Thermodynamic models of transcription [@ackers1982; @buchler2003; @vilar2003;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Thermodynamic models of transcription [@ackers1982; @buchler2003; @vilar2003;
 @bintu2005; @bintu2005a; @kuhlman2007; @daber2011a; @garcia2011;
 @brewster2014; @weinert2014] posit that gene expression is proportional to
 the probability that the RNAP is bound to the promoter $p_\text{bound}$,
 which is given by
-
 $$
 p_\text{bound} = \frac{\frac{P}{N_{NS}}e^{-\beta
 \Delta\varepsilon_{P}}}{1+\frac{R_A}{N_{NS}}e^{-\beta
 \Delta\varepsilon_{RA}}+\frac{R_I}{N_{NS}}e^{-\beta
 \Delta\varepsilon_{RI}}+\frac{P}{N_{NS}}e^{-\beta\Delta\varepsilon_{P}}},
 $${#eq:pbound_def}
-
 with $\beta = 1/k_BT$ where $k_B$ is the Boltzmann constant
 and $T$ is the temperature of the system. As $k_BT$ is the natural
 unit of energy at the molecular length scale, we treat the products
@@ -85,13 +83,12 @@ measure the fold-change in gene expression due to the presence of the
 repressor. We define fold-change as the ratio of gene expression in the
 presence of repressor relative to expression in the absence of repressor
 (i.e. constitutive expression), namely,
-
 $$
 \text{fold-change} \equiv \frac{p_\text{bound}(R > 0)}{p_\text{bound}(R = 0)}.
 $${#eq:fold_change_definition}
 
-&nbsp;&nbsp;&nbsp;&nbsp;We can simplify this expression using two well-justified approximations:
-firstly, $(P / N_{NS})e^{-\beta\Delta\varepsilon_{P}}\ll$ 1 implying that the
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;We can simplify this expression using two well-justified approximations:
+(1) $(P / N_{NS})e^{-\beta\Delta\varepsilon_{P}}\ll$ 1 implying that the
 RNAP binds weakly to the promoter ($N_{NS} = 4.6 \times 10^6$, $P \approx
 10^3$ [@klumpp2008], $\Delta\varepsilon_{P} \approx -2\,\, \text{to} \, -5\,
 k_BT$ [@brewster2012], so that $(P/N_{NS})e^{-\beta\Delta\varepsilon_{P}}
@@ -99,36 +96,32 @@ k_BT$ [@brewster2012], so that $(P/N_{NS})e^{-\beta\Delta\varepsilon_{P}}
 (R_A /N_{NS}) e^{-\beta\Delta\varepsilon_{RA}}$ which reflects our assumption
 that the inactive repressor binds weakly to the promoter of interest. Using
 these approximations, the fold-change reduces to the form
-
 $$
 \text{fold-change} \approx \left(1+\frac{R_A}{N_{NS}}e^{-\beta
 \Delta\varepsilon_{RA}}\right)^{-1} \equiv \left( 1+p_\text{act}(c)
 \frac{R}{N_{NS}}e^{-\beta\Delta\varepsilon_{RA}} \right)^{-1},
 $${#eq:fold_change_RA}
-where in the last step we
-have introduced the fraction $p_\text{act}(c)$ of repressors in the active
-state given a concentration $c$ of inducer, such that
-$R_A(c)=p_\text{act}(c) R$. Since inducer binding shifts the repressors from
-the active to the inactive state, $p_\text{act}(c)$ grows smaller as $c$
+where in the last step we have introduced the fraction $p_\text{act}(c)$ of
+repressors in the active state given a concentration $c$ of inducer, such
+that $R_A(c)=p_\text{act}(c) R$. Since inducer binding shifts the repressors
+from the active to the inactive state, $p_\text{act}(c)$ grows smaller as $c$
 increases.
 
-&nbsp;&nbsp;&nbsp;&nbsp;We use the MWC model to compute the probability $p_\text{act}(c)$ that a
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;We use the MWC model to compute the probability $p_\text{act}(c)$ that a
 repressor with $n$ inducer binding sites will be active. The value of
 $p_\text{act}(c)$ is given by the sum of the weights of the active repressor
 states divided by the sum of the weights of all possible repressor
-states [see  @Fig:states_weights (B)], namely, 
-
+states (see @Fig:states_weights (B)), namely, 
 $$
 p_\text{act}(c)=\frac{\left(1+\frac{c}{K_A}\right)^n}{\left(1+\frac{c}{K_A}\right)^n+e^{-\beta
 \Delta \varepsilon_{AI} }\left(1+\frac{c}{K_I}\right)^n},
 $${#eq:eq_pactive}
-
 where $K_A$ and $K_I$ represent the dissociation constant between the inducer
 and repressor in the active and inactive states, respectively, and $\Delta
 \varepsilon_{AI} = \varepsilon_{I} - \varepsilon_{A}$ is the free energy
-difference between a repressor in the inactive and active state [the quantity
+difference between a repressor in the inactive and active state (the quantity
 $e^{-\beta\Delta \varepsilon_{AI}}$ is sometimes denoted by $L$ [@monod1965;
-@marzen2013] or $K_{\text{RR}*}$ [@daber2011a]]. In this equation,
+@marzen2013] or $K_{\text{RR}*}$ [@daber2011a]). In this equation,
 $c/K_A$ and $c/K_I$ represent the change in free energy when
 an inducer binds to a repressor in the active or inactive state,
 respectively, while $e^{-\beta \Delta \varepsilon_{AI}}$ represents the
@@ -137,9 +130,9 @@ state in the absence of inducer. Thus, a repressor which favors the active
 state in the absence of inducer ($\Delta \varepsilon_{AI} > 0$) will be
 driven towards the inactive state upon inducer binding when $K_I < K_A$. The
 specific case of a repressor dimer with $n=2$ inducer binding sites is shown
-in  @Fig:states_weights (B).
+in @Fig:states_weights (B).
 
-&nbsp;&nbsp;&nbsp;&nbsp;Substituting $p_\text{act}(c)$ from into yields the general formula for
+&nbsp;&nbsp;&nbsp;&nbsp;Substituting $p_\text{act}(c)$ from @Eq:eq_pactive into @Eq:fold_change_RA yields the general formula for
 induction of a simple repression regulatory architecture [@phillips2015],
 namely,
 $$
@@ -167,13 +160,13 @@ quantitative statements about induction profiles. Motivated by the broad
 range of predictions implied by @Eq:fold_change_full, we designed a series of
 experiments using the *lac* system in *E. coli* to tune the control
 parameters for a simple repression genetic circuit. As discussed in
-@Fig:inducible_types (C), previous studies from our lab have provided
+@Fig:inducible_types (C), previous studies have provided
 well-characterized values for many of the parameters in our experimental
 system, leaving only the values of the the MWC parameters ($K_A$, $K_I$, and
 $\Delta \varepsilon_{AI}$) to be determined. We note that while previous
 studies have obtained values for $K_A$, $K_I$, and $L=e^{-\beta \Delta
 \varepsilon_{AI}}$ [@ogorman1980; @daber2011a], they were either based upon
-biochemical experiments or *in vivo* conditions involving poorly
+*in vitro* biochemical experiments or *in vivo* conditions involving poorly
 characterized transcription factor copy numbers and gene copy numbers. These
 differences relative to our experimental conditions and fitting techniques
 led us to believe that it was important to perform our own analysis of these

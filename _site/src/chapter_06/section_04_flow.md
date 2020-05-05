@@ -74,8 +74,8 @@ $\log(\text{SSC})$ as obtained from fitting a two-dimensional Gaussian
 to the data, and $\boldsymbol{\Sigma}$ is the $2\times 2$ covariance
 matrix also obtained from the Gaussian fit. $\chi^2_\alpha(p)$ is the
 quantile function for probability $p$ of the chi-squared distribution
-with two degrees of freedom. shows an example of different gating
-contours that would arise from different values of $\alpha$ in . In
+with two degrees of freedom. @Fig:gate_contours shows an example of different gating
+contours that would arise from different values of $\alpha$ in @Eq:gauss_gate. In
 this work, we chose $\alpha = 0.4$ which we deemed was a sufficient
 constraint to minimize the noise in the data.  The specific code where this
 gating is implemented can be found in [GitHub repository](https://github.com/RPGroup-PBoC/mwc_induction/blob/master/code/analysis/unsupervised_gating.ipynb).
@@ -85,7 +85,9 @@ indicate individual flow cytometry measurements of forward scatter and side
 scatter. Colored contours indicate arbitrary gating contours ranging from 100\%
 ($\alpha = 1$) to 5\% ($\alpha=0.05$). All measurements shown in Chapters 2 and
 3 in this work were made by computing the mean fluorescence from the
-40$^\text{th}$ percentile ($\alpha = 0.4)$.](ch6_figS8){#fig:gate_contours
+40$^\text{th}$ percentile ($\alpha = 0.4)$. The [Python code                                      
+(`ch6_figS8.py`)](https://github.com/gchure/phd/blob/master/src/chapter_06/code/ch6_figS8.py) used to generate this figure can be found on the thesis [GitHub
+repository](https://github.com/gchure/phd). ](ch6_figS8){#fig:gate_contours
 short-caption="Representative unsupervised gating contours of flow-cytometry data."}
 
 ### Comparison of Flow Cytometry with Other Methods
@@ -101,7 +103,7 @@ region replaced with an mCherry tag, where the fold-change was measured as
 the ratio of the gene expression rate rather than a single snapshot of the
 gene output.
 
-@Fig:newgods_oldgods_comparison shows the comparison of these methods along
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;@Fig:new_old_comparison shows the comparison of these methods along
 with the flow cytometry method used in this work. The consistency of these
 three readouts validates the quantitative use of flow cytometry and
 unsupervised gating to determine the fold-change in gene expression. However,
@@ -119,6 +121,8 @@ colorimetric Miller assays (@garcia2011), and video microscopy (@brewster2014).
 All three methods give consistent results, although flow cytometry meeasurements
 lose accuracy for fold-change less than 0.01. Note that the repressor-DNA
 binding energies $\Delta\varepsilon_{RA}$ used for the theoretical predictions
-were determined in @garcia2011.](ch6_figS9){#fig:new_old_comparison
+were determined in @garcia2011. The [Python code                                      
+(`ch6_figS9.py`)](https://github.com/gchure/phd/blob/master/src/chapter_06/code/ch6_figS9.py) used to generate this figure can be found on the thesis [GitHub
+repository](https://github.com/gchure/phd). ](ch6_figS9){#fig:new_old_comparison
 short-caption="Comparison of experimental methods to determine the fold-change
 in gene expression."}

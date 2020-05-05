@@ -1,4 +1,4 @@
-## Abstract {#sec:mut_abstract -}
+## Abstract 
 Mutation is a critical mechanism by which evolution explores the functional
 landscape of proteins. Despite our ability to experimentally inflict
 mutations at will, it remains difficult to link sequence-level perturbations

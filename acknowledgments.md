@@ -19,12 +19,9 @@ author:
       Tbw 
 # Page navigation
 page_nav:
-    prev:
-        content: Published Content
-        url: '{{site.doks.baseurl}}/published_content'
     next:
-        content: Chapter 2
-        url: '{{site.doks.baseurl}}/chapter_2'
+        content: Abstract
+        url: phd/abstract
 prefix: acknowledgments
 ---
 

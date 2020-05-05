@@ -1,4 +1,4 @@
-## Using Free Energy to Examine Evolutionary Adaptation
+## On Using Free Energy to Examine Evolutionary Adaptation
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Allow us to briefly return to Monod and his
 biphasic growth curves in the mid 1940's. At this point in scientific
@@ -25,7 +25,7 @@ some three decades later:
 growth and enzymatic adaptation, he was confronted with incorporating the
 role of genetic inheritance into his mechanistic explanations. In the mid
 1940's, Monod and his coworkers had begun experimenting with a strain of *E.
-coli* which was unable to digest lactose ,termed $L-$. When grown on a mixture of glucose and lactose, this strain
+coli* which was unable to digest lactose, termed $L-$. When grown on a mixture of glucose and lactose, this strain
 would not display a diauxic shift and would only be able to consume the
 glucose in the medium (@Fig:lacneg, black). However, Monod and his coworker Alice Audureau
 discovered a mutation in this strain which *enabled* the digestion of
@@ -42,7 +42,11 @@ to digest lactose grown on a glucose/lactose mixed medium. Red curve shows a
 mutant of the same *E. coli* strain which is able to consume lactose. The latter
 displays a diauxic growth cycle with an adaptive period (highlighted in white),
 illustrating that enzymatic adaptation is a truly genetic property. Figure
-adapted from @monod1947.](ch1_fig6){#fig:lacneg short-caption="Growth curves of
+adapted from @monod1947. Lines correspond to univariate splines fit to the data
+to retain the data presentation from the literature. The [Python code
+(`ch1_fig6.py`)](https://github.com/gchure/phd/blob/master/src/chapter_01/code/ch1_fig6.py)
+used to generate this figure can be accessed via the thesis [GitHub
+repository](https://github.com/gchure/phd).](ch1_fig6){#fig:lacneg short-caption="Growth curves of
 lactose-positive and lactose-negative *E. coli* strains."}
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This finding illustrates the level of
@@ -73,10 +77,13 @@ bacterium which on, on average, exhibits a fold-change of $\approx$ 0.3
 and a free energy of $-1\, k_BT$ (grey point in (B)). We can consider that a single mutation (either
 orange or purple) changes the mean fold-change and therefore the free energy,
 translating the measurement about the master curve (black line in (B)). Assuming
-there are no epistatic interactions between the two single mutations, a null
+there are no interactions between the two single mutations, a null
 hypothesis predicts that for the double mutant (blue bacterium in (A) and point in
-(B)0, the net free energy is simply the sum of the individual free energy
-shifts.](ch1_fig7){#fig:pedagogical_delF_intro short-caption="Mutations lead to
+(B), the net free energy is simply the sum of the individual free energy
+shifts.The [Python code
+(`ch1_fig7.py`)](https://github.com/gchure/phd/blob/master/src/chapter_01/code/ch1_fig7.py)
+used to generate this figure can be accessed via the thesis [GitHub
+repository](https://github.com/gchure/phd).](ch1_fig7){#fig:pedagogical_delF_intro short-caption="Mutations lead to
 predictive shifts in free energy."}
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The primary conceptual development of Chapter 3 is illustrated in
@@ -96,7 +103,7 @@ permitted to use the theoretical framework outlined in Chapter 2 and in
 @Fig:induction_intro to characterize each mutation and determine what
 biophysical parameters have been changed. This permits us to calculate the new
 free energy of the system ($F_\text{mutation 1}$) as well as the shift in free
-energy from the wild-type alue, 
+energy from the wild-type value, 
 $$
 \Delta F_\text{mutation 1} = F_\text{mutation 1} - F_\text{wt}.
 $${#eq:intro_delF_definition}
@@ -104,19 +111,18 @@ As will be described in detail in Chapter 3 and the supplemental Chapter 7, the
 precise value of this free energy shift $\Delta F$ can be directly computed
 given sufficient parametric knowledge.
 
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This formalism provides a mathematical hypothesis for how double mutants may
-behave. Given known values for $\Delta F$ of each mutation in isolation, can we
-compute the shift in free energy of the pairwise double mutant $\Delta
-F_\text{mutations 1 \& 2}$?
-@Eq:intro_delF_definition presents a mathematical null hypothesis that the net
-shift in the free energy is simply the sum of the individual shifts in free
-energy,
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This formalism provides a mathematical
+hypothesis for how double mutants may behave. Given known values for $\Delta
+F$ of each mutation in isolation, can we compute the shift in free energy of
+the pairwise double mutant $\Delta F_\text{mutations 1 \& 2}$?
+@Eq:intro_delF_definition presents a mathematical null hypothesis that the
+net shift in the free energy is simply the sum of the individual shifts in
+free energy,
 $$
 \Delta F_\text{mutations 1 \& 2} = \Delta F_\text{mutation 1} +
 \Delta F_\text{mutation 2},
 $${#eq:delF_null_intro}
-assuming there are no epistatic interactions between the mutations. Given the fact that we can compute the fold-change in gene expression given
+assuming there is no interaction between the mutations. Given the fact that we can compute the fold-change in gene expression given
 knowledge of the free energy, we can therefore predict the double mutant
 phenotype *a priori*, a prediction not possible prior to this work.
 
@@ -144,12 +150,16 @@ phenotypes.** (A) Cartoon representation of the LacI repressor with mutations in
 the inducer binding domain and DNA binding domain represented by hats and socks,
 respectively. While the mutations have known chemical features, we characterize
 each mutation as potentially modifying four biophysical parameters,
-$K_A$, $K_I$, $\Delta\varepsilon_{AI}$ for inducer binding mutants, or
-$\Delta\varepsilon_{RA}$ for DNA binding mutants. (B) Predicted induction
+the dissociation constants ($K_A$, $K_I$), the relative energy difference
+between active and inactive states of the repressor ($\Delta\varepsilon_{AI}$) for inducer binding mutants, or
+the DNA affinity ($\Delta\varepsilon_{RA}$) for DNA binding mutants. (B) Predicted induction
 profiles for pairwise double mutants are shown as blue shaded regions
 representing the uncertainty in our predictions. Experimental measurements are
 shown as blue points (means of at least 10 biological replicates). Each row
 corresponds to a single DNA binding domain mutation and each column to a single
-inducer binding domain mutation.](ch1_fig8){#fig:double_muts_intro
+inducer binding domain mutation. The [Python code
+(`ch3_fig5.py`)](https://github.com/gchure/phd/blob/master/src/chapter_03/code/ch3_fig5.py)
+used to generate this figure can be accessed via the thesis [GitHub
+repository](https://github.com/gchure/phd). ](ch1_fig8){#fig:double_muts_intro
 short-caption="Theoretical prediction and experimental validation of double
 mutant phenotypes."}

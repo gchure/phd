@@ -48,16 +48,22 @@ for g, d in summarized.groupby(['dataset', 'dataset_name', 'condition', 'growth_
                markeredgewidth=0.5, label='__nolegend__')
 
 # Plot thing for legend entry
-for g, d in summarized.groupby(['dataset', 'dataset_name']):
-    ax[0].plot([], [], linestyle='none', marker=author_glyphs[g[0]], markerfacecolor=colors['grey'],
-                   markeredgecolor=colors['black'], label=g[-1], ms=5)
+names = {'li_2014': 'Li et al. 2014 (ribosomal profiling)',
+         'schmidt_2016': 'Schmidt et al. 2016 (mass spectrometry)',
+         'valgepea_2013': 'Valgepea et al. 2013 (mass spectrometry)',
+         'peebo_2015': 'Peebo et al. 2015 (mass spectrometry)'}
+for g, d in summarized.groupby(['dataset']):
+    ax[0].plot([], [], linestyle='none', marker=author_glyphs[g], markerfacecolor=colors['grey'],
+                   markeredgecolor=colors['black'], label=names[g], ms=5)
+    ax[1].plot([], [], linestyle='none', marker=author_glyphs[g], markerfacecolor=colors['grey'],
+                   markeredgecolor=colors['black'], label=names[g], ms=5)
+
 for n, c in cog_colors.items():
     ax[0].plot([], [], '-', lw=2, color=c, label=n)
 
-for g, c in growth_colors.items():
-    ax[1].plot([], [], '-', lw=2, color=c, label=np.round(g, decimals=2))
 
 ax[0].legend(fontsize=6, handlelength=1)
+ax[1].legend(fontsize=6)
 
 plt.tight_layout()
 plt.savefig('../figs/ch1_fig13_plots.svg', bbox_inches='tight')

@@ -13,13 +13,13 @@ counted in our experiments and were not included in the final tally of
 survival versus death. Across our 2822 single cell measurements, such “no
 call” classifications were observed only 83 times, constituting only 3\% of
 the total cell measurements. A breakdown of all classification types and
-their respective abundances can be seen in Table S1.
+their respective abundances can be seen in Table 9.1.
 
 ![**Time lapse of a representative field after osmotic shock and the resulting
 classifications.** Each row shows an individual cell or pair of neighboring
 cells over time after the application of a fast osmotic shock. Cells classified
 as dead are denoted by red arrows. The lone surviving cell in this field (bottom
-row, top 1/4 of image) is marked in green.](ch9_figS7){#fig:phase_death
+row, top 1/4 of image) is marked in green.](ch9_figS6){#fig:phase_death
 short-caption="Time lapse of a representative field after osmotic shock and the
 resulting classifications."}
 
@@ -30,6 +30,14 @@ resulting classifications."}
 | Death | 1246 | 44\% |
 | Survival | 1482 | 53\% |
 : Cell fate classifications and their relative abundances in the complete data set.
+
+| **Classification** | **Observations via Morphology** | **Observations via Propidium Iodide Staining**|
+| :--: | :--: | :--: |
+| Dead-On-Arrival | 184 | 185 |
+| No Call | 2 | 1 |
+| Survival | 5 | 5 | 
+: Comparison of morphology-based and dye-based survival classification.
+
 
 &nbsp;&nbsp;&nbsp;&nbsp;To assess the validity of our morphology-based
 classification scheme, we performed a subset of the osmotic shock experiments
@@ -57,6 +65,7 @@ agreed within 1\%. This agreement leads us to believe that our definition of
 cell survival as morphological regularity and sustained cell growth is
 sufficiently accurate to draw physiological conclusions from our experiments.
 
+
 ![**Representative images of propidium iodide staining after a strong osmotic
 shock.** Phase contrast images of individual or pairs of cells as a function of
 time (columns). The final column corresponds to fluorescence from propidium
@@ -64,13 +73,6 @@ iodide. Bright fluorescence indicates intercalation with DNA indicating cell
 death. Classification of survival based only from morphology is shown as text
 in the final column. Highlighted row indicates a “no call” event where
 morphology alone could not be used to determine survival or death.
-](ch9_figS8){#fig:pi_death short-caption="Representative images of propidium
+](ch9_figS7){#fig:pi_death short-caption="Representative images of propidium
 iodide staining after a strong osmotic shock."}
-
-| **Classification** | **Observations via Morphology** | **Observations via Propidium Iodide Staining**|
-| :--: | :--: | :--: |
-| Dead-On-Arrival | 184 | 185 |
-| No Call | 2 | 1 |
-| Survival | 5 | 5 | 
-: Comparison of morphology-based and dye-based survival classification.
 

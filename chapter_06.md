@@ -18,11 +18,11 @@ author:
 
 page_nav:
     prev:
-        content: Published Content
-        url: '{{site.doks.baseurl}}/published_content'
+        content: Chapter V
+        url: phd/chapter_05
     next:
-        content: Chapter 2
-        url: '{{site.doks.baseurl}}/chapter_02'
+        content: Chapter VII
+        url: phd/chapter_07
 prefix: chapter_06
 contents:
     - section_01_header

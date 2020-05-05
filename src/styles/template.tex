@@ -14,12 +14,22 @@
 \usepackage{longtable}
 \usepackage{xcolor}
 \usepackage{indentfirst} 
-\definecolor{CaltechOrange}{rgb}{1,0.42,0.04}
-\usepackage[plainpages=false]{hyperref}
+\definecolor{CaltechOrange}{HTML}{FF6C0C}
+\usepackage[hidelinks=true,
+            colorlinks=true, 
+            linkcolor=black,
+            urlcolor=CaltechOrange, 
+            linkbordercolor=white,
+            backref=false,
+            pagebackref=false,
+            hyperindex=false,
+            breaklinks=true,
+            bookmarks=false,
+            bookmarksopen=false,
+            ]{hyperref}
+
 \defaultbibliographystyle{plainnat}
 \renewcommand{\bibsection}{\section*{\refname}}
-\hypersetup{urlcolor=CaltechOrange, colorlinks=False,allcolors=CaltechOrange,
-            hidelinks=True}
 \usepackage{memhfixc}
 \linespread{1.5}
 

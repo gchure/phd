@@ -15,7 +15,7 @@ $$
 N_{NS}}e^{-\beta\Delta\varepsilon_P}}^\text{repressor unbound states} +
 \underbrace{{R \over N_{NS}}e^{-\beta\Delta\varepsilon_{R}}}_\text{repressor
 bound state} = \mathcal{Z}_{\neg r} + \mathcal{Z}_{r},
-$${eq:z_simple_rep} 
+$${#eq:z_simple_rep} 
 where $R$ is the number of repressors, $P$ is
 the number of polymerases, $N_{NS}$ is the number of nonspecific binding
 sites and $\Delta\varepsilon_P$ and $\Delta\varepsilon_R$ are the
@@ -93,8 +93,8 @@ the transcription factor are mutually exclusive.
 ![**Various repression-based regulatory architectures and their
 coarse-grained states.** The left column shows a schematic of the
 regulatory architecture. The middle column shows the equilibrium states
-of the system coarse grained into repressor bound (red boxes) and
-repressor unbound (blue boxes) states. States in which the polymerase is
+of the system coarse grained into repressor bound (orange boxes) and
+repressor unbound (purple boxes) states. States in which the polymerase is
 bound is shaded in white and are neglected by the weak promoter
 approximation. The right column illustrates that the formulation of the
 effective free energy is the same for all architectures, although the

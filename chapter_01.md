@@ -23,10 +23,10 @@ author:
 page_nav:
     prev:
         content: Published Content
-        url: '{{site.doks.baseurl}}/published_content'
+        url: 'phd/published_content'
     next:
         content: Chapter 2
-        url: '{{site.doks.baseurl}}/chapter_2'
+        url: 'phd/chapter_02'
 prefix: chapter_01
 contents:
     - section_01_introduction

@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, minimum-scale=1.0">
+<title>Chapter IX</title>
+
+
+<script type="text/x-mathjax-config">
+	MathJax.Hub.Config({
+    "HTML-CSS" : {
+        availableFonts : ["STIX"],
+        preferredFont : "Gyre Pagella",
+        webFont : "STIX-Web",
+        imageFont : null
+    },
+	  TeX: {
+		equationNumbers: {
+		  autoNumber: "AMS"
+		}
+	  },
+	  tex2jax: {
+		inlineMath: [['$','$']], 
+		displayMath: [['$$','$$']],
+		processEscapes: true,
+	  }
+	});
+  </script>
+  <style>
+	.eqnos { display: inline-block; position: relative; width: 100%; }
+	.eqnos br { display: none; }
+	.eqnos-number { position: absolute; right: 0em; top: 50%; line-height: 0; }
+  </style>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+  
+
+<link rel="icon" href="/favicon.ico" type="image/x-icon">
+<link href="https://fonts.googleapis.com/css?family=Nanum+Myeongjo&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Alegreya|Lora&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="/doks-theme/assets/css/style.css">
+
+	</head>
+	<body class="grey" data-spy="scroll" data-target=".js-scrollspy">
+		
+
+
+	<header class="site-header">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12">
+					
+						<a href="/" class="site-header__logo"><i class="icon icon--chevron-left"></i> Home</a>
+					
+					
+				</div><!-- /.col -->
+			</div><!-- /.row -->
+		</div><!-- /.container -->
+	</header><!-- /.site-header -->
+
+
+		<div class="hero-subheader" style="background-image: url(http://127.0.0.1:4000/doks-theme/assets/images/waves.jpg); background-position: center; object-fit: cover; width:100%;">
+
+			<div class="container" style="background-color: rgba(0,0,0, 0.75); border:0.75px solid white;">
+				<div class="row">
+					<div class="col-md-7">
+						<div class="align-container" data-mh>
+							<div class="align-inner">
+								
+									<h2 class="hero-subheader__title">Chapter IX</h2>
+								
+								
+									<h1 class="hero-subheader__title">Supplemental Information For Chapter V: How Bacteria Survive Osmotic Shocks
+</h1>
+								
+								
+								<!-- 
+									
+										<a href="phd/chapter_07" class="btn btn--dark btn--rounded btn--w-icon btn--w-icon-left">
+											<i class="icon icon--arrow-left"></i>	
+										</a>
+									
+									
+										<a href="phd/chapter_09" class="btn btn--dark btn--rounded btn--w-icon">
+											<i class="icon icon--arrow-right"></i>
+										</a>
+									
+								 -->
+							</div><!-- /.align-inner -->
+						</div><!-- /.align-container -->
+					</div><!-- /.col -->
+					
+				</div><!-- /.row -->
+			</div><!-- /.container -->
+		</div><!-- /.hero-subheader -->
+		
+				<nav class="page-nav">
+					<div class="container" >
+						<div class="row" >
+							<div class="col-xs-12">
+								
+									<a href="phd/chapter_07" class="page-nav__item page-nav__item--prev">
+										<i class="icon icon--arrow-left"></i>
+										Chapter VII
+									</a><!-- /.page-nav__item -->
+								
+								
+									<a href="phd/chapter_09" class="page-nav__item page-nav__item--next">
+										Chapter IX
+										<i class="icon icon--arrow-right"></i>
+									</a><!-- /.page-nav__item -->
+								
+							</div><!-- /.col -->
+						</div><!-- /.row -->
+					</div><!-- /.container -->
+				</nav><!-- /.page-nav -->
+			
+
+		<div class="section">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-7">
+						<div class="content">
+							<strong>Published as …</strong>
+<hr/>
+<p>A version of this chapter is currently under review. A preprint is released as Chure, G; Kaczmarek, Z. A.; Phillips, R. <em>Physiological Adaptability and Parametric Versatility in a Simple Genetic Circuit.</em> bioRxiv 2019. DOI: https://doi.org/10.1101/2019.12.19.878462. G.C. and R.P. designed experiments and developed theoretical models. G.C. and Z.A.K. collected and analyzed data. G.C. and R.P. wrote the paper.</p>
+<h2 id="non-parametric-inference-of-growth-rates">Non-parametric Inference of Growth Rates</h2>
+<p>In this section, we discuss the measurement of the bacterial growth curves as well as our strategy for estimating the growth rates for all experimental conditions in this work.</p>
+<h3 id="experimental-growth-curves">Experimental growth curves</h3>
+<p>As is described in the Materials and Methods section of Chapter 4, we measured the growth of <em>E. coli</em> strains constitutively expressing YFP using a BioTek Cytation 5 96-well plate reader generously provided by the lab of Prof. David Van Valen at Caltech. Briefly, cells were grown overnight in a nutrient rich LB medium to saturation and were subsequently diluted 1000 fold into the appropriate growth medium. Once these diluted cultures reached an OD<span class="math inline"><em></em><sub>600<em>n</em><em>m</em></sub></span> of <span class="math inline"> ≈ 0.3</span>, the cells were again diluted 100 fold into fresh medium preheated to the appropriate temperature . Aliquots of 300 <span class="math inline"><em>μ</em></span>L of this dilution were then transferred to a 96-well plate leaving two-rows on all sides of the plate filled with sterile media to serve as blank measurements. Once prepared, the plate was transferred to the plate reader and OD<span class="math inline"><em></em><sub>600<em>n</em><em>m</em></sub></span> measurements were measured every <span class="math inline">≈</span> 5 - 10 min for 12 to 18 hours. Between measurements, the plates were agitated with a linear shaking mode to avoid sedimentation of the culture. A series of technical replicates of the growth curve in glycerol supplemented medium at 37<span class="math inline"><em></em><sup>∘</sup></span> C is shown in Fig. 1 (A).</p>
+<h3 id="inference-of-maximum-growth-rate">Inference of maximum growth rate</h3>
+<p>The phenomenon of collective bacterial growth has been the subject of intense research for the better part of a century <span class="citation" data-cites="schaechter1958 jun2018">(Schaechter, Maaløe, and Kjeldgaard <a href="#ref-schaechter1958" role="doc-biblioref">1958</a>; Jun et al. <a href="#ref-jun2018" role="doc-biblioref">2018</a>)</span> yielding many parametric descriptions of the bulk growth rates each with varying degrees of detail <span class="citation" data-cites="jun2018 allen2018">(Jun et al. <a href="#ref-jun2018" role="doc-biblioref">2018</a>; Allen and Waclaw <a href="#ref-allen2018" role="doc-biblioref">2018</a>)</span>. For this scope of this work, we are not particularly interested in estimating numerous parameters that describe the phenomenology of the growth curves. Rather, we are interested in knowing a single quantity – the maximum growth rate – and the degree to which it is tuned across the different experimental conditions. To avoid forcing the bacterial growth curves into a parametric form, we treated the observed growth curves using Gaussian process modeling using as implemented in the FitDeriv software described in Ref. <span class="citation" data-cites="swain2016">(Swain et al. <a href="#ref-swain2016" role="doc-biblioref">2016</a>)</span>. This method permits an estimation of the most-likely OD<span class="math inline"><em></em><sub>600<em>n</em><em>m</em></sub></span> value at each point in time given knowledge of the adjacent measurements. The weighting given to all points in the series of measurements is defined by the covariance kernel function and we direct the reader to Ref. <span class="citation" data-cites="swain2016">(Swain et al. <a href="#ref-swain2016" role="doc-biblioref">2016</a>)</span> for a more detailed discussion on this kernel choice and overall implementation of Gaussian process modeling of time-series data.</p>
+<p>     As this approach estimates the probability of a given OD<span class="math inline"><em></em><sub>600<em>n</em><em>m</em></sub></span> at each time point, we can compute the mean and standard deviation. Fig. 1 (B) show the raw measurements and the mean estimated value in green and light, respectively. With the high temporal resolution of the OD<span class="math inline"><em></em><sub>600<em>n</em><em>m</em></sub></span> measurements, modeling the entire growth curve becomes a computationally intensive task. Furthermore, as we are interested in only the maximum growth rate, there is no benefit in analyzing the latter portion of the experiment where growth slows and the population reaches saturation. We therefore manually restricted each analyzed growth curve to a region capturing early and mid exponential phase growth, illustrated by the shaded region in Fig. 1 (A).</p>
+<p>     With a smooth description of the OD<span class="math inline"><em></em><sub>600<em>n</em><em>m</em></sub></span> measurements as a function of time with an appropriate measure of uncertainty, we can easily compute the time derivative which is equivalent to the growth rate. A representative time derivative is shown in Fig. 1 (C). Here, the dark green curve is the mean value of the time derivative and the shaded region is <span class="math inline">±</span> one standard deviation. The maximum value of this inferred derivative is the reported maximum growth rate of that experimental condition.</p>
+<figure>
+<img src="ch8_figS1.png" id="fig:gp_growth_curve" data-short-caption="Non-parametric estimation of maximum growth rate from bacterial growth curves." alt="" /><figcaption>Figure 1: <strong>Non-parametric characterization of bacterial growth curves and estimation of the growth rate.</strong> (A) Representative biological replicate growth curve of a <span class="math inline"><em>Δ</em></span><em>lacIZYA E. coli</em> strain in glycerol supplemented M9 minimal medium at 37<span class="math inline"><em></em><sup>∘</sup></span> C. Points represent individual optical density measurements across eight technical replicates. The shaded region illustrates the time window from which the maximum growth rate was inferred. (B) Green points are those from the shaded region in (A). Line is the estimated value of the optical density resulting from the gaussian process modeling. (C) The value of the first derivative of the optical density as a function of time estimated via gaussian process modeling. The first derivative is taken as the growth rate at each time point. The solid line is the estimated mean value and the shaded region represents the standard deviation of the posterior The <a href="https://github.com/gchure/phd/blob/master/src/chapter_08/code/ch8_figS1.py">Python code<br />
+(<code>ch8_figS1.py</code>)</a> used to generate this figure can be found on the thesis <a href="https://github.com/gchure/phd">GitHub repository</a>. distribution.</figcaption>
+</figure>
+<h2 id="approximating-cell-volume">Approximating Cell Volume</h2>
+<p>In Fig. 4.2 of Chapter 4, we make reference to the volume of the cells grown in various conditions. Here, we illustrate how we approximated this estimate using measurements of the individual cell segmentation masks.</p>
+<p>      Estimation of bacterial cell volume and its dependence on the total growth rate has been the target of numerous quantitative studies using a variety of methods including microscopy <span class="citation" data-cites="pilizota2012 pilizota2014 taheri-araghi2015a schmidt2016 schaechter1958">(Pilizota and Shaevitz <a href="#ref-pilizota2012" role="doc-biblioref">2012</a>, <a href="#ref-pilizota2014" role="doc-biblioref">2014</a>; <span class="citeproc-not-found" data-reference-id="taheri-araghi2015a"><strong>???</strong></span>; Schmidt et al. <a href="#ref-schmidt2016" role="doc-biblioref">2016</a>; Schaechter, Maaløe, and Kjeldgaard <a href="#ref-schaechter1958" role="doc-biblioref">1958</a>)</span> and microfluidics <span class="citation" data-cites="kubitschek1986">(Kubitschek and Friske <a href="#ref-kubitschek1986" role="doc-biblioref">1986</a>)</span> revealing fascinating phenomenology of growth at the single cell level . Despite the high precision and extensive calibration of these methods, it is not uncommon to have different methods yield different estimates, indicating that it is not a trivial measurement to make. In the present work, we sought to estimate the cell volume and compare it to the well-established empirical results of the field of bacterial physiology to ensure that our experimental protocol does not alter the physiology beyond expectations. As the bulk of this work is performed using single-cell microscopy, we chose to infer the approximate the cell volume from the segmentation masks produced by the SuperSegger MATLAB software <span class="citation" data-cites="stylianidou2016">(Stylianidou et al. <a href="#ref-stylianidou2016" role="doc-biblioref">2016</a>)</span> which reported the cell length and width in units of pixels which can be converted to meaningful units given knowledge of the camera interpixel distance.</p>
+<p>     We approximated each segmented cell as a cylinder of length <span class="math inline"><em>a</em></span> and radius <span class="math inline"><em>r</em></span> capped on each end by hemispheres with a radius <span class="math inline"><em>r</em></span>. With these measurements in hand, the total cell volume was computed as <span id="eq:cell_volume"><br /><span class="math display">$$
+V_\text{cell} =\pi r^2 \left(a + \frac{4}{3}r\right).
+\qquad(1)$$</span><br /></span> The output of the SuperSegger segmentation process is an individual matrix for each cell with a variety of fluorescence statistics and information regarding the cell shape. Of the latter category, the software reports in pixels the total length <span class="math inline">ℓ</span> and width <span class="math inline"><em>w</em></span> of the cell segmentation mask. Given these measurements, we computed the radius <span class="math inline"><em>r</em></span> of the spherocylinder as <span id="eq:radius"><br /><span class="math display">$$
+r = \frac{w}{2}
+\qquad(2)$$</span><br /></span> and the cylinder length <span class="math inline"><em>a</em></span> as</p>
+<p><span id="eq:length"><br /><span class="math display"><em>a</em> = ℓ − <em>w</em>.   (3)</span><br /></span></p>
+<p>     Fig. 2 shows the validity of modeling the segmentation masks as a spherocylinder in two dimensions. Here, the thin colored lines are the contours of a collection of segmentation masks and the black solid lines are spherocylinders using the average length and width of the segmentation masks, as calculated by Eq. 2 and Eq. 3. It appears that this simple approximation is reasonable for the purposes of this work.</p>
+<figure>
+<img src="ch8_figS2.png" id="fig:cell_shape" data-short-caption="Growth-rate dependence of cell shape and approximation as a spherocylinder." alt="" /><figcaption>Figure 2: <strong>Growth-rate dependence of cell shape and spherocylinder approximation.</strong> Contours of segmentation masks for a single experiment of each condition are shown as thin colored lines for (A) carbon quality variation and (B) temperature variation. The <a href="https://github.com/gchure/phd/blob/master/src/chapter_08/code/ch8_figS2.py">Python code<br />
+(<code>ch8_figS2.py</code>)</a> used to generate this figure can be found on the thesis <a href="https://github.com/gchure/phd">GitHub repository</a>.</figcaption>
+</figure>
+<h2 id="counting-repressors">Counting Repressors</h2>
+<p>In this section, we expand upon the theoretical and experimental implementation of the fluorescence calibration method derived in <span class="citation" data-cites="rosenfeld2005">Rosenfeld et al. (<a href="#ref-rosenfeld2005" role="doc-biblioref">2005</a>)</span>. We cover several experimental data validation steps as well as details regarding the parameter inference. Finally, we comment on the presence of a systematic error in the repressor counts due to continued asynchronous division between sample preparation and imaging.</p>
+<h3 id="sec:cal_factor">Theoretical Background of the Binomial Partitioning Method</h3>
+<p>A key component of this work is the direct measurement of the repressor copy number in each growth condition using fluorescence microscopy. To translate between absolute fluorescence and protein copy number, we must be able to estimate the average brightness of a single fluorophore or, in other words, determine a calibration factor <span class="math inline"><em>α</em></span> that permits translation from copy number to intensity or vice versa. Several methods have been used over the past decade to estimate this factor, such as measuring single-molecule photobleaching steps <span class="citation" data-cites="garcia2011c bialecka-fornal2012">(Hernan G. Garcia et al. <a href="#ref-garcia2011c" role="doc-biblioref">2011</a>; Bialecka-Fornal et al. <a href="#ref-bialecka-fornal2012" role="doc-biblioref">2012</a>)</span>, measurement of <em>in vivo</em> photobleaching rates <span class="citation" data-cites="nayak2011 kim2016">(Nayak and Rutenberg <a href="#ref-nayak2011" role="doc-biblioref">2011</a>; Kim et al. <a href="#ref-kim2016" role="doc-biblioref">2016</a>)</span>, and through measuring the partitioning of fluorescent molecules between sibling cells after cell division <span class="citation" data-cites="rosenfeld2005 rosenfeld2006 brewster2014">(Rosenfeld et al. <a href="#ref-rosenfeld2005" role="doc-biblioref">2005</a>, <a href="#ref-rosenfeld2006" role="doc-biblioref">2006</a>; Brewster et al. <a href="#ref-brewster2014" role="doc-biblioref">2014</a>)</span>. In this work, we used the latter method to estimate the brightness of a single LacI-mCherry dimer. Here, we derive a simple expression which allows the determination of <span class="math inline"><em>α</em></span> from measurements of the fluorescence intensities of a collection of sibling cells.</p>
+<p>     In the absence of measurement error, the fluorescence intensity of a given cell is proportional to the total number of fluorescent proteins <span class="math inline"><em>N</em><sub>prot</sub></span> by some factor <span class="math inline"><em>α</em></span>, <span id="eq:growth_si_ian"><br /><span class="math display"><em>I</em><sub>cell</sub> = <em>α</em><em>N</em><sub>prot</sub>.   (4)</span><br /></span> Assuming that no fluorophores are produced or degraded over the course of the cell cycle, the fluorescent proteins will be partitioned into the two siblings cells such that the intensity of each sibling can be computed as <span id="eq:ian_division"><br /><span class="math display"><em>I</em><sub>1</sub> = <em>α</em><em>N</em><sub>1</sub> ; <em>I</em><sub>2</sub> = <em>α</em>(<em>N</em><sub> tot</sub> − <em>N</em><sub>1</sub>),   (5)</span><br /></span> where <span class="math inline"><em>N</em><sub> tot</sub></span> is the total number of proteins in the parent cell and <span class="math inline"><em>N</em><sub>1</sub></span> and <span class="math inline"><em>N</em><sub>2</sub></span> correspond to the number of proteins in sibling cell 1 and 2, respectively. This explicitly states that fluorescence is conserved upon a division, <span id="eq:fluo_cons"><br /><span class="math display"><em>I</em><sub><em>t</em><em>o</em><em>t</em></sub> = <em>I</em><sub>1</sub> + <em>I</em><sub>2</sub>.   (6)</span><br /></span> As the observed intensity is directly proportional to the number of proteins per cell, measuring the variance in intensity between sibling cells provides some information as to how many proteins were there to begin with. We can compute these fluctuations as the squared intensity difference between the two siblings as <span id="eq:step1"><br /><span class="math display">⟨(<em>I</em><sub>1</sub>−<em>I</em><sub>2</sub>)<sup>2</sup>⟩ = ⟨(2<em>I</em><sub>1</sub>−<em>I</em><sub> tot</sub>)<sup>2</sup>⟩.   (7)</span><br /></span> We can relate Eq. 7 in terms of the number of proteins using Eq. 4 as <span id="eq:step2"><br /><span class="math display">⟨(<em>I</em><sub>1</sub>−<em>I</em><sub>2</sub>)<sup>2</sup>⟩ = 4<em>α</em><sup>2</sup>⟨<em>N</em><sub>1</sub><sup>2</sup>⟩ − 4<em>α</em><sup>2</sup>⟨<em>N</em><sub>1</sub>⟩<em>N</em><sub> tot</sub> + <em>α</em><sup>2</sup><em>N</em><sub> tot</sub><sup>2</sup>,   (8)</span><br /></span> where the squared fluctuations are now cast in terms of the first and second moment of the probability distribution for <span class="math inline"><em>N</em><sub>1</sub></span>.</p>
+<p>     Without any active partitioning of the proteins into the sibling cells, one can model the probability distribution <span class="math inline"><em>g</em>(<em>N</em><sub>1</sub>)</span> of finding <span class="math inline"><em>N</em><sub>1</sub></span> proteins in sibling cell 1 as a binomial distribution, <span id="eq:growth_si_binomial"><br /><span class="math display">$$
+g(N_1\vert\, N_\text{ tot}, p) = \frac{N_\text{
+    tot}!}{N_1!(N_\text{ tot} - N_1)!}p^{N_1}(1 - p)^{N_\text{
+    tot} - N_1},
+\qquad(9)$$</span><br /></span> where <span class="math inline"><em>p</em></span> is the probability of a protein being partitioned into one sibling over the other. With a probability distribution for <span class="math inline"><em>N</em><sub>1</sub></span> in hand, we can begin to simplify Eq. 8. Recall that the mean and variance of a binomial distribution are <span id="eq:binomial_mean"><br /><span class="math display">⟨<em>N</em><sub>1</sub>⟩ = <em>N</em><sub> tot</sub><em>p</em>,   (10)</span><br /></span> and <span id="eq:binom_variance"><br /><span class="math display">⟨<em>N</em><sub>1</sub><sup>2</sup>⟩ − ⟨<em>N</em><sub>1</sub>⟩<sup>2</sup> = <em>N</em><sub> tot</sub><em>p</em>(1 − <em>p</em>),   (11)</span><br /></span> respectively. With knowledge of the mean and variance, we can solve for the second moment as <span id="eq:binomial_mom2"><br /><span class="math display">⟨<em>N</em><sub>1</sub><sup>2</sup>⟩ = <em>N</em><sub> tot</sub><em>p</em>(1 − <em>p</em>) + <em>N</em><sub>
+tot</sub><sup>2</sup><em>p</em><sup>2</sup> = <em>N</em><sub> tot</sub><em>p</em>(1−<em>p</em>+<em>N</em><sub>
+tot</sub><em>p</em>).   (12)</span><br /></span> By plugging Eq. 10 and Eq. 12 into our expression for the fluctuations (Eq. 8), we arrive at <span id="eq:p_agnostic_result"><br /><span class="math display">$$
+\langle \left( I_1 - I_2\right)^2 \rangle =
+    4\alpha^2\left[(N_\text{ tot}p[1 - p - N_\text{ tot}p]) -
+    N_\text{ tot}^2\left(p + \frac{1}{4}\right)\right],
+\qquad(13)$$</span><br /></span> which is now defined in terms of the total number of proteins present in the parent cell. Assuming that the proteins are equally partitioned <span class="math inline"><em>p</em> = 1/2</span>, Eq. 13 reduces to <span id="eq:fluct_Itot"><br /><span class="math display">⟨(<em>I</em><sub>1</sub>−<em>I</em><sub>2</sub>)<sup>2</sup>⟩ = <em>α</em><sup>2</sup><em>N</em><sub> tot</sub> = <em>α</em><em>I</em><sub> tot</sub>.   (14)</span><br /></span> Invoking our assertion that fluorescence is conserved (Eq. 6), <span class="math inline"><em>I</em><sub><em>t</em><em>o</em><em>t</em></sub></span> is equivalent to the sum total fluorescence of the siblings, <span id="eq:dilution"><br /><span class="math display">⟨(<em>I</em><sub>1</sub>−<em>I</em><sub>2</sub>)<sup>2</sup>⟩ = <em>α</em>(<em>I</em><sub>1</sub> + <em>I</em><sub>2</sub>).   (15)</span><br /></span> Thus, given snapshots of cell intensities and information of their lineage, one can compute how may arbitrary fluorescence units correspond to a single fluorescent protein.</p>
+<h3 id="cell-husbandry-and-time-lapse-microscopy">Cell Husbandry and Time-Lapse Microscopy</h3>
+<p>The fluorescence calibration method was first described and implemented by <span class="citation" data-cites="rosenfeld2005">Rosenfeld et al. (<a href="#ref-rosenfeld2005" role="doc-biblioref">2005</a>)</span> followed by a more in-depth approach on the statistical inference of the calibration factor in <span class="citation" data-cites="rosenfeld2006">Rosenfeld et al. (<a href="#ref-rosenfeld2006" role="doc-biblioref">2006</a>)</span>. In both of these works, the partitioning of a fluorescent protein was tracked across many generations from a single parent cell, permitting inference of a calibration factor from a single lineage. <span class="citation" data-cites="brewster2014">Brewster et al. (<a href="#ref-brewster2014" role="doc-biblioref">2014</a>)</span> applied this method in a slightly different manner by quantifying the fluorescence across a large number of <em>single</em> division events. Thus, rather than examining the partitioning of fluorescence down many branches of a single family tree, it was estimated from an array of single division events where the fluorescence intensity of the parent cell was variable. In the present work, we take a similar approach to that of <span class="citation" data-cites="brewster2014">Brewster et al. (<a href="#ref-brewster2014" role="doc-biblioref">2014</a>)</span> and examine the partitioning of fluorescence among a large number of independent cell divisions.</p>
+<p>     A typical experimental work-flow is shown in Fig. 3. For each experiment, the strains were grown in varying concentrations of ATC to tune the expression of the repressor. Once the cells had reached exponential phase growth (OD<span class="math inline"><em></em><sub>600<em>n</em><em>m</em></sub> ≈ 0.3</span>), the cells were harvested and prepared for imaging. This involved two separate sample handling procedures, one for preparing samples for lineage tracking and estimation of the calibration factor and another for taking snapshots of cells from each ATC induction condition for the calculation of fold-change.</p>
+<p>     To prepare cells for the calibration factor measurement, a 100 <span class="math inline"><em>μ</em></span>L aliquot of each ATC induction condition was combined and mixed in a 1.5 mL centrifuge tube. This cell mixture was then pelleted at 13000<span class="math inline"> × <em>g</em></span> for 1 – 2 minutes. The supernatant containing ATC was then aspirated and the pellet was resuspended in an equal volume of sterile growth media without ATC. This washing procedure was repeated three times to ensure that any residual ATC had been removed from the culture and that expression of LacI-mCherry had ceased. Once washed and resuspended, the cells were diluted ten fold into sterile M9 medium and then imaged on a rigid agarose substrate. Depending on the precise growth condition, a variety of positions were imaged for 1.5 to 4 hours with a phase contrast image acquired every 5 to 15 minutes to facilitate lineage tracking. On the final image of the experiment, an mCherry fluorescence image was acquired of every position. The experiments were then transferred to a computing cluster and the images were computationally analyzed, as described in the next section.</p>
+<p>     During the washing steps, the remaining ATC induced samples were prepared for snapshot imaging to determine the repressor copy number and fold-change in gene expression for each ATC induction condition. Without mixing the induction conditions together, each ATC induced sample was diluted 1:10 into sterile M9 minimal medium and vigorously mixed. Once mixed, a small aliquot of the samples were deposited onto rigid agarose substrates for later imaging. While this step of the experiment was relatively simple, the total preparation procedure typically lasted between 30 and 60 minutes. As is discussed later, the continued growth of the asynchronously growing culture upon dilution into the sterile medium results in a systematic error in the calculation of the repressor copy number.</p>
+<figure>
+<img src="ch8_figS3.png" id="fig:growth_si_microscopy_workflow" data-short-caption="An experimental workflow for determination of a fluorescence calibration factor." alt="" /><figcaption>Figure 3: <strong>An experimental workflow for time-lapse imaging.</strong> (A) the series of steps followed in a given experiment. Cells are grown in various concentrations of ATC (shaded red cultures) to an OD<span class="math inline"><em></em><sub>600<em>n</em><em>m</em></sub> ≈ 0.3</span>. Equal aliquots of each ATC-induced culture are mixed into a single eppendorf tube and pelleted via centrifugation. The supernatant containing ATC is aspirated and replaced with an equal volume of sterile, ATC-free growth medium. This washing procedure is repeated three times to ensure that residual ATC is removed from the culture and expression of the LacI-mCherry fusion is ceased. After a final resuspension in sterile ATC-free medium, the cell mixture is diluted 10 fold to reduce cell density. small aliquot of this mixture is then mounted and imaged at 100x magnification until at least one cell division has occurred. (B) Two representative microcolonies from a time-lapse growth experiment. The time point is provided above each image. After at least one division has occurred, a final mCherry fluorescence image is acquired and quantified.</figcaption>
+</figure>
+<h3 id="lineage-tracking-and-fluorescence-quantification">Lineage Tracking and Fluorescence Quantification</h3>
+<p>Segmentation and lineage tracking of both the fluorescence snap shots and time-lapse growth images were performed using the SuperSegger <code>v1.03</code> <span class="citation" data-cites="stylianidou2016">(Stylianidou et al. <a href="#ref-stylianidou2016" role="doc-biblioref">2016</a>)</span> software using MATLAB R2017B (MathWorks, Inc). The result of this segmentation is a list of matrices for each unique imaged position with identifying data for each segmented cell such as an assigned ID number, the ID of the sibling cell, the ID of the parent cell, and various statistics. These files were then analyzed using Python 3.7. All scripts and software used to perform this analysis can be found on the <a href="https://www.rpgroup.caltech.edu/mwc_growth">associated paper website</a> and <a href="https://github.com/rpgroup-pboc/mwc_growth">GitHub repository</a>.</p>
+<p>     Using the ID numbers assigned to each cell in a given position, we matched all sibling pairs present in the last frame of the growth movie when the final mCherry fluorescence image was acquired. These cells were then filtered to exclude segmentation artifacts (such as exceptionally large or small cells) as well as any cells which the SuperSegger software identified as having an error in segmentation. Given the large number of cells tracked in a given experiment, we could not manually correct these segmentation artifacts, even though it is possible using the software. To err on the side of caution, we did not consider these edge cases in our analysis.</p>
+<p>     With sibling cells identified, we performed a series of validation checks on the data to ensure that both the experiment and analysis behaved as expected. Three validation checks are illustrated in Fig. 4. To make sure that the computational pairing of sibling cells was correct, we examined the intensity distributions of each sibling pair. If siblings were being paired solely on their lineage history and not by other features (such as size, fluorescence, etc), one would expect the fluorescence distributions between the two sibling cells to be identical. Fig. 4(A) shows the nearly identical intensity distributions of all siblings from a single experiment, indicating that the pairing of siblings is independent of their fluorescence.</p>
+<p>     Furthermore, we examined the partitioning of the fluorescence between the siblings. In Eq. 10, we defined the mean number of proteins inherited by one sibling. This can be easily translated into the language of intensity as <span id="eq:binom_mean_int"><br /><span class="math display">⟨<em>I</em><sub>1</sub>⟩ = <em>α</em>(<em>I</em><sub>1</sub>+<em>I</em><sub>2</sub>)<em>p</em>,   (16)</span><br /></span> where we assume that fluorescence is conserved during a division event such that <span class="math inline"><em>I</em><sub> tot</sub> = <em>I</em><sub>1</sub> + <em>I</em><sub>2</sub></span>. As described previously, we make the simplifying assumption that partitioning of the fluorophores between the two sibling cells is fair, meaning that <span class="math inline"><em>p</em> = 0.5</span>. We can see if this approximation is valid by computing the fractional intensity of each sibling cell as <span id="eq:frac_intensity"><br /><span class="math display">$$
+p = \frac{\langle I_1 \rangle}{\langle I_1 + I_2 \rangle}.
+\qquad(17)$$</span><br /></span> Fig. 4(B) shows the distribution of the fractional intensity for each sibling pair. The distribution is approximately symmetric about 0.5, indicating that siblings are correctly paired and that the partitioning of fluorescence is approximately equal between siblings. Furthermore, we see no correlation between the cell volume immediately after division and the observed fractional intensity. This suggests that the probability of partitioning to one sibling or the other is not dependent on the cell size. An assumption (backed by experimental measurements <span class="citation" data-cites="garcia2011 phillips2019">(H. G. Garcia and Phillips <a href="#ref-garcia2011" role="doc-biblioref">2011</a>; Phillips et al. <a href="#ref-phillips2019" role="doc-biblioref">2019</a>)</span>) in our thermodynamic model is that all repressors in a given cell are bound to the chromosome, either specifically or nonspecifically. As the chromosome is duplicated and partitioned into the two siblings without fail, our assumption of repressor adsorption implies that partitioning should be independent of the size of the respective sibling. The collection of these validation statistics give us confidence that both the experimentation and the analysis are properly implemented and not introducing bias into our estimation of the calibration factor.</p>
+<figure>
+<img src="ch8_figS4.png" id="fig:sanity_check" data-short-caption="Experimental sanity checks and inference of a fluorescence calibration factor." alt="" /><figcaption>Figure 4: <strong>Experimental sanity checks and inference of a fluorescence calibration factor.</strong> (A) Intensity distributions of sibling cells after division. Arbitrarily labeled “sibling 1” and “sibling 2” distributions are shown in purple and orange, respectively. Similarity of the distributions illustrates lack of intensity bias on sibling pair assignment. (B) the fractional intensity of sibling 1 upon division. For each sibling pair, the fractional intensity is computed as the intensity of sibling 1 <span class="math inline"><em>I</em><sub>2</sub></span> divided by the summed intensities of both siblings <span class="math inline"><em>I</em><sub>1</sub> + <em>I</em><sub>2</sub></span>. (C) Partitioning intensity as a function of cell volume. The fractional intensity of every sibling cell is plotted against its estimated newborn volume. The <a href="https://github.com/gchure/phd/blob/master/src/chapter_08/code/ch8_figS4.py">Python code<br />
+(<code>ch8_figS4.py</code>)</a> used to generate this figure can be found on the thesis <a href="https://github.com/gchure/phd">GitHub repository</a>.</figcaption>
+</figure>
+<h3 id="statistical-inference-of-the-fluorescence-calibration-factor">Statistical Inference of the Fluorescence Calibration Factor</h3>
+<p>As is outlined in the Materials &amp; Methods section of the Chapter 4, we took a Bayesian approach towards our inference of the calibration factor given fluorescence measurements of sibling cells. Here, we expand in detail on this statistical model and its implementation.</p>
+<p>     To estimate the calibration factor <span class="math inline"><em>α</em></span> from a set of lineage measurements, we assume that fluctuations in intensity resulting from measurement noise is negligible compared to that resulting from binomial partitioning of the repressors upon cell division. In the absence of measurement noise, the intensity of a given cell <span class="math inline"><em>I</em><sub><em>c</em><em>e</em><em>l</em><em>l</em></sub></span> can be directly related to the total number of fluorophores <span class="math inline"><em>N</em></span> through a scaling factor <span class="math inline"><em>α</em></span>, such that <span id="eq:no_err"><br /><span class="math display"><em>I</em><sub><em>c</em><em>e</em><em>l</em><em>l</em></sub> = <em>α</em><em>N</em>.   (18)</span><br /></span> Assuming no fluorophores are produced or degraded over the course of a division cycle, the fluorescence of the parent cell before division is equal to the sum of the intensities of the sibling cells, <span id="eq:conservation_law"><br /><span class="math display"><em>I</em><sub><em>p</em><em>a</em><em>r</em><em>e</em><em>n</em><em>t</em></sub> = <em>I</em><sub>1</sub> + <em>I</em><sub>2</sub> = <em>α</em>(<em>N</em><sub>1</sub>+<em>N</em><sub>2</sub>),   (19)</span><br /></span> where subscripts <span class="math inline">1</span> and <span class="math inline">2</span> correspond to arbitrary labels of the two sibling cells. We are ultimately interested in knowing the probability of a given value of <span class="math inline"><em>α</em></span> which, using Bayes’ theorem, can be written as <span id="eq:app_bayes_generic"><br /><span class="math display">$$
+g(\alpha\, \vert\, I_1, I_2) = \frac{f(I_1, I_2\, \vert\, \alpha) g(\alpha)}
+    {f(I_1, I_2)},
+\qquad(20)$$</span><br /></span> where we have used <span class="math inline"><em>g</em></span> and <span class="math inline"><em>f</em></span> to denote probability densities over parameters and data, respectively. The first quantity in the numerator <span class="math inline"><em>f</em>(<em>I</em><sub>1</sub>, <em>I</em><sub>2</sub> | <em>α</em>)</span> describes the likelihood of observing the data <span class="math inline"><em>I</em><sub>1</sub>, <em>I</em><sub>2</sub></span> given a value for the calibration factor <span class="math inline"><em>α</em></span>. The term <span class="math inline"><em>g</em>(<em>α</em>)</span> captures all prior knowledge we have about what the calibration factor could be, remaining ignorant of the collected data. The denominator <span class="math inline"><em>f</em>(<em>I</em><sub>1</sub>, <em>I</em><sub>2</sub>)</span> is the likelihood of observing our data <span class="math inline"><em>I</em><sub>1</sub>, <em>I</em><sub>2</sub></span> irrespective of the calibration factor and is a loose measure of how well our statistical model describes the data. As it is difficult to assign a functional form to this term and serves as a multiplicative constant, it can be neglected for the purposes of this work.</p>
+<p>     Knowing that the two observed sibling cell intensities are related, conditional probability allows us to rewrite the likelihood as <span id="eq:arb_unlabeled_eq"><br /><span class="math display"><em>f</em>(<em>I</em><sub>1</sub> <em>I</em><sub>2</sub> | <em>α</em>) = <em>f</em>(<em>I</em><sub>1</sub> | <em>I</em><sub>2</sub>, <em>α</em>)<em>f</em>(<em>I</em><sub>2</sub> | <em>α</em>),   (21)</span><br /></span> where <span class="math inline"><em>f</em>(<em>I</em><sub>2</sub> | <em>α</em>)</span> describes the likelihood of observing <span class="math inline"><em>I</em><sub>2</sub></span> given a value of <span class="math inline"><em>α</em></span>. As <span class="math inline"><em>I</em><sub>2</sub></span> can take any value with equal probability, this term can be treated as a constant. Through change of variables and noting that <span class="math inline"><em>I</em><sub>2</sub> = <em>α</em><em>N</em><sub>2</sub></span>, we can cast the likelihood <span class="math inline"><em>f</em>(<em>I</em><sub>1</sub> | <em>I</em><sub>2</sub>, <em>α</em>)</span> in terms of the number of proteins <span class="math inline"><em>N</em><sub>1</sub></span> and <span class="math inline"><em>N</em><sub>2</sub></span> as <span id="eq:change_of_var"><br /><span class="math display">$$
+f(I_1\,\vert\, I_2, \alpha) = f(N_1\,\vert\,N_2, \alpha)\bigg\vert {d N_1
+\over dI_1}\bigg\vert= \frac{1}{\alpha}f(N_1\,\vert\,N_2,\alpha).
+\qquad(22)$$</span><br /></span> Given that the proteins are binomially distributed between the sibling cells with a probability <span class="math inline"><em>p</em></span> and that the intensity is proportional to the number of fluorophores, this likelihood becomes <span id="eq:binom_like"><br /><span class="math display">$$
+f(I_1\,\vert\,I_2, \alpha, p) = \frac{1}{\alpha}{\left(\frac{I_1 +
+I_2}{
+\alpha}\right)! \over \left({I_1 \over \alpha}\right)!\left({I_2 \over
+\alpha}\right)!}p^(1 - p)^{I_2 \over \alpha}
+\qquad(23)$$</span><br /></span> However, The quantity <span class="math inline"><em>I</em>/<em>α</em></span> is not exact, making calculation of its factorial undefined. These factorials can therefore be approximated by a gamma function as <span class="math inline"><em>n</em>! = <em>Γ</em>(<em>n</em> + 1)</span>.</p>
+<p>     Assuming that partitioning of a protein between the two sibling cells is a fair process (<span class="math inline"><em>p</em> = 1/2</span>), Eq. 23 can be generalized to a set of lineage measurements <span class="math inline">[<em>I</em><sub>1</sub>, <em>I</em><sub>2</sub>]</span> as <span id="eq:full_likelihood"><br /><span class="math display">$$
+f([I_1]\,\vert\,[I_2], \alpha) = {1 \over \alpha^k}
+\prod\limits_{i}^k {\Gamma\left({I_1 + I_2 \over \alpha} + 1\right) \over
+\Gamma\left({I_1 \over \alpha} + 1\right)\Gamma\left({I_2 \over \alpha} + 1
+\right)}2^{-{I_1 + I_2 \over \alpha}}, 
+\qquad(24)$$</span><br /></span> where <span class="math inline"><em>k</em></span> is the number of division events observed.</p>
+<p>     With a likelihood in place, we can now assign a functional form to the prior distribution for the calibration factor <span class="math inline"><em>g</em>(<em>α</em>)</span>. Though ignorant of data, the experimental design is such that imaging of a typical highly-expressing cell will occupy 2/3 of the dynamic range of the camera. We can assume it’s more likely that the calibration factor will be closer to 0 a.u. than the bit depth of the camera (4095 a.u.) or larger. We also know that it is physically impossible for the fluorophore to be less than 0 a.u., providing a hard lower-bound on its value. We can therefore impose a weakly informative prior distribution as a half normal distribution, <span id="eq:growth_alpha_prior"><br /><span class="math display">$$
+g(\alpha) = \sqrt{2 \over \pi\sigma^2}\exp\left[{-\alpha^2 \over
+   2\sigma^2}\right]\,;\, \forall \alpha &gt; 0. 
+\qquad(25)$$</span><br /></span> where the standard deviation is large, for example, <span class="math inline"><em>σ</em> = 500</span> a.u. / fluorophore. We evaluated the posterior distribution using Markov chain Monte Carlo (MCMC) as is implemented in the Stan probabilistic programming language <span class="citation" data-cites="carpenter2017">(Carpenter et al. <a href="#ref-carpenter2017" role="doc-biblioref">2017</a>)</span>. The <code>.stan</code> file associated with this model along with the Python code used to execute it can be accessed on the <a href="https://www.rpgroup.caltech.edu/mwc_growth">paper website</a> and <a href="https://github.com/rpgroup-pboc/mwc_growth">GitHub repository</a>. Fig. 5 shows the posterior probability distributions of the calibration factor estimated for several biological replicates of the glucose growth condition at 37<span class="math inline"><em></em><sup>∘</sup></span> C. For each posterior distribution, the mean and standard deviation was used as the calibration factor and uncertainty for the corresponding data set.</p>
+<figure>
+<img src="ch8_figS5.png" id="fig:cal_factor_posts" data-short-caption="Representative posterior distributions for inference of the fluorescence calibration factor." alt="" /><figcaption>Figure 5: <strong>Representative posterior distributions for the calibration factor.</strong> (A) Empirical cumulative distribution functions and (B) histograms of the posterior distribution for the calibration factor <span class="math inline"><em>α</em></span> for several biological replicates. Different colors indicate different biological replicates of experiments performed in glucose supplemented medium at 37<span class="math inline"><em></em><sup>∘</sup></span> C. The <a href="https://github.com/gchure/phd/blob/master/src/chapter_08/code/ch8_figS5.py">Python code<br />
+(<code>ch8_figS5.py</code>)</a> used to generate this figure can be found on the thesis <a href="https://github.com/gchure/phd">GitHub repository</a>.</figcaption>
+</figure>
+<h3 id="correcting-for-systematic-experimental-error">Correcting for Systematic Experimental Error</h3>
+<p>While determination of the calibration factor relies on time-resolved measurement of fluorescence partitioning, we computed the repressor copy number and fold-change in gene expression from still snapshots of each ATC induction condition and two control samples, as is illustrated in Fig. 3 Given these snapshots, individual cells were segmented again using the SuperSegger software in MATLAB R2017b. The result of this analysis is an array of single-cell measurements of the YFP and mCherry fluorescence intensities. With these values and a calibration factor estimated by Eq. 24 and Eq. 25, we can compute the estimated number of repressors per cell in every condition.</p>
+<p>     However, as outlined previously and in Fig. 3, the sample preparation steps for these experiments involve several steps which require careful manual labor. This results in an approximately 30 to 60 minute delay from when production of the LacI-mCherry construct is halted by removal of ATC to actual imaging on the microscope. During this time, the diluted cultures are asynchronously growing, meaning that the cells of the culture are at different steps in the cell cycle. Thus, at any point in time, a subset of cells will be on the precipice of undergoing division, partitioning the cytosolic milieu between the two progeny. As LacI-mCherry is no longer being produced, the cells that divided during the dwell time from cell harvesting to imaging will have reduced the number of repressors by a factor of 2 on average. This principle of continued cell division is shown Fig. 6.</p>
+<figure>
+<img src="ch8_figS6.png" id="fig:correction_origin" data-short-caption="Origin of a systematic error in repressor counting due to continued growth." alt="" /><figcaption>Figure 6: <strong>Continued division results in a systematic error in repressor counts.</strong> During the sample preparation steps, the asynchronous culture continues to divide though the length of the sample preparation step is less than a cell doubling time. Because production of LacI-mCherry is halted, cells that complete a division cycle during this time will partition their repressors between the progeny. The total number of repressors in parent cells just before division is, on average, twice that of the newborn cells.</figcaption>
+</figure>
+<p>     How does this partitioning affect our calculation and interpretation of the fold-change in gene expression? Like the LacI-mCherry fusion, the YFP reporter proteins are also partitioned between the progeny after a division event such that, on average, the total YFP signal of the newborn cells is one-half that of the parent cell. As the maturation time of the mCherry and YFP variants used in this work are relatively long in <em>E. coli</em> <span class="citation" data-cites="balleza2018 nagai2002">(Balleza, Kim, and Cluzel <a href="#ref-balleza2018" role="doc-biblioref">2018</a>; Nagai et al. <a href="#ref-nagai2002" role="doc-biblioref">2002</a>)</span>, we can make the assumption any newly-expressed YFP molecules after cells have divided are not yet visible in our experiments. Thus, the fold-change in gene expression of the average parent cell can be calculated given knowledge of the average expression of the progeny.</p>
+<p>     The fold-change in gene expression is a relative measurement to a control which is constitutively expressing YFP. As the latter control sample is also asynchronously dividing, the measured YFP intensity of the newborn constitutively expressing cells is on average 1/2 that of the parent cell. Therefore, the fold-change in gene expression can be calculated as <span id="eq:fc_correction"><br /><span class="math display">$$
+\langle \text{ fold-change}_{parent}\rangle =
+\frac{2 \times \langle I^\text{(YFP)}_\text{ newborn}(R &gt; 0) \rangle}{2
+\times \langle I^\text{(YFP)}_\text{ newborn}(R = 0)\rangle} =
+\frac{\langle I^\text{(YFP)}_\text{ newborn}(R &gt; 0) \rangle}{\langle
+I^\text{(YFP)}_\text{ newborn}(R = 0)\rangle}.
+\qquad(26)$$</span><br /></span> Thus, when calculating the fold-change in gene expression one does not need to correct for any cell division that occurs between sample harvesting and imaging as it is a relative measurement. However, the determination of the repressor copy number is a <em>direct</em> measurement and requires a consideration of unknown division events.</p>
+<p>     To address this source of systematic experimental error, we examined the cell length distributions of all segmented cells from the snapshots as well as the distribution of newborn cell lengths from the time-lapse measurements. Fig. 7 shows that a significant portion of the cells from the snapshots (colored distributions) overlap with the distribution of newborn cell lengths (grey distributions). For each condition, we partitioned the cells from the snapshots into three bins based on their lengths – “small” cells had a cell length less than 2.5 <span class="math inline"><em>μ</em></span>m, “medium” cells had lengths between 2.5 <span class="math inline"><em>μ</em></span>m and 3.5 <span class="math inline"><em>μ</em></span>m, and “large” cells being longer than 3.5 <span class="math inline"><em>μ</em></span>m. These thresholds were chosen manually by examining the newborn cell-size distributions and are shown as red vertical lines in Fig. 7. Under this partitioning, we consider all “small” cells to have divided between cessation of LacI-mCherry production and imaging, “medium”-length cells to have a mixture of long newborn cells (from the tail of the newborn cell length distribution) and cells that haven’t divided, and cells in the "long" group to be composed entirely of cells which did not undergo a division over the course of sample preparation.</p>
+<figure>
+<img src="ch8_figS7.png" id="fig:length_distributions" data-short-caption="Cell length distributions of fluorescence snapshots and newborn cells." alt="" /><figcaption>Figure 7: <strong>Cell length distributions of fluorescence snapshots and newborn cells.</strong> Top row shows the distribution of cell lengths (pole-to-pole, colored distributions) off cells imaged for calculation of the repressor copy number and fold-change in gene expression. The distribution of newborn cell lengths for that given condition is shown in grey. The vertical red lines correspond to the cell length threshold of 2.5<span class="math inline"><em>μ</em></span>m and 3.5<span class="math inline"><em>μ</em></span>m, from left to right, respectively. Cels to the left of the first vertical line were identified as “small”, cells in between the two vertical lines to be “medium” sized, and “long” cells tot he right of the second vertical line. Cells below the 2.4<span class="math inline"><em>μ</em></span>m threshold were treated as cells who divided after production of lacI-mCherry had been halted. Bottom row shows the same data as the top row but as the empirical cumulative distribution. The <a href="https://github.com/gchure/phd/blob/master/src/chapter_08/code/ch8_figS7.py">Python code<br />
+(<code>ch8_figS7.py</code>)</a> used to generate this figure can be found on the thesis <a href="https://github.com/gchure/phd">GitHub repository</a>.</figcaption>
+</figure>
+<p>     Given this coarse delineation of cell age by length, we examined how correction factors could be applied to correct for the the undesired systematic error due to dilution of repressors. We took the data collected in this work and compared the results to the fold-change in gene expression reported in the literature for the same regulatory architecture. Without correcting for undesired cell division, the observed fold-change in gene expression falls below the prediction and does not overlap with data from the literature (Fig. 8(A), light purple). Using the uncorrected measurements, we estimated the DNA binding energy to be <span class="math inline"><em>Δ</em><em>ε</em><sub><em>R</em></sub> ≈  − 15 <em>k</em><sub><em>B</em></sub><em>T</em></span> which does not agree with the value for the O2 operator reported in <span class="citation" data-cites="garcia2011">H. G. Garcia and Phillips (<a href="#ref-garcia2011" role="doc-biblioref">2011</a>)</span> or with the inferred DNA binding energies from the other data sources (Fig. 8 (B)).</p>
+<p>      These results emphasize the need to correct for undesired dilution of repressors through cell division during the sample preparation period, and we now consider several different manners of applying this correction. We first consider the extreme case where all cells of the culture underwent an undesired division after LacI-mCherry production was halted. This means that the average repressor copy number measured from all cells is off by a factor of 2. The result of applying a factor of 2 correction to all measurements can be seen in Fig. 8 as dark red points. Upon applying this correction, we find that the observed fold-change in gene expression agrees with the prediction and data from other sources in the literature. The estimated DNA binding energy <span class="math inline"><em>Δ</em><em>ε</em><sub><em>R</em></sub></span> from these data is also in agreement with other data sources (Fig. 8(B), dark red). This result suggests that over the course of sample preparation, a non-negligible fraction of the diluted culture undergoes a division event before being imaged.</p>
+<p>     We now begin to relax assumptions as to what fraction of the measured cells underwent a division event before imaging. As described above, in drawing distinctions between “small”, “medium”, and “large” cells, we assume the latter represent cells which <em>did not</em> undergo a division between the harvesting and imaging of the samples. Thus, the repressor counts of these cells should require no correction. The white-faced points in Fig. 8(A) shows the fold-change in gene expression of <em>only</em> the large cell fraction, which falls within error of the theoretical prediction. Furthermore, the inferred DNA binding energy falls within error of that inferred from data of <span class="citation" data-cites="garcia2011">H. G. Garcia and Phillips (<a href="#ref-garcia2011" role="doc-biblioref">2011</a>)</span> and that inferred from data assuming all cells underwent a division event Fig. 8(B), though it does not fall within error of the binding energy reported in <span class="citation" data-cites="garcia2011">H. G. Garcia and Phillips (<a href="#ref-garcia2011" role="doc-biblioref">2011</a>)</span>.</p>
+<p>     The most realistic approach that can be taken to avoid using only the “large” bin of cells is to to assume that all cells with a length <span class="math inline">ℓ &lt; 2.5 <em>μ</em></span>m have undergone a division, requiring a two-fold correction to their average repressor copy number. The result of this approach can be seen in Fig. 8 as purple points. The inferred DNA binding energy from this correction approach falls within error of that inferred from only the large cells white-faced points in 8(B) as well as overlapping with the estimate treating all cells as having undergone a division (red).</p>
+<p>     There are several experimental techniques that could be implemented to avoid needing to apply a correction factor as described here. In <span class="citation" data-cites="brewster2014">Brewster et al. (<a href="#ref-brewster2014" role="doc-biblioref">2014</a>)</span>, the fold-change in gene expression was measured by tracking the production rate of a YFP reporter before and after a single cell division event coupled with direct measurement of the repressor copy number using the same binomial partitioning method. This implementation required an extensive degree of manual curation of segmentation as well as correcting for photobleaching of the reporter, which in itself is a non-trivial correction <span class="citation" data-cites="garcia2011c">(Hernan G. Garcia et al. <a href="#ref-garcia2011c" role="doc-biblioref">2011</a>)</span>. The experimental approach presented here sacrifices a direct measure of the repressor copy number for each cell via the binomial partitioning method, but permits the much higher throughput needed to assay the variety of environmental conditions. Ultimately, the inferred DNA binding energy for all of the scenarios described above agree within <span class="math inline">1 <em>k</em><sub><em>B</em></sub><em>T</em></span>, a value smaller than the natural variation in the DNA binding energies of the three native <em>lacO</em>, which is <span class="math inline"> ≈ 6 <em>k</em><sub><em>B</em></sub><em>T</em></span>. For the purposes of this work, we erred on the side of caution and only used the cells deemed “large” for the measurements reported in Chapter 4 and the remaining sections of this chapter.</p>
+<figure>
+<img src="ch8_figS8.png" id="fig:correction_factor" data-short-caption="Influence of a correction factor on fold-change and the DNA binding energy." alt="" /><figcaption>Figure 8: <strong>Influence of a correction factor on fold-change and the DNA binding energy.</strong> (A) Fold-change in gene expression measurements from <span class="citation" data-cites="brewster2014 garcia2011 razo-mejia2018">(Brewster et al. <a href="#ref-brewster2014" role="doc-biblioref">2014</a>; H. G. Garcia and Phillips <a href="#ref-garcia2011" role="doc-biblioref">2011</a>; Razo-Mejia et al. <a href="#ref-razo-mejia2018" role="doc-biblioref">2018</a>)</span> along with data rom this work. Data from this work shown are with no correction (purple), correcting for small cells only (dark purple), using only the large cell fraction (black faced point), and treating all cells as newborn cells (red). Where visible, errors correspond to the standard error of 5 to 10 biological replicates. (B) estimated DNA binding energy from each data set. Points are the median of the posterior distribution over the DNA binding energy. Horizontal lines indicate the width of the 95% credible region of the posterior distribution. Grey lines in (A) and (B) correspond to the theoretical prediction and estimated binding energy from <span class="citation" data-cites="garcia2011">H. G. Garcia and Phillips (<a href="#ref-garcia2011" role="doc-biblioref">2011</a>)</span>, respectively. The <a href="https://github.com/gchure/phd/blob/master/src/chapter_08/code/ch8_figS8.py">Python code<br />
+(<code>ch8_figS8.py</code>)</a> used to generate this figure can be found on the thesis <a href="https://github.com/gchure/phd">GitHub repository</a>.</figcaption>
+</figure>
+<h2 id="parameter-estimation-of-dna-binding-energies-and-comparison-across-carbon-source">Parameter Estimation of DNA Binding Energies and Comparison Across Carbon Source</h2>
+<p>In Chapter 4, we conclude that the biophysical parameters defining the fold-change input-output function are unperturbed between different carbon sources. This conclusion is reached primarily by comparing how well the fold-change and the free energy shift <span class="math inline"><em>Δ</em><em>F</em></span> is predicted using the parameter values determined in glucose supported medium at 37<span class="math inline"><em></em><sup>∘</sup></span> C. In this section, we redetermine the DNA binding energy for each carbon source condition and test its ability to predict the fold-change of the other conditions.</p>
+<h3 id="reparameterizing-the-fold-change-input-output-function">Reparameterizing the fold-change input-output function</h3>
+<p>As described previously, the fold-change in gene expression is defined by the total repressor copy number <span class="math inline"><em>R</em></span>, the energetic difference between the active and inactive states of the repressor <span class="math inline"><em>Δ</em><em>ε</em><sub><em>A</em><em>I</em></sub></span>, and the binding energy of the repressor to the DNA <span class="math inline"><em>Δ</em><em>ε</em><sub><em>R</em><em>A</em></sub></span>. Using fluorescence microscopy, we can directly measure the average repressor copy number per cell, reducing the number of variable parameters to only the energetic terms.</p>
+<p>Estimating both <span class="math inline"><em>Δ</em><em>ε</em><sub><em>R</em><em>A</em></sub></span> and <span class="math inline"><em>Δ</em><em>ε</em><sub><em>A</em><em>I</em></sub></span> simultaneously is fraught with difficulty as the parameters are highly degenerate <span class="citation" data-cites="razo-mejia2018">(Razo-Mejia et al. <a href="#ref-razo-mejia2018" role="doc-biblioref">2018</a>)</span>. We can avoid this degeneracy by reparameterizing the fold-change input-output function as <span id="eq:fc_reparam"><br /><span class="math display">$$
+\text{fold-change} =\left( 1 +
+    \frac{R}{N_{NS}}e^{-\beta\epsilon}\right)^{-1},
+\qquad(27)$$</span><br /></span> where <span class="math inline"><em>ϵ</em></span> is the effective energetic parameter <span id="eq:ep_reparam"><br /><span class="math display"><em>ϵ</em> = <em>Δ</em><em>ε</em><sub><em>R</em></sub> − <em>k</em><sub><em>B</em></sub><em>T</em>log (1+<em>e</em><sup> − <em>β</em><em>Δ</em><em>ε</em><sub><em>A</em><em>I</em></sub></sup>).   (28)</span><br /></span> Thus, to further elucidate any changes to the parameter values due to changing the carbon source, we can infer the best-fit value of <span class="math inline"><em>ϵ</em></span> for each condition and explore how well it predicts the fold-change in other conditions.</p>
+<h3 id="statistical-inference-of-epsilon">Statistical Inference of <span class="math inline"><em>ϵ</em></span></h3>
+<p>We are interested in the probability distribution of the parameter <span class="math inline"><em>ϵ</em></span> given knowledge of the repressor copy number <span class="math inline"><em>R</em></span> and a collection of fold-change measurements <span class="math inline"><strong>f</strong><strong>c</strong></span> can be calculated via by Bayes’ theorem as <span id="eq:epsilon_bayes"><br /><span class="math display">$$
+g(\epsilon\,\vert\,R, \mathbf{fc}) = \frac{f(\mathbf{fc}\,\vert\, R,
+    \epsilon)g(\epsilon)}{f(\mathbf{fc})},
+\qquad(29)$$</span><br /></span> where <span class="math inline"><em>g</em></span> and <span class="math inline"><em>f</em></span> represent probability densities of parameters and data, respectively. In this context, the denominator term <span class="math inline"><em>f</em>(<strong>f</strong><strong>c</strong>)</span> serves only as normalization constant and can be neglected. As is described in detail in Refs. <span class="citation" data-cites="razo-mejia2018 chure2019">(Razo-Mejia et al. <a href="#ref-razo-mejia2018" role="doc-biblioref">2018</a>; Chure et al. <a href="#ref-chure2019" role="doc-biblioref">2019</a>)</span>, we assume that a given set of fold-change measurements are normally distributed about the theoretical value <span class="math inline"><em>μ</em></span> defined by the fold-change function. The likelihood can be mathematically defined as <span id="eq:lin_fc_like"><br /><span class="math display">$$
+f(\mathbf{fc}\,\vert\,\epsilon, R) =
+\frac{1}{\left(2\pi\sigma^2\right)^{N/2}}\prod\limits_i^N
+\exp\left[\frac{-\left(\text{fc}_i - \mu(\epsilon,
+R)\right)^2}{2\sigma^2}\right],
+\qquad(30)$$</span><br /></span> where <span class="math inline"><em>N</em></span> is the total number of fold-change measurements, and <span class="math inline"><em>σ</em></span> is the standard deviation of the observations about the true mean and is another parameter that must included in the estimation. As the fold-change in gene expression in this work covers several orders of magnitude (from <span class="math inline"> ≈ 10<sup> − 3</sup> − 10<sup>0</sup></span>) it is is better to condition the parameters on the log fold-change rather than linear scaling, translating Eq. 30 to <span id="eq:log_fc_like"><br /><span class="math display">$$
+f(\mathbf{fc}^*\,\vert\, \epsilon, R) =
+\frac{1}{\left(2\pi\sigma\right)^{N/2}}\prod\limits_i^N\exp\left[-\frac{\left(\text{fc}^*_i
+- \mu^*(\epsilon, R)\right)^2}{2\sigma^2}\right],
+\qquad(31)$$</span><br /></span> where <span class="math inline"><strong>f</strong><strong>c</strong><sup>*</sup></span> and <span class="math inline"><em>μ</em><sup>*</sup>(<em>ϵ</em>, <em>R</em>)</span> are the transformations <br /><span class="math display"><strong>f</strong><strong>c</strong><sup>*</sup> = log (<strong>f</strong><strong>c</strong>)</span><br /> and <span id="eq:log_trans_mu"><br /><span class="math display">$$\mu^*(\epsilon, R) = -\log\left(1 +
+    \frac{R}{N_{NS}}e^{-\beta\epsilon}\right),
+\qquad(32)$$</span><br /></span> respectively.</p>
+<p>     With a likelihood in hand, we can now turn towards defining functional forms for the prior distributions <span class="math inline"><em>g</em>(<em>σ</em>)</span> and <span class="math inline"><em>g</em>(<em>ϵ</em>)</span>. For these definitions, we can turn to those used in <span class="citation" data-cites="chure2019">Chure et al. (<a href="#ref-chure2019" role="doc-biblioref">2019</a>)</span>, <span id="eq:chure2019_ep_prior"><br /><span class="math display"><em>g</em>(<em>ϵ</em>) ∼ Normal(<em>μ</em> =  − 12, <em>σ</em> = 6)   (33)</span><br /></span> and <span id="eq:chure2019_sig_prior"><br /><span class="math display"><em>g</em>(<em>σ</em>) ∼ HalfNormal(<em>ϕ</em> = 0.1),   (34)</span><br /></span> where we introduce the shorthand notation of “Normal” and “HalfNormal”. Combining Eq. 31 and Eq. 34 - Eq. 33 yields the complete posterior distribution for estimating the DNA binding energy for each carbon source medium. The complete posterior distribution was sampled using Markov chain Monte Carlo in the Stan probabilistic programming language <span class="citation" data-cites="carpenter2017">(Carpenter et al. <a href="#ref-carpenter2017" role="doc-biblioref">2017</a>)</span>.</p>
+<p>     The sampled posterior distributions for <span class="math inline"><em>ϵ</em></span> and <span class="math inline"><em>σ</em></span> for each carbon source condition shown in Fig. 9 and are summarized in Table 8.1. The posterior distributions of <span class="math inline"><em>ϵ</em></span> across the conditions are approximately equal with highly overlapping 95% credible regions. The predictive capacity of each estimate of <span class="math inline"><em>ϵ</em></span> is shown in Fig. 10 where all fold-change measurements fall upon the theoretical prediction regardless of which carbon source that the parameter value was conditioned upon. With this analysis, we can say with quantitative confidence that the biophysical parameters are indifferent to the physiological changes resulting from variation in carbon quality.</p>
+<table>
+<caption>Summarized parameter estimates of <span class="math inline"><em>ϵ</em></span> and <span class="math inline"><em>σ</em></span> given a single growth condition. reported as median and upper/lower bounds of 95% credible region.</caption>
+<thead>
+<tr class="header">
+<th style="text-align: left;"><strong>Growth Condition</strong></th>
+<th style="text-align: center;"><strong>Parameter</strong></th>
+<th style="text-align: right;"><strong>Value</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Glucose, 37<span class="math inline"><em></em><sup>∘</sup></span> C</td>
+<td style="text-align: center;"><span class="math inline"><em>ϵ</em></span></td>
+<td style="text-align: right;"><span class="math inline"> − 14.5<sub> − 0.3</sub><sup> + 0.2</sup> <em>k</em><sub><em>B</em></sub><em>T</em></span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: center;"><span class="math inline"><em>σ</em></span></td>
+<td style="text-align: right;"><span class="math inline">0.3<sub> − 0.1</sub><sup> + 0.1</sup></span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Glycerol, 37<span class="math inline"><em></em><sup>∘</sup></span> C</td>
+<td style="text-align: center;"><span class="math inline"><em>ϵ</em></span></td>
+<td style="text-align: right;"><span class="math inline"> − 14.6<sub> − 0.1</sub><sup> + 0.1</sup> <em>k</em><sub><em>B</em></sub><em>T</em></span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: center;"><span class="math inline"><em>σ</em></span></td>
+<td style="text-align: right;"><span class="math inline">0.39<sub> − 0.08</sub><sup> + 0.10</sup></span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Acetate, 37<span class="math inline"><em></em><sup>∘</sup></span> C</td>
+<td style="text-align: center;"><span class="math inline"><em>ϵ</em></span></td>
+<td style="text-align: right;"><span class="math inline"> − 14.1<sub> − 0.3</sub><sup> + 0.2</sup> <em>k</em><sub><em>B</em></sub><em>T</em></span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: center;"><span class="math inline"><em>σ</em></span></td>
+<td style="text-align: right;"><span class="math inline">0.35<sub> − 0.1</sub><sup> + 0.1</sup></span></td>
+</tr>
+</tbody>
+</table>
+<figure>
+<img src="ch8_figS9.png" id="fig:carbon_cornerplot" data-short-caption="Posterior probability distributions of effective DNA binding and standard deviation for different carbon sources." alt="" /><figcaption>Figure 9: <strong>Posterior probability distributions of effective DNA binding energy <span class="math inline"><em>ϵ</em></span> and standard deviation <span class="math inline"><em>σ</em></span>.</strong> Top plot shows the marginal probability distribution of <span class="math inline"><em>ϵ</em></span> conditioned only on the purple (glucose), glycerol (green), or acetate (brown) measurements. Bottom left plot shows the joint probability distribution between the effective DNA binding energy <span class="math inline"><em>ϵ</em></span> and the standard deviation <span class="math inline"><em>σ</em></span>. Bottom right shows the marginal posterior distribution over the standard deviation <span class="math inline"><em>σ</em></span>. The <a href="https://github.com/gchure/phd/blob/master/src/chapter_08/code/ch8_figS9.py">Python code<br />
+(<code>ch8_figS9.py</code>)</a> used to generate this figure can be found on the thesis <a href="https://github.com/gchure/phd">GitHub repository</a>.</figcaption>
+</figure>
+<figure>
+<img src="ch8_figS10.png" id="fig:pairwise_carbon" data-short-caption="Pairwise estimation and prediction of DNA binding energies estimated from different carbon sources." alt="" /><figcaption>Figure 10: <strong>Pairwise estimation and prediction of DNA binding energies.</strong> Rows indicate the strain to which the effective DNA binding energy <span class="math inline"><em>ϵ</em></span> was estimated and columns are the strains whose fold-change is predicted. Shaded lines represent the 95% credible region of the prediction given the estimated value of <span class="math inline"><em>ϵ</em></span>. Points and error correspond to the median and standard error of fie to eight biological replicates. The <a href="https://github.com/gchure/phd/blob/master/src/chapter_08/code/ch8_figS10.py">Python code<br />
+(<code>ch8_figS10.py</code>)</a> used to generate this figure can be found on the thesis <a href="https://github.com/gchure/phd">GitHub repository</a>.</figcaption>
+</figure>
+<h2 id="statistical-inference-of-entropic-costs">Statistical Inference of Entropic Costs</h2>
+<p>In the main text, we describe how a simple rescaling of the energetic parameters <span class="math inline"><em>Δ</em><em>ε</em><sub><em>R</em></sub></span> and <span class="math inline"><em>Δ</em><em>ε</em><sub><em>A</em><em>I</em></sub></span> is not sufficient to describe the fold-change in gene expression when the growth temperature is changed from 37<span class="math inline"><em></em><sup>∘</sup></span> C. In this section, we describe the inference of hidden entropic parameters to phenomenologically describe the temperature dependence of the fold-change in gene expression.</p>
+<h3 id="definition-of-hidden-entropic-costs">Definition of hidden entropic costs</h3>
+<p>The values of the energetic parameters <span class="math inline"><em>Δ</em><em>ε</em><sub><em>R</em></sub></span> and <span class="math inline"><em>Δ</em><em>ε</em><sub><em>A</em><em>I</em></sub></span> were determined in a glucose supplemented medium held at 37<span class="math inline"><em></em><sup>∘</sup></span> C which we denote as <span class="math inline"><em>T</em><sub><em>r</em><em>e</em><em>f</em></sub></span>. A null model to describe temperature dependence of these parameters is to rescale them to the changed temperature <span class="math inline"><em>T</em><sub><em>e</em><em>x</em><em>p</em></sub></span> as <span id="eq:epstar"><br /><span class="math display">$$
+\Delta\varepsilon^* =
+\frac{T_{ref}}{T_{exp}}\Delta\varepsilon,
+\qquad(35)$$</span><br /></span> where <span class="math inline"><em>Δ</em><em>ε</em><sup>*</sup></span> is either <span class="math inline"><em>Δ</em><em>ε</em><sub><em>R</em></sub></span> or <span class="math inline"><em>Δ</em><em>ε</em><sub><em>A</em><em>I</em></sub></span>. However, we found that this null model was not sufficient to describe the fold-change in gene expression, prompting the formulation of a new phenomenological description.</p>
+<p>      Our thermodynamic model for the fold-change in gene expression coarse-grains the regulatory architecture to a two state model, meaning many of the rich features of regulation such as vibrational entropy, the material properties of DNA, and the occupancy of the repressor to the DNA are swept into the effective energetic parameters. As temperature was never perturbed when this model was developed, modeling these features was not necessary. However, we must now return to these features to consider what may be affected.</p>
+<p>     Without assigning a specific mechanism, we can say that there is a temperature-dependent entropic parameter that was neglected in the estimation of the energetic parameters in Garcia and Phillips 2011 <span class="citation" data-cites="garcia2011">(H. G. Garcia and Phillips <a href="#ref-garcia2011" role="doc-biblioref">2011</a>)</span> and Razo-Mejia <em>et al.</em> 2018 <span class="citation" data-cites="razo-mejia2018">(Razo-Mejia et al. <a href="#ref-razo-mejia2018" role="doc-biblioref">2018</a>)</span>. In this case, the inferred energetic parameter <span class="math inline"><em>Δ</em><em>ε</em><sup>*</sup></span> is composed of enthalpic (<span class="math inline"><em>Δ</em><em>H</em></span>) and entropic (<span class="math inline"><em>Δ</em><em>S</em></span>) parameters, <br /><span class="math display"><em>Δ</em><em>ε</em><sup>*</sup> = <em>Δ</em><em>H</em> − <em>T</em><em>Δ</em><em>S</em>.</span><br /> For a set of fold-change measurements at a temperature <span class="math inline"><em>T</em><sub><em>e</em><em>x</em><em>p</em></sub></span>, we are interested in estimating values for <span class="math inline"><em>Δ</em><em>H</em></span> and <span class="math inline"><em>Δ</em><em>S</em></span> for each energetic parameter. Given measurements from Refs. <span class="citation" data-cites="garcia2011 razo-mejia2018">(H. G. Garcia and Phillips <a href="#ref-garcia2011" role="doc-biblioref">2011</a>; Razo-Mejia et al. <a href="#ref-razo-mejia2018" role="doc-biblioref">2018</a>)</span>, we know at 37<span class="math inline"><em></em><sup>∘</sup><em>C</em></span> what <span class="math inline"><em>Δ</em><em>ε</em><sub><em>R</em><em>A</em></sub></span> and <span class="math inline"><em>Δ</em><em>ε</em><sub><em>A</em><em>I</em></sub></span> are inferred to be, placing a constraint on the possible values of <span class="math inline"><em>Δ</em><em>H</em></span> and <span class="math inline"><em>Δ</em><em>S</em></span>, <span id="eq:epra_constraint"><br /><span class="math display"><em>Δ</em><em>H</em><sub><em>R</em></sub> = <em>Δ</em><em>ε</em><sub><em>R</em></sub> + <em>T</em><sub><em>r</em><em>e</em><em>f</em></sub><em>Δ</em><em>S</em><sub><em>R</em></sub> = <em>T</em><sub><em>r</em><em>e</em><em>f</em></sub><em>Δ</em><em>S</em><sub><em>R</em></sub> − 13.9 <em>k</em><sub><em>B</em></sub><em>T</em>,   (36)</span><br /></span> and <span id="eq:epai_constraint"><br /><span class="math display"><em>Δ</em><em>H</em><sub><em>A</em><em>I</em></sub> = <em>Δ</em><em>ε</em><sub><em>A</em><em>I</em></sub> + <em>T</em><sub><em>r</em><em>e</em><em>f</em></sub><em>Δ</em><em>S</em><sub><em>A</em><em>I</em></sub> = <em>T</em><sub><em>r</em><em>e</em><em>f</em></sub><em>Δ</em><em>S</em><sub><em>A</em><em>I</em></sub> + 4.5 <em>k</em><sub><em>B</em></sub><em>T</em>   (37)</span><br /></span> for the DNA binding energy and allosteric state energy difference, respectively.</p>
+<h3 id="statistical-inference-of-delta-s_r-and-delta-s_ai">Statistical inference of <span class="math inline"><em>Δ</em><em>S</em><sub><em>R</em></sub></span> and <span class="math inline"><em>Δ</em><em>S</em><sub><em>A</em><em>I</em></sub></span></h3>
+<p>Given the constraints from Eq. 36 and Eq. 37, we are interested in inferring the entropic parameters <span class="math inline"><em>Δ</em><em>S</em><sub><em>R</em></sub></span> and <span class="math inline"><em>Δ</em><em>S</em><sub><em>A</em><em>I</em></sub></span> given literature values for <span class="math inline"><em>Δ</em><em>ε</em><sub><em>R</em><em>A</em></sub></span> and <span class="math inline"><em>Δ</em><em>ε</em><sub><em>A</em><em>I</em></sub></span> and the set of fold-change measurements <span class="math inline"><strong>f</strong><strong>c</strong></span> at a given temperature <span class="math inline"><em>T</em><sub><em>e</em><em>x</em><em>p</em></sub></span>. The posterior probability distribution for the entropic parameters can be enumerated via Bayes’ theorem as <span id="eq:temp_generic_bayes"><br /><span class="math display">$$
+g(\Delta S_R, \Delta S_{AI}\,\vert\, \mathbf{fc}) =
+\frac{f(\mathbf{fc}\,\vert\,\Delta S_R, \Delta S_{AI})g(\Delta S_R, \Delta
+S_{AI})}{f(\mathbf{fc})},
+\qquad(38)$$</span><br /></span> where <span class="math inline"><em>g</em></span> and <span class="math inline"><em>f</em></span> are used to denote probability densities over parameters and data, respectively. As we have done elsewhere in this SI text, we treat <span class="math inline"><em>f</em>(<strong>f</strong><strong>c</strong>)</span> as a normalization constant and neglect it in our estimation of <span class="math inline"><em>g</em>(<em>Δ</em><em>S</em><sub><em>R</em></sub>, <em>Δ</em><em>S</em><sub><em>A</em><em>I</em></sub> | <strong>f</strong><strong>c</strong>)</span>. Additionally, as is discussed in detail earlier in this chapter, we consider the <span class="math inline">log </span> fold-change measurements to be normally distributed about a mean <span class="math inline">fc<sup>*</sup></span> defined by the fold-change input-output function and a standard deviation <span class="math inline"><em>σ</em></span>. Thus, the likelihood for the fold-change in gene expression is <span id="eq:delS_like"><br /><span class="math display">$$
+f(\mathbf{fc}\,\vert\,\Delta S_R, \Delta S_{AI}, \sigma, T_{exp}) = 
+\frac{1}{\left(2\pi\sigma^2\right)^{N/2}}\prod\limits_i^N
+\exp\left[-\frac{\left[\log \text{fc}_i - \log \text{fc}^*(\Delta S_R, \Delta
+S_{AI}, T_{exp})\right]^2}{2\sigma^2}\right].
+\qquad(39)$$</span><br /></span></p>
+<p>     In calculating the mean <span class="math inline">fc<sup>*</sup></span>, the effective energetic parameters <span class="math inline"><em>Δ</em><em>ε</em><sub><em>R</em></sub><sup>*</sup></span> and <span class="math inline"><em>Δ</em><em>ε</em><sub><em>A</em><em>I</em></sub><sup>*</sup></span> can be defined and constrained using Eq. 36 and Eq. 37 as <span id="eq:eprastar_constraint"><br /><span class="math display"><em>Δ</em><em>ε</em><sub><em>R</em></sub><sup>*</sup> = <em>Δ</em><em>H</em><sub><em>R</em></sub> − <em>T</em><sub><em>e</em><em>x</em><em>p</em></sub><em>Δ</em><em>S</em><sub><em>R</em></sub> = <em>Δ</em><em>S</em><sub><em>R</em></sub>(<em>T</em><sub><em>r</em><em>e</em><em>f</em></sub> − <em>T</em><sub><em>e</em><em>x</em><em>p</em></sub>) − 13.9 <em>k</em><sub><em>B</em></sub><em>T</em><sub><em>r</em><em>e</em><em>f</em></sub>,   (40)</span><br /></span> and <span id="eq:epaistar_constraint"><br /><span class="math display"><em>Δ</em><em>ε</em><sub><em>A</em><em>I</em></sub><sup>*</sup> = <em>Δ</em><em>H</em><sub><em>A</em><em>I</em></sub> − <em>T</em><sub><em>e</em><em>x</em><em>p</em></sub><em>Δ</em><em>S</em><sub><em>A</em><em>I</em></sub> = <em>Δ</em><em>S</em><sub><em>A</em><em>I</em></sub>(<em>T</em><sub><em>r</em><em>e</em><em>f</em></sub> − <em>T</em><sub><em>e</em><em>x</em><em>p</em></sub>) + 4.5 <em>k</em><sub><em>B</em></sub><em>T</em><sub><em>r</em><em>e</em><em>f</em></sub>.   (41)</span><br /></span></p>
+<p>     As the enthalpic parameters are calculated directly from the constraints of Eq. 36 and Eq. 37, we must only estimate three parameters, <span class="math inline"><em>Δ</em><em>S</em><sub><em>R</em></sub></span>, <span class="math inline"><em>Δ</em><em>S</em><sub><em>A</em><em>I</em></sub></span>, and <span class="math inline"><em>σ</em></span>, each of which need a functional form for the prior distribution.</p>
+<p>     <em>A priori</em>, we know that both <span class="math inline"><em>Δ</em><em>S</em><sub><em>R</em></sub></span> and <span class="math inline"><em>Δ</em><em>S</em><sub><em>A</em><em>I</em></sub></span> must be small because <span class="math inline"><em>T</em><sub><em>r</em><em>e</em><em>f</em></sub></span> and <span class="math inline"><em>T</em><sub><em>e</em><em>x</em><em>p</em></sub></span> are defined in K. As these entropic parameters can be either positive or negative, we can define the prior distributions <span class="math inline"><em>g</em>(<em>Δ</em><em>S</em><sub><em>R</em></sub>)</span> and <span class="math inline"><em>g</em>(<em>Δ</em><em>S</em><sub><em>A</em><em>I</em></sub>)</span> as a normal distribution centered at zero with a small standard deviation, <span id="eq:delSR_prior"><br /><span class="math display">$$
+g(\Delta S_R) \sim \text{\itshape Normal}(\mu=0, \sigma=0.1),
+\qquad(42)$$</span><br /></span> and <span id="eq:delSAI_prior"><br /><span class="math display">$$
+g(\Delta S_{AI}) \sim \text{\itshape Normal}(\mu=0, \sigma=0.1).
+\qquad(43)$$</span><br /></span> The standard deviation <span class="math inline"><em>σ</em></span> can be defined as a half-normal distribution centered at 0 with a small standard deviation <span class="math inline"><em>ϕ</em></span>, <span id="eq:unlabeled_sigma"><br /><span class="math display">$$
+g(\sigma) \sim \text{\itshape HalfNormal}(\phi=0.1).
+\qquad(44)$$</span><br /></span></p>
+<p>     With the priors and likelihood functions in hand, we sampled the posterior distribution using Markov chain Monte Carlo as implemented in the Stan probabilistic programming language <span class="citation" data-cites="carpenter2017">(Carpenter et al. <a href="#ref-carpenter2017" role="doc-biblioref">2017</a>)</span>. We performed three different estimations – one inferring the parameters using only data at 32<span class="math inline"><em></em><sup>∘</sup></span> C, one using only data from 42<span class="math inline"><em></em><sup>∘</sup></span> C, and one using data sets from both temperatures pooled together.</p>
+<p>     The sampling results can be seen in Fig. 11. The estimation of <span class="math inline"><em>Δ</em><em>S</em><sub><em>R</em></sub></span> is distinct for each condition where as the sampling for <span class="math inline"><em>Δ</em><em>S</em><sub><em>A</em><em>I</em></sub></span> is the same for all conditions and is centered about 0. The latter suggests that the value of <span class="math inline"><em>Δ</em><em>ε</em><sub><em>A</em><em>I</em></sub></span> determined at 37<span class="math inline"><em></em><sup>∘</sup></span> C is not dependent on temperature within the resolution of our experiments. The difference between the estimated value of <span class="math inline"><em>Δ</em><em>S</em><sub><em>R</em></sub></span> between temperatures suggests that there is another component of the temperature dependence that is not captured by the inclusion of a single entropic parameter. Fig. 12 shows that estimating <span class="math inline"><em>Δ</em><em>S</em></span> from one temperature is not sufficient to predict the fold-change in gene expression at another temperature. The addition of the entropic parameter leads to better fit of the 32<span class="math inline"><em></em><sup>∘</sup></span> C condition than the simple rescaling of the energy as described by Eq. 35 (Fig. 12, dashed line), but poorly predicts the behavior at 42<span class="math inline"><em></em><sup>∘</sup><em>C</em></span>. Performing the inference on the combined 32<span class="math inline"><em></em><sup>∘</sup></span> C and 42<span class="math inline"><em></em><sup>∘</sup></span> C data strikes a middle ground between the the predictions resulting from the two temperatures alone Fig. 12, grey shaded region.</p>
+<h3 id="entropy-as-a-function-of-temperature">Entropy as a function of temperature</h3>
+<p>In the previous section, we made an approximation of the energetic parameters <span class="math inline"><em>Δ</em><em>ε</em><sub><em>R</em></sub></span> and <span class="math inline"><em>Δ</em><em>ε</em><sub><em>A</em><em>I</em></sub></span> to defined by an enthalpic and entropic term, both of which being independent of temperature. However, entropy can be (and in many cases is) dependent on the system temperature, often in a non-trivial manner.</p>
+<p>     To explore the effects of a temperature-dependent entropy in our prediction of the fold-change, we perform a Taylor expansion of Eq. <strong>¿eq:utds?</strong> about the entropic parameter with respect to temperature keeping only the first order term such that <span id="eq:taylor_exp"><br /><span class="math display"><em>Δ</em><em>S</em> = <em>Δ</em><em>S</em><sub>0</sub> + <em>Δ</em><em>S</em><sub>1</sub><em>T</em>,   (45)</span><br /></span> where <span class="math inline"><em>Δ</em><em>S</em><sub>0</sub></span> is a constant, temperature-independent entropic term and <span class="math inline"><em>Δ</em><em>S</em><sub>1</sub></span> is the entropic contribution per degree Kelvin. With this simple relationship enumerated, we can now define the temperature-dependent effective free energy parameters <span class="math inline"><em>Δ</em><em>ε</em><sub><em>R</em></sub><sup>*</sup></span> and <span class="math inline"><em>Δ</em><em>ε</em><sub><em>A</em><em>I</em></sub><sup>*</sup></span> as <span id="eq:epRA_star_taylor"><br /><span class="math display"><em>Δ</em><em>ε</em><sub><em>R</em></sub><sup>*</sup> = (<em>S</em><sub>0</sub><sub><em>R</em></sub> + <em>S</em><sub>1</sub><sub><em>R</em></sub><em>T</em><sub><em>e</em><em>x</em><em>p</em></sub>)(<em>T</em><sub><em>r</em><em>e</em><em>f</em></sub> − <em>T</em><sub><em>e</em><em>x</em><em>p</em></sub>) − 13.9 <em>k</em><sub><em>B</em></sub><em>T</em>,   (46)</span><br /></span> and <span id="eq:epAI_star_taylor"><br /><span class="math display"><em>Δ</em><em>ε</em><sub><em>A</em><em>I</em></sub><sup>*</sup> = (<em>S</em><sub>0</sub><sub><em>A</em><em>I</em></sub> + <em>S</em><sub>1</sub><sub><em>A</em><em>I</em></sub><em>T</em><sub><em>e</em><em>x</em><em>p</em></sub>)(<em>T</em><sub><em>r</em><em>e</em><em>f</em></sub> − <em>T</em><sub><em>e</em><em>x</em><em>p</em></sub>) + 4.5 <em>k</em><sub><em>B</em></sub><em>T</em>,   (47)</span><br /></span> respectively, again relying on the constraints defined by Eq. 40 and Eq. 41.</p>
+<p>      Using a similar inferential approach as described in the previous section, we sample the posterior distribution of these parameters using Markov chain Monte Carlo and compute the fold-change and shift in free energy for each temperature. As seen in Fig. 13, there is a negligible improvement in the description of the data by including this temperature dependent entropic parameter.</p>
+<p>     These results together suggest that our understanding of temperature dependence in this regulatory architecture is incomplete and requires further research from both theoretical and experimental standpoints.</p>
+<figure>
+<img src="ch8_figS11.png" id="fig:entropy_corner" data-short-caption="Sampled posterior probability distributions of entropic penalty parameter inference." alt="" /><figcaption>Figure 11: <strong>Sampled posterior probability distributions of entropic penalty parameter inference.</strong> Marginal and joint distributions conditioned only on data collected at 32<span class="math inline"><em></em><sup>∘</sup></span> C, only on 42 <span class="math inline"><em></em><sup>∘</sup></span> C, or on both temperatures are shown in blue, red, and black, respectively. The value <span class="math inline"><em>Δ</em><em>S</em><sub><em>R</em></sub></span> and <span class="math inline"><em>Δ</em><em>S</em><sub><em>A</em><em>I</em></sub></span> are given in <span class="math inline"><em>k</em><sub><em>B</em></sub><em>T</em>/<em>K</em></span> where <span class="math inline"><em>K</em></span> is 1 degree Kelvin. The <a href="https://github.com/gchure/phd/blob/master/src/chapter_08/code/ch8_figS11.py">Python code<br />
+(<code>ch8_figS11.py</code>)</a> used to generate this figure can be found on the thesis <a href="https://github.com/gchure/phd">GitHub repository</a>.</figcaption>
+</figure>
+<figure>
+<img src="ch8_figS12.png" id="fig:entropy_pairwise" data-short-caption="Pairwise predictions of fold-change in gene expression at different temperatures." alt="" /><figcaption>Figure 12: <strong>Pairwise predictions of fold-change in gene expression at different temperatures.</strong> Each row represents the condition used to infer the entropic parameters and columns are the conditions that are being predicted. color shaded regions represent the 95% credible region of the predicted fold-change given the inferred values of <span class="math inline"><em>Δ</em><em>S</em><sub><em>R</em></sub></span> and <span class="math inline"><em>Δ</em><em>S</em><sub><em>A</em><em>I</em></sub></span> for each condition. The black dashed line represents the predicted fold-change in gene expression by a simple rescaling of the binding energy determined at 37<span class="math inline"><em></em><sup><em>c</em></sup><em>i</em><em>r</em><em>c</em></span> C. The grey shaded region is the 95% credible region of the fold-change given estimation of <span class="math inline"><em>Δ</em><em>S</em><sub><em>R</em></sub></span> and <span class="math inline"><em>Δ</em><em>S</em><sub><em>A</em><em>I</em></sub></span> conditioned on both temperatures pooled together. The <a href="https://github.com/gchure/phd/blob/master/src/chapter_08/code/ch8_figS12.py">Python code<br />
+(<code>ch8_figS12.py</code>)</a> used to generate this figure can be found on the thesis <a href="https://github.com/gchure/phd">GitHub repository</a>.</figcaption>
+</figure>
+<figure>
+<img src="ch8_figS13.png" id="fig:t_dependent" data-short-caption="Fold-change and shift in free energy including a temperature-dependent entropic contribution." alt="" /><figcaption>Figure 13: <strong>Fold-change and shift in free energy including a temperature-dependent entropic contribution.</strong> Top row illustrates the estimated fold-change in gene expression at 32<span class="math inline"><em></em><sup>∘</sup></span> C (left) and 42<span class="math inline"><em></em><sup>∘</sup></span> C (right). Bottom row shows the estimated shift in free energy for each temperature. The grey transparent line in all plots shows the relevant quantity including only a temperature-independent entropic parameter. Purple hashed line illustrates the relevant quantity including a temperature-dependent entropic contribution. The width of each curve indicates the 95% credible region of thee relevant quantity. Points in each correspond to the experimental measurements. The points in the top row represent the mean and standard error of five to eight biological replicates. Points in the bottom row correspond to the median value of the inferred free energy shift and the mean of five to eight biological replicates for the repressor copy number. Vertical error represents the upper and lower bounds of the 95% credible region of the parameter. Horizontal error bars correspond to the standard error of five to eight biological replicates. The <a href="https://github.com/gchure/phd/blob/master/src/chapter_08/code/ch8_figS13.py">Python code<br />
+(<code>ch8_figS13.py</code>)</a> used to generate this figure can be found on the thesis <a href="https://github.com/gchure/phd">GitHub repository</a>.</figcaption>
+</figure>
+<h2 id="media-recipes-and-bacterial-strains">Media Recipes and Bacterial Strains</h2>
+<p>The primary interest in varying the available carbon source in growth media was to modulate the quality of the carbon rather than the quantity. With this in mind, we developed the various growth media to contain the same net number of carbon atoms per cell. The standard reference was 0.5% (w/v) glucose <span class="citation" data-cites="garcia2011">(H. G. Garcia and Phillips <a href="#ref-garcia2011" role="doc-biblioref">2011</a>)</span>, which results in <span class="math inline">10<sup>8</sup></span> carbon atoms per <span class="math inline">10<sup> − 15</sup></span> L. The base recipe is given in Table 8.2. The bacterial strains used in this work are given in Table 8.3.</p>
+<table>
+<caption>M9 minimal medium recipe for each carbon-supplemented medium.</caption>
+<thead>
+<tr class="header">
+<th style="text-align: left;"><strong>Ingredient</strong></th>
+<th style="text-align: left;"><strong>Stock Concentration</strong></th>
+<th style="text-align: left;"><strong>Volume</strong></th>
+<th style="text-align: left;"><strong>Final Concentration</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">ddH<span class="math inline"><em></em><sub>2</sub></span>O</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">773 mL</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">CaCl<span class="math inline"><em></em><sub>2</sub></span></td>
+<td style="text-align: left;">1M</td>
+<td style="text-align: left;">100 <span class="math inline"><em>μ</em></span>L</td>
+<td style="text-align: left;">100 <span class="math inline"><em>μ</em></span>M</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">MgSO<span class="math inline"><em></em><sub>4</sub></span></td>
+<td style="text-align: left;">1M</td>
+<td style="text-align: left;">2mL</td>
+<td style="text-align: left;">2mM</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">M9 Salts</td>
+<td style="text-align: left;">5X</td>
+<td style="text-align: left;">200 mL</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">(BD Medical, Cat. No. 248510)</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><em>Carbon Source</em></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">10<span class="math inline"><em></em><sup>8</sup></span> C / fL</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Glucose</td>
+<td style="text-align: left;">20% (w/v)</td>
+<td style="text-align: left;">25 mL</td>
+<td style="text-align: left;">0.5% (w/v)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Glycerol</td>
+<td style="text-align: left;">20% (w/v)</td>
+<td style="text-align: left;">25 mL</td>
+<td style="text-align: left;">0.5% (w/v)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Acetate</td>
+<td style="text-align: left;">20% (w/v)</td>
+<td style="text-align: left;">25 mL</td>
+<td style="text-align: left;">0.5% (w/v)</td>
+</tr>
+</tbody>
+</table>
+<table>
+<caption>Bacterial strains used in various physiological states.</caption>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;"><strong>Genotype</strong></th>
+<th style="text-align: left;"><strong>Plasmid</strong></th>
+<th style="text-align: left;"><strong>Notes</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">MG1655:<span class="math inline"><em>Δ</em></span>lacZYA; <em>intC</em>&lt;&gt;4*CFP</td>
+<td style="text-align: left;">–</td>
+<td style="text-align: left;">Autofluorescence control</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">MG1655:<span class="math inline"><em>Δ</em></span>lacZYA; <em>intC</em>&lt;&gt;4*CFP</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><em>galK</em>&lt;&gt;25-O2+11-YFP</td>
+<td style="text-align: left;">–</td>
+<td style="text-align: left;">Constitutive expression control</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">MG1655:<span class="math inline"><em>Δ</em></span>lacZYA;<em>intC</em>&lt;&gt;4*CFP</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><em>galK</em>&lt;&gt;25-O2+11-YFP</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><em>ybcN</em>&lt;&gt;1-lacI(<span class="math inline"><em>Δ</em></span> 353-363)-mCherry</td>
+<td style="text-align: left;">pZS3P<span class="math inline"><em></em><sub><em>N</em>25</sub></span>-tetR</td>
+<td style="text-align: left;">Strain with ATC inducible lacI-mCherry</td>
+</tr>
+</tbody>
+</table>
+<h2 class="unnumbered" id="references" class="unnumbered">References</h2>
+<div id="refs" class="references hanging-indent" role="doc-bibliography">
+<div id="ref-allen2018">
+<p>Allen, Rosalind J., and Bartlomiej Waclaw. 2018. “Bacterial Growth: A Statistical Physicist’s Guide.” <em>Reports on Progress in Physics</em> 82 (1): 016601. <a href="https://doi.org/10.1088/1361-6633/aae546">https://doi.org/10.1088/1361-6633/aae546</a>.</p>
+</div>
+<div id="ref-balleza2018">
+<p>Balleza, Enrique, J. Mark Kim, and Philippe Cluzel. 2018. “Systematic Characterization of Maturation Time of Fluorescent Proteins in Living Cells.” <em>Nature Methods</em> 15 (1): 47–51. <a href="https://doi.org/10.1038/nmeth.4509">https://doi.org/10.1038/nmeth.4509</a>.</p>
+</div>
+<div id="ref-bialecka-fornal2012">
+<p>Bialecka-Fornal, Maja, Heun Jin Lee, Hannah A. DeBerg, Chris S. Gandhi, and Rob Phillips. 2012. “Single-Cell Census of Mechanosensitive Channels in Living Bacteria.” Edited by Arnold Driessen. <em>PLoS ONE</em> 7 (3): e33077. <a href="https://doi.org/10.1371/journal.pone.0033077">https://doi.org/10.1371/journal.pone.0033077</a>.</p>
+</div>
+<div id="ref-brewster2014">
+<p>Brewster, Robert C., Franz M. Weinert, Hernan G. Garcia, Dan Song, Mattias Rydenfelt, and Rob Phillips. 2014. “The Transcription Factor Titration Effect Dictates Level of Gene Expression.” <em>Cell</em> 156 (6): 1312–23. <a href="https://doi.org/10.1016/j.cell.2014.02.022">https://doi.org/10.1016/j.cell.2014.02.022</a>.</p>
+</div>
+<div id="ref-carpenter2017">
+<p>Carpenter, Bob, Andrew Gelman, Matthew D. Hoffman, Daniel Lee, Ben Goodrich, Michael Betancourt, Marcus Brubaker, Jiqiang Guo, Peter Li, and Allen Riddell. 2017. “Stan: A Probabilistic Programming Language.” <em>Journal of Statistical Software</em> 76 (1): 1–32. <a href="https://doi.org/10.18637/jss.v076.i01">https://doi.org/10.18637/jss.v076.i01</a>.</p>
+</div>
+<div id="ref-chure2019">
+<p>Chure, Griffin, Manuel Razo-Mejia, Nathan M Belliveau, Tal Einav, Zofii A Kaczmarek, Stephanie L Barnes, and Rob Phillips. 2019. “Predictive Shifts in Free Energy Couple Mutations to Their Phenotypic Consequences.” <em>Proceedings of the National Academy of Sciences</em> 116 (37). <a href="https://doi.org/10.1073/pnas.1907869116">https://doi.org/10.1073/pnas.1907869116</a>.</p>
+</div>
+<div id="ref-garcia2011c">
+<p>Garcia, Hernan G., Heun Jin Lee, James Q. Boedicker, and Rob Phillips. 2011. “Comparison and Calibration of Different Reporters for Quantitative Analysis of Gene Expression.” <em>Biophysical Journal</em> 101 (3): 535–44. <a href="https://doi.org/10.1016/j.bpj.2011.06.026">https://doi.org/10.1016/j.bpj.2011.06.026</a>.</p>
+</div>
+<div id="ref-garcia2011">
+<p>Garcia, H. G., and R. Phillips. 2011. “Quantitative Dissection of the Simple Repression Input-Output Function.” <em>Proceedings of the National Academy of Sciences</em> 108 (29): 12173–8. <a href="https://doi.org/10.1073/pnas.1015616108">https://doi.org/10.1073/pnas.1015616108</a>.</p>
+</div>
+<div id="ref-jun2018">
+<p>Jun, Suckjoon, Fangwei Si, Rami Pugatch, and Matthew Scott. 2018. “Fundamental Principles in Bacterial PhysiologyHistory, Recent Progress, and the Future with Focus on Cell Size Control: A Review.” <em>Reports on Progress in Physics</em> 81 (5): 056601. <a href="https://doi.org/10.1088/1361-6633/aaa628">https://doi.org/10.1088/1361-6633/aaa628</a>.</p>
+</div>
+<div id="ref-kim2016">
+<p>Kim, Neil H., Gloria Lee, Nicholas A. Sherer, K. Michael Martini, Nigel Goldenfeld, and Thomas E. Kuhlman. 2016. “Real-Time Transposable Element Activity in Individual Live Cells.” <em>Proceedings of the National Academy of Sciences</em> 113 (26): 7278–83. <a href="https://doi.org/10.1073/pnas.1601833113">https://doi.org/10.1073/pnas.1601833113</a>.</p>
+</div>
+<div id="ref-kubitschek1986">
+<p>Kubitschek, H. E., and J. A. Friske. 1986. “Determination of Bacterial Cell Volume with the Coulter Counter.” <em>Journal of Bacteriology</em> 168 (3): 1466–7. <a href="https://doi.org/10.1128/jb.168.3.1466-1467.1986">https://doi.org/10.1128/jb.168.3.1466-1467.1986</a>.</p>
+</div>
+<div id="ref-nagai2002">
+<p>Nagai, Takeharu, Keiji Ibata, Eun Sun Park, Mie Kubota, Katsuhiko Mikoshiba, and Atsushi Miyawaki. 2002. “A Variant of Yellow Fluorescent Protein with Fast and Efficient Maturation for Cell-Biological Applications.” <em>Nature Biotechnology</em> 20 (1): 87–90. <a href="https://doi.org/10.1038/nbt0102-87">https://doi.org/10.1038/nbt0102-87</a>.</p>
+</div>
+<div id="ref-nayak2011">
+<p>Nayak, Chitra R., and Andrew D. Rutenberg. 2011. “Quantification of Fluorophore Copy Number from Intrinsic Fluctuations During Fluorescence Photobleaching.” <em>Biophysical Journal</em> 101 (9): 2284–93. <a href="https://doi.org/10.1016/j.bpj.2011.09.032">https://doi.org/10.1016/j.bpj.2011.09.032</a>.</p>
+</div>
+<div id="ref-phillips2019">
+<p>Phillips, Rob, Nathan M. Belliveau, Griffin Chure, Hernan G. Garcia, Manuel Razo-Mejia, and Clarissa Scholes. 2019. “Figure 1 Theory Meets Figure 2 Experiments in the Study of Gene Expression.” <em>Annual Review of Biophysics</em> 48 (1): 121–63. <a href="https://doi.org/10.1146/annurev-biophys-052118-115525">https://doi.org/10.1146/annurev-biophys-052118-115525</a>.</p>
+</div>
+<div id="ref-pilizota2012">
+<p>Pilizota, Teuta, and Joshua W. Shaevitz. 2012. “Fast, Multiphase Volume Adaptation to Hyperosmotic Shock by <em>Escherichia</em> <em>Coli</em>.” <em>PLOS ONE</em> 7 (4): e35205. <a href="https://doi.org/10.1371/journal.pone.0035205">https://doi.org/10.1371/journal.pone.0035205</a>.</p>
+</div>
+<div id="ref-pilizota2014">
+<p>———. 2014. “Origins of <em>Escherichia</em> <em>Coli</em> Growth Rate and Cell Shape Changes at High External Osmolality.” <em>Biophysical Journal</em> 107 (8): 1962–9. <a href="https://doi.org/10.1016/j.bpj.2014.08.025">https://doi.org/10.1016/j.bpj.2014.08.025</a>.</p>
+</div>
+<div id="ref-razo-mejia2018">
+<p>Razo-Mejia, Manuel, Stephanie L. Barnes, Nathan M. Belliveau, Griffin Chure, Tal Einav, Mitchell Lewis, and Rob Phillips. 2018. “Tuning Transcriptional Regulation Through Signaling: A Predictive Theory of Allosteric Induction.” <em>Cell Systems</em> 6 (4): 456–469.e10. <a href="https://doi.org/10.1016/j.cels.2018.02.004">https://doi.org/10.1016/j.cels.2018.02.004</a>.</p>
+</div>
+<div id="ref-rosenfeld2006">
+<p>Rosenfeld, Nitzan, Theodore J. Perkins, Uri Alon, Michael B. Elowitz, and Peter S. Swain. 2006. “A Fluctuation Method to Quantify in Vivo Fluorescence Data.” <em>Biophysical Journal</em> 91 (2): 759–66. <a href="https://doi.org/10.1529/biophysj.105.073098">https://doi.org/10.1529/biophysj.105.073098</a>.</p>
+</div>
+<div id="ref-rosenfeld2005">
+<p>Rosenfeld, Nitzan, Jonathan W. Young, Uri Alon, Peter S. Swain, and Michael B. Elowitz. 2005. “Gene Regulation at the Single-Cell Level.” <em>Science</em> 307 (5717): 1962–5. <a href="https://doi.org/10.1126/science.1106914">https://doi.org/10.1126/science.1106914</a>.</p>
+</div>
+<div id="ref-schaechter1958">
+<p>Schaechter, M., O. Maaløe, and N. O. Kjeldgaard. 1958. “Dependency on Medium and Temperature of Cell Size and Chemical Composition During Balanced Growth of <em>Salmonella</em> <em>Typhimurium</em>.” <em>Microbiology</em> 19 (3): 592–606. <a href="https://doi.org/10.1099/00221287-19-3-592">https://doi.org/10.1099/00221287-19-3-592</a>.</p>
+</div>
+<div id="ref-schmidt2016">
+<p>Schmidt, Alexander, Karl Kochanowski, Silke Vedelaar, Erik Ahrné, Benjamin Volkmer, Luciano Callipo, Kèvin Knoops, Manuel Bauer, Ruedi Aebersold, and Matthias Heinemann. 2016. “The Quantitative and Condition-Dependent <em>Escherichia</em> <em>Coli</em> Proteome.” <em>Nature Biotechnology</em> 34 (1): 104–10. <a href="https://doi.org/10.1038/nbt.3418">https://doi.org/10.1038/nbt.3418</a>.</p>
+</div>
+<div id="ref-stylianidou2016">
+<p>Stylianidou, Stella, Connor Brennan, Silas B. Nissen, Nathan J. Kuwada, and Paul A. Wiggins. 2016. “SuperSegger: Robust Image Segmentation, Analysis and Lineage Tracking of Bacterial Cells.” <em>Molecular Microbiology</em> 102 (4): 690–700. <a href="https://doi.org/10.1111/mmi.13486">https://doi.org/10.1111/mmi.13486</a>.</p>
+</div>
+<div id="ref-swain2016">
+<p>Swain, Peter S., Keiran Stevenson, Allen Leary, Luis F. Montano-Gutierrez, Ivan B. N. Clark, Jackie Vogel, and Teuta Pilizota. 2016. “Inferring Time Derivatives Including Cell Growth Rates Using Gaussian Processes.” <em>Nature Communications</em> 7 (December): 13766. <a href="https://doi.org/10.1038/ncomms13766">https://doi.org/10.1038/ncomms13766</a>.</p>
+</div>
+</div>
+						</div><!-- /.content -->
+					</div><!-- /.col -->
+					<div class="col-md-4 col-md-offset-1">
+						<div class="sections-list-wrapper">
+							<div class="sections-list js-sections js-affix js-scrollspy hidden-xs hidden-sm"><span style="font-size: 14pt">Table of Contents</span><hr></div><!-- /.sections-list -->
+						</div>
+					</div><!-- /.col -->
+				</div><!-- /.row -->
+			</div><!-- /.container -->
+		</div><!-- /.section -->
+		
+		<div class="js-footer-area">
+			
+				<nav class="page-nav">	
+					<div class="container">
+						<div class="row">
+							<div class="col-xs-12">
+								
+									<a href="phd/chapter_07" class="page-nav__item page-nav__item--prev">
+										<i class="icon icon--arrow-left"></i>
+										Chapter VII
+									</a><!-- /.page-nav__item -->
+								
+								
+									<a href="phd/chapter_09" class="page-nav__item page-nav__item--next">
+										Chapter IX
+										<i class="icon icon--arrow-right"></i>
+									</a><!-- /.page-nav__item -->
+								
+							</div><!-- /.col -->
+						</div><!-- /.row -->
+					</div><!-- /.container -->
+				</nav><!-- /.page-nav -->
+			
+			
+			
+	<footer class="site-footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-6">
+					
+						<a href="/" class="site-footer__logo">Griffin D. Chure | PhD Thesis</a>
+					
+					
+						<hr>
+						<p class="site-footer__copyright">Copyright &copy; 2020. - Griffin D. Chure <br>All rights reserved.</p>
+					
+				</div><!-- /.col -->
+				
+					<div class="col-sm-6 align-right">
+						<ul class="social-list">
+							
+								<li>
+									<a href="https://twitter.com/gdchure" target="_blank" class="social-list__item social-list__item--twitter">
+										<i class="icon icon--twitter"></i>
+									</a>
+								</li>
+							
+						</ul><!-- /.social-list -->
+					</div><!-- /.col -->
+				
+			</div><!-- /.row -->
+		</div><!-- /.container -->
+	</footer><!-- /.site-footer -->
+
+
+<script src="/doks-theme/assets/js/vendor/jquery.min.js"></script>
+<script type="text/javascript" src="/doks-theme/assets/js/vendor/bootstrap/affix.min.js"></script>
+<script type="text/javascript" src="/doks-theme/assets/js/vendor/bootstrap/scrollspy.min.js"></script>
+<script type="text/javascript" src="/doks-theme/assets/js/vendor/matchHeight.min.js"></script>
+<script type="text/javascript" src="/doks-theme/assets/js/scripts.min.js"></script>
+
+
+
+
+		</div><!-- /.js-footer-area -->
+	</body>
+</html>

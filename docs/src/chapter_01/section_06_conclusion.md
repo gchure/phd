@@ -9,7 +9,7 @@ of a simple genetic circuit with quantitative precision. While the work here
 specifically explores the *mean* level of gene expression of a population,
 I've had the privilege to be involved in several projects which explore the
 complete distribution of gene expression of various regulatory motifs using
-non-equilibrium models[@razo-mejia2020; @laxhuber2020]. Both
+non-equilibrium models [@razo-mejia2020; @laxhuber2020]. Both
 equilibrium and non-equilibrium approaches, while differing in their
 fundamental assumptions of the system, can be used to understand how the
 regulation of gene expression occurs *in vivo* and should be viewed as
@@ -20,7 +20,7 @@ believe is the next great frontier of biological physics -- predicting
 evolution. While this thesis is  primarily focused 
 on a single type of regulatory architecture regulating a single
 promoter via a single species of transcription factor, it is worth remembering
-that systems-level phenotypes are often complex resulting from the concerted
+that systems-level phenotypes are often complex and result from the concerted
 action of an array of biological processes. As was mentioned in our discussion
 on physiological adaptation, it has been known for nearly a century that the
 bacterial growth rate is directly correlated to the total protein content of
@@ -30,8 +30,8 @@ the bacterial proteome as a whole [@li2014a; @schmidt2016; @hui2015;
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;In collaboration again with Nathan M.
 Belliveau, we have begun to explore how the composition of the bacterial
-proteome is structured at the single-protein level. @Fig:proteomics(A) shows
-a compiled data from a variety of different proteomic data sets (using either
+proteome is structured at the single-protein level. @Fig:proteomics (A) shows
+data compiled from a variety of different proteomic data sets (using either
 quantitative mass spectrometry [@schmidt2016; @peebo2015; @valgepea2013a] or
 ribosomal profiling [@li2014a]) where the abundance of different molecular
 constituents of the bacterial proteome are plotted as a function of the
@@ -61,7 +61,10 @@ proteome mass dedicated to the processes of the central dogma. Different shapes
 correspond to the different data sets shown in (A). Color indicates increasing
 growth rate from yellow to dark blue. Data shown in this figure come from
 @peebo2015 (inverted triangles),  @li2014a (triangles) @schmidt2016 (circles)
-and @valgepea2013a (diamonds)](ch1_fig13){#fig:proteomics
+and @valgepea2013a (diamonds). The [Python code
+(`ch1_fig13.py`)](https://github.com/gchure/phd/blob/master/src/chapter_01/code/ch1_fig13.py)
+used to generate this figure can be accessed via the thesis [GitHub
+repository](https://github.com/gchure/phd). ](ch1_fig13){#fig:proteomics
 short-caption="Allocation of cellular resources induces compositional structure
 in the *E. coli* proteome."}
 
@@ -69,7 +72,7 @@ in the *E. coli* proteome."}
 cellular resource allocation visible in @Fig:proteomics remains largely
 phenomenological [@scott2014]. This is in part due to the tremendously
 high-dimensional nature of systems-level organization. Our understanding of
-systems with such huge degrees-of-freedom have classically benefited enormously
+systems with such huge numbers of degrees-of-freedom have classically benefited enormously
 from the application of statistical mechanics as this thesis shows in the
 context of transcriptional regulation. The quantitative framework derived and
 carefully dissected in this thesis, I believe, lays the groundwork to understand
@@ -81,7 +84,7 @@ of models. Recent technological advancements in sequencing, microscopy, and
 computation coupled with theoretical advancements the biophysics of gene
 regulation present an opportunity for a rich theoretical dialogue between
 molecular biophysics and evolutionary dynamics coupled with experimental
-dissection(@Fig:molbiophys_evoldynam).
+dissection (@Fig:molbiophys_evoldynam).
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The somewhat recent paradigm shift in our
 understanding of noise in biological networks illustrates how

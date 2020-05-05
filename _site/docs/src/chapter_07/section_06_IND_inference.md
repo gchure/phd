@@ -38,7 +38,7 @@ However, assigning this prior is more difficult and requires strong knowledge
 *a priori* about the relationship between them. Therefore, we continue under
 the assumption that the priors are independent.
 
-The generic posterior given in @Eq:hyp1_generic_bayes can be extended to 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The generic posterior given in @Eq:hyp1_generic_bayes can be extended to 
 evaluate the second hypothesis in which $\Delta\varepsilon_{AI}$ is also modified,
 $$
 g(K_A, K_I, \Delta\varepsilon_{AI}, \sigma\,\vert\,y) \propto f(y\,\vert\, K_A, K_I, \Delta\varepsilon_{AI}, \sigma)g(K_A)g(K_I)g(\Delta\varepsilon_{AI})g(\sigma)
@@ -106,7 +106,7 @@ priors alone, we generated data sets of $\approx 70$ measurements. The
 percentiles of the fold-change values drawn for the 1000 simulations is
 shown in the top panel of @Fig:ind_prior_predictive (B).
 
-It can be seen that in the absence of inducer, the fold-change values
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;It can be seen that in the absence of inducer, the fold-change values
 are close to zero and are with distributed about the leakiness value due
 to $\sigma$. This is in contrast to the data sets generated when
 $\Delta\varepsilon_{AI}$ is permitted to vary along with $K_A$ and
@@ -124,9 +124,12 @@ mutants.** (A) Probability density functions for $K_A$, $K_I$,
 $\Delta\varepsilon_{AI}$, and $\sigma$. Black points correspond to draws
 from the distributions used for prior predictive checks. (B) Percentiles
 of the simulated data sets using draws from the $K_A$ and $K_I$
-distributions only (top, red bands) and using draws from $K_A$, $K_I$,
-and $\Delta\varepsilon_{AI}$ (bottom, blue
-bands).](ch7_figS13){#fig:ind_prior_predictive short-caption="Prior predictive
+distributions only (top, purple bands) and using draws from $K_A$, $K_I$,
+and $\Delta\varepsilon_{AI}$ (bottom, orange 
+bands). The [Python code                                                
+(`ch7_fig13.py`)](https://github.com/gchure/phd/blob/master/src/chapter_07/code/ch7_figS13.py)
+used to generate this figure can be found on the thesis [GitHub
+repository](https://github.com/gchure/phd).](ch7_figS13){#fig:ind_prior_predictive short-caption="Prior predictive
 checks for two hypotheses of inducer binding domain mutants."}
 
 ### Simulation Based Calibration 
@@ -170,7 +173,10 @@ a model in which all allosteric parameters $K_A$, $K_I$, and
 $\Delta\varepsilon_{AI}$ are allowed to be modified by the mutation.
 Gray envelope in the bottom plots correspond to the 99$^\text{th}$
 percentile of variation expected from a true uniform
-distribution.](ch7_figS14){#fig:ind_sbc short-caption="Simulation based
+distribution. The [Python code                                                
+(`ch7_figS14.py`)](https://github.com/gchure/phd/blob/master/src/chapter_07/code/ch7_figS14.py)
+used to generate this figure can be found on the thesis [GitHub
+repository](https://github.com/gchure/phd).](ch7_figS14){#fig:ind_sbc short-caption="Simulation based
 calibration of statistical models for inducer binding domain mutants."}
 
 ### Posterior Predictive Checks 
@@ -183,11 +189,11 @@ operator O2.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The results from applying the statistical model in which only $K_A$ and
 $K_I$ can change is shown in @Fig:kaki_post_predictive. The joint and marginal
-distributions for each parameter [@Fig:kaki_post_predictive (A)] reveal a strong correlation
+distributions for each parameter (@Fig:kaki_post_predictive (A)) reveal a strong correlation
 between $K_A$ and $K_I$ whereas all other parameters are symmetric and
 independent. While the joint and marginal distributions look well
 behaved, the percentiles of the posterior predictive checks
-[@Fig:kaki_post_predictive (B)] are more suspect. While all
+(@Fig:kaki_post_predictive (B)) are more suspect. While all
 data falls within the 95$^\text{th}$ percentile, the overall trend of
 the data is not well predicted. Furthermore, the percentiles expand far
 below zero, indicating that the sampling of $\sigma$ is compensating for
@@ -226,7 +232,10 @@ posterior with increasing probability corresponding to transition from
 blue to yellow. (B) Percentiles of the data generated from the
 likelihood distribution for each sample of $K_A$, $K_I$, and $\sigma$.
 Overlaid points are the experimentally observed
-measurements.](ch7_figS15){#fig:kaki_post_predictive short-caption="Posterior
+measurements. The [Python code                                                
+(`ch7_figS15-S16.py`)](https://github.com/gchure/phd/blob/master/src/chapter_07/code/ch7_figS15-S16.py)
+used to generate this figure can be found on the thesis [GitHub
+repository](https://github.com/gchure/phd).](ch7_figS15){#fig:kaki_post_predictive short-caption="Posterior
 predictive checks for inducer binding domain mutants where only $K_A$ and $K_I$
 are changed."}
 
@@ -239,6 +248,9 @@ from blue to yellow. Marginal distributions are shown adjacent to each
 joint distribution. (B) Percentiles of the data generated from the
 likelihood for each sample of $K_A$, $K_I$, $\Delta\varepsilon_{AI}$,
 and $\sigma$. The corresponding experimental data for Q291K are shown as
-black open-faced circles.](ch7_figS16){#fig:kaki_epai_post_predictive
+black open-faced circles. The [Python code                                                
+(`ch7_figS15-S16.py`)](https://github.com/gchure/phd/blob/master/src/chapter_07/code/ch7_figS15-S16.py)
+used to generate this figure can be found on the thesis [GitHub
+repository](https://github.com/gchure/phd).](ch7_figS16){#fig:kaki_epai_post_predictive
 short-caption="Posterior predictive checks for inducer binding domain mutants
 where all allosteric parameter can change."}

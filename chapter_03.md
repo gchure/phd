@@ -33,10 +33,10 @@ author:
 page_nav:
     prev:
         content: Chapter II 
-        url: chapter_02
+        url: phd/chapter_02
     next:
         content: Chapter IV
-        url: chapter_04
+        url: phd/chapter_04
 prefix: chapter_03
 contents:
     - section_01_header

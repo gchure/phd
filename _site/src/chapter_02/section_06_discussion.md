@@ -1,6 +1,6 @@
 ## Discussion
 
-&nbsp;&nbsp;&nbsp;&nbsp;Since the early work by Monod, Wyman, and Changeux [@monod1963; @monod1965],
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Since the early work by Monod, Wyman, and Changeux [@monod1963; @monod1965],
 an array of biological phenomena has been tied to the existence of
 macromolecules that switch between inactive and active states. Examples can
 be found in a wide variety of cellular processes, including ligand-gated ion
@@ -10,7 +10,7 @@ coupled receptors [@canals2012], physiologically important proteins [@milo2007;
 @levantino2012], and beyond. One of the most ubiquitous examples of allostery is
 in the context of gene expression, where an array of molecular players bind to
 transcription factors to influence their ability to regulate gene activity
-[@huang2011a; @li2014a]. A number of studies have focused on developing a
+[@li2014a]. A number of studies have focused on developing a
 quantitative understanding of allosteric regulatory systems. The work of @martins2011 and
 @marzen2013 analytically derives fundamental properties of the MWC model,
 including the leakiness and dynamic range described in this work, noting the
@@ -25,7 +25,7 @@ variety of interactions in inducible *lac*-based systems including the
 effects of oligomerization and DNA folding on transcription factor induction. Other work has attempted to use the *lac* system to reconcile *in vitro*
 and *in vivo* measurements [@tungtur2011].
 
-&nbsp;&nbsp;&nbsp;&nbsp;Although this body of work has done much to improve our understanding of
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Although this body of work has done much to improve our understanding of
 allosteric transcription factors, there have been few attempts to explicitly
 connect quantitative models to experiments. Here, we generate a predictive
 model of allosteric transcriptional regulation and then test the model
@@ -36,7 +36,7 @@ well-established thermodynamic model of transcriptional regulation
 set of biologically meaningful parameters. This model combines both
 theoretical and experimental insights; for example, rather than considering
 gene expression directly we analyze the fold-change in expression, where the
-weak promoter approximation (see ) circumvents uncertainty in the RNAP copy
+weak promoter approximation circumvents uncertainty in the RNAP copy
 number. The resulting model depended upon experimentally accessible
 parameters, namely, the repressor copy number, the repressor-DNA binding
 energy, and the concentration of inducer. We tested these predictions on a
@@ -48,34 +48,34 @@ phenomenological parameters [@forsen1995]. Furthermore, our model reveals
 systematic relationships between behaviors that previously were only
 determined empirically.
 
-&nbsp;&nbsp;&nbsp;&nbsp;One such property is the dynamic range, which is of considerable interest
-when designing or characterizing a genetic circuit, is revealed to have an
-interesting property: although changing the value of $\Delta
-\varepsilon_{RA}$ causes the dynamic range curves to shift to the right or
-left, each curve has the same shape and in particular the same maximum value.
-This means that strains with strong or weak binding energies can attain the
-same dynamic range when the value of $R$ is tuned to compensate for the
-binding energy. This feature is not immediately apparent from the IPTG
-induction curves, which show very low dynamic ranges for several of the O1
-and O3 strains. Without the benefit of models that can predict such
-phenotypic traits, efforts to engineer genetic circuits with allosteric
-transcription factors must rely on trial and error to achieve specific
-responses [@rogers2015, @rohlhill2017]. Other calculable properties, such as
-leakiness, saturation, [EC$_{50}$] and the effective Hill coefficient, agree
-well with experimental measurement. One exception is the titration profile of
-the weakest operator, O3. While performing a global fit for all model
-parameters marginally improves the prediction of all properties for O3 (see
-supplemental Chapter 6), a noticeable difference remains when inferring the
-effective Hill coefficient or the [EC$_{50}$]. WE further tried including
-additional states (such as allowing the inactive repressor to bind to the
-operator), relaxing the weak promoter approximation, accounting for changes
-in gene and repressor copy number throughout the cell cycle [@jones2014], and
-refitting the original binding energies from @garcia2011, but such
-generalizations were unable to account for the O3 data. It remains an open
-question as to how the discrepancy between the theory and measurements for O3
-can be reconciled.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;One such property is the dynamic range, which
+is of considerable interest when designing or characterizing a genetic
+circuit, is revealed to have an interesting property: although changing the
+value of $\Delta \varepsilon_{RA}$ causes the dynamic range curves to shift
+to the right or left, each curve has the same shape and in particular the
+same maximum value. This means that strains with strong or weak binding
+energies can attain the same dynamic range when the value of $R$ is tuned to
+compensate for the binding energy. This feature is not immediately apparent
+from the IPTG induction curves, which show very low dynamic ranges for
+several of the O1 and O3 strains. Without the benefit of models that can
+predict such phenotypic traits, efforts to engineer genetic circuits with
+allosteric transcription factors must rely on trial and error to achieve
+specific responses [@rogers2015, @rohlhill2017]. Other calculable properties,
+such as leakiness, saturation, [EC$_{50}$] and the effective Hill
+coefficient, agree well with experimental measurement. One exception is the
+titration profile of the weakest operator, O3. While performing a global fit
+for all model parameters marginally improves the prediction of all properties
+for O3 (see supplemental Chapter 6), a noticeable difference remains when
+inferring the effective Hill coefficient or the [EC$_{50}$]. We further tried
+including additional states (such as allowing the inactive repressor to bind
+to the operator), relaxing the weak promoter approximation, accounting for
+changes in gene and repressor copy number throughout the cell cycle
+[@jones2014], and refitting the original binding energies from @garcia2011,
+but such generalizations were unable to account for the O3 data. It remains
+an open question as to how the discrepancy between the theory and
+measurements for O3 can be reconciled.
 
-&nbsp;&nbsp;&nbsp;&nbsp;Despite the diversity observed in the induction profiles of each of our
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Despite the diversity observed in the induction profiles of each of our
 strains, our data are unified by their reliance on fundamental biophysical
 parameters. In particular, we have shown that our model for fold-change can
 be rewritten in terms of the free energy, which encompasses all of the
@@ -95,10 +95,10 @@ for each construct, they collapse cleanly onto a single curve (see
 compensate each other. For example, rather than viewing strong repression as
 a consequence of low IPTG concentration $c$ or high repressor copy number
 $R$, we can now observe that strong repression is achieved when the free
-energy $F(c) \leq -5 k_BT$, a condition which can be reached in a number of
+energy $F(c) \leq\, -5 k_BT$, a condition which can be reached in a number of
 ways.
 
-&nbsp;&nbsp;&nbsp;&nbsp;While our experiments validated the theoretical predictions in the case of
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;While our experiments validated the theoretical predictions in the case of
 simple repression, we expect the framework presented here to apply much more
 generally to different biological instances of allosteric regulation. For
 example, we can use this model to study more complex systems such as when

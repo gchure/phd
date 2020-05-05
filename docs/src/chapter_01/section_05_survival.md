@@ -27,7 +27,7 @@ release valve, providing a means for turgor pressure to be relieved without a
 potentially fatal burst. This phenomenon represents yet another system in which
 adaptation can be found at the molecular, evolutionary, and physiological
 levels. In **Chapters 5 and 9** of this dissertation, we explore a fundamental
-question -- how mechanosensitive channels does a cell need to have an
+question -- how many mechanosensitive channels does a cell need to have an
 appreciable chance at surviving an osmotic shock?
 
 
@@ -47,21 +47,26 @@ osmotic shocks could be imaged in real time at the single cell level. While the
 majority of Chapter 5 focuses on the analysis and interpretation of the data,
 none of it would have been possible without Heun Jin's Herculean efforts. 
 
-![**The connection between mechanosensitive channel copy number and probability of
-survival.** (A) In the absence of mechanosensitive channels, water rushing
-across the membrane during a hypo-osmotic shock can lead to membrane rupture and
-large-scale release  of intracellular components into the extracellular space,
-resulting in cell death. (B) In the presence of mechanosensitive channels
-(specifically, the major *E. coli* mechanosensitive channel MscL as shown in yellow), increased membrane tension results in a
+![**The connection between mechanosensitive channel copy number and
+probability of survival.** (A) In the absence of mechanosensitive channels,
+water rushing across the membrane during a hypo-osmotic shock can lead to
+membrane rupture and large-scale release of intracellular components into the
+extracellular space, resulting in cell death. (B) In the presence of
+mechanosensitive channels (specifically, the major *E. coli* mechanosensitive
+channel MscL as shown in yellow), increased membrane tension results in a
 conformational change of the channel, resulting in the expulsion of water and
-some small constituents of the intracellular
-milieu. The inferred survival probability curves for slow and fast shock
-exchange rates are shown in (C) and (D), respectively. Different shaded purple
-regions correspond to different credible regions of the estimates.](ch1_fig12){#fig:mscl_intro short-caption="The connection between
-mechanosensitive channel number and probability of survival."}
+some small constituents of the intracellular milieu. The inferred survival
+probability curves for slow and fast shock exchange rates are shown in (C)
+and (D), respectively. Different shaded purple regions correspond to
+different credible regions of the estimates. The [Python code
+(`ch1_fig12.py`)](https://github.com/gchure/phd/blob/master/src/chapter_01/code/ch1_fig12.py)
+used to generate this figure can be accessed via the thesis [GitHub
+repository](https://github.com/gchure/phd). ](ch1_fig12){#fig:mscl_intro
+short-caption="The connection between mechanosensitive channel number and
+probability of survival."}
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;While we leave the details of the inference to Chapter 5 and the supplemental
-Chapter 9,the survival probability as a function of the total mechanosensitive
+Chapter 9, the survival probability as a function of the total mechanosensitive
 channel number is given for "slow" and "fast" osmotic shocks in @Fig:mscl_intro
 (C) and (D), respectively. The credible regions in this plot illustrate that for
 an $\approx 80\%$ chance of surviving either a slow or a fast osmotic shock, at

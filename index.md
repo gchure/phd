@@ -35,10 +35,6 @@ grid_navigation:
       excerpt: The scope of adaptation in transcriptional regulation
       cta: read
       url: 'abstract'
-    - title: Published Works
-      excerpt: The fossil record of my Ph.D.
-      cta: read
-      url: 'published_content'
     - title: >
          Chapter I: Introduction
       excerpt: The ubiquity of adaptive behavior in biological matter.
@@ -64,7 +60,7 @@ grid_navigation:
       excerpt: >
         Adaptation where it counts: surviving environmental insults.
       cta: read
-      url: 'chapter_04'
+      url: 'chapter_05'
     - title: >
          Chapter VI: Supplement to Chapter II
       excerpt: >

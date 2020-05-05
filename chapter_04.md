@@ -30,10 +30,10 @@ author:
 page_nav:
     prev:
         content: Chapter III
-        url: '{{site.doks.baseurl}}/chapter_03'
+        url: phd/chapter_03
     next:
         content: Chapter 2
-        url: '{{site.doks.baseurl}}/chapter_05'
+        url: phd/chapter_05
 prefix: chapter_04
 contents:
     - section_01_header

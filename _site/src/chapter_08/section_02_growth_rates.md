@@ -44,7 +44,8 @@ weighting given to all points in the series of measurements is defined
 by the covariance kernel function and we direct the reader to Ref.
 [@swain2016] for a more detailed discussion on this kernel choice and
 overall implementation of Gaussian process modeling of time-series data.
-As this approach estimates the probability of a given OD$_{600nm}$ at
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;As this approach estimates the probability of a given OD$_{600nm}$ at
 each time point, we can compute the mean and standard deviation. @Fig:gp_growth_curve (B) show the raw measurements and the
 mean estimated value in green and light, respectively. With the high
 temporal resolution of the OD$_{600nm}$ measurements, modeling the
@@ -75,7 +76,11 @@ shaded region in (A).  Line is the estimated value of the optical density
 resulting from the gaussian process modeling. (C) The value of the first
 derivative of the optical density as a function of time estimated via gaussian
 process modeling. The first derivative is taken as the growth rate at each time
-point. The solid line i the estimated mean value and the shaded region
+point. The solid line is the estimated mean value and the shaded region
 represents the standard deviation of the posterior
+The [Python code                                                
+(`ch8_figS1.py`)](https://github.com/gchure/phd/blob/master/src/chapter_08/code/ch8_figS1.py)
+used to generate this figure can be found on the thesis [GitHub
+repository](https://github.com/gchure/phd).
 distribution.](ch8_figS1){#fig:gp_growth_curve short-caption="Non-parametric
 estimation of maximum growth rate from bacterial growth curves."}

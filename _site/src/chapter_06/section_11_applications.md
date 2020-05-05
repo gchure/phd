@@ -87,22 +87,24 @@ these cases might be viewed as separate biological phenomena,
 mathematically they can all be described by the same underlying
 formalism.
 
-![**Representative fold-change predictions for allosteric
-corepression and activation.** (A) Contrary to the case of
-induction described in the main text, addition of a corepressor
-decreases fold-change in gene expression. The left and right panels
-demonstrate how varying the values of the repressor copy number $R$
-and repressor-DNA binding energy $\Delta\varepsilon_{RA}$,
+![**Representative fold-change predictions for allosteric corepression and
+activation.** (A) Contrary to the case of induction described in the main
+text, addition of a corepressor decreases fold-change in gene expression. The
+left and right panels demonstrate how varying the values of the repressor
+copy number $R$ and repressor-DNA binding energy $\Delta\varepsilon_{RA}$,
 respectively, change the predicted response profiles. (B) In the case of
 inducible activation, binding of an effector molecule to an activator
-transcription factor increases the fold-change in gene expression. Note
-that for activation, the fold-change is greater than 1. The left and
-center panels show how changing the activator copy number $A$ and
-activator-DNA binding energy $\Delta\varepsilon_{AA}$ alter response,
-respectively. The right panel shows how varying the polymerase-activator
-interaction energy $\varepsilon_{AP}$ alters the fold-change.
-Relatively small perturbations to this energetic parameter drastically
-changes the level of activation and plays a major role in dictating the
-dynamic range of the system.](ch6_figS20){#fig:applications
+transcription factor increases the fold-change in gene expression. Note that
+for activation, the fold-change is greater than 1. The left and center panels
+show how changing the activator copy number $A$ and activator-DNA binding
+energy $\Delta\varepsilon_{AA}$ alter response, respectively. The right panel
+shows how varying the polymerase-activator interaction energy
+$\varepsilon_{AP}$ alters the fold-change. Relatively small perturbations to
+this energetic parameter drastically changes the level of activation and
+plays a major role in dictating the dynamic range of the system. The [Python
+code
+(`ch6_figS20.py`)](https://github.com/gchure/phd/blob/master/src/chapter_06/code/ch6_figS20.py)
+used to generate this figure can be found on the thesis [GitHub
+repository](https://github.com/gchure/phd). ](ch6_figS20){#fig:applications
 short-caption="Representative fold-change predictions for allosteric
 corepression and activation."}

@@ -21,7 +21,7 @@ statistical meaning.
 
 ### Bayesian parameter estimation of $\beta_0$ and $\beta_1$ 
 
-&nbsp;&nbsp;&nbsp;&nbsp;The central challenge of this work is to estimate the
+The central challenge of this work is to estimate the
 probability of survival $p_s$ given only a measure of the total number of
 MscL channels in that cell. In other words, for a given measurement of $N_c$
 channels, we want to know likelihood that a cell would survive an osmotic
@@ -41,6 +41,7 @@ about knowing nothing about the data, $g(s)$. The denominator $f(N_c)$ in
 values of $N_c$, knowing nothing about the true survival probability. As this
 term acts as a normalization constant, we will neglect it in the following
 calculations for convenience.
+
 &nbsp;&nbsp;&nbsp;&nbsp;To begin, we must come up with a statistical model
 that describes the experimental measurable in our experiment -- survival or
 death. As this is a binary response, we can consider each measurement as a
@@ -64,7 +65,8 @@ With a functional form for the survival probability, the likelihood stated in
 $$
 f(N_c, s\,\vert\,\beta_0,\beta_1) = \left({1 \over 1 + e^{-\beta_0 - \beta_1 N_c}}\right)^s\left(1 - {1 \over 1 + e^{-\beta_0 - \beta_1 N_c}}\right)^{1 - s}.
 $${#eq:bernoulli_likelihood}
-As we have now introduced two parameters, $\beta_0$, and $\beta_1$, we must
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sAs we have now introduced two parameters, $\beta_0$, and $\beta_1$, we must
 provide some description of our prior knowledge regarding their values. As is
 typically the case, we know nothing about the values for $\beta_0$ and
 $\beta_1$. These parameters are allowed to take any value, so long as it is a
@@ -78,8 +80,8 @@ g(\beta_0, \beta_1\,\vert\, N_c, s) = \prod\limits_{i=1}^n\left({1 \over 1 + e^{
 $${#eq:known_nc_post}
 
 &nbsp;&nbsp;&nbsp;&nbsp;Implicitly stated in @Eq:known_nc_post is absolute
-knowledge of the channel copy number $N_c$. However, as is described in
-*Standard Candle Calibration*, we must convert from a measured areal sfGFP
+knowledge of the channel copy number $N_c$. However, as is described in the
+previous sections, we must convert from a measured areal sfGFP
 intensity $I_A$ to a effective channel copy number,
 $$
 N_c = {I_A \tilde{\langle A \rangle} \over \tilde{\alpha}},
@@ -91,7 +93,7 @@ calibration factor between arbitrary units and protein copy number. In
 estimate for the most-likely value of $\tilde{\langle A \rangle}$ and
 $\tilde{\alpha}$. Given these estimates, we can include an informative prior
 for each value. From the Markov chain Monte Carlo samples shown in
-[@Fig:posterior_samples], the posterior distribution for each parameter is
+@Fig:logistic_posterior_distributions , the posterior distribution for each parameter is
 approximately Gaussian. By approximating them as Gaussian distributions, we
 can assign an informative prior for each as
 $$
@@ -111,8 +113,8 @@ constants for notational convenience.
 likely values of $\beta_0$ and $\beta_1$ can be written as
 $$
 \begin{aligned}
-g(\beta_0, &\beta_1\,\vert\,[I_A, s],\tilde{\langle A \rangle}, \tilde{\sigma}_{\langle A \rangle}, \tilde{\alpha}, \tilde{\sigma}_\alpha) \propto{1 \over (\tilde{\sigma}_\alpha\tilde{\sigma}_{\langle A \rangle})^k}\prod\limits_{i=1}^k\left(1 + \exp\left[-\beta_0 - \beta_1 {{I_A}_i \langle A \rangle_i \over \alpha_i}\right]\right)^{-s_i}\,\times\,\\
-&\left(1 - \left(1 + \exp\left[-\beta_0 - \beta_1 {{I_A}_i\langle A \rangle_i \over \alpha_i}\right]\right)^{-1}\right)^{1 - s_i}
+g(\beta_0, &\beta_1\,\vert\,[I_A, s],\tilde{\langle A \rangle}, \tilde{\sigma}_{\langle A \rangle}, \tilde{\alpha}, \tilde{\sigma}_\alpha) \propto{1 \over (\tilde{\sigma}_\alpha\tilde{\sigma}_{\langle A \rangle})^k}\prod\limits_{i=1}^k\left(1 + \exp\left[-\beta_0 - \beta_1 { {I_A}_i \langle A \rangle_i \over \alpha_i}\right]\right)^{-s_i}\,\times\,\\
+&\left(1 - \left(1 + \exp\left[-\beta_0 - \beta_1 { {I_A}_i\langle A \rangle_i \over \alpha_i}\right]\right)^{-1}\right)^{1 - s_i}
 \exp\left[-{(\langle A \rangle_i - \tilde{\langle A \rangle})^2 \over 2\tilde{\sigma}_{\langle A \rangle}} - {(\alpha_i - \tilde{\alpha})^2\over 2\tilde{\sigma}_\alpha^2}\right]
 \end{aligned}.
 $${#eq:logistic_posterior}
@@ -121,13 +123,16 @@ As this posterior distribution is not solvable analytically, we used Markov
 chain Monte Carlo to draw samples out of this distribution, using the log of
 the effective channel number as described in the main text. The posterior
 distributions for $\beta_0$ and $\beta_1$ for both slow and fast shock rate
-data can be seen in [@Fig:logistic_posterior_distributions]
+data can be seen in @Fig:logistic_posterior_distributions.
 
 ![**Posterior distributions for logistic regression coefficients evaluated for
 fast and slow shock rates.** (A) Kernel density estimates of the posterior
 distribution for $\beta_0$ for fast (blue) and slow (purple) shock rates. (B)
 Kernel density estimates of posterior distribution for
-$\beta_1$.](../figs/figS4.pdf ){#fig:logistic_posterior_distributions
+$\beta_1$. The [Python code                                                
+(`ch9_figS8.py`)](https://github.com/gchure/phd/blob/master/src/chapter_09/code/ch9_figS8.py)
+used to generate this figure can be found on the thesis [GitHub
+repository](https://github.com/gchure/phd). ](ch9_figS8){#fig:logistic_posterior_distributions
 short-caption="Posterior distributions for logistic regression coefficients
 evaluated for fast and slow shock rates."}
 
@@ -199,7 +204,7 @@ $${#eq:generalized_LLR}
 where we are now only considering the case in which $N_c \in [0, 1]$.
 The bracketed term in @Eq:generalized_LLR is the log of the odds of survival given a single channel relative to the odds of survival given no channels. Mathematically, this odds-ratio can be expressed as
 $$
-\log\mathcal{OR}_{N_c}(s) = \log{{f(N_c=1\,\vert\,s)g(s)\over f(N_c=1\,\vert\,d)g(d)}\over {f(N_c=0\,\vert\,s)g(s)\over f(N_c=0\,\vert\,d)g(d)}} = \log{f(N_c=1\,\vert\,s) \over f(N_c=1\,\vert\,d)} - \log{f(N_c=0\,\vert\,s)\over f(N_c=0\,\vert\,d)} .
+\log\mathcal{OR}_{N_c}(s) = \log{ {f(N_c=1\,\vert\,s)g(s)\over f(N_c=1\,\vert\,d)g(d)}\over {f(N_c=0\,\vert\,s)g(s)\over f(N_c=0\,\vert\,d)g(d)}} = \log{f(N_c=1\,\vert\,s) \over f(N_c=1\,\vert\,d)} - \log{f(N_c=0\,\vert\,s)\over f(N_c=0\,\vert\,d)} .
 $${#eq:odds_ratio}
 @Eq:odds_ratio is mathematically equivalent to the bracketed term shown in @Eq:generalized_LLR. 
 
@@ -237,14 +242,14 @@ survival data using only the effective channel copy number as the predictor
 of survival. However, there are a variety of properties that could rightly be
 used as predictor variables, such as cell area and shock rate. As is
 stipulated in our standard candle calibration, there should be no correlation
-between survival and cell area. [@Fig:alternative_predictor_variables]A and B
+between survival and cell area. @Fig:alternative_predictor_variables (A) and (B)
 show the logistic regression performed on the cell area. We see for both slow
 and fast shock groups,there is little change in survival probability with
 changing cell area and the wide credible regions allow for both positive and
 negative correlation between survival and area. The appearance of a bottle
 neck in the notably wide credible regions is a result of a large fraction of
 the measurements being tightly distributed about a mean value.
-[@Fig:alternative_predictor_variables]C shows the predicted survival
+@Fig:alternative_predictor_variables (C) shows the predicted survival
 probability as a function of the the shock rate. There is a slight decrease
 in survivability as a function of increasing shock rate, however the width of
 the credible region allows for slightly positive or slightly negative
@@ -271,12 +276,14 @@ group. (B) Estimated survival probability as a function of cell area for the
 fast shock group. (C) Estimated survival probability as a function shock
 rate. Black points at top and bottom of plots represent single-cell
 measurements of cells who survived and perished, respectively. Shaded regions
-in (A) - (C) represent the 95\% credible region. (D) Surface of estimated
+in (A) -- (C) represent the 95\% credible region. (D) Surface of estimated
 survival probability using both shock rate and effective channel number as
 predictor variables. Black points at left and right of plot represent
 single-cell measurements of cells which survived and died, respectively,
 sorted by shock rate. Points at top and bottom of plot represent survival and
 death sorted by their effective channel copy number. Labeled contours
-correspond to the survival
-probability.](ch9_figS10){#fig:alternative_predictor_variables
-short-caption="Survival probability estimation using alternative predictor variables."}
+correspond to the survival probability. The [Python code (`ch9_figS9.py`)](https://github.com/gchure/phd/blob/master/src/chapter_09/code/ch9_figS9.py)
+used to generate this figure can be found on the thesis [GitHub
+repository](https://github.com/gchure/phd).
+](ch9_figS9){#fig:alternative_predictor_variables short-caption="Survival
+probability estimation using alternative predictor variables."}

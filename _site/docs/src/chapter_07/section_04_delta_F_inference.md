@@ -85,7 +85,7 @@ appropriate for the inference.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;To check the validity of the chosen priors, we pulled 1000 combinations
 of $\mu$ and $\sigma$ from their respective distributions
-[@Fig:empirical_F_prior_pred (A)] and subsequently drew a set
+(@Fig:empirical_F_prior_pred (A)) and subsequently drew a set
 of 10 fold-change values (a number comparable to the number of
 biological replicates used in this work) from a normal distribution
 defined by $\mu$ and $\sigma$. To visualize the range of values
@@ -102,7 +102,7 @@ intuition. Satisfied with our choice of prior distributions, we can
 proceed to check the sensitivity and computational tractability of our
 model through simulation based calibration.
 
-![**Prior predictive checks for inference of the mean fold-change. (A) The
+![**Prior predictive checks for inference of the mean fold-change.** (A) The
 prior distributions for $\mu$ (left) and $\sigma$ (right). The vertical
 axis is proportional to the probability of the value. Black points above
 distributions correspond to the values used to perform the prior
@@ -111,8 +111,11 @@ from the prior distributions shown as a cumulative distribution.
 Percentiles were calculated for 1000 generated data sets, each with 10
 fold-change measurements drawn from the likelihood given the drawn
 values of $\mu$ and
-$\sigma$.](ch7_figS7){#fig:empirial_F_prior_pred short-caption="Prior predictive
-checks for inference of the mean fold-change"}
+$\sigma$. The [Python code                                                
+(`ch7_figS7.py`)](https://github.com/gchure/phd/blob/master/src/chapter_07/code/ch7_figS7.py)
+used to generate this figure can be found on the thesis [GitHub
+repository](https://github.com/gchure/phd).](ch7_figS7){#fig:empirical_F_prior_pred short-caption="Prior predictive checks
+for inference of the mean fold-change"}
 
 
 
@@ -122,8 +125,7 @@ checks for inference of the mean fold-change"}
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;To ensure that the parameters can be estimated with confidence, we
 sampled the posterior distribution of $\mu$ and $\sigma$ for each data
 set generated from the prior predictive checks. For each inference, we
-computed the $z$-score and shrinkage for each parameter, shown in Fig.
-@Fig:empirical_F_sensitivity(A). For both parameters, the
+computed the $z$-score and shrinkage for each parameter, shown in @Fig:empirical_F_sensitivity(A). For both parameters, the
 $z$-scores are approximately centered about zero, indicating that the
 posteriors concentrate about the ground truth value of the parameter.
 The $z$-scores for $\sigma$ [green points in Fig.
@@ -139,7 +141,7 @@ the prior distribution by at least 90\%. While we could revisit the model
 to try and improve the shrinkage values, we are more concerned with
 $\mu$ which shows high shrinkage and zero-centered $z$-scores.
 
-To ensure that the model is computationally tractable, we computed the rank
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;To ensure that the model is computationally tractable, we computed the rank
 statistic of each parameter for each inference. The empirical cumulative
 distributions for $\mu$ (black) and $\sigma$ (red) can be seen in
 @Fig:empirical_F_sensitivity (B). Both distributions appear to be uniform,
@@ -154,10 +156,13 @@ measurements.
 ![**Sensitivity measurements and rank statistic distribution of the
 statistical model estimating $\mu$ and $\sigma$.** (A) Posterior $z$-score
 of each inference plotted against the posterior shrinkage factor for the
-parameters $\mu$ (red points) and $\sigma$ (black points). (B)
+parameters $\mu$ (blue points) and $\sigma$ (green points). (B)
 Distribution of rank statistics for $\mu$ (red) and $\sigma$ (black).
-Gray envelope represents the 99$^\text{th}$ percentile of a true uniform
-distribution.](ch7_figS8){#fig:empirical_F_sensitivity
+Purple envelope represents the 99$^\text{th}$ percentile of a true uniform
+distribution. The [Python code                                                
+(`ch7_figS8.py`)](https://github.com/gchure/phd/blob/master/src/chapter_07/code/ch7_figS8.py)
+used to generate this figure can be found on the thesis [GitHub
+repository](https://github.com/gchure/phd).](ch7_figS8){#fig:empirical_F_sensitivity
 short-caption="Sensitivity measurements and rank statistic distribution of the
 statistical model estimating $\mu$ and $\sigma$."}
 
@@ -177,7 +182,7 @@ distribution to the right of the joint distribution.
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;For each MCMC sample of $\mu$ and $\sigma$, we drew 10 samples from a
 normal distribution defined by these parameters. From this collection of
 data sets, we computed the percentiles of the empirical cumulative
-distribution and plotted them over the data, as can be seen in Fig.
+distribution and plotted them over the data, as can be seen in 
 @Fig:empirical_F_post_pred (B). We find that the observed
 data falls within the 99$^\text{th}$ percentile of the generated data
 sets. This illustrates that the model can produce data which is
@@ -194,7 +199,10 @@ from purple to orange. Marginal distributions for each parameter are shown
 adjacent to the joint distribution. (B) Percentiles of the cumulative
 distributions from the posterior predictive checks are shown as shaded
 bars. Data on which the posterior was conditioned are shown as white
-orange circles and lines.](ch7_figS9){#fig:empirical_F_post_pred
+orange circles and lines. The [Python code                                                
+(`ch7_figS9.py`)](https://github.com/gchure/phd/blob/master/src/chapter_07/code/ch7_figS9.py)
+used to generate this figure can be found on the thesis [GitHub
+repository](https://github.com/gchure/phd).](ch7_figS9){#fig:empirical_F_post_pred
 short-caption="MCMC sampling output and posterior predictive checks of the
 statistical model for the mean fold-change and standard deviation."}
 
@@ -213,17 +221,17 @@ exceptionally high or low, making the resulting inference of the free
 energy inaccurate.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;To elucidate the source of this systematic error, we return to a
-simulation based approach in which the true free energy is known [black
-points in @Fig:empirical_F_error (A)]. For a range of free energies,
+simulation based approach in which the true free energy is known (black
+points in @Fig:empirical_F_error (A)). For a range of free energies,
 we computed the theoretical fold-change prescribed by
-@Eq:mutants_si_fermi). For each free energy value, we pulled a value for
+@Eq:mut_si_fermi. For each free energy value, we pulled a value for
 $\sigma$ from the prior distribution defined in
 @Eq:sig_hn_explicit and generated a data set of 10
 measurements by drawing values from a normal distribution defined by the
-true fold-change and the drawn value of $\sigma$ [purple points in
-@Fig:empirical_F_error (A)]. We then sampled the statistical
-model over these data and inferred the mean fold-change $\mu$ [orange points in
-@Fig:empirical_F_error (A)]. By eye, the inferred points
+true fold-change and the drawn value of $\sigma$ (purple points in
+@Fig:empirical_F_error (A)). We then sampled the statistical
+model over these data and inferred the mean fold-change $\mu$ (orange points in
+@Fig:empirical_F_error (A)). By eye, the inferred points
 appear to collapse onto the master curve, in many cases overlapping the
 true values. However, the points with a free energy less than
 $\approx-2\, k_BT$ and greater than $\approx 2\, k_BT$ are slightly
@@ -242,12 +250,12 @@ better the estimate of the fold-change near the boundaries.
 experimental measurements of the wild-type repressor. Data from
 @razo-mejia2018 in which the IPTG titration profiles of seventeen different
 bacterial strains were measured is shown collapsed onto the master curve in
-Fig. @Fig:empirical_F_error (C) as red points. Here, each point corresponds
+@Fig:empirical_F_error (C) as red points. Here, each point corresponds
 to a single biological replicate. The inferred mean fold-change $\mu$ and
 95\% credible regions are shown as purple, blue, or green points. The color
 of these points correspond to the relative value of $\mu$ or $1 - \mu$ to
 $\sigma$. The discrepancy between the predicted and inferred free energy of
-each measurement set can be seen in @Fig:empirical_F_error(D). The
+each measurement set can be seen in @Fig:empirical_F_error (D). The
 significant deviation from the predicted and inferred free energy occurs past
 the detection limit set by $\sigma$. In this work, we therefore opted to not
 display inferred free energies at the extrema where the inferred fold-change
@@ -275,7 +283,10 @@ and the 95\% credible region are shown as blue points. Purple and green
 points are colored by the same conditions as in (B). (D) Inferred free
 energy as a function of the predicted free energy colored by the
 satisfied condition. Error bars are the bounds of the 95\% credible
-region. All inferred values in (A - D) are the median values of the
-posterior distribution.](ch7_figS10){#fig:empirical_F_error
+region. All inferred values in (A -- D) are the median values of the
+posterior distribution. The [Python code                                                
+(`ch7_figS10.py`)](https://github.com/gchure/phd/blob/master/src/chapter_07/code/ch7_figS10.py)
+used to generate this figure can be found on the thesis [GitHub
+repository](https://github.com/gchure/phd).](ch7_figS10){#fig:empirical_F_error
 short-caption="Identification of systematic error in simulated and real data
 when considering the free energy."}

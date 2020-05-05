@@ -1,4 +1,4 @@
-## The Janus Face of Molecules
+## On The Janus Face of Molecules
 
 Monod is perhaps most famous for his discovery of allostery, to which he
 famously referred  to as "the second secret of
@@ -10,7 +10,7 @@ can be found governing the behavior of ion channels [@einav2017,
 G-protein coupled receptors [@canals2012], quorum sensing [@swem2008], and
 transcriptional regulation [@huang2018, @lindsley2006a], to name a few of
 many examples. Despite the objective complexity in the molecular structures
-of all of these allosteric molecules, they can be frequently be reduced to
+of all of these allosteric molecules, they can frequently be reduced to
 simple cartoons where the details of conformational changes, substrate
 binding affinities, and more can be massaged into a small set of key details.
 @Fig:allostery (A) shows the molecular structures of a variety of allosteric
@@ -41,9 +41,9 @@ where $\epsilon_\text{state}$ is the energy of that state, $k_B$ is the Boltzman
 and $T$ is the system temperature. The denominator $\mathcal{Z}$ is the
 partition function of the system and is the sum 
 $$
-\mathcal{Z} = \sum\limits_{i \in \text{states}} e^{\frac{\epsilon_i}{k_BT}},
+\mathcal{Z} = \sum\limits_{i \in \text{states}} e^{-\frac{\epsilon_i}{k_BT}},
 $${#eq:partition_function_def}
-ensuring that the distribution is normalized. Therefore, if we are interested in computing
+ensuring that the distribution is normalized (meaning probability sums to 1). Therefore, if we are interested in computing
 the probability of a given allosteric protein being in the active state, we
 merely  have to enumerate all of the Boltzmann weights (given by the numerator in @Eq:boltzmann)
 and compute
@@ -55,15 +55,15 @@ This probability, defined as a function of the inducer concentration, is shown
 schematically in @Fig:allostery (B). While we have passed over some of the more
 subtle details of this calculation, the plot in @Fig:allostery (B) presents a
 *quantitative* prediction of how the activity of an allosteric molecule should
-scale as a function of the inducer,in this case becoming less active as more
+scale as a function of the inducer, in this case becoming less active as more
 inducer is present).
 
 ![**A Coarse grained representation of an allosteric molecule.** (A) Crystal
 structures of a variety of allosteric transcription factors are shown at the
 top. In this thesis, we coarse grain away many of the details to a minimal model
-(bottom) where the protein can be represent as being either active (red) or 
+(bottom) where the protein can be represented as being either active (red) or 
 inactive (purple), both of which can bind an inducer molecule (orange).
-(B) By making an assumption of quasi-equilibrium, we can trivially compute a
+(B) By making an assumption of quasi-equilibrium, we can compute a
 mathematical description of the active probability of an allosteric protein as a
 function of the inducer concentration (top). In this particular case, the inactive
 state becomes more probable relative to the active state at higher concentrations
@@ -83,54 +83,66 @@ convenient abstraction of a regulatory architecture. Rather, this motif is
 the most ubiquitous regulatory scheme in *E. coli* [@gama-castro2016;
 @ireland2020] and has been the target of much theoretical and
 experimental dissection [@vilar2003; @buchler2003; @bintu2005; @garcia2011;
-@brewster2014; @phillips2019]. However inclusion of allostery in a mathematical
+@brewster2014; @phillips2019]. However, inclusion of allostery in a mathematical
 sense had yet to be experimentally dissected.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;At the beginning of 2016, Manuel Razo-Mejia, Stephanie L. Barnes, Nathan M.
-Belliveau, Tal Einav, and I joined forces and set out to build a complete
-theoretical model for allosteric transcriptional regulation coupled with a
-thorough experimental dissection. This was no small task and would have likely
-taken a full Ph.D.'s worth of effort for a single person to do. Yet, within a
-year of project inception we had submitted a manuscript to preprint servers
-where all of us were annotated as equal contributors. This experience defined
-how I view collaboration in scientific research and serves
-as a shining example of scientific socialism. 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;At the beginning of 2016, Manuel Razo-Mejia,
+Stephanie L. Barnes, Nathan M. Belliveau, Tal Einav, and I joined forces and
+set out to build a complete theoretical model for allosteric transcriptional
+regulation coupled with a thorough experimental dissection. This was no small
+task and would have likely taken a full Ph.D.'s worth of effort for a single
+person to do. Yet, within a year of project inception we had submitted a
+manuscript to preprint servers where all of us were annotated as equal
+contributors. This experience defined how I view collaboration in scientific
+research and serves as a shining example of scientific socialism.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Together, we enumerated a complete thermodynamic model for the inducible
-simple repression motif and defined a succinct input-output function for the
-fold-change in gene expression (schematized in @Fig:induction_intro (B)).
-This model, which is explored in depth in Chapter 2, is defined by a
-minimal set of biophysical parameters, many of which can be directly measured
-using standard tricks of molecular biology and biochemistry. With a model in
-hand, we turned to a collection of 17 unique *E. coli* strains, each with
-different copy numbers of the repressor protein and different regulatory DNA
-sequences. Using our theoretical model, we inferred the lone two biophysical
-parameters which we did not know *a priori* from a single experimental strain
-(white points in middle panel of @Fig:induction_intro (C)), and tested our
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Together, we enumerated a complete
+thermodynamic model for the inducible simple repression motif and defined a
+succinct input-output function for the fold-change in gene expression
+(schematized in @Fig:induction_intro (B)). Here, we define the fold-change in
+gene expression as the level of gene expression in the
+presence of a transcriptional repressor relative to the level of expression
+when the repressor is absent from the system. Therefore, the value of the
+fold-change is restricted from 0 to 1 representing high and low levels of
+regulation, respectively. 
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; This model, which is explored in depth in Chapter 2, is defined by a minimal
+set of biophysical parameters, many of which can be directly measured using
+standard tricks of molecular biology and biochemistry. With a model in hand,
+we turned to a collection of 17 unique *E. coli* strains, each with different
+copy numbers of the repressor protein and different regulatory DNA sequences.
+Using our theoretical model, we inferred the lone two biophysical parameters,
+which we did not know *a priori*, from a single experimental strain (white
+points in middle panel of @Fig:induction_intro (C)), and tested our
 predictions on all other experimental strains. We found the model to be
 remarkably predictive, suggesting that our "toy" model of an allosteric
 repressor captured the underlying physics of the system.
 
 ![**Experimental dissection of the inducible simple repression input-output
-function.** (A) Schematic diagram of the inducible simple repression motif. (B)
-Schematic diagram of the input-output function as is derived in Chapter 2. (C)
-Experimental measurements of the fold-change in gene expression using the
+function.** (A) Schematic diagram of the inducible simple repression motif.
+(B) Schematic diagram of the input-output function as is derived in Chapter
+2. (C) Experimental measurements of the fold-change in gene expression using
+the
 *lac* repressor from *E coli*. Different rows correspond to different operator
-sequences and therefore different values for $\Delta\varepsilon_{RA}$. Different
-colors correspond to different values for the average repressor copy number $R$.
-While filled points in the middle panel represent the experimental strain used to
-infer the values of the inducer dissociation constants. All points correspond to
-the mean of at least 10 biological replicates.](ch1_fig4){#fig:induction_intro
+sequences and therefore different values for the DNA affinity parameter, $\Delta\varepsilon_{RA}$.
+Different colors correspond to different values for the average repressor
+copy number $R$. While filled points in the middle panel represent the
+experimental strain used to infer the values of the inducer dissociation
+constants. Points and errors correspond to the mean and standard error of ten
+to fifteen biological replicates. The [Python code
+(`ch1_fig4.py`)](https://github.com/gchure/phd/blob/master/src/chapter_01/code/ch1_fig4.py)
+used to generate this figure can be accessed via the thesis [GitHub
+repository](https://github.com/gchure/phd). ](ch1_fig4){#fig:induction_intro
 short-caption="Experimental dissection of the inducible simple repression
 input-output function."}
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A key feature of this work is a derivation of
-thermodynamic state variable of this regulatory architecture which we term
-the *free energy*. This parameter provides an intuition for the effective
+thermodynamic state variable of this regulatory architecture termed
+the *free energy* [@keymer2006; @swem2008]. This parameter provides an intuition for the effective
 free energy difference between states of the promoter in which the repressor
 is bound relative those states in which the repressor is not bound to the
 promoter. This parameter accounts for all of the ways in which one can tune
-the parameter values and still achieve the same fold-change in gene expression, as is diagrammed
+the variables and still achieve the same fold-change in gene expression, as is diagrammed
 in @Fig:collapse_intro (A). While we leave the details of this derivation to
 Chapter 2, we emphasize
 that this formalism provides a means by which all of the experimental
@@ -151,5 +163,9 @@ fold-change in gene expression, shown as red and blue horizontal planes. Any
 point on those planes corresponds to a single value of the free energy (middle)
 and will appear on the master curve. (B) Data presented in @Fig:induction_intro
 (C) collapsed onto the master curve defined by the predicted value of the free
-energy.](ch1_fig5){#fig:collapse_intro short-caption="Collapse of individual
+energy. Points and errors correspond to the mean and standard error of ten to
+fifteen biological replicates. The [Python code
+(`ch2_fig8.py`)](https://github.com/gchure/phd/blob/master/src/chapter_02/code/ch2_fig8.py)
+used to generate this figure can be accessed via the thesis [GitHub
+repository](https://github.com/gchure/phd).](ch1_fig5){#fig:collapse_intro short-caption="Collapse of individual
 induction profiles onto a simple scaling function."}
