@@ -173,8 +173,7 @@ the dissociation constants $K_A$ and $K_I$, the six repressor copy numbers $R$,
 and the four repressor-DNA binding energies $\Delta\varepsilon_{RA}$ using the
 entire dataset. Points and errors represent the mean and standard error of ~10
 biological replicates for O1, O2, and O3 and 3 biological replicates for
-Oid. The [Python code                                      
-(`ch6_fig12.py`)](https://github.com/gchure/phd/blob/master/src/chapter_06/code/ch6_figS12.py) used to generate this figure can be found on the thesis [GitHub
+Oid. The [Python code (`ch6_fig12.py`)](https://github.com/gchure/phd/blob/master/src/chapter_06/code/ch6_figS12.py) used to generate this figure can be found on the thesis [GitHub
 repository](https://github.com/gchure/phd).](ch6_figS12){#fig:induction_global_fit short-caption="Induction curves
 using global parameter estimates."}
 
@@ -196,8 +195,9 @@ for the [EC$_{50}$] and the effective Hill coefficient, respectively, represent
 the estimated value using parameter estimates of $K_A$ and $K_I$ for that
 particular strain. Errors represent the width of the 95\% credible region. In
 all plots, curves represent the theoretical predictions given the parameter
-estimates conditioned on all data sets.The [Python code                                      
-(`ch6_figS13.py`)](https://github.com/gchure/phd/blob/master/src/chapter_06/code/ch6_figS13.py) used to generate this figure can be found on the thesis [GitHub
-repository](https://github.com/gchure/phd).](ch6_figS13){#fig:properties_global_fit
+estimates conditioned on all data sets.The [Python code
+(`ch6_figS13.py`)](https://github.com/gchure/phd/blob/master/src/chapter_06/code/ch6_figS13.py)
+used to generate this figure can be found on the thesis
+[GitHub repository](https://github.com/gchure/phd).](ch6_figS13){#fig:properties_global_fit
 short-caption="Key properties of induction profiles as predicted with a global
 fit using all data."}

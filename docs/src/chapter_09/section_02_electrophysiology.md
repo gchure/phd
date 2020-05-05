@@ -44,8 +44,7 @@ the micropipette to facilitate opening of the mechanosensitive channels. The
 blue shaded region indicates opening of the mechanosensitive channel of small
 conductance (MscS). The shaded orange region represents opening of single
 MscL channels. These regions were used to compute the PL:PS ratio. The [Python
-code
-(`ch9_figS1.py`)](https://github.com/gchure/phd/blob/master/src/chapter_09/code/ch9_figS1.py)
+code (`ch9_figS1.py`)](https://github.com/gchure/phd/blob/master/src/chapter_09/code/ch9_figS1.py)
 used to generate this figure can be found on the thesis [GitHub
 repository](https://github.com/gchure/phd).](ch9_figS1){#fig:ephys short-caption="Characteristic MscL-sfGFP conductance
 obtained through patch-clamp electrophysiology"}
@@ -123,8 +122,7 @@ indicates the range of doubling times observed for the various RBS mutant
 strains described in this work (B) Growth curve of *E. coli* MG1655 cells in
 LB + 500mM NaCl. Red points indicate individual absorbance measurements. Line
 of best fit is shown in black with the uncertainty shown in shaded gray. The
-measured doubling time was 35 $\pm$ 1 min. The [Python
-code (`ch9_figS2.py`)](https://github.com/gchure/phd/blob/master/src/chapter_09/code/ch9_figS2.py)
+measured doubling time was 35 $\pm$ 1 min. The [Python code (`ch9_figS2.py`)](https://github.com/gchure/phd/blob/master/src/chapter_09/code/ch9_figS2.py)
 used to generate this figure can be found on the thesis [GitHub
 repository](https://github.com/gchure/phd). ](ch9_figS2){#fig:maturation_time
 short-caption="Measurement of sfGFP maturation as a function of time through

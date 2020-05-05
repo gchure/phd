@@ -102,8 +102,7 @@ shows how varying the polymerase-activator interaction energy
 $\varepsilon_{AP}$ alters the fold-change. Relatively small perturbations to
 this energetic parameter drastically changes the level of activation and
 plays a major role in dictating the dynamic range of the system. The [Python
-code
-(`ch6_figS20.py`)](https://github.com/gchure/phd/blob/master/src/chapter_06/code/ch6_figS20.py)
+code (`ch6_figS20.py`)](https://github.com/gchure/phd/blob/master/src/chapter_06/code/ch6_figS20.py)
 used to generate this figure can be found on the thesis [GitHub
 repository](https://github.com/gchure/phd). ](ch6_figS20){#fig:applications
 short-caption="Representative fold-change predictions for allosteric

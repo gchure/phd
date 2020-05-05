@@ -78,8 +78,7 @@ derivative of the optical density as a function of time estimated via gaussian
 process modeling. The first derivative is taken as the growth rate at each time
 point. The solid line is the estimated mean value and the shaded region
 represents the standard deviation of the posterior
-The [Python code                                                
-(`ch8_figS1.py`)](https://github.com/gchure/phd/blob/master/src/chapter_08/code/ch8_figS1.py)
+The [Python code (`ch8_figS1.py`)](https://github.com/gchure/phd/blob/master/src/chapter_08/code/ch8_figS1.py)
 used to generate this figure can be found on the thesis [GitHub
 repository](https://github.com/gchure/phd).
 distribution.](ch8_figS1){#fig:gp_growth_curve short-caption="Non-parametric

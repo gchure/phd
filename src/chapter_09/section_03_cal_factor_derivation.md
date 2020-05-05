@@ -280,8 +280,7 @@ of channel copy number.
 $\tilde{\langle A \rangle}$. Probability increases from light to dark red.
 The replicate parameter (blue) and hyper-parameter (red) marginalized
 posterior probability distributions for $\alpha$ (B) and $\langle A \rangle$
-(C). The [Python code
-(`ch9_figS4.py`)](https://github.com/gchure/phd/blob/master/src/chapter_09/code/ch9_figS4.py)
+(C). The [Python code (`ch9_figS4.py`)](https://github.com/gchure/phd/blob/master/src/chapter_09/code/ch9_figS4.py)
 used to generate this figure can be found on the thesis [GitHub
 repository](https://github.com/gchure/phd).
 ](ch9_figS4){#fig:mscl_posterior_samples short-caption="Posterior
@@ -314,8 +313,7 @@ two-dimensional projected cell area for the standard candle strain MLG910
 (gray line) and for all Shine-Dalgarno mutants (red line). (C) The
 correlation between channel copy number and cell area without the area
 correction. (D) The correlation between effective channel copy number and
-cell area with the area correction applied. The [Python code
-(`ch9_figS5.py`)](https://github.com/gchure/phd/blob/master/src/chapter_09/code/ch9_figS5.py)
+cell area with the area correction applied. The [Python code (`ch9_figS5.py`)](https://github.com/gchure/phd/blob/master/src/chapter_09/code/ch9_figS5.py)
 used to generate this figure can be found on the thesis [GitHub
 repository](https://github.com/gchure/phd).
  ](ch9_figS5){#fig:area_correction

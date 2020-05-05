@@ -197,8 +197,7 @@ inference.** Marginal and joint distributions conditioned only on data
 collected at 32$^\circ$ C, only on 42 $^\circ$ C, or on both temperatures are
 shown in blue, red, and black, respectively. The value $\Delta S_R$ and
 $\Delta S_{AI}$ are given in $k_BT / K$ where $K$ is 1 degree
-Kelvin. The [Python code                                                
-(`ch8_figS11.py`)](https://github.com/gchure/phd/blob/master/src/chapter_08/code/ch8_figS11.py)
+Kelvin. The [Python code (`ch8_figS11.py`)](https://github.com/gchure/phd/blob/master/src/chapter_08/code/ch8_figS11.py)
 used to generate this figure can be found on the thesis [GitHub
 repository](https://github.com/gchure/phd).](ch8_figS11){#fig:entropy_corner short-caption="Sampled posterior
 probability distributions of entropic penalty parameter inference."}
@@ -213,8 +212,7 @@ each condition. The black dashed line represents the predicted fold-change in
 gene expression by a simple rescaling of the binding energy determined at
 37$^circ$ C. The grey shaded region is the 95\% credible region of the
 fold-change given estimation of $\Delta S_R$ and $\Delta S_{AI}$ conditioned
-on both temperatures pooled together. The [Python code                                                
-(`ch8_figS12.py`)](https://github.com/gchure/phd/blob/master/src/chapter_08/code/ch8_figS12.py)
+on both temperatures pooled together. The [Python code (`ch8_figS12.py`)](https://github.com/gchure/phd/blob/master/src/chapter_08/code/ch8_figS12.py)
 used to generate this figure can be found on the thesis [GitHub
 repository](https://github.com/gchure/phd). ](ch8_figS12){#fig:entropy_pairwise
 short-caption="Pairwise predictions of fold-change in gene expression at
@@ -235,8 +233,7 @@ to the median value of the inferred free energy shift and the mean of five to
 eight biological replicates for the repressor copy number. Vertical error
 represents the upper and lower bounds of the 95\% credible region of the
 parameter. Horizontal error bars correspond to the standard error of five to
-eight biological replicates. The [Python code                                                
-(`ch8_figS13.py`)](https://github.com/gchure/phd/blob/master/src/chapter_08/code/ch8_figS13.py)
+eight biological replicates. The [Python code (`ch8_figS13.py`)](https://github.com/gchure/phd/blob/master/src/chapter_08/code/ch8_figS13.py)
 used to generate this figure can be found on the thesis [GitHub
 repository](https://github.com/gchure/phd). ](ch8_figS13){#fig:t_dependent
 short-caption="Fold-change and shift in free energy including a

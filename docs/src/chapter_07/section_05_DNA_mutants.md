@@ -63,8 +63,7 @@ correspond to the repressor copy number of the strain used to estimate
 the DNA binding energy for each mutant. Columns correspond to the
 repressor copy number of the strains that are predicted. Diagonals in
 which the data used to estimate the DNA binding energy are shown with a
-gray background. The [Python code                                                
-(`ch7_figS11.py`)](https://github.com/gchure/phd/blob/master/src/chapter_07/code/ch7_figS11.py)
+gray background. The [Python code (`ch7_figS11.py`)](https://github.com/gchure/phd/blob/master/src/chapter_07/code/ch7_figS11.py)
 used to generate this figure can be found on the thesis [GitHub
 repository](https://github.com/gchure/phd). ](ch7_figS11){#fig:DNA_profile_pairwise_comparisons
 short-caption="Pairwise comparisons of DNA binding mutant estimated induction profiles."}
@@ -74,8 +73,7 @@ domain mutants.** Rows correspond to the repressor copy number used to
 estimate the DNA binding energy. Columns correspond to the particular
 mutant. Colored lines are the bounds of the 95% credible region of the
 predicted $\Delta F$. Open face points indicate the strain to which the
-DNA binding energy was fit. The [Python code                                                
-(`ch7_figS12.py`)](https://github.com/gchure/phd/blob/master/src/chapter_07/code/ch7_figS12.py)
+DNA binding energy was fit. The [Python code (`ch7_figS12.py`)](https://github.com/gchure/phd/blob/master/src/chapter_07/code/ch7_figS12.py)
 used to generate this figure can be found on the thesis [GitHub
 repository](https://github.com/gchure/phd).](ch7_figS12){#fig:DNA_delF_pairwise_comparison
 short-caption="Dependence of fitting strain on $\Delta F$ predictions of DNA

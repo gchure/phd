@@ -55,8 +55,7 @@ peak in the dynamic range can be understood by considering the two extremes for
 $\Delta\varepsilon_{RA}$: for small repressor-operator binding energies, the
 leakiness is small but the saturation increases with $\Delta\varepsilon_{RA}$,
 thereby decreasing the dynamic range. Repressor copy number does not affect the
-maximum dynamic range. The [Python code                                      
-(`ch6_figS18-S19.py`)](https://github.com/gchure/phd/blob/master/src/chapter_06/code/ch6_figS18-S19.py) used to generate this figure can be found on the thesis [GitHub
+maximum dynamic range. The [Python code (`ch6_figS18-S19.py`)](https://github.com/gchure/phd/blob/master/src/chapter_06/code/ch6_figS18-S19.py) used to generate this figure can be found on the thesis [GitHub
 repository](https://github.com/gchure/phd).](ch6_figS18){#fig:properties_expanded short-caption="Dependence of
 leakiness, saturation, and dynamic range on the operator binding energy and
 repressor copy number."}

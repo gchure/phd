@@ -48,8 +48,8 @@ Fig. 2.5(C) was fit using Eq. 2.5 with $n=2$. The allosteric energy
 difference $\Delta\varepsilon_{AI}$ is forced to take on the value shown on
 the $x-$axis, while $K_A$ and $K_I$ are fit freely. (B) The resulting
 best-fit functions for several values of $\Delta\varepsilon_{AI}$ yield
-nearly identical fold-change responses. The [Python code                                      
-(`ch6_figS1.py`)](https://github.com/gchure/phd/blob/master/src/chapter_06/code/ch6_figS1.py) used to generate this figure can be found on the thesis [GitHub
+nearly identical fold-change responses. The [Python code (`ch6_figS1.py`)](https://github.com/gchure/phd/blob/master/src/chapter_06/code/ch6_figS1.py)
+used to generate this figure can be found on the thesis [GitHub
 repository](https://github.com/gchure/phd).](ch6_figS1){#fig:degenerate_epai
 short-caption="Multiple sets of parameters yield identical fold-change
 responses."}
@@ -217,8 +217,7 @@ the number of repressors at which $R_A = N$ for each value of
 $\Delta\varepsilon_{AI}$. (B) Using fold--change measurements from
 @brewster2014 for the operators and gene copy numbers shown, we can determine
 the most likely value $\Delta\varepsilon_{AI} = 4.5\, k_BT$ for LacI. The
-[Python code
-(`ch6_figS2.py`)](https://github.com/gchure/phd/blob/master/src/chapter_06/code/ch6_figS2.py)
+[Python code (`ch6_figS2.py`)](https://github.com/gchure/phd/blob/master/src/chapter_06/code/ch6_figS2.py)
 used to generate this figure can be found on the thesis [GitHub
 repository](https://github.com/gchure/phd). ](ch6_figS2){#fig:fugacity
 short-caption="Fold-change in gene expression for multiple identical

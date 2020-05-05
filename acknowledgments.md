@@ -3,7 +3,7 @@
 layout: default
 keywords:
 comments: true
-image: acknowledgements.png
+image: islands.jpg
 permalink: acknowledgements
 
 # Hero section

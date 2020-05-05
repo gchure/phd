@@ -129,8 +129,7 @@ glycerol (green), or acetate (brown) measurements. Bottom left plot shows the
 joint probability distribution between the effective DNA binding energy
 $\epsilon$ and the standard deviation $\sigma$. Bottom right shows the marginal
 posterior distribution over the standard deviation
-$\sigma$. The [Python code                                                
-(`ch8_figS9.py`)](https://github.com/gchure/phd/blob/master/src/chapter_08/code/ch8_figS9.py)
+$\sigma$. The [Python code (`ch8_figS9.py`)](https://github.com/gchure/phd/blob/master/src/chapter_08/code/ch8_figS9.py)
 used to generate this figure can be found on the thesis [GitHub
 repository](https://github.com/gchure/phd).](ch8_figS9){#fig:carbon_cornerplot short-caption="Posterior
 probability distributions of effective DNA binding and standard deviation for
@@ -141,8 +140,7 @@ the strain to which the effective DNA binding energy $\epsilon$ was estimated an
 columns are the strains whose fold-change is predicted. Shaded lines represent
 the 95\% credible region of the prediction given the estimated value of
 $\epsilon$. Points and error correspond to the median and standard error of fie
-to eight biological replicates. The [Python code                                                
-(`ch8_figS10.py`)](https://github.com/gchure/phd/blob/master/src/chapter_08/code/ch8_figS10.py)
+to eight biological replicates. The [Python code (`ch8_figS10.py`)](https://github.com/gchure/phd/blob/master/src/chapter_08/code/ch8_figS10.py)
 used to generate this figure can be found on the thesis [GitHub
 repository](https://github.com/gchure/phd).](ch8_figS10){#fig:pairwise_carbon
 short-caption="Pairwise estimation and prediction of DNA binding energies

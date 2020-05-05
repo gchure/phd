@@ -268,8 +268,7 @@ of sibling 1 upon division. For each sibling pair, the fractional intensity is
 computed as the intensity of sibling 1 $I_2$ divided by the summed intensities
 of both siblings $I_1 + I_2$. (C) Partitioning intensity as a function of cell
 volume. The fractional intensity of every sibling cell is plotted against its
-estimated newborn volume. The [Python code                                                
-(`ch8_figS4.py`)](https://github.com/gchure/phd/blob/master/src/chapter_08/code/ch8_figS4.py)
+estimated newborn volume. The [Python code (`ch8_figS4.py`)](https://github.com/gchure/phd/blob/master/src/chapter_08/code/ch8_figS4.py)
 used to generate this figure can be found on the thesis [GitHub
 repository](https://github.com/gchure/phd).](ch8_figS4){#fig:sanity_check
 short-caption="Experimental sanity checks and inference of a fluorescence
@@ -391,8 +390,7 @@ Empirical cumulative distribution functions and (B) histograms of the posterior
 distribution for the calibration factor $\alpha$ for several biological
 replicates. Different colors indicate different biological replicates of
 experiments performed in glucose supplemented medium at 37$^\circ$ C.
-The [Python code                                                
-(`ch8_figS5.py`)](https://github.com/gchure/phd/blob/master/src/chapter_08/code/ch8_figS5.py)
+The [Python code (`ch8_figS5.py`)](https://github.com/gchure/phd/blob/master/src/chapter_08/code/ch8_figS5.py)
 used to generate this figure can be found on the thesis [GitHub
 repository](https://github.com/gchure/phd). ](ch8_figS5){#fig:cal_factor_posts short-caption="Representative posterior distributions
 for inference of the fluorescence calibration factor."}
@@ -498,8 +496,7 @@ the two vertical lines to be "medium" sized, and "long" cells tot he right of
 the second vertical line. Cells below the 2.4$\mu$m threshold were treated as
 cells who divided after production of lacI-mCherry had been halted. Bottom row
 shows the same data as the top row but as the empirical cumulative
-distribution. The [Python code                                                
-(`ch8_figS7.py`)](https://github.com/gchure/phd/blob/master/src/chapter_08/code/ch8_figS7.py)
+distribution. The [Python code (`ch8_figS7.py`)](https://github.com/gchure/phd/blob/master/src/chapter_08/code/ch8_figS7.py)
 used to generate this figure can be found on the thesis [GitHub
 repository](https://github.com/gchure/phd).](ch8_figS7){#fig:length_distributions short-caption="Cell length
 distributions of fluorescence snapshots and newborn cells."}
@@ -590,8 +587,7 @@ over the DNA binding energy. Horizontal lines indicate the width of the
 95\%
 credible region of the posterior distribution. Grey lines in (A) and (B)
 correspond to the theoretical prediction and estimated binding energy from
-@garcia2011, respectively. The [Python code                                                
-(`ch8_figS8.py`)](https://github.com/gchure/phd/blob/master/src/chapter_08/code/ch8_figS8.py)
+@garcia2011, respectively. The [Python code (`ch8_figS8.py`)](https://github.com/gchure/phd/blob/master/src/chapter_08/code/ch8_figS8.py)
 used to generate this figure can be found on the thesis [GitHub
 repository](https://github.com/gchure/phd). ](ch8_figS8){#fig:correction_factor
 short-caption="Influence of a correction factor on fold-change and the DNA

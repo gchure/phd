@@ -34,8 +34,7 @@ reported in Table 7.5. Bottom row shows the 95\% credible regions of the
 predicted change in free energy (shaded lines) along with the inferred free
 energy of data shown in the top row. In all plots, the inducer concentration
 is shown on a symmetric log scale with linear scaling between 0 and
-$10^{-2}\,\mu$M and log scaling elsewhere. The [Python code                                                
-(`ch7_figS21.py`)](https://github.com/gchure/phd/blob/master/src/chapter_07/code/ch7_figS21.py)
+$10^{-2}\,\mu$M and log scaling elsewhere. The [Python code (`ch7_figS21.py`)](https://github.com/gchure/phd/blob/master/src/chapter_07/code/ch7_figS21.py)
 used to generate this figure can be found on the thesis [GitHub
 repository](https://github.com/gchure/phd).](ch7_figS21){#fig:global_DNA_profiles short-caption="Induction profiles and predicted change in free energy using parameters estimated from the complete data sets."}
 
@@ -76,8 +75,7 @@ allosteric parameters reported in Table 7.6. Bottom row shows the 95\%
 credible regions of the predicted change in free energy (shaded lines) along
 with the inferred free energy of data shown in the top row. In all plots, the
 inducer concentration is shown on a symmetric log scale with linear scaling
-between 0 and 10$^{-2}\, mu$M and log scaling elsewhere. The [Python code                                                
-(`ch7_figS22.py`)](https://github.com/gchure/phd/blob/master/src/chapter_07/code/ch7_figS22.py)
+between 0 and 10$^{-2}\, mu$M and log scaling elsewhere. The [Python code (`ch7_figS22.py`)](https://github.com/gchure/phd/blob/master/src/chapter_07/code/ch7_figS22.py)
 used to generate this figure can be found on the thesis [GitHub
 repository](https://github.com/gchure/phd).](ch7_figS22){#fig:global_IND_profiles short-caption="Induction profiles and predicted change in free energy using parameters estimated from the complete data sets for inducer binding domain mutants."}
 

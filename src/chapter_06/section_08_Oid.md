@@ -41,8 +41,7 @@ for Oid from $\Delta\varepsilon_{RA}=-17.0~k_BT$ to
 $\Delta\varepsilon_{RA}=-17.7~k_BT$, which now shows agreement between
 the theoretical predictions and experimental data. Shaded regions from
 the theoretical curves denote the 95\% credible
-region. The [Python code                                      
-(`ch6_figS14.py`)](https://github.com/gchure/phd/blob/master/src/chapter_06/code/ch6_figS14.py) used to generate this figure can be found on the thesis [GitHub
+region. The [Python code (`ch6_figS14.py`)](https://github.com/gchure/phd/blob/master/src/chapter_06/code/ch6_figS14.py) used to generate this figure can be found on the thesis [GitHub
 repository](https://github.com/gchure/phd).](ch6_figS14){#fig:oid_refit short-caption="Predictions of fold-change
 for strains with an Oid binding sequence versus experimental measurements with
 different repressor copy numbers."}

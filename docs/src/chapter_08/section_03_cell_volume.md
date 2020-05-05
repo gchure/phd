@@ -55,8 +55,7 @@ It appears that this simple approximation is reasonable for the purposes of this
 ![**Growth-rate dependence of cell shape and spherocylinder approximation.**
 Contours of segmentation masks for a single experiment of each condition are
 shown as thin colored lines for (A) carbon quality variation and (B) temperature
-variation. The [Python code                                                
-(`ch8_figS2.py`)](https://github.com/gchure/phd/blob/master/src/chapter_08/code/ch8_figS2.py)
+variation. The [Python code (`ch8_figS2.py`)](https://github.com/gchure/phd/blob/master/src/chapter_08/code/ch8_figS2.py)
 used to generate this figure can be found on the thesis [GitHub
 repository](https://github.com/gchure/phd). ](ch8_figS2){#fig:cell_shape short-caption="Growth-rate dependence of
 cell shape and approximation as a spherocylinder."}

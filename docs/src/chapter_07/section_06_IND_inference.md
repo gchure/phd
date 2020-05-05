@@ -126,8 +126,7 @@ from the distributions used for prior predictive checks. (B) Percentiles
 of the simulated data sets using draws from the $K_A$ and $K_I$
 distributions only (top, purple bands) and using draws from $K_A$, $K_I$,
 and $\Delta\varepsilon_{AI}$ (bottom, orange 
-bands). The [Python code                                                
-(`ch7_fig13.py`)](https://github.com/gchure/phd/blob/master/src/chapter_07/code/ch7_figS13.py)
+bands). The [Python code (`ch7_fig13.py`)](https://github.com/gchure/phd/blob/master/src/chapter_07/code/ch7_figS13.py)
 used to generate this figure can be found on the thesis [GitHub
 repository](https://github.com/gchure/phd).](ch7_figS13){#fig:ind_prior_predictive short-caption="Prior predictive
 checks for two hypotheses of inducer binding domain mutants."}
@@ -173,8 +172,7 @@ a model in which all allosteric parameters $K_A$, $K_I$, and
 $\Delta\varepsilon_{AI}$ are allowed to be modified by the mutation.
 Gray envelope in the bottom plots correspond to the 99$^\text{th}$
 percentile of variation expected from a true uniform
-distribution. The [Python code                                                
-(`ch7_figS14.py`)](https://github.com/gchure/phd/blob/master/src/chapter_07/code/ch7_figS14.py)
+distribution. The [Python code (`ch7_figS14.py`)](https://github.com/gchure/phd/blob/master/src/chapter_07/code/ch7_figS14.py)
 used to generate this figure can be found on the thesis [GitHub
 repository](https://github.com/gchure/phd).](ch7_figS14){#fig:ind_sbc short-caption="Simulation based
 calibration of statistical models for inducer binding domain mutants."}
@@ -232,8 +230,7 @@ posterior with increasing probability corresponding to transition from
 blue to yellow. (B) Percentiles of the data generated from the
 likelihood distribution for each sample of $K_A$, $K_I$, and $\sigma$.
 Overlaid points are the experimentally observed
-measurements. The [Python code                                                
-(`ch7_figS15-S16.py`)](https://github.com/gchure/phd/blob/master/src/chapter_07/code/ch7_figS15-S16.py)
+measurements. The [Python code (`ch7_figS15-S16.py`)](https://github.com/gchure/phd/blob/master/src/chapter_07/code/ch7_figS15-S16.py)
 used to generate this figure can be found on the thesis [GitHub
 repository](https://github.com/gchure/phd).](ch7_figS15){#fig:kaki_post_predictive short-caption="Posterior
 predictive checks for inducer binding domain mutants where only $K_A$ and $K_I$
@@ -248,8 +245,7 @@ from blue to yellow. Marginal distributions are shown adjacent to each
 joint distribution. (B) Percentiles of the data generated from the
 likelihood for each sample of $K_A$, $K_I$, $\Delta\varepsilon_{AI}$,
 and $\sigma$. The corresponding experimental data for Q291K are shown as
-black open-faced circles. The [Python code                                                
-(`ch7_figS15-S16.py`)](https://github.com/gchure/phd/blob/master/src/chapter_07/code/ch7_figS15-S16.py)
+black open-faced circles. The [Python code (`ch7_figS15-S16.py`)](https://github.com/gchure/phd/blob/master/src/chapter_07/code/ch7_figS15-S16.py)
 used to generate this figure can be found on the thesis [GitHub
 repository](https://github.com/gchure/phd).](ch7_figS16){#fig:kaki_epai_post_predictive
 short-caption="Posterior predictive checks for inducer binding domain mutants

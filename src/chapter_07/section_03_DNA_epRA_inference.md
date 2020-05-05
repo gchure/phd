@@ -167,8 +167,7 @@ represent draws used to generate fold-change measurements from the likelihood
 distribution. Percentiles in (C) generated from 800 draws from the prior
 distributions. For each draw from the prior distributions, a data set of 70
 measurements over 12 IPTG concentrations (ranging from $0$ to $5000\,\mu$M) were
-generated from the likelihood. The [Python code                                                
-(`ch7_figS2.py`)](https://github.com/gchure/phd/blob/master/src/chapter_07/code/ch7_figS2.py)
+generated from the likelihood. The [Python code (`ch7_figS2.py`)](https://github.com/gchure/phd/blob/master/src/chapter_07/code/ch7_figS2.py)
 used to generate this figure can be found on the thesis [GitHub
 repository](https://github.com/gchure/phd).](ch7_figS2){#fig:epRA_prior_pred
 short-caption="Prior distributions and prior predictive check for estimation of
@@ -299,8 +298,7 @@ overlaid with the ground truth distribution (purple). (B) Data averaged
 posterior (orange) for the standard deviation of fold-change measurements
 overlaid with the ground truth distribution (purple). Top and bottom show
 the same data with different
-visualizations. The [Python code                                                
-(`ch7_figS3.py`)](https://github.com/gchure/phd/blob/master/src/chapter_07/code/ch7_figS3.py)
+visualizations. The [Python code (`ch7_figS3.py`)](https://github.com/gchure/phd/blob/master/src/chapter_07/code/ch7_figS3.py)
 used to generate this figure can be found on the thesis [GitHub
 repository](https://github.com/gchure/phd).](ch7_figS3){#fig:epRA_sbc short-caption="Comparison of averaged
 posterior and prior distributions for DNA binding energy and homoscedastic error."}
@@ -366,8 +364,7 @@ $\sigma$**. The posterior $z$-score for each posterior distribution
 inferred from a simulated data set is plotted against the shrinkage for
 (A) the DNA binding energy $\Delta\varepsilon_{RA}$ and (B) the standard
 deviation of fold-change measurements
-$\sigma$. The [Python code                                                
-(`ch7_figS4.py`)](https://github.com/gchure/phd/blob/master/src/chapter_07/code/ch7_figS4.py)
+$\sigma$. The [Python code (`ch7_figS4.py`)](https://github.com/gchure/phd/blob/master/src/chapter_07/code/ch7_figS4.py)
 used to generate this figure can be found on the thesis [GitHub
 repository](https://github.com/gchure/phd). ](ch7_figS4){#fig:epRA_sbc_sensitivity short-caption="Inferential
 sensitivity for estimation of the DNA binding energy and homoscedastic error."}
@@ -412,8 +409,7 @@ row is the cumulative distribution for the same data. Purple bands
 correspond to the 99th percentile of expected variation from a uniform
 distribution. (A) Distribution for the DNA binding energy
 $\Delta\varepsilon_{RA}$ and (B) for the standard deviation
-$\sigma$. The [Python code                                                
-(`ch7_figS5.py`)](https://github.com/gchure/phd/blob/master/src/chapter_07/code/ch7_figS5.py)
+$\sigma$. The [Python code (`ch7_figS5.py`)](https://github.com/gchure/phd/blob/master/src/chapter_07/code/ch7_figS5.py)
 used to generate this figure can be found on the thesis [GitHub
 repository](https://github.com/gchure/phd). ](ch7_figS5){#fig:epRA_sbc_rank short-caption="Rank distribution of the
 posterior samples from simulated data for the DNA binding energy and
@@ -495,8 +491,7 @@ corresponding to increasing probability. (B) The posterior predictive
 check of model. The measurements of the fold-change in gene expression
 are shown as black open-faced circles. The percentiles are shown as
 colored bands and indicate the fraction of simulated data drawn from the
-likelihood that fall within the shaded region. The [Python code
-(`ch7_figS6.py`)](https://github.com/gchure/phd/blob/master/src/chapter_07/code/ch7_figS6.py)
+likelihood that fall within the shaded region. The [Python code (`ch7_figS6.py`)](https://github.com/gchure/phd/blob/master/src/chapter_07/code/ch7_figS6.py)
 used to generate this figure can be found on the thesis [GitHub
 repository](https://github.com/gchure/phd).](ch7_figS6){#fig:epRA_ppc short-caption="Markov chain Monte Carlo samples and
 posterior predictive check for DNA binding mutant Q18M."}

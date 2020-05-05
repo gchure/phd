@@ -110,8 +110,7 @@ on plasmids, the fold-change as a function of repressor copy number
 exhibits strong nonlinearities. We used this effect as a way to
 independently infer the parameter $\Delta\varepsilon_{AI}$ and it can be
 seen that this breaks the degeneracy between different
-parameters. The [Python code                                                
-(`ch7_figS20.py`)](https://github.com/gchure/phd/blob/master/src/chapter_07/code/ch7_figS20.py)
+parameters. The [Python code (`ch7_figS20.py`)](https://github.com/gchure/phd/blob/master/src/chapter_07/code/ch7_figS20.py)
 used to generate this figure can be found on the thesis [GitHub
 repository](https://github.com/gchure/phd).  ](ch7_figS20){#fig:lit_degeneracy short-caption="Degenerate fits of data using parameter values from the literature."} 
 

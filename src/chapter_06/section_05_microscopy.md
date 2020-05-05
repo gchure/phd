@@ -185,7 +185,6 @@ to measurements with microscopy and flow cytometry, respectively.
 Fluorescence was normalized between 0 and 1 and centered about the observed
 mean. (C) Central moments of the distributions shown in (B) for microscopy
 and flow cytometry. Each point represents a single biological
-replicate. The [Python code                                      
-(`ch6_figS10.py`)](https://github.com/gchure/phd/blob/master/src/chapter_06/code/ch6_figS10.py) used to generate this figure can be found on the thesis [GitHub
+replicate. The [Python code (`ch6_figS10.py`)](https://github.com/gchure/phd/blob/master/src/chapter_06/code/ch6_figS10.py) used to generate this figure can be found on the thesis [GitHub
 repository](https://github.com/gchure/phd).  ](ch6_figS10){#fig:empirical_comparison short-caption="Empirical
 comparison of flow cytometry and single-cell microscopy."}

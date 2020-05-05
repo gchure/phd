@@ -94,8 +94,7 @@ to changes in the dissociation constants, and hence their corresponding
 curves in have tighter credible regions. All curves were made using
 $\Delta\varepsilon_{RA} = -13.9~k_B T$. As in (C), the sensitivity of
 fold-change with respect to $K_I$ is again smallest (in magnitude) for the
-low repressor copy number strains. The [Python code
-(`ch6_figS11.py`)](https://github.com/gchure/phd/blob/master/src/chapter_06/code/ch6_figS11.py)
+low repressor copy number strains. The [Python code (`ch6_figS11.py`)](https://github.com/gchure/phd/blob/master/src/chapter_06/code/ch6_figS11.py)
 used to generate this figure can be found on the thesis [GitHub
 repository](https://github.com/gchure/phd).
 ](ch6_figS11){#fig:kaki_sensitivity short-caption="Sensitivity analysis of

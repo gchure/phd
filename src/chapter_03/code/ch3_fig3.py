@@ -25,12 +25,15 @@ F = (1 + np.exp(-bohr_range))**-1
 
 rep_colors = {60:colors['brown'], 124:colors['green'], 
               260:colors['orange'], 1220:colors['purple']}
+edge_colors = {60:colors['grey'], 124:colors['grey'], 
+              260:colors['orange'], 1220:colors['grey']}
+
 
 
 # ##############################################################################
 # FIGURE INSTANTIATION
 # ##############################################################################
-fig, ax = plt.subplots(3, 3, figsize=(6, 6), dpi=150)
+fig, ax = plt.subplots(3, 3, figsize=(6, 5.5), dpi=150)
 phd.viz.despine(ax.ravel())
 for a in ax.ravel():
     a.xaxis.set_tick_params(labelsize=6)

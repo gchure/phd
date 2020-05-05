@@ -85,8 +85,9 @@ indicate individual flow cytometry measurements of forward scatter and side
 scatter. Colored contours indicate arbitrary gating contours ranging from 100\%
 ($\alpha = 1$) to 5\% ($\alpha=0.05$). All measurements shown in Chapters 2 and
 3 in this work were made by computing the mean fluorescence from the
-40$^\text{th}$ percentile ($\alpha = 0.4)$. The [Python code                                      
-(`ch6_figS8.py`)](https://github.com/gchure/phd/blob/master/src/chapter_06/code/ch6_figS8.py) used to generate this figure can be found on the thesis [GitHub
+40$^\text{th}$ percentile ($\alpha = 0.4)$. The [Python code
+(`ch6_figS8.py`)](https://github.com/gchure/phd/blob/master/src/chapter_06/code/ch6_figS8.py)
+used to generate this figure can be found on the thesis [GitHub
 repository](https://github.com/gchure/phd). ](ch6_figS8){#fig:gate_contours
 short-caption="Representative unsupervised gating contours of flow-cytometry data."}
 
@@ -121,8 +122,6 @@ colorimetric Miller assays (@garcia2011), and video microscopy (@brewster2014).
 All three methods give consistent results, although flow cytometry meeasurements
 lose accuracy for fold-change less than 0.01. Note that the repressor-DNA
 binding energies $\Delta\varepsilon_{RA}$ used for the theoretical predictions
-were determined in @garcia2011. The [Python code                                      
-(`ch6_figS9.py`)](https://github.com/gchure/phd/blob/master/src/chapter_06/code/ch6_figS9.py) used to generate this figure can be found on the thesis [GitHub
-repository](https://github.com/gchure/phd). ](ch6_figS9){#fig:new_old_comparison
+were determined in @garcia2011. The [Python code (`ch6_figS9.py`)](https://github.com/gchure/phd/blob/master/src/chapter_06/code/ch6_figS9.py) used to generate this figure can be found on the thesis [GitHub repository](https://github.com/gchure/phd). ](ch6_figS9){#fig:new_old_comparison
 short-caption="Comparison of experimental methods to determine the fold-change
 in gene expression."}

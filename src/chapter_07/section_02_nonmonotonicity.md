@@ -131,7 +131,8 @@ of $F$ and $\Delta F$ when the values of $K_A$ and $K_I$ change relative to
 the wild-type, but by different factors. In both panels, the wild-type
 parameter values were taken to be $K_A = 200\,\mu$M, $K_I = 1\,\mu$M and
 $\Delta\varepsilon_{AI} = 4.5\,k_BT$. An interactive version of this figure
-is available on the [paper website.](http://rpgroup.caltech.edu/mwc_mutants) The [Python code                                                
+is available on the [paper website.](http://rpgroup.caltech.edu/mwc_mutants) The
+[Python code
 (`ch7_figS1.py`)](https://github.com/gchure/phd/blob/master/src/chapter_07/code/ch7_figS1.py)
 used to generate this figure can be found on the thesis [GitHub
 repository](https://github.com/gchure/phd).](ch7_figS1){#fig:nonmono

@@ -106,8 +106,7 @@ sites, $N_S$, is held constant at 10 as $R$ and $\Delta \varepsilon_{RA}$ are
 varied. $N_S$ is held constant at 100 as $R$ and $\Delta \varepsilon_{RA}$
 are varied. These situations mimic the common scenario in which a promoter
 construct is placed on either a low or high copy number plasmid. The [Python
-code
-(`ch6_figS3.py`)](https://github.com/gchure/phd/blob/master/src/chapter_06/code/ch6_figS3.py)
+code (`ch6_figS3.py`)](https://github.com/gchure/phd/blob/master/src/chapter_06/code/ch6_figS3.py)
 used to generate this figure can be found on the thesis [GitHub
 repository](https://github.com/gchure/phd). ](ch6_figS3){#fig:fugacity_r
 short-caption="Induction with variable $\boldsymbol{R}$ and multiple specific
@@ -130,8 +129,7 @@ and 100.
 Induction profiles are shown for strains with $R=260$ and $\Delta
 \varepsilon_{RA} = -15.3~k_BT$, $\Delta \varepsilon_{RA} = -13.9\,k_BT$, or
 $\Delta \varepsilon_{RA} = -9.7~k_BT$. The number of specific sites $N_S$ is
-varied from 1 to 500. The [Python code                                      
-(`ch6_figS4.py`)](https://github.com/gchure/phd/blob/master/src/chapter_06/code/ch6_figS4.py) used to generate this figure can be found on the thesis [GitHub
+varied from 1 to 500. The [Python code (`ch6_figS4.py`)](https://github.com/gchure/phd/blob/master/src/chapter_06/code/ch6_figS4.py) used to generate this figure can be found on the thesis [GitHub
 repository](https://github.com/gchure/phd). ](ch6_figS4){#fig:fugacity_Ns short-caption="Induction
 with variable specific sites and fixed $\boldsymbol{R}$."}
 
@@ -157,9 +155,7 @@ for the O1 operator, $\Delta \varepsilon_{RA} = -13.9~k_B T$ for the
 O2 operator, or $\Delta \varepsilon_{RA} = -9.7~k_B T$ for the O3
 operator. The number of specific sites, $N_C$, is varied from 1 to
 500. This mimics the common scenario in which a transcription factor has
-multiple binding sites in the
-genome. The [Python code                                      
-(`ch6_figS5.py`)](https://github.com/gchure/phd/blob/master/src/chapter_06/code/ch6_figS5.py) used to generate this figure can be found on the thesis [GitHub
+multiple binding sites in the genome. The [Python code (`ch6_figS5.py`)](https://github.com/gchure/phd/blob/master/src/chapter_06/code/ch6_figS5.py) used to generate this figure can be found on the thesis [GitHub
 repository](https://github.com/gchure/phd).](ch6_figS5){#fig:Nc short-caption="Induction with variable competitor sites, a single specific site, and fixed $\boldsymbol{R}$."}
 
 ## Properties of the Induction Response
@@ -192,9 +188,9 @@ numbers.
 ![**Phenotypic properties of induction with multiple specific binding
 sites.** The leakiness, saturation, and dynamic range are shown for
 systems with number of specific binding sites $N_S = 10$ or
-$N_S = 100$. The vertical white line indicates the point at which
-$N_S = R$. The [Python code                                      
-(`ch6_figS6.py`)](https://github.com/gchure/phd/blob/master/src/chapter_06/code/ch6_figS6.py) used to generate this figure can be found on the thesis [GitHub
+$N_S = 100$. The vertical white line indicates the point at which $N_S = R$. The
+[Python code (`ch6_figS6.py`)](https://github.com/gchure/phd/blob/master/src/chapter_06/code/ch6_figS6.py)
+used to generate this figure can be found on the thesis [GitHub
 repository](https://github.com/gchure/phd). ](ch6_figS6){#fig:fugacity_properties_Ns short-caption="Phenotypic properties of induction with multiple specific binding sites."}
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;In @Fig:fugacity_properties_Nc, we similarly show how the leakiness, saturation, and dynamic range

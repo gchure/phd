@@ -129,8 +129,7 @@ data can be seen in @Fig:logistic_posterior_distributions.
 fast and slow shock rates.** (A) Kernel density estimates of the posterior
 distribution for $\beta_0$ for fast (blue) and slow (purple) shock rates. (B)
 Kernel density estimates of posterior distribution for
-$\beta_1$. The [Python code                                                
-(`ch9_figS8.py`)](https://github.com/gchure/phd/blob/master/src/chapter_09/code/ch9_figS8.py)
+$\beta_1$. The [Python code (`ch9_figS8.py`)](https://github.com/gchure/phd/blob/master/src/chapter_09/code/ch9_figS8.py)
 used to generate this figure can be found on the thesis [GitHub
 repository](https://github.com/gchure/phd). ](ch9_figS8){#fig:logistic_posterior_distributions
 short-caption="Posterior distributions for logistic regression coefficients

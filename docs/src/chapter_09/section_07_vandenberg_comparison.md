@@ -32,8 +32,7 @@ function of MscL channel copy number was obtained from Figure 5B in van den
 Berg et al 2016. Errors in channel copy number represent the standard
 deviation of several biological replicates (present in original figure) while
 the error in survival probability is taken as  $\approx$
-30\%. The [Python code                                                
-(`ch9_figS12.py`)](https://github.com/gchure/phd/blob/master/src/chapter_09/code/ch9_figS12.py)
+30\%. The [Python code (`ch9_figS12.py`)](https://github.com/gchure/phd/blob/master/src/chapter_09/code/ch9_figS12.py)
 used to generate this figure can be found on the thesis [GitHub
 repository](https://github.com/gchure/phd).](ch9_figS12){#fig:poolman_comparison
 short-caption="MscL abundance versus survival data reported in van den Berg et

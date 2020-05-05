@@ -111,8 +111,7 @@ from the prior distributions shown as a cumulative distribution.
 Percentiles were calculated for 1000 generated data sets, each with 10
 fold-change measurements drawn from the likelihood given the drawn
 values of $\mu$ and
-$\sigma$. The [Python code                                                
-(`ch7_figS7.py`)](https://github.com/gchure/phd/blob/master/src/chapter_07/code/ch7_figS7.py)
+$\sigma$. The [Python code (`ch7_figS7.py`)](https://github.com/gchure/phd/blob/master/src/chapter_07/code/ch7_figS7.py)
 used to generate this figure can be found on the thesis [GitHub
 repository](https://github.com/gchure/phd).](ch7_figS7){#fig:empirical_F_prior_pred short-caption="Prior predictive checks
 for inference of the mean fold-change"}
@@ -159,8 +158,7 @@ of each inference plotted against the posterior shrinkage factor for the
 parameters $\mu$ (blue points) and $\sigma$ (green points). (B)
 Distribution of rank statistics for $\mu$ (red) and $\sigma$ (black).
 Purple envelope represents the 99$^\text{th}$ percentile of a true uniform
-distribution. The [Python code                                                
-(`ch7_figS8.py`)](https://github.com/gchure/phd/blob/master/src/chapter_07/code/ch7_figS8.py)
+distribution. The [Python code (`ch7_figS8.py`)](https://github.com/gchure/phd/blob/master/src/chapter_07/code/ch7_figS8.py)
 used to generate this figure can be found on the thesis [GitHub
 repository](https://github.com/gchure/phd).](ch7_figS8){#fig:empirical_F_sensitivity
 short-caption="Sensitivity measurements and rank statistic distribution of the
@@ -199,8 +197,7 @@ from purple to orange. Marginal distributions for each parameter are shown
 adjacent to the joint distribution. (B) Percentiles of the cumulative
 distributions from the posterior predictive checks are shown as shaded
 bars. Data on which the posterior was conditioned are shown as white
-orange circles and lines. The [Python code                                                
-(`ch7_figS9.py`)](https://github.com/gchure/phd/blob/master/src/chapter_07/code/ch7_figS9.py)
+orange circles and lines. The [Python code (`ch7_figS9.py`)](https://github.com/gchure/phd/blob/master/src/chapter_07/code/ch7_figS9.py)
 used to generate this figure can be found on the thesis [GitHub
 repository](https://github.com/gchure/phd).](ch7_figS9){#fig:empirical_F_post_pred
 short-caption="MCMC sampling output and posterior predictive checks of the
@@ -284,8 +281,7 @@ points are colored by the same conditions as in (B). (D) Inferred free
 energy as a function of the predicted free energy colored by the
 satisfied condition. Error bars are the bounds of the 95\% credible
 region. All inferred values in (A -- D) are the median values of the
-posterior distribution. The [Python code                                                
-(`ch7_figS10.py`)](https://github.com/gchure/phd/blob/master/src/chapter_07/code/ch7_figS10.py)
+posterior distribution. The [Python code (`ch7_figS10.py`)](https://github.com/gchure/phd/blob/master/src/chapter_07/code/ch7_figS10.py)
 used to generate this figure can be found on the thesis [GitHub
 repository](https://github.com/gchure/phd).](ch7_figS10){#fig:empirical_F_error
 short-caption="Identification of systematic error in simulated and real data
