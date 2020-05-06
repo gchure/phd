@@ -3,10 +3,10 @@
 In **Chapers 4 and 5** (and the associated supplementary **Chapters 8 and 9**),
 we explore the final level of adaptation in @Fig:adaptation_levels --
 physiological adaptation. We do so in two distinctly different systems. The
-first (Chapter 4) builds upon our discussion of transcriptional regulation, but
+first (discussed in Chapter 4) builds upon our discussion of transcriptional regulation, but
 now examines how robust the biophysical parameters of the thermodynamic model
 are to changes in physiology, either by changing the available carbon source or
-by changing the temperature. Secondly, we examine
+by changing the temperature. Secondly, in Chapter 5, we examine
 physiological adaptation in the context of osmoregulation -- a true matter of
 life and death in the single-celled world.
 
@@ -28,10 +28,10 @@ interactions* between different specific enzyme forming systems"
 
 ![**A metabolic hierarchy in a three-component growth mixture of glucose,
 sorbitol, and glycerol.** A "triauxic" growth curve illustrating a hierarchy
-of carbon source metabolism. An *E. coli* culture was grown in an medium with
-equal parts glucose, sorbitol and glycerol with utilization in that order.
-Auxic transitions are shown as black points and white vertical lines. Regions
-of the growth curve where glucose, sorbitol, and glycrol are primarily
+of carbon source metabolism. An *E. coli* culture was grown in a medium with
+equal parts glucose, sorbitol, and glycerol with utilization in that order.
+Auxic transitions are shown as black points and white shaded regions. Regions
+of the growth curve where glucose, sorbitol, and glycerol are primarily
 consumed are colored in blue, orange, and green, respectively. Data digitized
 from @monod1947. Smooth line corresponds to a univariate spline applied to
 the data to retain the presentation in the literature. The [Python code
@@ -109,7 +109,7 @@ scales linearly with the growth rate [@schaechter1958; @jun2018], a
 phenomenon that has recently been queried at the single-protein level through
 proteomic methods [@schmidt2016; @li2014a;@valgepea2013a;@peebo2015]. Thus,
 we cannot assume that the protein copy number of the strains used in Chapters
-2 and 3 will not be perturbed. To account for this fact, we used a
+2 and 3 be left unperturbed. To account for this fact, we used a
 fluorescence-based method to directly count the number of LacI repressors per
 cell in each growth condition, a method which is discussed in extensive
 detail in Chapter 9. This experimental approach, while necessary, is
@@ -120,11 +120,11 @@ Chapter 4.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Our work revealed two key features of this
 thermodynamic model of gene expression. First, we found that the values of
-the biophysical parameters inferred from a single physiological sate were
+the biophysical parameters inferred from a single physiological state were
 remarkably predictive when the quality of the carbon source was decreased
 (@Fig:growth_results_intro (A, left)). This indicates that this genetic circuit is
 largely insulated from the metabolic state of the cell. This is exemplified
-in our ability to collapse the measurements across different carbon sources
+in our ability to yet again collapse the measurements, this time across different carbon sources
 as a function of the free energy, shown in @Fig:growth_results_intro (A, right). For
 the carbon sources studied in this Chapter, we conclude that this simple
 thermodynamic model can be considered both tactically and strategically
@@ -159,7 +159,7 @@ rescaling of the thermal energy. Solid lines are predicted fold-change upon
 inclusion of an entropic penalty. Points on right-hand plot were computed
 using parameters with an entropic penalty. All measurements and errors
 displayed are the mean and standard error of three to eight biological
-replicates. Light-grey points in right hand panels are data from @garcia2011,
+replicates. Light-grey points in right-hand panels are data from @garcia2011,
 @brewster2014, @razo-mejia2018, and @chure2019, all of which were measured in
 glucose-supplemented media at 37$^\circ$
 C. The [Python code

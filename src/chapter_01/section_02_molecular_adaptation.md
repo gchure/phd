@@ -1,20 +1,19 @@
 ## On The Janus Face of Molecules
 
-Monod is perhaps most famous for his discovery of allostery, to which he
-famously referred  to as "the second secret of
+Monod is perhaps most famous for his discovery of allostery which he
+famously referred to as "the second secret of
 life" [@ullmann2011; @monod1965]. It is fair to say that this
-"secret" has been now been declassified. Allosteric regulation can be found
-in all domains of life across varied types of biological processes. Allostery
-can be found governing the behavior of ion channels [@einav2017,
+"secret" has now been declassified. Allosteric regulation can be found
+in all domains of life across various types of biological processes. Allostery
+can be found governing the behavior of ion channels [@einav2017;
 @auerbach2012a], enzymatic reactions [@einav2016], chemotaxis [@keymer2006],
 G-protein coupled receptors [@canals2012], quorum sensing [@swem2008], and
-transcriptional regulation [@huang2018, @lindsley2006a], to name a few of
+transcriptional regulation [@huang2018; @lindsley2006a], to name a few of
 many examples. Despite the objective complexity in the molecular structures
 of all of these allosteric molecules, they can frequently be reduced to
-simple cartoons where the details of conformational changes, substrate
-binding affinities, and more can be massaged into a small set of key details.
+simple cartoons where the details of conformational changes, substrate-binding affinities, and more can be massaged into a small set of key details.
 @Fig:allostery (A) shows the molecular structures of a variety of allosteric
-transcriptional repressors (top). While each has their own fascinating
+transcriptional repressors (top). While each has its own fascinating
 structure and continuum of conformational states, all can be coarse grained
 into a simple cartoon representation (bottom) with an active (red) and
 inactive (purple) state, both of which possess binding pockets
@@ -43,7 +42,7 @@ partition function of the system and is the sum
 $$
 \mathcal{Z} = \sum\limits_{i \in \text{states}} e^{-\frac{\epsilon_i}{k_BT}},
 $${#eq:partition_function_def}
-ensuring that the distribution is normalized (meaning probability sums to 1). Therefore, if we are interested in computing
+ensuring that the distribution is normalized. Therefore, if we are interested in computing
 the probability of a given allosteric protein being in the active state, we
 merely  have to enumerate all of the Boltzmann weights (given by the numerator in @Eq:boltzmann)
 and compute
@@ -58,10 +57,10 @@ subtle details of this calculation, the plot in @Fig:allostery (B) presents a
 scale as a function of the inducer, in this case becoming less active as more
 inducer is present).
 
-![**A Coarse grained representation of an allosteric molecule.** (A) Crystal
+![**A coarse grained representation of an allosteric molecule.** (A) Crystal
 structures of a variety of allosteric transcription factors are shown at the
-top. In this thesis, we coarse grain away many of the details to a minimal model
-(bottom) where the protein can be represented as being either active (red) or 
+top. In this thesis, we coarse grain away many of the atomistic details to
+construct a minimal representation (bottom) where the protein can be represented as being either active (red) or 
 inactive (purple), both of which can bind an inducer molecule (orange).
 (B) By making an assumption of quasi-equilibrium, we can compute a
 mathematical description of the active probability of an allosteric protein as a
@@ -78,13 +77,13 @@ where the level of gene expression changes
 in response to changing activity of an allosteric transcriptional repressor.
 Using the same tricks given by @Eq:boltzmann and @Eq:verbal_pact, we expand 
 upon a previously characterized thermodynamic model of the simple repression
-motif. This motif, schematized in @Fig:induction_intro (A) is not just a
+motif. This motif, schematized in @Fig:induction_intro (A), is not just a
 convenient abstraction of a regulatory architecture. Rather, this motif is
 the most ubiquitous regulatory scheme in *E. coli* [@gama-castro2016;
 @ireland2020] and has been the target of much theoretical and
 experimental dissection [@vilar2003; @buchler2003; @bintu2005; @garcia2011;
 @brewster2014; @phillips2019]. However, inclusion of allostery in a mathematical
-sense had yet to be experimentally dissected.
+sense had yet to be explored experimentally.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;At the beginning of 2016, Manuel Razo-Mejia,
 Stephanie L. Barnes, Nathan M. Belliveau, Tal Einav, and I joined forces and
@@ -103,8 +102,8 @@ succinct input-output function for the fold-change in gene expression
 gene expression as the level of gene expression in the
 presence of a transcriptional repressor relative to the level of expression
 when the repressor is absent from the system. Therefore, the value of the
-fold-change is restricted from 0 to 1 representing high and low levels of
-regulation, respectively. 
+fold-change is restricted from 0 to 1, representing high and low levels of
+regulation respectively. 
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; This model, which is explored in depth in Chapter 2, is defined by a minimal
 set of biophysical parameters, many of which can be directly measured using
@@ -113,20 +112,20 @@ we turned to a collection of 17 unique *E. coli* strains, each with different
 copy numbers of the repressor protein and different regulatory DNA sequences.
 Using our theoretical model, we inferred the lone two biophysical parameters,
 which we did not know *a priori*, from a single experimental strain (white
-points in middle panel of @Fig:induction_intro (C)), and tested our
-predictions on all other experimental strains. We found the model to be
+points in middle panel of @Fig:induction_intro (C)). We then applied these
+inferred parameters to our model and drew predictions for all other experimental strains. We found the model to be
 remarkably predictive, suggesting that our "toy" model of an allosteric
 repressor captured the underlying physics of the system.
 
 ![**Experimental dissection of the inducible simple repression input-output
 function.** (A) Schematic diagram of the inducible simple repression motif.
-(B) Schematic diagram of the input-output function as is derived in Chapter
+(B) Schematic diagram of the input-output function as derived in Chapter
 2. (C) Experimental measurements of the fold-change in gene expression using
 the
 *lac* repressor from *E coli*. Different rows correspond to different operator
 sequences and therefore different values for the DNA affinity parameter, $\Delta\varepsilon_{RA}$.
 Different colors correspond to different values for the average repressor
-copy number $R$. While filled points in the middle panel represent the
+copy number $R$. Open-faced points in the middle panel represent the
 experimental strain used to infer the values of the inducer dissociation
 constants. Points and errors correspond to the mean and standard error of ten
 to fifteen biological replicates. The [Python code
@@ -136,18 +135,18 @@ repository](https://github.com/gchure/phd). ](ch1_fig4){#fig:induction_intro
 short-caption="Experimental dissection of the inducible simple repression
 input-output function."}
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A key feature of this work is a derivation of
-thermodynamic state variable of this regulatory architecture termed
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A key feature of this work is the derivation of
+thermodynamic state variable termed
 the *free energy* [@keymer2006; @swem2008]. This parameter provides an intuition for the effective
 free energy difference between states of the promoter in which the repressor
-is bound relative those states in which the repressor is not bound to the
-promoter. This parameter accounts for all of the ways in which one can tune
+is bound and those states in which the repressor is not bound. 
+This parameter accounts for all of the ways in which one can tune
 the variables and still achieve the same fold-change in gene expression, as is diagrammed
 in @Fig:collapse_intro (A). While we leave the details of this derivation to
 Chapter 2, we emphasize
 that this formalism provides a means by which all of the experimental
 measurements plotted in @Fig:induction_intro (C) can be collapsed onto a
-master curve defined *only* by the free energy, which is illustrated in
+master curve defined solely by the free energy, which is illustrated in
 @Fig:collapse_intro (B). This scaling, often referred to as "data collapse"
 in physics, concretely shows that one has identified the *natural variable*
 of the system. With this scaling function in hand, we are able to make a

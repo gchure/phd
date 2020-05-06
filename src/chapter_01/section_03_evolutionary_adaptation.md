@@ -6,13 +6,13 @@ history, the French vision of biology had taken a strongly finalistic and
 vitalistic turn [@loison2013]. In particular, a neo-Lamarckian view had been
 employed to explain the phenomenon of enzymatic adaptation where the the
 enzymes appropriate for digesting the substrate could be spontaneously formed
-out the bacterial cytoplasm and inherited by the cell's descendents,
+out of the bacterial cytoplasm and inherited by the cell's descendents,
 completely independent of genes. In general, this approach to biology deeply
 frustrated Monod and strongly influenced his desire to "physicalize" the
 science [@loison2013]. One tool he knew was critical to this mission was the
 burgeoning field of genetics. In the mid 1930's Monod undertook a short
 retreat to Thomas Hunt Morgan's lab at Caltech where he was introduced to
-genetics which he later remarked to as "biology's first discipline"
+genetics which he later remarked as "biology's first discipline"
 [@loison2013]. This visit had a profound impact on Monod, who reflected upon it
 some three decades later:
 
@@ -40,7 +40,7 @@ it was a "truly genetic property" [@monod1966].
 on a glucose/lactose mixture.** Black curve shows the growth curve of an *E. coli* strain unable
 to digest lactose grown on a glucose/lactose mixed medium. Red curve shows a
 mutant of the same *E. coli* strain which is able to consume lactose. The latter
-displays a diauxic growth cycle with an adaptive period (highlighted in white),
+displays a diauxic growth cycle with an adaptive period,
 illustrating that enzymatic adaptation is a truly genetic property. Figure
 adapted from @monod1947. Lines correspond to univariate splines fit to the data
 to retain the data presentation from the literature. The [Python code
@@ -73,10 +73,10 @@ the free energy and acquire enough experimental data to thoroughly test it.
 
 ![**Mutations lead to shifts in free energy, permitting prediction of double
 mutant phenotypes.** Consider a wild-type
-bacterium which on, on average, exhibits a fold-change of $\approx$ 0.3
+bacterium which, on average, exhibits a fold-change of $\approx$ 0.3
 and a free energy of $-1\, k_BT$ (grey point in (B)). We can consider that a single mutation (either
 orange or purple) changes the mean fold-change and therefore the free energy,
-translating the measurement about the master curve (black line in (B)). Assuming
+translating the measurement elsewhere along the master curve (black line in (B)). Assuming
 there are no interactions between the two single mutations, a null
 hypothesis predicts that for the double mutant (blue bacterium in (A) and point in
 (B), the net free energy is simply the sum of the individual free energy
@@ -89,8 +89,8 @@ predictive shifts in free energy."}
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The primary conceptual development of Chapter 3 is illustrated in
 @Fig:pedagogical_delF_intro. Theoretically, we consider a bacterial strain with
 an allosteric repressor (which we term the "wild-type" repressor) that has been
-sufficiently characterized. Given enough parametric knowledge of the system, we
-can easily compute both its predicted average fold-change in gene expression
+characterized well enough to have sufficient parametric knowledge of the system.
+We can use these known parameters of the mutant to easily compute both its predicted average fold-change in gene expression
 along with the corresponding free energy. However, once a mutation has been
 introduced *into the repressor protein*  (resulting in a non-synonymous amino
 acid change), we are once again ignorant *a priori* of what changes, if any,
@@ -99,9 +99,9 @@ we examine two separate hypothetical mutations, shown in purple and orange, whic
 significantly change the character of the system by either increasing or
 decreasing the fold-change in gene expression, respectively. If we assume that
 these mutations do not change the underlying physics of the system, we are
-permitted to use the theoretical framework outlined in Chapter 2 and in
-@Fig:induction_intro to characterize each mutation and determine what
-biophysical parameters have been changed. This permits us to calculate the new
+permitted to use the theoretical framework outlined in @Fig:induction_intro and
+elaborated on in Chapter 2 to characterize each mutation and determine what
+biophysical parameters have been changed. This framework allows us to calculate the new
 free energy of the system ($F_\text{mutation 1}$) as well as the shift in free
 energy from the wild-type value, 
 $$
@@ -115,15 +115,16 @@ given sufficient parametric knowledge.
 hypothesis for how double mutants may behave. Given known values for $\Delta
 F$ of each mutation in isolation, can we compute the shift in free energy of
 the pairwise double mutant $\Delta F_\text{mutations 1 \& 2}$?
-@Eq:intro_delF_definition presents a mathematical null hypothesis that the
+@Eq:intro_delF_definition presents a mathematical null hypothesis that, assuming
+there are no interactions between the mutants, the
 net shift in the free energy is simply the sum of the individual shifts in
 free energy,
 $$
 \Delta F_\text{mutations 1 \& 2} = \Delta F_\text{mutation 1} +
-\Delta F_\text{mutation 2},
+\Delta F_\text{mutation 2}.
 $${#eq:delF_null_intro}
 
-assuming there is no interaction between the mutations. Given the fact that we can compute the fold-change in gene expression given
+Given the fact that we can compute the fold-change in gene expression with
 knowledge of the free energy, we can therefore predict the double mutant
 phenotype *a priori*, a prediction not possible prior to this work.
 
@@ -133,7 +134,7 @@ experimental cast of characters (Stephanie L. Barnes, Nathan M. Belliveau,
 Manuel Razo-Mejia, and Zofii A. Kaczmarek) and I made a series of mutations
 in the LacI repressor that we had characterized in the work presented in
 Chapter 2. These mutations included three point mutations in the DNA binding
-domain of the repressor, four mutations in the inducer binding domain, nine
+domain of the repressor, four mutations in the inducer-binding domain, nine
 double mutants (one inducer binding and one DNA binding each), across four
 repressor copy numbers and three operator sequences. While this process of
 strain generation and data collection is not the primary focus of the work,
@@ -142,13 +143,13 @@ remained an untested theoretical novelty. While we leave many of the rich
 details of this prediction to the reader in Chapter 3, we showcase our 
 experimental success in  @Fig:double_muts_intro (B) where the predicted induction profiles
 of nine double mutants (light blue shaded regions) are overlaid with their
-experimental measurements (points). The near 100\% agreement between theory and
+experimental measurements (points). The intimate agreement between theory and
 experiment illustrates the utility of using free energy shifts as a means to
 predict new phenotypes.
 
 ![**Theoretical prediction and experimental validation of double mutant
 phenotypes.** (A) Cartoon representation of the LacI repressor with mutations in
-the inducer binding domain and DNA binding domain represented by hats and socks,
+the inducer-binding domain and DNA binding domain represented by hats and socks,
 respectively. While the mutations have known chemical features, we characterize
 each mutation as potentially modifying four biophysical parameters,
 the dissociation constants ($K_A$, $K_I$), the relative energy difference

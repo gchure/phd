@@ -12,7 +12,7 @@ insults ranging from changes in temperature, availability of oxygen for aerobic
 respiration, and even chemical warfare from neighboring microbial  communities
 [@czaran2002]. One such environmental challenge microbes often face is the
 variation in the osmolarity of their surroundings. Changes in ion concentrations
-can result in large volumes of water rushing across the cell membrane, leading
+can result in large volumes of water rushing through the cell membrane, leading
 to rupture of the membrane and ultimately cell death (@Fig:mscl_intro (A)). Unsurprisingly, all domains of life have
 evolved clever mechanisms to combat these osmotic shocks and regulate their
 internal turgor pressure. 
