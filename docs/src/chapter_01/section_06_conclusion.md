@@ -3,7 +3,7 @@
 This thesis as a whole presents an attempt to understand how adaptive
 processes operate in biological systems at a mechanistic level beyond
 qualitative description. The thermodynamic model derived and explored in
-Chapter 2 presents a concrete theoretical framework though which we can
+Chapter 2 presents a concrete theoretical framework through which we can
 understand how mutations and environmental perturbations influence the output
 of a simple genetic circuit with quantitative precision. While the work here
 specifically explores the *mean* level of gene expression of a population,
@@ -31,10 +31,10 @@ the bacterial proteome as a whole [@li2014a; @schmidt2016; @hui2015;
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;In collaboration again with Nathan M.
 Belliveau, we have begun to explore how the composition of the bacterial
 proteome is structured at the single-protein level. @Fig:proteomics (A) shows
-data compiled from a variety of different proteomic data sets (using either
+data compiled from several independent proteomic data sets (using either
 quantitative mass spectrometry [@schmidt2016; @peebo2015; @valgepea2013a] or
 ribosomal profiling [@li2014a]) where the abundance of different molecular
-constituents of the bacterial proteome are plotted as a function of the
+constituents of the bacterial proteome is plotted as a function of the
 growth rate. These components, broken down by their functional designation
 according to their Cluster of Orthologous Groups (COG) annotation
 [@galperin2015a], reveal varied dependencies on the growth rate. Of note are
@@ -49,14 +49,14 @@ and processing (including ribosomal and transcriptional machinery) and the
 proteome fraction dedicated to metabolism. This direct competition for
 resources between the proteins involved in translation (ribosomes, elongation
 factors, etc.) and metabolic networks has been shown previously [@klumpp2008;
-@scott2010a; @hui2015] and suggests a strong evolutionary constraint in how
+@scott2010a; @hui2015] and suggests a strong evolutionary constraint on how
 resources can be optimally partitioned.
 
 ![**Allocation of cellular resources induces compositional structure in the *E.
 coli* proteome.** (A) The total proteome mass of the five major annotated COG
 categories is shown as a function of the experimental growth rate. Different
-marker shapes represent different data sets. (B) The total fraction of the
-proteome dedicated to metabolic machinery plotted as a function of the total
+marker shapes represent different data sets. (B) The fraction by mass of the
+protome dedicated to metabolic machinery plotted as a function of the total
 proteome mass dedicated to the processes of the central dogma. Different shapes
 correspond to the different data sets shown in (A). Color indicates increasing
 growth rate from yellow to dark blue. Data shown in this figure come from
@@ -86,15 +86,16 @@ regulation present an opportunity for a rich theoretical dialogue between
 molecular biophysics and evolutionary dynamics coupled with experimental
 dissection (@Fig:molbiophys_evoldynam).
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The somewhat recent paradigm shift in our
-understanding of noise in biological networks illustrates how
-cross-disciplinary approaches to scientific discovery can solve (and
-more-often) create new fields of biological inquiry. I can only hope that
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The first 20 years of the 21$^\text{st}$ century
+brought a paradigm shift in our
+understanding of noise in biological networks, illustrating how
+cross-disciplinary approaches to scientific discovery can solve and
+even create new fields of biological inquiry. I can only hope that
 some of the material described in the coming chapters can help contribute to
 a systems-biology approach to evolution.
 
 ![**The coming interplay between molecular biophysics and evolutionary
-dynamics.** (A) Recent progress in our understanding the structure and function of
+dynamics.** (A) Recent progress in our understanding of the structure and function of
 biological networks has resulted in many examples where high-dimensional
 biological phenomena can be boiled down to effective phenomena. Future work will
 draw from our understanding of these networks to place them in an evolutionary
