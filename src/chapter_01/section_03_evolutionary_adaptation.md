@@ -52,7 +52,7 @@ lactose-positive and lactose-negative *E. coli* strains."}
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This finding illustrates the level of
 evolutionary adaptation operating at the level of molecules. While it is
 difficult to find any literature dissecting this particular $L+$ mutation,
-it is not difficult to imagine several different mechanisms by how it could
+it is not difficult to imagine several different mechanisms by which it could
 be manifest. One such explanation is that this $L+$ mutation is within a
 transcriptional regulator itself where a deficiency in the ability to respond
 to the presence of lactose (and decreasing glucose concentration) had been restored. Such
@@ -66,7 +66,7 @@ allosteric transcription factor. Furthermore, Chapter 3 presents a generic
 mechanism by which shifts in the free energy can be mapped directly to
 changes in values of the biophysical parameters. This chapter, much like
 Chapter 2, was borne out of a wonderful collaboration with Manuel Razo-Mejia,
-Stephanie L. Barnes, Nathan M. Belliveau, Tal Einav, and Zofii A. Kaczmarek.
+Stephanie Barnes, Nathan Belliveau, Tal Einav, and Zofii Kaczmarek.
 Being able to launch another collaborative effort afforded us the opportunity
 to both develop a new theoretical interpretation for how mutations influence
 the free energy and acquire enough experimental data to thoroughly test it.
@@ -115,7 +115,7 @@ given sufficient parametric knowledge.
 hypothesis for how double mutants may behave. Given known values for $\Delta
 F$ of each mutation in isolation, can we compute the shift in free energy of
 the pairwise double mutant $\Delta F_\text{mutations 1 \& 2}$?
-@Eq:intro_delF_definition presents a mathematical null hypothesis that, assuming
+@Eq:intro_delF_definition allows us to make a mathematical null hypothesis that, assuming
 there are no interactions between the mutants, the
 net shift in the free energy is simply the sum of the individual shifts in
 free energy,
@@ -130,8 +130,8 @@ phenotype *a priori*, a prediction not possible prior to this work.
 
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Over the course of two years (while this theory was in the works), the
-experimental cast of characters (Stephanie L. Barnes, Nathan M. Belliveau,
-Manuel Razo-Mejia, and Zofii A. Kaczmarek) and I made a series of mutations
+experimental cast of characters (Stephanie Barnes, Nathan Belliveau,
+Manuel Razo-Mejia, and Zofii Kaczmarek) and I made a series of mutations
 in the LacI repressor that we had characterized in the work presented in
 Chapter 2. These mutations included three point mutations in the DNA binding
 domain of the repressor, four mutations in the inducer-binding domain, nine

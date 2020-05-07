@@ -55,7 +55,7 @@ schematically in @Fig:allostery (B). While we have passed over some of the more
 subtle details of this calculation, the plot in @Fig:allostery (B) presents a
 *quantitative* prediction of how the activity of an allosteric molecule should
 scale as a function of the inducer, in this case becoming less active as more
-inducer is present).
+inducer is present.
 
 ![**A coarse grained representation of an allosteric molecule.** (A) Crystal
 structures of a variety of allosteric transcription factors are shown at the
@@ -86,7 +86,7 @@ experimental dissection [@vilar2003; @buchler2003; @bintu2005; @garcia2011;
 sense had yet to be explored experimentally.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;At the beginning of 2016, Manuel Razo-Mejia,
-Stephanie L. Barnes, Nathan M. Belliveau, Tal Einav, and I joined forces and
+Stephanie Barnes, Nathan Belliveau, Tal Einav, and I joined forces and
 set out to build a complete theoretical model for allosteric transcriptional
 regulation coupled with a thorough experimental dissection. This was no small
 task and would have likely taken a full Ph.D.'s worth of effort for a single

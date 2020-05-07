@@ -60,7 +60,7 @@ He noted that for some mixtures of carbon sources, the culture grew
 points, @Fig:diauxie_fig (A)). However, some mixtures (such as sucrose and
 arabinose) led to biphasic growth where the culture would grow exponentially,
 undergo a period where growth had ceased (lasting typically 20 - 60 minutes),
-followed again by another round of exponential growth (blue points,
+followed again by another round of exponential growth (green points,
 @Fig:diauxie_fig (A)). Additionally, Monod showed that the onset of this
 diauxic shift could be tuned by varying the relative concentrations of the
 carbon sources, revealing a controllable chemical basis for the adaptation
@@ -133,6 +133,6 @@ historical context alongside the work of Monod. This thesis is structured such
 that **Chapters 1 -- 5** present a self-contained summary of how quantitative
 methods can be used to interrogate and understand the molecular biophysics of
 adaptation. The remainder, **Chapters 6 -- 9**, are detailed supplements to
-Chapters 1 -- 5 and are targeted to readers who want to climb into the weeds of
+Chapters 1 -- 5 and are targeted to readers who want to dig into the weeds of
 statistical inference, error estimation, and analytic properties of the
 theoretical models.  
