@@ -19,13 +19,15 @@
 
 .btn--rounded {
 	border-radius: 3.125rem;
+	border: 1px white;
 }
 
 .btn--dark {
-	color: $color-white;
-	background-color: $color-dark-blue;
+	color: #FFFFFF;
+	background-color: #000000;
 	padding: .5625rem 1.5625rem;
-	transition: color .2s, background-color .2s;
+	border: 1px solid #FFFFFF;
+	// transition: color .2s, background-color .2s;
 
 	@media (min-width: $screen-sm-min) {
 		padding: .8125rem 2.1875rem;
@@ -34,8 +36,8 @@
 	&:hover,
 	&:focus,
 	&:active {
-		color: $color-dark-blue;
-		background-color: $color-yellow;
+		color: #000000;
+		background-color: #FFFFFF;
 	}
 }
 

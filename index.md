@@ -4,14 +4,12 @@ layout: homepage
 keywords:
 title: The Molecular Biophysics of Evolutionary and Physiological Adaptation
 description: Griffin Chure | Ph.D. Thesis
-# buttons:
-#     - content: Button
-#       url: '#'
-#       external_url: false
-#     - icon: github
-#       content: Button with icon
-#       url: '#'
-      # external_url: true
+buttons:
+    - content: Download Draft PDF
+      url: dst/GriffinChure_Thesis_2020-05-08.pdf
+      external_url: false
+      icon: arrow-down
+
 # Author box
 author:
     title: Summary
