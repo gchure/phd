@@ -9,7 +9,7 @@ physics. Namely, we examine how molecular, physiological, and evolutionary
 adaptation governs a feature common to all life -- the regulation of gene
 expression.
 
-\hspace{10mm}We begin by examining the phenomenon of molecular adaptation in
+We begin by examining the phenomenon of molecular adaptation in
 the context of allostery, specifically in the context of allosteric
 transcriptional repressors. Using simple tools of quasi-equilibrium
 thermodynamics, we derive and experimentally dissect a quantitative model of
@@ -25,7 +25,7 @@ of the regulatory architecture. This permits us to collapse nearly 500
 distinct measurements of the level of gene expression
 onto a master curve defined by this free energy.
 
-\hspace{10mm}We leverage this feature of the model and use data collapse as a
+We leverage this feature of the model and use data collapse as a
 method to identify the effects of mutation, a strong evolutionary force
 responsible for much of the genetic diversity in bacteria. In Chapter 3, we examine how
 mutations within the allosteric repressor itself can be mapped to changes in
@@ -37,7 +37,7 @@ predictions experimentally and illustrate that given sufficient knowledge of
 how single mutants behave, the complete phenotypic response of pairwise
 double mutants can be predicted with quantitative accuracy.
 
-\hspace{10mm}With this framework in hand, we turn to
+With this framework in hand, we turn to
 exploring how changes in the physiological state of the cell influence the
 molecular biophysics of the regulatory architecture. We hypothesize that
 changes in the source of carbon in the growth medium or changes in the growth
@@ -50,7 +50,7 @@ remains work to be done both theoretically and experimentally when it comes
 to temperature variation, thermodynamic models can remain powerful tools to
 draw predictions of gene expression in different physiological contexts.
 
-\hspace{10mm}Finally, in Chapter 5, we explore physiological adaptation
+Finally, in Chapter 5, we explore physiological adaptation
 and cellular decision making where it counts -- in the survival of cells to
 environmental insults. We turn our focus beyond transcriptional regulation
 and consider the relationship between osmotic shocks, the abundance of

@@ -13,7 +13,7 @@ subtitle: >
     
 # Author box
 author:
-    title: Summary
+    title: 
     title_url: ''
     external_url: false
     description: >

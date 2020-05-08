@@ -16,7 +16,7 @@ doks:
             - network_name: twitter
               profile_url: 'https://twitter.com/gdchure'
     google_analytics:
-        tracking_code: # Add your Google Analytics tracking code to activate Google Analytics
+        tracking_code: UA-109526846-4 
     comments:
         disqus_forum_shortname: gchure-phd # Add your disqus forum shortname
 

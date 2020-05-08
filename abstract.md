@@ -8,6 +8,7 @@ permalink: abstract
 
 # Hero section
 title:  Abstract
+subtitle: The Molecular Biophysics of Adaptation
     
     
 # Author box

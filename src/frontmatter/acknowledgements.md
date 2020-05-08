@@ -4,17 +4,17 @@ write. This difficulty doesn't come from thinking of \textit{who} to acknowledge
 Rather, it comes from the crushing fear of leaving someone out. The past
 seven years have been some of the most satisfying of my life, both from an
 intellectual and emotional standpoint. 
-
 Rob Phillips, my Ph.D. adviser, is a man who escapes description. As such, it
+
 feels impossible to properly convey my gratitude for his mentorship and, more
 importantly, his friendship. His unceasing desire and unique ability to
 pursue the physical reality of any problem has sculpted my scientific
 process. Among his many scientific qualities, its his refusal to
 differentiate between research and teaching that has had the largest impact
-on me personally. I've been lucky enough to travel widely with him teaching principles of physical biology and
-learning to be a physical biologist along the way. I'll forever be grateful
-for his willingness to take me as a graduate student and his kindness in
-treating me as a friend.
+on me personally. I've been lucky enough to travel widely with him teaching
+principles of physical biology and learning to be a physical biologist along
+the way. I'll forever be grateful for his willingness to take me as a
+graduate student and his kindness in treating me as a friend.
 
 Aside from Rob, Justin Bois has perhaps had the
 strongest influence on my scientific philosophy. Throughout my Ph.D., he has
