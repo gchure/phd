@@ -33,4 +33,4 @@ Razo-Mejia, M.*; Barnes, S.L.*; Belliveau, N.M.* ;
 \textbf{Chure, G.}*; Einav, T.*; Lewis, M.; and Phillips, R.
 (2018). \textit{Tuning Transcriptional Regulation through Signaling: A Predictive
 Theory of Allosteric Induction.} * contributed
-equally. Cell Systems 6, 456-469.e10. DOI: mhttps://doi.org/10.1016/j.cels.2018.02.004 
+equally. Cell Systems 6, 456-469.e10. DOI: https://doi.org/10.1016/j.cels.2018.02.004 
