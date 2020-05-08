@@ -9,7 +9,7 @@ contrasts with previous studies that have parameterized induction curves of
 simple repression motifs, as these have relied on expression systems where
 proteins are expressed from plasmids, resulting in highly variable and
 unconstrained copy numbers [@murphy2007; @daber2009a;
-@daber2011a; @sochor2014]. Instead, our approach relies on a foundation of
+@daber2011; @sochor2014]. Instead, our approach relies on a foundation of
 previous work as depicted in @Fig:inducible_types (C). This includes work
 from our laboratory that used
 *E. coli* constructs based on components of the *lac* system to demonstrate
@@ -21,7 +21,7 @@ was validated experimentally by @brewster2014, who modified this system to
 consider expression from multiple-copy plasmids as well as the presence of
 competing repressor binding sites.
 
-&nbsp;&nbsp;&nbsp;&nbsp;   The present study extends this body of work by introducing three additional
+&nbsp;&nbsp;&nbsp;&nbsp;The present study extends this body of work by introducing three additional
 biophysical parameters – $\Delta\varepsilon_{AI}$, $K_A$, and $K_I$ – which
 capture the allosteric nature of the transcription factor and complement the
 results shown by @garcia2011 and @brewster2014. Although the current work
@@ -115,7 +115,7 @@ represent the upper and lower bounds of the $95^\text{th}$ percentile of the
 parameter value distributions (see  [@Fig:induction_predictions] (B)).
 Unfortunately, we are not able to make a meaningful value-for-value
 comparison of our parameters to those of earlier studies [@daber2009a;
-@daber2011a] because of uncertainties in both gene copy number and
+@daber2011] because of uncertainties in both gene copy number and
 transcription factor copy numbers in these studies, as illustrated in
 supplemental Chapter 6. We then predicted the fold-change for the remaining
 seventeen strains with no further fitting (see 
@@ -127,7 +127,7 @@ determining the width of the credible regions are explored in the supplemental
 Chapter 6.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;We stress that the entire suite of predictions in
-@Fig:inductino_predictions (C -- J) is based upon the induction
+@Fig:induction_predictions (C -- J) is based upon the induction
 profile of a single strain. Our ability to make such a broad range of
 predictions stems from the fact that our parameters of interest -- such as the
 repressor copy number and DNA binding energy -- appear as distinct physical

@@ -20,7 +20,7 @@ allosteric circuits for synthetic biology [@lutz1997; @moon2012; @rogers2015;
 @rohlhill2017]. Somewhat recently, 
 @daber2009a theoretically explored the induction of simple repression
 within the MWC model and experimentally measured how mutations alter the
-induction profiles of transcription factors @daber2011a. @vilar2013 analyzed a
+induction profiles of transcription factors @daber2011. @vilar2013 analyzed a
 variety of interactions in inducible *lac*-based systems including the
 effects of oligomerization and DNA folding on transcription factor induction. Other work has attempted to use the *lac* system to reconcile *in vitro*
 and *in vivo* measurements [@tungtur2011].

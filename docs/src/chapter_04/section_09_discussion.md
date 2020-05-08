@@ -79,7 +79,7 @@ was borne out of similar phenomenological characterization
 experiment [@phillips2001]. Further work is now needed to develop a
 theory of temperature effects in the regulation of gene expression.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The effective free energy $F$, as defined in @Eq:growh_bohr_parameter, is a state variable of the simple
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The effective free energy $F$, as defined in @Eq:growth_bohr_parameter, is a state variable of the simple
 repression regulatory architecture. This is illustrated in @Fig:collapse
  where fold-change measurements from a wide array of conditions (and measurement techniques) can be collapsed onto
 the same theoretical description. Evolutionary perturbations (such as

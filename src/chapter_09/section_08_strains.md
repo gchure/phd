@@ -6,16 +6,16 @@
 |--------------|-----------------------------------------------------------|-----------|
 | MJF641       | Frag1, *$\Delta$mscL::cm, $\Delta$mscS, $\Delta$mscK::kan, $\Delta$ybdG::apr, $\Delta$ynaI, $\Delta$yjeP, $\Delta$ybiO, ycjM::Tn10*                | @edwards2012         |
 | MLG910       | MG1655, *$\Delta$mscL ::$\phi$mscL-sfGFP, $\Delta$galK::kan, $\Delta$lacI, $\Delta$lacZY A*                                                        | @bialecka-fornal2012|
-| D6LG-Tn10    | Frag1, *$\Delta$mscL ::$\phi$mscL-sfGFP, $\Delta$mscS, $\Delta$mscK::kan, $\Delta$ybdG::apr, $\Delta$ynaI, $\Delta$yjeP, $\Delta$ybiO, ycjM::Tn10* | @chure2018 |
-| D6LG (SD0)   | Frag1, *$\Delta$mscL ::$\phi$mscL-sfGFP, $\Delta$mscS, $\Delta$mscK::kan, $\Delta$ybdG::apr, $\Delta$ynaI, $\Delta$yjeP, $\Delta$ybiO*             | @chure2018 |
+| D6LG-Tn10    | Frag1, *$\Delta$mscL ::$\phi$mscL-sfGFP, $\Delta$mscS, $\Delta$mscK::kan, $\Delta$ybdG::apr, $\Delta$ynaI, $\Delta$yjeP, $\Delta$ybiO, ycjM::Tn10* | This Work |
+| D6LG (SD0)   | Frag1, *$\Delta$mscL ::$\phi$mscL-sfGFP, $\Delta$mscS, $\Delta$mscK::kan, $\Delta$ybdG::apr, $\Delta$ynaI, $\Delta$yjeP, $\Delta$ybiO*             | This Work |
 | XTL298       | CC4231*, araD:: tetA-sacB-amp*                                                                                                                     | [@li2013] |
-| D6LTetSac    | Frag1, *mscL-sfGFP:: tetA-sacB, $\Delta$mscS, $\Delta$mscK::kan, $\Delta$ybdG::apr, $\Delta$ynaI, $\Delta$yjeP, $\Delta$ybiO*                      | @chure2018 |
-| D6LG (SD1)   | Frag1, *$\Delta$mscL ::$\phi$mscL-sfGFP, $\Delta$mscS, $\Delta$mscK::kan, $\Delta$ybdG::apr, $\Delta$ynaI, $\Delta$yjeP, $\Delta$ybiO*             | @chure2018 |
-| D6LG (SD2)   | Frag1, *$\Delta$mscL ::$\phi$mscL-sfGFP, $\Delta$mscS, $\Delta$mscK::kan, $\Delta$ybdG::apr, $\Delta$ynaI, $\Delta$yjeP, $\Delta$ybiO*             | @chure2018 |
-| D6LG (SD4)   | Frag1, *$\Delta$mscL ::$\phi$mscL-sfGFP, $\Delta$mscS, $\Delta$mscK::kan, $\Delta$ybdG::apr, $\Delta$ynaI, $\Delta$yjeP, $\Delta$ybiO*             | @chure2018 |
-| D6LG (SD6)   | Frag1, *$\Delta$mscL ::$\phi$mscL-sfGFP, $\Delta$mscS, $\Delta$mscK::kan, $\Delta$ybdG::apr, $\Delta$ynaI, $\Delta$yjeP, $\Delta$ybiO*             | @chure2018 |
-| D6LG (12SD2) | Frag1, *$\Delta$mscL ::$\phi$mscL-sfGFP, $\Delta$mscS, $\Delta$mscK::kan, $\Delta$ybdG::apr, $\Delta$ynaI, $\Delta$yjeP, $\Delta$ybiO*             | @chure2018 |
-| D6LG (16SD0) | Frag1, *$\Delta$mscL ::$\phi$mscL-sfGFP, $\Delta$mscS, $\Delta$mscK::kan, $\Delta$ybdG::apr, $\Delta$ynaI, $\Delta$yjeP, $\Delta$ybiO*             | @chure2018 |
+| D6LTetSac    | Frag1, *mscL-sfGFP:: tetA-sacB, $\Delta$mscS, $\Delta$mscK::kan, $\Delta$ybdG::apr, $\Delta$ynaI, $\Delta$yjeP, $\Delta$ybiO*                      | This Work |
+| D6LG (SD1)   | Frag1, *$\Delta$mscL ::$\phi$mscL-sfGFP, $\Delta$mscS, $\Delta$mscK::kan, $\Delta$ybdG::apr, $\Delta$ynaI, $\Delta$yjeP, $\Delta$ybiO*             | This Work |
+| D6LG (SD2)   | Frag1, *$\Delta$mscL ::$\phi$mscL-sfGFP, $\Delta$mscS, $\Delta$mscK::kan, $\Delta$ybdG::apr, $\Delta$ynaI, $\Delta$yjeP, $\Delta$ybiO*             | This Work |
+| D6LG (SD4)   | Frag1, *$\Delta$mscL ::$\phi$mscL-sfGFP, $\Delta$mscS, $\Delta$mscK::kan, $\Delta$ybdG::apr, $\Delta$ynaI, $\Delta$yjeP, $\Delta$ybiO*             | This Work |
+| D6LG (SD6)   | Frag1, *$\Delta$mscL ::$\phi$mscL-sfGFP, $\Delta$mscS, $\Delta$mscK::kan, $\Delta$ybdG::apr, $\Delta$ynaI, $\Delta$yjeP, $\Delta$ybiO*             | This Work |
+| D6LG (12SD2) | Frag1, *$\Delta$mscL ::$\phi$mscL-sfGFP, $\Delta$mscS, $\Delta$mscK::kan, $\Delta$ybdG::apr, $\Delta$ynaI, $\Delta$yjeP, $\Delta$ybiO*             | This Work |
+| D6LG (16SD0) | Frag1, *$\Delta$mscL ::$\phi$mscL-sfGFP, $\Delta$mscS, $\Delta$mscK::kan, $\Delta$ybdG::apr, $\Delta$ynaI, $\Delta$yjeP, $\Delta$ybiO*             | This Work |
 : *Escherichia coli* strains used in Chapters 5 and 9.
 
 

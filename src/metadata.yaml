@@ -11,8 +11,10 @@ rights_statement: |
     Some rights reserved. This thesis is distributed under a
     Creative Commons Attribution License CC-BY 4.0. All software used in the
     analysis and generation of figures is distributed under an MIT license and
-    is available on a GitHub repository `http://github.com/gchure/phd` (DOI:
-    XXXX). A digital version of this thesis can be accessed via `http://gchure.github.io/phd`
+    is available on a GitHub repository \href{http://github.com/gchure/phd}{http://github.com/gchure/phd} (DOI:
+    XXXX). All data used in figure generation are available via the CaltechDATA
+    research data repository via \href{}{DOI: XXXX} A digital version of this thesis can be accessed via
+    \href{http://gchure.github.io/phd}{http://gchure.github.io/phd}
 logo: true
 bibliography: references.bib
 csl: styles/cell.csl

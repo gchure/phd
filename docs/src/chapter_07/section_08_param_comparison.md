@@ -9,26 +9,26 @@ to examine different combinations of parameter values and their
 agreement or disagreement with data taken from 
 @garcia2011; @brewster2014 and @razo-mejia2018.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;While the mutations used in this work and those in @daber2011a
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;While the mutations used in this work and those in @daber2011
 are the same, we report significantly different values for the inducer
 binding, DNA binding parameters, and the relative energy difference
 between active and inactive states of the mutant repressors. The
 apparent disagreement of parameter values between the present work and
-those presented in @daber2011a in part stem from different
+those presented in @daber2011 in part stem from different
 treatments of the values for the wild-type Lac repressor. Since its
 isolation by Gilbert and Müller-Hill in the 1960's @gilbert1966, the
 Lac repressor has been the subject of intense biochemical and structural
 study. Many measurements of the inducer and DNA binding kinetics of the
 repressor *in vitro* [such as @ogorman1980] and their values
 have informed the fitting of other parameters from measurements *in
-vivo* (such as @daber2011a and  @daber2009a). All of these
+vivo* (such as @daber2011 and  @daber2009a). All of these
 measurements, however, do not *directly* measure the DNA- or
 inducer-binding kinetics nor the equilibrium constant between the active
 and inactive states of the repressor. To properly estimate the
 parameters, one must either have direct measurement of a subset of the
 parameters or make assumptions regarding the states of the system.
 Examples of the estimated allosteric parameter values of the wild-type
-LacI repressor from our previous work [@razo-mejia2018], that of @daber2011a, and *in vitro* measurements from @ogorman1980 are given in Table 7.3
+LacI repressor from our previous work [@razo-mejia2018], that of @daber2011, and *in vitro* measurements from @ogorman1980 are given in Table 7.3
 The theoretical predictions for the
 fold-change in gene expression, along with the values reported in
 @daber2009a, can be seen using the interactive figure on the [paper
@@ -40,7 +40,7 @@ agreement or lack thereof with the data.
 Table 7.3 can be drastic, in some cases differing by
 almost an order of magnitude. Of particular note is the disagreement in
 the energy difference between the active and inactive states of the
-repressor, $\Delta\varepsilon_{AI}$. @daber2011a determines a
+repressor, $\Delta\varepsilon_{AI}$. @daber2011 determines a
 negative value of $\Delta\varepsilon_{AI}$ meaning that the inactive
 state of the repressor is energetically favorable to the active state.
 In stark contrast is the value reported in our previous work of
@@ -89,7 +89,7 @@ $\Delta\varepsilon_{RA}$ and the total number of repressors per cell. As
 shown in @Fig:lit_degeneracy, using values of $\Delta\varepsilon_{AI}$
 from @razo-mejia2018; @ogorman1980 approximately agree with the
 measurements whereas the predicted curves using $\Delta\varepsilon_{AI}$
-from @daber2011a overestimates the fold-change,
+from @daber2011 overestimates the fold-change,
 even though these values accurately describe the simple-repression data
 shown in the other panels of @Fig:lit_degeneracy.
 
@@ -119,24 +119,24 @@ these parameters, one must make assumptions about the system to make any
 quantitative progress. We chose to use the parameter values defined in our
 laboratory as the repressor fugacity provides us with an independent, albeit
 indirect, measurement of $\Delta\varepsilon_{AI}$ which other works such as
-@daber2011a and @ogorman1980 do not. Both of these works determine all
+@daber2011 and @ogorman1980 do not. Both of these works determine all
 of parameter values simultaneously by fitting to a single set of
 measurements. While these measurements accurately describe their data, their
 parameter values are less successful in accounting for data from @brewster2014; @garcia2011; @razo-mejia2018. In the context
 of this work, we emphasize that we make many of the same qualitative
-conclusions as in @daber2011a with respect to the effects of the
+conclusions as in @daber2011 with respect to the effects of the
 mutations using our particular set of parameter values.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;While we use different values for
 $\Delta\varepsilon_{AI}$, the qualitative results between this work and that
-of @daber2011a are in agreement. For example, both works determine that
+of @daber2011 are in agreement. For example, both works determine that
 mutations in the DNA binding domain alter only the DNA binding affinity
 whereas the mutations in the inducer binding pocket affect only the
 allosteric parameters. Because the biological variables such as repressor and
 reporter gene copy number are tightly controlled in our system, we are able
 to more precisely measure features of the induction profiles such as the
 leakiness in gene expression. This ability allows us to detect changes in the
-active/inactive equilibrium which were masked in @daber2011a
+active/inactive equilibrium which were masked in @daber2011
 by the experimental design.While the precise parameter
 values may be different between publications, the exploration of free energy
 differences resulting from mutations are parameter-value independent and any
@@ -151,13 +151,13 @@ response.
 | **Parameter** | **Value** | **Reference**|
 |:--:|:--:|:--:|
 | $\Delta\varepsilon_{AI}$ | $\geq 4.5\, k_BT$ | @razo-mejia2018 |
-| |$-1.7\, k_BT$ | @daber2011a |
+| |$-1.7\, k_BT$ | @daber2011 |
 | |$0.35\, k_BT$ | @ogorman1980 |
 | $K_A$ |$139^{+22}_{-20}\, \mu$M  | @razo-mejia2018 |
-| | $16\,\mu$M  | @daber2011a |
+| | $16\,\mu$M  | @daber2011 |
 | |$133\,\mu$M  | @ogorman1980 |
 | $K_I$ | $0.53^{+0.01}_{-0.01}\, \mu$M | @razo-mejia2018 |
-| | $2\,\mu$M | @daber2011a |
+| | $2\,\mu$M | @daber2011 |
 | | $4\,\mu$M | @ogorman1980 |
 : Thermodynamic parameter values of wild-type LacI from the
   literature.
@@ -166,22 +166,22 @@ response.
 |**Parameter** | **Value** | $\Delta\varepsilon_{AI}$ **Reference Value** |
 |:--:|:--:|:--:| 
 | $\Delta\varepsilon_{RA}$ (O1 operator) |  $-15.1^{+0.1}_{-0.1}\, k_BT$ |$4.5\, k_BT$ [@razo-mejia2018]|
-|                                         |  $-17.1_{-0.1}^{+0.1}\, k_BT$ | $-1.75\, k_BT$ [@daber2011a]|
+|                                         |  $-17.1_{-0.1}^{+0.1}\, k_BT$ | $-1.75\, k_BT$ [@daber2011]|
 |                                         |  $-15.7_{-0.1}^{+0.1}\, k_BT$ | $0.35\, k_BT$ [@ogorman1980]|
 | $\Delta\varepsilon_{RA}$ (O1 operator)  | $-15.1^{+0.1}_{-0.1}\, k_BT$ |$4.5\, k_BT$ [@razo-mejia2018]| 
-|                                         |  $-17.1_{-0.1}^{+0.1}\, k_BT$| $-1.75\, k_BT$ [@daber2011a]|
+|                                         |  $-17.1_{-0.1}^{+0.1}\, k_BT$| $-1.75\, k_BT$ [@daber2011]|
 |                                         |  $-15.7_{-0.1}^{+0.1}\, k_BT$| $0.35\, k_BT$ [@ogorman1980]|
 |  $\Delta\varepsilon_{RA}$ (O2 operator) |  $-13.4_{-0.1}^{+0.1}\, k_BT$   |   $4.5 k_BT$ [@razo-mejia2018]| 
-|                                         |  $-15.4_{-0.1}^{+0.1}\, k_BT$   |   $-1.75\, k_BT$ [@daber2011a]|
+|                                         |  $-15.4_{-0.1}^{+0.1}\, k_BT$   |   $-1.75\, k_BT$ [@daber2011]|
 |                                         |  $-14.0_{-0.1}^{+0.1}\, k_BT$   |   $0.35\, k_BT$ [@ogorman1980]|
 |  $\Delta\varepsilon_{RA}$ (O3 operator) |  $-9.21^{+0.06}_{-0.06}\, k_BT$ |   $4.5 k_BT$ [@razo-mejia2018]|
-|                                         |  $-11.29^{+0.06}_{-0.06}\, k_BT$|   $-1.75\, k_BT$ [@daber2011a]|
+|                                         |  $-11.29^{+0.06}_{-0.06}\, k_BT$|   $-1.75\, k_BT$ [@daber2011]|
 |                                         |  $-9.85^{+0.06}_{-0.05}\, k_BT$ |   $0.35\, k_BT$ [@ogorman1980]|
 |  $K_A$                                  |  $225^{+10}_{-10}\, \mu$M       | $4.5\, k_BT$ [@razo-mejia2018]|
-|                                         |  $290_{-20}^{+20}\, \mu$M       |   $-1.75\, k_BT$ [@daber2011a]|
+|                                         |  $290_{-20}^{+20}\, \mu$M       |   $-1.75\, k_BT$ [@daber2011]|
 |                                         |  $270_{-20}^{+20}\, \mu$M       |   $0.35\, k_BT$ [@ogorman1980]|
 |  $K_I$                                  |  $0.81_{-0.05}^{+0.05}\, \mu$M  | $4.5\, k_BT$ [@razo-mejia2018]|
-|                                         |  $8.2_{-0.5}^{+0.5}\, \mu$M     |   $-1.75\, k_BT$ [@daber2011a]|
+|                                         |  $8.2_{-0.5}^{+0.5}\, \mu$M     |   $-1.75\, k_BT$ [@daber2011]|
 |                                         |  $5.5_{-0.3}^{+0.5}\, \mu$M     |   $0.35\, k_BT$ [@ogorman1980]|
 
 : Estimated parameters from global fits of data from literature.

@@ -1,7 +1,7 @@
 ## On Using Free Energy to Examine Evolutionary Adaptation
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Allow us to briefly return to Monod and his
-biphasic growth curves in the mid 1940's. At this point in scientific
+biphasic growth curves in the mid 1940s. At this point in scientific
 history, the French vision of biology had taken a strongly finalistic and
 vitalistic turn [@loison2013]. In particular, a neo-Lamarckian view had been
 employed to explain the phenomenon of enzymatic adaptation where the the
@@ -37,7 +37,7 @@ Monod's understanding of enzymatic adaptation [@loison2013], revealing that
 it was a "truly genetic property" [@monod1966].
 
 ![**Growth curves of lactose-positive and lactose-negative *E. coli* strains
-on a glucose/lactose mixture.** Black curve shows the growth curve of an *E. coli* strain unable
+on a glucose/lactose mixture.** Black curve shows the growth curve of an *E. coli* strain unable 
 to digest lactose grown on a glucose/lactose mixed medium. Red curve shows a
 mutant of the same *E. coli* strain which is able to consume lactose. The latter
 displays a diauxic growth cycle with an adaptive period,

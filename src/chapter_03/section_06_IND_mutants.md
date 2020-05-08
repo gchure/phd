@@ -136,12 +136,12 @@ repressors are active in the absence of inducer, whereas the basal active
 fraction is $\approx 99\%$ for the wild-type repressor [@razo-mejia2018].
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;We note that the parameter values reported here disagree with those
-reported in @daber2011a. This disagreement stems from different assumptions
+reported in @daber2011. This disagreement stems from different assumptions
 regarding the residual activity of the repressor in the absence of
 inducer and the parametric degeneracy of the MWC model without a
 concrete independent measure of $\Delta\varepsilon_{AI}$. A detailed
 discussion of the difference in parameter values between our previous
-work [@garcia2011; @razo-mejia2018], that of @daber2011a, and those of other
+work [@garcia2011; @razo-mejia2018], that of @daber2011, and those of other
 seminal works  can be found in the supplemental Chapter 7. 
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Taken together, these parametric changes

@@ -90,7 +90,7 @@ dissection (@Fig:molbiophys_evoldynam).
 brought a paradigm shift in our
 understanding of noise in biological networks, illustrating how
 cross-disciplinary approaches to scientific discovery can solve and
-even create new fields of biological inquiry. I can only hope that
+even create new fields of biological inquiry [@ciechonska2016;@eldar2010b]. I hope that
 some of the material described in the coming chapters can help contribute to
 a systems-biology approach to evolution.
 

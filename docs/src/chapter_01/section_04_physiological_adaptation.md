@@ -109,7 +109,7 @@ scales linearly with the growth rate [@schaechter1958; @jun2018], a
 phenomenon that has recently been queried at the single-protein level through
 proteomic methods [@schmidt2016; @li2014a;@valgepea2013a;@peebo2015]. Thus,
 we cannot assume that the protein copy number of the strains used in Chapters
-2 and 3 be left unperturbed. To account for this fact, we used a
+2 and 3 can be left unperturbed. To account for this fact, we used a
 fluorescence-based method to directly count the number of LacI repressors per
 cell in each growth condition, a method which is discussed in extensive
 detail in Chapter 9. This experimental approach, while necessary, is
@@ -126,7 +126,7 @@ remarkably predictive when the quality of the carbon source was decreased
 largely insulated from the metabolic state of the cell. This is exemplified
 in our ability to yet again collapse the measurements, this time across different carbon sources
 as a function of the free energy, shown in @Fig:growth_results_intro (A, right). For
-the carbon sources studied in this Chapter, we conclude that this simple
+the carbon sources studied in this chapter, we conclude that this simple
 thermodynamic model can be considered both tactically and strategically
 successful.
 
@@ -147,7 +147,7 @@ lines in left-hand side of @Fig:growth_results_intro (B)) and permitted data
 collapse within experimental noise of data collected at 37$^\circ$ C (right-hand
 side of @Fig:growth_results_intro (B)).
 
-![**Performance of a simple thermodynamic model of simple repression in
+![**Performance of a thermodynamic model of simple repression in
 diverse physiological states.** (A) Fold-change in gene expression
 measurements in different carbon sources plotted against the average
 repressor copy number (left) and free energy (right). Black line in the
@@ -173,7 +173,7 @@ states."}
 parameter is not by any means meant to shut the book on temperature effects
 in this model. Rather, it serves as a representation of what *may* help
 explain these effects and demands more focused theoretical and experimental
-work. To say that the current disagreement between theory and experiments
+work. To say that the current disagreement between theory and experiment
 embodies the "strategic failure" of thermodynamic models is, in my view,
 disingenuous. To say so would be to deem the initial failures of elasticity
 theory to properly predict the influence of impurities and temperature on the

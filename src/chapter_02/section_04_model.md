@@ -62,7 +62,7 @@ states.](ch2_fig2){#fig:states_weights short-caption="States and statistical
 weights for the simple repression motif."}
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Thermodynamic models of transcription [@ackers1982; @buchler2003; @vilar2003;
-@bintu2005; @bintu2005a; @kuhlman2007; @daber2011a; @garcia2011;
+@bintu2005; @bintu2005a; @kuhlman2007; @daber2011; @garcia2011;
 @brewster2014; @weinert2014] posit that gene expression is proportional to
 the probability that the RNAP is bound to the promoter $p_\text{bound}$,
 which is given by
@@ -121,7 +121,7 @@ and repressor in the active and inactive states, respectively, and $\Delta
 \varepsilon_{AI} = \varepsilon_{I} - \varepsilon_{A}$ is the free energy
 difference between a repressor in the inactive and active state (the quantity
 $e^{-\beta\Delta \varepsilon_{AI}}$ is sometimes denoted by $L$ [@monod1965;
-@marzen2013] or $K_{\text{RR}*}$ [@daber2011a]). In this equation,
+@marzen2013] or $K_{\text{RR}*}$ [@daber2011]). In this equation,
 $c/K_A$ and $c/K_I$ represent the change in free energy when
 an inducer binds to a repressor in the active or inactive state,
 respectively, while $e^{-\beta \Delta \varepsilon_{AI}}$ represents the
@@ -165,7 +165,7 @@ well-characterized values for many of the parameters in our experimental
 system, leaving only the values of the the MWC parameters ($K_A$, $K_I$, and
 $\Delta \varepsilon_{AI}$) to be determined. We note that while previous
 studies have obtained values for $K_A$, $K_I$, and $L=e^{-\beta \Delta
-\varepsilon_{AI}}$ [@ogorman1980; @daber2011a], they were either based upon
+\varepsilon_{AI}}$ [@ogorman1980; @daber2011], they were either based upon
 *in vitro* biochemical experiments or *in vivo* conditions involving poorly
 characterized transcription factor copy numbers and gene copy numbers. These
 differences relative to our experimental conditions and fitting techniques

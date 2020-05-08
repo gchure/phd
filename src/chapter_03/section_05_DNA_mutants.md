@@ -6,24 +6,24 @@ With this arsenal of analytic diagnostics, we can begin to explore the
 mutational space of the repressor and map these mutations to the
 biophysical parameters they control. As one of the most thoroughly
 studied transcription factors, LacI has been subjected to numerous
-crystallographic and mutational studies [@lewis1996; @daber2009a; @daber2011a]. One such work generated a set
+crystallographic and mutational studies [@lewis1996; @daber2009a; @daber2011]. One such work generated a set
 of point mutations in the LacI repressor and examined the diversity of
-the phenotypic response to different allosteric effectors [@daber2011a]. However,
+the phenotypic response to different allosteric effectors [@daber2011]. However,
 several experimental variables were unknown, precluding precise
 calculation of $\Delta F$ as presented in the previous section. In
-@daber2011a, the repressor variants and the fluorescence reporter were
+@daber2011, the repressor variants and the fluorescence reporter were
 expressed from separate plasmids. As the copy numbers of these plasmids
 fluctuate in the population, both the population average repressor copy
 number and the number of regulated promoters were unknown. Both of these
 quantities have been shown previously to significantly alter the
 measured gene expression and calculation of $\Delta F$ is dependent on
 knowledge of their values. While the approach presented in 
-@daber2011a considers the Lac repressor as an MWC molecule, the copy numbers of the
+@daber2011 considers the Lac repressor as an MWC molecule, the copy numbers of the
 repressor and the reporter gene were swept into an effective parameter
 ${R  / K_{DNA}}$, hindering our ability to distinguish between
 changes in repressor copy number or in DNA binding energy. To test our
 hypothesis of free energy differences resulting from various parameter
-perturbations, we used the dataset in @daber2011a as a guide and chose a
+perturbations, we used the dataset in @daber2011 as a guide and chose a
 subset of the mutations to quantitatively dissect. To control copy
 number variation, the mutant repressors and the reporter gene were
 integrated into the *E. coli* chromosome where the copy numbers are

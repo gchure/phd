@@ -22,7 +22,7 @@ author:
 page_nav:
     next:
         content: Abstract
-        url: phd/abstract
+        url: abstract
 prefix: acknowledgments
 ---
 

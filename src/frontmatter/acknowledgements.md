@@ -62,7 +62,7 @@ Of course, mentorship and camaraderie wasn't restricted to the lab. I am lucky
 to consider fellow Caltech PhD students like Belinda Wenke, Emily Blythe, Andy
 Zhou, Catie Blunt, Shyam Saladi, Sam Ho, Ferdinand Huber, Kyu Hyun Lee, Porfirio
 Quintero, Renee Arias, Joe Redford, Kelsey Boyle, and many others as some of my
-closest friends. During a recent PhD defense, on of my friends remarked that
+closest friends. During a recent PhD defense, one of my friends remarked that
 "grad school can feel like an island." This is half true. Grad school is an
 island, but your island is part of an archipelago. I was lucky enough to have
 friends who made my island feel not so lonesome. 
@@ -74,7 +74,7 @@ assistant for the Physiology summer course from 2015 to 2018 and for the Physica
 Biology of the Cell course in 2018. During this time, I met dozens of
 graduate students, professors, post docs, research technicians, and more who
 have all helped me develop as a scientist and educator. In no particular
-order, I would like to Celine Alkelmade, George Bell, Ambika Nadkarni, Damien
+order, I would like to thank Celine Alkelmade, George Bell, Ambika Nadkarni, Damien
 Dudka, Cat Triandafillou, Mason Kamb, Lizzy Mueller, Chandrima Patra, Miranda
 Hunter, Kyle Naughton, Cayla Jewett, Emily Meltzer, Roya Huang, Charlotte
 Strandkvist, Simon Alamos, Sean McInally, Karna Gowda, Alina Guna, Nalin

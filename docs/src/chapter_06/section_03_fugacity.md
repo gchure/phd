@@ -2,7 +2,7 @@
 We made the choice to perform all of our experiments using strains in which
 a single copy of our simple repression construct had been integrated into the
 chromosome. This stands in contrast to the methods used by a number of other
-studies [@oehler1994; @setty2003; @daber2009a; @daber2011a;
+studies [@oehler1994; @setty2003; @daber2009a; @daber2011;
 @vilar2013; @shis2014; @sochor2014], in which reporter constructs are placed on
 plasmid, meaning that the number of constructs in the cell is not precisely
 known. It is also common to express repressor on plasmid to boost its copy
@@ -164,9 +164,9 @@ As discussed in the main body of the paper, our treatment of the MWC
 model allows us to predict key properties of induction responses. Here,
 we consider the leakiness, saturation, and dynamic range (diagrammed in Fig. 2.1) by numerically solving @Eq:fugacity_reff in the absence of inducer, $c=0$, and in the presence of saturating inducer $c \to \infty$. Using @Eq:fugacity_pact, the former case is given by
 $$
-R_\text{tot} \frac{1}{1 + e^{-\beta \Delta \varepsilon_{AI}}} = N_S \frac{\lambda_r e^{-\beta \Delta \varepsilon_{RA}}}{1 + \lambda_r e^{-\beta \Delta \varepsilon_{RA}}} + N_{NS} \frac{\lambda_r}{1 + \lambda_r} + N_C \frac{\lambda_r e^{-\beta \Delta \varepsilon_C}}{1 + \lambda_r e^{-\beta \Delta \varepsilon_C}},
+R_\text{tot} \frac{1}{1 + e^{-\beta \Delta \varepsilon_{AI}}} = N_S \frac{\lambda_r e^{-\beta \Delta \varepsilon_{RA}}}{1 + \lambda_r e^{-\beta \Delta \varepsilon_{RA}}} + N_{NS} \frac{\lambda_r}{1 + \lambda_r} + N_C \frac{\lambda_r e^{-\beta \Delta \varepsilon_C}}{1 + \lambda_r e^{-\beta \Delta \varepsilon_C}}.
 $${#eq:fugacity_leakiness}
-whereupon substituting in the value of $\lambda_r$ into @Eq:fugacity_fc will yield the leakiness. Similarly, the limit of saturating inducer is found by
+Similarly, the limit of saturating inducer is found by
 determining $\lambda_r$ from the form
 $$
 R_{\text{tot}} \frac{1}{1 + e^{-\beta \Delta \varepsilon_{AI}} \left(\frac{K_A}{K_I} \right)^2} = N_S \frac{\lambda_r e^{-\beta \Delta \varepsilon_{RA}}}{1 + \lambda_r e^{-\beta \Delta \varepsilon_{RA}}} + N_{NS} \frac{\lambda_r}{1 + \lambda_r} + N_C \frac{\lambda_r e^{-\beta \Delta \varepsilon_C}}{1 + \lambda_r e^{-\beta \Delta \varepsilon_C}}.

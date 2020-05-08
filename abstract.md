@@ -20,10 +20,10 @@ author:
 page_nav:
     prev:
         content: Acknowledgements
-        url: phd/acknowledgements
+        url: acknowledgements
     next:
         content: Chapter I
-        url: phd/chapter_01
+        url: chapter_01
 
 ---
 

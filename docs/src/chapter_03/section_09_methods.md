@@ -19,14 +19,14 @@ Integration of LacI mutants was performed with $\lambda$ Red recombineering
 as described in @sharan2009 and @garcia2011.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The mutants studied in this work were
-chosen from data reported in @daber2011a. In selecting mutations, we looked
+chosen from data reported in @daber2011. In selecting mutations, we looked
 for mutants which suggested moderate to strong deviations from the behavior
 of the wild-type repressor. We note that the variant of LacI used in this
 work has an additional three amino acids (Met-Val-Asn) added to the
 N-terminus than the canonical LacI sequence reported in @farabaugh1978. To
 remain consistent with the field, we have identified the mutations with
 respect to their positions in the canonical sequence and those in
-@daber2011a. However, their positions in the raw data files correspond to
+@daber2011. However, their positions in the raw data files correspond to
 that of our LacI variant and is noted in the `README` files associated with
 the data.
 
