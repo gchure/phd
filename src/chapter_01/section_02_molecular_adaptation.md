@@ -3,7 +3,7 @@
 Monod is perhaps most famous for his discovery of allostery which he
 famously referred to as "the second secret of
 life" [@ullmann2011; @monod1965]. It is fair to say that this
-"secret" has now been declassified. Allosteric regulation can be found
+"secret" has now been declassified. Allosteric regulation is present
 in all domains of life across various types of biological processes. Allostery
 can be found governing the behavior of ion channels [@einav2017;
 @auerbach2012a], enzymatic reactions [@einav2016], chemotaxis [@keymer2006],
@@ -66,7 +66,7 @@ inactive (purple), both of which can bind an inducer molecule (orange).
 mathematical description of the active probability of an allosteric protein as a
 function of the inducer concentration (top). In this particular case, the inactive
 state becomes more probable relative to the active state at higher concentrations
-of inducer molecule.](ch1_fig3){#fig:allostery short-caption="A Coarse grained
+of inducer molecule.](ch1_fig3){#fig:allostery short-caption="A coarse grained
 representation of an allosteric molecule."}
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;In **Chapter 2** and the associated
@@ -102,7 +102,7 @@ succinct input-output function for the fold-change in gene expression
 gene expression as the level of gene expression in the
 presence of a transcriptional repressor relative to the level of expression
 when the repressor is absent from the system. Therefore, the value of the
-fold-change is restricted from 0 to 1, representing high and low levels of
+fold-change is restricted from 0 to 1, corresponding to high and low levels of
 regulation respectively. 
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; This model, which is explored in depth in Chapter 2, is defined by a minimal

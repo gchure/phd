@@ -4,8 +4,8 @@ write. This difficulty doesn't come from thinking of \textit{who} to acknowledge
 Rather, it comes from the crushing fear of leaving someone out. The past
 seven years have been some of the most satisfying of my life, both from an
 intellectual and emotional standpoint. 
-Rob Phillips, my Ph.D. adviser, is a man who escapes description. As such, it
 
+Rob Phillips, my Ph.D. adviser, is a man who escapes description. As such, it
 feels impossible to properly convey my gratitude for his mentorship and, more
 importantly, his friendship. His unceasing desire and unique ability to
 pursue the physical reality of any problem has sculpted my scientific
@@ -36,7 +36,7 @@ importantly, communicated. Alongside Heun Jin, I've had the pleasure to be
 coauthors with Manuel Razo-Mejia, Soichi Hirokawa, Muir Morrison, Zofii
 Kaczmarek, Nathan Belliveau, Stephanie Barnes, and Tal Einav. Soichi and Muir
 have faithfully served as my office-mates for the past six years and have
-served as a sounding board for many of the ideas presented in this thesis.
+often acted as a sounding board for many of the ideas presented in this thesis.
 Muir and Soichi's deep knowledge of physics helped me develop the physical
 intuition I have today and I will forever owe them for the time they took out
 of their days help me understand my science. Manuel and Nathan are those who
@@ -56,13 +56,13 @@ Ireland, Rachel Banks, Rebecca Rousseau, Vahe Galstyan, Niko McCarty, Tom
 R\"{o}schinger, Molly Bassette, Jonathan Gross, Celene Barrera, Matthias
 Rydenfelt, Kimberly Berry, Gita Mahmoudabadi, and Daniel Jones are others who
 are currently in (or, at least recently departed) the group to whom I am
-grateful for their scientific discussions over the years.
+grateful for their discussions over the years.
 
 Of course, mentorship and camaraderie wasn't restricted to the lab. I am lucky
-to consider fellow Caltech PhD students like Belinda Wenke, Emily Blythe, Andy
+to consider fellow Caltech Ph.D. students like Belinda Wenke, Emily Blythe, Andy
 Zhou, Catie Blunt, Shyam Saladi, Sam Ho, Ferdinand Huber, Kyu Hyun Lee, Porfirio
 Quintero, Renee Arias, Joe Redford, Kelsey Boyle, and many others as some of my
-closest friends. During a recent PhD defense, one of my friends remarked that
+closest friends. During a recent Ph.D. defense, one of them remarked that
 "grad school can feel like an island." This is half true. Grad school is an
 island, but your island is part of an archipelago. I was lucky enough to have
 friends who made my island feel not so lonesome. 

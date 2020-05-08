@@ -6,11 +6,11 @@ history, the French vision of biology had taken a strongly finalistic and
 vitalistic turn [@loison2013]. In particular, a neo-Lamarckian view had been
 employed to explain the phenomenon of enzymatic adaptation where the the
 enzymes appropriate for digesting the substrate could be spontaneously formed
-out of the bacterial cytoplasm and inherited by the cell's descendents,
+out of the bacterial cytoplasm and inherited by the cell's descendants,
 completely independent of genes. In general, this approach to biology deeply
 frustrated Monod and strongly influenced his desire to "physicalize" the
 science [@loison2013]. One tool he knew was critical to this mission was the
-burgeoning field of genetics. In the mid 1930's Monod undertook a short
+burgeoning field of genetics. In the mid 1930s Monod undertook a short
 retreat to Thomas Hunt Morgan's lab at Caltech where he was introduced to
 genetics which he later remarked as "biology's first discipline"
 [@loison2013]. This visit had a profound impact on Monod, who reflected upon it
@@ -24,7 +24,7 @@ some three decades later:
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Once he returned to his study of bacterial
 growth and enzymatic adaptation, he was confronted with incorporating the
 role of genetic inheritance into his mechanistic explanations. In the mid
-1940's, Monod and his coworkers had begun experimenting with a strain of *E.
+1940s, Monod and his coworkers had begun experimenting with a strain of *E.
 coli* which was unable to digest lactose, termed $L-$. When grown on a mixture of glucose and lactose, this strain
 would not display a diauxic shift and would only be able to consume the
 glucose in the medium (@Fig:lacneg, black). However, Monod and his coworker Alice Audureau

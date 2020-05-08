@@ -30,12 +30,12 @@ aerobic to fermentative metabolism). (C) Evolutionary adaptation is recorded
 in the variation in the genetic sequence of regulatory molecules. Variations
 in sequence influence the function of the proteins and RNAs they encode which
 ultimately define cellular fitness.](ch1_fig1){#fig:adaptation_levels
-short-caption="The spatial, temporal, and mechanistic scale of adaptation."}
+short-caption="The spatial, temporal, and mechanistic scales of adaptation."}
 
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The idea of molecular adaption is not novel and
 demands a brief foray into the history of bacterial growth and the dawn of
-regulatory biology. In the late 1890's, Emilé Duclaux and his graduate
+regulatory biology. In the late 1890s, Emilé Duclaux and his graduate
 student Frédéric Diénert performed a series of experiments illustrating that
 the common yeast could only consume galactose after an incubation period with
 the sugar. This led to a general conclusion that "the production of diastases
