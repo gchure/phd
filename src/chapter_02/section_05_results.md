@@ -39,12 +39,12 @@ systems to determine the values of $K_A$ and $K_I$.
 &nbsp;&nbsp;&nbsp;&nbsp;We determine the values of $K_A$ and $K_I$ by fitting to a single induction
 profile using Bayesian inferential methods [@sivia2006]. We then use
 @Eq:fold_change_full to predict gene expression for any concentration of
-inducer, repressor copy number, and DNA binding energy and compare these
+inducer, repressor copy number, and DNA binding energy, and compare these
 predictions against experimental measurements. To obtain induction profiles
 for a set of strains with varying repressor copy numbers, we used modified
-*lacI* ribosomal binding sites from @garcia2011 to generate strains with mean
-repressor copy number per cell of $R = 22 \pm 4$, $60 \pm 20$, $124 \pm 30$,
-$260 \pm 40$, $1220 \pm 160$, and $1740 \pm 340$, where the error denotes
+*lacI* ribosomal binding sites from @garcia2011 to generate strains with 
+repressor copy number of $R = 22 \pm 4$, $60 \pm 20$, $124 \pm 30$,
+$260 \pm 40$, $1220 \pm 160$, and $1740 \pm 340$ per cell on average, where the error denotes
 standard deviation of at least three replicates as measured by @garcia2011.
 We note that $R$ refers to the number of repressor dimers in the cell, which
 is twice the number of repressor tetramers reported by @garcia2011; since
@@ -197,7 +197,7 @@ data from all eighteen strains in which we fitted for the inducer
 dissociation constants $K_A$ and $K_I$, the repressor copy number $R$, and
 the repressor DNA binding energy $\Delta\varepsilon_{RA}$ (see supplemental
 Chapter 6). The resulting parameter values were nearly identical to those
-fitted from any single strain. For the remainder of the text we continue
+fitted from any single strain. For the remainder of this chapter, we continue
 using parameters inferred from the strain with $R=260$ repressors and an O2
 operator.
 
@@ -231,7 +231,7 @@ significant interest to synthetic biology. For example, synthetic
 biology is often focused on generating large responses (i.e. a large
 dynamic range) or finding a strong binding partner (i.e. a small
 $[EC_{50}]$) [@brophy2014; @shis2014]. While these properties are all individually
-informative, when taken together they capture the essential features of
+informative and when taken together, they capture the essential features of
 the induction response. We reiterate that a Hill function approach
 cannot predict these features *a priori* and furthermore requires
 fitting each curve individually. The MWC model, on the other hand,
@@ -277,13 +277,13 @@ predictions for all three operators.
 
 ![**Predictions and experimental measurements of key properties of
 induction profiles.** Data for the leakiness, saturation, and dynamic
-range are obtained from fold-change measurements in in the absence of
+range are obtained from fold-change measurements in the absence of
 IPTG and at saturating concentrations of IPTG. The three
 repressor-operator binding energies in the legend correspond to the O1
 operator ($-15.3~k_B T$), O2 operator ($-13.9~k_B T$), and O3
 operator ($-9.7~k_B T$). Both the $[EC_{50}]$ and effective Hill
 coefficient are inferred by individually fitting each operator-repressor
-pairing in @Fig:induction_experiments (C -- E) separately to in order to smoothly interpolate between the
+pairing in @Fig:induction_experiments (C -- E) separately in order to smoothly interpolate between the
 data points. Error bars for (A -- C) represent the standard error of the mean
 for eight or more replicates; error bars for (D -- E) represent the 95%
 credible region for the parameter found by propagating the credible
@@ -402,7 +402,7 @@ promoter occupancy states to a two-state system."}
 the contribution from the inducer concentration, and the last
 the effect of the repressor copy number. We note that elsewhere, this free energy
 has been dubbed the Bohr parameter since such families of curves are analogous
-to the shifts in hemoglobin binding curves at different pH known as the Bohr
+to the shifts in hemoglobin binding curves at different pHs, known as the Bohr
 effect [@mirny2010; @phillips2015; @einav2016].
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Instead of analyzing each induction curve individually, the free energy provides
@@ -437,8 +437,8 @@ of the free energy. The free energy for each strain was calculated from
 @Eq:induction_bohr_definition. using $n=2$, $\Delta\varepsilon_{AI}=4.5~k_BT$, 
 $K_A=139, \mu\text{M}$, $K_I=0.53 \mu\text{M}$, and the strain-specific $R$ and
 $\Delta\varepsilon_{RA}$. All data points represent the mean, and error bars
-arethe standard error of the mean for eight or more
-replicates.The [Python code
+are the standard error of the mean for eight or more
+replicates. The [Python code
 (`ch2_fig8.py`)](https://github.com/gchure/phd/blob/master/src/chapter_02/code/ch2_fig8.py)
 used to generate this figure can be found on the thesis [GitHub
 repository](https://github.com/gchure/phd).](ch2_fig8){#fig:induction_collapse short-caption="Collapse of

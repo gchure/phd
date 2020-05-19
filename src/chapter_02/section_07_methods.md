@@ -8,7 +8,7 @@ described in @garcia2011. Briefly, the operator variants and YFP reporter gene w
 cloned into a pZS25 background which contains a *lacUV5* promoter that
 drives expression as is shown schematically in  @Fig:states_weights. These constructs
 carried a kanamycin resistance gene and were integrated into the *galK*
-locus of the chromosome using $\lambda$ Red recombineering @sharan2009. The
+locus of the chromosome using $\lambda$ Red recombineering [@sharan2009]. The
 *lacI* gene was constitutively expressed via a
 P$_\text{LtetO-1}$ promoter [@lutz1997], with ribosomal binding site
 mutations made to vary the LacI copy number as described in @salis2009a using
@@ -33,7 +33,7 @@ work [@fernandez-castane2012].
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;To make this theory applicable to transcription factors with any number
 of DNA binding domains, we used a different definition for repressor
 copy number than has been used previously. We define the LacI copy
-number as the average number of repressor dimers per cell whereas in @garcia2011,
+number as the average number of repressor dimers per cell, whereas in @garcia2011,
 the copy number is defined as the average number of repressor tetramers
 in each cell. To motivate this decision, we consider the fact that the
 LacI repressor molecule exists as a tetramer in *E. coli*  [@lewis1996] in which a
@@ -146,7 +146,7 @@ $\langle I_\text{auto} \rangle$ is the average cell autofluorescence
 intensity, as measured from cells that lack the *lac*-YFP construct.
 
 ### Bayesian Parameter Estimation
-In this work, we determine the the most likely parameter values for the
+In this work, we determine the most likely parameter values for the
 inducer dissociation constants $K_A$ and $K_I$ of the active and
 inactive state, respectively, using Bayesian methods. We compute the
 probability distribution of the value of each parameter given the data
@@ -180,11 +180,11 @@ form
 $$
 P(D \vert K_A, K_I, \sigma) =
 \frac{1}{(2\pi\sigma^2)^{\frac{n}{2}}}\prod\limits_{i=1}^n \exp 
-\left[-\frac{(\text{fold-change}^{(i)}_\text{exp} - \text{fold-change}(K_A, K_I, R^{(i)},
+\left[-\frac{(\text{fold-change}^{(i)}_\text{exp} - \text{fc}^\text{(theo)}(K_A, K_I, R^{(i)},
     \Delta\varepsilon_{RA}^{(i)}, c^{(i)}))^2}{2\sigma^2}\right],
 $${#eq:likelihood}
 where $\text{fold-change}^{(i)}_{\text{exp}}$ is the experimental fold-change
-and $\text{fold-change}(\,\cdots)$ is the theoretical prediction. The product
+and $\text{fc}^\text{(theo)}(\,\cdots)$ is the theoretical prediction. The product
 $\prod\limits_{i=1}^n$ captures the assumption that the $n$ data points are
 independent. Note that the likelihood and prior terms now include the extra
 unknown parameter $\sigma$. In applying  @Eq:likelihood, a choice of $K_A$
@@ -198,7 +198,7 @@ $\tilde{k}_I = -\log \frac{K_I}{1\,\mu\text{M}}$ and fit for these
 parameters on a log scale. Dissociation constants are scale invariant,
 so that a change from $10\,\mu\text{M}$ to $1\,\mu\text{M}$ leads to
 an equivalent increase in affinity as a change from $1\,\mu\text{M}$
-to $0.1\,\mu\text{M}$. With these definitions we assume for the prior
+to $0.1\,\mu\text{M}$. With these definitions, we assume for the prior
 $P(\tilde{k}_A, \tilde{k}_I, \sigma)$ that all three parameters are
 independent. In addition, we assume a uniform distribution for
 $\tilde{k}_A$ and $\tilde{k}_I$ and a Jeffreys prior  for the scale
@@ -222,8 +222,8 @@ for $K_A$ and $K_I$.
 ### Data Curation
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;All of the data used in this work as well as all relevant code can be
-found at the [dedicated
-paper website](http://rpgroup-pboc.github.io/mwc_induction). Data were
+found at the [website](http://rpgroup-pboc.github.io/mwc_induction) associated
+with the publication mentioned at the beginning of this chapter. Data were
 collected, stored, and preserved using the Git version control software
 in combination with off-site storage and hosting website GitHub. Code
 used to generate all figures and complete all processing step as and

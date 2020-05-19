@@ -48,7 +48,7 @@ a single experiment. This raises the fear that each regulatory
 architecture may require a unique analysis that cannot carry over to
 other systems, a worry that is exacerbated by the prevalent use of
 phenomenological functions (e.g. Hill functions or ratios of polynomials)
-that can analyze a single data set but cannot be used to extrapolate
+that can analyze a single data set, but cannot be used to extrapolate
 a system’s behavior in other conditions [@setty2003; @poelwijk2011a;
 @vilar2013; @rogers2015; @rohlhill2017].
 
@@ -59,7 +59,7 @@ set out to experimentally confirm these results. Building upon previous work
 [@garcia2011; @brewster2014; @weinert2014] and the work of Monod, Wyman, and
 Changeux [@monod1965], we present a statistical mechanical rendering of
 allostery in the context of induction and corepression (shown schematically
-in @Fig:inducible_types and henceforth referred to as the MWC model) and use
+in @Fig:inducible_types and henceforth referred to as the MWC model), and use
 it as the basis of parameter-free predictions which we then test
 experimentally. More specifically, we study the simple repression motif – a
 widespread bacterial genetic regulatory architecture in which binding of a
