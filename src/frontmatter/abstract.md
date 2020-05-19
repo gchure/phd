@@ -30,7 +30,7 @@ method to identify the effects of mutation, a strong evolutionary force
 responsible for much of the genetic diversity in bacteria. In Chapter 3, we examine how
 mutations within the allosteric repressor itself can be mapped to changes in
 the free energy. The precise value of these free energy shifts and their
-dependence on he inducer concentration reveal different classes of mutations
+dependence on the inducer concentration reveal different classes of mutations
 with one class affecting only the DNA-repressor interaction and another class
 governing the allosteric nature of the repressor. We test these pen-and-paper
 predictions experimentally and illustrate that given sufficient knowledge of
@@ -41,7 +41,7 @@ With this framework in hand, we turn to
 exploring how changes in the physiological state of the cell influence the
 molecular biophysics of the regulatory architecture. We hypothesize that
 changes in the source of carbon in the growth medium or changes in the growth
-temperature can be accounted for by the existing the model without any
+temperature can be accounted for by the existing model without any
 additional parameters. We experimentally show that the parameter values
 determined in one physiological state are inherited when the available carbon
 source is verified, but changes in the growth temperature require some
