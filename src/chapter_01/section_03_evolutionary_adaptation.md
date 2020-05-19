@@ -4,7 +4,7 @@
 biphasic growth curves in the mid 1940s. At this point in scientific
 history, the French vision of biology had taken a strongly finalistic and
 vitalistic turn [@loison2013]. In particular, a neo-Lamarckian view had been
-employed to explain the phenomenon of enzymatic adaptation where the the
+employed to explain the phenomenon of enzymatic adaptation where the
 enzymes appropriate for digesting the substrate could be spontaneously formed
 out of the bacterial cytoplasm and inherited by the cell's descendants,
 completely independent of genes. In general, this approach to biology deeply
@@ -79,7 +79,7 @@ orange or purple) changes the mean fold-change and therefore the free energy,
 translating the measurement elsewhere along the master curve (black line in (B)). Assuming
 there are no interactions between the two single mutations, a null
 hypothesis predicts that for the double mutant (blue bacterium in (A) and point in
-(B), the net free energy is simply the sum of the individual free energy
+(B)), the net free energy is simply the sum of the individual free energy
 shifts.The [Python code
 (`ch1_fig7.py`)](https://github.com/gchure/phd/blob/master/src/chapter_01/code/ch1_fig7.py)
 used to generate this figure can be accessed via the thesis [GitHub

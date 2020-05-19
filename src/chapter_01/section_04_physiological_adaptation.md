@@ -101,9 +101,9 @@ in gene expression, if at all.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The parameter that we can say *a priori* is
 very likely to change is the repressor copy number $R$. In Chapters 2 and 3,
-we knew the total repressor copy number from previous work where the copy
-numbers were directly measured via quantitative Western blotting in a
-particular physiological state [@garcia2011]. However, it has been known for
+we had *a priori* knowledge of the total repressor copy number as previous work
+directly measured their values in a particular physiological state via
+quantitative Western blotting [@garcia2011]. However, it has been known for
 nearly three-quarters of a century that the total protein content of the cell
 scales linearly with the growth rate [@schaechter1958; @jun2018], a
 phenomenon that has recently been queried at the single-protein level through

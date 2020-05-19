@@ -74,7 +74,7 @@ least $\approx 500$ channels are needed. This number is in agreement with recent
 proteomic measurements in *E. coli* [@li2014a; @schmidt2016; @soufi2015], but
 are at odds with current theoretical models. While it is difficult to
 theoretically define a survival/death criterion, current physical models predict
-only a few mechanosensitive channels (specifically, MscL) are needed to relieve
+that only a few mechanosensitive channels (specifically MscL) are needed to relieve
 even large increases in membrane tension. These findings illustrate another
 avenue in which the disagreement between theory and careful, quantitative
 experiments reveal gaps in our understanding of fundamental biological

@@ -41,7 +41,7 @@ the common yeast could only consume galactose after an incubation period with
 the sugar. This led to a general conclusion that "the production of diastases
 [enzymes] depends on the manner of nutrition" in which the cultures were
 grown [@loison2013], a phenomenon later coined *enzymatic adaptation*. This
-is one of the the first observations of the fact that, while an organism may
+is one of the first observations of the fact that, while an organism may
 be able to digest a certain sugar, it may not *always* be able to do so.
 Rather, there seemed to be certain conditions in which the production or
 formation of these enzymes could occur. In his doctoral thesis in 1900,
@@ -78,7 +78,7 @@ teleological approach to much of biology during this time period, especially
 in the French scientific community, severely bothered Monod. To him, this
 kind of approach belonged to a pre-scientific era and lacked the "postulate of
 objectivity" that other fields of science (particularly physics) had adopted [@loison2013]. Near the middle of the 20th century, Monod
-published a 60-page treatise on the the phenomenon of enzymatic adaptation
+published a 60-page treatise on the phenomenon of enzymatic adaptation
 with the level of quantitative rigor he thought it deserved [@monod1947]. In
 this work, he set out to progressively deconstruct and invalidate a series of
 hypotheses for the phenomenon of enzymatic adaptation. In doing so, he laid
@@ -133,6 +133,6 @@ historical context alongside the work of Monod. This thesis is structured such
 that **Chapters 1 -- 5** present a self-contained summary of how quantitative
 methods can be used to interrogate and understand the molecular biophysics of
 adaptation. The remainder, **Chapters 6 -- 9**, are detailed supplements to
-Chapters 1 -- 5 and are targeted to readers who want to dig into the weeds of
+Chapters 1 -- 5,s and are targeted to readers who want to dig into the weeds of
 statistical inference, error estimation, and analytic properties of the
 theoretical models.  

@@ -26,7 +26,7 @@ routinely used to describe complex biological phenomena despite the reality
 that being in thermodynamic equilibrium is synonymous with being dead.
 Even with this glaring assumption, such models have been shown to be
 exceptionally predictive for a variety of complex systems, especially in
-modeling molecular binding reactions [@dill2010] and allostery writ large
+modeling molecular binding reactions [@dill2010] and allostery in general
 [@swem2008; @keymer2006; @einav2017; @einav2016; @phillips2015]. As the timescales of
 binding and unbinding reactions are orders of magnitude smaller than that of
 many other processes in the cell, it is fair to make the approximation that
@@ -55,7 +55,7 @@ schematically in @Fig:allostery (B). While we have passed over some of the more
 subtle details of this calculation, the plot in @Fig:allostery (B) presents a
 *quantitative* prediction of how the activity of an allosteric molecule should
 scale as a function of the inducer, in this case becoming less active as more
-inducer is present.
+inducer molecules are present.
 
 ![**A coarse grained representation of an allosteric molecule.** (A) Crystal
 structures of a variety of allosteric transcription factors are shown at the
@@ -66,7 +66,7 @@ inactive (purple), both of which can bind an inducer molecule (orange).
 mathematical description of the active probability of an allosteric protein as a
 function of the inducer concentration (top). In this particular case, the inactive
 state becomes more probable relative to the active state at higher concentrations
-of inducer molecule.](ch1_fig3){#fig:allostery short-caption="A coarse grained
+of inducer molecules.](ch1_fig3){#fig:allostery short-caption="A coarse grained
 representation of an allosteric molecule."}
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;In **Chapter 2** and the associated
