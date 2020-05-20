@@ -197,7 +197,7 @@ the net change in the free energy is negative, indicating that the
 repressor bound states become more energetically favorable due to the
 mutation. Much like in the case of changing repressor copy number, this
 quantity is independent of inducer concentration and is therefore also
-constant @Fig:deltaF_theory (D).
+constant (@Fig:deltaF_theory (D)).
 However, the magnitude of the change in free energy is linear with DNA
 binding affinity while it is logarithmic with respect to changes in the
 repressor copy number. Thus, to change the free energy by $1\, k_BT$,

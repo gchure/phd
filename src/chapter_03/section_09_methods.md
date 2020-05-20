@@ -33,8 +33,8 @@ the data.
 ### Flow Cytometry
 All fold-change measurements were performed on a MACSQuant flow cytometer as
 described in @razo-mejia2018. Briefly, saturated
-overnight cultures 500 $\mu$L in volume were grown in deep-well 96 well plates 
-covered with  a breathable nylon cover (Lab Pak - Nitex
+overnight cultures 500 $\mu$L in volume were grown in deep-well 96-well plates 
+covered with a breathable nylon cover (Lab Pak - Nitex
 Nylon, Sefar America, Cat. No. 241205). After approximately 12 to 15 hr, the
 cultures reached saturation and were diluted 1000-fold into a second 2 mL
 96-deep-well plate where each well contained 500 $\mu$L of M9 minimal media
@@ -53,7 +53,7 @@ the cultures were held at approximately 4$^\circ$ C by placing the 96-well
 plate on a MACSQuant ice block. All fluorescence measurements were made using
 a 488 nm excitation wavelength with a 525/50 nm emission filter. The
 photomultiplier tube voltage settings for the instrument are the same as
-those used in @razo-mejia2018 and are listed in supplemental Chapter 6.
+those used in @razo-mejia2018, and are listed in supplemental Chapter 6.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The data were processed using an automatic
 unsupervised gating procedure based on the front and side-scattering values,
@@ -120,7 +120,8 @@ probabilistic programming language [@carpenter2017]. All statistical models
 saved as `.stan` models and can be accessed at the [GitHub
 repository](https://www.github.com/rpgroup-pboc/mwc_mutants) associated with
 this work (DOI: 10.5281/zenodo.2721798) or can be downloaded directly from
-the [paper website](https://www.rpgroup.caltech.edu/mwc_mutants).
+the [website](https://www.rpgroup.caltech.edu/mwc_mutants) associated with the
+publication this chapter is based on.
 
 ### Inference of Free Energy From Fold-Change Data
 
@@ -151,7 +152,7 @@ which is simply the rearrangement of  @Eq:mut_collapse. Using simulated
 data, we determined that when $\mu < \sigma$ or $(1 - \mu) < \sigma$, the
 mean fold-change in gene expression was over or underestimated for the lower
 and upper limit, respectively. This means that there are maximum and minimum
-levels of fold-change that can be detected using flow cytometry which are set
+levels of fold-changes that can be detected using flow cytometry which are set
 by the distribution of fold-change measurements resulting from various
 sources of day-to-day variation. This results in a systematic error in the
 calculation of the free energy, making proper inference beyond these limits
