@@ -24,9 +24,9 @@ DNA replication is intrinsically tied to cell senescence [@herbig2004;
 @victorelli2017], to name just a few of many such examples.
 
 &nbsp;&nbsp;&nbsp;&nbsp; By no means are we ``finished” with any of these
-topics. Rather, it's quite the opposite in the sense that having a handle on
+topics. Rather, it is quite the opposite in the sense that having a handle on
 the biophysical knobs that tune the behavior opens the door to a litany of
-new scientific questions. In the case of mechanosenstaion and osmoregulation,
+new scientific questions. In the case of mechanosensation and osmoregulation,
 we have only recently been able to determine some of the basic facts that
 allow us to approach this fascinating biological phenomenon biophysically.
 The dependence of survival on mechanosensitive channel abundance is a key
@@ -58,7 +58,7 @@ observable degree of survival.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The disagreement between the numbers reported in this work and in @vandenberg2016 may partially arise from subtle differences in the experimental
 approach. The primary practical difference is the magnitude of the osmotic
-shock. van den Berg et al. applied an approximately 600 mOsm downshock in
+shock. [@vandenberg2016] applied an approximately 600 mOsm downshock in
 bulk whereas we applied a 1 Osm downshock, which would lead to lower survival
 [@levina1999]. In their work, the uncertainty in both the MscL channel count
 and survival probability is roughly 30%. Given this uncertainty,
@@ -66,7 +66,7 @@ it is reasonable to interpret that the number of channels needed for complete
 protection from osmotic downshock is between 100 and 250 per cell. The
 uncertainty in determining the number of channels per cell is consistent with
 the observed width of the channel number distribution of the Shine-Dalgarno
-sequence mutants used in this work (Fig. @fig:mscl_boxplot(B)). A unique
+sequence mutants used in this work (@Fig:mscl_boxplot(B)). A unique
 property of the single-cell measurements performed in this work allow is the
 direct observation of survival or death of individual cells. We find that
 morphological classification and classification through a propidium iodide
@@ -99,7 +99,7 @@ have observed survival rates above of 100% (ranging from 110% to 125%) with
 an approximate 30% error (see Fig. S3 in @bialecka-fornal2012) which we
 concluded to arise from differences in growth rate. We also note that
 survival rates greater than 100% are observed in @vandenberg2016. For strains
-that have survival rates between 80% and 100% the uncertainty is typically
+that have survival rates between 80% and 100%, the uncertainty is typically
 large, making it difficult to make precise statements regarding when full
 survival is achieved. 
 
@@ -111,7 +111,7 @@ survivability, respectively. The shocks applied in bulk assays are often
 performed manually which can be highly variable. We note that in our
 experiments, we frequently observe cells which do not separate and form
 chains of two or more cells. In plating assays, it is
-assumed that colonies arise from a single founding cell however a colony
+assumed that colonies arise from a single founding cell, however a colony
 formed by a cluster of living and dead cells would be interpreted as a single
 surviving cell, effectively masking the death of the others in the colony
 forming unit. This too could bias the measurement toward higher survival
@@ -134,7 +134,7 @@ possible that the combined effort of the six other mechanosensitive channels
 would make up for some if not all of the remaining 20\%. To explore the
 contribution of another channel to survival, van den Berg et al. also queried
 the contribution of MscS, another mechanosensitive channel, to survival in
-the absence of any other species of mechansensitive channel. It was found
+the absence of any other species of mechanosensitive channel. It was found
 that over the explored range of MscS channel copy numbers, the maximum
 survival rate was approximately 50\%, suggesting that different
 mechanosensitive channels have an upper limit to how much protection they can
@@ -143,15 +143,15 @@ to be learned with respect to the interplay between the various species of
 mechanosensitive channel as well as their regulation.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Recent work has shown that both magnitude and
-the rate of osmotic down shock are important factors in determining cell
+the rate of osmotic downshock are important factors in determining cell
 survival [@bialecka-fornal2015]. In this work, we show that this finding
 holds true for a single species of mechanosensitive channel, even at high
 levels of expression. One might naïvely expect that this rate-dependent
 effect would disappear once a certain threshold of channels had been met. Our
-experiments, however, show that even at nearly 1000 channels per cell the
+experiments, however, show that even at nearly 1000 channels per cell, the
 predicted survival curves for a slow ($< 1.0$ Hz) and fast ($\geq 1.0$ Hz)
 are shifted relative to each other with the fast shock predicting lower rates
-of survival. This suggests either we have not reached this threshold in our
+of survival. This suggests that either we have not reached this threshold in our
 experiments or there is more to understand about the relationship between
 abundance, channel species, and the shock rate.
 
@@ -189,7 +189,7 @@ important physiological response -- life or death.
 | 4 - 5 | Electrophysiology  | @stokes2003a|
 | 10 - 100 | Electrophysiology  | @booth2005|
 |10 - 15 | Electrophysiology | @blount1999|
-Table: Measured cellular copy numbers of MscL. Asterisk (\*) Indicates
+Table: Measured cellular copy numbers of MscL. Asterisk (\*) indicates
 inferred MscL channel copy number from the total number of detected MscL
 peptides.
 
