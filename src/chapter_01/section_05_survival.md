@@ -71,7 +71,7 @@ channel number is given for "slow" and "fast" osmotic shocks in @Fig:mscl_intro
 (C) and (D), respectively. The credible regions in this plot illustrate that for
 an $\approx 80\%$ chance of surviving either a slow or a fast osmotic shock, at
 least $\approx 500$ channels are needed. This number is in agreement with recent
-proteomic measurements in *E. coli* [@li2014a; @schmidt2016; @soufi2015], but
+proteomic measurements in *E. coli* [@li2014; @schmidt2016; @soufi2015], but
 are at odds with current theoretical models. While it is difficult to
 theoretically define a survival/death criterion, current physical models predict
 that only a few mechanosensitive channels (specifically MscL) are needed to relieve

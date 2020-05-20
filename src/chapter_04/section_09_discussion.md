@@ -26,7 +26,7 @@ change to the fold-change in gene expression or in the expression of the
 transcription factor itself, within the resolution of our experiments. Given
 numerous quantitative studies of the proteomic composition reveal a
 dependence on protein content with growth rate [@hui2015; @schmidt2016;
-@li2014a], we find this robustness to be striking.
+@li2014], we find this robustness to be striking.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;@schmidt2016 found that the native expression of
 LacI has a weak positive correlation with the growth rate. The native

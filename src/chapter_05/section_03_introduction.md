@@ -36,7 +36,7 @@ have measured several hundred MscL per cell [@bialecka-fornal2012;
 @schmidt2016; @soufi2015]. To further complicate matters, the expression
 profile of MscL appears to depend on growth phase, available carbon source,
 and other environmental challenges [@bialecka-fornal2012, @schmidt2016;
-@soufi2015; @stokes2003a]. While there are likely more than just a few
+@soufi2015; @stokes2003]. While there are likely more than just a few
 channels per cell, why cells seem to need so many and the biological
 rationale behind their condition-dependent expression both remain a mystery.
 

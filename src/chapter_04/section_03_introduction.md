@@ -12,7 +12,7 @@ level of adaptation using mass spectrometry, ribosomal profiling, and RNA
 sequencing have revealed that various classes of genes (termed "sectors") are
 tuned such that the protein mass fraction of the translational machinery is
 prioritized over the metabolic and catabolic machinery in nutrient replete
-environments [@scott2014; @klumpp2014; @hui2015; @schmidt2016; @li2014a]. This
+environments [@scott2014; @klumpp2014; @hui2015; @schmidt2016; @li2014]. This
 drastic reorganization is mediated by the regulation of gene expression,
 relying on the concerted action of myriad transcription factors. Notably, each
 gene in isolation is regulated by only one or a few components
@@ -58,7 +58,7 @@ rate by a factor of $\approx$ 1.5 and $\approx$ 4 compared to glucose,
 respectively. We hypothesize that different carbon sources should, if
 anything, only modulate the repressor copy number seeing as the relationship
 between growth rate and total protein content has been rigorously quantified
-[@schaechter1958; @schmidt2016; @li2014a; @jun2018]. Using single-cell
+[@schaechter1958; @schmidt2016; @li2014; @jun2018]. Using single-cell
 time-lapse fluorescence microscopy, we directly measure the copy number of
 the repressor in each condition. Under a simple hypothesis, all other
 parameters should be unperturbed, and we can thus rely on previously

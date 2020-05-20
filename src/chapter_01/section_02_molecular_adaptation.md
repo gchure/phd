@@ -6,7 +6,7 @@ life" [@ullmann2011; @monod1965]. It is fair to say that this
 "secret" has now been declassified. Allosteric regulation is present
 in all domains of life across various types of biological processes. Allostery
 can be found governing the behavior of ion channels [@einav2017;
-@auerbach2012a], enzymatic reactions [@einav2016], chemotaxis [@keymer2006],
+@auerbach2012], enzymatic reactions [@einav2016], chemotaxis [@keymer2006],
 G-protein coupled receptors [@canals2012], quorum sensing [@swem2008], and
 transcriptional regulation [@huang2018; @lindsley2006a], to name a few of
 many examples. Despite the objective complexity in the molecular structures

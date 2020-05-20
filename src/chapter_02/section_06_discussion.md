@@ -4,13 +4,13 @@
 an array of biological phenomena has been tied to the existence of
 macromolecules that switch between inactive and active states. Examples can
 be found in a wide variety of cellular processes, including ligand-gated ion
-channels [@auerbach2012a], enzymatic reactions [@velyvis2007; @einav2016],
+channels [@auerbach2012], enzymatic reactions [@velyvis2007; @einav2016],
 chemotaxis [@keymer2006], quorum sensing [@swem2008], G-protein
 coupled receptors [@canals2012], physiologically important proteins [@milo2007;
 @levantino2012], and beyond. One of the most ubiquitous examples of allostery is
 in the context of gene expression, where an array of molecular players bind to
 transcription factors to influence their ability to regulate gene activity
-[@li2014a]. A number of studies have focused on developing a
+[@li2014]. A number of studies have focused on developing a
 quantitative understanding of allosteric regulatory systems. The work of @martins2011 and
 @marzen2013 analytically derives fundamental properties of the MWC model,
 including the leakiness and dynamic range described in this work, noting the

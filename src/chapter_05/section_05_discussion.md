@@ -161,11 +161,11 @@ protection given our knowledge of the conductance and the maximal water flux
 through the channel in its open state [@louhivuori2010; @booth2014]. However,
 recent proteomic studies have revealed average MscL copy numbers to be in the
 range of several hundred per cell, depending on the condition, as can be seen
-in Table 5.1 [@li2014a; @schmidt2016; @soufi2015]. Studies focusing solely on
+in Table 5.1 [@li2014; @schmidt2016; @soufi2015]. Studies focusing solely on
 MscL have shown similar counts through quantitative Western blotting and
 fluorescence microscopy [@bialecka-fornal2012]. Electrophysiology studies
 have told another story with copy number estimates ranging between 4 and 100
-channels per cell [@blount1999; @stokes2003a; @booth2005]. These
+channels per cell [@blount1999; @stokes2003; @booth2005]. These
 measurements, however, measure the active number of channels. The factors
 regulating channel activity in these experiments could be due to
 perturbations during the sample preparation or reflect some unknown mechanism
@@ -183,10 +183,10 @@ important physiological response -- life or death.
 | Reported channels per cell | Method  | Reference |
 |:---|:---|:---:|
 | 480 $\pm$ 103 | Western blotting   | @bialecka-fornal2012 |
-|  560\* |  Ribosomal profiling  | @li2014a|
+|  560\* |  Ribosomal profiling  | @li2014|
 | 331\* | Mass spectrometry  | @schmidt2016|
 | 583\* | Mass spectrometry  | @soufi2015|
-| 4 - 5 | Electrophysiology  | @stokes2003a|
+| 4 - 5 | Electrophysiology  | @stokes2003|
 | 10 - 100 | Electrophysiology  | @booth2005|
 |10 - 15 | Electrophysiology | @blount1999|
 Table: Measured cellular copy numbers of MscL. Asterisk (\*) indicates
