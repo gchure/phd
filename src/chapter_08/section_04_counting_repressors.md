@@ -41,7 +41,7 @@ I_1 = \alpha N_1\, ;\, I_2 = \alpha (N_\text{ tot} - N_1),
 $${#eq:ian_division} 
 where $N_\text{ tot}$ is the total
 number of proteins in the parent cell and $N_1$ and $N_2$ correspond to
-the number of proteins in sibling cell 1 and 2, respectively. This
+the number of proteins in sibling cells 1 and 2, respectively. This
 explicitly states that fluorescence is conserved upon a division,
 $$
 I_{tot} = I_1 + I_2.
@@ -113,7 +113,7 @@ $$
 \langle \left(I_1 - I_2\right)^2 \rangle = \alpha (I_1 + I_2).
 $${#eq:dilution}
 Thus, given snapshots of cell intensities and
-information of their lineage, one can compute how may arbitrary
+information of their lineage, one can compute how many arbitrary
 fluorescence units correspond to a single fluorescent protein.
 
 ### Cell Husbandry and Time-Lapse Microscopy 
@@ -130,7 +130,7 @@ events. Thus, rather than examining the partitioning of fluorescence
 down many branches of a single family tree, it was estimated from an
 array of single division events where the fluorescence intensity of the
 parent cell was variable. In the present work, we take a similar
-approach to that of @brewster2014 and examine the partitioning of
+approach to that of @brewster2014, and examine the partitioning of
 fluorescence among a large number of independent cell divisions.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A typical experimental work-flow is shown in
@@ -171,7 +171,7 @@ relatively simple, the total preparation procedure typically lasted between
 asynchronously growing culture upon dilution into the sterile medium results
 in a systematic error in the calculation of the repressor copy number.
 
-![**An experimental workflow for time-lapse imaging.** (A) the series of steps
+![**An experimental workflow for time-lapse imaging.** (A) The series of steps
 followed in a given experiment. Cells are grown in various concentrations of ATC
 (shaded red cultures) to an OD$_{600nm} \approx 0.3$. Equal aliquots of each
 ATC-induced culture are mixed into a single eppendorf tube and pelleted via
@@ -180,7 +180,7 @@ equal volume of sterile, ATC-free growth medium. This washing procedure is
 repeated three times to ensure that residual ATC is removed from the culture and
 expression of the LacI-mCherry fusion is ceased. After a final resuspension in
 sterile ATC-free medium, the cell mixture is diluted 10 fold to reduce cell
-density.  small aliquot of this mixture is then mounted and imaged at 100x
+density. A small aliquot of this mixture is then mounted and imaged at 100x
 magnification until at least one cell division has occurred. (B) Two
 representative microcolonies from a time-lapse growth experiment. The time point
 is provided above each image. After at least one division has occurred, a final
@@ -256,14 +256,14 @@ partitioned into the two siblings without fail, our assumption of
 repressor adsorption implies that partitioning should be independent of
 the size of the respective sibling. The collection of these validation
 statistics give us confidence that both the experimentation and the
-analysis are properly implemented and not introducing bias into our
+analysis are properly implemented and are not introducing bias into our
 estimation of the calibration factor.
 
 ![**Experimental sanity checks and inference of a fluorescence calibration
 factor.** (A) Intensity distributions of sibling cells after division.
 Arbitrarily labeled "sibling 1" and "sibling 2" distributions are shown in
 purple and orange, respectively. Similarity of the distributions illustrates
-lack of intensity bias on sibling pair assignment. (B) the fractional intensity
+lack of intensity bias on sibling pair assignment. (B) The fractional intensity
 of sibling 1 upon division. For each sibling pair, the fractional intensity is
 computed as the intensity of sibling 1 $I_2$ divided by the summed intensities
 of both siblings $I_1 + I_2$. (C) Partitioning intensity as a function of cell
@@ -340,9 +340,9 @@ $$
 f(I_1\,\vert\,I_2, \alpha, p) = \frac{1}{\alpha}{\left(\frac{I_1 +
 I_2}{
 \alpha}\right)! \over \left({I_1 \over \alpha}\right)!\left({I_2 \over
-\alpha}\right)!}p^{{I_1 \over \alpha}}(1 - p)^{I_2 \over \alpha}
+\alpha}\right)!}p^{{I_1 \over \alpha}}(1 - p)^{I_2 \over \alpha}.
 $${#eq:binom_like}
-However, The quantity $I / \alpha$ is not
+However, the quantity $I / \alpha$ is not
 exact, making calculation of its factorial undefined. These factorials
 can therefore be approximated by a gamma function as
 $n! = \Gamma(n + 1)$.
@@ -362,7 +362,7 @@ where $k$ is the number of division events observed.
 functional form to the prior distribution for the calibration factor
 $g(\alpha)$. Though ignorant of data, the experimental design is such that
 imaging of a typical highly-expressing cell will occupy 2/3 of the dynamic
-range of the camera. We can assume it's more likely that the calibration
+range of the camera. We can assume that it is more likely that the calibration
 factor will be closer to 0 a.u. than the bit depth of the camera (4095 a.u.)
 or larger. We also know that it is physically impossible for the fluorophore
 to be less than 0 a.u., providing a hard lower-bound on its value. We can
@@ -370,7 +370,7 @@ therefore impose a weakly informative prior distribution as a half normal
 distribution,
 $$
 g(\alpha) = \sqrt{2 \over \pi\sigma^2}\exp\left[{-\alpha^2 \over
-   2\sigma^2}\right]\,;\, \forall \alpha > 0. 
+   2\sigma^2}\right]\,;\, \forall \alpha > 0, 
 $${#eq:growth_alpha_prior}
 where the standard deviation is large, for example, $\sigma = 500$ a.u.
 / fluorophore. We evaluated the posterior distribution using Markov
@@ -401,7 +401,7 @@ While determination of the calibration factor relies on time-resolved
 measurement of fluorescence partitioning, we computed the repressor copy
 number and fold-change in gene expression from still snapshots of each
 ATC induction condition and two control samples, as is illustrated in
-@Fig:growth_si_microscopy_workflow
+@Fig:growth_si_microscopy_workflow.
 Given these snapshots, individual cells were segmented again using the SuperSegger software in MATLAB
 R2017b. The result of this analysis is an array of single-cell
 measurements of the YFP and mCherry fluorescence intensities. With these
@@ -442,7 +442,7 @@ between the progeny after a division event such that, on average, the total
 YFP signal of the newborn cells is one-half that of the parent cell. As the
 maturation time of the mCherry and YFP variants used in this work are
 relatively long in *E. coli* [@balleza2018; @nagai2002], we can make the
-assumption any newly-expressed YFP molecules after cells have divided are not
+assumption that any newly-expressed YFP molecules after cells have divided are not
 yet visible in our experiments. Thus, the fold-change in gene expression of
 the average parent cell can be calculated given knowledge of the average
 expression of the progeny.
@@ -481,7 +481,7 @@ distributions and are shown as red vertical lines in @Fig:length_distributions.
 Under this partitioning, we consider all "small" cells to have divided between cessation of
 LacI-mCherry production and imaging, "medium"-length cells to have a
 mixture of long newborn cells (from the tail of the newborn cell length
-distribution) and cells that haven't divided, and cells in the \"long\"
+distribution) and cells that have not divided, and cells in the \"long\"
 group to be composed entirely of cells which did not undergo a division
 over the course of sample preparation.
 
@@ -491,11 +491,11 @@ off cells imaged for calculation of the repressor copy number and fold-change in
 gene expression. The distribution of newborn cell lengths for that given
 condition is shown in grey. The vertical red lines correspond to the cell length
 threshold of 2.5$\mu$m and 3.5$\mu$m, from left to right, respectively. Cels to
-the left of the first vertical line were identified as "small", cells in between
-the two vertical lines to be "medium" sized, and "long" cells tot he right of
+the left of the first vertical line were identified as "small," cells in between
+the two vertical lines to be "medium" sized, and "long" cells to the right of
 the second vertical line. Cells below the 2.4$\mu$m threshold were treated as
 cells who divided after production of lacI-mCherry had been halted. Bottom row
-shows the same data as the top row but as the empirical cumulative
+shows the same data as the top row, but as the empirical cumulative
 distribution. The [Python code (`ch8_figS7.py`)](https://github.com/gchure/phd/blob/master/src/chapter_08/code/ch8_figS7.py)
 used to generate this figure can be found on the thesis [GitHub
 repository](https://github.com/gchure/phd).](ch8_figS7){#fig:length_distributions short-caption="Cell length
@@ -503,7 +503,7 @@ distributions of fluorescence snapshots and newborn cells."}
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Given this coarse delineation of cell age by
 length, we examined how correction factors could be applied to correct for
-the the undesired systematic error due to dilution of repressors. We took the
+the undesired systematic error due to dilution of repressors. We took the
 data collected in this work and compared the results to the fold-change in
 gene expression reported in the literature for the same regulatory
 architecture. Without correcting for undesired cell division, the observed
@@ -534,7 +534,7 @@ the diluted culture undergoes a division event before being imaged.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;We now begin to relax assumptions as to what fraction of the measured
 cells underwent a division event before imaging. As described above, in
-drawing distinctions between "small", "medium", and "large" cells,
+drawing distinctions between "small," "medium," and "large" cells,
 we assume the latter represent cells which *did not* undergo a division
 between the harvesting and imaging of the samples. Thus, the repressor
 counts of these cells should require no correction. The white-faced
@@ -547,7 +547,7 @@ cells underwent a division event [@Fig:correction_factor(B)], though it does not
 error of the binding energy reported in @garcia2011.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The most realistic approach that can be taken
-to avoid using only the "large" bin of cells is to to assume that all cells
+to avoid using only the "large" bin of cells is to assume that all cells
 with a length $\ell < 2.5\, \mu$m have undergone a division, requiring a
 two-fold correction to their average repressor copy number. The result of
 this approach can be seen in @Fig:correction_factor as purple points. The
@@ -577,11 +577,11 @@ remaining sections of this chapter.
 
 ![**Influence of a correction factor on fold-change and the DNA binding energy.**
 (A) Fold-change in gene expression measurements from [@brewster2014;
-@garcia2011; @razo-mejia2018] along with data rom this work. Data from this work
+@garcia2011; @razo-mejia2018] along with data from this work. Data from this work
 shown are with no correction (purple), correcting for small cells only (dark
 purple), using only the large cell fraction (black faced point), and treating
 all cells as newborn cells (red). Where visible, errors correspond to the
-standard error of 5 to 10 biological replicates. (B) estimated DNA binding
+standard error of 5 to 10 biological replicates. (B) Estimated DNA binding
 energy from each data set. Points are the median of the posterior distribution
 over the DNA binding energy. Horizontal lines indicate the width of the
 95\%

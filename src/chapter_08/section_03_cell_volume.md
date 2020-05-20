@@ -10,15 +10,17 @@ masks.
 its dependence on the total growth rate has been the target of numerous
 quantitative studies using a variety of methods including microscopy
 [@pilizota2012; @pilizota2014; @taheri-araghi2015a; @schmidt2016;
-@schaechter1958] and microfluidics [@kubitschek1986] revealing fascinating
-phenomenology of growth at the single cell level . Despite the high precision
+@schaechter1958] and microfluidics [@kubitschek1986], revealing a fascinating
+phenomenology of growth at the single cell level. 
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Despite the high precision
 and extensive calibration of these methods, it is not uncommon to have
 different methods yield different estimates, indicating that it is not a
 trivial measurement to make. In the present work, we sought to estimate the
 cell volume and compare it to the well-established empirical results of the
 field of bacterial physiology to ensure that our experimental protocol does
 not alter the physiology beyond expectations. As the bulk of this work is
-performed using single-cell microscopy, we chose to infer the approximate the
+performed using single-cell microscopy, we chose to infer the approximate
 cell volume from the segmentation masks produced by the SuperSegger MATLAB
 software [@stylianidou2016] which reported the cell length and width in
 units of pixels which can be converted to meaningful units given knowledge of
