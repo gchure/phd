@@ -8,29 +8,29 @@ of a simple genetic circuit. arXiv:2005.03214 (under review at Physical Review E
 
 \textbf{Chure, G.}, Kaczmarek, Z.A., and Phillips, R. (2019). Physiological adaptability
 and parametric versatility in a simple genetic circuit. BioRxiv (under review at
-Cell Systems) DOI: https://doi.org/10.1101/2019.12.19.878462.  
+Cell Systems) DOI: 10.1101/2019.12.19.878462.  
 
 Hirokawa, S., \textbf{Chure, G.}, Belliveau, N.M., Lovely, G.A., Anaya, M., Schatz, D.G.,
 Baltimore, D., and Phillips, R. (2019). Sequence-dependent dynamics of synthetic
 and endogenous RSSs in V(D)J recombination. BioRxiv (in press at Nucleic
-Acids Research) DOI: https://doi.org/10.1101/791954.
+Acids Research) DOI: 10.1101/791954.
 
 \textbf{Chure, G.}, Razo-Mejia, M., Belliveau, N.M., Einav, T., Kaczmarek, Z.A., Barnes,
 S.L., and Phillips, R. (2019). Predictive shifts in free energy couple
 mutations to their phenotypic consequences. Proceedings of the National Academy
-of Sciences (116) DOI: https://doi.org/10.1073/pnas.1907869116  
+of Sciences (116) DOI: 10.1073/pnas.1907869116  
 
 Phillips, R., Belliveau, N.M., \textbf{Chure, G.}, Garcia, H.G., Razo-Mejia, M., and
 Scholes, C. (2019). Figure 1 theory meets figure 2 experiments in the study of
-gene expression. Annual Review of Biophysics 48, 121–163. DOI: https://doi.org/10.1146/annurev-biophys-052118-115525 
+gene expression. Annual Review of Biophysics 48, 121–163. DOI: 10.1146/annurev-biophys-052118-115525 
 
 \textbf{Chure, G.}*, Lee, H.J.* , Rasmussen, A., and Phillips, R. (2018). onnecting the
 dots between mechanosensitive channel abundance, osmotic shock, and survival
 at single-cell resolution.  * contributed equally. Journal of Bacteriology 200 
-DOI: https://doi.org/10.1128/JB.00460-18/
+DOI: 10.1128/JB.00460-18/
 
 Razo-Mejia, M.*, Barnes, S.L.*, Belliveau, N.M.*,
 \textbf{Chure, G.}*, Einav, T.*, Lewis, M., and Phillips, R.
 (2018). Tuning transcriptional regulation through signaling: A predictive
 theory of allosteric induction. * contributed
-equally. Cell Systems 6, 456-469.e10. DOI: https://doi.org/10.1016/j.cels.2018.02.004 
+equally. Cell Systems 6, 456-469.e10. DOI: 10.1016/j.cels.2018.02.004 
