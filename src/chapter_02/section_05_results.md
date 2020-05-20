@@ -257,7 +257,7 @@ $$
 \text{saturation} &= \text{fold-change}(c \to \infty) \\
 &= \left(
 1+\frac{1}{1+e^{-\beta \Delta \varepsilon_{AI} } \left(\frac{K_A}{K_I}\right)^n
-}\frac{R}{N_{NS}}e^{-\beta \Delta\varepsilon_{RA}} \right)^{-1}.
+}\frac{R}{N_{NS}}e^{-\beta \Delta\varepsilon_{RA} } \right)^{-1}.
 \end{aligned}
 $${#eq:saturation}
 Systems that minimize leakiness repress strongly in the absence of

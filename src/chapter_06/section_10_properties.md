@@ -17,7 +17,7 @@ $$
 & \left(
 1+\frac{1}{1+e^{-\beta \Delta \varepsilon_{AI} }}\frac{R}{N_{NS}}e^{-\beta
 \Delta\varepsilon_{RA}} \right)^{-1}.
-$${#eq:induction_si_dyn_rng}
+\end{alignedeq:induction_si_dyn_rng}
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The dynamic range, along with saturation and
 leakiness were plotted with our experimental data in Fig. 2.7(A-C) as a function

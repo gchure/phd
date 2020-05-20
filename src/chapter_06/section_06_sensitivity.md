@@ -58,7 +58,7 @@ $$
 \varepsilon_{AI}} \frac{n}{K_I}\left(\frac{K_A}{K_I}\right)^{n}}{\left( 1 +
 e^{-\beta \Delta \varepsilon_{AI}} \left(\frac{K_A}{K_I}\right)^n
 \right)^2}\frac{R}{N_{NS}}e^{-\beta \Delta\varepsilon_{RA}} \times \\
-& left(
+& \left(
 1+\frac{1}{1+e^{-\beta \Delta \varepsilon_{AI} } \left(\frac{K_A}{K_I}\right)^n
 }\frac{R}{N_{NS}}e^{-\beta \Delta\varepsilon_{RA}} \right)^{-2}.
 \end{aligned}
