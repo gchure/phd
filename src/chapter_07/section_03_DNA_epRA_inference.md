@@ -1,4 +1,4 @@
-## Bayesian Parameter Estimation For DNA Binding Mutants 
+## Bayesian Parameter Estimation for DNA Binding Mutants 
 
 In this section, we outline the statistical model used in this work to
 estimate the DNA binding energy for a given mutation in the DNA binding
@@ -79,7 +79,7 @@ $${#eq:epRA_post_prop}
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;We are now tasked with translating this
 generic notation into a concrete functional form. Our physical model derived
-in Chapter 2 given by computes the average fold-change in gene expression.
+in Chapter 2 computes the average fold-change in gene expression.
 Speaking practically, we make several replicate measurements of the
 fold-change to reduce the effects of random errors. As each replicate is
 independent of the others, it is reasonable to expect that these measurements
@@ -120,11 +120,11 @@ DNA binding energy $\Delta\varepsilon_{RA}$. We can say that it is
 unlikely that any given mutation in the DNA binding domain will result
 in an affinity greater than that of biotin to streptavidin ($1\,
 \mathrm{fM} \approx -35\, \mathrm{k_BT}$, BNID 107139 [@milo2010]), one
-of the strongest known non-covalent bonds. Similarly, it's unlikely that
+of the strongest known non-covalent bonds. Similarly, it is unlikely that
 a given mutation will result in a large, positive binding energy,
-indicating non-specific binding is preferable to specific binding
+indicating that non-specific binding is preferable to specific binding
 ($\sim 1$ to $10\,\mathrm{k_BT}$). While it is unlikely for the DNA
-binding energy to exceed these bounds, it's not impossible, meaning we
+binding energy to exceed these bounds, it is not impossible, meaning we
 should not impose these limits as hard boundaries. Rather, we can define
 a weakly informative prior as a normal distribution with a mean and
 standard deviation as the average of these bounds,
@@ -146,7 +146,7 @@ g(\sigma) = {1 \over \phi}\sqrt{2 \over \pi}\exp\left[-{\sigma^2 \over
 2\phi^2}\right];\, \forall\, \sigma \geq 0
 $${#eq:sig_hn_explicit}
 where $\phi$ is the standard deviation. By choosing $\phi = 0.1$, it is
-unlikely that $\sigma \geq 1$ yet not impossible, permitting the occasional
+unlikely that $\sigma \geq 1$, yet not impossible, permitting the occasional
 measurement significantly outside of the theoretical bounds. The probability
 density function for this prior is shown in @Fig:epRA_prior_pred (B).
 
@@ -237,7 +237,7 @@ $\Delta\varepsilon_{RA}$, estimate the posterior distribution
 $g(\Delta\varepsilon_{RA}, \sigma\,\vert\,\tilde{y})$, and determine how well
 we were able to retrieve the true value of the parameters. However, running
 this once or twice for handpicked values of $\sigma$ and
-$\Delta\varepsilon_{RA}$ won't reveal edge-cases in which the inference
+$\Delta\varepsilon_{RA}$ will not reveal edge-cases in which the inference
 fails, some of which may exist in our data. Rather than performing this
 operation once, we can run this process over a variety of data sets where the
 ground truth parameter value is drawn from the prior distribution (as we did
@@ -323,7 +323,7 @@ the posterior is also considered. It is possible that the posterior could
 have a mean very close to the ground truth value, but have an incredibly
 narrow distribution/spread such that it does not overlap with the
 ground-truth. Only comparing the mean value to the ground truth would suggest
-that the inference "worked". However with a small standard deviation
+that the inference "worked." However with a small standard deviation
 generates a very large $z$-score, telling us that something has gone awry.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;If our inferential model is behaving properly, the width of the
@@ -336,9 +336,9 @@ $$
 s = 1 - {\sigma^2_\text{posterior} \over \sigma^2_\text{prior}}.
 $${#eq:shrinkage}
 When the shrinkage is close to zero, the variance of the posterior is
-approximately the same as the variance of the prior, model is not being
+approximately the same as the variance of the prior, and the model is not being
 properly informed by the data. When $s\approx 1$, the variance of the
-posterior is much smaller than the variance of the prior, indicating that the
+posterior is much smaller than the variance of the prior, indicating that 
 it is being highly informed by the data. A shrinkage less than 0 indicates
 that the posterior is wider than the prior distribution, revealing a severe
 pathology in either the model itself or the implementation.
@@ -435,12 +435,12 @@ above and to the right of the joint distribution, respectively. The
 joint distribution is color coded by the value of the log posterior,
 with bright orange and dark purple corresponding to high and low probability,
 respectively. The symmetric shape of the joint distribution is a telling
-sign that there is no correlation between two parameters. The marginal
+sign that there is no correlation between the two parameters. The marginal
 distributions for each parameter are also relatively narrow, with the
 DNA binding energy covering a range of $\approx 0.6\, k_BT$ and $\sigma$
 spanning $\approx 0.02$. To more precisely quantify the uncertainty, we
 computed the shortest interval of the marginal distribution for each
-parameter contains 95\% of the probability. The bounds of this interval,
+parameter that contains 95\% of the probability. The bounds of this interval,
 coined the Bayesian credible region, can accommodate asymmetry in the
 marginal distribution since the upper and lower bounds of the estimate
 are reported. In the main text, we reported the DNA binding energy
@@ -488,7 +488,7 @@ Marginal distributions for each parameter are shown adjacent to joint
 distribution. Color in the joint distribution corresponds to the value
 of the log posterior with the progression of dark purple to bright orange
 corresponding to increasing probability. (B) The posterior predictive
-check of model. The measurements of the fold-change in gene expression
+check of the model. The measurements of the fold-change in gene expression
 are shown as black open-faced circles. The percentiles are shown as
 colored bands and indicate the fraction of simulated data drawn from the
 likelihood that fall within the shaded region. The [Python code (`ch7_figS6.py`)](https://github.com/gchure/phd/blob/master/src/chapter_07/code/ch7_figS6.py)

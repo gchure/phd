@@ -39,7 +39,7 @@ given as
 $$
 \begin{gathered}
 {\partial \beta\Delta F(c) \over \partial c} =
-2e^{-\beta\Delta\varepsilon_{AI} }\left(\frac{ {K_A^\text{(mut)} }^2 \left(K_A^\text{(mut)}
+2e^{-\beta\Delta\varepsilon_{AI} }\times \\ \left(\frac{ {K_A^\text{(mut)} }^2 \left(K_A^\text{(mut)}
 - K_I^\text{(mut)}\right)\left(c + K_I^\text{(mut)}\right)}{\left(c +
 K_A^\text{(mut)}\right) \left[\left(c +
 K_A^\text{(mut)}\right)^2{K_I^\text{(mut)} }^2 +
@@ -129,7 +129,7 @@ and $K_I$ change relative to wild-type, but maintain the same ratio. $\theta$
 is the scaling factor for both inducer dissociation constants. (B) Behavior
 of $F$ and $\Delta F$ when the values of $K_A$ and $K_I$ change relative to
 the wild-type, but by different factors. In both panels, the wild-type
-parameter values were taken to be $K_A = 200\,\mu$M, $K_I = 1\,\mu$M and
+parameter values were taken to be $K_A = 200\,\mu$M, $K_I = 1\,\mu$M, and
 $\Delta\varepsilon_{AI} = 4.5\,k_BT$. An interactive version of this figure
 is available on the [paper website.](http://rpgroup.caltech.edu/mwc_mutants) The
 [Python code

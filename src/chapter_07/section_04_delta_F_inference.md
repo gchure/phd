@@ -1,4 +1,4 @@
-## Inferring the Free Energy From Fold-Change Measurements 
+## Inferring the Free Energy from Fold-Change Measurements 
 
 In this section, we describe the statistical model to infer the free
 energy $F$ from a set of fold-change measurements. We follow the same
@@ -12,7 +12,7 @@ the statistical model and the empirical limits of detection, only the
 subsections *Building A Generative Model* and *Sensitivity Limits and
 Systematic Errors in Inference* are necessary.
 
-### Building A Generative Model 
+### Building a Generative Model 
 
 In Chapter 2, we showed that the fold-change equation can be rewritten in the
 form of a Fermi function, 
@@ -91,7 +91,7 @@ biological replicates used in this work) from a normal distribution
 defined by $\mu$ and $\sigma$. To visualize the range of values
 generated from these checks, we computed the percentiles of the
 empirical cumulative distributions of the fold-change values, as can be
-seen in @Fig:empirical_F_prior_pred (C). Approximately 95\% of the the
+seen in @Fig:empirical_F_prior_pred (C). Approximately 95\% of the 
 generated fold-change measurements were between the theoretical bounds
 of \[$0, 1$\] whereas 5\% of the data sets fell outside with the maximum
 and minimum values extending to $\approx
@@ -133,7 +133,7 @@ centered with more negative values than positive. This suggests that
 $\sigma$ is more likely to be slightly overestimated in some cases. The
 shrinkage parameter for $\mu$ (red points) is very tightly distributed
 about $1.0$, indicating that the prior is being strongly informed by the
-data. The shrinkage is more broadly distributed for for $\sigma$ with a
+data. The shrinkage is more broadly distributed for  $\sigma$ with a
 minimum value of $\approx 0.5$. However, the median shrinkage for
 $\sigma$ is $\approx 0.9$, indicating that half of the inferences shrank
 the prior distribution by at least 90\%. While we could revisit the model

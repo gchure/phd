@@ -10,8 +10,7 @@ states of the repressor, $\Delta\varepsilon_{AI}$.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;In this section, we first derive the
 statistical model for each hypothesis and then perform a series of diagnostic
-tests that expose the inferential limitations of each model. With well
-calibrated statistical models, we then apply each to an induction profile of
+tests that expose the inferential limitations of each model. With well-calibrated statistical models, we then apply each to an induction profile of
 the inducer binding mutant Q291K and assess the validity of each hypothesis.
 To understand the statistical models for each hypothesis, only the subsection
 *Building A Generative Statistical Model* is necessary.
@@ -76,7 +75,7 @@ g(K_A) = {1 \over K_A\sqrt{2\pi\phi^2}}\exp\left[-{(\log {K_A \over 1\,\mu\text{
 $${#eq:lognormal_explicit} 
 or with the short-hand notion of
 $$
-g(K_A) \sim \text{LogNormal}\{\mu_{K_A}, \phi\}
+g(K_A) \sim \text{LogNormal}\{\mu_{K_A}, \phi\}.
 $${#eq:lognormal_shorthand}
 For $K_A$, we assigned a mean $\mu_{K_A} = 2$ and a standard deviation
 $\phi=2$. For $K_I$, we chose a mean of $\mu_{K_I} = 0$ and $\phi = 2$,
@@ -95,7 +94,7 @@ a wide range of energies with $+5\,k_BT$ and $-5\,k_BT$ corresponding to
 $\approx 99.5\%$ and $\approx 0.5\%$ of the repressors being active in
 the absence of inducer, respectively.
 
-### Prior predictive checks 
+### Prior Predictive Checks 
 
 To ensure that these choices of prior distributions are appropriate, we
 performed prior predictive checks for each hypothesis as previously
@@ -107,7 +106,7 @@ percentiles of the fold-change values drawn for the 1000 simulations is
 shown in the top panel of @Fig:ind_prior_predictive (B).
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;It can be seen that in the absence of inducer, the fold-change values
-are close to zero and are with distributed about the leakiness value due
+are close to zero and are distributed about the leakiness value due
 to $\sigma$. This is in contrast to the data sets generated when
 $\Delta\varepsilon_{AI}$ is permitted to vary along with $K_A$ and
 $K_I$. In the bottom panel of @Fig:ind_prior_predictive (B), the fold-change when $c = 0$
@@ -138,7 +137,7 @@ calibration to root out any pathologies lurking in the model itself or
 the implementation through MCMC. For each parameter under each model, we
 compute the $z$-score and shrinkage of each inference, shown in @Fig:ind_sbc.
 Under the first hypothesis in which $K_A$ and
-$K_I$ are the only perturbed parameters [@Fig:ind_sbc(A)], we see all parameters have $z-$scores
+$K_I$ are the only perturbed parameters [@Fig:ind_sbc(A)], we see that all parameters have $z-$scores
 clustered around 0, indicating that the value of the ground-truth is
 being accurately estimated through the inference. While the shrinkage
 for $\sigma$ is close to 1 (indicating the prior is being informed by
@@ -154,7 +153,7 @@ $\Delta\varepsilon_{AI}$ [purple points in @Fig:ind_sbc(B)] with the minimum shr
 $\Delta\varepsilon_{AI}$ that are highly positive or highly negative, in
 which small changes in the active fraction of repressors cannot be
 accurately measured through our model. However, the median shrinkage for
-$\Delta\varepsilon_{AI}$ is approximately 0.92, meaning that the the
+$\Delta\varepsilon_{AI}$ is approximately 0.92, meaning that the
 data highly informed the prior distributions for the majority of the
 inferences. The rank distributions for all parameters under each model
 appear to be highly uniform, indicating that both statistical models are
@@ -189,8 +188,7 @@ operator O2.
 $K_I$ can change is shown in @Fig:kaki_post_predictive. The joint and marginal
 distributions for each parameter (@Fig:kaki_post_predictive (A)) reveal a strong correlation
 between $K_A$ and $K_I$ whereas all other parameters are symmetric and
-independent. While the joint and marginal distributions look well
-behaved, the percentiles of the posterior predictive checks
+independent. While the joint and marginal distributions look well-behaved, the percentiles of the posterior predictive checks
 (@Fig:kaki_post_predictive (B)) are more suspect. While all
 data falls within the 95$^\text{th}$ percentile, the overall trend of
 the data is not well predicted. Furthermore, the percentiles expand far
@@ -210,7 +208,7 @@ posterior predictive checks, shown in @Fig:kaki_epai_post_predictive (B)
 are much more in line with the experimental measurements, with the 5$\text{th}$ percentile
 following the data for the entire induction profile.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;In this section we have presented two hypotheses for the minimal
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;In this section, we have presented two hypotheses for the minimal
 parameter set needed to describe the inducer binding mutations, derived
 a statistical model for each, thoroughly calibrated its behavior, and
 applied it to a representative data set. The posterior predictive checks
