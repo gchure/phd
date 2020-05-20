@@ -1,4 +1,4 @@
-## Fold-change dependence on carbon quality
+## Fold-change Dependence on Carbon Quality
 
 Given *a priori* knowledge of the biophysical parameter values
 [@garcia2011; @razo-mejia2018] present in @Eq:foldchange_simple 
@@ -32,7 +32,7 @@ $${#eq:growth_bohr_parameter}
 formalism can be used to map mutations within the repressor to
 biophysical parameters by examining the difference in free energy
 between a mutant and reference (wild-type) strain, $\Delta F = F_{mut} -
-F_{ref}$[@chure2019 and Chapter 3]. This approach revealed that different parametric
+F_{ref}$ [@chure2019 and Chapter 3]. This approach revealed that different parametric
 changes yield characteristic response functions to changing inducer
 concentrations. Rather than using wild-type and mutant variants of the
 repressor, we can choose a reference condition and compare how the free
@@ -56,9 +56,9 @@ $\Delta F$ as the parameters and the free energy are both in the same natural
 units.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;We inferred the observed free energy for the fold-change measurements shown
-in @Fig:carbon_quality_delF (A)(as described previously [@chure2019] and in
+in @Fig:carbon_quality_delF (A) (as described previously [@chure2019] and in
 Chapter 7) and compared it to the theoretical prediction of @Eq:delF_carbon,
-shown in @Fig:carbon_quality_delF (C). Again, we see the observed change in
+shown in @Fig:carbon_quality_delF (C). Again, we see that the observed change in
 free energy is in strong agreement with our theoretical predictions. This
 agreement indicates that the free energy shift $\Delta F$ can be used in
 multiple contexts to capture the energetic consequences of physiological and
@@ -74,13 +74,13 @@ however, can change these material properties.
 media.** (A) measurements of the fold-change in gene expression plotted against
 the measured repressor copy number. Black line is the prediction and the width
 corresponds to the uncertainty in the DNA binding energy as reported in
-@garcia2011. Points and errors re the mean and standard error of five to eight
+@garcia2011. Points and errors are the mean and standard error of five to eight
 replicates for each ATC induction condition. (B) An example of how fold-change
 is mapped onto changes in the free energy. Top panel shows the fold-change in
 gene expression at specific repressor copy numbers (points). Arbitrarily choosing
-100 repressors per cell as the reference state (white point) any measurement with
+100 repressors per cell as the reference state (white point), any measurement with
 lager or smaller fold-change has a negative or positive shift in the free
-energy, shown as red and green panels respectively. If $R$ is the only changing
+energy, shown as red and green panels, respectively. If $R$ is the only changing
 variable, the free energy shift should be a linear function of $R$ (bottom pane).
 (C) The inferred free energy shift from the fold-change measurements in (A).
 Black line is the prediction. Points correspond to the mean and standard error

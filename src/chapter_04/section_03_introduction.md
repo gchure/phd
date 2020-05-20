@@ -42,7 +42,7 @@ operator sequence, concentration of an external inducer, and amino acid
 substitutions, none have explored how the physiological state of the cell as
 governed by external factors influences gene expression. This is arguably one
 of the most critical variables one can experimentally tune to understand the
-role of these regulatory architectures play in cellular physiology writ
+roles these regulatory architectures play in cellular physiology writ
 large.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;In this work, we interrogate the adaptability
@@ -90,7 +90,7 @@ p_{state} \propto e^{-\varepsilon_{state} / k_BT},
 $${#eq:boltz}
 where $k_B$ is the Boltzmann constant and $T$ is the temperature of the system.
 Given knowledge of $T$ for a particular experiment, we can easily draw
-predictions of the fold-change in gene expression. However, we find the
+predictions of the fold-change in gene expression. However, we find that the
 fold-change in gene expression is inconsistent with this simple model,
 revealing an incomplete description of the energetics. We then examine how
 entropic effects neglected in the initial estimation of the energetic

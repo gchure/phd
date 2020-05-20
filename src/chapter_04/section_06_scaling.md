@@ -3,7 +3,7 @@
 Given the single-cell resolution of our experimental method, we examined
 how the cell volume and repressor copy number scaled across the
 different growth conditions at different levels of ATC induction. In
-agreement with the literature [@schaechter1958; @jun2018; @shehata1975] our measurement reveals a strong linear
+agreement with the literature [@schaechter1958; @jun2018; @shehata1975], our measurement reveals a strong linear
 dependence of the cell volume on the choice of carbon source, but no
 significant dependence on temperature (@Fig:scaling (A) and (B)). Additionally, these
 findings are consistent across different ATC induction regimes.
@@ -25,7 +25,7 @@ is possible that such a dependence exists in our experimental setup, but
 is not detectable with our lower resolution method. We also observe an
 insensitivity of copy number to growth rate when the temperature of the
 system is tuned (@Fig:scaling (D)), though two
-aberrant points with large error obfuscates the presence of a growth
+aberrant points with large error obfuscate the presence of a growth
 rate dependence at high concentrations of ATC. For concentrations below
 7 ng /mL, however, the repressor copy number remains constant across
 conditions. With no significant change in the repressor copy number and
@@ -39,10 +39,10 @@ growth rate.** Dependence of cell volume on maximum growth rate under varying
 mean and standard errors of five to eight biological replicates. The cell volume
 was calculated by approximating each cell as a spherocylinder and using
 measurements of the short-and long axis lengths of each segmentation mask.
-Measured volumes are from snapshots of a nonsnchronously growing culture. The
+Measured volumes are from snapshots of a non-synchronously growing culture. The
 measured repressor copy number for each ATC induction condition (colored lines)
-as a unction of the growth rate for various (C) carbon sources and (D)
-temperatures. Points and errors represent the mean and standard error fo five to
+as a function of the growth rate for various (C) carbon sources and (D)
+temperatures. Points and errors represent the mean and standard error of five to
 eight biological replicates. Colors correspond to the ATC induction
 concentration ranging from 10 ng/mL (yellow) to 0.1 ng/mL
 (black).](ch4_fig3){#fig:scaling short-caption="Scaling of cel size and

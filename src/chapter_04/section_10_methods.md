@@ -76,7 +76,7 @@ either aluminum foil or via an enclosure and were grown at the
 appropriate experimental temperature with aeration until an OD$_{600nm}$
 of approximately $0.25 - 0.35$. Due to pipetting errors, cultures
 reached OD$_{600nm} \approx 0.3$ at slightly different points in time.
-To ensure that strains could be directly compared, all strains were back
+To ensure that strains could be directly compared, all strains were
 diluted by several fold until equivalent. When all samples reached the
 appropriate OD$_{600nm}$, the cells were harvested for imaging.
 
@@ -102,7 +102,7 @@ in @brewster2014. Aliquots of 100 $\mu$L from each ATC-induced
 culture were combined and pelleted at 13000$\times g$ for 2 minutes. The
 supernatant (containing ATC) was aspirated and replaced with 1 mL of M9
 growth medium without ATC. The pellet was resuspended and pelleted at
-13000$\times g$. This wash step was repeated three times to ensure
+13000$\times g$. This wash step was repeated three times to ensure that 
 residual ATC had been removed and LacI-mCherry production was halted.
 After the final wash, the cell pellet was resuspended in 1 mL of M9
 medium and diluted ten-fold. A 1 $\mu$L aliquot of the diluted mixture
@@ -187,7 +187,7 @@ measurements using
 Bayes' theorem as
 $$
 g(\alpha\,\vert\, [I_1, I_2]) = \frac{f([I_1, I_2]\,\vert\,
-\alpha)g(\alpha)}{f([I_1, I_2])}.
+\alpha)g(\alpha)}{f([I_1, I_2])},
 $${#eq:growth_bayes_generic}
 where we have used $g$ and $f$ as probability
 densities over parameters and data, respectively. The denominator of
@@ -221,7 +221,7 @@ or equal to zero, we can define a half-normal distribution with a
 standard deviation of $\sigma$ as
 $$
 g(\alpha) = \sqrt{2 \over \pi\sigma^2}\exp\left[{-\alpha^2 \over
-2\sigma^2}\right]\,;\, \forall \alpha > 0.
+2\sigma^2}\right]\,;\, \forall \alpha > 0,
 $${#eq:alpha_prior}
 where the standard deviation is large, for
 example, $\sigma = 500$ a.u. / fluorophore. We evaluated the posterior

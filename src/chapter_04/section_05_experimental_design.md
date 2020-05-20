@@ -8,7 +8,7 @@ modulation of the growth rate, either through controlling the available
 carbon source or the temperature of the growth medium, significantly alters
 the physiological state of the cell, triggering the reallocation of resources
 to prioritize expression of ribosome-associated genes. @Eq:foldchange_simple
-has no explicit dependence on the available carbon source but does depend on
+has no explicit dependence on the available carbon source,  but does depend on
 the temperature through the energetic parameters $\Delta\varepsilon_{R}$ and
 $\Delta\varepsilon_{AI}$ which are defined relative to the thermal energy,
 $k_BT$. With this parametric knowledge, we are able to draw quantitative

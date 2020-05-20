@@ -47,7 +47,7 @@ $\Delta\varepsilon_{AI}$ remain unperturbed, permitting quantitative
 prediction of gene expression across numerous physiological states.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;However, in varying the temperature, we find that the predictive utility
-of the biophysical parameters values determined at 37$^\circ$ C is
+of the biophysical parameter values determined at 37$^\circ$ C is
 diminished, indicating that there are hidden effects not explicitly
 accounted for in our thermodynamic model. The measurements of the
 fold-change in gene expression are under- or over-estimated when the
@@ -88,7 +88,7 @@ mutations in the operator or repressor sequence), physiological changes
 activity of the repressor (due to changes in inducer concentration) do
 not change the fundamental physics of the system and can all be
 described by changes in the free energy relative to one another. While
-such a statement is not "surprising", we can now say it with
+such a statement is not "surprising," we can now say it with
 quantitative confidence and use this principle to probe the degree to
 which physiological perturbations influence the biophysical parameters
 writ large. With such a framework in hand, we are in the auspicious
