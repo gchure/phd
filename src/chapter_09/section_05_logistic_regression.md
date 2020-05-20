@@ -16,15 +16,15 @@ response given a continuous input [@cheng2009; @dreiseitl2002].
 
 &nbsp;&nbsp;&nbsp;&nbsp;In this section, we derive a statistical model for
 estimating the most-likely values for the coefficients $\beta_0$ and
-$\beta_1$ and use Bayes' theorem to provide an interpretation for the
+$\beta_1$, and use Bayes' theorem to provide an interpretation for the
 statistical meaning.
 
-### Bayesian parameter estimation of $\beta_0$ and $\beta_1$ 
+### Bayesian Parameter Estimation of $\beta_0$ and $\beta_1$ 
 
 The central challenge of this work is to estimate the
 probability of survival $p_s$ given only a measure of the total number of
 MscL channels in that cell. In other words, for a given measurement of $N_c$
-channels, we want to know likelihood that a cell would survive an osmotic
+channels, we want to know the likelihood that a cell would survive an osmotic
 shock. Using Bayes' theorem, we can write a statistical model for the
 survival probability as
 $$
@@ -66,7 +66,7 @@ $$
 f(N_c, s\,\vert\,\beta_0,\beta_1) = \left({1 \over 1 + e^{-\beta_0 - \beta_1 N_c}}\right)^s\left(1 - {1 \over 1 + e^{-\beta_0 - \beta_1 N_c}}\right)^{1 - s}.
 $${#eq:bernoulli_likelihood}
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sAs we have now introduced two parameters, $\beta_0$, and $\beta_1$, we must
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;As we have now introduced two parameters, $\beta_0$, and $\beta_1$, we must
 provide some description of our prior knowledge regarding their values. As is
 typically the case, we know nothing about the values for $\beta_0$ and
 $\beta_1$. These parameters are allowed to take any value, so long as it is a
@@ -76,7 +76,7 @@ this constant probability is not necessary for our calculation and is
 ignored. For a set of $k$ single-cell measurements, we can write the
 posterior probability distribution stated in @Eq:bayes_surv_prob as
 $$
-g(\beta_0, \beta_1\,\vert\, N_c, s) = \prod\limits_{i=1}^n\left({1 \over 1 + e^{-\beta_0 - \beta_1 N_c^{(i)}}}\right)^{s^{(i)}}\left(1 - {1 \over 1 + e^{-\beta_0 - \beta_1 N_c^{(i)}}}\right)^{1 - s^{(i)}}
+g(\beta_0, \beta_1\,\vert\, N_c, s) = \prod\limits_{i=1}^n\left({1 \over 1 + e^{-\beta_0 - \beta_1 N_c^{(i)}}}\right)^{s^{(i)}}\left(1 - {1 \over 1 + e^{-\beta_0 - \beta_1 N_c^{(i)}}}\right)^{1 - s^{(i)}}.
 $${#eq:known_nc_post}
 
 &nbsp;&nbsp;&nbsp;&nbsp;Implicitly stated in @Eq:known_nc_post is absolute
@@ -93,7 +93,7 @@ calibration factor between arbitrary units and protein copy number. In
 estimate for the most-likely value of $\tilde{\langle A \rangle}$ and
 $\tilde{\alpha}$. Given these estimates, we can include an informative prior
 for each value. From the Markov chain Monte Carlo samples shown in
-@Fig:logistic_posterior_distributions , the posterior distribution for each parameter is
+@Fig:logistic_posterior_distributions, the posterior distribution for each parameter is
 approximately Gaussian. By approximating them as Gaussian distributions, we
 can assign an informative prior for each as
 $$
@@ -141,7 +141,7 @@ The assumption of a linear relationship between the log-odds of survival and
 the predictor variable $N_c$ appears to be arbitrary and is presented without
 justification. However, this relationship is directly connected to the manner
 in which Bayes' theorem updates the posterior probability distribution upon
-the observation of new data. In following section, we will demonstrate this
+the observation of new data. In the following section, we will demonstrate this
 connection using the relationship between survival and channel copy number.
 However, this description is general and can be applied to any logistic
 regression model so long as the response variable is binary. This connection
@@ -151,16 +151,23 @@ work [@downey2014].
 &nbsp;&nbsp;&nbsp;&nbsp;The probability of observing a survival event $s$
 given a measurement of $N_c$ channels can be stated using Bayes' theorem as
 $$
-g(s\,\vert\, N_c) = {f(N_c\,\vert\, s)g(s) \over f(N_c)}.
+g(s\,\vert\, N_c) = {f(N_c\,\vert\, s)g(s) \over f(N_c)},
 $${#eq:survival_bayes}
-where $g$ and $f$ represent probability density functions over parameters and data respectively. The posterior distribution $g(s\,\vert\, N_c)$ is the quantity of interest and implicitly related to the probability of survival. The likelihood $g(N_c\,\vert\, s)$ tells us the probability of observing $N_c$ channels in this cell given that it survives. The quantity $g(s)$ captures all *a priori* knowledge we have regarding the probability of this cell surviving and the denominator $f(N_c)$ tells us the converse -- the probability of observing $N_c$ cells irrespective of the survival outcome.
+where $g$ and $f$ represent probability density functions over parameters and
+data, respectively. The posterior distribution $g(s\,\vert\, N_c)$ is the
+quantity of interest and is implicitly related to the probability of survival.
+The likelihood $g(N_c\,\vert\, s)$ tells us the probability of observing $N_c$
+channels in this cell given that it survives. The quantity $g(s)$ captures all
+*a priori* knowledge we have regarding the probability of this cell surviving
+and the denominator $f(N_c)$ tells us the converse -- the probability of
+observing $N_c$ cells irrespective of the survival outcome.
 
 &nbsp;&nbsp;&nbsp;&nbsp;Proper calculation of [@Eq:survival_bayes] requires
 that we have knowledge of $f(N_c)$, which is difficult to estimate. While we
 are able to give appropriate bounds on this term, such as a requirement of
 positivity and some knowledge of the maximum membrane packing density, it is
 not so obvious to determine the distribution between these bounds. Given this
-difficulty, it's easier to compute the odds of survival
+difficulty, it is easier to compute the odds of survival
 $\mathcal{O}(s\,\vert\, N_c)$, the probability of survival $s$ relative to
 death $d$,
 $$
@@ -230,10 +237,10 @@ odds-ratio of survival which a single channel relative to the odds of
 survival with no channels at all. While we have examined this considering
 only two possible channel copy numbers ($1$ and $0$), the relationship
 between them is linear. We can therefore generalize this for any MscL copy
-number as the increase in the log-odds of survival is constant for addition
+number as the increase in the log-odds of survival is constant for the addition
 of a single channel.
 
-### Other properties as predictor variables ###
+### Other Properties as Predictor Variables
 
 &nbsp;&nbsp;&nbsp;&nbsp; The previous two sections discuss in detail the
 logic and practice behind the application of logistic regression to cell
@@ -243,13 +250,13 @@ used as predictor variables, such as cell area and shock rate. As is
 stipulated in our standard candle calibration, there should be no correlation
 between survival and cell area. @Fig:alternative_predictor_variables (A) and (B)
 show the logistic regression performed on the cell area. We see for both slow
-and fast shock groups,there is little change in survival probability with
-changing cell area and the wide credible regions allow for both positive and
+and fast shock groups, there is little change in survival probability with
+changing cell area, and the wide credible regions allow for both positive and
 negative correlation between survival and area. The appearance of a bottle
 neck in the notably wide credible regions is a result of a large fraction of
 the measurements being tightly distributed about a mean value.
 @Fig:alternative_predictor_variables (C) shows the predicted survival
-probability as a function of the the shock rate. There is a slight decrease
+probability as a function of the shock rate. There is a slight decrease
 in survivability as a function of increasing shock rate, however the width of
 the credible region allows for slightly positive or slightly negative
 correlation. While we have presented logistic regression in this section as a
@@ -264,7 +271,7 @@ surface of survival probability is shown in
 @Fig:alternative_predictor_variables (D). As is suggested by
 @Fig:alternative_predictor_variables (C), the magnitude of change in
 survivability as the shock rate is increased is smaller than that along
-increasing channel copy number, supporting our conclusion that for MscL
+the increasing channel copy number, supporting our conclusion that for MscL
 alone, the copy number is the most important variable in determining
 survival.
 
@@ -274,7 +281,7 @@ Estimated survival probability as a function of cell area for the slow shock
 group. (B) Estimated survival probability as a function of cell area for the
 fast shock group. (C) Estimated survival probability as a function shock
 rate. Black points at top and bottom of plots represent single-cell
-measurements of cells who survived and perished, respectively. Shaded regions
+measurements of cells that survived and perished, respectively. Shaded regions
 in (A) -- (C) represent the 95\% credible region. (D) Surface of estimated
 survival probability using both shock rate and effective channel number as
 predictor variables. Black points at left and right of plot represent

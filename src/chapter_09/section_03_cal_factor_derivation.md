@@ -5,7 +5,7 @@ microscopy, we needed to determine a calibration factor that could translate
 arbitrary fluorescence units to protein copy number. To compute this
 calibration factor, we relied on *a priori* knowledge of the mean copy number
 of MscL-sfGFP for a particular bacterial strain in specific growth
-conditions. In Bialecka-Fornal et al. 2012 [@bialecka-fornal2012], the
+conditions. In @bialecka-fornal2012, the
 average MscL copy number for a population of cells expressing an MscL-sfGFP
 fusion (*E. coli* K-12 MG1655 $\phi$(*mscL-sfGFP*)) cells was measured using
 quantitative Western blotting and single-molecule photobleaching assays. By
@@ -14,7 +14,7 @@ an approximate measure of this calibration factor. In this section, we derive
 a statistical model for estimating the most-likely value of this calibration
 factor and its associated error.
 
-### Definition of a calibration factor 
+### Definition of a Calibration Factor 
 &nbsp;&nbsp;&nbsp;&nbsp;We assume that all detected fluorescence signal from
 a particular cell is derived from the MscL-sfGFP protein, after background
 subtraction and correction for autofluorescence. The arbitrary units of
@@ -24,8 +24,8 @@ $$
 I_\text{tot} = \alpha N_\text{tot},
 $${#eq:mscl_ian}
 where $I_\text{tot}$ is the total cell fluorescence and $N_\text{tot}$ is the
-total number of MscL proteins per cell. @bialecka-fornal2012 et al. report the
-average cell Mscl copy number for the population rather than the
+total number of MscL proteins per cell. @bialecka-fornal2012 report the
+average cell MscL copy number for the population rather than the
 distribution. Knowing only the mean, we can rewrite [@Eq:mscl_ian] as
 $$
 \langle I_\text{tot}\rangle = \alpha \langle N_\text{tot} \rangle,
@@ -35,13 +35,12 @@ cell or fluorophore to fluorophore.
 
 &nbsp;&nbsp;&nbsp;&nbsp;The experiments presented in this work were performed
 using non-synchronously growing cultures. As there is a uniform distribution
-of growth phases in the culture, the cell size distribution is broad the the
-extremes being small, newborn cells and large cells in the process of
-division. As described in the main text, the cell size distribution of a
-population is broadened further by modulating the MscL copy number with low
-copy numbers resulting in aberrant cell morphology. To speak in the terms of
-an effective channel copy number, we relate the average areal intensity of
-the population to the average cell size,
+of growth phases in the culture, the cell size distribution is broad. As
+described in the main text, the cell size distribution of a population is
+broadened further by modulating the MscL copy number with low copy numbers
+resulting in aberrant cell morphology. To speak in the terms of an effective
+channel copy number, we relate the average areal intensity of the population
+to the average cell size,
 $$
 \langle I_\text{tot} \rangle = \langle I_A \rangle \langle A \rangle = \alpha \langle N_\text{tot} \rangle,
 $${#eq:area_conversion}
@@ -58,15 +57,15 @@ $${#eq:mscl_simple_cal_factor}
 &nbsp;&nbsp;&nbsp;&nbsp;While it is tempting to use @Eq:mscl_simple_cal_factor
 directly, there are multiple sources of error that are important to propagate
 through the final calculation. The most obvious error to include is the
-measurement error reported in Bialecka-Fornal et al. 2012 for the average
-MscL channel count [@bialecka-fornal2012]. There are also slight variations
+measurement error reported in @bialecka-fornal2012 for the average
+MscL channel count . There are also slight variations
 in expression across biological replicates that arise from a myriad of
 day-to-day differences. Rather than abstracting all sources of error away
 into a systematic error budget, we used an inferential model derived from
 Bayes' theorem that allows for the computation of the probability
 distribution of $\alpha$.
 
-### Estimation of $\alpha$ for a single biological replicate 
+### Estimation of $\alpha$ for a Single Biological Replicate 
 
 &nbsp;&nbsp;&nbsp;&nbsp;A single data set consists of several hundred
 single-cell measurements of intensity, area of the segmentation mask, and
@@ -85,7 +84,7 @@ $${#eq:simple_bayes}
 where $g$ and $f$ represent probability density functions over parameters and
 data, respectively. The term $f(A, I_A\,\vert\, \alpha, \langle A \rangle,
 \langle N_\text{tot} \rangle)$ in the numerator represents the likelihood of
-observing the areal intensity $I_A$ and area $A$ of a cell for a given values
+observing the areal intensity $I_A$ and area $A$ of a cell for a given value
 of $\alpha$, $\langle A \rangle$, and $\langle N_\text{tot} \rangle$. The
 second term in the numerator $g(\alpha,\langle A \rangle, \langle
 N_\text{tot} \rangle)$ captures all prior knowledge we have regarding the
@@ -100,7 +99,7 @@ likelihood and prior, we must make some assumptions regarding the biological
 processes that generate them. As there are many independent processes that
 regulate the timing of cell division and cell growth, such as DNA replication
 and peptidoglycan synthesis, it is reasonable to assume that for a given
-culture the distribution of cell size would be normally distributed with a
+culture, the distribution of cell size would be normally distributed with a
 mean of $\langle A \rangle$ and a variance $\sigma_{\langle A \rangle}$.
 Mathematically, we can write this as
 $$
@@ -110,7 +109,7 @@ where the proportionality results from dropping normalization constants for
 notational simplicity.
 
 &nbsp;&nbsp;&nbsp;&nbsp; While total cell intensity is intrinsically
-dependent on the cell area the areal intensity $I_A$ is independent of cell
+dependent on the cell area, the areal intensity $I_A$ is independent of cell
 size. The myriad processes leading to the detected fluorescence, such as
 translation and proper protein folding, are largely independent, allowing us
 to assume a normal distribution for $I_A$ as well with a mean $\langle I_A
@@ -131,7 +130,7 @@ $$
 g(\sigma_{\langle A \rangle}, \sigma_{I_A}) = {1 \over \sigma_{\langle A \rangle}\sigma_{I_A} }.
 $${#eq:jeffreys}
 
-&nbsp;&nbsp;&nbsp;&nbsp;The next obvious prior to consider is for the average channel copy number $\langle N_\text{tot} \rangle$, which comes from Bialecka-Fornal et al. 2012. In this work, they report a mean $\mu_N$  and variance $\sigma_N^2$, allowing us to assume a normal distribution for the prior,
+&nbsp;&nbsp;&nbsp;&nbsp;The next obvious prior to consider is for the average channel copy number $\langle N_\text{tot} \rangle$, which comes from @bialecka-fornal2012. In this work, they report a mean $\mu_N$  and variance $\sigma_N^2$, allowing us to assume a normal distribution for the prior,
 $$
 g(\langle N_\text{tot}\rangle\,\vert\, \mu_N,\sigma_N) \propto {1 \over \sigma_N}\exp\left[-{(\langle N_\text{tot} \rangle - \mu_N)^2 \over 2 \sigma_N^2}\right].
 $${#eq:informative_prior}
@@ -155,9 +154,12 @@ single cell measurement. This can be generalized to a set of $k$ single cell
 measurements as
 $$
 \begin{aligned}
-g(\alpha,\langle A \rangle, \langle N_\text{tot} & \rangle, \sigma_{I_A}, \sigma_{\langle A \rangle}\,\vert\, [I_A, A], \mu_N, \sigma_N) \propto {1 \over (\alpha_\text{max} - \alpha_\text{min})(\langle A \rangle_\text{max} - \langle A \rangle_\text{min})}{1 \over (\sigma_{I_A}\sigma_{\langle A \rangle})^{k+1} }\,\times\\\\
-&{1 \over \sigma_N}\exp\left[- {(\langle N_\text{tot}\rangle - \mu_N)^2 \over 2\sigma_N^2}\right]
-\prod\limits_i^k\exp\left[-{(A^{(i)} - \langle A \rangle)^2 \over 2\sigma_{\langle A \rangle}^2} - {\left(I_A^{(i)} - {\alpha \langle N_\text{tot}\rangle \over \langle A \rangle}\right)^2 \over 2\sigma_{I_A}^2}\right] \end{aligned},
+g(\alpha,&\langle A \rangle, \langle N_\text{tot} \rangle, \sigma_{I_A},
+\sigma_{\langle A \rangle}\,\vert\, [I_A, A], \mu_N, \sigma_N) \propto {1 \over
+(\alpha_\text{max} - \alpha_\text{min})(\langle A \rangle_\text{max} - \langle A
+\rangle_\text{min})}\times \\ &{1 \over (\sigma_{I_A}\sigma_{\langle A \rangle})^{k+1}
+}{1 \over \sigma_N}\exp\left[- {(\langle N_\text{tot}\rangle - \mu_N)^2 \over 2\sigma_N^2}\right]
+\\ &\prod\limits_i^k\exp\left[-{(A^{(i)} - \langle A \rangle)^2 \over 2\sigma_{\langle A \rangle}^2} - {\left(I_A^{(i)} - {\alpha \langle N_\text{tot}\rangle \over \langle A \rangle}\right)^2 \over 2\sigma_{I_A}^2}\right] \end{aligned},
 $${#eq:single_rep_post}
 where $[I_A, A]$ represents the set of $k$ single-cell measurements.
 
@@ -165,11 +167,11 @@ where $[I_A, A]$ represents the set of $k$ single-cell measurements.
 growth and sample preparation can alter the final channel count of the
 standard candle strain, it is imperative to perform more than a single
 biological replicate. However, properly propagating the error across
-replicates is non trivial. One option would be to pool together all
+replicates is not trivial. One option would be to pool together all
 measurements of $n$ biological replicates and evaluate the posterior given in
 @Eq:single_rep_post. However, this by definition assumes that there is no
 difference between replicates. Another option would be to perform this
-analysis on each biological replicate individually and then compute a mean
+analysis on each biological replicate individually, and then compute a mean
 and standard deviation of the resulting most-likely parameter estimates for
 $\alpha$ and $\langle A \rangle$. While this is a better approach than simply
 pooling all data together, it suffers a bias from giving each replicate equal
@@ -181,7 +183,7 @@ posterior probability distribution for $\alpha$ and $\langle A \rangle$ as a
 hierarchical process in which $\alpha$ and $\langle A \rangle$ for each
 replicate is drawn from the same distribution.
 
-### A hierarchical model for estimating $\alpha$
+### A Hierarchical Model for Estimating $\alpha$
 
 &nbsp;&nbsp;&nbsp;&nbsp;In the previous section, we assumed maximally
 uninformative priors for the most-likely values of $\alpha$ and $\langle A
@@ -241,7 +243,7 @@ g(\alpha\,\vert\,\tilde{\alpha}, \tilde{\sigma}_\alpha) \propto {1 \over \tilde{
 $${#eq:hyperprior_alpha}
 
 &nbsp;&nbsp;&nbsp;&nbsp;With the inclusion of two more normal distributions,
-we have introduced four new parameters, each of which needing their own
+we have introduced four new parameters, each of which need their own
 prior. However, our knowledge of the reasonable values for the
 hyper-parameters has not changed from those described for a single replicate.
 We can therefore use the same maximally uninformative Jeffreys priors given
@@ -269,7 +271,7 @@ results of the MCMC sampling for $\tilde{\alpha}$ and $\tilde{\langle A
 \rangle}$ can be seen in @Fig:mscl_posterior_samples. From this approach, we
 found the most-likely parameter values of $3300^{+700}_{-700}$ a.u. per MscL
 channel and $5.4^{+0.4}_{-0.5}$ $\mu$m$^2$ for $\tilde{\alpha}$ and
-$\tilde{\langle A \rangle}$, respectively. Here, we've reported the median
+$\tilde{\langle A \rangle}$, respectively. Here, we have reported the median
 value of the posterior distribution for each parameter with the upper and
 lower bound of the 95\% credible region as superscript and subscript,
 respectively. These values and associated errors were used in the calculation
@@ -278,7 +280,7 @@ of channel copy number.
 ![**Posterior distributions for hyper-parameters and replicate parameters.**
 (A) The posterior probability distribution for $\tilde{\alpha}$ and
 $\tilde{\langle A \rangle}$. Probability increases from light to dark red.
-The replicate parameter (blue) and hyper-parameter (red) marginalized
+The replicate parameter (purple) and hyper-parameter (orange) are marginalized
 posterior probability distributions for $\alpha$ (B) and $\langle A \rangle$
 (C). The [Python code (`ch9_figS4.py`)](https://github.com/gchure/phd/blob/master/src/chapter_09/code/ch9_figS4.py)
 used to generate this figure can be found on the thesis [GitHub
@@ -286,7 +288,7 @@ repository](https://github.com/gchure/phd).
 ](ch9_figS4){#fig:mscl_posterior_samples short-caption="Posterior
 distributions for hyper-parameters and replicate parameters."}
 
-### Effect of correction
+### Effect of Correction
 
 &nbsp;&nbsp;&nbsp;&nbsp; The posterior distributions for $\alpha$ and $\langle A
 \rangle$ shown in @Fig:mscl_posterior_samples were used directly to compute the
@@ -298,12 +300,12 @@ illustrated in @Fig:area_correction (A). While these would all be considered
 single cells, the two-dimensional area of each may be comparable to two or three
 wild-type cells. For all of the Shine-Dalgarno mutants, the distribution of
 projected cell area has a long tail, with the extremes reaching 35
-$\mu\text{m}^2$ per cell *@Fig:area_correction (B)). Calculating the total number
+$\mu\text{m}^2$ per cell (@Fig:area_correction (B)). Calculating the total number
 of channels per cell  does nothing to decouple this correlation between cell
 area and measured cell intensity. @Fig:area_correction (C) shows the correlation
 between cell area and the total number of channels without normalizing to an
 average cell size $\langle A \rangle$ differentiated by their survival after an
-osmotic down-shock. This correlation is removed by calculating an effective
+osmotic downshock. This correlation is removed by calculating an effective
 channel copy number shown in @Fig:area_correction (D). 
 
 ![**Influence of area correction for Shine-Dalgarno mutants.** (A)
