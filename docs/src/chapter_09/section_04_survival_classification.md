@@ -7,7 +7,7 @@ osmotic shock exhibited necrosis with loss of phase
 contrast, extensive blebbing and bursting of the membrane, and the presence of
 dark aggregates at the cell poles. An example field across time is shown below
 in @Fig:phase_death where the cells are necrotic. On occasion, we
-observed cells which did not obviously display the aforementioned death criteria
+observed cells which did not obviously display the aforementioned death criteria,
 yet did not undergo one or two division events. These cells were not
 counted in our experiments and were not included in the final tally of
 survival versus death. Across our 2822 single cell measurements, such “no

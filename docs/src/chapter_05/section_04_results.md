@@ -1,6 +1,6 @@
 ## Results
 
-### Quantifying the single-cell MscL copy number
+### Quantifying the Single-Cell MscL Copy Number
 
 The principal goal of this work is to examine the
 contribution of a single mechanosensitive channel species to cell survival
@@ -48,7 +48,7 @@ the average fluorescence of a single channel. In Bialecka-Fornal et al. 2012
 quantitative Western blotting to probe the expression of MscL-sfGFP under a
 wide range of growth conditions. To compute a calibration factor, we used the
 strain MLG910 (*E. coli* K12 MG1655 $\phi$(mscL-sfGFP)) as a "standard
-candle", highlighted in white in @Fig:mscl_boxplot (B). This standard candle
+candle," highlighted in white in @Fig:mscl_boxplot (B). This standard candle
 strain was grown and imaged in identical conditions in which the MscL count
 was determined through fluorescence microscopy. The calibration factor was
 computed by dividing the mean total cell fluorescence by the known MscL copy
@@ -86,7 +86,7 @@ extremes ranging from approximately four channels per cell to nearly one
 thousand. While the means of each strain are somewhat distinct, the
 distributions show a large degree of overlap, making one strain nearly
 indistinguishable from another. This variance is a quantity that is lost in
-the context of bulk scale experiments but can be accounted for via
+the context of bulk scale experiments but, can be accounted for via
 single-cell methods.
 
 ![**Control of MscL expression and calculation of channel copy number.** (A)
@@ -105,14 +105,13 @@ interquartile region of the distribution, the center line displays the
 median, and the whiskers represent 1.5 times the maximum and minimum of the
 interquartile region. Individual measurements are denoted as black points.
 The strain used for calibration of channel copy number (MLG910) is
-highlighted in white. The [Python code                                      
-(`ch5_fig2.py`)](https://github.com/gchure/phd/blob/master/src/chapter_05/code/ch5_fig2.py)
+highlighted in white. The [Python code (`ch5_fig2.py`)](https://github.com/gchure/phd/blob/master/src/chapter_05/code/ch5_fig2.py)
 used to generate this figure can be found on the thesis [GitHub
 repository](https://github.com/gchure/phd).](ch5_fig2){#fig:mscl_boxplot short-caption="Control of MscL
 expression and calculation of channel copy number."}
 
 
-### Performing a single-cell hypo-osmotic challenge assay 
+### Performing a Single-Cell Hypo-Osmotic Challenge Assay 
 
 To measure the channel copy number of a single cell and query its survival
 after a hypo-osmotic shock, we used a custom-made flow cell in which osmotic
@@ -149,26 +148,26 @@ the flow cell. After shock, the cells are monitored for several hours and
 surviving cells are identified.](ch5_fig3){#fig:flow_cell
 short-caption="Experimental approach to measuring survival probability"}
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Due to the extensive overlap in expression between
-the different Shine-Dalgarno mutants (see Fig. @fig:mscl_boxplot(B)), computing the
-survival probability by treating each mutant as an individual bin obfuscates
-the relationship between channel abundance and survival. To more thoroughly
-examine this relationship, all measurements were pooled together with each
-cell being treated as an individual experiment. The hypo-osmotic shock
-applied in these experiments was varied across a range of 0.02 Hz (complete
-exchange in 50 s) to 2.2 Hz (complete exchange in 0.45 s). Rather than
-pooling this wide range of shock rates into a single data set, we chose to
-separate the data into “slow shock” ( $<$; 1.0 Hz) and “fast shock” ($\geq
-1.0$ Hz) classes. Other groupings of shock rate were explored and are
-discussed in Chapter 9. The
-cumulative distributions of channel copy number separated by survival are
-shown in @Fig:survival_dists. In these experiments, survival was never
-observed for a cell containing less than approximately 100 channels per cell,
-indicated by the grey shaded region in @Fig:survival_dists. This suggests that
-there is a minimum number of channels needed for survival on the order of 100
-per cell. We also observe a slight shift in the surviving fraction of the
-cells towards higher effective copy number, which matches our intuition that
-including more mechanosensitive channels increases the survival probability.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Due to the extensive overlap in expression
+between the different Shine-Dalgarno mutants (see Fig. @fig:mscl_boxplot(B)),
+computing the survival probability by treating each mutant as an individual
+bin obfuscates the relationship between channel abundance and survival. To
+more thoroughly examine this relationship, all measurements were pooled
+together with each cell being treated as an individual experiment. The
+hypo-osmotic shock applied in these experiments was varied across a range of
+0.02 Hz (complete exchange in 50 s) to 2.2 Hz (complete exchange in 0.45 s).
+Rather than pooling this wide range of shock rates into a single data set, we
+chose to separate the data into “slow shock” ( $<$; 1.0 Hz) and “fast shock”
+($\geq 1.0$ Hz) classes. Other groupings of shock rate were explored and are
+discussed in Chapter 9. The cumulative distributions of channel copy number
+separated by survival are shown in @Fig:survival_dists. In these experiments,
+survival was never observed for a cell containing less than approximately 100
+channels per cell, indicated by the grey shaded region in
+@Fig:survival_dists. This suggests that there is a minimum number of channels
+needed for survival on the order of 100 per cell. We also observe a slight
+shift in the surviving fraction of the cells towards higher effective copy
+number, which matches our intuition that including more mechanosensitive
+channels increases the survival probability.
 
 ![**Distributions of survival and death as a function of effective channel
 number.** (A) Empirical cumulative distributions of channel copy number
@@ -177,14 +176,13 @@ osmotic shock. (B) The empirical cumulative distribution for a fast ($\geq
 1.0$ Hz) osmotic shock. Shaded purple and orange regions represent the 95%
 credible region of the effective channel number calculation for each cell.
 Shaded grey stripe signifies the range of channels in which no survival was
-observed. The [Python code                                      
-(`ch5_fig4.py`)](https://github.com/gchure/phd/blob/master/src/chapter_05/code/ch5_fig4.py)
+observed. The [Python code (`ch5_fig4.py`)](https://github.com/gchure/phd/blob/master/src/chapter_05/code/ch5_fig4.py)
 used to generate this figure can be found on the thesis [GitHub
-repository](https://github.com/gchure/phd).](ch5_fig4){#fig:survival_dists short-caption="Distributions of
-survival and death as a function of effective MscL channel
-number."}
+repository](https://github.com/gchure/phd).](ch5_fig4){#fig:survival_dists
+short-caption="Distributions of survival and death as a function of effective
+MscL channel number."}
 
-### Prediction of survival probability as a function of channel copy number
+### Prediction of Survival Probability as a Function of Channel Copy Number
 
 There are several ways by which the survival
 probability can be calculated. The most obvious approach would be to group
@@ -249,7 +247,7 @@ most likely values of the coefficients and is described in detail in the
 supplemental Chapter 9.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The results of the logistic regression are shown in
-@Fig:survival. We see a slight rightward shift the survival probability
+@Fig:survival. We see a slight rightward shift in the survival probability
 curve under fast shock relative to the slow shock case, reaffirming the
 conclusion that survival is also dependent on the rate of osmotic shock
 [@bialecka-fornal2015]. This rate dependence has been observed for cells
@@ -281,7 +279,7 @@ the survival probability and gives license to extrapolate the estimation of
 survival probability to regions of outside of our experimentally explored
 copy number regime.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Thus far, we’ve dictated that for a given rate of
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Thus far, we have dictated that for a given rate of
 osmotic shock (i.e. "fast" or "slow"), the survival probability is dependent
 only on the number of channels. In Chapter 9, we show the result of including
 other predictor variables, such as area and shock rate alone. In such cases,

@@ -1,12 +1,12 @@
 ## Induction of Simple Repression with Multiple Promoters or Competitor Sites
 We made the choice to perform all of our experiments using strains in which
 a single copy of our simple repression construct had been integrated into the
-chromosome. This stands in contrast to the methods used by a number of other
+chromosome. This stands in contrast with the methods used by a number of other
 studies [@oehler1994; @setty2003; @daber2009a; @daber2011;
 @vilar2013; @shis2014; @sochor2014], in which reporter constructs are placed on
 plasmid, meaning that the number of constructs in the cell is not precisely
 known. It is also common to express repressor on plasmid to boost its copy
-number, which results in an uncertain value for repressor copy number. Here we
+number, which results in an uncertain value for repressor copy number. Here, we
 show that our treatment of the MWC model has broad predictive power beyond the
 single-promoter scenario we explore experimentally, and indeed can account for
 systems in which multiple promoters compete for the repressor of interest.
@@ -70,7 +70,7 @@ $${#eq:fugacity_reff}
 For systems where the number of binding sites $N_S$, $N_{NS}$, and
 $N_C$ are known, together with the binding affinities
 $\Delta \varepsilon_{RA}$ and $\Delta \varepsilon_C$, we can solve
-numerically for $\lambda_r$ and then substitute it into to obtain a
+numerically for $\lambda_r$ and substitute to obtain a
 fold-change at any concentration of inducer $c$. In the following
 sections, we will theoretically explore the induction curves given by
 @Eq:fugacity_reff for a number of different combinations of simple repression binding sites, thereby predicting how the system would behave if additional
@@ -80,7 +80,7 @@ specific or competitor binding sites were introduced.
 
 In Chapter 2, we consider the induction profiles of strains with
 varying $R$ but a single, specific binding site $N_S = 1$.
-Here we predict the induction profiles for similar strains in which
+Here, we predict the induction profiles for similar strains in which
 $R$ is varied, but $N_S > 1$, as shown in @Fig:fugacity_r. The top row shows
 induction profiles in which $N_S = 10$ and the bottom row shows
 profiles in which $N_S = 100$, assuming three different choices for
@@ -144,8 +144,8 @@ transcription factors in *E. coli* have at least two known binding
 sites, with approximately 50 transcription factors having more than ten
 known binding sites [@rydenfelt2014; @schmidt2016]. If the number of competitor sites and their average binding energy is known, however, they can be accounted for in the model. Here, we predict the induction profiles for strains in which
 $R=260$ and $N_S=1$, but there is a variable number of competitor
-sites $N_C$ with a strong binding energy $\Delta \varepsilon_C = -17.0~k_BT$. In the presence of such a strong competitor, when $N_C > R$ the leakiness is greatly increased, as many repressors are siphoned into the pool of competitor sites. This is most dramatic for the case where $\Delta \varepsilon_{RA} = -9.7~k_B T$, in which it appears that no repression occurs at all when $N_C = 500$.
-Interestingly, when $N_C < R$ the effects of the competitor are not
+sites $N_C$ with a strong binding energy $\Delta \varepsilon_C = -17.0~k_BT$. In the presence of such a strong competitor when $N_C > R$, the leakiness is greatly increased, as many repressors are siphoned into the pool of competitor sites. This is most dramatic for the case where $\Delta \varepsilon_{RA} = -9.7~k_B T$, in which it appears that no repression occurs at all when $N_C = 500$.
+Interestingly, when $N_C < R$, the effects of the competitor are not
 especially notable.
 
 ![**Induction with variable competitor sites, a single specific site,
@@ -181,7 +181,7 @@ values consistently approach 1, indicating that full induction is easier
 to achieve when multiple specific sites are present. Moreover, dynamic
 range values for O1 and O2 strains with
 $\Delta \varepsilon_{RA} = -15.3$ and $-13.9~k_B T$ approach 1 when
-$R > N_S$, although when $N_S = 10$ there is a slight downward dip
+$R > N_S$, although when $N_S = 10$, there is a slight downward dip
 owing to saturation values of less than 1 at high repressor copy
 numbers.
 
@@ -197,7 +197,7 @@ repository](https://github.com/gchure/phd). ](ch6_figS6){#fig:fugacity_propertie
 vary with $R$ and $\Delta \varepsilon_{RA}$ in systems with
 $N_S =1$ and multiple competitor sites $N_C = 10$ or $N_C = 100$.
 Each of the competitor sites has a binding energy of
-$\Delta \varepsilon_C = -17.0~k_BT$. The phenotypic profiles are very similar to those for multiple specific sites shown in , with sharper transitions at
+$\Delta \varepsilon_C = -17.0~k_BT$. The phenotypic profiles are very similar to those for multiple specific sites with sharper transitions at
 $R = N_C$ due to the greater binding strength of the competitor site.
 This indicates that introducing competitors has much the same effect on
 the induction phenotypes as introducing additional specific sites, as in
@@ -221,4 +221,4 @@ of induction with a single specific site and multiple competitor sites."}
 nuances imposed on induction response in the case of systems involving
 multiple gene copies as are found in the vast majority of studies on
 induction. In these cases, the intrinsic parameters of the MWC model get
-entangled with the parameters describing gene copy number.
+entangled with the parameters describing the gene copy number.

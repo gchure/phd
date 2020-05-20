@@ -1,7 +1,7 @@
 
-## Classification Of Shock Rate
+## Classification of Shock Rate
 
-&nbsp;&nbsp;&nbsp;&nbsp;Its been previously shown that the rate of
+&nbsp;&nbsp;&nbsp;&nbsp;It has been previously shown that the rate of
 hypo-osmotic shock dictates the survival probability [@bialecka-fornal2015].
 To investigate how a single channel contributes to survival, we queried
 survival at several shock rates with varying MscL copy number. In the main
@@ -67,7 +67,7 @@ quantitative and qualitative story as the three rate grouping shown in this
 section and the two rate grouping presented in the main text. While there
 does appear to be a dependence on the shock rate for survival when only MscL
 is expressed, the effect is relatively weak with overlapping credible regions
-for the logistic regression across the all curves. To account for the sparse
+for the logistic regression across all curves. To account for the sparse
 sampling of high copy numbers observed in the intermediate shock group, we
 split this set and partitioned the measurements into either the "slow" ($<$
 1.0 Hz) or "fast" ($\geq$ 1.0 Hz) groups presented in the main text of this
@@ -83,7 +83,7 @@ measurements of cells which survived and died, respectively. Black points and
 error bars represent survival probability calculations from bins of 50
 channels per cell. Blue points represent the survival probability for a given
 Shine-Dalgarno mutant. Horizontal error bars are the standard error of the
-mean with at least 25 measurements and vertical error bars signifies the
+mean with at least 25 measurements and vertical error bars signify the
 uncertainty in the survival probability from observing $n$ survival events
 out of $N$ total measurements. The [Python code (`ch9_figS10.py`)](https://github.com/gchure/phd/blob/master/src/chapter_09/code/ch9_figS10.py)
 used to generate this figure can be found on the thesis [GitHub

@@ -1,5 +1,5 @@
 ## Additional Characterization of DNA Binding Mutants 
-In Chapter 3, we estimated the DNA binding energy o f each mutant
+In Chapter 3, we estimated the DNA binding energy of each mutant
 using the mutant strains that had approximately 260 repressors per cell.
 In this section, we examine the effect of the choice of fit strain on
 the predictions of both the induction profiles and $\Delta F$ for each

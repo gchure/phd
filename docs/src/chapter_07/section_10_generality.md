@@ -1,4 +1,4 @@
-## Generalizability of Data Collapse To Other Regulatory Architectures
+## Generalizability of Data Collapse to Other Regulatory Architectures
 
 In Chapters 2, 3, and 4, we have stated that the input-output function for
 the fold-change in gene expression can be rewritten in the form of a Fermi
@@ -18,7 +18,7 @@ bound state} = \mathcal{Z}_{\neg r} + \mathcal{Z}_{r},
 $${#eq:z_simple_rep} 
 where $R$ is the number of repressors, $P$ is
 the number of polymerases, $N_{NS}$ is the number of nonspecific binding
-sites and $\Delta\varepsilon_P$ and $\Delta\varepsilon_R$ are the
+sites, and $\Delta\varepsilon_P$ and $\Delta\varepsilon_R$ are the
 binding energies of the polymerase and repressor to the DNA,
 respectively. The states can be grouped into either repressor bound
 states (right-hand terms) or repressor unbound states (left hand terms),
@@ -72,7 +72,7 @@ $$
               \underbrace{{A \over N_{NS}}e^{-\beta\Delta\varepsilon_A} + {A \over N_{NS}}{P \over N_{NS}}e^{-\beta(\Delta\varepsilon_{A} + 
               \Delta\varepsilon_{P} + \varepsilon_\text{interaction})}}_\text{activator bound states} = \mathcal{Z}_{\neg a} + \mathcal{Z}_a.
 $${#eq:act_zed}
-Here we've used $A$ to denote the number of activators, $\Delta\varepsilon_{A}$ is the binding energy of the activator to its specific binding site, and
+Here, we have used $A$ to denote the number of activators, $\Delta\varepsilon_{A}$ is the binding energy of the activator to its specific binding site, and
 $\varepsilon_\text{interaction}$ is the interaction energy between the
 activator and polymerase which makes the activator-polymerase-DNA state
 more energetically favorable to the polymerase-DNA state. Unlike in the
@@ -102,7 +102,7 @@ formulation of $\mathcal{Z}_{\neg r}$ and $\mathcal{Z}_r$ are different
 between the examples. The bottom row illustrates the coarse graining of
 a simple repression motif in which the same repressor regulates multiple
 copies of the same gene. Rather than considering all states, the gene
-expression can calculated by considering one promoter and an effective
-copy number, described by the repressor fugacity $\lambda_r$ and is
+expression can be calculated by considering one promoter and an effective
+copy number, described by the repressor fugacity $\lambda_r$, and is
 derived in @weinert2014. Grayed-out states illustrate this further
 level of coarse graining.](ch7_figS23){#fig:twostate_archs short-caption="Various repression-based regulatory architectures and their coarse-grained states."}

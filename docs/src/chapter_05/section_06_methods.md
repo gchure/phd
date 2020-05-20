@@ -1,6 +1,6 @@
 ## Materials & Methods
 
-### Bacterial strains and growth conditions
+### Bacterial Strains and Growth Conditions
 
 The bacterial strains are described in Table 9.1. The parent strain for the
 mutants used in this study was MJF641 [@edwards2012], a strain which had all seven
@@ -47,13 +47,12 @@ OD$_\text{600nm} \sim .25$. Subsequently, 500 $\mu$L of that culture was inocula
 LB-Lennox supplemented with 500mM of NaCl and the culture was regrown to OD$_\text{600nm}$
 ~0.25. A 1 mL aliquot was taken and used to load the flow cell.
 
-### Flow cell
+### Flow Cell
 
 All experiments were conducted in a home-made
 flow cell as is shown in @Fig:flow_cell(A). This flow cell has two inlets which allow
 media of different osmolarity to be exchanged over the course of the
-experiment. The imaging region is approximately 10 mm wide and 100 $\mu$m in
-depth. All imaging took place within 1 – 2 cm of the outlet to avoid imaging
+experiment. The imaging region is approximately 10 mm wide and 100 $\mu$m deep. All imaging took place within 1 – 2 cm of the outlet to avoid imaging
 cells within a non-uniform gradient of osmolarity. The interior of the flow
 cell was functionalized with a 1:400 dilution of polyethylenimine prior to
 addition of cells with the excess washed away with water. A dilute cell
@@ -69,7 +68,7 @@ imaging. Over the observation period, cells not exposed to an osmotic shock
 were able to grow for 4 – 6 divisions, showing that the flow cell does not
 directly impede cell growth.
 
-### Imaging conditions
+### Imaging Conditions
 
 All imaging was performed in a flow cell held at
 30$^\circ$C on a Nikon Ti-Eclipse microscope outfitted with a Perfect Focus system
@@ -92,7 +91,7 @@ fluorescent and the exchange rate was calculated by measuring the
 fluorescence increase across an illuminated section of one of the positions.
 These images were collected in real time for the duration of the shock. The
 difference in measured fluorescence between the pre-shock images and those at
-the end of the shock set the scale of a 500 mM NaCl down shock. The rate was
+the end of the shock set the scale of a 500 mM NaCl downshock. The rate was
 calculated by fitting a line to the middle region of this trace. Further
 details regarding this procedure can be found in @bialecka-fornal2015.
 
@@ -109,7 +108,7 @@ illumination of the excitation wavelength.
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Survival or death classification was performed
 manually using the CellProfiler plugin for ImageJ software (NIH). A survivor
 was defined as a cell which was able to undergo at least two division events
-after the osmotic down shock. Cell death was recognized by stark changes in
+after the osmotic downshock. Cell death was recognized by stark changes in
 cell morphology including loss of phase contrast through ejection of
 cytoplasmic material, structural decomposition of the cell wall and membrane,
 and the inability to divide. To confirm that these morphological cues
@@ -117,8 +116,8 @@ corresponded with cell death, we probed cell viability on a subset of our
 strains after osmotic shock through staining with propidium iodide, a DNA
 intercalating dye commonly used to identifying dead cells (LIVE/DEAD BacLight
 Bacterial Cell Viability Assay, Thermo Fisher). We found that our
-classification based on morphology agreed with that based off of staining
-within 1%. More information regarding these experiments can be found in 
+classification based on morphology alone agreed with our classification based off of staining
+to within 1%. More information regarding these experiments can be found in 
 Chapter 9. Cells which detached from the surface during the post-shock
 growth phase or those which became indistinguishable from other cells due to
 clustering were not counted as survival or death and were removed from the
@@ -144,15 +143,16 @@ experiment. A more in-depth description of the segmentation procedure as well
 as the relevant code can be accessed as a Jupyter Notebook at
 (`http://rpgroup.caltech.edu/mscl_survival`).
 
-### Calculation of effective channel copy number
+### Calculation of Effective Channel Copy Number
 To compute the MscL channel copy number, we relied
 on measuring the fluorescence level of a bacterial strain in which the mean
 MscL channel copy number was known via fluorescence microscopy
 [@bialecka-fornal2012]. *E. coli* strain MLG910, which expresses the MscL-sfGFP fusion
 protein from the wild-type SD sequence, was grown under identical conditions
-to those described in Bialecka-Fornal et al. 2015 in LB Miller medium (BD Medical Sciences) to an OD~600nm~ of ~0.3. The cells
-were then diluted ten fold and immobilized on a rigid 2% agarose substrate
-and placed onto a glass bottom petri dish and imaged in the same conditions
+to those described in [@bialecka-fornal2015] in LB Miller medium (BD Medical
+Sciences) to an OD~600nm~ of ~0.3. The cells were then diluted ten-fold,
+immobilized on a rigid 2% agarose substrate,
+placed onto a glass bottom petri dish, and imaged in the same conditions
 as described previously.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Images were taken of six biological replicates
@@ -175,18 +175,18 @@ factor was used to convert the measured cell intensities from the osmotic
 shock experiments to cell copy number. The details of this inference are
 described in depth in the supplemental Chapter 9.
 
-### Logistic regression
+### Logistic Regression
 
 We used Bayesian inferential methods to find the
 most probable values of the coefficients $\beta_0$ and $\beta_1$ and the
-appropriate credible regions and is described in detail in the supplemental information (*Logistic Regression*).
-Briefly, we used Markov chain Monte Carlo (MCMC) to sample from the log
+appropriate credible regions, the procedure of which is described in detail in
+the supplemental Chapter 9.Briefly, we used Markov chain Monte Carlo (MCMC) to sample from the log
 posterior distribution and took the most probable value as the mean of the
 samples for each parameter. The MCMC was performed using the Stan
 probabilistic programming language [@carpenter2017] and all models can be
-found on the GitHub repository (`http://github.com/rpgroup-pboc/mscl_survival`).
+found on the [GitHub repository](http://github.com/rpgroup-pboc/mscl_survival).
 
-### Calculation of survival probability error
+### Calculation of Survival Probability Error
 
 The vertical error bars for the points shown in @Fig:survival represent
 our uncertainty in the survival probability given our measurement of $n$
@@ -206,7 +206,7 @@ $$
 f(n\,\vert\,p_s, N) = {N! \over n!(N - n)!}p_s^n(1 - p_s)^{N - n}.
 $${#eq:binomial}
 
-To maintain maximal ignorance we can assume that any value for $p_s$ is
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;To maintain maximal ignorance, we can assume that any value for $p_s$ is
 valid, such that is in the range [0, 1]. This prior knowledge, represented by
 $g(p_s)$, can be written as
 $$
@@ -261,7 +261,7 @@ $$
 p_s = p_s^* \pm \sigma_{p_s}.
 $${#eq:}
 
-### Data and software availability
+### Data and Software Availability
 
 All raw image data is freely available and is stored on the CaltechDATA
 Research Data Repository. The raw Markov chain Monte Carlo

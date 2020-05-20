@@ -1,6 +1,6 @@
 ## Discussion
 
-Allosteric regulation is often couched as “biological action at a distance".
+Allosteric regulation is often couched as “biological action at a distance."
 Despite extensive knowledge of protein structure and function, it remains
 difficult to translate the coordinates of the atomic constituents of a
 protein to the precise parameter values which define the functional response,
@@ -74,7 +74,7 @@ profile.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A hypothesis that arises from our formulation
 of $\Delta F$ is that a simple summation of the energetic contribution of
-each mutation should be sufficient to predict the double mutants (so long as
+each mutation should be sufficient to predict the double mutants (as long as
 they are in separate domains). We find that such a calculation permits
 precise and accurate predictions of the double mutant phenotypes, indicating
 that there are no epistatic interactions between the mutations examined in
@@ -129,8 +129,8 @@ obtained by colorimetric assays. Blue squares are data from
 @brewster2014 acquired from video microscopy. Green circles are data
 from @razo-mejia2018.  obtained via flow cytometry. All other symbols
 correspond to the work presented here. An interactive version of this
-figure can be found on the [paper
-website](https://www.rpgroup.caltech.edu/mwc_mutants) where the
+figure can be found on the [website](https://www.rpgroup.caltech.edu/mwc_mutants) associated with the
+publication of this chapter where the
 different data sets can be viewed in more
 detail. The [Python code
 (`ch3_fig6.py`)](https://github.com/gchure/phd/blob/master/src/chapter_03/code/ch3_fig6.py)

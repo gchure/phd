@@ -1,13 +1,13 @@
 ## Fold-Change Sensitivity Analysis
-In we found that the width of the credible regions varied widely depending on
+In Chapter 2,we found that the width of the credible regions varied widely depending on
 the repressor copy number $R$ and repressor operator binding energy $\Delta
 \varepsilon_{RA}$. More precisely, the credible regions were much narrower
 for low repressor copy numbers $R$ and weak binding energy
 $\Delta\varepsilon_{RA}$. In this section, we explain how this behavior comes
 about. We focus our attention on the maximum fold-change in the presence of
 saturating inducer. While it is straightforward to consider the width of the
-credible regions at any other inducer concentration, shows that the credible
-region are widest at saturation.
+credible regions at any other inducer concentration, the predicted fold-change
+curves presented in Chapter 2 show that the credible regions are widest at saturation.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The width of the credible regions corresponds to how sensitive the
 fold-change is to the fit values of the dissociation constants $K_A$
@@ -31,25 +31,37 @@ $c \to \infty$ for different repressor-DNA binding energies
 $\Delta\varepsilon_{RA}$ and repressor copy numbers $R$. 
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;To understand how the width of the credible region scales with
-$\Delta\varepsilon_{RA}$ and $R$, we can Taylor expand the
+$\Delta\varepsilon_{RA}$ and $R$, we can Taylor-expand the
 difference in fold-change to first order,
 $\Delta \text{fold-change}_{K_A} \approx (\partial
     \text{fold-change}/\partial K_A) \left( K_A - K_A^{\text{fit}} \right)$,
 where the partial derivative has the form
 $$
-\frac{\partial \text{fold-change}}{\partial K_A} = \frac{e^{-\beta \Delta \varepsilon_{AI}} \frac{n}{K_I}\left(\frac{K_A}{K_I}\right)^{n-1}}{\left( 1 + e^{-\beta \Delta \varepsilon_{AI}} \left(\frac{K_A}{K_I}\right)^n \right)^2}\frac{R}{N_{NS}}e^{-\beta \Delta\varepsilon_{RA}} \left(
+\begin{aligned}
+\frac{\partial \text{fold-change}}{\partial K_A} &= \frac{e^{-\beta \Delta
+\varepsilon_{AI}} \frac{n}{K_I}\left(\frac{K_A}{K_I}\right)^{n-1}}{\left( 1 +
+e^{-\beta \Delta \varepsilon_{AI}} \left(\frac{K_A}{K_I}\right)^n
+\right)^2}\frac{R}{N_{NS}}e^{-\beta \Delta\varepsilon_{RA}} \times \\
+& \left(
     1+\frac{1}{1+e^{-\beta \Delta \varepsilon_{AI} }
     \left(\frac{K_A}{K_I}\right)^n }\frac{R}{N_{NS}}e^{-\beta
     \Delta\varepsilon_{RA}} \right)^{-2}.
+\end{aligned}
 $${#eq:foldchange_partial_ka}
 Similarly, the Taylor expansion
 $\Delta \text{fold-change}_{K_I} \approx (\partial
     \text{fold-change}/\partial K_I) \left( K_I - K_I^{\text{fit}} \right)$
 features the partial derivative 
 $$
-\frac{\partial \text{fold-change}}{\partial K_I} = -\frac{e^{-\beta \Delta \varepsilon_{AI}} \frac{n}{K_I}\left(\frac{K_A}{K_I}\right)^{n}}{\left( 1 + e^{-\beta \Delta \varepsilon_{AI}} \left(\frac{K_A}{K_I}\right)^n \right)^2}\frac{R}{N_{NS}}e^{-\beta \Delta\varepsilon_{RA}} \left(
+\begin{aligned}
+\frac{\partial \text{fold-change}}{\partial K_I} &= -\frac{e^{-\beta \Delta
+\varepsilon_{AI}} \frac{n}{K_I}\left(\frac{K_A}{K_I}\right)^{n}}{\left( 1 +
+e^{-\beta \Delta \varepsilon_{AI}} \left(\frac{K_A}{K_I}\right)^n
+\right)^2}\frac{R}{N_{NS}}e^{-\beta \Delta\varepsilon_{RA}} \times \\
+& \left(
 1+\frac{1}{1+e^{-\beta \Delta \varepsilon_{AI} } \left(\frac{K_A}{K_I}\right)^n
 }\frac{R}{N_{NS}}e^{-\beta \Delta\varepsilon_{RA}} \right)^{-2}.
+\end{aligned}
 $${#eq:foldchange_partial_ki}
 From @Eq:foldchange_partial_ka and @Eq:foldchange_partial_ki, we find that both $\Delta \text{fold-change}_{K_A}$ and
 $\Delta \text{fold-change}_{K_I}$ increase in magnitude with $R$ and
@@ -77,22 +89,21 @@ $R=1740$ strain; similarly, the width of the O3 curves will be roughly
 ![**Determining how sensitive the fold-change values are to the fit values of
 the dissociation constants.** The difference $\Delta
 \text{fold-change}_{K_A}$ in fold change when the dissociation constant $K_A$
-is slightly offset from its best-fit value $K_A=139^{+29}_{-22} \mu\text{M}$,
-as given by . Fold-change is computed in the limit of saturating inducer
-concentration ($c \rightarrow \infty$, see ) where the credible regions in
+is slightly offset from its best-fit value $K_A=139^{+29}_{-22} \mu\text{M}$. Fold-change is computed in the limit of saturating inducer
+concentration ($c \rightarrow \infty$, see ) where the credible regions
 are widest. The O3 strain ($\Delta\varepsilon_{RA} = -9.7~k_B T$) is about
 1/1000 as sensitive as the O1 operator to perturbations in the parameter
 values, and hence its credible region is roughly 1/1000 as wide. All curves
-were made using $R = 260$. As in (A), but plotting the sensitivity of
+were made using $R = 260$. (B) The same analysis as shown in (A), but plotting the sensitivity of
 fold-change to the $K_I$ parameter relative to the best-fit value
 $K_I=0.53^{+0.04}_{-0.04} \mu\text{M}$. Note that only the magnitude, and not
 the sign, of this difference describes the sensitivity of each parameter.
-Hence, the O3 strain is again less sensitive than the O1 and O2 strains. As
-in (A), but showing how the fold-change sensitivity for different repressor
+Hence, the O3 strain is again less sensitive than the O1 and O2 strains. (C) The
+same analysis as shown in (A), but showing how the fold-change sensitivity for different repressor
 copy numbers. The strains with lower repressor copy number are less sensitive
 to changes in the dissociation constants, and hence their corresponding
-curves in have tighter credible regions. All curves were made using
-$\Delta\varepsilon_{RA} = -13.9~k_B T$. As in (C), the sensitivity of
+curves have tighter credible regions. All curves were made using
+$\Delta\varepsilon_{RA} = -13.9~k_B T$. (D) The same analysis as shown in (C), the sensitivity of
 fold-change with respect to $K_I$ is again smallest (in magnitude) for the
 low repressor copy number strains. The [Python code (`ch6_figS11.py`)](https://github.com/gchure/phd/blob/master/src/chapter_06/code/ch6_figS11.py)
 used to generate this figure can be found on the thesis [GitHub

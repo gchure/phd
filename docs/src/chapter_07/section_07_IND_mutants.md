@@ -16,9 +16,9 @@ diagonals show the fit induction profiles and the
 corresponding data. Regardless of the choice of fit strain, the
 predicted induction profiles of the repressor paired with the O3
 operator are poor, with the leakiness in each case being significantly
-underestimated. We also see that fitting to O3 results in poor
+underestimated. We also see that fitting the allosteric parameters to O3 results in poor
 predictions with incredibly wide credible regions for the other two
-operators. In @razo-mejia2018, we also found
+operators. In @razo-mejia2018 and in Chapter 6, we also found
 that fitting $K_A$ and $K_I$ to the induction profile of O3 generally
 resulted in poor predictions of the other strains with comparably wide
 credible regions.
@@ -43,8 +43,8 @@ regardless of the choice of fit strain. One exception is the prediction of
 the Q291K $\Delta F$ when the parameters fit to the O3 induction profile are
 used. As the induction profile for Q291K paired with O3 is effectively flat
 at a fold-change of 1, it is difficult to properly estimate the parameters of
-our sigmoidal function. We note all measurements of $\Delta F$ for Q291K are
-described by using either the parameters fit to either O1 or O3 induction
+our sigmoidal function. We note that all measurements of $\Delta F$ for Q291K are
+described by using the parameters fit to either O1 or O3 induction
 profiles, suggesting that the choice of fit strain makes little difference.
 
 ![**Pairwise comparison of fit strain versus predictions assuming only

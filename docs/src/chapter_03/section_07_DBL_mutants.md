@@ -22,7 +22,7 @@ measurements of the fold-change (@Fig:dbl_muts (A)) and the inferred
 difference in free energy (@Fig:dbl_muts (B)). The latter indicates that
 there are no epistatic interactions between the mutations queried in this
 work, though if there were, systematic deviations from these predictions
-would shed light on how the epistasis is manifest.
+would shed light on how the epistasis is manifested.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The precise agreement between the predictions
 and measurements for Q291K paired with either Q18A or Q18M is striking as
@@ -34,7 +34,7 @@ repressor still functions as an allosteric molecule, emphasizing that the
 mutations we have inserted do not alter the pathway of communication between
 the two domains of the protein. As the double mutant Y17I-Q291K exhibits
 fold-change of approximately $1$ across all IPTG concentrations
-(@Fig:dbl_muts (A)), these mutations in tandem make repression so weak it is
+(@Fig:dbl_muts (A)), these mutations in tandem make repression so weak that it is
 beyond the limits which are detectable by our experiments. As a consequence,
 we are unable to estimate $\Delta F$ nor experimentally verify the
 corresponding prediction (grey box in @Fig:dbl_muts (B)). However, as the
@@ -57,7 +57,7 @@ inducer binding domain mutants. (B) The difference in free energy of each double
 mutant as a function of the reference free
 energy. Points and errors correspond to the median and bounds of the 95%
 credible region of the posterior distribution for the inferred $\Delta F$. Shaded
-lines region are the predicted change in free energy, generated in the same
+regions are the predicted change in free energy, generated in the same
 manner as the shaded lines in (A). All measurements were taken from a strain
 with 260 repressors per cell paired with a reporter with the native O2 LacI
 operator sequence. In all plots, the IPTG concentration is shown on a

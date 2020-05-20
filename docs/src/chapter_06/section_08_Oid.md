@@ -23,9 +23,9 @@ might find better agreement with the observed data. Interestingly, we
 find that the majority of the parameters remain largely unchanged, but
 our estimate for the Oid binding energy $\Delta \varepsilon_{RA}$ is
 shifted to $-17.7~k_BT$ instead of the value $-17.0~k_BT$ found in @garcia2011.
-In @Fig:oid_refit we again plot the Oid fold-change data but with theoretical
-predictions using the new estimate for the Oid binding energy from our
-global fit and find substantially better agreement.
+In @Fig:oid_refit, we again plot the Oid fold-change data but with theoretical
+predictions, using the new estimate for the Oid binding energy from our
+global fit, and find substantially better agreement.
 
 ![**Predictions of fold-change for strains with an Oid binding sequence
 versus experimental measurements with different repressor copy

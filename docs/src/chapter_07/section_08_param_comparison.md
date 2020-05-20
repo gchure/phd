@@ -1,4 +1,4 @@
-## Comparing Parameter Values To The Literature
+## Comparing Parameter Values to the Literature
 
 In this section, we compare and contrast the biophysical parameter
 values we use to characterize the wild-type Lac repressor with the rich
@@ -7,7 +7,7 @@ section has an accompanying interactive figure available on the [paper
 website](http://rpgroup.caltech.edu/mwc_mutants) which allows the reader
 to examine different combinations of parameter values and their
 agreement or disagreement with data taken from 
-@garcia2011; @brewster2014 and @razo-mejia2018.
+@garcia2011, @brewster2014, and @razo-mejia2018.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;While the mutations used in this work and those in @daber2011
 are the same, we report significantly different values for the inducer
@@ -23,7 +23,7 @@ repressor *in vitro* [such as @ogorman1980] and their values
 have informed the fitting of other parameters from measurements *in
 vivo* (such as @daber2011 and  @daber2009a). All of these
 measurements, however, do not *directly* measure the DNA- or
-inducer-binding kinetics nor the equilibrium constant between the active
+inducer-binding kinetics, nor the equilibrium constant between the active
 and inactive states of the repressor. To properly estimate the
 parameters, one must either have direct measurement of a subset of the
 parameters or make assumptions regarding the states of the system.
@@ -32,7 +32,7 @@ LacI repressor from our previous work [@razo-mejia2018], that of @daber2011, and
 The theoretical predictions for the
 fold-change in gene expression, along with the values reported in
 @daber2009a, can be seen using the interactive figure on the [paper
-website](https://rpgroup.caltech.edu/mwc_mutants), where the reader can
+website](http://rpgroup.caltech.edu/mwc_mutants), where the reader can
 also enter their own parameter values and independently assess the
 agreement or lack thereof with the data.
 
@@ -55,9 +55,9 @@ combinations of parameter values can result in nearly equally good
 descriptions of the data. To illustrate this point, we estimated $K_A$,
 $K_I$, and DNA binding energy $\Delta\varepsilon_{RA}$ for each operator
 to the data reported in 
-@razo-mejia2018; @garcia2011; @brewster2014, using the three values of
+@razo-mejia2018, @garcia2011, and @brewster2014, using the three values of
 $\Delta\varepsilon_{AI}$ shown in Table 7.4. The resulting fits can be seen in @Fig:lit_degeneracy.
-Despite the drastically different values of $\Delta\varepsilon_{AI}$ it
+Despite the drastically different values of $\Delta\varepsilon_{AI}$, it
 is possible to generate adequate fits by modulating the other
 parameters. The parameter values of these fits, reported in Table 7.3
 further illustrate this point as they differ significantly from one another.
@@ -87,7 +87,7 @@ repressors in the active state. Using this key feature, one can infer
 $\Delta\varepsilon_{AI}$ given prior knowledge of
 $\Delta\varepsilon_{RA}$ and the total number of repressors per cell. As
 shown in @Fig:lit_degeneracy, using values of $\Delta\varepsilon_{AI}$
-from @razo-mejia2018; @ogorman1980 approximately agree with the
+from @razo-mejia2018 and @ogorman1980 approximately agree with the
 measurements whereas the predicted curves using $\Delta\varepsilon_{AI}$
 from @daber2011 overestimates the fold-change,
 even though these values accurately describe the simple-repression data
@@ -119,10 +119,11 @@ these parameters, one must make assumptions about the system to make any
 quantitative progress. We chose to use the parameter values defined in our
 laboratory as the repressor fugacity provides us with an independent, albeit
 indirect, measurement of $\Delta\varepsilon_{AI}$ which other works such as
-@daber2011 and @ogorman1980 do not. Both of these works determine all
-of parameter values simultaneously by fitting to a single set of
+@daber2011 and @ogorman1980 do not provide. Both of these works determine  all
+of the parameter values simultaneously by fitting them to a single set of
 measurements. While these measurements accurately describe their data, their
-parameter values are less successful in accounting for data from @brewster2014; @garcia2011; @razo-mejia2018. In the context
+parameter values are less successful in accounting for data from @brewster2014,
+@garcia2011, and @razo-mejia2018. In the context
 of this work, we emphasize that we make many of the same qualitative
 conclusions as in @daber2011 with respect to the effects of the
 mutations using our particular set of parameter values.
@@ -131,13 +132,13 @@ mutations using our particular set of parameter values.
 $\Delta\varepsilon_{AI}$, the qualitative results between this work and that
 of @daber2011 are in agreement. For example, both works determine that
 mutations in the DNA binding domain alter only the DNA binding affinity
-whereas the mutations in the inducer binding pocket affect only the
+whereas the mutations in the inducer binding pocket affect onlys the
 allosteric parameters. Because the biological variables such as repressor and
 reporter gene copy number are tightly controlled in our system, we are able
 to more precisely measure features of the induction profiles such as the
 leakiness in gene expression. This ability allows us to detect changes in the
 active/inactive equilibrium which were masked in @daber2011
-by the experimental design.While the precise parameter
+by the experimental design. While the precise parameter
 values may be different between publications, the exploration of free energy
 differences resulting from mutations are parameter-value independent and any
 parameter disagreements do not change our theoretical model. Fig. 2 of the

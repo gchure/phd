@@ -8,7 +8,7 @@ describe the inference of hidden entropic parameters to
 phenomenologically describe the temperature dependence of the
 fold-change in gene expression.
 
-### Definition of hidden entropic costs
+### Definition of Hidden Entropic Costs
 
 The values of the energetic parameters $\Delta\varepsilon_R$ and
 $\Delta\varepsilon_{AI}$ were determined in a glucose supplemented medium
@@ -26,7 +26,7 @@ formulation of a new phenomenological description.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Our thermodynamic model for the fold-change in
 gene expression coarse-grains the regulatory architecture to
-a two state model, meaning many of the rich features of regulation such as
+a two-state model, meaning many of the rich features of regulation such as
 vibrational entropy, the material properties of DNA, and the occupancy of the
 repressor to the DNA are swept into the effective energetic parameters. As
 temperature was never perturbed when this model was developed, modeling these
@@ -35,8 +35,8 @@ consider what may be affected.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Without assigning a specific mechanism, we can
 say that there is a temperature-dependent entropic parameter that was
-neglected in the estimation of the energetic parameters in Garcia and
-Phillips 2011 [@garcia2011] and Razo-Mejia *et al.* 2018 [@razo-mejia2018].
+neglected in the estimation of the energetic parameters in
+@garcia2011 and @razo-mejia2018.
 In this case, the inferred energetic parameter $\Delta\varepsilon^*$ is
 composed of enthalpic ($\Delta H$) and entropic ($\Delta S$) parameters,
 $$\Delta\varepsilon^* = \Delta H - T\Delta S. \label{eq:utds}$$ For a set of
@@ -56,7 +56,7 @@ $$
 $${#eq:epai_constraint}
 for the DNA binding energy and allosteric state energy difference, respectively.
 
-### Statistical inference of $\Delta S_R$ and $\Delta S_{AI}$ 
+### Statistical Inference of $\Delta S_R$ and $\Delta S_{AI}$ 
 
 Given the constraints from @Eq:epra_constraint and @Eq:epai_constraint, we
 are interested in inferring the entropic parameters $\Delta S_R$ and $\Delta
@@ -131,8 +131,8 @@ one using data sets from both temperatures pooled together.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The sampling results can be seen in
 @Fig:entropy_corner. The estimation of $\Delta S_R$ is distinct for each
-condition where as the sampling for $\Delta S_{AI}$ is the same for all
-conditions and is centered about 0. The latter suggests that the value of
+condition whereas the sampling for $\Delta S_{AI}$ is the same for all
+conditions and is centered at about 0. The latter suggests that the value of
 $\Delta\varepsilon_{AI}$ determined at 37$^\circ$ C is not dependent on
 temperature within the resolution of our experiments. The difference between
 the estimated value of $\Delta S_{R}$ between temperatures suggests that
@@ -144,14 +144,14 @@ the entropic parameter leads to better fit of the 32$^\circ$ C condition than
 the simple rescaling of the energy as described by @Eq:epstar
 (@Fig:entropy_pairwise, dashed line), but poorly predicts the behavior at
 42$^\circ C$. Performing the inference on the combined 32$^\circ$ C and
-42$^\circ$ C data strikes a middle ground between the the predictions
+42$^\circ$ C data strikes a middle ground between the predictions
 resulting from the two temperatures alone [@Fig:entropy_pairwise, grey shaded
 region].
 
-### Entropy as a function of temperature
+### Entropy as a Function of Temperature
 
 In the previous section, we made an approximation of the energetic
-parameters $\Delta\varepsilon_{R}$ and $\Delta\varepsilon_{AI}$ to
+parameters $\Delta\varepsilon_{R}$ and $\Delta\varepsilon_{AI}$ to be
 defined by an enthalpic and entropic term, both of which being
 independent of temperature. However, entropy can be (and in many cases
 is) dependent on the system temperature, often in a non-trivial manner.
@@ -195,7 +195,7 @@ experimental standpoints.
 ![**Sampled posterior probability distributions of entropic penalty parameter
 inference.** Marginal and joint distributions conditioned only on data
 collected at 32$^\circ$ C, only on 42 $^\circ$ C, or on both temperatures are
-shown in blue, red, and black, respectively. The value $\Delta S_R$ and
+shown in blue, red, and black, respectively. The values of $\Delta S_R$ and
 $\Delta S_{AI}$ are given in $k_BT / K$ where $K$ is 1 degree
 Kelvin. The [Python code (`ch8_figS11.py`)](https://github.com/gchure/phd/blob/master/src/chapter_08/code/ch8_figS11.py)
 used to generate this figure can be found on the thesis [GitHub
@@ -205,7 +205,7 @@ probability distributions of entropic penalty parameter inference."}
 
 ![**Pairwise predictions of fold-change in gene expression at different
 temperatures.** Each row represents the condition used to infer the entropic
-parameters and columns are the conditions that are being predicted. color
+parameters, and columns are the conditions that are being predicted. Color
 shaded regions represent the 95\% credible region of the predicted
 fold-change given the inferred values of $\Delta S_R$ and $\Delta S_{AI}$ for
 each condition. The black dashed line represents the predicted fold-change in
@@ -226,7 +226,7 @@ transparent line in all plots shows the relevant quantity including only a
 temperature-independent entropic parameter. Purple hashed line illustrates
 the relevant quantity including a temperature-dependent entropic
 contribution. The width of each curve indicates the 95\% credible region of
-thee relevant quantity. Points in each correspond to the experimental
+the relevant quantity. Points in each correspond to the experimental
 measurements. The points in the top row represent the mean and standard error
 of five to eight biological replicates. Points in the bottom row correspond
 to the median value of the inferred free energy shift and the mean of five to

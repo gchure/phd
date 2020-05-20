@@ -3,7 +3,7 @@
 In this section, we discuss how the theoretical framework presented in this
 work is sufficiently general to include a variety of regulatory architectures
 outside of simple repression by LacI. We begin by noting that the exact same
-formula for fold-change given in can also describe corepression. We then
+formula for fold-change given in Chapter 2 can also describe corepression. We then
 demonstrate how our model can be generalized to include other architectures,
 such as a coactivator binding to an activator to promote gene expression. In
 each case, we briefly describe the system and describe its corresponding
@@ -35,8 +35,8 @@ and $K_I$ between the inducer and repressor in the active and inactive
 states, respectively. The corepressor is defined by $K_A < K_I$, since
 the corepressor favors binding to the repressor’s active state; an
 inducer must satisfy $K_I < K_A$, as was found in Chapter 2. Much as was
-performed in Chapter 2, we can make some predictions about the how the response
-of a corepressor. In @Fig:applications (A), we show how varying the repressor
+performed in Chapter 2, we can make some predictions regarding the 
+response of a corepressor. In @Fig:applications (A), we show how varying the repressor
 copy number $R$ and the repressor-DNA binding energy $\Delta\varepsilon_{RA}$
 influence the response. We draw the reader’s attention to the decrease in
 fold-change as the concentration of effector is increased.
@@ -70,7 +70,7 @@ state, and $\varepsilon_{AP}$ is the interaction energy between the
 activator and the RNAP. Unlike in the cases of induction and
 corepression, the fold-change formula for activation includes terms from
 when the RNAP is bound by itself on the DNA as well as when both RNAP
-and the activator are simultaneously bound to the DNA. explores
+and the activator are simultaneously bound to the DNA. @Fig:applications (B) explores
 predictions of the fold-change in gene expression by manipulating the
 activator copy number, DNA binding energy, and the polymerase-activator
 interaction energy. Note that with this activation scheme, the
@@ -79,10 +79,11 @@ of these predictions is the observation that even small changes in the
 interaction energy ($< 0.5\, k_BT$) can result in dramatic increase in
 fold-change.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;As in the case of induction, the is straightforward to generalize. For
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;As in the case of induction, the approach towards
+inducible activation is straightforward to generalize. For
 example, the relative values of $K_I$ and $K_A$ can be switched such
-that $K_I < K_A$ in which the secondary molecule drives the activator
-to assume the inactive state represents induction of an activator. While
+that $K_I < K_A$, in which the secondary molecule drives the activator
+to assume the inactive state, represents induction of an activator. While
 these cases might be viewed as separate biological phenomena,
 mathematically they can all be described by the same underlying
 formalism.
@@ -95,7 +96,7 @@ copy number $R$ and repressor-DNA binding energy $\Delta\varepsilon_{RA}$,
 respectively, change the predicted response profiles. (B) In the case of
 inducible activation, binding of an effector molecule to an activator
 transcription factor increases the fold-change in gene expression. Note that
-for activation, the fold-change is greater than 1. The left and center panels
+for activation, the fold-change is greater than 1. The let and center panels
 show how changing the activator copy number $A$ and activator-DNA binding
 energy $\Delta\varepsilon_{AA}$ alter response, respectively. The right panel
 shows how varying the polymerase-activator interaction energy

@@ -17,7 +17,7 @@ alter binding to multiple allosteric effectors [@daber2009a]. In contrast to the
 binding domain mutants, we paired the inducer binding domain mutations
 with the three native LacI operator sequences (which have various
 affinities for the repressor) and a single ribosomal binding site
-sequence. This ribosomal binding site sequence, as reported in @garcia2011 ,
+sequence. This ribosomal binding site sequence, as reported in @garcia2011, 
 expresses the wild-type LacI repressor to an average copy number of
 approximately $260$ per cell. As the free energy differences resulting
 from point mutations in the DNA binding domain can be described solely

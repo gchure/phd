@@ -1,7 +1,7 @@
-A version of this chapter originally appeared as Chure, G; Razo-Mejia, M.,
-Belliveau, N.M.; Kaczmarek, Zofii A.; Einav, T.; Barnes, Stephanie L.; Lewis,
-M., and Phillips, R. (2019). *Predictive Shifts in Free Energy Couple
-Mutations to Their Phenotypic Consequences.* PNAS 116(37) DOI:
+A version of this chapter originally appeared as Chure, G, Razo-Mejia, M.,
+Belliveau, N.M., Kaczmarek, Zofii A., Einav, T., Barnes, Stephanie L., Lewis,
+M., and Phillips, R. (2019). Predictive shifts in free energy couple
+mutations to their phenotypic consequences. PNAS 116(37) DOI:
 https://doi.org/10.1073/pnas.1907869116. G.C., M.R.M, N.M.B., Z.A.K., and
 S.L.B designed the experiments and collected and analyzed data. G.C.
 developed theoretical treatment of free energy shifts. G.C., M.R.M, N.M.B.,

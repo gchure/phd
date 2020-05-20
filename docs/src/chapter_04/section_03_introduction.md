@@ -12,7 +12,7 @@ level of adaptation using mass spectrometry, ribosomal profiling, and RNA
 sequencing have revealed that various classes of genes (termed "sectors") are
 tuned such that the protein mass fraction of the translational machinery is
 prioritized over the metabolic and catabolic machinery in nutrient replete
-environments [@scott2014; @klumpp2014; @hui2015; @schmidt2016; @li2014a]. This
+environments [@scott2014; @klumpp2014; @hui2015; @schmidt2016; @li2014]. This
 drastic reorganization is mediated by the regulation of gene expression,
 relying on the concerted action of myriad transcription factors. Notably, each
 gene in isolation is regulated by only one or a few components
@@ -42,7 +42,7 @@ operator sequence, concentration of an external inducer, and amino acid
 substitutions, none have explored how the physiological state of the cell as
 governed by external factors influences gene expression. This is arguably one
 of the most critical variables one can experimentally tune to understand the
-role of these regulatory architectures play in cellular physiology writ
+roles these regulatory architectures play in cellular physiology writ
 large.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;In this work, we interrogate the adaptability
@@ -58,7 +58,7 @@ rate by a factor of $\approx$ 1.5 and $\approx$ 4 compared to glucose,
 respectively. We hypothesize that different carbon sources should, if
 anything, only modulate the repressor copy number seeing as the relationship
 between growth rate and total protein content has been rigorously quantified
-[@schaechter1958; @schmidt2016; @li2014a; @jun2018]. Using single-cell
+[@schaechter1958; @schmidt2016; @li2014; @jun2018]. Using single-cell
 time-lapse fluorescence microscopy, we directly measure the copy number of
 the repressor in each condition. Under a simple hypothesis, all other
 parameters should be unperturbed, and we can thus rely on previously
@@ -90,7 +90,7 @@ p_{state} \propto e^{-\varepsilon_{state} / k_BT},
 $${#eq:boltz}
 where $k_B$ is the Boltzmann constant and $T$ is the temperature of the system.
 Given knowledge of $T$ for a particular experiment, we can easily draw
-predictions of the fold-change in gene expression. However, we find the
+predictions of the fold-change in gene expression. However, we find that the
 fold-change in gene expression is inconsistent with this simple model,
 revealing an incomplete description of the energetics. We then examine how
 entropic effects neglected in the initial estimation of the energetic

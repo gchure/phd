@@ -1,6 +1,6 @@
 ## Theoretical Model 
 
-### Inducible Transcriptional Repression Via The MWC Model of Allostery
+### Inducible Transcriptional Repression Via the MWC Model of Allostery
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;We begin by considering a simple repression genetic architecture in which the
 binding of an allosteric repressor occludes the binding of RNA polymerase
@@ -72,7 +72,7 @@ p_\text{bound} = \frac{\frac{P}{N_{NS}}e^{-\beta
 \Delta\varepsilon_{RA}}+\frac{R_I}{N_{NS}}e^{-\beta
 \Delta\varepsilon_{RI}}+\frac{P}{N_{NS}}e^{-\beta\Delta\varepsilon_{P}}},
 $${#eq:pbound_def}
-with $\beta = 1/k_BT$ where $k_B$ is the Boltzmann constant
+with $\beta = 1/k_BT$, where $k_B$ is the Boltzmann constant
 and $T$ is the temperature of the system. As $k_BT$ is the natural
 unit of energy at the molecular length scale, we treat the products
 $\beta \Delta\varepsilon_{j}$ as single parameters within our model.
@@ -162,7 +162,7 @@ experiments using the *lac* system in *E. coli* to tune the control
 parameters for a simple repression genetic circuit. As discussed in
 @Fig:inducible_types (C), previous studies have provided
 well-characterized values for many of the parameters in our experimental
-system, leaving only the values of the the MWC parameters ($K_A$, $K_I$, and
+system, leaving only the values of the MWC parameters ($K_A$, $K_I$, and
 $\Delta \varepsilon_{AI}$) to be determined. We note that while previous
 studies have obtained values for $K_A$, $K_I$, and $L=e^{-\beta \Delta
 \varepsilon_{AI}}$ [@ogorman1980; @daber2011], they were either based upon

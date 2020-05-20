@@ -1,4 +1,4 @@
-## Fold-change dependence on temperature variation
+## Fold-change Dependence on Temperature Variation
 
 Unlike the identity of the carbon source, the temperature of the system
 is explicitly stated in @Eq:foldchange_simple and @Eq:growth_pact
@@ -41,7 +41,7 @@ that there are temperature dependent effects that are not accounted for
 in the simplest null model of temperature dependence.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The model described by @Eq:foldchange_simple
-and @Eq:growth_pact and subsumes the myriad rich dynamical processes
+and @Eq:growth_pact subsumes the myriad rich dynamical processes
 underlying protein binding and conformational changes into two effective
 energies, $\Delta\varepsilon_{R}$ and $\Delta\varepsilon_{AI}$. By no means
 is this done to undercut the importance of these details in transcriptional

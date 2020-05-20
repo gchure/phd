@@ -1,9 +1,9 @@
 ## *E. coli* Primer and Strain List 
-Here we provide additional details about the genotypes of the strains
+Here, we provide additional details about the genotypes of the strains
 used, as well as the primer sequences used to generate them. *E. coli*
 strains were derived from K12 MG1655. For those containing $R=22$, we
 used strain HG104 which additionally has the *lacYZA* operon deleted
-(positions 360,483 to 365,579) but still contains the native *lacI*
+(positions 360,483 to 365,579), but still contains the native *lacI*
 locus. All other strains used strain HG105, where both the *lacYZA* and
 *lacI* operons have both been deleted (positions 360,483 to 366,637).
 
@@ -27,10 +27,10 @@ from @garcia2011. The asterisk refers to the presence of FLP recombinase
 sites flanking the chloramphenicol resistance gene that can be used to
 lose this resistance. However, we maintained the resistance gene in our
 constructs. A summary of the final genotypes of each strain is listed in
-Table 6.4. In addition each strain also contained the
+Table 6.4. In addition, each strain also contained the
 plasmid pZS4\*1-mCherry and provided constitutive expression of the
 mCherry fluorescent protein. This pZS plasmid is a low copy (SC101
-origin of replication) where like with 3\*1x-lacI, mCherry is driven by
+origin of replication) where, like with 3\*1x-lacI, mCherry is driven by
 a $P_{LtetO-1}$ promoter.
 
 | **Primer** | **Sequence (5' $\rightarrow$ 3')** | **Notes**|

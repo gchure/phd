@@ -1,6 +1,7 @@
 ## Parameter Estimation Using All Induction Profiles
+
 In Chapter 3 and Sec. 7.1 and 7.2 of this chapter, we have
-laid out our strategy for inferring the the various parameters of our
+laid out our strategy for inferring the various parameters of our
 model to a single induction profile and using the resulting values to
 predict the free energy and induction profiles of other strains. In this
 section, we estimate the parameters using all induction profiles of a
@@ -13,9 +14,8 @@ Table 7.5. These parameters are close to those
 reported in Table 7.1 for each repressor copy number with Q18A
 showing the largest differences. The resulting induction profiles and
 predicted change in free energy for these mutants can be seen in @Fig:global_DNA_profiles. 
-Overall, the induction profiles match the data to an appreciable
-agree. We acknowledge that even when using *all* repressor copy numbers,
-the fit to Q18A remains imperfect. However we contend that this
+Overall, the induction profiles accurately capture the data. We acknowledge that even when using *all* repressor copy numbers,
+the fit to Q18A remains imperfect. However, we contend that this
 disagreement is comparable to that observed in @razo-mejia2018 which
 described the induction profile of the wild-type repressor. We find that
 the predicted change in free energy (bottom row in @Fig:global_DNA_profiles (B))

@@ -49,7 +49,7 @@ a variety of different metabolic intermediates. Furthermore, the exponential
 growth phases in @Fig:triauxic_growth for each carbon source have different
 growth rates which itself results in large changes in cell volume
 [@taheri-araghi2015; @jun2018], genome copy number [@nordstrom2006], and
-global gene expression patterns [@li2014a; @schmidt2016; @hui2015]. Despite
+global gene expression patterns [@li2014; @schmidt2016; @hui2015]. Despite
 these changes in cellular physiology, the regulatory systems underlying
 enzymatic adaptation still function with binding of transcription factors
 being ignorant of the majority of possible metabolic states of the cell.
@@ -101,13 +101,13 @@ in gene expression, if at all.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The parameter that we can say *a priori* is
 very likely to change is the repressor copy number $R$. In Chapters 2 and 3,
-we knew the total repressor copy number from previous work where the copy
-numbers were directly measured via quantitative Western blotting in a
-particular physiological state [@garcia2011]. However, it has been known for
+we had *a priori* knowledge of the total repressor copy number as previous work
+directly measured their values in a particular physiological state via
+quantitative Western blotting [@garcia2011]. However, it has been known for
 nearly three-quarters of a century that the total protein content of the cell
 scales linearly with the growth rate [@schaechter1958; @jun2018], a
 phenomenon that has recently been queried at the single-protein level through
-proteomic methods [@schmidt2016; @li2014a;@valgepea2013a;@peebo2015]. Thus,
+proteomic methods [@schmidt2016; @li2014;@valgepea2013a;@peebo2015]. Thus,
 we cannot assume that the protein copy number of the strains used in Chapters
 2 and 3 can be left unperturbed. To account for this fact, we used a
 fluorescence-based method to directly count the number of LacI repressors per

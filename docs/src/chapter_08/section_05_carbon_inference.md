@@ -9,7 +9,7 @@ using the parameter values determined in glucose supported medium at
 each carbon source condition and test its ability to predict the
 fold-change of the other conditions.
 
-### Reparameterizing the fold-change input-output function
+### Reparameterizing the Fold-Change Input-Output Function
 
 As described previously, the fold-change in gene expression is defined by the
 total repressor copy number $R$, the energetic difference between the active
@@ -41,7 +41,7 @@ conditions.
 
 We are interested in the probability distribution of the parameter
 $\epsilon$ given knowledge of the repressor copy number $R$ and a
-collection of fold-change measurements $\mathbf{fc}$ can be calculated
+collection of fold-change measurements $\mathbf{fc}$. This quantity can be calculated
 via by Bayes' theorem as
 $$
 g(\epsilon\,\vert\,R, \mathbf{fc}) = \frac{f(\mathbf{fc}\,\vert\, R,
@@ -62,9 +62,9 @@ R)\right)^2}{2\sigma^2}\right],
 $${#eq:lin_fc_like}
 where $N$ is the total number of fold-change measurements, and $\sigma$ is
 the standard deviation of the observations about the true mean and is another
-parameter that must included in the estimation. As the fold-change in gene
+parameter that must be included in the estimation. As the fold-change in gene
 expression in this work covers several orders of magnitude (from $\approx
-10^{-3} - 10^{0}$) it is is better to condition the parameters on the log
+10^{-3} - 10^{0}$), it is better to condition the parameters on the log
 fold-change rather than linear scaling, translating @Eq:lin_fc_like to 
 $$
 f(\mathbf{fc}^*\,\vert\, \epsilon, R) =
@@ -91,7 +91,7 @@ and
 $$
 g(\sigma) \sim \text{HalfNormal}(\phi=0.1),
 $${#eq:chure2019_sig_prior} 
-where we introduce the shorthand notation of "Normal" and "HalfNormal".
+where we introduce the shorthand notation of "Normal" and "HalfNormal."
 Combining @Eq:log_fc_like and @Eq:chure2019_sig_prior -
 @Eq:chure2019_ep_prior yields the complete posterior distribution for
 estimating the DNA binding energy for each carbon source medium. The complete
@@ -99,7 +99,7 @@ posterior distribution was sampled using Markov chain Monte Carlo in the Stan
 probabilistic programming language [@carpenter2017].
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The sampled posterior distributions for
-$\epsilon$ and $\sigma$ for each carbon source condition shown in
+$\epsilon$ and $\sigma$ for each carbon source condition are shown in
 @Fig:carbon_cornerplot and are summarized in Table 8.1. The posterior
 distributions of $\epsilon$ across the conditions are approximately equal
 with highly overlapping 95\% credible regions. The predictive capacity of
@@ -119,7 +119,7 @@ variation in carbon quality.
 | Acetate, 37$^\circ$ C | $\epsilon$ | $-14.1_{-0.3}^{+0.2}\, k_BT$ |
 | | $\sigma$ | $0.35_{-0.1}^{+0.1}$ | 
 : Summarized parameter estimates of $\epsilon$ and $\sigma$ given a single
-growth condition. reported as median and upper/lower bounds of 95\% credible
+growth condition. Reported as median and upper/lower bounds of 95\% credible
 region.
 
 ![**Posterior probability distributions of effective DNA binding energy
@@ -139,7 +139,7 @@ different carbon sources."}
 the strain to which the effective DNA binding energy $\epsilon$ was estimated and
 columns are the strains whose fold-change is predicted. Shaded lines represent
 the 95\% credible region of the prediction given the estimated value of
-$\epsilon$. Points and error correspond to the median and standard error of fie
+$\epsilon$. Points and error correspond to the median and standard error of five
 to eight biological replicates. The [Python code (`ch8_figS10.py`)](https://github.com/gchure/phd/blob/master/src/chapter_08/code/ch8_figS10.py)
 used to generate this figure can be found on the thesis [GitHub
 repository](https://github.com/gchure/phd).](ch8_figS10){#fig:pairwise_carbon

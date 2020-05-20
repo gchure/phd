@@ -16,19 +16,19 @@ expressed from separate plasmids. As the copy numbers of these plasmids
 fluctuate in the population, both the population average repressor copy
 number and the number of regulated promoters were unknown. Both of these
 quantities have been shown previously to significantly alter the
-measured gene expression and calculation of $\Delta F$ is dependent on
+measured gene expression, and calculation of $\Delta F$ is dependent on
 knowledge of their values. While the approach presented in 
 @daber2011 considers the Lac repressor as an MWC molecule, the copy numbers of the
 repressor and the reporter gene were swept into an effective parameter
 ${R  / K_{DNA}}$, hindering our ability to distinguish between
 changes in repressor copy number or in DNA binding energy. To test our
 hypothesis of free energy differences resulting from various parameter
-perturbations, we used the dataset in @daber2011 as a guide and chose a
+perturbations, we used the data set in @daber2011 as a guide and chose a
 subset of the mutations to quantitatively dissect. To control copy
 number variation, the mutant repressors and the reporter gene were
 integrated into the *E. coli* chromosome where the copy numbers are
 known and tightly controlled [@razo-mejia2018; @garcia2011]. Furthermore, the mutations were paired
-with ribosomal binding sties where the level of translation of the
+with ribosomal binding sites where the level of translation of the
 wild-type repressor had been directly measured previously [@garcia2011].
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;We made three amino acid substitutions (Y17I, Q18A, and Q18M) that are
@@ -154,7 +154,7 @@ concordant with the prediction generated from fitting
 $\Delta\varepsilon_{RA}$ to a single repressor copy number (orange lines
 @Fig:DNA_muts (C)]) This is in line with the predictions outlined in
 @Fig:deltaF_theory (C) and (D), indicating that the allosteric parameters are
-"insulated", meaning they are not affected by the DNA binding domain
+"insulated," meaning they are not affected by the DNA binding domain
 mutations. As the $\Delta F$ for all repressor copy numbers collapses onto
 the prediction, we can say that the expression of the repressor itself is the
 same or comparable with that of the wild type. If the repressor copy number

@@ -1,11 +1,11 @@
-## Comparison of Survival Probability with van den Berg et al. 2016
+## Comparison of Survival Probability with van den Berg et al. (2016)
 
 &nbsp;&nbsp;&nbsp;&nbsp;In @vandenberg2016, the authors report a
 100% survival rate at approximately 100 channels per cell. While the number
 of mechanosensitive channels per cell was quantified at the level of single
 cells, the survival probability was measured in bulk using ensemble plating
 assays. The results of these experiments considering the contribution of MscL
-to survival is shown in Figure 5 of their work, although with out displayed
+to survival is shown in Figure 5 of their work, although without displayed
 uncertainty in the survival probability. Figure S6B of their work shows the
 approximate error in survival probability through ensemble plating assays for
 three different strains (@Fig:poolman_comparison (A)), which is approximately
@@ -28,8 +28,7 @@ included error.** (A) Reported survival probabilities of a strain lacking all
 mechanosensitive channels (“no plasmid”), plasmid borne MscL-mEos3.2, and
 plasmid borne MscS-mEos3.2. Approximate reported errors for MscL-mEos3.2
 survival probability is 30\%. (B) The measurement of survival probability as a
-function of MscL channel copy number was obtained from Figure 5B in van den
-Berg et al 2016. Errors in channel copy number represent the standard
+function of MscL channel copy number was obtained from Figure 5B in @vandenberg2016. Errors in channel copy number represent the standard
 deviation of several biological replicates (present in original figure) while
 the error in survival probability is taken as  $\approx$
 30\%. The [Python code (`ch9_figS12.py`)](https://github.com/gchure/phd/blob/master/src/chapter_09/code/ch9_figS12.py)

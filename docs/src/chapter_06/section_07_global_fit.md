@@ -4,7 +4,7 @@ In Chapter 2, we used the repressor copy numbers $R$ and
 repressor-DNA binding energies $\Delta\varepsilon_{RA}$ as reported by
 @garcia2011. However, any error in these previous measurements of $R$ and
 $\Delta\varepsilon_{RA}$ will necessarily propagate into our own
-fold-change predictions. In this section we take an alternative approach
+fold-change predictions. In this section, we take an alternative approach
 to fitting the physical parameters of the system to that used in the
 main text. First, rather than fitting only a single strain, we fit the
 entire data set in along with microscopy data for the synthetic operator
@@ -59,7 +59,7 @@ Lastly, $f(D)$ serves as a normalization constant and is neglected.
 
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Given $n$ independent measurements of the
-fold-change, the first term in can be written as
+fold-change, the first term in @Eq:bayes_global can be written as
 $$
 \begin{aligned}
     f(D \mid \tilde{k}_A, \tilde{k}_I, \mathbf{\textbf{\textit{R}}},
@@ -75,11 +75,11 @@ prediction. Note that the standard deviation $\sigma$ of this
 distribution is not known and hence needs to be included as a parameter
 to be fit.
 
-&nbsp;&nbsp;&nbsp;&nbsp;The second term in represents the prior information of the parameter
-values. We assume that all parameters are independent of each other, so
+&nbsp;&nbsp;&nbsp;&nbsp;The second term in @Eq:bayes_global represents the prior information of the parameter
+values. We assume that all parameters are independent of each other, such
 that $g(\tilde{k}_A, \tilde{k}_I, \mathbf{\textbf{\textit{R}}},
-\mathbf{\Delta\boldsymbol{\varepsilon}_{\textbf{\textit{RA}}}}, \sigma) =
-g(\tilde{k}_A ) \cdot P(\tilde{k}_I ) \cdot \prod_i P(R^{(i)}) \cdot \prod_j
+\mathbf{\Delta\boldsymbol{\varepsilon}_{\textbf{\textit{RA}}}}, \sigma)$ =
+$g(\tilde{k}_A ) \cdot P(\tilde{k}_I ) \cdot \prod_i P(R^{(i)}) \cdot \prod_j
 g(\Delta\varepsilon_{RA}^{(j)}) \cdot g(\sigma),$ where the superscript
 $(i)$ indicates the repressor copy number of index $i$ and the
 superscript $(j)$ denotes the binding energy of index $j$. As above,
@@ -123,7 +123,7 @@ constrain the range of values for $R^{(i)}$ and
 $\Delta\varepsilon_{RA}^{(j)}$ found from the fitting. For example, if
 for some $i$ the standard deviation $\sigma_{R_i}$ is very small, it
 implies a strong confidence in the previously reported value.
-Mathematically, the exponential in will ensure that the best-fit
+Mathematically, the exponential in @Eq:global_prior_r will ensure that the best-fit
 $R^{(i)}$ lies within a few standard deviations of $\bar{R}^{(i)}$.
 Since we are interested in exploring which values could give the best
 fit, the errors are taken to be wide enough to allow the parameter
@@ -136,7 +136,7 @@ D)$, enabling us to determine both the most likely value for each
 physical parameter as well as its associated credible region. 
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;@Fig:induction_global_fit shows the result of
-this global fit. When compared with we can see that fitting for the binding
+this global fit. When compared with the results of Chapter 2, we can see that fitting for the binding
 energies and the repressor copy numbers improves the agreement between the
 theory and the data. Table 6.2 summarizes the values of the parameters as
 obtained with this MCMC parameter inference. We note that even though we
@@ -172,19 +172,18 @@ energies.** Theoretical prediction resulting from simultaneous estimation of
 the dissociation constants $K_A$ and $K_I$, the six repressor copy numbers $R$,
 and the four repressor-DNA binding energies $\Delta\varepsilon_{RA}$ using the
 entire dataset. Points and errors represent the mean and standard error of ~10
-biological replicates for O1, O2, and O3 and 3 biological replicates for
+biological replicates for O1, O2, O3, and 3 biological replicates for
 Oid. The [Python code (`ch6_fig12.py`)](https://github.com/gchure/phd/blob/master/src/chapter_06/code/ch6_figS12.py) used to generate this figure can be found on the thesis [GitHub
 repository](https://github.com/gchure/phd).](ch6_figS12){#fig:induction_global_fit short-caption="Induction curves
 using global parameter estimates."}
 
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;@Fig:properties_global_fit shows the same key properties as in Fig. 2.7 , but
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;@Fig:properties_global_fit shows the same key properties as Fig. 2.7 , but
 uses the parameters obtained from this global fitting approach. We note that
 even by increasing the number of degrees of freedom in our fit, the result
-does not change substantially, due to in general, only minor improvements
-between the theoretical curves and data. For the O3 operator data, again,
+does not change substantially. or the O3 operator data, again,
 agreement between the predicted $[EC_{50}]$ and the effective Hill
-coefficient remain poor due the theory being unable to capture the steepness
+coefficient remains poor due to the theory being unable to capture the steepness
 of the response curves.
 
 ![**Key properties of induction profiles as predicted with a global fit using all
@@ -195,7 +194,7 @@ for the [EC$_{50}$] and the effective Hill coefficient, respectively, represent
 the estimated value using parameter estimates of $K_A$ and $K_I$ for that
 particular strain. Errors represent the width of the 95\% credible region. In
 all plots, curves represent the theoretical predictions given the parameter
-estimates conditioned on all data sets.The [Python code
+estimates conditioned on all data sets. The [Python code
 (`ch6_figS13.py`)](https://github.com/gchure/phd/blob/master/src/chapter_06/code/ch6_figS13.py)
 used to generate this figure can be found on the thesis
 [GitHub repository](https://github.com/gchure/phd).](ch6_figS13){#fig:properties_global_fit

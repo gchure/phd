@@ -22,7 +22,7 @@ this theory requires knowledge of the number of *active* repressors, we
 often only know the total number $R$ which is the sum total of active
 and inactive repressors. We can define a prefactor $p_\text{act}(c)$
 which captures the allosteric nature of the repressor and encodes the
-probability a repressor is in the active (repressive) state rather than
+probability that a repressor is in the active (repressive) state rather than
 the inactive state for a given inducer concentration $c$, namely,
 $$
 p_\text{act}(c) = {\left(1 + {c \over K_A}\right)^n \over \left(1 + {c \over
@@ -128,8 +128,8 @@ parameters – such as inducer binding constants $K_A$ and $K_I$ or
 active/inactive state energetic difference $\Delta\varepsilon_{AI}$ – alter
 the free energy $F$, which can be interpreted as the free energy difference
 between the repressor bound and unbound states of the promoter. 
-@Fig:deltaF_theory (A) illustrates how changes to the inducer binding
-constants $K_A$ and $K_I$ alone alter the induction profiles and resulting
+@Fig:deltaF_theory (A) illustrates how perturbations to the inducer binding
+constants $K_A$ and $K_I$ alone alter the induction profiles and 
 free energy as a function of the inducer concentration. In the limit where $c
 = 0$, the values of $K_A$ and $K_I$ do not factor into the calculation of
 $p_\text{act}(c)$ given by @Eq:mut_pact meaning that
@@ -177,8 +177,8 @@ repressor are energetically divorced from changes to the allosteric
 nature of the repressor. As a consequence, the change in free energy is
 constant for all inducer concentrations, as is schematized in 
 @Fig:deltaF_theory (C). Because the magnitude
-of the change in free energy scales logarithmically with changing
-repressor copy number, a mutation which increases expression from 1 to
+of the free energy shift logarithmically proportional to the relative change
+in repressor copy number, a mutation which increases expression from 1 to
 10 repressors per cell is more impactful from an energetic standpoint
 ($k_BT \log(10) \approx 2.3\,  k_BT$) than an increase from 90 to 100
 ($k_BT \log(100/90) \approx 0.1\, k_BT$). Appreciable changes in the
@@ -197,7 +197,7 @@ the net change in the free energy is negative, indicating that the
 repressor bound states become more energetically favorable due to the
 mutation. Much like in the case of changing repressor copy number, this
 quantity is independent of inducer concentration and is therefore also
-constant @Fig:deltaF_theory (D).
+constant (@Fig:deltaF_theory (D)).
 However, the magnitude of the change in free energy is linear with DNA
 binding affinity while it is logarithmic with respect to changes in the
 repressor copy number. Thus, to change the free energy by $1\, k_BT$,

@@ -4,13 +4,13 @@
 an array of biological phenomena has been tied to the existence of
 macromolecules that switch between inactive and active states. Examples can
 be found in a wide variety of cellular processes, including ligand-gated ion
-channels [@auerbach2012a], enzymatic reactions [@velyvis2007; @einav2016],
+channels [@auerbach2012], enzymatic reactions [@velyvis2007; @einav2016],
 chemotaxis [@keymer2006], quorum sensing [@swem2008], G-protein
 coupled receptors [@canals2012], physiologically important proteins [@milo2007;
 @levantino2012], and beyond. One of the most ubiquitous examples of allostery is
 in the context of gene expression, where an array of molecular players bind to
 transcription factors to influence their ability to regulate gene activity
-[@li2014a]. A number of studies have focused on developing a
+[@li2014]. A number of studies have focused on developing a
 quantitative understanding of allosteric regulatory systems. The work of @martins2011 and
 @marzen2013 analytically derives fundamental properties of the MWC model,
 including the leakiness and dynamic range described in this work, noting the
@@ -20,7 +20,7 @@ allosteric circuits for synthetic biology [@lutz1997; @moon2012; @rogers2015;
 @rohlhill2017]. Somewhat recently, 
 @daber2009a theoretically explored the induction of simple repression
 within the MWC model and experimentally measured how mutations alter the
-induction profiles of transcription factors @daber2011. @vilar2013 analyzed a
+induction profiles of transcription factors [@daber2011]. @vilar2013 analyzed a
 variety of interactions in inducible *lac*-based systems including the
 effects of oligomerization and DNA folding on transcription factor induction. Other work has attempted to use the *lac* system to reconcile *in vitro*
 and *in vivo* measurements [@tungtur2011].
@@ -28,14 +28,14 @@ and *in vivo* measurements [@tungtur2011].
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Although this body of work has done much to improve our understanding of
 allosteric transcription factors, there have been few attempts to explicitly
 connect quantitative models to experiments. Here, we generate a predictive
-model of allosteric transcriptional regulation and then test the model
+model of allosteric transcriptional regulation, and then test the model
 against a thorough set of experiments using well-characterized regulatory
 components. Specifically, we used the MWC model to build upon a
 well-established thermodynamic model of transcriptional regulation
 [@bintu2005a; @garcia2011], allowing us to compose the model from a minimal
 set of biologically meaningful parameters. This model combines both
 theoretical and experimental insights; for example, rather than considering
-gene expression directly we analyze the fold-change in expression, where the
+gene expression directly, we analyze the fold-change in expression, where the
 weak promoter approximation circumvents uncertainty in the RNAP copy
 number. The resulting model depended upon experimentally accessible
 parameters, namely, the repressor copy number, the repressor-DNA binding
@@ -52,7 +52,7 @@ determined empirically.
 is of considerable interest when designing or characterizing a genetic
 circuit, is revealed to have an interesting property: although changing the
 value of $\Delta \varepsilon_{RA}$ causes the dynamic range curves to shift
-to the right or left, each curve has the same shape and in particular the
+to the right or left, each curve has the same shape and, in particular, the
 same maximum value. This means that strains with strong or weak binding
 energies can attain the same dynamic range when the value of $R$ is tuned to
 compensate for the binding energy. This feature is not immediately apparent
@@ -60,8 +60,8 @@ from the IPTG induction curves, which show very low dynamic ranges for
 several of the O1 and O3 strains. Without the benefit of models that can
 predict such phenotypic traits, efforts to engineer genetic circuits with
 allosteric transcription factors must rely on trial and error to achieve
-specific responses [@rogers2015, @rohlhill2017]. Other calculable properties,
-such as leakiness, saturation, [EC$_{50}$] and the effective Hill
+specific responses [@rogers2015; @rohlhill2017]. Other calculable properties,
+such as leakiness, saturation, [EC$_{50}$], and the effective Hill
 coefficient, agree well with experimental measurement. One exception is the
 titration profile of the weakest operator, O3. While performing a global fit
 for all model parameters marginally improves the prediction of all properties
@@ -105,8 +105,8 @@ example, we can use this model to study more complex systems such as when
 transcription factors interact with multiple operators [@bintu2005a]. We can
 further explore different regulatory configurations such as corepression,
 activation, and coactivation, each of which are found in *E. coli*. This work
-can also serve as a springboard to characterize not just the mean but the
-full gene expression distribution and thus quantify the impact of noise on
+can also serve as a springboard to characterize not just the mean, but the
+full gene expression distribution, and thus quantify the impact of noise on
 the system [@eldar2010b]. Another extension of this approach would be to
 theoretically predict and experimentally verify whether the repressor-inducer
 dissociation constants $K_A$ and $K_I$ or the energy difference $\Delta

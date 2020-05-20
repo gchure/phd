@@ -36,7 +36,7 @@ have measured several hundred MscL per cell [@bialecka-fornal2012;
 @schmidt2016; @soufi2015]. To further complicate matters, the expression
 profile of MscL appears to depend on growth phase, available carbon source,
 and other environmental challenges [@bialecka-fornal2012, @schmidt2016;
-@soufi2015; @stokes2003a]. While there are likely more than just a few
+@soufi2015; @stokes2003]. While there are likely more than just a few
 channels per cell, why cells seem to need so many and the biological
 rationale behind their condition-dependent expression both remain a mystery.
 
@@ -44,7 +44,7 @@ rationale behind their condition-dependent expression both remain a mystery.
 characteristics have received much attention, their connection to cell survival is
 understudied. Drawing such a direct connection between channel copy number
 and survival requires quantitative *in vivo* experiments. To our knowledge,
-the work presented in van den Berg et al. 2016 [@vandenberg2016] is the first
+the work presented in [@vandenberg2016] is the first
 attempt to simultaneously measure channel abundance and survivability for a
 single species of mechanosensitive channel. While the measurement of channel
 copy number was performed at the level of single cells using super-resolution
@@ -57,7 +57,7 @@ the mean survival rate of the population, obfuscating the variability in
 survival of the population. The stochastic nature of gene expression results
 in a noisy distribution of MscL channels rather than a single value, meaning
 those found in the long tails of the distribution have quite different
-survival rates than the mean but are lost in the final calculation of
+survival rates than the mean, but are lost in the final calculation of
 survival probability.
 
 &nbsp; &nbsp; &nbsp; &nbsp;In this work, we present an experimental system to
@@ -88,7 +88,7 @@ membrane tension is high (left panel), the membrane ruptures releasing
 intracellular content into the environment resulting in cell death. If
 mechanosensitive channels are present (right panel) and membrane tension is
 beyond the gating tension, the mechanosensitive channel MscL opens, releasing
-water and small intracellular molecules into the environment thus relieving
+water and small intracellular molecules into the environment, thus relieving
 pressure and membrane tension. (B) The experimental approach undertaken in
 this work. The number of mechanosensitive channels tagged with a fluorescent
 reporter is tuned through modification of the Shine-Dalgarno sequence of the

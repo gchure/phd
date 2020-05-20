@@ -20,7 +20,7 @@ membrane potential of -20 mV with pipette and bath solutions containing 200
 mM KCl, 90 mM MgCl$_2$, 10 mM CaCl$_2$, and 5 mM HEPES buffer at pH 7. All
 data were acquired at a sampling rate of 50 kHz with 5 kHz filtration using
 an AxoPatch 200B amplifier and pClamp software (Molecular Devices). The
-pressure threshold for activation a single MscS channel (blue stripe in
+pressure threshold for activation of a single MscS channel (blue stripe in
 [@Fig:ephys]) was compared to that of single MscL channels (orange strip in
 [@Fig:ephys]). The pressure threshold for activation of the MscL channels was
 referenced against the activation threshold of MscS to determine the pressure
@@ -49,14 +49,14 @@ used to generate this figure can be found on the thesis [GitHub
 repository](https://github.com/gchure/phd).](ch9_figS1){#fig:ephys short-caption="Characteristic MscL-sfGFP conductance
 obtained through patch-clamp electrophysiology"}
 
-### Maturation time of MscL-sfGFP
+### Maturation Time of MscL-sfGFP
 
 &nbsp;&nbsp;&nbsp;&nbsp; Reliable quantification of the channel copy number
 is paramount to this work. As such, it is important to verify that the
 detected fluorescence per cell accurately represents the total cellular MscL
 copy number. We have made the assumption that the total fluorescence per
-represents all MscL-sfGFP channels present. However, it is possible that
-there are more channels present per cell but are not detected as the
+cell represents all MscL-sfGFP channels present. However, it is possible that
+there are more channels present per cell, but are not detected as the
 fluorophores have not properly matured. This potential error becomes more
 significant with longer maturation times of the fluorophore as the mean
 expression level changes with the growth phase of the culture. With a
@@ -76,7 +76,7 @@ channels are not observed due to inactive fluorophores.
 the maturation time of the superfolder GFP protein. We constructed a
 chromosomal integration of sfGFP expressed from a promoter under regulation
 from plasmid-borne TetR (*E. coli* MG1655 K12
-*$\Delta$lacIZYA ybcN::sfGFP*) . These cells were allowed to grow in LB
+*$\Delta$lacIZYA ybcN::sfGFP*). These cells were allowed to grow in LB
 supplemented with 500 mM NaCl held at 37$^\circ$C to an OD$_{600\text{nm}}$ of approximately
 0.3. At this time, transcription and translation of the sfGFP gene was
 induced by addition of 10 ng/mL of anhydrous tetracycline. This expression
@@ -84,17 +84,17 @@ was allowed to occur for three minutes before the addition of 100 $\mu$g/mL of
 kanamycin, ceasing proper protein synthesis. Three minutes of expression was
 chosen to provide enough time for transcription and translation. The sfGFP
 variant used in this work is 1155 base pairs. We can assume that the rate for
-transcription is 42 nucleotides per second (BNID 108488)[@milo2010], meaning
+transcription is 42 nucleotides per second (BNID 108488, @milo2010), meaning
 approximately 28 seconds are needed to transcribe the gene. The translation
 rate is on the order of 10 amino acids per second, (12 - 42 amino acids / s,
-BNID 100059)[@milo2010]. This means that 39 seconds are needed to complete
+BNID 100059, @milo2010). This means that 39 seconds are needed to complete
 translation. In total, approximately one minute is needed to complete
 expression of the genes. These numbers are not known for LB supplemented with
-500 mM NaCl but may be reduced. For this reason, we extended the length of
+500 mM NaCl, but may be reduced. For this reason, we extended the length of
 induction to three minutes before translation was ceased.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The excess anhydrous tetracycline was removed from the culture through
-centrifugation and washing with one volume of LB supplemented with 500 mM
+centrifugation and washed with one volume of LB supplemented with 500 mM
 NaCl and 100 $\mu$g/mL kanamycin at 37$^\circ$C. The maturation of sfGFP was then
 monitored through flow cytometry by measuring the mean expression of 100,000
 cells every 60 to 90 seconds. The result of these measurements are shown in
@@ -103,7 +103,7 @@ cells every 60 to 90 seconds. The result of these measurements are shown in
 &nbsp;&nbsp;&nbsp;&nbsp;We observe complete maturation of the protein within
 20 minutes after translation of the sfGFP gene was ceased. While the growth
 rate in LB + 500mM NaCl varies depending on the expression of MscL-sfGFP, we
-typically observe doubling times between 30 and 40 minutes, as indicated by a
+typically observe doubling times between 30 and 40 minutes, as indicated by an
 orange stripe in @Fig:maturation_time (A). To examine the ``best case”
 scenario for cell growth in this medium, we measured the growth rate of the
 same *E. coli* strain used to measure the fluorophore maturation time

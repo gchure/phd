@@ -3,12 +3,12 @@ Seminal studies from the burgeoning years of bacterial physiology have
 demonstrated a strong dependence of the total cellular protein content on the
 growth rate [@schaechter1958], a relationship which has been rigorously
 quantified in recent years using mass spectrometry [@schmidt2016] and
-ribosomal profiling [@li2014a]. Their combined results illustrate that
+ribosomal profiling [@li2014]. Their combined results illustrate that
 modulation of the growth rate, either through controlling the available
 carbon source or the temperature of the growth medium, significantly alters
 the physiological state of the cell, triggering the reallocation of resources
 to prioritize expression of ribosome-associated genes. @Eq:foldchange_simple
-has no explicit dependence on the available carbon source but does depend on
+has no explicit dependence on the available carbon source,  but does depend on
 the temperature through the energetic parameters $\Delta\varepsilon_{R}$ and
 $\Delta\varepsilon_{AI}$ which are defined relative to the thermal energy,
 $k_BT$. With this parametric knowledge, we are able to draw quantitative
