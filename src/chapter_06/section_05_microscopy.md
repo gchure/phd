@@ -10,7 +10,7 @@ inducer in a short amount of time. To verify our results from flow
 cytometry, we examined two bacterial strains with different
 repressor-DNA binding energies ($\Delta\varepsilon_{RA}$) of
 $-13.9~k_BT$ and $-15.3~k_BT$ with $R = 260$ repressors per cell
-using fluorescence microscopy and estimated the values of the parameters
+using fluorescence microscopy, and estimated the values of the parameters
 $K_A$ and $K_I$ for direct comparison between the two methods. For a
 detailed explanation of the Python code implementation of the processing
 steps described below, please see this paper’s [GitHub
@@ -23,7 +23,7 @@ Cells were grown in an identical manner to those used for measurement
 via flow cytometry (see Materials \& Methods of Chapter 2). Briefly, cells
 were grown overnight (between 10 and 13 hours) to saturation in rich media
 broth (LB) with $100\,\mu\text{g} \cdot \text{mL}^{-1}$ spectinomycin in a
-deep-well 96 well plate at $37^\circ \text{C}$. These cultures were then
+deep-well 96-well plate at $37^\circ \text{C}$. These cultures were then
 diluted 1000-fold into $500\,\mu\text{L}$ of M9 minimal medium supplemented
 with 0.5% glucose and the appropriate concentration of the inducer IPTG.
 Strains were allowed to grow at $37^\circ \text{C}$ with vigorous aeration
@@ -77,7 +77,7 @@ CaltechDATA online repository under DOI: 10.22002/D1.229.
 
 #### Correcting Uneven Illumination
 
-The excitation laser has a two-dimensional gaussian profile. To minimize
+The excitation laser has a two-dimensional Gaussian profile. To minimize
 non-uniform illumination of a single field of view, the excitation beam
 was expanded to illuminate an area larger than that of the camera
 sensor. While this allowed for an entire field of view to be
@@ -118,7 +118,7 @@ and eccentricity bounds. We assumed that single cells projected into two
 dimensions are roughly $2\,\mu\text{m}$ long and $1\,\mu\text{m}$
 wide, so that cells are likely to have an area between
 $0.5\,\mu\text{m}^2$ and $6\,\mu\text{m}$. To determine the
-eccentricity bounds, we assumed that the a single cell can be
+eccentricity bounds, we assumed that a single cell can be
 approximated by an ellipse with semi-major ($a$) and semi-minor
 ($b$) axis lengths of $0.5\,\mu\text{m}$ and $0.25\,\mu\text{m}$,
 respectively. The eccentricity of this hypothetical cell can be computed
@@ -159,7 +159,7 @@ gene expression distributions. Empirical cumulative distributions for a
 maximally-induced (5000 $\mu$M IPTG, $R=160$, $\Delta\varepsilon_{RA} = -13.9\,
 k_BT$) sample are shown as purple and orange lines in @Fig:empirical_comparison
 (B), respectively. To make the different methods directly comparable, the
-expressions distributions were normalized to range between 0 and 1 and then
+expressions distributions were normalized to range between 0 and 1, and then
 centered about the mean of the distribution. While the means agree between the
 methods, it is immediately obvious that the width of the distributions are
 different with microscopy yielding distributions with a higher variance. To

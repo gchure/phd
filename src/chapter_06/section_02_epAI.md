@@ -1,6 +1,6 @@
 ## Inferring Allosteric Parameters from Previous Data
 
-The fold-change profile described by features three unknown parameters $K_A$,
+The fold-change function derived in Chapter 2 features three unknown parameters $K_A$,
 $K_I$, and $\Delta\varepsilon_{AI}$. In this section, we explore different
 conceptual approaches to determining these parameters. We first discuss how
 the induction titration profile of the simple repression constructs used in
@@ -15,7 +15,7 @@ any induction profile with no further degeneracy.
 
 In this section, we discuss how multiple sets of parameters may yield
 identical fold-change profiles. More precisely, we show that if we try to fit
-the data in to the fold-change and extract the three unknown parameters
+the data into the fold-change and extract the three unknown parameters
 ($K_A$, $K_I$, and $\Delta\varepsilon_{AI}$), then multiple degenerate
 parameter sets would yield equally good fits. In other words, this data set
 alone is insufficient to uniquely determine the actual physical parameter
@@ -25,8 +25,8 @@ sets simultaneously as illustrated later in this chapter.
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;In @Fig:degenerate_epai we fit the $R=260$ data
 by fixing $\Delta\varepsilon_{AI}$ to the value shown on the $x$-axis and
 determine the parameters $K_A$ and $K_I$ given this constraint. We use the
-fold-change function but with $\beta \Delta\varepsilon_{RA}$ modified to the
-form $\beta \Delta\tilde{\varepsilon}_{RA}$ in to account for the underlying
+fold-change function, but with $\beta \Delta\varepsilon_{RA}$ modified to the
+form $\beta \Delta\tilde{\varepsilon}_{RA}$ to account for the underlying
 assumptions used when fitting previous data (as is defined in the following
 section).
 
@@ -34,7 +34,7 @@ section).
 values of $\Delta\varepsilon_{AI}$ are shown in @Fig:degenerate_epai (B).
 Note that these fold-change curves are nearly overlapping, demonstrating that
 different sets of parameters can yield nearly equivalent responses. Without
-more data, the relationships between the parameter values shown in represent
+more data, the relationships between the parameter values represent
 the maximum information about the parameter values that can be extracted from
 the data. Additional experiments which independently measure any of these
 unknown parameters could resolve this degeneracy. For example, NMR
@@ -62,12 +62,12 @@ is not sufficient to determine the three MWC parameters ($K_A$, $K_I$, and
 $\Delta\varepsilon_{AI}$), since degenerate sets of parameters yield nearly
 identical fold-change responses. To circumvent this degeneracy, we now turn
 to some previous data from the *lac* system in order to determine the value
-of $\Delta\varepsilon_{AI}$ in for the induction of the Lac repressor.
-Specifically, we consider two previous sets of work from: (i) @garcia2011 and
+of $\Delta\varepsilon_{AI}$ for the induction of the Lac repressor.
+Specifically, we consider two previous sets of work from (i) @garcia2011 and
 (ii) @brewster2014, both of which measured fold-change with the same simple
-repression system in the absence of inducer ($c=0$) but at various repressor
+repression system in the absence of inducer ($c=0$), but at various repressor
 copy numbers $R$. The original analysis for both data sets assumed that in
-the absence of inducer all of the Lac repressors were in the active state. As
+the absence of inducer, all of the Lac repressors were in the active state. As
 a result, the effective binding energies they extracted were a convolution of
 the DNA binding energy $\Delta\varepsilon_{RA}$ and the allosteric energy
 difference $\Delta\varepsilon_{AI}$ between the Lac repressor’s active and
@@ -162,7 +162,7 @@ $${#eq:ind_si_fugacity_rs}
 
 where $N$ is the number of available promoters in the cell. Note that
 in counting $N$, we do not distinguish between promoters that are on
-plasmid or chromosomally integrated provided that they both have the
+plasmid or chromosomaly integrated provided that they both have the
 same repressor-operator binding energy [@weinert2014]. The value
 of $R_{NS}$ is similarly given by 
 $$
@@ -170,7 +170,7 @@ R_{NS} = N_{NS} \frac{\lambda_r}{1 + \lambda_r},
 $${#eq:ind_si_fugacity_rns}
 where $N_{NS}$ is the number of non-specific sites in the cell (recall that we use
 $N_{NS} = 4.6 \times 10^6$ for *E. coli*).
-Substituting in into the modified yields the form
+Substitution yields the form
 $$
 p_A(0) R_{\text{tot}} = \frac{1}{1 + e^{-\beta \Delta \varepsilon_{AI}}} \left(
 N \frac{\lambda_r e^{-\beta \Delta \varepsilon_{RA}}}{1 + \lambda_r e^{-\beta
@@ -178,32 +178,31 @@ N \frac{\lambda_r e^{-\beta \Delta \varepsilon_{RA}}}{1 + \lambda_r e^{-\beta
 $${#eq:ind_si_fugacity_pa0}
 where we recall from @Eq:ind_si_tilde_varepsilon that
 $\beta \Delta \varepsilon_{RA} =   \beta \Delta \tilde\varepsilon_{RA} + \log{\left(\frac{1}{1 + e^{-\beta \Delta \varepsilon_{AI}}}\right)}.$
-Numerically solving for $\lambda_r$ and plugging the value back into
-yields a fold-change function in which the only unknown parameter is
+Numerically solving for $\lambda_r$ yields a fold-change function in which the only unknown parameter is
 $\Delta \varepsilon_{AI}$.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;With these calculations in hand, we can now determine the value of the
-$\Delta \varepsilon_{AI}$ parameter. shows how different values of
+$\Delta \varepsilon_{AI}$ parameter. @Fig:fugacity shows how different values of
 $\Delta\varepsilon_{AI}$ lead to significantly different fold-change response
 curves. Thus, analyzing the specific fold-change response of any strain with
 a known plasmid copy number $N$ will fix $\Delta\varepsilon_{AI}$.
-Interestingly, the inflection point of occurs near $p_A(0) R_{\text{tot}} =
+Interestingly, the inflection point occurs near $p_A(0) R_{\text{tot}} =
 N$ (as shown by the triangles in @Fig:fugacity), so that merely knowing where the
 fold-change response transitions from concave down to concave up is
 sufficient to obtain a rough value for $\Delta\varepsilon_{AI}$. We note,
 however, that for $\Delta\varepsilon_{AI} \geq 5\, k_BT$, increasing
 $\Delta\varepsilon_{AI}$ further does not affect the fold-change because
-essentially every repressors will be in the active state in this regime.
+essentially every repressor will be in the active state in this regime.
 Thus, if the $\Delta\varepsilon_{AI}$ is in this regime, we can only bound it
 from below.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;We now analyze experimental induction data for
 different strains with known plasmid copy numbers to determine
-$\Delta\varepsilon_{AI}$. shows experimental measurements of fold-change for
+$\Delta\varepsilon_{AI}$. @Fig:fugacity (B) shows experimental measurements of fold-change for
 two O1 promoters with $N=64$ and $N=52$ copy numbers and one Oid promoter
 with $N=10$ from Brewster et al. (2014). By fitting these data to
 @Eq:ind_si_fugacity, we extracted the parameter value $\Delta\varepsilon_{AI}
-= 4.5\,k_B T$. Substituting this value into shows that 99\% of the repressors
+= 4.5\,k_B T$. Substituting this value into @Eq:ind_si_r_active shows that 99\% of the repressors
 are in the active state in the absence of inducer and
 $\Delta\tilde{\varepsilon}_{RA} \approx \Delta\varepsilon_{RA}$, so that all
 of the previous energies and calculations made by @garcia2011 and

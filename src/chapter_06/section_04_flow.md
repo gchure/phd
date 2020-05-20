@@ -14,7 +14,7 @@ in this work graciously provided by the Pamela Björkman lab at Caltech.
 All measurements were made using an excitation wavelength of
 $488\,\text{nm}$ with an emission filter set of 525/$50\,\text{nm}$.
 This excitation wavelength provides approximately 40% of the maximum YFP
-absorbance , and this was found to be sufficient for the purposes of
+absorbance, and this was found to be sufficient for the purposes of
 these experiments. A useful feature of modern flow cytometry is the
 high-sensitivity signal detection through the use of photomultiplier
 tubes (PMT) whose response can be tuned by adjusting the voltage. Thus,
@@ -34,7 +34,7 @@ are given in Table 6.1.
 | 488 nm | Side-Scatter (SSC) | 537 V |
 | 488 nm | Intensity (B1 Filter, 525/50 nm) | 790 V|
 | 488 nm | Trigger (debris threshold) | 24.5V|
-Table: Instrument settings for data collectuion using the Miltenyi Biotec MACSQuant
+Table: Instrument settings for data collection using the Miltenyi Biotec MACSQuant
 flow cytometer.
 
 
@@ -57,7 +57,7 @@ corresponds to single-cell measurements. Everything extending outside of this
 region was discarded in order to exclude sources of error such as cell
 clustering, particulates, or other spurious events.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;In order to define the gated region we fit a two-dimensional Gaussian
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;In order to define the gated region, we fit a two-dimensional Gaussian
 function to the $\log_{10}$ forward-scattering (FSC) and the
 $\log_{10}$ side-scattering (SSC) data. We then kept a fraction
 $\alpha \in [0, 1]$ of the data by defining an elliptical region given
@@ -116,7 +116,7 @@ assay is needed to accurately resolve the fold-change at such low levels of
 expression.
 
 ![**Comparison of experimental methods to determine the fold-change.** The
-fold-change in gene expression ofr equivalent simple-repression constructs has
+fold-change in gene expression for equivalent simple-repression constructs has
 been determined using three independent methods: flow cytometry (Chapter 2),
 colorimetric Miller assays (@garcia2011), and video microscopy (@brewster2014).
 All three methods give consistent results, although flow cytometry meeasurements

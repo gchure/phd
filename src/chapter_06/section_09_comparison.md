@@ -15,7 +15,7 @@ are shown in Fig. 2.6 (D) of Chapter 2, where we find close agreement between
 strains, but with some deviation and poorer inferences observed with the
 O3 operator strains. Overall, we find that regardless of which strain is
 chosen to determine the unknown parameters, the predictions laid out by
-the theory closely match the experimental measurements. Here we present
+the theory closely match the experimental measurements. Here, we present
 a comparison of the strain specific predictions and measured fold-change
 data for each of the three operators considered.
 
@@ -25,7 +25,7 @@ energy $\Delta \varepsilon_{RA}$ and repressor copy number $R$. We then use
 these fitted parameters to predict the induction curves of all other strains.
 In @Fig:O1_comparison, we plot these fold-change predictions along with
 experimental data for each of our strains that contains an O1 operator. To
-make sense of this plot we consider the first row as an example. In the first
+make sense of this plot, we consider the first row as an example. In the first
 row, $K_A$ and $K_I$ were estimated using data from the strain containing
 $R=22$ and an O1 operator (top leftmost plot). The remaining plots in this
 row show the predicted fold-change using these values for $K_A$ and $K_I$. In
