@@ -8,7 +8,7 @@ glucose [@garcia2011], which results in $10^8$ carbon atoms per $10^{-15}$ L.
 The base recipe is given in Table 8.2. The bacterial strains used in this
 work are given in Table 8.3.
 
-| **Ingredient** | **Stock Concentration** | **Volume** | **Final Concentration** |
+| **Ingredient** | **[Concentration]** | **Volume** | **[Final Concentration]** |
 | :-- | :-- | :-- | :-- |
 | ddH$_2$O | - | 773 mL | - |
 | CaCl$_2$ | 1M | 100 $\mu$L | 100 $\mu$M|

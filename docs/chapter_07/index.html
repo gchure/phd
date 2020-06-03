@@ -136,28 +136,37 @@ K_A^\text{(mut)} }}\right)^2\right]^{-1} \over \left[1 +
 e^{-\beta\Delta\varepsilon_{AI} }\left({1 + {c \over K_I^\text{(wt)} } \over 1
 + {c \over K_A^\text{(wt)} }}\right)^2\right]^{-1} }\right),
 \qquad(1)$$</span><br /></span> in which <span class="math inline"><em>Δ</em><em>ε</em><sub><em>A</em><em>I</em></sub></span> is the energy difference between the active and inactive states of the repressor, <span class="math inline"><em>c</em></span> is the inducer concentration, and <span class="math inline"><em>β</em> = 1/<em>k</em><sub><em>B</em></sub><em>T</em></span> where <span class="math inline"><em>k</em><sub><em>B</em></sub></span> is the Boltzmann constant and <span class="math inline"><em>T</em></span> is the temperature. The derivative with respect to <span class="math inline"><em>c</em></span>, which we determined using Mathematica’s (Wolfram Research, version 11.2) symbolic computing ability, is given as <span id="eq:partial_explicit"><br /><span class="math display">$$
-\begin{gathered}
-{\partial \beta\Delta F(c) \over \partial c} =
-2e^{-\beta\Delta\varepsilon_{AI} }\times \\ \left(\frac{ {K_A^\text{(mut)} }^2 \left(K_A^\text{(mut)}
+\begin{aligned}
+{\partial \beta\Delta F(c) \over \partial c} &amp;=
+2e^{-\beta\Delta\varepsilon_{AI} }\times \\ &amp;\left(\frac{ {K_A^\text{(mut)} }^2 \left(K_A^\text{(mut)}
 - K_I^\text{(mut)}\right)\left(c + K_I^\text{(mut)}\right)}{\left(c +
 K_A^\text{(mut)}\right) \left[\left(c +
 K_A^\text{(mut)}\right)^2{K_I^\text{(mut)} }^2 +
-e^{-\beta\Delta\varepsilon_{AI} }{K_A^\text{(mut)} }^2\left(c +
-K_I^\text{(mut)}\right)^2\right]} \right. \\ - \left.
+e^{-\beta\Delta\varepsilon_{AI} }{K_A^\text{(mut)} }^2 \left(c +
+K_I^\text{(mut)}\right)^2\right] } \right. \\ &amp;- \left.
 \frac{ {K_A^\text{(wt)} }^2\left(K_A^\text{(wt)} - K_I^\text{(wt)}\right)\left(c +
 K_I^\text{(wt)}\right)}{\left(c + K_A^\text{(wt)}\right) \left[\left(c +
 K_A^\text{(wt)}\right)^2{K_I^\text{(wt)} }^2 +
 e^{-\beta\Delta\varepsilon_{AI} }{K_A^\text{(wt)} }^2\left(c +
 K_I^\text{(wt)}\right)^2\right]} \right).
-\end{gathered}
-\qquad(2)$$</span><br /></span> This unwieldy expression can be simplified by defining the values of <span class="math inline"><em>K</em><sub><em>A</em></sub><sup>(mut)</sup> = <em>θ</em><em>K</em><sub><em>A</em></sub><sup>(wt)</sup></span> and <span class="math inline"><em>K</em><sub><em>I</em></sub><sup>(mut)</sup> = <em>θ</em><em>K</em><sub><em>I</em></sub><sup>(wt)</sup></span> as relative changes to the wild-type values where <span class="math inline"><em>θ</em></span> is a scaling parameter. While we can permit <span class="math inline"><em>K</em><sub><em>A</em></sub><sup>(mut)</sup></span> and <span class="math inline"><em>K</em><sub><em>I</em></sub><sup>(mut)</sup></span> to vary by different degrees, we will consider the case in which they are equally perturbed such that the ratio of <span class="math inline"><em>K</em><sub><em>A</em></sub></span> to <span class="math inline"><em>K</em><sub><em>I</em></sub></span> is the same between the mutant and wild-type versions of the repressor. While the equations become more cumbersome when one permits the dissociation constants to vary by different amounts (i.e. <span class="math inline"><em>θ</em><sub><em>K</em><sub><em>A</em></sub></sub>, <em>θ</em><sub><em>K</em><sub><em>I</em></sub></sub></span>), one arrives at the same conclusion. This definition allows us to rewrite Eq. 2 in the form of <span id="eq:partial_theta"><br /><span class="math display">$$
-\begin{gathered}
-{\partial \beta\Delta F(c) \over \partial c} = 2{K_A^\text{(wt)} }e^{-\beta\Delta\varepsilon_{AI} }\left({\theta^3 \left({K_A^\text{(wt)} }- {K_I^\text{(wt)} }\right)\left(c + \theta {K_I^\text{(wt)} }\right) \over \left(c + \theta {K_A^\text{(wt)} }\right)\left[\theta^2 {K_I^\text{(wt)} }^2\left(c + \theta {K_A^\text{(wt)} }\right)^2 + e^{-\beta\Delta\varepsilon_{AI} }\theta^2{K_A^\text{(wt)} }^2\left(c + \theta {K_I^\text{(wt)} }\right)^2\right]} \right. \\ - \left. {\left({K_A^\text{(wt)} } - {K_I^\text{(wt)} }\right)\left(c + {K_I^\text{(wt)} }\right) 
+\end{aligned}
+\qquad(2)$$</span><br /></span></p>
+<p>This unwieldy expression can be simplified by defining the values of <span class="math inline"><em>K</em><sub><em>A</em></sub><sup>(mut)</sup> = <em>θ</em><em>K</em><sub><em>A</em></sub><sup>(wt)</sup></span> and <span class="math inline"><em>K</em><sub><em>I</em></sub><sup>(mut)</sup> = <em>θ</em><em>K</em><sub><em>I</em></sub><sup>(wt)</sup></span> as relative changes to the wild-type values where <span class="math inline"><em>θ</em></span> is a scaling parameter. While we can permit <span class="math inline"><em>K</em><sub><em>A</em></sub><sup>(mut)</sup></span> and <span class="math inline"><em>K</em><sub><em>I</em></sub><sup>(mut)</sup></span> to vary by different degrees, we will consider the case in which they are equally perturbed such that the ratio of <span class="math inline"><em>K</em><sub><em>A</em></sub></span> to <span class="math inline"><em>K</em><sub><em>I</em></sub></span> is the same between the mutant and wild-type versions of the repressor. While the equations become more cumbersome when one permits the dissociation constants to vary by different amounts (i.e. <span class="math inline"><em>θ</em><sub><em>K</em><sub><em>A</em></sub></sub>, <em>θ</em><sub><em>K</em><sub><em>I</em></sub></sub></span>), one arrives at the same conclusion. This definition allows us to rewrite Eq. 2 in the form of <span id="eq:partial_theta"><br /><span class="math display">$$
+\begin{aligned}
+{\partial \beta\Delta F(c) \over \partial c} &amp;= 2{K_A^\text{(wt)}
+}e^{-\beta\Delta\varepsilon_{AI} }\times \\
+&amp; \left({\theta^3 \left({K_A^\text{(wt)}
+}- {K_I^\text{(wt)} }\right)\left(c + \theta {K_I^\text{(wt)} }\right) \over
+\left(c + \theta {K_A^\text{(wt)} }\right)\left[\theta^2 {K_I^\text{(wt)}
+}^2\left(c + \theta {K_A^\text{(wt)} }\right)^2 +
+e^{-\beta\Delta\varepsilon_{AI} }\theta^2{K_A^\text{(wt)} }^2\left(c + \theta
+{K_I^\text{(wt)} }\right)^2\right]} \right. \\ &amp;- \left. {\left({K_A^\text{(wt)}
+} - {K_I^\text{(wt)} }\right)\left(c + {K_I^\text{(wt)} }\right) 
 \over \left(c + {K_A^\text{(wt)} }\right) \left[\left(c +
 {K_A^\text{(wt)} }\right)^2{K_I^\text{(wt)} }^2 +
 e^{-\beta\Delta\varepsilon_{AI} }{K_A^\text{(wt)} }^2\left(c +
 {K_I^\text{(wt)} }\right)^2\right]} \right).
-\end{gathered}
+\end{aligned}
 \qquad(3)$$</span><br /></span>      With this derivative in hand, we can examine the limits of inducer concentration. As discussed in the main text, the free energy difference between the mutant and wild-type repressors when <span class="math inline"><em>c</em> = 0</span> should be equal to <span class="math inline">0</span>. However, the derivative at <span class="math inline"><em>c</em> = 0</span> will be different between the wild-type and the mutant. In this limit, Eq. 3 simplifies to <span id="eq:partial_c0"><br /><span class="math display">$$
 {\partial \beta\Delta F(c) \over \partial c}\bigg\vert_{c = 0} =
 {2e^{-\beta\Delta\varepsilon_{AI} }\left({K_A^\text{(wt)} } - {K_I^\text{(wt)} }\right) \over {K_A^\text{(wt)} }{K_I^\text{(wt)} }\left(1
@@ -791,18 +800,16 @@ P(\neg r) = {\mathcal{Z}_{\neg r} \over \mathcal{Z}_{\neg r} + \mathcal{Z}_r}.
 <table>
 <caption><em>Escherichia coli</em> strains used in this work</caption>
 <colgroup>
-<col style="width: 17%" />
-<col style="width: 29%" />
-<col style="width: 17%" />
-<col style="width: 17%" />
-<col style="width: 17%" />
+<col style="width: 12%" />
+<col style="width: 9%" />
+<col style="width: 12%" />
+<col style="width: 65%" />
 </colgroup>
 <thead>
 <tr class="header">
-<th style="text-align: left;"><strong>Class</strong></th>
-<th style="text-align: left;"><strong>LacI Mutant</strong></th>
+<th style="text-align: left;"><strong>Mutation</strong></th>
 <th style="text-align: left;"><strong>Operator</strong></th>
-<th style="text-align: left;"><strong>Rep. per Cell</strong></th>
+<th style="text-align: left;"><span class="math inline"><em>R</em></span></th>
 <th style="text-align: left;"><strong>Genotype</strong></th>
 </tr>
 </thead>
@@ -810,12 +817,10 @@ P(\neg r) = {\mathcal{Z}_{\neg r} \over \mathcal{Z}_{\neg r} + \mathcal{Z}_r}.
 <tr class="odd">
 <td style="text-align: left;">–</td>
 <td style="text-align: left;">–</td>
-<td style="text-align: left;">–</td>
 <td style="text-align: left;">22</td>
 <td style="text-align: left;">MG1655::<span class="math inline"><em>Δ</em></span><em>lacZYA</em></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">–</td>
 <td style="text-align: left;">–</td>
 <td style="text-align: left;">O1</td>
 <td style="text-align: left;">0</td>
@@ -823,13 +828,11 @@ P(\neg r) = {\mathcal{Z}_{\neg r} \over \mathcal{Z}_{\neg r} + \mathcal{Z}_r}.
 </tr>
 <tr class="odd">
 <td style="text-align: left;">–</td>
-<td style="text-align: left;">–</td>
 <td style="text-align: left;">O2</td>
 <td style="text-align: left;">0</td>
 <td style="text-align: left;">MG1655::<span class="math inline"><em>Δ</em></span><em>lacIZYA</em>; <em>galK</em>&lt;&gt;25O2+11-YFP</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">–</td>
 <td style="text-align: left;">–</td>
 <td style="text-align: left;">O3</td>
 <td style="text-align: left;">0</td>
@@ -837,237 +840,203 @@ P(\neg r) = {\mathcal{Z}_{\neg r} \over \mathcal{Z}_{\neg r} + \mathcal{Z}_r}.
 </tr>
 <tr class="odd">
 <td style="text-align: left;">WT</td>
-<td style="text-align: left;">WT</td>
 <td style="text-align: left;">O2</td>
 <td style="text-align: left;">260</td>
 <td style="text-align: left;">MG1655::<span class="math inline"><em>Δ</em></span><em>lacIZYA</em>; <em>galK</em>&lt;&gt;25O2+11-YFP; <em>ybcN</em>&lt;&gt;3*1-RBS1027LacI</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">DNA</td>
 <td style="text-align: left;">Y17I</td>
 <td style="text-align: left;">O2</td>
 <td style="text-align: left;">60</td>
 <td style="text-align: left;">MG1655::<span class="math inline"><em>Δ</em></span><em>lacIZYA</em>; <em>galK</em>&lt;&gt;25O2+11-YFP; <em>ybcN</em>&lt;&gt;3*1-RBS1147LacI(Y17I)</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">DNA</td>
 <td style="text-align: left;">Y17I</td>
 <td style="text-align: left;">O2</td>
 <td style="text-align: left;">124</td>
 <td style="text-align: left;">MG1655::<span class="math inline"><em>Δ</em></span><em>lacIZYA</em>; <em>galK</em>&lt;&gt;25O2+11-YFP; <em>ybcN</em>&lt;&gt;3*1-RBS446LacI(Y17I)</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">DNA</td>
 <td style="text-align: left;">Y17I</td>
 <td style="text-align: left;">O2</td>
 <td style="text-align: left;">260</td>
 <td style="text-align: left;">MG1655::<span class="math inline"><em>Δ</em></span><em>lacIZYA</em>; <em>galK</em>&lt;&gt;25O2+11-YFP; <em>ybcN</em>&lt;&gt;3*1-RBS1027LacI(Y17I)</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">DNA</td>
 <td style="text-align: left;">Y17I</td>
 <td style="text-align: left;">O2</td>
 <td style="text-align: left;">1220</td>
 <td style="text-align: left;">MG1655::<span class="math inline"><em>Δ</em></span><em>lacIZYA</em>; <em>galK</em>&lt;&gt;25O2+11-YFP; <em>ybcN</em>&lt;&gt;3*1-RBS1LacI(Y17I)</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">DNA</td>
 <td style="text-align: left;">Q18A</td>
 <td style="text-align: left;">O2</td>
 <td style="text-align: left;">60</td>
 <td style="text-align: left;">MG1655::<span class="math inline"><em>Δ</em></span><em>lacIZYA</em>; <em>galK</em>&lt;&gt;25O2+11-YFP; <em>ybcN</em>&lt;&gt;3*1-RBS1147LacI(Q18A)</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">DNA</td>
 <td style="text-align: left;">Q18A</td>
 <td style="text-align: left;">O2</td>
 <td style="text-align: left;">124</td>
 <td style="text-align: left;">MG1655::<span class="math inline"><em>Δ</em></span><em>lacIZYA</em>; <em>galK</em>&lt;&gt;25O2+11-YFP; <em>ybcN</em>&lt;&gt;3*1-RBS446LacI(Q18A)</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">DNA</td>
 <td style="text-align: left;">Q18A</td>
 <td style="text-align: left;">O2</td>
 <td style="text-align: left;">260</td>
 <td style="text-align: left;">MG1655::<span class="math inline"><em>Δ</em></span><em>lacIZYA</em>; <em>galK</em>&lt;&gt;25O2+11-YFP; <em>ybcN</em>&lt;&gt;3*1-RBS1027LacI(Q18A)</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">DNA</td>
 <td style="text-align: left;">Q18A</td>
 <td style="text-align: left;">O2</td>
 <td style="text-align: left;">1220</td>
 <td style="text-align: left;">MG1655::<span class="math inline"><em>Δ</em></span><em>lacIZYA</em>; <em>galK</em>&lt;&gt;25O2+11-YFP; <em>ybcN</em>&lt;&gt;3*1-RBS1LacI(Q18A)</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">DNA</td>
 <td style="text-align: left;">Q18M</td>
 <td style="text-align: left;">O2</td>
 <td style="text-align: left;">60</td>
 <td style="text-align: left;">MG1655::<span class="math inline"><em>Δ</em></span><em>lacIZYA</em>; <em>galK</em>&lt;&gt;25O2+11-YFP; <em>ybcN</em>&lt;&gt;3*1-RBS1147LacI(Q18M)</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">DNA</td>
 <td style="text-align: left;">Q18M</td>
 <td style="text-align: left;">O2</td>
 <td style="text-align: left;">124</td>
 <td style="text-align: left;">MG1655::<span class="math inline"><em>Δ</em></span><em>lacIZYA</em>; <em>galK</em>&lt;&gt;25O2+11-YFP; <em>ybcN</em>&lt;&gt;3*1-RBS446LacI(Q18M)</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">DNA</td>
 <td style="text-align: left;">Q18M</td>
 <td style="text-align: left;">O2</td>
 <td style="text-align: left;">260</td>
 <td style="text-align: left;">MG1655::<span class="math inline"><em>Δ</em></span><em>lacIZYA</em>; <em>galK</em>&lt;&gt;25O2+11-YFP; <em>ybcN</em>&lt;&gt;3*1-RBS1027LacI(Q18M)</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">DNA</td>
 <td style="text-align: left;">Q18M</td>
 <td style="text-align: left;">O2</td>
 <td style="text-align: left;">1220</td>
 <td style="text-align: left;">MG1655::<span class="math inline"><em>Δ</em></span><em>lacIZYA</em>; <em>galK</em>&lt;&gt;25O2+11-YFP; <em>ybcN</em>&lt;&gt;3*1-RBS1LacI(Q18M)</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">IND</td>
 <td style="text-align: left;">F161T</td>
 <td style="text-align: left;">O1</td>
 <td style="text-align: left;">260</td>
 <td style="text-align: left;">MG1655::<span class="math inline"><em>Δ</em></span><em>lacIZYA</em>; <em>galK</em>&lt;&gt;25O1+11-YFP; <em>ybcN</em>&lt;&gt;3*1-RBS1027LacI(F161T)</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">IND</td>
 <td style="text-align: left;">F161T</td>
 <td style="text-align: left;">O2</td>
 <td style="text-align: left;">260</td>
 <td style="text-align: left;">MG1655::<span class="math inline"><em>Δ</em></span><em>lacIZYA</em>; <em>galK</em>&lt;&gt;25O2+11-YFP; <em>ybcN</em>&lt;&gt;3*1-RBS1027LacI(F161T)</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">IND</td>
 <td style="text-align: left;">F161T</td>
 <td style="text-align: left;">O3</td>
 <td style="text-align: left;">260</td>
 <td style="text-align: left;">MG1655::<span class="math inline"><em>Δ</em></span><em>lacIZYA</em>; <em>galK</em>&lt;&gt;25O3+11-YFP; <em>ybcN</em>&lt;&gt;3*1-RBS1027LacI(F161T)</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">IND</td>
 <td style="text-align: left;">Q291V</td>
 <td style="text-align: left;">O1</td>
 <td style="text-align: left;">260</td>
 <td style="text-align: left;">MG1655::<span class="math inline"><em>Δ</em></span><em>lacIZYA</em>; <em>galK</em>&lt;&gt;25O1+11-YFP; <em>ybcN</em>&lt;&gt;3*1-RBS1027LacI(Q291V)</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">IND</td>
 <td style="text-align: left;">Q291V</td>
 <td style="text-align: left;">O2</td>
 <td style="text-align: left;">260</td>
 <td style="text-align: left;">MG1655::<span class="math inline"><em>Δ</em></span><em>lacIZYA</em>; <em>galK</em>&lt;&gt;25O2+11-YFP; <em>ybcN</em>&lt;&gt;3*1-RBS1027LacI(Q291V)</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">IND</td>
 <td style="text-align: left;">Q291V</td>
 <td style="text-align: left;">O3</td>
 <td style="text-align: left;">260</td>
 <td style="text-align: left;">MG1655::<span class="math inline"><em>Δ</em></span><em>lacIZYA</em>; <em>galK</em>&lt;&gt;25O3+11-YFP; <em>ybcN</em>&lt;&gt;3*1-RBS1027LacI(Q291V)</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">IND</td>
 <td style="text-align: left;">Q291K</td>
 <td style="text-align: left;">O1</td>
 <td style="text-align: left;">260</td>
 <td style="text-align: left;">MG1655::<span class="math inline"><em>Δ</em></span><em>lacIZYA</em>; <em>galK</em>&lt;&gt;25O1+11-YFP; <em>ybcN</em>&lt;&gt;3*1-RBS1027LacI(Q291K)</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">IND</td>
 <td style="text-align: left;">Q291K</td>
 <td style="text-align: left;">O2</td>
 <td style="text-align: left;">260</td>
 <td style="text-align: left;">MG1655::<span class="math inline"><em>Δ</em></span><em>lacIZYA</em>; <em>galK</em>&lt;&gt;25O2+11-YFP; <em>ybcN</em>&lt;&gt;3*1-RBS1027LacI(Q291K)</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">IND</td>
 <td style="text-align: left;">Q291K</td>
 <td style="text-align: left;">O3</td>
 <td style="text-align: left;">260</td>
 <td style="text-align: left;">MG1655::<span class="math inline"><em>Δ</em></span><em>lacIZYA</em>; <em>galK</em>&lt;&gt;25O3+11-YFP; <em>ybcN</em>&lt;&gt;3*1-RBS1027LacI(Q291K)</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">IND</td>
 <td style="text-align: left;">Q291R</td>
 <td style="text-align: left;">O1</td>
 <td style="text-align: left;">260</td>
 <td style="text-align: left;">MG1655::<span class="math inline"><em>Δ</em></span><em>lacIZYA</em>; <em>galK</em>&lt;&gt;25O1+11-YFP; <em>ybcN</em>&lt;&gt;3*1-RBS1027LacI(Q291R)</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">IND</td>
 <td style="text-align: left;">Q291R</td>
 <td style="text-align: left;">O2</td>
 <td style="text-align: left;">260</td>
 <td style="text-align: left;">MG1655::<span class="math inline"><em>Δ</em></span><em>lacIZYA</em>; <em>galK</em>&lt;&gt;25O2+11-YFP; <em>ybcN</em>&lt;&gt;3*1-RBS1027LacI(Q291R)</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">IND</td>
 <td style="text-align: left;">Q291R</td>
 <td style="text-align: left;">O3</td>
 <td style="text-align: left;">260</td>
 <td style="text-align: left;">MG1655::<span class="math inline"><em>Δ</em></span><em>lacIZYA</em>; <em>galK</em>&lt;&gt;25O3+11-YFP; <em>ybcN</em>&lt;&gt;3*1-RBS1027LacI(Q291R)</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">DBL</td>
 <td style="text-align: left;">Y17I-F161T</td>
 <td style="text-align: left;">O2</td>
 <td style="text-align: left;">260</td>
 <td style="text-align: left;">MG1655::<span class="math inline"><em>Δ</em></span><em>lacIZYA</em>; <em>galK</em>&lt;&gt;25O2+11-YFP; <em>ybcN</em>&lt;&gt;3*1-RBS1027LacI(Y17IF161T)</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">DBL</td>
 <td style="text-align: left;">Y17I-Q291V</td>
 <td style="text-align: left;">O2</td>
 <td style="text-align: left;">260</td>
 <td style="text-align: left;">MG1655::<span class="math inline"><em>Δ</em></span><em>lacIZYA</em>; <em>galK</em>&lt;&gt;25O2+11-YFP; <em>ybcN</em>&lt;&gt;3*1-RBS1027LacI(Y17IQ291V)</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">DBL</td>
 <td style="text-align: left;">Y17I-Q291K</td>
 <td style="text-align: left;">O2</td>
 <td style="text-align: left;">260</td>
 <td style="text-align: left;">MG1655::<span class="math inline"><em>Δ</em></span><em>lacIZYA</em>; <em>galK</em>&lt;&gt;25O2+11-YFP; <em>ybcN</em>&lt;&gt;3*1-RBS1027LacI(Y17IQ291K)</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">DBL</td>
 <td style="text-align: left;">Q18A-F161T</td>
 <td style="text-align: left;">O2</td>
 <td style="text-align: left;">260</td>
 <td style="text-align: left;">MG1655::<span class="math inline"><em>Δ</em></span><em>lacIZYA</em>; <em>galK</em>&lt;&gt;25O2+11-YFP; <em>ybcN</em>&lt;&gt;3*1-RBS1027LacI(Q18AF161T)</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">DBL</td>
 <td style="text-align: left;">Q18A-Q291V</td>
 <td style="text-align: left;">O2</td>
 <td style="text-align: left;">260</td>
 <td style="text-align: left;">MG1655::<span class="math inline"><em>Δ</em></span><em>lacIZYA</em>; <em>galK</em>&lt;&gt;25O2+11-YFP; <em>ybcN</em>&lt;&gt;3*1-RBS1027LacI(Q18AQ291V)</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">DBL</td>
 <td style="text-align: left;">Q18A-Q291K</td>
 <td style="text-align: left;">O2</td>
 <td style="text-align: left;">260</td>
 <td style="text-align: left;">MG1655::<span class="math inline"><em>Δ</em></span><em>lacIZYA</em>; <em>galK</em>&lt;&gt;25O2+11-YFP; <em>ybcN</em>&lt;&gt;3*1-RBS1027LacI(Q18AQ291K)</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">DBL</td>
 <td style="text-align: left;">Q18M-F161T</td>
 <td style="text-align: left;">O2</td>
 <td style="text-align: left;">260</td>
 <td style="text-align: left;">MG1655::<span class="math inline"><em>Δ</em></span><em>lacIZYA</em>; <em>galK</em>&lt;&gt;25O2+11-YFP; <em>ybcN</em>&lt;&gt;3*1-RBS1027LacI(Q18MF161T)</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">DBL</td>
 <td style="text-align: left;">Q18M-Q291V</td>
 <td style="text-align: left;">O2</td>
 <td style="text-align: left;">260</td>
 <td style="text-align: left;">MG1655::<span class="math inline"><em>Δ</em></span><em>lacIZYA</em>; <em>galK</em>&lt;&gt;25O2+11-YFP; <em>ybcN</em>&lt;&gt;3*1-RBS1027LacI(Q18MQ291V)</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">DBL</td>
 <td style="text-align: left;">Q18M-Q291K</td>
 <td style="text-align: left;">O2</td>
 <td style="text-align: left;">260</td>

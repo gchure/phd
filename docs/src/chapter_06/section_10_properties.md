@@ -63,7 +63,7 @@ maximum dynamic range. The [Python code (`ch6_figS18-S19.py`)](https://github.co
 repository](https://github.com/gchure/phd).](ch6_figS18){#fig:properties_expanded short-caption="Dependence of
 leakiness, saturation, and dynamic range on the operator binding energy and
 repressor copy number."}
-s
+
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;We now consider the two remaining properties, the
 $[EC_{50}]$ and effective Hill coefficient, which determine the horizontal
 properties of a system - that is, they determine the range of inducer

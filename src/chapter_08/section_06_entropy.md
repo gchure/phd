@@ -80,10 +80,13 @@ $\text{fc}^*$ defined by the fold-change input-output function and a standard
 deviation $\sigma$. Thus, the likelihood for the fold-change in gene
 expression is
 $$
-f(\mathbf{fc}\,\vert\,\Delta S_R, \Delta S_{AI}, \sigma, T_{exp}) = 
-\frac{1}{\left(2\pi\sigma^2\right)^{N/2}}\prod\limits_i^N
+\begin{aligned}
+f(\mathbf{fc}\,\vert\,\Delta S_R, \Delta S_{AI}, \sigma, T_{exp}) &= 
+\frac{1}{\left(2\pi\sigma^2\right)^{N/2}}\times \\
+&\prod\limits_i^N
 \exp\left[-\frac{\left[\log \text{fc}_i - \log \text{fc}^*(\Delta S_R, \Delta
 S_{AI}, T_{exp})\right]^2}{2\sigma^2}\right].
+\end{aligned}
 $${#eq:delS_like}
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;In calculating the mean $\text{fc}^*$, the effective energetic

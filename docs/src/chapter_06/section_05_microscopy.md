@@ -21,7 +21,7 @@ repository](https://rpgroup-pboc.github.io/mwc_induction/code/notebooks/unsuperv
 
 Cells were grown in an identical manner to those used for measurement
 via flow cytometry (see Materials \& Methods of Chapter 2). Briefly, cells
-were grown overnight (between 10 and 13 hours) to saturation in rich media
+were grown to saturation in rich media
 broth (LB) with $100\,\mu\text{g} \cdot \text{mL}^{-1}$ spectinomycin in a
 deep-well 96-well plate at $37^\circ \text{C}$. These cultures were then
 diluted 1000-fold into $500\,\mu\text{L}$ of M9 minimal medium supplemented

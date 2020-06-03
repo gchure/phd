@@ -125,7 +125,7 @@
 						<div class="content">
 							<strong>Published as …</strong>
 <hr/>
-<p>A version of this chapter is currently under review. A preprint is released as Chure, G, Kaczmarek, Z. A., Phillips, R. Physiological Adaptability and Parametric Versatility in a Simple Genetic Circuit. bioRxiv 2019. DOI: https://doi.org/10.1101/2019.12.19.878462. G.C. and R.P. designed experiments and developed theoretical models. G.C. and Z.A.K. collected and analyzed data. G.C. and R.P. wrote the paper.</p>
+<p>A version of this chapter is currently under review. A preprint is released as Chure, G, Kaczmarek, Z. A., Phillips, R. Physiological Adaptability and Parametric Versatility in a Simple Genetic Circuit. bioRxiv 2019. DOI: 10.1101/2019.12.19.878462. G.C. and R.P. designed experiments and developed theoretical models. G.C. and Z.A.K. collected and analyzed data. G.C. and R.P. wrote the paper.</p>
 <h2 id="non-parametric-inference-of-growth-rates">Non-parametric Inference of Growth Rates</h2>
 <p>In this section, we discuss the measurement of the bacterial growth curves as well as our strategy for estimating the growth rates for all experimental conditions in this work.</p>
 <h3 id="experimental-growth-curves">Experimental Growth Curves</h3>
@@ -139,7 +139,7 @@
 </figure>
 <h2 id="approximating-cell-volume">Approximating Cell Volume</h2>
 <p>In Fig. 4.2 of Chapter 4, we make reference to the volume of the cells grown in various conditions. Here, we illustrate how we approximated this estimate using measurements of the individual cell segmentation masks.</p>
-<p>      Estimation of bacterial cell volume and its dependence on the total growth rate has been the target of numerous quantitative studies using a variety of methods including microscopy <span class="citation" data-cites="pilizota2012 pilizota2014 taheri-araghi2015a schmidt2016 schaechter1958">(Pilizota and Shaevitz <a href="#ref-pilizota2012" role="doc-biblioref">2012</a>, <a href="#ref-pilizota2014" role="doc-biblioref">2014</a>; <span class="citeproc-not-found" data-reference-id="taheri-araghi2015a"><strong>???</strong></span>; Schmidt et al. <a href="#ref-schmidt2016" role="doc-biblioref">2016</a>; Schaechter, Maaløe, and Kjeldgaard <a href="#ref-schaechter1958" role="doc-biblioref">1958</a>)</span> and microfluidics <span class="citation" data-cites="kubitschek1986">(Kubitschek and Friske <a href="#ref-kubitschek1986" role="doc-biblioref">1986</a>)</span>, revealing a fascinating phenomenology of growth at the single cell level.</p>
+<p>      Estimation of bacterial cell volume and its dependence on the total growth rate has been the target of numerous quantitative studies using a variety of methods including microscopy <span class="citation" data-cites="pilizota2012 pilizota2014 taheri-araghi2015 schmidt2016 schaechter1958">(Pilizota and Shaevitz <a href="#ref-pilizota2012" role="doc-biblioref">2012</a>, <a href="#ref-pilizota2014" role="doc-biblioref">2014</a>; Taheri-Araghi et al. <a href="#ref-taheri-araghi2015" role="doc-biblioref">2015</a>; Schmidt et al. <a href="#ref-schmidt2016" role="doc-biblioref">2016</a>; Schaechter, Maaløe, and Kjeldgaard <a href="#ref-schaechter1958" role="doc-biblioref">1958</a>)</span> and microfluidics <span class="citation" data-cites="kubitschek1986">(Kubitschek and Friske <a href="#ref-kubitschek1986" role="doc-biblioref">1986</a>)</span>, revealing a fascinating phenomenology of growth at the single cell level.</p>
 <p>     Despite the high precision and extensive calibration of these methods, it is not uncommon to have different methods yield different estimates, indicating that it is not a trivial measurement to make. In the present work, we sought to estimate the cell volume and compare it to the well-established empirical results of the field of bacterial physiology to ensure that our experimental protocol does not alter the physiology beyond expectations. As the bulk of this work is performed using single-cell microscopy, we chose to infer the approximate cell volume from the segmentation masks produced by the SuperSegger MATLAB software <span class="citation" data-cites="stylianidou2016">(Stylianidou et al. <a href="#ref-stylianidou2016" role="doc-biblioref">2016</a>)</span> which reported the cell length and width in units of pixels which can be converted to meaningful units given knowledge of the camera interpixel distance.</p>
 <p>     We approximated each segmented cell as a cylinder of length <span class="math inline"><em>a</em></span> and radius <span class="math inline"><em>r</em></span> capped on each end by hemispheres with a radius <span class="math inline"><em>r</em></span>. With these measurements in hand, the total cell volume was computed as <span id="eq:cell_volume"><br /><span class="math display">$$
 V_\text{cell} =\pi r^2 \left(a + \frac{4}{3}r\right).
@@ -328,10 +328,13 @@ g(\Delta S_R, \Delta S_{AI}\,\vert\, \mathbf{fc}) =
 \frac{f(\mathbf{fc}\,\vert\,\Delta S_R, \Delta S_{AI})g(\Delta S_R, \Delta
 S_{AI})}{f(\mathbf{fc})},
 \qquad(38)$$</span><br /></span> where <span class="math inline"><em>g</em></span> and <span class="math inline"><em>f</em></span> are used to denote probability densities over parameters and data, respectively. As we have done elsewhere in this SI text, we treat <span class="math inline"><em>f</em>(<strong>f</strong><strong>c</strong>)</span> as a normalization constant and neglect it in our estimation of <span class="math inline"><em>g</em>(<em>Δ</em><em>S</em><sub><em>R</em></sub>, <em>Δ</em><em>S</em><sub><em>A</em><em>I</em></sub> | <strong>f</strong><strong>c</strong>)</span>. Additionally, as is discussed in detail earlier in this chapter, we consider the <span class="math inline">log </span> fold-change measurements to be normally distributed about a mean <span class="math inline">fc<sup>*</sup></span> defined by the fold-change input-output function and a standard deviation <span class="math inline"><em>σ</em></span>. Thus, the likelihood for the fold-change in gene expression is <span id="eq:delS_like"><br /><span class="math display">$$
-f(\mathbf{fc}\,\vert\,\Delta S_R, \Delta S_{AI}, \sigma, T_{exp}) = 
-\frac{1}{\left(2\pi\sigma^2\right)^{N/2}}\prod\limits_i^N
+\begin{aligned}
+f(\mathbf{fc}\,\vert\,\Delta S_R, \Delta S_{AI}, \sigma, T_{exp}) &amp;= 
+\frac{1}{\left(2\pi\sigma^2\right)^{N/2}}\times \\
+&amp;\prod\limits_i^N
 \exp\left[-\frac{\left[\log \text{fc}_i - \log \text{fc}^*(\Delta S_R, \Delta
 S_{AI}, T_{exp})\right]^2}{2\sigma^2}\right].
+\end{aligned}
 \qquad(39)$$</span><br /></span></p>
 <p>     In calculating the mean <span class="math inline">fc<sup>*</sup></span>, the effective energetic parameters <span class="math inline"><em>Δ</em><em>ε</em><sub><em>R</em></sub><sup>*</sup></span> and <span class="math inline"><em>Δ</em><em>ε</em><sub><em>A</em><em>I</em></sub><sup>*</sup></span> can be defined and constrained using Eq. 36 and Eq. 37 as <span id="eq:eprastar_constraint"><br /><span class="math display"><em>Δ</em><em>ε</em><sub><em>R</em></sub><sup>*</sup> = <em>Δ</em><em>H</em><sub><em>R</em></sub> − <em>T</em><sub><em>e</em><em>x</em><em>p</em></sub><em>Δ</em><em>S</em><sub><em>R</em></sub> = <em>Δ</em><em>S</em><sub><em>R</em></sub>(<em>T</em><sub><em>r</em><em>e</em><em>f</em></sub> − <em>T</em><sub><em>e</em><em>x</em><em>p</em></sub>) − 13.9 <em>k</em><sub><em>B</em></sub><em>T</em><sub><em>r</em><em>e</em><em>f</em></sub>,   (40)</span><br /></span> and <span id="eq:epaistar_constraint"><br /><span class="math display"><em>Δ</em><em>ε</em><sub><em>A</em><em>I</em></sub><sup>*</sup> = <em>Δ</em><em>H</em><sub><em>A</em><em>I</em></sub> − <em>T</em><sub><em>e</em><em>x</em><em>p</em></sub><em>Δ</em><em>S</em><sub><em>A</em><em>I</em></sub> = <em>Δ</em><em>S</em><sub><em>A</em><em>I</em></sub>(<em>T</em><sub><em>r</em><em>e</em><em>f</em></sub> − <em>T</em><sub><em>e</em><em>x</em><em>p</em></sub>) + 4.5 <em>k</em><sub><em>B</em></sub><em>T</em><sub><em>r</em><em>e</em><em>f</em></sub>.   (41)</span><br /></span></p>
 <p>     As the enthalpic parameters are calculated directly from the constraints of Eq. 36 and Eq. 37, we must only estimate three parameters, <span class="math inline"><em>Δ</em><em>S</em><sub><em>R</em></sub></span>, <span class="math inline"><em>Δ</em><em>S</em><sub><em>A</em><em>I</em></sub></span>, and <span class="math inline"><em>σ</em></span>, each of which need a functional form for the prior distribution.</p>
@@ -365,9 +368,9 @@ g(\sigma) \sim \text{\itshape HalfNormal}(\phi=0.1).
 <thead>
 <tr class="header">
 <th style="text-align: left;"><strong>Ingredient</strong></th>
-<th style="text-align: left;"><strong>Stock Concentration</strong></th>
+<th style="text-align: left;"><strong>[Concentration]</strong></th>
 <th style="text-align: left;"><strong>Volume</strong></th>
-<th style="text-align: left;"><strong>Final Concentration</strong></th>
+<th style="text-align: left;"><strong>[Final Concentration]</strong></th>
 </tr>
 </thead>
 <tbody>
@@ -544,6 +547,9 @@ g(\sigma) \sim \text{\itshape HalfNormal}(\phi=0.1).
 </div>
 <div id="ref-swain2016">
 <p>Swain, Peter S., Keiran Stevenson, Allen Leary, Luis F. Montano-Gutierrez, Ivan B. N. Clark, Jackie Vogel, and Teuta Pilizota. 2016. “Inferring Time Derivatives Including Cell Growth Rates Using Gaussian Processes.” <em>Nature Communications</em> 7 (December): 13766. <a href="https://doi.org/10.1038/ncomms13766">https://doi.org/10.1038/ncomms13766</a>.</p>
+</div>
+<div id="ref-taheri-araghi2015">
+<p>Taheri-Araghi, Sattar, Serena Bradde, John T. Sauls, Norbert S. Hill, Petra A. Levin, Johan Paulsson, Massimo Vergassola, and Suckjoon Jun. 2015. “Cell-Size Control and Homeostasis in Bacteria.” <em>Current Biology</em> 25 (3): 385–91. <a href="https://doi.org/10.1016/j.cub.2014.12.009">https://doi.org/10.1016/j.cub.2014.12.009</a>.</p>
 </div>
 </div>
 						</div><!-- /.content -->

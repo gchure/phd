@@ -37,7 +37,8 @@ jekyll_get:
 exclude: [ 'README.md', 'CHANGELOG.md', 'src/data/', 
            'vendor', 'phd', 'phd.egg-info', 'dst', 'vscode', '.bundle',
            '.jekyll-cache', '_plugins', '*.lua','*.pdf','*.svg','src/*/code',
-           '*.py', '*.tex', '*.sh', 'Gemfile', '*.lock', 'Makefile']
+           '*.py', '*.tex', '*.sh', 'Gemfile', '*.lock', 'Makefile',
+           'presentation/']
 permalink: /:title/
 gems:
   - jekyll-numbered-headings

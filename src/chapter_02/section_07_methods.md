@@ -178,10 +178,13 @@ errors are normally distributed with mean zero and standard deviation
 $\sigma$, the likelihood of the data given the parameters is of the
 form 
 $$
-P(D \vert K_A, K_I, \sigma) =
-\frac{1}{(2\pi\sigma^2)^{\frac{n}{2}}}\prod\limits_{i=1}^n \exp 
+\begin{aligned}
+P(D \vert K_A, K_I, \sigma) &=
+\frac{1}{(2\pi\sigma^2)^{\frac{n}{2}}}\times\\
+&\prod\limits_{i=1}^n \exp 
 \left[-\frac{(\text{fold-change}^{(i)}_\text{exp} - \text{fc}^\text{(theo)}(K_A, K_I, R^{(i)},
     \Delta\varepsilon_{RA}^{(i)}, c^{(i)}))^2}{2\sigma^2}\right],
+\end{aligned}
 $${#eq:likelihood}
 where $\text{fold-change}^{(i)}_{\text{exp}}$ is the experimental fold-change
 and $\text{fc}^\text{(theo)}(\,\cdots)$ is the theoretical prediction. The product

@@ -37,21 +37,22 @@ temperature. The derivative with respect to $c$, which we determined using
 Mathematica's (Wolfram Research, version 11.2) symbolic computing ability, is
 given as
 $$
-\begin{gathered}
-{\partial \beta\Delta F(c) \over \partial c} =
-2e^{-\beta\Delta\varepsilon_{AI} }\times \\ \left(\frac{ {K_A^\text{(mut)} }^2 \left(K_A^\text{(mut)}
+\begin{aligned}
+{\partial \beta\Delta F(c) \over \partial c} &=
+2e^{-\beta\Delta\varepsilon_{AI} }\times \\ &\left(\frac{ {K_A^\text{(mut)} }^2 \left(K_A^\text{(mut)}
 - K_I^\text{(mut)}\right)\left(c + K_I^\text{(mut)}\right)}{\left(c +
 K_A^\text{(mut)}\right) \left[\left(c +
 K_A^\text{(mut)}\right)^2{K_I^\text{(mut)} }^2 +
-e^{-\beta\Delta\varepsilon_{AI} }{K_A^\text{(mut)} }^2\left(c +
-K_I^\text{(mut)}\right)^2\right]} \right. \\ - \left.
+e^{-\beta\Delta\varepsilon_{AI} }{K_A^\text{(mut)} }^2 \left(c +
+K_I^\text{(mut)}\right)^2\right] } \right. \\ &- \left.
 \frac{ {K_A^\text{(wt)} }^2\left(K_A^\text{(wt)} - K_I^\text{(wt)}\right)\left(c +
 K_I^\text{(wt)}\right)}{\left(c + K_A^\text{(wt)}\right) \left[\left(c +
 K_A^\text{(wt)}\right)^2{K_I^\text{(wt)} }^2 +
 e^{-\beta\Delta\varepsilon_{AI} }{K_A^\text{(wt)} }^2\left(c +
 K_I^\text{(wt)}\right)^2\right]} \right).
-\end{gathered}
+\end{aligned}
 $${#eq:partial_explicit} 
+
 This unwieldy expression can be simplified by defining the values of
 $K_A^\text{(mut)} = \theta K_A^\text{(wt)}$ and
 $K_I^\text{(mut)} = \theta K_I^\text{(wt)}$ as relative changes to the
@@ -65,13 +66,21 @@ different amounts (i.e. $\theta_{K_A}, \theta_{K_I}$), one arrives at
 the same conclusion. This definition allows us to rewrite 
 @Eq:partial_explicit in the form of 
 $$
-\begin{gathered}
-{\partial \beta\Delta F(c) \over \partial c} = 2{K_A^\text{(wt)} }e^{-\beta\Delta\varepsilon_{AI} }\left({\theta^3 \left({K_A^\text{(wt)} }- {K_I^\text{(wt)} }\right)\left(c + \theta {K_I^\text{(wt)} }\right) \over \left(c + \theta {K_A^\text{(wt)} }\right)\left[\theta^2 {K_I^\text{(wt)} }^2\left(c + \theta {K_A^\text{(wt)} }\right)^2 + e^{-\beta\Delta\varepsilon_{AI} }\theta^2{K_A^\text{(wt)} }^2\left(c + \theta {K_I^\text{(wt)} }\right)^2\right]} \right. \\ - \left. {\left({K_A^\text{(wt)} } - {K_I^\text{(wt)} }\right)\left(c + {K_I^\text{(wt)} }\right) 
+\begin{aligned}
+{\partial \beta\Delta F(c) \over \partial c} &= 2{K_A^\text{(wt)}
+}e^{-\beta\Delta\varepsilon_{AI} }\times \\
+& \left({\theta^3 \left({K_A^\text{(wt)}
+}- {K_I^\text{(wt)} }\right)\left(c + \theta {K_I^\text{(wt)} }\right) \over
+\left(c + \theta {K_A^\text{(wt)} }\right)\left[\theta^2 {K_I^\text{(wt)}
+}^2\left(c + \theta {K_A^\text{(wt)} }\right)^2 +
+e^{-\beta\Delta\varepsilon_{AI} }\theta^2{K_A^\text{(wt)} }^2\left(c + \theta
+{K_I^\text{(wt)} }\right)^2\right]} \right. \\ &- \left. {\left({K_A^\text{(wt)}
+} - {K_I^\text{(wt)} }\right)\left(c + {K_I^\text{(wt)} }\right) 
 \over \left(c + {K_A^\text{(wt)} }\right) \left[\left(c +
 {K_A^\text{(wt)} }\right)^2{K_I^\text{(wt)} }^2 +
 e^{-\beta\Delta\varepsilon_{AI} }{K_A^\text{(wt)} }^2\left(c +
 {K_I^\text{(wt)} }\right)^2\right]} \right).
-\end{gathered}
+\end{aligned}
 $${#eq:partial_theta} 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;With this derivative in hand, we can examine the limits of inducer
 concentration. As discussed in the main text, the free energy difference

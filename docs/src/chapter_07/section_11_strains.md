@@ -1,46 +1,46 @@
-## Strain and Oligonucleotide Information 
+## Strain and Oligonucleotide Information
 
 
-| **Class** |  **LacI Mutant** |  **Operator** |  **Rep. per Cell** |  **Genotype**  |
-|:-- | :---- | :--| :--| :-- | 
-| --   |       --        |        --    |         22      |            MG1655::$\Delta$*lacZYA*                                                              |  
-| --   |       --        |        O1    |         0       |            MG1655::$\Delta$*lacIZYA*; *galK*\<\>25O1+11-YFP                                      |   
-| --   |       --        |        O2    |         0       |            MG1655::$\Delta$*lacIZYA*; *galK*\<\>25O2+11-YFP                                      |   
-| --   |       --        |        O3    |         0       |            MG1655::$\Delta$*lacIZYA*; *galK*\<\>25O3+11-YFP                                      |   
-| WT   |       WT        |        O2    |         260     |            MG1655::$\Delta$*lacIZYA*; *galK*\<\>25O2+11-YFP; *ybcN*\<\>3\*1-RBS1027LacI          |    
-| DNA  |       Y17I      |        O2    |         60      |            MG1655::$\Delta$*lacIZYA*; *galK*\<\>25O2+11-YFP; *ybcN*\<\>3\*1-RBS1147LacI(Y17I)    |    
-| DNA  |       Y17I      |        O2    |         124     |            MG1655::$\Delta$*lacIZYA*; *galK*\<\>25O2+11-YFP; *ybcN*\<\>3\*1-RBS446LacI(Y17I)     |    
-| DNA  |       Y17I      |        O2    |         260     |            MG1655::$\Delta$*lacIZYA*; *galK*\<\>25O2+11-YFP; *ybcN*\<\>3\*1-RBS1027LacI(Y17I)    |    
-| DNA  |       Y17I      |        O2    |         1220    |            MG1655::$\Delta$*lacIZYA*; *galK*\<\>25O2+11-YFP; *ybcN*\<\>3\*1-RBS1LacI(Y17I)       |    
-| DNA  |       Q18A      |        O2    |         60      |            MG1655::$\Delta$*lacIZYA*; *galK*\<\>25O2+11-YFP; *ybcN*\<\>3\*1-RBS1147LacI(Q18A)    |    
-| DNA  |       Q18A      |        O2    |         124     |            MG1655::$\Delta$*lacIZYA*; *galK*\<\>25O2+11-YFP; *ybcN*\<\>3\*1-RBS446LacI(Q18A)     |    
-| DNA  |       Q18A      |        O2    |         260     |            MG1655::$\Delta$*lacIZYA*; *galK*\<\>25O2+11-YFP; *ybcN*\<\>3\*1-RBS1027LacI(Q18A)    |    
-| DNA  |       Q18A      |        O2    |         1220    |            MG1655::$\Delta$*lacIZYA*; *galK*\<\>25O2+11-YFP; *ybcN*\<\>3\*1-RBS1LacI(Q18A)       |    
-| DNA  |       Q18M      |        O2    |         60      |            MG1655::$\Delta$*lacIZYA*; *galK*\<\>25O2+11-YFP; *ybcN*\<\>3\*1-RBS1147LacI(Q18M)    |    
-| DNA  |       Q18M      |        O2    |         124     |            MG1655::$\Delta$*lacIZYA*; *galK*\<\>25O2+11-YFP; *ybcN*\<\>3\*1-RBS446LacI(Q18M)     |    
-| DNA  |       Q18M      |        O2    |         260     |            MG1655::$\Delta$*lacIZYA*; *galK*\<\>25O2+11-YFP; *ybcN*\<\>3\*1-RBS1027LacI(Q18M)    |    
-| DNA  |       Q18M      |        O2    |         1220    |            MG1655::$\Delta$*lacIZYA*; *galK*\<\>25O2+11-YFP; *ybcN*\<\>3\*1-RBS1LacI(Q18M)       |    
-| IND  |       F161T     |        O1    |         260     |            MG1655::$\Delta$*lacIZYA*; *galK*\<\>25O1+11-YFP; *ybcN*\<\>3\*1-RBS1027LacI(F161T)   |    
-| IND  |       F161T     |        O2    |         260     |            MG1655::$\Delta$*lacIZYA*; *galK*\<\>25O2+11-YFP; *ybcN*\<\>3\*1-RBS1027LacI(F161T)   |    
-| IND  |       F161T     |        O3    |         260     |            MG1655::$\Delta$*lacIZYA*; *galK*\<\>25O3+11-YFP; *ybcN*\<\>3\*1-RBS1027LacI(F161T)   |    
-| IND  |       Q291V     |        O1    |         260     |            MG1655::$\Delta$*lacIZYA*; *galK*\<\>25O1+11-YFP; *ybcN*\<\>3\*1-RBS1027LacI(Q291V)   |    
-| IND  |       Q291V     |        O2    |         260     |            MG1655::$\Delta$*lacIZYA*; *galK*\<\>25O2+11-YFP; *ybcN*\<\>3\*1-RBS1027LacI(Q291V)   |    
-| IND  |       Q291V     |        O3    |         260     |            MG1655::$\Delta$*lacIZYA*; *galK*\<\>25O3+11-YFP; *ybcN*\<\>3\*1-RBS1027LacI(Q291V)   |    
-| IND  |       Q291K     |        O1    |         260     |            MG1655::$\Delta$*lacIZYA*; *galK*\<\>25O1+11-YFP; *ybcN*\<\>3\*1-RBS1027LacI(Q291K)   |    
-| IND  |       Q291K     |        O2    |         260     |            MG1655::$\Delta$*lacIZYA*; *galK*\<\>25O2+11-YFP; *ybcN*\<\>3\*1-RBS1027LacI(Q291K)   |    
-| IND  |       Q291K     |        O3    |         260     |            MG1655::$\Delta$*lacIZYA*; *galK*\<\>25O3+11-YFP; *ybcN*\<\>3\*1-RBS1027LacI(Q291K)   |    
-| IND  |       Q291R     |        O1    |         260     |            MG1655::$\Delta$*lacIZYA*; *galK*\<\>25O1+11-YFP; *ybcN*\<\>3\*1-RBS1027LacI(Q291R)   |    
-| IND  |       Q291R     |        O2    |         260     |            MG1655::$\Delta$*lacIZYA*; *galK*\<\>25O2+11-YFP; *ybcN*\<\>3\*1-RBS1027LacI(Q291R)   |    
-| IND  |       Q291R     |        O3    |         260     |            MG1655::$\Delta$*lacIZYA*; *galK*\<\>25O3+11-YFP; *ybcN*\<\>3\*1-RBS1027LacI(Q291R)   |    
-| DBL  |       Y17I-F161T|        O2    |         260     |            MG1655::$\Delta$*lacIZYA*; *galK*\<\>25O2+11-YFP; *ybcN*\<\>3\*1-RBS1027LacI(Y17IF161T)|   
-| DBL  |       Y17I-Q291V|        O2    |         260     |            MG1655::$\Delta$*lacIZYA*; *galK*\<\>25O2+11-YFP; *ybcN*\<\>3\*1-RBS1027LacI(Y17IQ291V)|   
-| DBL  |       Y17I-Q291K|        O2    |         260     |            MG1655::$\Delta$*lacIZYA*; *galK*\<\>25O2+11-YFP; *ybcN*\<\>3\*1-RBS1027LacI(Y17IQ291K)|   
-| DBL  |       Q18A-F161T|        O2    |         260     |            MG1655::$\Delta$*lacIZYA*; *galK*\<\>25O2+11-YFP; *ybcN*\<\>3\*1-RBS1027LacI(Q18AF161T)|  
-| DBL  |       Q18A-Q291V|        O2    |         260     |            MG1655::$\Delta$*lacIZYA*; *galK*\<\>25O2+11-YFP; *ybcN*\<\>3\*1-RBS1027LacI(Q18AQ291V)|   
-| DBL  |       Q18A-Q291K|        O2    |         260     |            MG1655::$\Delta$*lacIZYA*; *galK*\<\>25O2+11-YFP; *ybcN*\<\>3\*1-RBS1027LacI(Q18AQ291K)|   
-| DBL  |       Q18M-F161T|        O2    |         260     |            MG1655::$\Delta$*lacIZYA*; *galK*\<\>25O2+11-YFP; *ybcN*\<\>3\*1-RBS1027LacI(Q18MF161T)|   
-| DBL  |       Q18M-Q291V|        O2    |         260     |            MG1655::$\Delta$*lacIZYA*; *galK*\<\>25O2+11-YFP; *ybcN*\<\>3\*1-RBS1027LacI(Q18MQ291V)|   
-| DBL  |       Q18M-Q291K|        O2    |         260     |            MG1655::$\Delta$*lacIZYA*; *galK*\<\>25O2+11-YFP; *ybcN*\<\>3\*1-RBS1027LacI(Q18MQ291K)|   
+  **Mutation** |  **Operator** |  $R$ |  **Genotype**  |
+| :---- | :---| :----| :-------------------------- | 
+|--        |--|22  |MG1655::$\Delta$*lacZYA*                                                              |  
+|--        |O1|0   |MG1655::$\Delta$*lacIZYA*; *galK*\<\>25O1+11-YFP                                      | 
+|--        |O2|0   |MG1655::$\Delta$*lacIZYA*; *galK*\<\>25O2+11-YFP                                     |   
+|--        |O3|0   |MG1655::$\Delta$*lacIZYA*; *galK*\<\>25O3+11-YFP                                      |   
+|WT        |O2|260 |MG1655::$\Delta$*lacIZYA*; *galK*\<\>25O2+11-YFP; *ybcN*\<\>3\*1-RBS1027LacI          |    
+|Y17I      |O2|60  |MG1655::$\Delta$*lacIZYA*; *galK*\<\>25O2+11-YFP; *ybcN*\<\>3\*1-RBS1147LacI(Y17I)    |    
+|Y17I      |O2|124 |MG1655::$\Delta$*lacIZYA*; *galK*\<\>25O2+11-YFP; *ybcN*\<\>3\*1-RBS446LacI(Y17I)     |    
+|Y17I      |O2|260 |MG1655::$\Delta$*lacIZYA*; *galK*\<\>25O2+11-YFP; *ybcN*\<\>3\*1-RBS1027LacI(Y17I)    |    
+|Y17I      |O2|1220|MG1655::$\Delta$*lacIZYA*; *galK*\<\>25O2+11-YFP; *ybcN*\<\>3\*1-RBS1LacI(Y17I)       |    
+|Q18A      |O2|60  |MG1655::$\Delta$*lacIZYA*; *galK*\<\>25O2+11-YFP; *ybcN*\<\>3\*1-RBS1147LacI(Q18A)    |    
+|Q18A      |O2|124 |MG1655::$\Delta$*lacIZYA*; *galK*\<\>25O2+11-YFP; *ybcN*\<\>3\*1-RBS446LacI(Q18A)     |    
+|Q18A      |O2|260 |MG1655::$\Delta$*lacIZYA*; *galK*\<\>25O2+11-YFP; *ybcN*\<\>3\*1-RBS1027LacI(Q18A)    |    
+|Q18A      |O2|1220|MG1655::$\Delta$*lacIZYA*; *galK*\<\>25O2+11-YFP; *ybcN*\<\>3\*1-RBS1LacI(Q18A)      |    
+|Q18M      |O2|60  |MG1655::$\Delta$*lacIZYA*; *galK*\<\>25O2+11-YFP; *ybcN*\<\>3\*1-RBS1147LacI(Q18M)    |    
+|Q18M      |O2|124 |MG1655::$\Delta$*lacIZYA*; *galK*\<\>25O2+11-YFP; *ybcN*\<\>3\*1-RBS446LacI(Q18M)     |    
+|Q18M      |O2|260 |MG1655::$\Delta$*lacIZYA*; *galK*\<\>25O2+11-YFP; *ybcN*\<\>3\*1-RBS1027LacI(Q18M)    |    
+|Q18M      |O2|1220|MG1655::$\Delta$*lacIZYA*; *galK*\<\>25O2+11-YFP; *ybcN*\<\>3\*1-RBS1LacI(Q18M)       |    
+|F161T     |O1|260 |MG1655::$\Delta$*lacIZYA*; *galK*\<\>25O1+11-YFP; *ybcN*\<\>3\*1-RBS1027LacI(F161T)   |    
+|F161T     |O2|260 |MG1655::$\Delta$*lacIZYA*; *galK*\<\>25O2+11-YFP; *ybcN*\<\>3\*1-RBS1027LacI(F161T)  |    
+|F161T     |O3|260 |MG1655::$\Delta$*lacIZYA*; *galK*\<\>25O3+11-YFP; *ybcN*\<\>3\*1-RBS1027LacI(F161T)   |    
+|Q291V     |O1|260 |MG1655::$\Delta$*lacIZYA*; *galK*\<\>25O1+11-YFP; *ybcN*\<\>3\*1-RBS1027LacI(Q291V)   |    
+|Q291V     |O2|260 |MG1655::$\Delta$*lacIZYA*; *galK*\<\>25O2+11-YFP; *ybcN*\<\>3\*1-RBS1027LacI(Q291V)   |    
+|Q291V     |O3|260 |MG1655::$\Delta$*lacIZYA*; *galK*\<\>25O3+11-YFP; *ybcN*\<\>3\*1-RBS1027LacI(Q291V)   |    
+|Q291K     |O1|260 |MG1655::$\Delta$*lacIZYA*; *galK*\<\>25O1+11-YFP; *ybcN*\<\>3\*1-RBS1027LacI(Q291K)   |    
+|Q291K     |O2|260 |MG1655::$\Delta$*lacIZYA*; *galK*\<\>25O2+11-YFP; *ybcN*\<\>3\*1-RBS1027LacI(Q291K)   |    
+|Q291K     |O3|260 |MG1655::$\Delta$*lacIZYA*; *galK*\<\>25O3+11-YFP; *ybcN*\<\>3\*1-RBS1027LacI(Q291K)   |    
+|Q291R     |O1|260 |MG1655::$\Delta$*lacIZYA*; *galK*\<\>25O1+11-YFP; *ybcN*\<\>3\*1-RBS1027LacI(Q291R)   |    
+|Q291R     |O2|260 |MG1655::$\Delta$*lacIZYA*; *galK*\<\>25O2+11-YFP; *ybcN*\<\>3\*1-RBS1027LacI(Q291R)   |    
+|Q291R     |O3|260 |MG1655::$\Delta$*lacIZYA*; *galK*\<\>25O3+11-YFP; *ybcN*\<\>3\*1-RBS1027LacI(Q291R)   |    
+|Y17I-F161T|O2|260 |MG1655::$\Delta$*lacIZYA*; *galK*\<\>25O2+11-YFP; *ybcN*\<\>3\*1-RBS1027LacI(Y17IF161T)|   
+|Y17I-Q291V|O2|260 |MG1655::$\Delta$*lacIZYA*; *galK*\<\>25O2+11-YFP; *ybcN*\<\>3\*1-RBS1027LacI(Y17IQ291V)|   
+|Y17I-Q291K|O2|260 |MG1655::$\Delta$*lacIZYA*; *galK*\<\>25O2+11-YFP; *ybcN*\<\>3\*1-RBS1027LacI(Y17IQ291K)|   
+|Q18A-F161T|O2|260 |MG1655::$\Delta$*lacIZYA*; *galK*\<\>25O2+11-YFP; *ybcN*\<\>3\*1-RBS1027LacI(Q18AF161T)|  
+|Q18A-Q291V|O2|260 |MG1655::$\Delta$*lacIZYA*; *galK*\<\>25O2+11-YFP; *ybcN*\<\>3\*1-RBS1027LacI(Q18AQ291V)|   
+|Q18A-Q291K|O2|260 |MG1655::$\Delta$*lacIZYA*; *galK*\<\>25O2+11-YFP; *ybcN*\<\>3\*1-RBS1027LacI(Q18AQ291K)|   
+|Q18M-F161T|O2|260 |MG1655::$\Delta$*lacIZYA*; *galK*\<\>25O2+11-YFP; *ybcN*\<\>3\*1-RBS1027LacI(Q18MF161T)|   
+|Q18M-Q291V|O2|260 |MG1655::$\Delta$*lacIZYA*; *galK*\<\>25O2+11-YFP; *ybcN*\<\>3\*1-RBS1027LacI(Q18MQ291V)|   
+|Q18M-Q291K|O2|260 |MG1655::$\Delta$*lacIZYA*; *galK*\<\>25O2+11-YFP; *ybcN*\<\>3\*1-RBS1027LacI(Q18MQ291K)|   
 
   : *Escherichia coli* strains used in this work
 

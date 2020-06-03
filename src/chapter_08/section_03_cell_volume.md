@@ -9,7 +9,7 @@ masks.
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Estimation of bacterial cell volume and
 its dependence on the total growth rate has been the target of numerous
 quantitative studies using a variety of methods including microscopy
-[@pilizota2012; @pilizota2014; @taheri-araghi2015a; @schmidt2016;
+[@pilizota2012; @pilizota2014; @taheri-araghi2015; @schmidt2016;
 @schaechter1958] and microfluidics [@kubitschek1986], revealing a fascinating
 phenomenology of growth at the single cell level. 
 

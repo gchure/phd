@@ -180,7 +180,7 @@ described in depth in the supplemental Chapter 9.
 We used Bayesian inferential methods to find the
 most probable values of the coefficients $\beta_0$ and $\beta_1$ and the
 appropriate credible regions, the procedure of which is described in detail in
-the supplemental Chapter 9.Briefly, we used Markov chain Monte Carlo (MCMC) to sample from the log
+the supplemental Chapter 9. Briefly, we used Markov chain Monte Carlo (MCMC) to sample from the log
 posterior distribution and took the most probable value as the mean of the
 samples for each parameter. The MCMC was performed using the Stan
 probabilistic programming language [@carpenter2017] and all models can be
